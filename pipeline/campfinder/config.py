@@ -17,6 +17,7 @@ COUNCILS_DIR = DATA_DIR / "councils"
 SCHEMA_DIR = DATA_DIR / "schema"
 REVIEW_DIR = DATA_DIR / ".review"  # LLM low-confidence queue (tracked; human-triaged)
 CACHE_DIR = DATA_DIR / ".cache"  # geocode + link-liveness cache (gitignored)
+CANDIDATES_DIR = DATA_DIR / "candidates"  # scraper output before merge (gitignored)
 WEB_DATA_DIR = REPO_ROOT / "web" / "public" / "data"  # build output
 
 # --- LLM extraction ---
@@ -48,6 +49,8 @@ RESIDENT_CAMP_KEYWORDS = (
 )
 EXCLUDE_KEYWORDS = (
     "day camp",
+    "family camp",
+    "twilight",
     "cub",
     "webelos",
     "training",

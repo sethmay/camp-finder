@@ -14,13 +14,18 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import asdict
+from datetime import date
+
+import httpx
 
 from . import build as build_mod
-from . import config, enrich as enrich_mod, registry, schema_gen, validate
+from . import config, enrich as enrich_mod, merge as merge_mod, registry, schema_gen, validate
 from .geocode import geocode
-from .io import load_all_councils, save_council
-from .models import Platform
+from .io import dumps_canonical, load_all_councils, save_council
+from .models import Camp, Platform
 from .platform_detect import detect as detect_platform
+from .scrapers.blackpug import BlackPugScraper
 
 
 def _cmd_schema(_: argparse.Namespace) -> int:
@@ -101,6 +106,42 @@ def _cmd_enrich(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_scrape(args: argparse.Namespace) -> int:
+    councils = load_all_councils()
+    if args.council != "all":
+        councils = [c for c in councils if c.id == args.council]
+        if not councils:
+            print(f"no such council: {args.council}", file=sys.stderr)
+            return 1
+    targets = [c for c in councils if c.platform is Platform.blackpug and c.number]
+    if not targets:
+        print("scrape: no Black Pug councils to scrape")
+        return 0
+    candidates: list[Camp] = []
+    with BlackPugScraper() as scraper:
+        for c in targets:
+            try:
+                camps = scraper.scrape(c)
+            except (httpx.HTTPError, PermissionError) as exc:
+                print(f"{c.id}: scrape failed: {exc}", file=sys.stderr)
+                continue
+            candidates.extend(camps)
+            n_sess = sum(len(camp.sessions) for camp in camps)
+            print(f"{c.id}: {len(camps)} camp(s), {n_sess} session(s)")
+    config.CANDIDATES_DIR.mkdir(parents=True, exist_ok=True)
+    out = config.CANDIDATES_DIR / f"blackpug-{date.today().isoformat()}.json"
+    payload = [c.model_dump(mode="json", exclude_none=True) for c in candidates]
+    out.write_text(dumps_canonical(payload), encoding="utf-8")
+    print(f"scrape: wrote {len(candidates)} candidate camp(s) to {out}")
+    return 0
+
+
+def _cmd_merge(args: argparse.Namespace) -> int:
+    stats = merge_mod.merge_file(args.candidates)
+    print(json.dumps(asdict(stats), indent=2))
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="campfinder", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -128,6 +169,14 @@ def main(argv: list[str] | None = None) -> int:
     p_val.set_defaults(func=_cmd_validate)
 
     sub.add_parser("build", help="compile frontend data").set_defaults(func=_cmd_build)
+
+    p_scrape = sub.add_parser("scrape", help="run platform scraper -> candidates JSON")
+    p_scrape.add_argument("--council", default="all")
+    p_scrape.set_defaults(func=_cmd_scrape)
+
+    p_merge = sub.add_parser("merge", help="merge a candidates JSON file into data/")
+    p_merge.add_argument("candidates")
+    p_merge.set_defaults(func=_cmd_merge)
 
     args = parser.parse_args(argv)
     return args.func(args)

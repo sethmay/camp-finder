@@ -1,10 +1,16 @@
 {
-  "build_time": "2026-07-17T22:57:17+00:00",
-  "camp_count": 7,
+  "build_time": "2026-07-17T23:28:09+00:00",
+  "camp_count": 21,
   "council_count": 235,
   "dead_link_count": 0,
-  "session_count": 12,
+  "session_count": 63,
   "states_covered": [
+    "CA",
+    "MD",
+    "MO",
+    "NE",
+    "NJ",
+    "NY",
     "OR",
     "WA"
   ],
