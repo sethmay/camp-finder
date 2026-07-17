@@ -18,7 +18,9 @@
       "lat": 45.3712,
       "lon": -122.2087,
       "name": "Camp Baldwin",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
@@ -106,7 +108,9 @@
       "lat": 45.2001,
       "lon": -123.9631,
       "name": "Camp Meriwether",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
@@ -156,7 +160,7 @@
       "website_url": "https://cpcbsa.org/camping/camp-meriwether/"
     }
   ],
-  "hq_city": "Portland",
+  "hq_city": "Beaverton",
   "id": "council-492",
   "name": "Cascade Pacific Council",
   "number": 492,

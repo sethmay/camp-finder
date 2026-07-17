@@ -17,7 +17,9 @@
       "lat": 44.0021,
       "lon": -124.1088,
       "name": "Camp Baker",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 0.82,
         "method": "llm_extraction",
@@ -83,7 +85,9 @@
       "lat": 44.1783,
       "lon": -122.0453,
       "name": "Camp Melakwa",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
@@ -118,7 +122,7 @@
   ],
   "hq_city": "Eugene",
   "id": "council-697",
-  "name": "Oregon Trail Council",
+  "name": "Pacific Crest Council",
   "number": 697,
   "platform": "other",
   "state": "OR",

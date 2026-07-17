@@ -17,7 +17,9 @@
       "lat": 47.6793,
       "lon": -122.9057,
       "name": "Camp Parsons",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
@@ -82,7 +84,9 @@
       "lat": 47.0421,
       "lon": -121.5387,
       "name": "Camp Sheppard",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",

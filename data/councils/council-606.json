@@ -18,7 +18,9 @@
       "lat": 48.4512,
       "lon": -122.1573,
       "name": "Fire Mountain Scout Camp",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
@@ -51,7 +53,6 @@
     },
     {
       "address": "Black Mountain, WA",
-      "city": null,
       "council_id": "council-606",
       "description": "Property retained for weekend and off-season use; no resident summer camp is offered.",
       "features": [],
@@ -59,7 +60,9 @@
       "lat": 48.3401,
       "lon": -121.7712,
       "name": "Camp Black Mountain",
-      "program_types": ["scouts_bsa_resident"],
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
       "provenance": {
         "confidence": 1.0,
         "method": "manual",
