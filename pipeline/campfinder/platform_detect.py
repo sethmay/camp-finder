@@ -77,33 +77,40 @@ def extract_candidate_links(html: str, base_url: str) -> list[str]:
     return out
 
 
-def detect(website: str) -> Platform:
-    """Best-effort platform detection for a council website URL."""
+def detect(website: str, client: httpx.Client | None = None) -> Platform:
+    """Best-effort platform detection for a council website URL.
+
+    Pass ``client`` to reuse a session (and for offline testing); otherwise a short-lived
+    redirect-following client is created and closed here.
+    """
+    owns = client is None
+    client = client or httpx.Client(
+        follow_redirects=True,
+        headers={"User-Agent": config.USER_AGENT},
+        timeout=config.HTTP_TIMEOUT_S,
+    )
     try:
-        with httpx.Client(
-            follow_redirects=True,
-            headers={"User-Agent": config.USER_AGENT},
-            timeout=config.HTTP_TIMEOUT_S,
-        ) as client:
-            home = client.get(str(website))
-            home.raise_for_status()
-            platform = detect_from_html(home.text)
+        home = client.get(str(website))
+        home.raise_for_status()
+        platform = detect_from_html(home.text)
+        if platform is not Platform.unknown:
+            return platform
+
+        # Homepage had no signature — follow a few registration-hinted links.
+        base_url = str(home.url)  # final URL after redirects, for relative resolution
+        for link in extract_candidate_links(home.text, base_url):
+            time.sleep(config.MIN_REQUEST_INTERVAL_S)  # polite: same host as the homepage
+            try:
+                page = client.get(link)
+                page.raise_for_status()
+            except httpx.HTTPError:
+                continue
+            platform = detect_from_html(page.text)
             if platform is not Platform.unknown:
                 return platform
-
-            # Homepage had no signature — follow a few registration-hinted links.
-            base_url = str(home.url)  # final URL after redirects, for relative resolution
-            for i, link in enumerate(extract_candidate_links(home.text, base_url)):
-                if i:
-                    time.sleep(config.MIN_REQUEST_INTERVAL_S)  # polite: same host
-                try:
-                    page = client.get(link)
-                    page.raise_for_status()
-                except httpx.HTTPError:
-                    continue
-                platform = detect_from_html(page.text)
-                if platform is not Platform.unknown:
-                    return platform
-            return Platform.unknown
+        return Platform.unknown
     except httpx.HTTPError:
         return Platform.unknown
+    finally:
+        if owns:
+            client.close()

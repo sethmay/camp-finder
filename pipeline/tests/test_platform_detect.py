@@ -6,6 +6,12 @@ from campfinder.platform_detect import (
     detect_from_html,
     extract_candidate_links,
 )
+import argparse
+
+import httpx
+
+from campfinder import cli, config, io, platform_detect
+from campfinder.models import Council
 
 
 def test_signature_matches():
@@ -60,9 +66,93 @@ def test_extract_excludes_external_and_junk_links():
     assert extract_candidate_links(html, BASE) == []
 
 
-def test_extract_dedupes_and_caps():
-    html = "".join(f'<a href="/camp?p={i}">Camp {i}</a>' for i in range(10))
-    html += '<a href="/camp?p=0">Camp dup</a>'
-    links = extract_candidate_links(html, BASE)
-    assert len(links) == 5  # config.PLATFORM_MAX_CRAWL_LINKS
-    assert len(set(links)) == len(links)
+def test_extract_dedupes_within_cap():
+    # Duplicate appears among the first entries, so the `seen` guard is actually hit.
+    html = (
+        '<a href="/camp-a">Camp A</a><a href="/camp-a">Camp A again</a><a href="/camp-b">Camp B</a>'
+    )
+    assert extract_candidate_links(html, BASE) == [
+        "https://www.council.org/camp-a",
+        "https://www.council.org/camp-b",
+    ]
+
+
+def test_extract_caps_at_max():
+    html = "".join(f'<a href="/camp{i}">Camp {i}</a>' for i in range(10))
+    assert len(extract_candidate_links(html, BASE)) == 5  # config.PLATFORM_MAX_CRAWL_LINKS
+
+
+def _mock_client(routes: dict[str, object]) -> httpx.Client:
+    def handler(request: httpx.Request) -> httpx.Response:
+        entry = routes.get(str(request.url), "<html></html>")
+        html, status = entry if isinstance(entry, tuple) else (entry, 200)
+        return httpx.Response(status, text=html)
+
+    return httpx.Client(transport=httpx.MockTransport(handler), follow_redirects=True)
+
+
+def test_detect_homepage_signature_short_circuits():
+    routes = {"https://c.org/": '<a href="https://x.247scouting.com/e">reg</a>'}
+    with _mock_client(routes) as cl:
+        assert platform_detect.detect("https://c.org/", client=cl) is Platform.blackpug
+
+
+def test_detect_crawls_to_registration_subpage(monkeypatch):
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    routes = {
+        "https://c.org/": '<a href="/summer-camp">Summer Camp</a>',
+        "https://c.org/summer-camp": '<iframe src="https://doubleknot.com/x"></iframe>',
+    }
+    with _mock_client(routes) as cl:
+        assert platform_detect.detect("https://c.org/", client=cl) is Platform.doubleknot
+
+
+def test_detect_skips_failing_link_then_finds_next(monkeypatch):
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    routes = {
+        "https://c.org/": '<a href="/register-bad">x</a><a href="/register-ok">y</a>',
+        "https://c.org/register-bad": ("boom", 500),
+        "https://c.org/register-ok": "join tentaroo.com today",
+    }
+    with _mock_client(routes) as cl:
+        assert platform_detect.detect("https://c.org/", client=cl) is Platform.tentaroo
+
+
+def test_detect_unknown_when_no_signature_anywhere(monkeypatch):
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    routes = {
+        "https://c.org/": '<a href="/camp">camp</a>',
+        "https://c.org/camp": "<html>nothing to see</html>",
+    }
+    with _mock_client(routes) as cl:
+        assert platform_detect.detect("https://c.org/", client=cl) is Platform.unknown
+
+
+def _seed(tmp_path, monkeypatch, cid: str, platform: Platform) -> None:
+    monkeypatch.setattr(io.config, "COUNCILS_DIR", tmp_path)
+    io.save_council(
+        Council(id=cid, name="T", number=1, state="OR", website="https://c.org/", platform=platform)
+    )
+
+
+def _run_detect(monkeypatch, detected: Platform, *, overwrite: bool) -> None:
+    monkeypatch.setattr(cli, "detect_platform", lambda _url: detected)
+    assert cli._cmd_detect(argparse.Namespace(council="all", overwrite=overwrite)) == 0
+
+
+def test_cmd_detect_never_clobbers_known_with_unknown(tmp_path, monkeypatch):
+    _seed(tmp_path, monkeypatch, "council-001", Platform.blackpug)
+    _run_detect(monkeypatch, Platform.unknown, overwrite=False)
+    assert io.load_council(io.council_path("council-001")).platform is Platform.blackpug
+
+
+def test_cmd_detect_fills_unknown(tmp_path, monkeypatch):
+    _seed(tmp_path, monkeypatch, "council-002", Platform.unknown)
+    _run_detect(monkeypatch, Platform.doubleknot, overwrite=False)
+    assert io.load_council(io.council_path("council-002")).platform is Platform.doubleknot
+
+
+def test_cmd_detect_overwrite_never_clobbers_on_unknown(tmp_path, monkeypatch):
+    _seed(tmp_path, monkeypatch, "council-003", Platform.blackpug)
+    _run_detect(monkeypatch, Platform.unknown, overwrite=True)
+    assert io.load_council(io.council_path("council-003")).platform is Platform.blackpug

@@ -23,11 +23,11 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
 
 ## Next pipeline passes
 
-- **Black Pug scraper — IMPLEMENTATION.md §6.1 (next).** Platform detect classified 37/95
-  councils (blackpug 15, doubleknot 7, tentaroo 15; 58 unknown). blackpug + tentaroo
-  (tentaroo migrates to Black Pug by Oct 2026) = 30/37 of classified councils, confirming
+- **Black Pug scraper — IMPLEMENTATION.md §6.1 (next).** Platform detect classified 39/95
+  councils (blackpug 15, doubleknot 8, tentaroo 15, other 1; 56 unknown). blackpug + tentaroo
+  (tentaroo migrates to Black Pug by Oct 2026) = 30/39 of classified councils, confirming
   Black Pug as the platform to scrape first. 15 councils are ready targets today.
-- Deepen detect coverage later: 58 councils with a website still `unknown` (registration
+- Deepen detect coverage later: 56 councils with a website still `unknown` (registration
   behind JS, or >1 click deep, or on an unlinked subdomain); 140 have no website yet.
 - Doubleknot scraper + LLM long-tail extractor with review queue — §6.2, §6.3.
 - CI: `deploy.yml` (GitHub Pages project site at `sethmay.github.io/camp-finder/`,

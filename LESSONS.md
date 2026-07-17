@@ -5,11 +5,14 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 
 ## Data pipeline
 
-- **Enrichment/registry passes MUST be idempotent and non-clobbering.** Default to filling
-  only empty fields; gate destructive refills behind an explicit `--overwrite`; never wipe
-  an existing value when the source fails to re-resolve; route every write through
-  `io.save_council` (the canonical writer) so diffs stay minimal. Established in
-  `registry.py`, followed by `enrich.py`.
+- **Enrichment/registry/detect passes MUST be idempotent and non-clobbering.** Default to
+  filling only empty fields; gate destructive refills behind an explicit `--overwrite`;
+  never wipe an existing value when the source fails to re-resolve; route every write
+  through `io.save_council` (the canonical writer) so diffs stay minimal. Established in
+  `registry.py`, `enrich.py`, `platform_detect`/`_cmd_detect`. Corollary: **a detector's
+  `unknown`/negative sentinel is NOT a confirmed negative** — a failed fetch or crawl miss
+  returns the same `unknown` as a genuine "no platform", so it must never overwrite a known
+  value (this bit `_cmd_detect`: a re-run demoted council-492 blackpug→unknown).
 
 - **MediaWiki/Wikipedia passes belong to the `registry.py` family, not `base.Scraper`.**
   Single trusted endpoint, batched (≤50 titles), `redirects=1`, `formatversion=2`,
@@ -26,11 +29,14 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 
 ## Data safety / security
 
-- **URLs entering the dataset from an externally-editable source (Wikipedia infobox) are
-  validated only as pydantic `HttpUrl`**, which permits internal/loopback hosts. Anything
-  that later fetches a stored `website`/`*_url` with `follow_redirects=True`
-  (e.g. `platform_detect.py`) inherits a low-grade SSRF surface. Add a host sanity check
-  if a pass fetches these URLs from a non-operator context.
+- **URLs entering the dataset from an externally-editable source (Wikipedia infobox, or a
+  council page we crawl) are validated only as pydantic `HttpUrl`**, which permits
+  internal/loopback hosts. Anything that later fetches a stored `website`/`*_url` (or a
+  link crawled from one) with `follow_redirects=True` (`platform_detect.py`) inherits a
+  low-grade SSRF surface. A same-registrable-site filter is NOT an SSRF boundary — a
+  same-site URL can 302 to an internal host, so the allow-list must be re-checked AFTER
+  each redirect, not just on the initial URL. Add a private/loopback host check if a pass
+  ever fetches these from a non-operator context (e.g. unattended refresh).
 
 ## Docs / process
 
@@ -38,3 +44,19 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   from a run's printed tally.** A run prints "filled N", but "N/235 have a website" must be
   counted from `data/councils/*.json` at the reviewed rev, and the filled + remaining
   figures must sum to 235. Pre-set fixtures make the run tally and the tree total differ.
+
+## Testing
+
+- **Test the loop, not just the pure helper.** Network-driven wiring (per-item exception
+  isolation, post-redirect base resolution, first-hit short-circuit) is where regressions
+  hide. Accept an optional injected `httpx.Client` and drive it with `httpx.MockTransport`
+  so the orchestration is covered offline; monkeypatch `config.MIN_REQUEST_INTERVAL_S = 0`
+  to keep such tests fast.
+
+- **Cap-before-dedupe makes dedupe tests vacuous.** If the duplicate sits beyond the result
+  cap, the `seen` branch never runs and the assertion passes for the wrong reason. Put the
+  duplicate inside the capped window so the guard is actually exercised.
+
+- **Rate-limit spacing must account for the request already made in the same call.** Don't
+  skip the polite delay on the first crawled link — the homepage was just fetched from the
+  same host. Pause before every same-host request.
