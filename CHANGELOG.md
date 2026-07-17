@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.4.0 (minor) — 2026-07-17
 
-- `PENDING` Add Black Pug scraper (`scrapers/base` + `scrapers/blackpug`), `merge.py`, and
+- `4eeff13` Add Black Pug scraper (`scrapers/base` + `scrapers/blackpug`), `merge.py`, and
   `campfinder scrape`/`merge`: scraped 14 resident camps / 51 sessions across 8 councils
   (CA, MD, MO, NE, NJ, NY) from scoutingevent.com — dataset now spans 8 states
 
