@@ -23,12 +23,15 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
 
 ## Next pipeline passes
 
-- **Black Pug scraper — IMPLEMENTATION.md §6.1 (next).** Platform detect classified 39/95
-  councils (blackpug 15, doubleknot 8, tentaroo 15, other 1; 56 unknown). blackpug + tentaroo
-  (tentaroo migrates to Black Pug by Oct 2026) = 30/39 of classified councils, confirming
-  Black Pug as the platform to scrape first. 15 councils are ready targets today.
-- Deepen detect coverage later: 56 councils with a website still `unknown` (registration
-  behind JS, or >1 click deep, or on an unlinked subdomain); 140 have no website yet.
+- **Black Pug scraper — DONE (0.4.0).** `campfinder scrape`/`merge` off scoutingevent.com;
+  14 camps / 51 sessions merged across 8 non-demo councils. Follow-ups:
+  - **Fees**: not scraped — Black Pug loads pricing via a JS `ses.myPricing` POST
+    (`/Ajax/SES`) returning an HTML modal; reverse-engineer it to fill `fee_youth`/`fee_adult`.
+  - **Name cleanup**: some events keep council-specific prefixes (e.g. MO council 358's
+    "Summer Camp-Famous Eagle"); a curation/LLM pass could canonicalize to "Camp Famous Eagle".
+  - **Coverage ramp**: 5 blackpug councils returned 0 (no open resident events / different
+    landing); the 4 curated demo councils (492/606/609/697) were excluded from merge to
+    protect the hand-authored frontend fixtures — revisit once real data should replace demo.
 - Doubleknot scraper + LLM long-tail extractor with review queue — §6.2, §6.3.
 - CI: `deploy.yml` (GitHub Pages project site at `sethmay.github.io/camp-finder/`,
   needs Astro `site` + `base: '/camp-finder'`) and `refresh.yml` — §10.
