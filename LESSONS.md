@@ -13,6 +13,10 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   `unknown`/negative sentinel is NOT a confirmed negative** — a failed fetch or crawl miss
   returns the same `unknown` as a genuine "no platform", so it must never overwrite a known
   value (this bit `_cmd_detect`: a re-run demoted council-492 blackpug→unknown).
+  Note the None-guard blanks-protection is NOT authority ranking: a `>=confidence AND
+  strictly-newer` merge still lets a thinner scrape replace a curated non-null field
+  (e.g. overwrite a council `website_url` with an event-registration URL, or wholesale-
+  replace `features`). If curated fields must outrank scrapes, encode method precedence.
 
 - **MediaWiki/Wikipedia passes belong to the `registry.py` family, not `base.Scraper`.**
   Single trusted endpoint, batched (≤50 titles), `redirects=1`, `formatversion=2`,
@@ -60,3 +64,25 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 - **Rate-limit spacing must account for the request already made in the same call.** Don't
   skip the polite delay on the first crawled link — the homepage was just fetched from the
   same host. Pause before every same-host request.
+
+## Scrapers (base.Scraper family)
+
+- **Isolate model construction per item, exactly like network calls.** A scrape loop that
+  try/excepts `get()` but builds `Session`/`Camp` outside the guard crashes the whole run
+  on one anomalous page — pydantic `ValidationError` is a `ValueError`, and field bounds
+  bite (`Session.year >= 2024`, lat/lon range), so an archived pre-2024 week or a bad
+  coordinate aborts everything and discards all candidates (written only after the loop).
+  Wrap the parse in `except ValueError: continue`.
+
+- **Only retry transient failures.** `raise_for_status()` turns 4xx into `httpx.HTTPError`,
+  so a blanket retry loop hammers permanent 403/404s 3x with backoff. Gate retries on
+  transport errors / status >= 500; let 4xx fail fast.
+
+- **robots.txt is a real request against the polite budget.** Fetching `/robots.txt`
+  through the shared client without seeding `_last_fetch[host]` makes the next fetch fire
+  with zero spacing. Route the robots probe through the rate limiter too.
+
+- **A field extractor that re-keys an id must accept every real-world spelling.**
+  `_address_state` mapping only full state names silently fell back to the council HQ state
+  for postal-abbreviation addresses — mislabeling and mis-keying an out-of-state camp.
+  Accept both "California" and "CA".

@@ -32,6 +32,10 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
   - **Coverage ramp**: 5 blackpug councils returned 0 (no open resident events / different
     landing); the 4 curated demo councils (492/606/609/697) were excluded from merge to
     protect the hand-authored frontend fixtures — revisit once real data should replace demo.
+  - **Merge precedence**: when a future scrape supersedes a *curated* camp, `merge._merge_camp`
+    replaces `website_url` (with the scoutingevent URL) and `features` wholesale. Add
+    method/authority precedence before scrapes overlap curated camps (demo councils are
+    excluded today, so not yet exercised).
 - Doubleknot scraper + LLM long-tail extractor with review queue — §6.2, §6.3.
 - CI: `deploy.yml` (GitHub Pages project site at `sethmay.github.io/camp-finder/`,
   needs Astro `site` + `base: '/camp-finder'`) and `refresh.yml` — §10.

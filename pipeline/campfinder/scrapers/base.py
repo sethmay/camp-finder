@@ -50,6 +50,7 @@ class Scraper(abc.ABC):
             return self._robots[host]
         rp: RobotFileParser | None = RobotFileParser()
         try:
+            self._rate_limit(host)
             resp = self._client.get(f"{scheme}://{host}/robots.txt")
             if resp.status_code >= 400 or "<html" in resp.text[:200].lower():
                 rp = None  # no usable robots.txt -> unrestricted
@@ -92,6 +93,9 @@ class Scraper(abc.ABC):
                 return resp
             except httpx.HTTPError as exc:
                 last_exc = exc
+                status = getattr(getattr(exc, "response", None), "status_code", None)
+                if status is not None and 400 <= status < 500:
+                    raise  # permanent client error -> don't retry
                 if attempt < config.HTTP_RETRIES - 1:
                     time.sleep(config.MIN_REQUEST_INTERVAL_S * (attempt + 1))
         assert last_exc is not None

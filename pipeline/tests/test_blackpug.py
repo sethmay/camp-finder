@@ -3,8 +3,12 @@
 from datetime import date
 from pathlib import Path
 
-from campfinder.models import Method, ProgramType
+import httpx
+
+from campfinder.models import Council, Method, ProgramType
 from campfinder.scrapers.blackpug import (
+    BlackPugScraper,
+    _address_state,
     discover_event_urls,
     kebab,
     normalize_camp_name,
@@ -83,3 +87,45 @@ def test_parse_returns_none_without_multinight_session():
     </body></html>
     """
     assert parse_event_page(html, "https://scoutingevent.com/999-x", "council-999", "OH") is None
+
+
+def test_address_state_accepts_full_name_and_usps_code():
+    assert _address_state("40800 CA-88 Pioneer, California 95666", "OR") == "CA"
+    assert _address_state("1 Main St Town, CA 95666", "OR") == "CA"
+    assert _address_state("no state in here", "OR") == "OR"  # falls back to council state
+
+
+def _event_html(title: str, year: int) -> str:
+    return (
+        f"<html><head><title>{title}</title></head><body>"
+        f"Coords: 40.0, -83.0 1 Main St, Ohio 44100 "
+        f"Week 1 Camp Sunday 06-21-{year} 1:00 PM to Saturday 06-27-{year} 9:30 AM"
+        "</body></html>"
+    )
+
+
+def _mock_client(routes: dict[str, str]) -> httpx.Client:
+    def handler(request: httpx.Request) -> httpx.Response:
+        return httpx.Response(200, text=routes.get(str(request.url), "<html></html>"))
+
+    return httpx.Client(transport=httpx.MockTransport(handler), follow_redirects=True)
+
+
+def test_scrape_isolates_a_bad_event_page(monkeypatch):
+    # A pre-2024 session raises pydantic ValidationError; it must not abort the whole run.
+    from campfinder import config
+
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    routes = {
+        "https://scoutingevent.com/999": (
+            '<a href="/999-bad">Camp Bad</a><a href="/999-good">Camp Good</a>'
+        ),
+        "https://scoutingevent.com/999-bad": _event_html("Test Council - Camp Bad", 2023),
+        "https://scoutingevent.com/999-good": _event_html("Test Council - Camp Good", 2026),
+        "https://scoutingevent.com/robots.txt": "<html>not robots</html>",
+    }
+    council = Council(id="council-999", name="Test", number=999, state="OH")
+    with BlackPugScraper(client=_mock_client(routes)) as scraper:
+        camps = scraper.scrape(council)
+    assert [c.id for c in camps] == ["oh-camp-good"]
+    assert camps[0].sessions[0].start_date == date(2026, 6, 21)

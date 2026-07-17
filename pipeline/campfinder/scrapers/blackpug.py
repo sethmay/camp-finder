@@ -97,12 +97,18 @@ def discover_event_urls(landing_html: str, council_number: int) -> list[str]:
     return urls
 
 
+_STATE_CODES = set(STATE_TO_CODE.values())
+
+
 def _address_state(address: str, fallback: str) -> str:
     m = _ADDR_STATE_RE.search(address)
     if m:
-        code = STATE_TO_CODE.get(m.group(1).strip())
+        raw = m.group(1).strip()
+        code = STATE_TO_CODE.get(raw)  # full name -> code
         if code:
             return code
+        if raw.upper() in _STATE_CODES:  # already a USPS code
+            return raw.upper()
     return fallback
 
 
@@ -207,7 +213,10 @@ class BlackPugScraper(Scraper):
                 page = self.get(url)
             except (httpx.HTTPError, PermissionError):
                 continue  # one unreachable/disallowed event must not abort the council
-            camp = parse_event_page(page.text, url, council.id, council.state)
+            try:
+                camp = parse_event_page(page.text, url, council.id, council.state)
+            except ValueError:
+                continue  # anomalous page (bad dates/coords -> ValidationError) must not abort
             if camp is not None:
                 camps.append(camp)
         return camps
