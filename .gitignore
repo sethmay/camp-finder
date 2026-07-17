@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Camp Finder — .gitignore
+# Stack: Astro/React/TS frontend (web/) + Python/uv pipeline (pipeline/)
+# NOTE: built data (web/public/data/*.json) is INTENTIONALLY committed — the site
+# must be deployable from a clean checkout and data diffs must be reviewable.
+# See IMPLEMENTATION.md §7.3.
+# ---------------------------------------------------------------------------
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Secrets / env ---
+.env
+.env.*
+!.env.example
+*.local
+
+# --- Node / frontend (web/) ---
+node_modules/
+web/node_modules/
+web/dist/
+web/.astro/
+web/.output/
+.astro/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# --- Cloudflare Pages / Wrangler ---
+.wrangler/
+web/.wrangler/
+
+# --- Python / pipeline (pipeline/) ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist-python/
+.venv/
+pipeline/.venv/
+# uv keeps uv.lock tracked; ignore only its local caches
+.uv-cache/
+
+# --- Tooling caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Pipeline working files (transient; NOT canonical data) ---
+# Local scraper candidate dumps + geocode cache. The canonical dataset lives in
+# data/councils/**, and the human review queue in data/.review/ is tracked on purpose.
+data/.cache/
+data/candidates/
+*.candidates.json
+validation_report.json

@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import type { Meta } from "../lib/types";
+import metaData from "../../public/data/meta.json";
+
+const meta = metaData as unknown as Meta;
+---
+
+<Base title="About — Camp Finder">
+  <article class="mx-auto max-w-2xl px-4 py-10">
+    <h1 class="font-display text-h1 text-ink">About Camp Finder</h1>
+
+    <p class="mt-4 text-body text-ink">
+      Camp Finder is an unofficial, community-built directory of Scouts BSA resident
+      summer camps operated by local councils across the country. It exists to solve one
+      problem: there is no single place to discover camps you don't already know about.
+    </p>
+
+    <h2 class="mt-8 font-display text-h2 text-ink">How it works</h2>
+    <p class="mt-3 text-body text-ink">
+      We aggregate publicly available camp information — locations, session dates, fees,
+      and programs — from council websites and their registration platforms, and link
+      every listing back to the council's own page. We are a directory and a pointer,
+      never the authority. Always confirm details on the official council page before you
+      register.
+    </p>
+
+    <h2 class="mt-8 font-display text-h2 text-ink">Data &amp; freshness</h2>
+    <p class="mt-3 text-body text-ink">
+      Every camp and session records where its information came from and when it was last
+      verified. Listings older than a season are flagged. Camp data changes on a yearly
+      cycle, so some details may lag the council's latest updates.
+    </p>
+    <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-muted sm:grid-cols-4">
+      <li class="rounded-md border border-border bg-surface p-3">
+        <span class="block font-mono text-h3 text-ink">{meta.camp_count}</span> camps
+      </li>
+      <li class="rounded-md border border-border bg-surface p-3">
+        <span class="block font-mono text-h3 text-ink">{meta.council_count}</span> councils
+      </li>
+      <li class="rounded-md border border-border bg-surface p-3">
+        <span class="block font-mono text-h3 text-ink">{meta.states_covered.length}</span> states
+      </li>
+      <li class="rounded-md border border-border bg-surface p-3">
+        <span class="block font-mono text-h3 text-ink">{meta.upcoming_summer_year}</span> season
+      </li>
+    </ul>
+
+    <h2 id="corrections" class="mt-8 font-display text-h2 text-ink">Suggest a correction</h2>
+    <p class="mt-3 text-body text-ink">
+      Found something wrong or missing? Corrections are reviewed by a maintainer before
+      they go live. Open an issue on the project repository with the camp name, what's
+      wrong, and a link to the authoritative source.
+    </p>
+
+    <h2 class="mt-8 font-display text-h2 text-ink">Disclaimer</h2>
+    <p class="mt-3 text-body text-ink">
+      Camp Finder is not affiliated with, endorsed by, or sponsored by Scouting America
+      (Boy Scouts of America). All council and camp names are the property of their
+      respective owners.
+    </p>
+  </article>
+</Base>

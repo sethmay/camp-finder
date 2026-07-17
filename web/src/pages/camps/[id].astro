@@ -1,0 +1,150 @@
+---
+import Base from "../../layouts/Base.astro";
+import FeatureChip from "../../components/FeatureChip";
+import AvailabilityBadge from "../../components/AvailabilityBadge";
+import ProvenanceBadge from "../../components/ProvenanceBadge";
+import StaleBadge from "../../components/StaleBadge";
+import { formatDateRange, formatFee, isStale } from "../../lib/format";
+import type { Camp } from "../../lib/types";
+import campsData from "../../../public/data/camps.json";
+
+export function getStaticPaths() {
+  const camps = campsData as unknown as Camp[];
+  return camps.map((camp) => ({ params: { id: camp.id }, props: { camp } }));
+}
+
+const { camp } = Astro.props as { camp: Camp };
+const location = camp.city ? `${camp.city}, ${camp.state}` : camp.state;
+const stale = isStale(camp.verified_at);
+---
+
+<Base title={`${camp.name} — Camp Finder`} description={camp.description ?? undefined}>
+  <article class="mx-auto max-w-3xl px-4 py-8">
+    <a href="/" class="text-sm text-primary">← Back to search</a>
+
+    <header class="mt-4">
+      <div class="flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h1 class="font-display text-h1 text-ink">{camp.name}</h1>
+          <p class="mt-1 text-body text-muted">{camp.council_name} · {location}</p>
+        </div>
+        <StaleBadge verifiedAt={camp.verified_at} />
+      </div>
+
+      <a
+        href={camp.website_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cf-tap mt-4 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
+      >
+        Visit official council page →
+      </a>
+    </header>
+
+    {
+      stale && (
+        <p class="mt-6 rounded-md bg-waitlist-bg px-4 py-3 text-sm text-waitlist-ink">
+          This listing hasn't been verified in over a year. Confirm all dates and fees on
+          the official council page before registering.
+        </p>
+      )
+    }
+
+    {
+      camp.description && (
+        <p class="mt-6 text-body text-ink">{camp.description}</p>
+      )
+    }
+
+    {
+      camp.features.length > 0 && (
+        <section class="mt-6">
+          <h2 class="font-display text-h3 text-ink">Program &amp; features</h2>
+          <div class="mt-3 flex flex-wrap gap-1.5">
+            {camp.features.map((f) => <FeatureChip feature={f} />)}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="mt-8">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="font-display text-h3 text-ink">Sessions</h2>
+        <a
+          href={camp.website_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-semibold text-primary"
+        >
+          Register on council site →
+        </a>
+      </div>
+
+      {
+        camp.sessions.length === 0 ? (
+          <p class="mt-3 text-sm text-muted">
+            No upcoming sessions are posted yet. Check the council page for updates.
+          </p>
+        ) : (
+          <div class="mt-3 overflow-x-auto rounded-md border border-border">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="bg-bg text-left text-muted">
+                  <th class="px-4 py-2 font-semibold">Week</th>
+                  <th class="px-4 py-2 font-semibold">Youth</th>
+                  <th class="px-4 py-2 font-semibold">Adult</th>
+                  <th class="px-4 py-2 font-semibold">Status</th>
+                  <th class="px-4 py-2 font-semibold">Register</th>
+                </tr>
+              </thead>
+              <tbody>
+                {camp.sessions.map((s) => (
+                  <tr class="border-t border-border">
+                    <td class="px-4 py-3 font-semibold text-ink">
+                      {formatDateRange(s.start_date, s.end_date)}
+                      {s.fee_notes && (
+                        <span class="block text-xs font-normal text-muted">{s.fee_notes}</span>
+                      )}
+                    </td>
+                    <td class="px-4 py-3 font-mono text-ink">{formatFee(s.fee_youth)}</td>
+                    <td class="px-4 py-3 font-mono text-ink">{formatFee(s.fee_adult)}</td>
+                    <td class="px-4 py-3"><AvailabilityBadge availability={s.availability} /></td>
+                    <td class="px-4 py-3">
+                      {s.registration_url ? (
+                        <a
+                          href={s.registration_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="font-semibold text-primary"
+                        >
+                          Register →
+                        </a>
+                      ) : (
+                        <span class="text-muted">—</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
+      }
+    </section>
+
+    <div class="mt-8 flex flex-col gap-4 rounded-md border border-border bg-surface p-4">
+      <a
+        href={camp.website_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cf-tap inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
+      >
+        Visit official council page →
+      </a>
+      <ProvenanceBadge sourceUrl={camp.source_url} verifiedAt={camp.verified_at} />
+      <a href="/about#corrections" class="text-xs text-muted underline">
+        See a problem with this listing? Suggest a correction.
+      </a>
+    </div>
+  </article>
+</Base>

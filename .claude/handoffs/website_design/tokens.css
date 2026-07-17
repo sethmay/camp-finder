@@ -1,0 +1,55 @@
+/* Camp Finder — design tokens (v1)
+ * Drop-in CSS custom properties. Pair with tailwind.theme.js for utility classes.
+ * All text-on-surface pairings pass WCAG 2.1 AA (ratios noted inline). */
+
+:root {
+  /* ---- Color: surfaces & text ---- */
+  --cf-bg:            #EDEAE1; /* app canvas */
+  --cf-surface:       #FFFFFF; /* cards, sheets, header */
+  --cf-text:          #20261F; /* ink       — 13.9:1 on surface */
+  --cf-muted:         #5C6A5B; /* secondary — 5.3:1  on surface */
+  --cf-border:        #D8D3C6;
+
+  /* ---- Color: brand ---- */
+  --cf-primary:       #1D5E42; /* CTA / brand — white text 8.7:1 */
+  --cf-primary-700:   #164A34; /* hover/active */
+  --cf-accent:        #B5551F; /* blaze — focus ring, emphasis — white 4.6:1 */
+
+  /* ---- Color: status (dark ink on light tint = AA; never color-only) ---- */
+  --cf-open:          #2E7D46; /* success/open    — white 5.9:1 */
+  --cf-waitlist:      #8A5A12; /* warning/waitlist — white 5.6:1 */
+  --cf-full:          #B23A2E; /* danger/full     — white 6.4:1 */
+  --cf-open-bg:       #E4F0E7; --cf-open-ink:     #1E5B33; /* 7.0:1 */
+  --cf-waitlist-bg:   #F6ECD6; --cf-waitlist-ink: #6F4A10; /* 7.4:1 */
+  --cf-full-bg:       #F6E1DE; --cf-full-ink:     #8F2E24; /* 6.5:1 */
+  --cf-unknown-bg:    #E8E6DE; --cf-unknown-ink:  #4A5348; /* 7.2:1 */
+
+  /* ---- Type ---- */
+  --cf-font-display:  "Libre Franklin", system-ui, sans-serif;
+  --cf-font-sans:     "Public Sans", system-ui, sans-serif;
+  --cf-font-mono:     "IBM Plex Mono", ui-monospace, monospace;
+  /* modular scale, ratio 1.2, base 16 */
+  --cf-fs-display:    40px; /* /800/-2% */
+  --cf-fs-h1:         28px; /* /800     */
+  --cf-fs-h2:         22px; /* /700     */
+  --cf-fs-h3:         18px; /* /700     */
+  --cf-fs-body:       16px; /* /400     */
+  --cf-fs-sm:         14px; /* /500     */
+  --cf-fs-label:      12px; /* mono     */
+
+  /* ---- Spacing (4px base) ---- */
+  --cf-sp-1: 4px;  --cf-sp-2: 8px;  --cf-sp-3: 12px; --cf-sp-4: 16px;
+  --cf-sp-6: 24px; --cf-sp-8: 32px; --cf-sp-12: 48px;
+
+  /* ---- Radii ---- */
+  --cf-r-sm: 6px; --cf-r-md: 10px; --cf-r-lg: 14px; --cf-r-pill: 999px;
+
+  /* ---- Shadows ---- */
+  --cf-sh-1: 0 1px 2px rgba(32,38,31,.08);
+  --cf-sh-2: 0 6px 20px rgba(32,38,31,.14);
+
+  /* ---- Breakpoints (reference; use in media queries) ---- */
+  --cf-bp-mobile:  375px;
+  --cf-bp-tablet:  768px;
+  --cf-bp-desktop: 1280px;
+}

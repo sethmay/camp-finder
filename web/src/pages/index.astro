@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import SearchApp from "../components/SearchApp";
+import type { Camp } from "../lib/types";
+import campsData from "../../public/data/camps.json";
+
+const camps = campsData as unknown as Camp[];
+---
+
+<Base>
+  <section class="border-b border-border bg-surface">
+    <div class="mx-auto max-w-[1280px] px-4 py-8">
+      <h1 class="font-display text-display text-ink">Find a Scouts BSA summer camp</h1>
+      <p class="mt-2 max-w-2xl text-body text-muted">
+        Search resident summer camps run by councils across the country by distance,
+        available weeks, cost, and program. Every camp links to its official council page.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive search (client island). -->
+  <SearchApp client:load />
+
+  <!-- SEO / no-JS fallback: the same camps as crawlable links. -->
+  <noscript>
+    <div class="mx-auto max-w-[1280px] px-4 py-8">
+      <h2 class="font-display text-h2">All camps</h2>
+      <ul class="mt-4 grid gap-2 md:grid-cols-2">
+        {
+          camps.map((c) => (
+            <li>
+              <a class="text-primary underline" href={`/camps/${c.id}`}>
+                {c.name} — {c.council_name} ({c.state})
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </noscript>
+</Base>

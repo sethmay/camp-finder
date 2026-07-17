@@ -1,0 +1,115 @@
+"""``campfinder`` command-line entrypoint (IMPLEMENTATION.md §11).
+
+Available commands (scrapers/merge land in a later phase):
+    schema      regenerate data/schema/*.json from the models
+    registry    build/refresh council stubs from Wikipedia
+    detect      classify a council's registration platform
+    geocode     fill missing camp lat/lon from addresses
+    validate    run the validation gate (exits nonzero on error; --strict on warnings)
+    build       compile data/ -> web/public/data/*.json
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+
+from . import build as build_mod
+from . import config, registry, schema_gen, validate
+from .geocode import geocode
+from .io import load_all_councils, save_council
+from .platform_detect import detect as detect_platform
+
+
+def _cmd_schema(_: argparse.Namespace) -> int:
+    written = schema_gen.generate()
+    print(f"wrote {len(written)} schema(s) to {config.SCHEMA_DIR}: {', '.join(written)}")
+    return 0
+
+
+def _cmd_registry(args: argparse.Namespace) -> int:
+    n = registry.build()
+    print(f"registry: wrote {n} council file(s) to {config.COUNCILS_DIR}")
+    return 0
+
+
+def _cmd_detect(args: argparse.Namespace) -> int:
+    councils = load_all_councils()
+    if args.council != "all":
+        councils = [c for c in councils if c.id == args.council]
+        if not councils:
+            print(f"no such council: {args.council}", file=sys.stderr)
+            return 1
+    for c in councils:
+        if not c.website:
+            print(f"{c.id}: no website, skipping")
+            continue
+        plat = detect_platform(str(c.website))
+        c.platform = plat
+        save_council(c)
+        print(f"{c.id}: {plat.value}")
+    return 0
+
+
+def _cmd_geocode(args: argparse.Namespace) -> int:
+    filled = 0
+    for c in load_all_councils():
+        changed = False
+        for camp in c.camps:
+            if (camp.lat is None or camp.lon is None) and camp.address:
+                coords = geocode(camp.address)
+                if coords:
+                    camp.lat, camp.lon = coords
+                    changed = True
+                    filled += 1
+                    print(f"{camp.id}: {coords[0]:.4f},{coords[1]:.4f}")
+        if changed:
+            save_council(c)
+    print(f"geocode: filled {filled} camp(s)")
+    return 0
+
+
+def _cmd_validate(args: argparse.Namespace) -> int:
+    report = validate.validate_tree()
+    print(json.dumps(report.to_dict(), indent=2))
+    if report.errors:
+        return 1
+    if args.strict and report.warnings:
+        return 2
+    return 0
+
+
+def _cmd_build(args: argparse.Namespace) -> int:
+    meta = build_mod.build()
+    print(json.dumps(meta, indent=2))
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(prog="campfinder", description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("schema", help="regenerate JSON Schemas").set_defaults(func=_cmd_schema)
+    sub.add_parser("registry", help="build council registry").set_defaults(func=_cmd_registry)
+
+    p_detect = sub.add_parser("detect", help="detect registration platform")
+    p_detect.add_argument("--council", default="all")
+    p_detect.set_defaults(func=_cmd_detect)
+
+    p_geo = sub.add_parser("geocode", help="fill missing lat/lon")
+    p_geo.add_argument("--missing", action="store_true", help="(default behavior)")
+    p_geo.set_defaults(func=_cmd_geocode)
+
+    p_val = sub.add_parser("validate", help="run validation gate")
+    p_val.add_argument("--strict", action="store_true", help="fail on warnings too")
+    p_val.set_defaults(func=_cmd_validate)
+
+    sub.add_parser("build", help="compile frontend data").set_defaults(func=_cmd_build)
+
+    args = parser.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,411 @@
+[
+  {
+    "address": "67667 Sylvan Way, Florence, OR 97439",
+    "city": "Florence",
+    "confidence": 0.82,
+    "council_id": "council-697",
+    "council_name": "Oregon Trail Council",
+    "council_platform": "other",
+    "council_website": "https://www.otcbsa.org/",
+    "description": "Coastal dunes resident camp with sailing and an aquatics-heavy program.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "pool",
+      "shooting_sports",
+      "climbing",
+      "mountain_biking"
+    ],
+    "fee_from": 385,
+    "id": "or-camp-baker",
+    "lat": 44.0021,
+    "lon": -124.1088,
+    "method": "llm_extraction",
+    "name": "Camp Baker",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-07-11",
+        "fee_adult": 175,
+        "fee_notes": null,
+        "fee_youth": 385,
+        "id": "or-camp-baker-2026-07-05",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://www.otcbsa.org/camp-baker",
+        "source_url": "https://www.otcbsa.org/camp-baker",
+        "start_date": "2026-07-05",
+        "verified_at": "2026-06-15",
+        "year": 2026
+      },
+      {
+        "availability": "unknown",
+        "end_date": "2026-07-18",
+        "fee_adult": null,
+        "fee_notes": "Fee not yet posted for this week.",
+        "fee_youth": null,
+        "id": "or-camp-baker-2026-07-12",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://www.otcbsa.org/camp-baker",
+        "source_url": "https://www.otcbsa.org/camp-baker",
+        "start_date": "2026-07-12",
+        "verified_at": "2026-06-15",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://www.otcbsa.org/camp-baker",
+    "state": "OR",
+    "status": "active",
+    "verified_at": "2026-06-15",
+    "website_url": "https://www.otcbsa.org/camp-baker"
+  },
+  {
+    "address": "27650 SE Baldwin Rd, Sandy, OR 97055",
+    "city": "Sandy",
+    "confidence": 1.0,
+    "council_id": "council-492",
+    "council_name": "Cascade Pacific Council",
+    "council_platform": "blackpug",
+    "council_website": "https://cpcbsa.org/",
+    "description": "Wooded resident camp in the Cascade foothills with a lake waterfront and a strong first-year Scout program.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "shooting_sports",
+      "climbing",
+      "cope",
+      "older_scout_program",
+      "stem"
+    ],
+    "fee_from": 415,
+    "id": "or-camp-baldwin",
+    "lat": 45.3712,
+    "lon": -122.2087,
+    "method": "manual",
+    "name": "Camp Baldwin",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-06-27",
+        "fee_adult": 190,
+        "fee_notes": "Early-bird price through 3/1; $40 more after.",
+        "fee_youth": 415,
+        "id": "or-camp-baldwin-2026-06-21",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "source_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "start_date": "2026-06-21",
+        "verified_at": "2026-07-01",
+        "year": 2026
+      },
+      {
+        "availability": "waitlist",
+        "end_date": "2026-07-04",
+        "fee_adult": 190,
+        "fee_notes": null,
+        "fee_youth": 415,
+        "id": "or-camp-baldwin-2026-06-28",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "source_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "start_date": "2026-06-28",
+        "verified_at": "2026-07-01",
+        "year": 2026
+      },
+      {
+        "availability": "full",
+        "end_date": "2026-07-11",
+        "fee_adult": 190,
+        "fee_notes": null,
+        "fee_youth": 435,
+        "id": "or-camp-baldwin-2026-07-05",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "source_url": "https://cpcbsa.org/camping/camp-baldwin/",
+        "start_date": "2026-07-05",
+        "verified_at": "2026-07-01",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://cpcbsa.org/camping/camp-baldwin/",
+    "state": "OR",
+    "status": "active",
+    "verified_at": "2026-07-01",
+    "website_url": "https://cpcbsa.org/camping/camp-baldwin/"
+  },
+  {
+    "address": "Camp Melakwa, McKenzie Bridge, OR 97413",
+    "city": "McKenzie Bridge",
+    "confidence": 1.0,
+    "council_id": "council-697",
+    "council_name": "Oregon Trail Council",
+    "council_platform": "other",
+    "council_website": "https://www.otcbsa.org/",
+    "description": "High-Cascades resident camp at elevation with mountain hiking and COPE.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "climbing",
+      "cope",
+      "older_scout_program",
+      "high_adventure_option"
+    ],
+    "fee_from": 360,
+    "id": "or-camp-melakwa",
+    "lat": 44.1783,
+    "lon": -122.0453,
+    "method": "manual",
+    "name": "Camp Melakwa",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-08-01",
+        "fee_adult": 160,
+        "fee_notes": null,
+        "fee_youth": 360,
+        "id": "or-camp-melakwa-2026-07-26",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://www.otcbsa.org/camp-melakwa",
+        "source_url": "https://www.otcbsa.org/camp-melakwa",
+        "start_date": "2026-07-26",
+        "verified_at": "2025-02-10",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://www.otcbsa.org/camp-melakwa",
+    "state": "OR",
+    "status": "active",
+    "verified_at": "2025-02-10",
+    "website_url": "https://www.otcbsa.org/camp-melakwa"
+  },
+  {
+    "address": "Camp Meriwether, Cloverdale, OR 97112",
+    "city": "Cloverdale",
+    "confidence": 1.0,
+    "council_id": "council-492",
+    "council_name": "Cascade Pacific Council",
+    "council_platform": "blackpug",
+    "council_website": "https://cpcbsa.org/",
+    "description": "Oceanfront resident camp on the Oregon coast offering sailing, surfing, and a dedicated high-adventure track for older Scouts.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "shooting_sports",
+      "climbing",
+      "cope",
+      "older_scout_program",
+      "high_adventure_option",
+      "scuba"
+    ],
+    "fee_from": 470,
+    "id": "or-camp-meriwether",
+    "lat": 45.2001,
+    "lon": -123.9631,
+    "method": "manual",
+    "name": "Camp Meriwether",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-07-04",
+        "fee_adult": 205,
+        "fee_notes": null,
+        "fee_youth": 470,
+        "id": "or-camp-meriwether-2026-06-28",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://cpcbsa.org/camping/camp-meriwether/",
+        "source_url": "https://cpcbsa.org/camping/camp-meriwether/",
+        "start_date": "2026-06-28",
+        "verified_at": "2026-07-01",
+        "year": 2026
+      },
+      {
+        "availability": "open",
+        "end_date": "2026-07-18",
+        "fee_adult": 205,
+        "fee_notes": null,
+        "fee_youth": 470,
+        "id": "or-camp-meriwether-2026-07-12",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://cpcbsa.org/camping/camp-meriwether/",
+        "source_url": "https://cpcbsa.org/camping/camp-meriwether/",
+        "start_date": "2026-07-12",
+        "verified_at": "2026-07-01",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://cpcbsa.org/camping/camp-meriwether/",
+    "state": "OR",
+    "status": "active",
+    "verified_at": "2026-07-01",
+    "website_url": "https://cpcbsa.org/camping/camp-meriwether/"
+  },
+  {
+    "address": "Camp Parsons, Brinnon, WA 98320",
+    "city": "Brinnon",
+    "confidence": 1.0,
+    "council_id": "council-609",
+    "council_name": "Chief Seattle Council",
+    "council_platform": "blackpug",
+    "council_website": "https://seattlebsa.org/",
+    "description": "Historic Hood Canal resident camp at the foot of the Olympics, with sailing, kayaking, and mountain treks.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "shooting_sports",
+      "climbing",
+      "older_scout_program",
+      "high_adventure_option"
+    ],
+    "fee_from": 495,
+    "id": "wa-camp-parsons",
+    "lat": 47.6793,
+    "lon": -122.9057,
+    "method": "manual",
+    "name": "Camp Parsons",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-07-04",
+        "fee_adult": 210,
+        "fee_notes": null,
+        "fee_youth": 495,
+        "id": "wa-camp-parsons-2026-06-28",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://seattlebsa.org/camp-parsons/",
+        "source_url": "https://seattlebsa.org/camp-parsons/",
+        "start_date": "2026-06-28",
+        "verified_at": "2026-06-20",
+        "year": 2026
+      },
+      {
+        "availability": "open",
+        "end_date": "2026-07-25",
+        "fee_adult": 210,
+        "fee_notes": null,
+        "fee_youth": 495,
+        "id": "wa-camp-parsons-2026-07-19",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://seattlebsa.org/camp-parsons/",
+        "source_url": "https://seattlebsa.org/camp-parsons/",
+        "start_date": "2026-07-19",
+        "verified_at": "2026-06-20",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://seattlebsa.org/camp-parsons/",
+    "state": "WA",
+    "status": "active",
+    "verified_at": "2026-06-20",
+    "website_url": "https://seattlebsa.org/camp-parsons/"
+  },
+  {
+    "address": "Camp Sheppard, Enumclaw, WA 98022",
+    "city": "Enumclaw",
+    "confidence": 1.0,
+    "council_id": "council-609",
+    "council_name": "Chief Seattle Council",
+    "council_platform": "blackpug",
+    "council_website": "https://seattlebsa.org/",
+    "description": "Cascade forest resident camp bordering Mt. Rainier National Forest with hiking and ecology programs.",
+    "features": [
+      "dining_hall",
+      "shooting_sports",
+      "climbing",
+      "cope",
+      "stem"
+    ],
+    "fee_from": 425,
+    "id": "wa-camp-sheppard",
+    "lat": 47.0421,
+    "lon": -121.5387,
+    "method": "manual",
+    "name": "Camp Sheppard",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "waitlist",
+        "end_date": "2026-07-11",
+        "fee_adult": 180,
+        "fee_notes": null,
+        "fee_youth": 425,
+        "id": "wa-camp-sheppard-2026-07-05",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://seattlebsa.org/camp-sheppard/",
+        "source_url": "https://seattlebsa.org/camp-sheppard/",
+        "start_date": "2026-07-05",
+        "verified_at": "2026-06-20",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://seattlebsa.org/camp-sheppard/",
+    "state": "WA",
+    "status": "active",
+    "verified_at": "2026-06-20",
+    "website_url": "https://seattlebsa.org/camp-sheppard/"
+  },
+  {
+    "address": "Fire Mountain Scout Camp, Mount Vernon, WA 98274",
+    "city": "Mount Vernon",
+    "confidence": 1.0,
+    "council_id": "council-606",
+    "council_name": "Mount Baker Council",
+    "council_platform": "doubleknot",
+    "council_website": "https://www.mountbakerbsa.org/",
+    "description": "North Cascades foothills resident camp with a strong first-year program and mountain biking trails.",
+    "features": [
+      "dining_hall",
+      "waterfront",
+      "shooting_sports",
+      "climbing",
+      "cope",
+      "mountain_biking",
+      "stem"
+    ],
+    "fee_from": 395,
+    "id": "wa-fire-mountain-scout-camp",
+    "lat": 48.4512,
+    "lon": -122.1573,
+    "method": "manual",
+    "name": "Fire Mountain Scout Camp",
+    "program_types": [
+      "scouts_bsa_resident"
+    ],
+    "sessions": [
+      {
+        "availability": "open",
+        "end_date": "2026-07-18",
+        "fee_adult": 165,
+        "fee_notes": null,
+        "fee_youth": 395,
+        "id": "wa-fire-mountain-scout-camp-2026-07-12",
+        "program_type": "scouts_bsa_resident",
+        "registration_url": "https://www.mountbakerbsa.org/fire-mountain",
+        "source_url": "https://www.mountbakerbsa.org/fire-mountain",
+        "start_date": "2026-07-12",
+        "verified_at": "2026-05-30",
+        "year": 2026
+      }
+    ],
+    "source_url": "https://www.mountbakerbsa.org/fire-mountain",
+    "state": "WA",
+    "status": "active",
+    "verified_at": "2026-05-30",
+    "website_url": "https://www.mountbakerbsa.org/fire-mountain"
+  }
+]

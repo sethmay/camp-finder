@@ -1,0 +1,126 @@
+{
+  "camps": [
+    {
+      "address": "67667 Sylvan Way, Florence, OR 97439",
+      "city": "Florence",
+      "council_id": "council-697",
+      "description": "Coastal dunes resident camp with sailing and an aquatics-heavy program.",
+      "features": [
+        "dining_hall",
+        "waterfront",
+        "pool",
+        "shooting_sports",
+        "climbing",
+        "mountain_biking"
+      ],
+      "id": "or-camp-baker",
+      "lat": 44.0021,
+      "lon": -124.1088,
+      "name": "Camp Baker",
+      "program_types": ["scouts_bsa_resident"],
+      "provenance": {
+        "confidence": 0.82,
+        "method": "llm_extraction",
+        "notes": "Extracted from council camping page; fees confirmed, features inferred.",
+        "source_url": "https://www.otcbsa.org/camp-baker",
+        "verified_at": "2026-06-15"
+      },
+      "sessions": [
+        {
+          "availability": "open",
+          "camp_id": "or-camp-baker",
+          "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "or-camp-baker-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.82,
+            "method": "llm_extraction",
+            "source_url": "https://www.otcbsa.org/camp-baker",
+            "verified_at": "2026-06-15"
+          },
+          "registration_url": "https://www.otcbsa.org/camp-baker",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "or-camp-baker",
+          "end_date": "2026-07-18",
+          "fee_notes": "Fee not yet posted for this week.",
+          "id": "or-camp-baker-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.82,
+            "method": "llm_extraction",
+            "source_url": "https://www.otcbsa.org/camp-baker",
+            "verified_at": "2026-06-15"
+          },
+          "registration_url": "https://www.otcbsa.org/camp-baker",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://www.otcbsa.org/camp-baker"
+    },
+    {
+      "address": "Camp Melakwa, McKenzie Bridge, OR 97413",
+      "city": "McKenzie Bridge",
+      "council_id": "council-697",
+      "description": "High-Cascades resident camp at elevation with mountain hiking and COPE.",
+      "features": [
+        "dining_hall",
+        "waterfront",
+        "climbing",
+        "cope",
+        "older_scout_program",
+        "high_adventure_option"
+      ],
+      "id": "or-camp-melakwa",
+      "lat": 44.1783,
+      "lon": -122.0453,
+      "name": "Camp Melakwa",
+      "program_types": ["scouts_bsa_resident"],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "manual",
+        "notes": "Deliberately stale verified_at to exercise the StaleBadge UI state.",
+        "source_url": "https://www.otcbsa.org/camp-melakwa",
+        "verified_at": "2025-02-10"
+      },
+      "sessions": [
+        {
+          "availability": "open",
+          "camp_id": "or-camp-melakwa",
+          "end_date": "2026-08-01",
+          "fee_adult": 160,
+          "fee_youth": 360,
+          "id": "or-camp-melakwa-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "manual",
+            "source_url": "https://www.otcbsa.org/camp-melakwa",
+            "verified_at": "2025-02-10"
+          },
+          "registration_url": "https://www.otcbsa.org/camp-melakwa",
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://www.otcbsa.org/camp-melakwa"
+    }
+  ],
+  "hq_city": "Eugene",
+  "id": "council-697",
+  "name": "Oregon Trail Council",
+  "number": 697,
+  "platform": "other",
+  "state": "OR",
+  "website": "https://www.otcbsa.org/"
+}

@@ -1,0 +1,83 @@
+{
+  "camps": [
+    {
+      "address": "Fire Mountain Scout Camp, Mount Vernon, WA 98274",
+      "city": "Mount Vernon",
+      "council_id": "council-606",
+      "description": "North Cascades foothills resident camp with a strong first-year program and mountain biking trails.",
+      "features": [
+        "dining_hall",
+        "waterfront",
+        "shooting_sports",
+        "climbing",
+        "cope",
+        "mountain_biking",
+        "stem"
+      ],
+      "id": "wa-fire-mountain-scout-camp",
+      "lat": 48.4512,
+      "lon": -122.1573,
+      "name": "Fire Mountain Scout Camp",
+      "program_types": ["scouts_bsa_resident"],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "manual",
+        "source_url": "https://www.mountbakerbsa.org/fire-mountain",
+        "verified_at": "2026-05-30"
+      },
+      "sessions": [
+        {
+          "availability": "open",
+          "camp_id": "wa-fire-mountain-scout-camp",
+          "end_date": "2026-07-18",
+          "fee_adult": 165,
+          "fee_youth": 395,
+          "id": "wa-fire-mountain-scout-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "manual",
+            "source_url": "https://www.mountbakerbsa.org/fire-mountain",
+            "verified_at": "2026-05-30"
+          },
+          "registration_url": "https://www.mountbakerbsa.org/fire-mountain",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "WA",
+      "status": "active",
+      "website_url": "https://www.mountbakerbsa.org/fire-mountain"
+    },
+    {
+      "address": "Black Mountain, WA",
+      "city": null,
+      "council_id": "council-606",
+      "description": "Property retained for weekend and off-season use; no resident summer camp is offered.",
+      "features": [],
+      "id": "wa-camp-black-mountain",
+      "lat": 48.3401,
+      "lon": -121.7712,
+      "name": "Camp Black Mountain",
+      "program_types": ["scouts_bsa_resident"],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "manual",
+        "notes": "not_operating: exercises the build filter that drops camps with no active session.",
+        "source_url": "https://www.mountbakerbsa.org/properties",
+        "verified_at": "2026-05-30"
+      },
+      "sessions": [],
+      "state": "WA",
+      "status": "not_operating",
+      "website_url": "https://www.mountbakerbsa.org/properties"
+    }
+  ],
+  "hq_city": "Everett",
+  "id": "council-606",
+  "name": "Mount Baker Council",
+  "number": 606,
+  "platform": "doubleknot",
+  "state": "WA",
+  "website": "https://www.mountbakerbsa.org/"
+}

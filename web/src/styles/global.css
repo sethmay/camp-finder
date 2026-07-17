@@ -1,0 +1,28 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: var(--cf-font-sans);
+    color: var(--cf-text);
+    background: var(--cf-bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  body { margin: 0; }
+  h1, h2, h3 { font-family: var(--cf-font-display); }
+
+  /* Accessible focus: 2px accent ring at 2px offset (handoff §2). */
+  :where(a, button, input, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--cf-accent);
+    outline-offset: 2px;
+    border-radius: var(--cf-r-sm);
+  }
+}
+
+@layer components {
+  /* Minimum 44px hit targets for interactive controls (handoff a11y). */
+  .cf-tap { min-height: 44px; }
+}
