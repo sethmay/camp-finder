@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.3.0 (minor) — 2026-07-17
+
+- `PENDING` Enhance `platform_detect` with a 1-level registration-link crawl and make
+  `campfinder detect` fill-only / non-clobbering (`--overwrite` to force): 39/95 councils
+  classified (blackpug 15, doubleknot 8, tentaroo 15, other 1)
+
 ## 0.2.0 (minor) — 2026-07-17
 
 - `b6d7891` Add `campfinder enrich`: resolve council official websites from Wikipedia

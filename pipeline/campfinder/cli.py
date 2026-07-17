@@ -19,6 +19,7 @@ from . import build as build_mod
 from . import config, enrich as enrich_mod, registry, schema_gen, validate
 from .geocode import geocode
 from .io import load_all_councils, save_council
+from .models import Platform
 from .platform_detect import detect as detect_platform
 
 
@@ -45,9 +46,17 @@ def _cmd_detect(args: argparse.Namespace) -> int:
         if not c.website:
             print(f"{c.id}: no website, skipping")
             continue
+        if c.platform is not Platform.unknown and not args.overwrite:
+            print(f"{c.id}: {c.platform.value} (known, skipping)")
+            continue
         plat = detect_platform(str(c.website))
-        c.platform = plat
-        save_council(c)
+        # Never downgrade a known platform to unknown (failed re-detection != confirmed none).
+        if plat is Platform.unknown:
+            print(f"{c.id}: unknown")
+            continue
+        if plat is not c.platform:
+            c.platform = plat
+            save_council(c)
         print(f"{c.id}: {plat.value}")
     return 0
 
@@ -105,6 +114,9 @@ def main(argv: list[str] | None = None) -> int:
 
     p_detect = sub.add_parser("detect", help="detect registration platform")
     p_detect.add_argument("--council", default="all")
+    p_detect.add_argument(
+        "--overwrite", action="store_true", help="re-detect councils that already have a platform"
+    )
     p_detect.set_defaults(func=_cmd_detect)
 
     p_geo = sub.add_parser("geocode", help="fill missing lat/lon")

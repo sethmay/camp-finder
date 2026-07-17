@@ -5,7 +5,7 @@
     "confidence": 0.82,
     "council_id": "council-697",
     "council_name": "Pacific Crest Council",
-    "council_platform": "other",
+    "council_platform": "unknown",
     "council_website": "https://www.otcbsa.org/",
     "description": "Coastal dunes resident camp with sailing and an aquatics-heavy program.",
     "features": [
@@ -67,7 +67,7 @@
     "confidence": 1.0,
     "council_id": "council-492",
     "council_name": "Cascade Pacific Council",
-    "council_platform": "blackpug",
+    "council_platform": "unknown",
     "council_website": "https://cpcbsa.org/",
     "description": "Wooded resident camp in the Cascade foothills with a lake waterfront and a strong first-year Scout program.",
     "features": [
@@ -144,7 +144,7 @@
     "confidence": 1.0,
     "council_id": "council-697",
     "council_name": "Pacific Crest Council",
-    "council_platform": "other",
+    "council_platform": "unknown",
     "council_website": "https://www.otcbsa.org/",
     "description": "High-Cascades resident camp at elevation with mountain hiking and COPE.",
     "features": [
@@ -192,7 +192,7 @@
     "confidence": 1.0,
     "council_id": "council-492",
     "council_name": "Cascade Pacific Council",
-    "council_platform": "blackpug",
+    "council_platform": "unknown",
     "council_website": "https://cpcbsa.org/",
     "description": "Oceanfront resident camp on the Oregon coast offering sailing, surfing, and a dedicated high-adventure track for older Scouts.",
     "features": [
@@ -365,7 +365,7 @@
     "confidence": 1.0,
     "council_id": "council-606",
     "council_name": "Mount Baker Council",
-    "council_platform": "doubleknot",
+    "council_platform": "blackpug",
     "council_website": "https://www.mountbakerbsa.org/",
     "description": "North Cascades foothills resident camp with a strong first-year program and mountain biking trails.",
     "features": [

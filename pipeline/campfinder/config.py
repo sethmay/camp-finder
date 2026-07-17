@@ -7,6 +7,7 @@ LLM model id used by the long-tail extractor.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 # --- Filesystem layout (repo-relative; resolved from this file) ---
@@ -27,6 +28,14 @@ USER_AGENT = "CampFinderBot/1.0 (+https://github.com/campfinder/camp-finder)"
 MIN_REQUEST_INTERVAL_S = 1.0  # per-host rate limit
 HTTP_TIMEOUT_S = 30.0
 HTTP_RETRIES = 3
+
+# --- Platform detection ---
+# When a council homepage carries no platform signature, detect() follows up to
+# PLATFORM_MAX_CRAWL_LINKS same-site links whose href/text hints at registration and
+# scans those pages too. Registration widgets usually live one click off the homepage.
+PLATFORM_LINK_HINTS = ("camp", "register", "event", "activit", "program", "summer", "reservation")
+PLATFORM_LINK_HINTS_RE = re.compile("|".join(PLATFORM_LINK_HINTS), re.I)
+PLATFORM_MAX_CRAWL_LINKS = 5
 
 # Resident-camp event allow/deny keywords used to filter platform events down to the
 # Scouts BSA resident summer-camp use case (v1 scope).
