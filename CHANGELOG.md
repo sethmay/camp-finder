@@ -4,8 +4,8 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.2.0 (minor) — 2026-07-17
 
-- `PENDING` Add `campfinder enrich`: resolve council official websites from
-  Wikipedia infoboxes (92/235 filled; 143 lack a dedicated article — tracked in TODO.md)
+- `PENDING` Add `campfinder enrich`: resolve council official websites from Wikipedia
+  infoboxes (91 filled this pass; 95/235 total have a website; 140 remain — tracked in TODO.md)
 
 ## 0.1.0 (baseline) — 2026-07-17
 

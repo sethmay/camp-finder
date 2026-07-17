@@ -1,4 +1,4 @@
-"""Resolve council official websites from Wikipedia infoboxes (IMPLEMENTATION.md §5.2).
+"""Resolve council official websites from Wikipedia infoboxes (IMPLEMENTATION.md §5, step 2).
 
 The registry pass (``registry.py``) leaves ``council.website`` null. This pass fills it
 so the platform-detect pass and scrapers have a real URL to target. Source is each

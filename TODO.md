@@ -4,14 +4,14 @@ Active queue and deferred work. Write each item to survive a clean context.
 
 ## Website enrichment — long-tail fallback (deferred; decision pending)
 
-`campfinder enrich` (Wikipedia infobox) covers **92/235** councils. The remaining
-**143** cannot be resolved from Wikipedia:
+`campfinder enrich` (Wikipedia infobox) filled **91** councils this pass; **95/235**
+now have a website. The remaining **140** cannot be resolved from Wikipedia. Across all
+235 councils the MediaWiki lookup breaks down as ~92 with an infobox website, 128 whose
+name redirects to a `Scouting in <State>` overview (its site is the state program's, not
+the council's — correctly skipped), 6 with no article, and 9 with an article but no
+`website` field.
 
-- 128 councils have no dedicated article — the name redirects to a `Scouting in <State>`
-  overview whose website is the state program's, not the council's (correctly skipped).
-- 6 have no article at all; 9 have an article but no `website` infobox field.
-
-Next step: pick a fallback source for the ~143 official council sites.
+Next step: pick a fallback source for the ~140 unresolved official council sites.
 - Option A — keyed search API (Brave / Bing / SerpAPI): reproducible in-pipeline fallback;
   needs an API key. Best if enrichment must re-run annually unattended.
 - Option B — Scouting America Local Council Locator: authoritative but Cloudflare-gated,
