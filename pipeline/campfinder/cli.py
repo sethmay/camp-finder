@@ -16,7 +16,7 @@ import json
 import sys
 
 from . import build as build_mod
-from . import config, registry, schema_gen, validate
+from . import config, enrich as enrich_mod, registry, schema_gen, validate
 from .geocode import geocode
 from .io import load_all_councils, save_council
 from .platform_detect import detect as detect_platform
@@ -86,12 +86,22 @@ def _cmd_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_enrich(args: argparse.Namespace) -> int:
+    n = enrich_mod.enrich(overwrite=args.overwrite)
+    print(f"enrich: filled website for {n} council(s)")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="campfinder", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("schema", help="regenerate JSON Schemas").set_defaults(func=_cmd_schema)
     sub.add_parser("registry", help="build council registry").set_defaults(func=_cmd_registry)
+
+    p_enrich = sub.add_parser("enrich", help="resolve council websites from Wikipedia")
+    p_enrich.add_argument("--overwrite", action="store_true", help="refill even if website set")
+    p_enrich.set_defaults(func=_cmd_enrich)
 
     p_detect = sub.add_parser("detect", help="detect registration platform")
     p_detect.add_argument("--council", default="all")
