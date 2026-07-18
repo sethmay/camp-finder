@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.9.1 (patch) — 2026-07-17
 
-- `PENDING` Suppress the LastPass field icon on the ZIP input more robustly: add
+- `41db6f7` Suppress the LastPass field icon on the ZIP input more robustly: add
   `name="camp-zip"`, explicit `type="text"`, and `data-form-type="other"` (LastPass ignored
   `data-lpignore`/`autocomplete=off` alone on that field).
 
