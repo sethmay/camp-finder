@@ -21,6 +21,7 @@ from .models import Platform
 # host/text signatures -> platform
 _SIGNATURES: tuple[tuple[str, Platform], ...] = (
     ("247scouting.com", Platform.blackpug),
+    ("scoutingevent.com", Platform.blackpug),  # Black Pug's event domain (registration)
     ("blackpug", Platform.blackpug),
     ("doubleknot.com", Platform.doubleknot),
     ("tentaroo.com", Platform.tentaroo),

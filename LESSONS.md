@@ -61,6 +61,13 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   cap, the `seen` branch never runs and the assertion passes for the wrong reason. Put the
   duplicate inside the capped window so the guard is actually exercised.
 
+- **Make every guard bite — test the conflict, not the singleton.** A dedup+sort fold tested
+  with distinct, already-ascending inputs proves nothing (the id filter never fires, the sort
+  is a no-op): feed a genuine duplicate (assert dropped) AND an out-of-order element (assert
+  reordered). Likewise, when a first-match table encodes precedence (`detect_from_html` returns
+  on the first `_SIGNATURES` hit), assert a page carrying BOTH competing signals resolves to the
+  intended winner — a singleton "signal A -> A" test leaves the ordering unprotected.
+
 - **Rate-limit spacing must account for the request already made in the same call.** Don't
   skip the polite delay on the first crawled link — the homepage was just fetched from the
   same host. Pause before every same-host request.

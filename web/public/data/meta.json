@@ -1,9 +1,9 @@
 {
-  "build_time": "2026-07-17T23:28:09+00:00",
-  "camp_count": 21,
+  "build_time": "2026-07-18T00:37:15+00:00",
+  "camp_count": 23,
   "council_count": 235,
   "dead_link_count": 0,
-  "session_count": 63,
+  "session_count": 79,
   "states_covered": [
     "CA",
     "MD",
@@ -12,6 +12,7 @@
     "NJ",
     "NY",
     "OR",
+    "RI",
     "WA"
   ],
   "upcoming_summer_year": 2026
