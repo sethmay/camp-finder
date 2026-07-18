@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.7.0 (minor) — 2026-07-17
+
+- `PENDING` Scrape Black Pug fees: reverse-engineered the `ses.myPricing` POST
+  (`/Ajax/SES` with `orgKey=BSA<nnn>`) to fill youth/adult regular prices per session.
+  Adds `Scraper.post`, `parse_pricing`; merge now fills an empty fee even without a newer
+  timestamp. 66/67 scraped sessions now priced (e.g. Camp Winton $790, Camp Yawgoog $650).
+
 ## 0.6.0 (minor) — 2026-07-17
 
 - `87fe121` Route Doubleknot councils through the Black Pug scraper (their registration

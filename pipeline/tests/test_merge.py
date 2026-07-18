@@ -164,3 +164,22 @@ def test_merge_file_roundtrip(council_dir, tmp_path):
     stats = merge_mod.merge_file(path)
     assert stats.camps_added == 1
     assert len(_reload().camps) == 1
+
+
+def test_fills_empty_fee_even_when_not_newer(council_dir):
+    # A later fee scrape (same verified_at, so not strictly newer) must still FILL a
+    # previously-unknown fee — fill-empty is unconditional; only overwrites need recency.
+    d = date(2026, 6, 1)
+    save_council(
+        Council(
+            id="council-047",
+            name="Golden Empire",
+            state="CA",
+            camps=[_camp(d, [_session("ca-camp-x", date(2026, 6, 21), date(2026, 6, 27), d)])],
+        )
+    )
+    cand_session = _session("ca-camp-x", date(2026, 6, 21), date(2026, 6, 27), d)
+    cand_session.fee_youth = 790
+    stats = merge_mod.merge([_camp(d, [cand_session])])
+    assert stats.sessions_updated == 1
+    assert _reload().camps[0].sessions[0].fee_youth == 790

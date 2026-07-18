@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "ne-camp-cedars",
           "end_date": "2026-06-13",
+          "fee_adult": 200,
+          "fee_youth": 460,
           "id": "ne-camp-cedars-2026-06-07",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -38,6 +40,8 @@
           "availability": "unknown",
           "camp_id": "ne-camp-cedars",
           "end_date": "2026-06-20",
+          "fee_adult": 200,
+          "fee_youth": 460,
           "id": "ne-camp-cedars-2026-06-14",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -54,6 +58,8 @@
           "availability": "unknown",
           "camp_id": "ne-camp-cedars",
           "end_date": "2026-06-27",
+          "fee_adult": 200,
+          "fee_youth": 460,
           "id": "ne-camp-cedars-2026-06-21",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -70,6 +76,8 @@
           "availability": "unknown",
           "camp_id": "ne-camp-cedars",
           "end_date": "2026-07-11",
+          "fee_adult": 200,
+          "fee_youth": 460,
           "id": "ne-camp-cedars-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {

@@ -38,6 +38,7 @@
           "availability": "unknown",
           "camp_id": "ca-camp-hi-sierra",
           "end_date": "2026-07-11",
+          "fee_youth": 800,
           "id": "ca-camp-hi-sierra-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -54,6 +55,7 @@
           "availability": "unknown",
           "camp_id": "ca-camp-hi-sierra",
           "end_date": "2026-07-25",
+          "fee_youth": 800,
           "id": "ca-camp-hi-sierra-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -70,6 +72,7 @@
           "availability": "unknown",
           "camp_id": "ca-camp-hi-sierra",
           "end_date": "2026-08-01",
+          "fee_youth": 800,
           "id": "ca-camp-hi-sierra-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {

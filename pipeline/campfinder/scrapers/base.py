@@ -75,11 +75,11 @@ class Scraper(abc.ABC):
                 time.sleep(wait)
         self._last_fetch[host] = time.monotonic()
 
-    def get(self, url: str) -> httpx.Response:
-        """Rate-limited, retrying GET that respects robots.txt.
+    def _request(self, method: str, url: str, data: dict | None = None) -> httpx.Response:
+        """Rate-limited, retrying request that respects robots.txt.
 
         Raises ``PermissionError`` if robots.txt disallows the URL, or the last
-        ``httpx.HTTPError`` after exhausting retries.
+        ``httpx.HTTPError`` after exhausting retries. 4xx fails fast (no retry).
         """
         if not self.allowed(url):
             raise PermissionError(f"robots.txt disallows {url}")
@@ -88,7 +88,7 @@ class Scraper(abc.ABC):
         for attempt in range(config.HTTP_RETRIES):
             self._rate_limit(host)
             try:
-                resp = self._client.get(url)
+                resp = self._client.request(method, url, data=data)
                 resp.raise_for_status()
                 return resp
             except httpx.HTTPError as exc:
@@ -100,6 +100,12 @@ class Scraper(abc.ABC):
                     time.sleep(config.MIN_REQUEST_INTERVAL_S * (attempt + 1))
         assert last_exc is not None
         raise last_exc
+
+    def get(self, url: str) -> httpx.Response:
+        return self._request("GET", url)
+
+    def post(self, url: str, data: dict) -> httpx.Response:
+        return self._request("POST", url, data=data)
 
     # --- contract -----------------------------------------------------------
     @abc.abstractmethod

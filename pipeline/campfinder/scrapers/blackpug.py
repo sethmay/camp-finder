@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import re
 from datetime import date
+from html import unescape
 
 import httpx
 from selectolax.parser import HTMLParser
@@ -47,9 +48,10 @@ _SESSION_DENY = ("cub", "webelos", "family", "leader", "adult", "staff", "volunt
 
 
 def _flatten(html: str) -> str:
-    """Visible text as a single whitespace-normalized run (scripts/styles stripped)."""
+    """Visible text as one whitespace-normalized run (scripts/styles stripped, entities decoded)."""
     no_scripts = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", html, flags=re.I | re.S)
-    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", no_scripts)).strip()
+    text = unescape(re.sub(r"<[^>]+>", " ", no_scripts))
+    return re.sub(r"\s+", " ", text).strip()
 
 
 def kebab(name: str) -> str:
@@ -112,33 +114,45 @@ def _address_state(address: str, fallback: str) -> str:
     return fallback
 
 
-def parse_event_page(html: str, url: str, council_id: str, council_state: str) -> Camp | None:
-    """Parse one scoutingevent.com event page into a resident-camp ``Camp`` candidate.
+_PRICE_CATEGORY_RE = re.compile(r"\((?:Youth|Adult|Part-Time|Sibling|Child|Family|Cub)\)")
 
-    Returns ``None`` if the event has no multi-night session (i.e. not a resident camp).
-    """
-    tree = HTMLParser(html)
-    title_node = tree.css_first("title")
-    if title_node is None:
-        return None
-    name = normalize_camp_name(title_node.text(strip=True))
-    if not name:
-        return None
 
-    verified = date.today()
+def _price_for(text: str, tag: str) -> int | None:
+    """Whole-dollar 'Regular price' for a pricing category, bounded to that category."""
+    m = re.search(rf"\({re.escape(tag)}\)", text)
+    if not m:
+        return None
+    tail = text[m.end() :]
+    nxt = _PRICE_CATEGORY_RE.search(tail)  # stop before the next category's prices
+    seg = tail[: nxt.start()] if nxt else tail
+    pm = (
+        re.search(r"Regular price\s*\$\s?([\d,]+)", seg)
+        or re.search(r"\bprice\s*\$\s?([\d,]+)", seg)
+        or re.search(r"\$\s?([\d,]+)", seg)
+    )
+    return int(pm.group(1).replace(",", "")) if pm else None
+
+
+def parse_pricing(html: str) -> tuple[int | None, int | None]:
+    """(fee_youth, fee_adult) whole dollars from a Black Pug myPricing modal. Pure."""
     text = _flatten(html)
-    camp_id = f"{council_state.lower()}-{kebab(name)}"
+    return _price_for(text, "Youth"), _price_for(text, "Adult")
 
-    sessions: list[Session] = []
-    lat = lon = None
-    address: str | None = None
-    seen_ids: set[str] = set()
-    for chunk in text.split("Coords:")[1:]:
-        cm = _COORDS_RE.match(chunk)
-        dm = _DATE_RANGE_RE.search(chunk)
+
+def _iter_session_rows(html: str):
+    """Yield (start, end, lat, lon, address, pricing_ref) per resident-camp session chunk.
+
+    ``pricing_ref`` is ``(event_instance_id, instance_location_id)`` from the session's
+    ``ses.myPricing(...)`` onclick, or ``None``. Pure; operates on raw HTML so the onclick
+    (stripped by flattening) is still available per chunk.
+    """
+    for chunk in html.split("Coords:")[1:]:
+        flat = _flatten(chunk)
+        cm = _COORDS_RE.match(flat)
+        dm = _DATE_RANGE_RE.search(flat)
         if not cm or not dm:
             continue
-        label = chunk[cm.end() : dm.start()].lower()
+        label = flat[cm.end() : dm.start()].lower()
         if any(bad in label for bad in _SESSION_DENY):
             continue  # cub / family / leader / staff session -> not Scouts BSA resident
         sm, sd, sy, em, ed, ey = dm.groups()
@@ -149,15 +163,43 @@ def parse_event_page(html: str, url: str, council_id: str, council_state: str) -
             continue
         if (end - start).days < _MIN_RESIDENT_NIGHTS:
             continue  # single-day -> not a resident session
-        if lat is None:
-            lat, lon = float(cm.group(1)), float(cm.group(2))
-            address = (
-                chunk[cm.end() :].split(" Phone:")[0].split(" Registration")[0].strip() or None
-            )
+        address = flat[cm.end() :].split(" Phone:")[0].split(" Registration")[0].strip() or None
+        mp = re.search(r"myPricing\((\d+),\s*(\d+)", chunk)
+        pricing = (mp.group(1), mp.group(2)) if mp else None
+        yield start, end, float(cm.group(1)), float(cm.group(2)), address, pricing
+
+
+def parse_event(
+    html: str, url: str, council_id: str, council_state: str
+) -> tuple[Camp | None, dict[str, tuple[str, str]]]:
+    """Parse an event page into a resident-camp ``Camp`` plus per-session pricing refs.
+
+    Returns ``(None, {})`` if the event has no multi-night (resident) session. The refs map
+    ``session.id -> (event_instance_id, instance_location_id)`` for the myPricing fee fetch.
+    """
+    title_node = HTMLParser(html).css_first("title")
+    if title_node is None:
+        return None, {}
+    name = normalize_camp_name(title_node.text(strip=True))
+    if not name:
+        return None, {}
+    rows = list(_iter_session_rows(html))
+    if not rows:
+        return None, {}
+
+    verified = date.today()
+    lat, lon, address = rows[0][2], rows[0][3], rows[0][4]
+    camp_state = _address_state(address or "", council_state)
+    camp_id = f"{camp_state.lower()}-{kebab(name)}"
+
+    sessions: list[Session] = []
+    refs: dict[str, tuple[str, str]] = {}
+    seen: set[str] = set()
+    for start, end, _lat, _lon, _addr, pricing in rows:
         sid = f"{camp_id}-{start.isoformat()}"
-        if sid in seen_ids:
+        if sid in seen:
             continue
-        seen_ids.add(sid)
+        seen.add(sid)
         sessions.append(
             Session(
                 id=sid,
@@ -169,21 +211,11 @@ def parse_event_page(html: str, url: str, council_id: str, council_state: str) -
                 provenance=Provenance(source_url=url, method=Method.blackpug, verified_at=verified),
             )
         )
-
-    if not sessions:
-        return None
-
+        if pricing:
+            refs[sid] = pricing
     sessions.sort(key=lambda s: s.start_date)
 
-    camp_state = _address_state(address or "", council_state)
-    camp_id = f"{camp_state.lower()}-{kebab(name)}"
-    if camp_state != council_state:  # state changed -> re-key camp + sessions
-        sessions = [
-            s.model_copy(update={"camp_id": camp_id, "id": f"{camp_id}-{s.start_date.isoformat()}"})
-            for s in sessions
-        ]
-
-    return Camp(
+    camp = Camp(
         id=camp_id,
         name=name,
         council_id=council_id,
@@ -195,6 +227,12 @@ def parse_event_page(html: str, url: str, council_id: str, council_state: str) -
         sessions=sessions,
         provenance=Provenance(source_url=url, method=Method.blackpug, verified_at=verified),
     )
+    return camp, refs
+
+
+def parse_event_page(html: str, url: str, council_id: str, council_state: str) -> Camp | None:
+    """Resident-camp ``Camp`` for an event page (fees not filled). Pure."""
+    return parse_event(html, url, council_id, council_state)[0]
 
 
 class BlackPugScraper(Scraper):
@@ -206,6 +244,7 @@ class BlackPugScraper(Scraper):
         number = getattr(council, "number", None)
         if number is None:
             return []
+        org_key = f"BSA{number:03d}"
         landing = self.get(f"{EVENT_BASE}/{number:03d}")
         by_id: dict[str, Camp] = {}
         for url in discover_event_urls(landing.text, number):
@@ -214,11 +253,12 @@ class BlackPugScraper(Scraper):
             except (httpx.HTTPError, PermissionError):
                 continue  # one unreachable/disallowed event must not abort the council
             try:
-                camp = parse_event_page(page.text, url, council.id, council.state)
+                camp, refs = parse_event(page.text, url, council.id, council.state)
             except ValueError:
                 continue  # anomalous page (bad dates/coords -> ValidationError) must not abort
             if camp is None:
                 continue
+            self._fill_fees(camp, refs, org_key)
             existing = by_id.get(camp.id)
             if existing is None:
                 by_id[camp.id] = camp
@@ -229,3 +269,29 @@ class BlackPugScraper(Scraper):
                 existing.sessions.extend(s for s in camp.sessions if s.id not in seen)
                 existing.sessions.sort(key=lambda s: s.start_date)
         return list(by_id.values())
+
+    def _fill_fees(self, camp: Camp, refs: dict[str, tuple[str, str]], org_key: str) -> None:
+        """Fetch each session's Black Pug pricing modal and set youth/adult fees."""
+        for session in camp.sessions:
+            ref = refs.get(session.id)
+            if ref is None:
+                continue
+            event_instance_id, instance_location_id = ref
+            try:
+                resp = self.post(
+                    f"{EVENT_BASE}/Ajax/SES",
+                    {
+                        "action": "myPricing",
+                        "eventInstanceID": event_instance_id,
+                        "instanceLocationID": instance_location_id,
+                        "registrationID": "0",
+                        "orgKey": org_key,
+                    },
+                )
+            except (httpx.HTTPError, PermissionError):
+                continue  # no fees is fine (null = unknown)
+            fee_youth, fee_adult = parse_pricing(resp.text)
+            if fee_youth is not None:
+                session.fee_youth = fee_youth
+            if fee_adult is not None:
+                session.fee_adult = fee_adult

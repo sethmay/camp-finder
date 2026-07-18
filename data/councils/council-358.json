@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-somers",
           "end_date": "2026-07-11",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-somers-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -38,6 +40,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-somers",
           "end_date": "2026-07-25",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-somers-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -54,6 +58,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-somers",
           "end_date": "2026-08-01",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-somers-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -93,6 +99,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
           "end_date": "2026-07-08",
+          "fee_adult": 0,
+          "fee_youth": 275,
           "id": "nj-camp-wheeler-2026-07-06",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -109,6 +117,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
           "end_date": "2026-07-15",
+          "fee_adult": 0,
+          "fee_youth": 275,
           "id": "nj-camp-wheeler-2026-07-13",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -125,6 +135,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
           "end_date": "2026-07-22",
+          "fee_adult": 0,
+          "fee_youth": 275,
           "id": "nj-camp-wheeler-2026-07-20",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -141,6 +153,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
           "end_date": "2026-07-29",
+          "fee_adult": 0,
+          "fee_youth": 275,
           "id": "nj-camp-wheeler-2026-07-27",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -157,6 +171,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
           "end_date": "2026-08-05",
+          "fee_adult": 0,
+          "fee_youth": 275,
           "id": "nj-camp-wheeler-2026-08-03",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -196,6 +212,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-winnebago",
           "end_date": "2026-07-11",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-winnebago-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -212,6 +230,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-winnebago",
           "end_date": "2026-07-25",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-winnebago-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -228,6 +248,8 @@
           "availability": "unknown",
           "camp_id": "nj-camp-winnebago",
           "end_date": "2026-08-01",
+          "fee_adult": 200,
+          "fee_youth": 660,
           "id": "nj-camp-winnebago-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {

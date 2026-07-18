@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2026-06-27",
+          "fee_adult": 350,
+          "fee_youth": 625,
           "id": "md-camp-horseshoe-long-term-camp-2026-06-21",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -38,6 +40,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2026-07-04",
+          "fee_adult": 350,
+          "fee_youth": 625,
           "id": "md-camp-horseshoe-long-term-camp-2026-06-28",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -54,6 +58,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2026-07-11",
+          "fee_adult": 350,
+          "fee_youth": 625,
           "id": "md-camp-horseshoe-long-term-camp-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -70,6 +76,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2026-07-25",
+          "fee_adult": 350,
+          "fee_youth": 625,
           "id": "md-camp-horseshoe-long-term-camp-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -86,6 +94,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2026-08-01",
+          "fee_adult": 350,
+          "fee_youth": 625,
           "id": "md-camp-horseshoe-long-term-camp-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -102,6 +112,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2027-07-03",
+          "fee_adult": 375,
+          "fee_youth": 645,
           "id": "md-camp-horseshoe-long-term-camp-2027-06-27",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -118,6 +130,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2027-07-10",
+          "fee_adult": 375,
+          "fee_youth": 645,
           "id": "md-camp-horseshoe-long-term-camp-2027-07-04",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -134,6 +148,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2027-07-17",
+          "fee_adult": 375,
+          "fee_youth": 645,
           "id": "md-camp-horseshoe-long-term-camp-2027-07-11",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -150,6 +166,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2027-07-24",
+          "fee_adult": 375,
+          "fee_youth": 645,
           "id": "md-camp-horseshoe-long-term-camp-2027-07-18",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -166,6 +184,8 @@
           "availability": "unknown",
           "camp_id": "md-camp-horseshoe-long-term-camp",
           "end_date": "2027-07-31",
+          "fee_adult": 375,
+          "fee_youth": 645,
           "id": "md-camp-horseshoe-long-term-camp-2027-07-25",
           "program_type": "scouts_bsa_resident",
           "provenance": {
