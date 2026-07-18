@@ -1,5 +1,6 @@
 """Black Pug scraper — offline tests against saved scoutingevent.com fixtures."""
 
+import urllib.parse
 from datetime import date
 from pathlib import Path
 
@@ -192,8 +193,11 @@ def test_scrape_fills_session_fees(monkeypatch):
         "Scouts BSA Adult (Adult) Regular price $200.00</div>"
     )
 
+    posted: dict[str, str] = {}
+
     def handler(request: httpx.Request) -> httpx.Response:
         if request.method == "POST" and "/Ajax/SES" in str(request.url):
+            posted.update(dict(urllib.parse.parse_qsl(request.content.decode())))
             return httpx.Response(200, text=pricing)
         routes = {
             "https://scoutingevent.com/999": '<a href="/999-a">Camp Fee</a>',
@@ -208,3 +212,8 @@ def test_scrape_fills_session_fees(monkeypatch):
     assert len(camps) == 1
     session = camps[0].sessions[0]
     assert (session.fee_youth, session.fee_adult) == (500, 200)
+    # payload mapping: myPricing(arg1=eventInstanceID, arg2=instanceLocationID) + orgKey
+    assert posted["action"] == "myPricing"
+    assert posted["eventInstanceID"] == "111"
+    assert posted["instanceLocationID"] == "222"
+    assert posted["orgKey"] == "BSA999"

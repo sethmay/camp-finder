@@ -125,10 +125,10 @@ def _price_for(text: str, tag: str) -> int | None:
     tail = text[m.end() :]
     nxt = _PRICE_CATEGORY_RE.search(tail)  # stop before the next category's prices
     seg = tail[: nxt.start()] if nxt else tail
-    pm = (
-        re.search(r"Regular price\s*\$\s?([\d,]+)", seg)
-        or re.search(r"\bprice\s*\$\s?([\d,]+)", seg)
-        or re.search(r"\$\s?([\d,]+)", seg)
+    # Prefer the labeled regular price; accept a bare "price $N" but never a bare "$N"
+    # (that would grab a $0 Booking/Balance amount from the payment sub-table).
+    pm = re.search(r"Regular price\s*\$\s?([\d,]+)", seg) or re.search(
+        r"\bprice\s*\$\s?([\d,]+)", seg
     )
     return int(pm.group(1).replace(",", "")) if pm else None
 

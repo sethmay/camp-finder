@@ -76,7 +76,12 @@ def _update_session(existing: Session, cand: Session, supersedes: bool) -> bool:
     ):
         existing.availability = avail
         changed = True
-    if changed:
+    # Adopt candidate provenance only when it is not a downgrade — a fill-only change from an
+    # older/less-confident source must not weaken the record's supersedes guard.
+    if changed and (
+        cand.provenance.verified_at >= existing.provenance.verified_at
+        and cand.provenance.confidence >= existing.provenance.confidence
+    ):
         existing.provenance = cand.provenance
     return changed
 
@@ -91,7 +96,9 @@ def _merge_sessions(existing: Camp, cand: Camp, stats: MergeStats) -> bool:
             stats.sessions_added += 1
             changed = True
         elif _update_session(
-            existing.sessions[idx], cs, _supersedes(cs.provenance, existing.sessions[idx].provenance)
+            existing.sessions[idx],
+            cs,
+            _supersedes(cs.provenance, existing.sessions[idx].provenance),
         ):
             stats.sessions_updated += 1
             changed = True
