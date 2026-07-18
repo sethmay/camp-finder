@@ -2,6 +2,21 @@
 
 Active queue and deferred work. Write each item to survive a clean context.
 
+## UI refinement (deferred) — live at https://sethmay.github.io/camp-finder/
+
+Site is deployed and clean; polish pass tabled. Observed so far:
+- **Map overlay clips at the top-left** — stray "…not posted / view details →" text bleeds
+  over the map's top-left corner on load (likely a marker popup / mini-CampCard positioned
+  at the origin, or z-index/overflow). See `web/src/components/MapView.tsx`.
+- General design polish: result-card spacing, "Fee not posted" treatment, filter rail
+  rhythm — review against the design spec (`.claude/handoffs/website_design/`).
+- Confirm map basemap renders on the live site (openfreemap.org tiles; showed an
+  intermittent abort under headless test) — swap tile source in `web/src/lib/map.ts` if flaky.
+
+CI note (informational, not a failure): the deploy workflow logs "Node.js 20 is deprecated"
+for GitHub's own actions (checkout/setup-node/setup-python/deploy-pages); GitHub auto-forces
+them to Node 24. Clears when those actions ship Node 24 majors — nothing for us to change now.
+
 ## Website enrichment — long-tail fallback (deferred; decision pending)
 
 `campfinder enrich` (Wikipedia infobox) filled **91** councils this pass; **95/235**
