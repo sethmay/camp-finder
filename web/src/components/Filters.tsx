@@ -70,13 +70,13 @@ export default function Filters({
         <div className="flex gap-2">
           <input
             type="text"
-            name="camp-zip"
+            name="near-code"
             inputMode="numeric"
             maxLength={5}
             value={criteria.zip ?? ""}
             onChange={(e) => onPatch({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) || undefined })}
-            placeholder="ZIP code"
-            aria-label="ZIP code"
+            placeholder="97405"
+            aria-label="Distance origin, 5-digit code"
             autoComplete="off"
             data-lpignore="true"
             data-form-type="other"

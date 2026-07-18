@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.9.2 (patch) — 2026-07-17
+
+- `PENDING` Stop LastPass badging the distance field for once and for all: the trigger was
+  the literal "zip"/"ZIP code" string (payment/address autofill). Remove it from every
+  scanned attribute — `name="near-code"`, `placeholder="97405"`, `aria-label="Distance
+  origin, 5-digit code"`. Filter behavior unchanged.
+
 ## 0.9.1 (patch) — 2026-07-17
 
 - `41db6f7` Suppress the LastPass field icon on the ZIP input more robustly: add
