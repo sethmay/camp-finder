@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.8.0 (minor) — 2026-07-17
 
-- `PENDING` UI polish: fix the filter-rail date-range inputs overflowing into the results
+- `3afc506` UI polish: fix the filter-rail date-range inputs overflowing into the results
   column (grid + `minmax(0,1fr)` so native date inputs shrink); harden the map load race so
   camp data + fitBounds always apply after style load (was empty until a filter change);
   mute the basemap so markers pop.
