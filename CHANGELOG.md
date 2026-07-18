@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.9.0 (minor) — 2026-07-17
 
-- `PENDING` Fix the distance filter: `zip-centroids.json` was a 16-ZIP placeholder, so most
+- `868ac68` Fix the distance filter: `zip-centroids.json` was a 16-ZIP placeholder, so most
   ZIPs (e.g. 97405) resolved to nothing and the filter silently no-op'd. Add `campfinder
   zipcentroids` (US Census ZCTA gazetteer, public domain) shipping all 33,791 ZIP centroids;
   suppress the LastPass overlay on the ZIP/search inputs (`data-lpignore`).
