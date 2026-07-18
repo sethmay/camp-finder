@@ -52,18 +52,36 @@ _SESSION_FIELDS = (
 )
 
 
-def _update_session(existing: Session, cand: Session) -> bool:
-    """Field-by-field non-clobbering update of a matched session. Returns True if changed."""
+def _update_session(existing: Session, cand: Session, supersedes: bool) -> bool:
+    """Merge a matched session field-by-field. Returns True if changed.
+
+    Fill an empty field from a non-null candidate ALWAYS (e.g. a later fee scrape filling
+    a previously-unknown fee); overwrite an existing non-null value only when the candidate
+    supersedes it (>= confidence and strictly newer). Never write None over a value.
+    """
     changed = False
     for field in _SESSION_FIELDS:
         value = getattr(cand, field)
-        if value is not None and value != getattr(existing, field):
+        if value is None:
+            continue
+        current = getattr(existing, field)
+        if value != current and (current is None or supersedes):
             setattr(existing, field, value)
             changed = True
-    if cand.availability is not Availability.unknown and cand.availability != existing.availability:
-        existing.availability = cand.availability
+    avail = cand.availability
+    if (
+        avail is not Availability.unknown
+        and avail != existing.availability
+        and (existing.availability is Availability.unknown or supersedes)
+    ):
+        existing.availability = avail
         changed = True
-    if changed:
+    # Adopt candidate provenance only when it is not a downgrade — a fill-only change from an
+    # older/less-confident source must not weaken the record's supersedes guard.
+    if changed and (
+        cand.provenance.verified_at >= existing.provenance.verified_at
+        and cand.provenance.confidence >= existing.provenance.confidence
+    ):
         existing.provenance = cand.provenance
     return changed
 
@@ -77,8 +95,10 @@ def _merge_sessions(existing: Camp, cand: Camp, stats: MergeStats) -> bool:
             existing.sessions.append(cs)
             stats.sessions_added += 1
             changed = True
-        elif _supersedes(cs.provenance, existing.sessions[idx].provenance) and _update_session(
-            existing.sessions[idx], cs
+        elif _update_session(
+            existing.sessions[idx],
+            cs,
+            _supersedes(cs.provenance, existing.sessions[idx].provenance),
         ):
             stats.sessions_updated += 1
             changed = True

@@ -1,5 +1,6 @@
 """Black Pug scraper — offline tests against saved scoutingevent.com fixtures."""
 
+import urllib.parse
 from datetime import date
 from pathlib import Path
 
@@ -13,6 +14,7 @@ from campfinder.scrapers.blackpug import (
     kebab,
     normalize_camp_name,
     parse_event_page,
+    parse_pricing,
 )
 
 FIX = Path(__file__).parent / "fixtures" / "blackpug"
@@ -163,3 +165,55 @@ def test_scrape_dedups_camps_by_id(monkeypatch):
     assert camps[0].id == "oh-camp-good"
     # duplicate dropped (2 not 3) and sorted ascending
     assert [s.start_date for s in camps[0].sessions] == [date(2026, 6, 21), date(2026, 7, 5)]
+
+
+def test_parse_pricing_prefers_regular_over_discount():
+    # Real captured myPricing modal: youth regular $790 (not the $760 early-bird), adult $425.
+    assert parse_pricing(_fixture("gec-047-winton-pricing.html")) == (790, 425)
+
+
+def test_parse_pricing_missing_or_partial():
+    assert parse_pricing("<div>no prices here</div>") == (None, None)
+    assert parse_pricing("<div>Scout (Youth) Regular price $300.00</div>") == (300, None)
+
+
+def test_scrape_fills_session_fees(monkeypatch):
+    from campfinder import config
+
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    event = (
+        "<html><head><title>C Council - Camp Fee</title></head><body>"
+        "Coords: 40.0, -83.0 1 Main St, Ohio 44100 Phone: 555 "
+        "Week 1 Camp Sunday 06-21-2026 1:00 PM to Saturday 06-27-2026 9:30 AM "
+        "<span onclick=\"ses.myPricing(111, 222, 'x')\">$ View Pricing</span>"
+        "</body></html>"
+    )
+    pricing = (
+        "<div>Scouts BSA Youth (Youth) Regular price $500.00 "
+        "Scouts BSA Adult (Adult) Regular price $200.00</div>"
+    )
+
+    posted: dict[str, str] = {}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.method == "POST" and "/Ajax/SES" in str(request.url):
+            posted.update(dict(urllib.parse.parse_qsl(request.content.decode())))
+            return httpx.Response(200, text=pricing)
+        routes = {
+            "https://scoutingevent.com/999": '<a href="/999-a">Camp Fee</a>',
+            "https://scoutingevent.com/999-a": event,
+        }
+        return httpx.Response(200, text=routes.get(str(request.url), "<html>x</html>"))
+
+    client = httpx.Client(transport=httpx.MockTransport(handler), follow_redirects=True)
+    council = Council(id="council-999", name="C", number=999, state="OH")
+    with BlackPugScraper(client=client) as scraper:
+        camps = scraper.scrape(council)
+    assert len(camps) == 1
+    session = camps[0].sessions[0]
+    assert (session.fee_youth, session.fee_adult) == (500, 200)
+    # payload mapping: myPricing(arg1=eventInstanceID, arg2=instanceLocationID) + orgKey
+    assert posted["action"] == "myPricing"
+    assert posted["eventInstanceID"] == "111"
+    assert posted["instanceLocationID"] == "222"
+    assert posted["orgKey"] == "BSA999"

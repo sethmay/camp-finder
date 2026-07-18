@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "ca-camp-winton",
           "end_date": "2026-06-27",
+          "fee_adult": 425,
+          "fee_youth": 790,
           "id": "ca-camp-winton-2026-06-21",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -38,6 +40,8 @@
           "availability": "unknown",
           "camp_id": "ca-camp-winton",
           "end_date": "2026-07-11",
+          "fee_adult": 425,
+          "fee_youth": 790,
           "id": "ca-camp-winton-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {

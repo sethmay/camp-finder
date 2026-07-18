@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-aquehonga",
           "end_date": "2026-07-11",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-aquehonga-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -38,6 +40,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-aquehonga",
           "end_date": "2026-07-25",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-aquehonga-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -54,6 +58,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-aquehonga",
           "end_date": "2026-08-01",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-aquehonga-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -70,6 +76,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-aquehonga",
           "end_date": "2026-08-08",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-aquehonga-2026-08-02",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -86,6 +94,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-aquehonga",
           "end_date": "2026-08-15",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-aquehonga-2026-08-09",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -125,6 +135,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-keowa",
           "end_date": "2026-07-11",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-keowa-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -141,6 +153,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-keowa",
           "end_date": "2026-07-25",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-keowa-2026-07-19",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -157,6 +171,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-keowa",
           "end_date": "2026-08-01",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-keowa-2026-07-26",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -173,6 +189,8 @@
           "availability": "unknown",
           "camp_id": "ny-camp-keowa",
           "end_date": "2026-08-08",
+          "fee_adult": 335,
+          "fee_youth": 695,
           "id": "ny-camp-keowa-2026-08-02",
           "program_type": "scouts_bsa_resident",
           "provenance": {

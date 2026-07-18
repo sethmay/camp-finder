@@ -72,6 +72,11 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   skip the polite delay on the first crawled link — the homepage was just fetched from the
   same host. Pause before every same-host request.
 
+- **Assert POST request bodies for positional payload mappings, not just the response.** A
+  MockTransport returning a canned body for any matching URL leaves the arg->field mapping
+  unguarded (`eventInstanceID`=arg1, `instanceLocationID`=arg2, `orgKey=BSA<nnn>`) — a swapped
+  order or wrong key still passes. Parse and assert `request.content` in the handler.
+
 ## Scrapers (base.Scraper family)
 
 - **Isolate model construction per item, exactly like network calls.** A scrape loop that
@@ -93,6 +98,20 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   `_address_state` mapping only full state names silently fell back to the council HQ state
   for postal-abbreviation addresses — mislabeling and mis-keying an out-of-state camp.
   Accept both "California" and "CA".
+
+- **Splitting a page into per-item chunks on a delimiter: verify a co-located token belongs to
+  that item, not its neighbor.** `html.split("Coords:")` pairs each session with its own
+  `ses.myPricing(...)` ids only because the button renders after its own `Coords:` and before the
+  next — pin that with a ground-truth cross-check fixture (session date <-> location id) + a comment.
+
+- **`\bprice` is not "the price to charge".** "Early discount price", "Late registration price",
+  "Balance Due $..." all look price-like; a `Regular price -> \bprice -> first $` fallback grabs an
+  early-bird/payment amount when the regular anchor is absent. Anchor to the exact labeled line or
+  return None (honor the regular-price-only scope) — never a bare `$` (it hits a $0 booking row).
+
+- **`html.unescape` in a flatten step is safe and often necessary.** `&nbsp;` between a label and
+  its value masks `Regular price\s*\$` matches; decode after tag-strip, normalize whitespace after
+  decode (Python `re` `\s` matches U+00A0, so decoded entities collapse cleanly).
 
 ## Frontend / deploy (GitHub Pages project site)
 

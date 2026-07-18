@@ -22,6 +22,8 @@
           "availability": "unknown",
           "camp_id": "mo-horse-camp-nagel",
           "end_date": "2026-08-08",
+          "fee_adult": 320,
+          "fee_youth": 445,
           "id": "mo-horse-camp-nagel-2026-08-01",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -61,6 +63,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-famous-eagle",
           "end_date": "2026-06-20",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-famous-eagle-2026-06-14",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -77,6 +81,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-famous-eagle",
           "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-famous-eagle-2026-06-21",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -93,6 +99,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-famous-eagle",
           "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-famous-eagle-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -132,6 +140,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-gamble",
           "end_date": "2026-06-20",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-gamble-2026-06-14",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -148,6 +158,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-gamble",
           "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-gamble-2026-06-21",
           "program_type": "scouts_bsa_resident",
           "provenance": {
@@ -164,6 +176,8 @@
           "availability": "unknown",
           "camp_id": "mo-summer-camp-gamble",
           "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 445,
           "id": "mo-summer-camp-gamble-2026-07-05",
           "program_type": "scouts_bsa_resident",
           "provenance": {

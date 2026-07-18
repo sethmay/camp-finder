@@ -40,8 +40,9 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
 
 - **Black Pug scraper — DONE (0.4.0).** `campfinder scrape`/`merge` off scoutingevent.com;
   14 camps / 51 sessions merged across 8 non-demo councils. Follow-ups:
-  - **Fees**: not scraped — Black Pug loads pricing via a JS `ses.myPricing` POST
-    (`/Ajax/SES`) returning an HTML modal; reverse-engineer it to fill `fee_youth`/`fee_adult`.
+  - **Fees**: DONE (0.7.0) — `ses.myPricing` POST to `/Ajax/SES` (needs `orgKey=BSA<nnn>`)
+    fills youth/adult regular prices; 66/67 scraped sessions priced. Remaining: 1 session
+    with no Youth category resolved null; part-time/sibling tiers ignored (regular price only).
   - **Name cleanup**: some events keep council-specific prefixes (e.g. MO council 358's
     "Summer Camp-Famous Eagle"); a curation/LLM pass could canonicalize to "Camp Famous Eagle".
   - **Coverage ramp**: 5 blackpug councils returned 0 (no open resident events / different
