@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.11.0 (minor) — 2026-07-18
 
-- `PENDING` Ramp Black Pug coverage: scraped all 124 blackpug councils, reviewed the 81
+- `e0a73b6` Ramp Black Pug coverage: scraped all 124 blackpug councils, reviewed the 81
   candidates, and merged **46 camps / 178 sessions across 45 councils** (camp count 23 -> 69,
   245/279 sessions priced). Excluded 13 out-of-scope events (day/specialty programs, merit-
   badge signups, a care-package product, an OA fellowship, a donation page, etc.) to
