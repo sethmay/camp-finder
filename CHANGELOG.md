@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.9.2 (patch) — 2026-07-17
 
-- `PENDING` Stop LastPass badging the distance field for once and for all: the trigger was
+- `1d5b260` Stop LastPass badging the distance field for once and for all: the trigger was
   the literal "zip"/"ZIP code" string (payment/address autofill). Remove it from every
   scanned attribute — `name="near-code"`, `placeholder="97405"`, `aria-label="Distance
   origin, 5-digit code"`. Filter behavior unchanged.
