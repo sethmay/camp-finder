@@ -22,24 +22,20 @@ CI note (informational, not a failure): the deploy workflow logs "Node.js 20 is 
 for GitHub's own actions (checkout/setup-node/setup-python/deploy-pages); GitHub auto-forces
 them to Node 24. Clears when those actions ship Node 24 majors — nothing for us to change now.
 
-## Website enrichment — long-tail fallback (deferred; decision pending)
+## Website enrichment — DONE (0.10.0, agent-assisted curation)
 
-`campfinder enrich` (Wikipedia infobox) filled **91** councils this pass; **95/235**
-now have a website. The remaining **140** cannot be resolved from Wikipedia. Across all
-235 councils the MediaWiki lookup breaks down as ~92 with an infobox website, 128 whose
-name redirects to a `Scouting in <State>` overview (its site is the state program's, not
-the council's — correctly skipped), 6 with no article, and 9 with an article but no
-`website` field.
+**All 235 councils now have a website** (was 95/235). `campfinder enrich` applies a curated
+seed (`data/council-websites.json`, `council_id -> url`) fill-only, then falls back to
+Wikipedia for any remainder (seeded ids are never clobbered). The 140 Wikipedia-unresolvable
+councils were resolved by an agent-assisted `web_search` pass (14 `scout` subagents, ~10
+councils each), and every URL was reachability-checked before commit.
 
-Next step: pick a fallback source for the ~140 unresolved official council sites.
-- Option A — keyed search API (Brave / Bing / SerpAPI): reproducible in-pipeline fallback;
-  needs an API key. Best if enrichment must re-run annually unattended.
-- Option B — Scouting America Local Council Locator: authoritative but Cloudflare-gated,
-  no public JSON API found (2026-07).
-- Option C — one-time assisted curation with `method=community` provenance; fast, not
-  reproducible.
+Re-run yearly (no keyed API — subscription-only, by design; not unattended-reproducible):
+`campfinder enrich --report-missing` lists gaps -> resolve each via web_search -> add to the
+seed -> `campfinder enrich`. The seed is the reviewable provenance record (git history).
 
-Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
+Merges baked into the seed: councils **302/303** (-> Mississippi Riverlands) and **695**
+(-> Sioux) point at the surviving council sites; **405** (Rip Van Winkle) is http-only.
 
 ## Next pipeline passes
 
