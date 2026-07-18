@@ -38,6 +38,7 @@ campfinder detect --council all   # classify registration platform per council
 campfinder geocode       # fill missing camp lat/lon from addresses
 campfinder validate      # schema + referential + sanity gate (exits nonzero on error)
 campfinder build         # compile data/ -> web/public/data/*.json
+campfinder zipcentroids  # (re)build web/public/data/zip-centroids.json from the Census gazetteer
 
 pytest                   # 19 tests: models, registry parser, validate, build
 ```
