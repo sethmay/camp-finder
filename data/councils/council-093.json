@@ -1,5 +1,47 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1150 Fred R. Prather Parkway Lincolnton, Georgia 30817",
+      "council_id": "council-093",
+      "features": [],
+      "id": "ga-knox-scout-reservation",
+      "lat": 33.7923477,
+      "lon": -82.479018,
+      "name": "Knox Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/093-115387",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ga-knox-scout-reservation",
+          "end_date": "2027-06-19",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "ga-knox-scout-reservation-2027-06-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/093-115387",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/093-115387",
+          "start_date": "2027-06-13",
+          "year": 2027
+        }
+      ],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/093-115387"
+    }
+  ],
   "hq_city": "Augusta",
   "id": "council-093",
   "name": "Georgia-Carolina Council",

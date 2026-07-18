@@ -183,3 +183,31 @@ def test_fills_empty_fee_even_when_not_newer(council_dir):
     stats = merge_mod.merge([_camp(d, [cand_session])])
     assert stats.sessions_updated == 1
     assert _reload().camps[0].sessions[0].fee_youth == 790
+
+
+def test_skips_demo_councils(council_dir):
+    # A hand-authored demo fixture must never be modified by a scrape merge.
+    d = date(2026, 6, 1)
+    fixture = Camp(
+        id="or-fixture",
+        name="Fixture Camp",
+        council_id="council-492",
+        state="OR",
+        website_url=URL,
+        sessions=[],
+        provenance=_prov(d),
+    )
+    save_council(Council(id="council-492", name="Cascade Pacific", state="OR", camps=[fixture]))
+    cand = Camp(
+        id="or-scraped",
+        name="Scraped Camp",
+        council_id="council-492",
+        state="OR",
+        website_url=URL,
+        sessions=[],
+        provenance=_prov(d),
+    )
+    stats = merge_mod.merge([cand])
+    assert stats.demo_skipped == 1
+    assert stats.councils_written == 0
+    assert {c.id for c in load_council(council_path("council-492")).camps} == {"or-fixture"}

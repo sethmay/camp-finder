@@ -1,5 +1,228 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "9900 Russell Rd Twin Lake, Michigan 49457",
+      "council_id": "council-456",
+      "features": [],
+      "id": "mi-owasippe-camp-blackhawk",
+      "lat": 43.43641,
+      "lon": -86.237089,
+      "name": "Owasippe Camp Blackhawk",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/456-101136",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-06-20",
+          "id": "mi-owasippe-camp-blackhawk-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-06-27",
+          "id": "mi-owasippe-camp-blackhawk-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-07-04",
+          "id": "mi-owasippe-camp-blackhawk-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-07-11",
+          "id": "mi-owasippe-camp-blackhawk-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-07-25",
+          "id": "mi-owasippe-camp-blackhawk-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-08-01",
+          "id": "mi-owasippe-camp-blackhawk-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/456-101136"
+    },
+    {
+      "address": "9900 Russell Rd Twin Lake, Michigan 49457",
+      "council_id": "council-456",
+      "features": [],
+      "id": "mi-owasippe-camp-wolverine",
+      "lat": 43.43641,
+      "lon": -86.237089,
+      "name": "Owasippe Camp Wolverine",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/456-101134",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-06-20",
+          "id": "mi-owasippe-camp-wolverine-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-06-27",
+          "id": "mi-owasippe-camp-wolverine-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-07-04",
+          "id": "mi-owasippe-camp-wolverine-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-07-11",
+          "id": "mi-owasippe-camp-wolverine-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-07-25",
+          "id": "mi-owasippe-camp-wolverine-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/456-101134"
+    }
+  ],
   "hq_city": "Chicago",
   "id": "council-456",
   "name": "Pathway to Adventure Council",

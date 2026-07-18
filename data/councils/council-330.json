@@ -1,5 +1,327 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "300 Blondin Rd. Manchester, New Hampshire 03109",
+      "council_id": "council-330",
+      "features": [],
+      "id": "nh-camp-carpenter-half-week-camp",
+      "lat": 42.950154,
+      "lon": -71.3843598,
+      "name": "Camp Carpenter Half-Week Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-half-week-camp",
+          "end_date": "2026-07-07",
+          "fee_adult": 120,
+          "fee_youth": 350,
+          "id": "nh-camp-carpenter-half-week-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-2026AKELACAMP",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-half-week-camp",
+          "end_date": "2026-07-14",
+          "fee_adult": 120,
+          "fee_youth": 350,
+          "id": "nh-camp-carpenter-half-week-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-2026AKELACAMP",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-half-week-camp",
+          "end_date": "2026-07-28",
+          "fee_adult": 120,
+          "fee_youth": 350,
+          "id": "nh-camp-carpenter-half-week-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-2026AKELACAMP",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-half-week-camp",
+          "end_date": "2026-08-04",
+          "fee_adult": 120,
+          "fee_youth": 350,
+          "id": "nh-camp-carpenter-half-week-camp-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-2026AKELACAMP",
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "NH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/330-2026AKELACAMP"
+    },
+    {
+      "address": "300 Blondin Rd. Manchester, New Hampshire 03109",
+      "council_id": "council-330",
+      "features": [],
+      "id": "nh-camp-carpenter-overnight-camp",
+      "lat": 42.950154,
+      "lon": -71.3843598,
+      "name": "Camp Carpenter Overnight Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/330-108266",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-overnight-camp",
+          "end_date": "2026-07-09",
+          "fee_adult": 250,
+          "fee_youth": 595,
+          "id": "nh-camp-carpenter-overnight-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-108266",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-108266",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-overnight-camp",
+          "end_date": "2026-07-16",
+          "fee_adult": 250,
+          "fee_youth": 595,
+          "id": "nh-camp-carpenter-overnight-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-108266",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-108266",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-overnight-camp",
+          "end_date": "2026-07-30",
+          "fee_adult": 250,
+          "fee_youth": 595,
+          "id": "nh-camp-carpenter-overnight-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-108266",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-108266",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-camp-carpenter-overnight-camp",
+          "end_date": "2026-08-06",
+          "fee_adult": 250,
+          "fee_youth": 595,
+          "id": "nh-camp-carpenter-overnight-camp-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-108266",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-108266",
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "NH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/330-108266"
+    },
+    {
+      "address": "254 Griswold Road Gilmanton Iron Works, New Hampshire 03837",
+      "council_id": "council-330",
+      "features": [],
+      "id": "nh-griswold-scout-reservation",
+      "lat": 43.4769727,
+      "lon": -71.326382,
+      "name": "Griswold Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/330-105629",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-07-04",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-07-25",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-08-01",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-08-08",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-08-15",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-08-09",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-08-09",
+          "year": 2026
+        }
+      ],
+      "state": "NH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/330-105629"
+    }
+  ],
   "hq_city": "Manchester",
   "id": "council-330",
   "name": "Daniel Webster Council",

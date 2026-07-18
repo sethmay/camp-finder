@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampSomers",
-        "verified_at": "2026-07-17"
+        "verified_at": "2026-07-18"
       },
       "sessions": [
         {
@@ -92,7 +92,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampWheeler",
-        "verified_at": "2026-07-17"
+        "verified_at": "2026-07-18"
       },
       "sessions": [
         {
@@ -134,16 +134,16 @@
         {
           "availability": "unknown",
           "camp_id": "nj-camp-wheeler",
-          "end_date": "2026-07-22",
+          "end_date": "2026-07-24",
           "fee_adult": 0,
-          "fee_youth": 275,
+          "fee_youth": 460,
           "id": "nj-camp-wheeler-2026-07-20",
           "program_type": "scouts_bsa_resident",
           "provenance": {
             "confidence": 1.0,
             "method": "blackpug",
             "source_url": "https://scoutingevent.com/358-CampWheeler",
-            "verified_at": "2026-07-17"
+            "verified_at": "2026-07-18"
           },
           "registration_url": "https://scoutingevent.com/358-CampWheeler",
           "start_date": "2026-07-20",
@@ -205,7 +205,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampWinnebago",
-        "verified_at": "2026-07-17"
+        "verified_at": "2026-07-18"
       },
       "sessions": [
         {

@@ -1,5 +1,119 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "601 Callahan Mountain Rd Travelers Rest, South Carolina 29690",
+      "council_id": "council-551",
+      "features": [],
+      "id": "sc-camp-old-indian",
+      "lat": 35.128298,
+      "lon": -82.380166,
+      "name": "Camp Old Indian",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/551-COI26",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "sc-camp-old-indian",
+          "end_date": "2026-06-13",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "sc-camp-old-indian-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/551-COI26",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/551-COI26",
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sc-camp-old-indian",
+          "end_date": "2026-06-20",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "sc-camp-old-indian-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/551-COI26",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/551-COI26",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sc-camp-old-indian",
+          "end_date": "2026-06-27",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "sc-camp-old-indian-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/551-COI26",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/551-COI26",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sc-camp-old-indian",
+          "end_date": "2026-07-04",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "sc-camp-old-indian-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/551-COI26",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/551-COI26",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sc-camp-old-indian",
+          "end_date": "2026-07-11",
+          "fee_adult": 190,
+          "fee_youth": 460,
+          "id": "sc-camp-old-indian-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/551-COI26",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/551-COI26",
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "SC",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/551-COI26"
+    }
+  ],
   "hq_city": "Greenville",
   "id": "council-551",
   "name": "Blue Ridge Council",

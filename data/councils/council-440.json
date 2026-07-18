@@ -1,5 +1,101 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2429 R 45 N Rock Creek, Ohio 44084",
+      "council_id": "council-440",
+      "features": [],
+      "id": "oh-beaumont-scout-reservation",
+      "lat": 41.684865,
+      "lon": -80.862678,
+      "name": "Beaumont Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/440-98819",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-beaumont-scout-reservation",
+          "end_date": "2026-06-26",
+          "fee_adult": 271,
+          "fee_youth": 499,
+          "id": "oh-beaumont-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/440-98819",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/440-98819",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-beaumont-scout-reservation",
+          "end_date": "2026-07-03",
+          "fee_adult": 271,
+          "fee_youth": 499,
+          "id": "oh-beaumont-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/440-98819",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/440-98819",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-beaumont-scout-reservation",
+          "end_date": "2026-07-10",
+          "fee_adult": 271,
+          "fee_youth": 499,
+          "id": "oh-beaumont-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/440-98819",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/440-98819",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-beaumont-scout-reservation",
+          "end_date": "2026-07-17",
+          "fee_adult": 271,
+          "fee_youth": 499,
+          "id": "oh-beaumont-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/440-98819",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/440-98819",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/440-98819"
+    }
+  ],
   "hq_city": "Cleveland",
   "id": "council-440",
   "name": "Lake Erie Council",

@@ -1,5 +1,101 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "14000 Bear Paw Camp Ln Mountain, Wisconsin 54149-0128",
+      "council_id": "council-635",
+      "features": [],
+      "id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp",
+      "lat": 45.1802654,
+      "lon": -88.396808,
+      "name": "Scouts BSA Summer Camp - Bear Paw Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp",
+          "end_date": "2026-07-11",
+          "fee_adult": 210,
+          "fee_youth": 415,
+          "id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp",
+          "end_date": "2026-07-25",
+          "fee_adult": 210,
+          "fee_youth": 415,
+          "id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp",
+          "end_date": "2026-08-01",
+          "fee_adult": 210,
+          "fee_youth": 415,
+          "id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp",
+          "end_date": "2026-08-08",
+          "fee_adult": 210,
+          "fee_youth": 415,
+          "id": "wi-scouts-bsa-summer-camp-bear-paw-scout-camp-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/635-2026summercampbearpaw",
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/635-2026summercampbearpaw"
+    }
+  ],
   "hq_city": "Appleton",
   "id": "council-635",
   "name": "Bay-Lakes Council",

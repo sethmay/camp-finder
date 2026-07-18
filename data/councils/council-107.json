@@ -1,5 +1,65 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "4355 Griffel Road Island Park, Idaho 83429",
+      "council_id": "council-107",
+      "features": [],
+      "id": "id-island-park-scout-camp",
+      "lat": 44.4243637,
+      "lon": -111.3710645,
+      "name": "Island Park Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/107-2026IPSC",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-island-park-scout-camp",
+          "end_date": "2026-07-11",
+          "fee_adult": 140,
+          "fee_youth": 295,
+          "id": "id-island-park-scout-camp-2026-07-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/107-2026IPSC",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/107-2026IPSC",
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-island-park-scout-camp",
+          "end_date": "2026-08-01",
+          "fee_adult": 140,
+          "fee_youth": 295,
+          "id": "id-island-park-scout-camp-2026-07-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/107-2026IPSC",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/107-2026IPSC",
+          "start_date": "2026-07-27",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/107-2026IPSC"
+    }
+  ],
   "hq_city": "Idaho Falls",
   "id": "council-107",
   "name": "Grand Teton Council",
