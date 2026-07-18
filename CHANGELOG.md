@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.6.0 (minor) — 2026-07-17
 
-- `PENDING` Route Doubleknot councils through the Black Pug scraper (their registration
+- `87fe121` Route Doubleknot councils through the Black Pug scraper (their registration
   runs on scoutingevent.com; doubleknot.com is just the CMS) + dedup camps by id per
   council + add `scoutingevent.com` detect signature. Adds Camp Horseshoe (MD) and Camp
   Yawgoog (RI) — dataset now spans 9 states / 23 camps.
