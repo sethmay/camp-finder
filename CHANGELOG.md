@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.10.0 (minor) — 2026-07-17
+
+- `PENDING` Fill **all 235** council websites (was 95/235): `campfinder enrich` now applies
+  a curated `data/council-websites.json` seed (`council_id -> url`, fill-only) before the
+  Wikipedia fallback, and gains `--report-missing` to list gaps. The 140
+  Wikipedia-unresolvable councils were resolved by an agent-assisted `web_search` pass (14
+  `scout` subagents), each URL reachability-checked. Adds `enrich` seed tests.
+
 ## 0.9.2 (patch) — 2026-07-17
 
 - `1d5b260` Stop LastPass badging the distance field for once and for all: the trigger was

@@ -1,93 +1,86 @@
-"""Website enrichment — offline tests for the pure parser + chunk mapper."""
+"""Website enrichment: curated seed loading + fill-only application."""
 
-from campfinder.enrich import (
-    _extract_chunk,
-    normalize_url,
-    parse_infobox_website,
-)
+import json
 
-
-def test_parse_url_template():
-    wt = "{{Infobox\n| website = {{URL|https://www.example.org}}\n}}"
-    assert str(parse_infobox_website(wt)) == "https://www.example.org/"
+from campfinder import enrich as enrich_mod
+from campfinder.io import council_path, load_council, save_council
+from campfinder.models import Council
 
 
-def test_parse_url_template_numbered_arg():
-    wt = "| website = {{URL|1=https://example.org/path}}"
-    assert str(parse_infobox_website(wt)).startswith("https://example.org")
+def _council(cid: str, name: str, website: str | None = None) -> Council:
+    return Council(id=cid, name=name, number=int(cid.split("-")[1]), state="OR", website=website)
 
 
-def test_parse_bracketed_external_link():
-    wt = "| website = [https://council.example.org Council site]"
-    assert str(parse_infobox_website(wt)).startswith("https://council.example.org")
-
-
-def test_parse_bare_url():
-    wt = "| website = https://bare.example.org"
-    assert str(parse_infobox_website(wt)).startswith("https://bare.example.org")
-
-
-def test_parse_adds_missing_scheme():
-    wt = "| website = {{URL|www.noscheme.org}}"
-    assert str(parse_infobox_website(wt)) == "https://www.noscheme.org/"
-
-
-def test_parse_none_when_absent():
-    assert parse_infobox_website("| president = Jane Doe\n| founded = 1910") is None
-
-
-def test_normalize_rejects_garbage():
-    assert normalize_url("") is None
-    assert normalize_url("|}") is None
-
-
-def _resp(pages, normalized=None, redirects=None):
-    return {"query": {"pages": pages, "normalized": normalized or [], "redirects": redirects or []}}
-
-
-def test_extract_maps_direct_page():
-    data = _resp(
-        pages=[
+def test_load_seed_validates_and_skips_bad(tmp_path):
+    p = tmp_path / "seed.json"
+    p.write_text(
+        json.dumps(
             {
-                "title": "Foo Council",
-                "revisions": [{"slots": {"main": {"content": "| website = {{URL|foo.org}}"}}}],
+                "council-001": "https://a.org/",
+                "council-002": "not a url",  # invalid -> dropped
+                "council-003": "example.org",  # scheme added by normalize_url
             }
-        ],
+        ),
+        encoding="utf-8",
     )
-    out = _extract_chunk(["Foo Council"], data)
-    assert str(out["Foo Council"]) == "https://foo.org/"
+    seed = enrich_mod.load_seed(p)
+    assert str(seed["council-001"]) == "https://a.org/"
+    assert "council-003" in seed
+    assert "council-002" not in seed
 
 
-def test_extract_follows_redirect():
-    data = _resp(
-        pages=[
-            {
-                "title": "Real Council",
-                "revisions": [{"slots": {"main": {"content": "| website = {{URL|real.org}}"}}}],
-            }
-        ],
-        redirects=[{"from": "Old Council Name", "to": "Real Council"}],
+def test_load_seed_missing_file_is_empty(tmp_path):
+    assert enrich_mod.load_seed(tmp_path / "nope.json") == {}
+
+
+def test_enrich_applies_seed_fill_only(tmp_path, monkeypatch):
+    councils_dir = tmp_path / "councils"
+    monkeypatch.setattr(enrich_mod.config, "COUNCILS_DIR", councils_dir)
+    save_council(_council("council-001", "Alpha"))  # no website -> should fill
+    save_council(_council("council-002", "Beta", website="https://existing.org/"))  # keep
+    seed = tmp_path / "seed.json"
+    seed.write_text(
+        json.dumps(
+            {"council-001": "https://filled.org/", "council-002": "https://should-not.org/"}
+        ),
+        encoding="utf-8",
     )
-    out = _extract_chunk(["Old Council Name"], data)
-    assert str(out["Old Council Name"]) == "https://real.org/"
+    monkeypatch.setattr(enrich_mod, "SEED_PATH", seed)
+    # Isolate from the network: no Wikipedia fallback in this test.
+    monkeypatch.setattr(enrich_mod, "fetch_websites", lambda names, client=None: {})
+
+    filled = enrich_mod.enrich()
+
+    assert filled == 1
+    assert str(load_council(council_path("council-001")).website) == "https://filled.org/"
+    assert str(load_council(council_path("council-002")).website) == "https://existing.org/"
 
 
-def test_extract_skips_state_overview_redirect():
-    # Council name redirecting to a "Scouting in <State>" article must NOT adopt its site.
-    data = _resp(
-        pages=[
-            {
-                "title": "Scouting in Arizona",
-                "revisions": [
-                    {"slots": {"main": {"content": "| website = {{URL|girlscoutsaz.org}}"}}}
-                ],
-            }
-        ],
-        redirects=[{"from": "Grand Canyon Council", "to": "Scouting in Arizona"}],
-    )
-    assert _extract_chunk(["Grand Canyon Council"], data) == {}
+def test_missing_websites_lists_only_empty(tmp_path, monkeypatch):
+    monkeypatch.setattr(enrich_mod.config, "COUNCILS_DIR", tmp_path)
+    save_council(_council("council-001", "Alpha"))
+    save_council(_council("council-002", "Beta", website="https://existing.org/"))
+    missing = enrich_mod.missing_websites()
+    assert [c.id for c in missing] == ["council-001"]
 
 
-def test_extract_skips_missing_page():
-    data = _resp(pages=[{"title": "Nowhere Council", "missing": True}])
-    assert _extract_chunk(["Nowhere Council"], data) == {}
+def test_enrich_overwrite_never_clobbers_seeded_id(tmp_path, monkeypatch):
+    councils_dir = tmp_path / "councils"
+    monkeypatch.setattr(enrich_mod.config, "COUNCILS_DIR", councils_dir)
+    save_council(_council("council-001", "Alpha", website="https://old-alpha.org/"))  # seeded
+    save_council(_council("council-002", "Beta", website="https://old-beta.org/"))  # not seeded
+    seed = tmp_path / "seed.json"
+    seed.write_text(json.dumps({"council-001": "https://seed-alpha.org/"}), encoding="utf-8")
+    monkeypatch.setattr(enrich_mod, "SEED_PATH", seed)
+    # Wikipedia would answer for BOTH names; the seeded id must be excluded from its targets.
+    wiki = {
+        "Alpha": enrich_mod.normalize_url("https://wiki-alpha.org/"),
+        "Beta": enrich_mod.normalize_url("https://wiki-beta.org/"),
+    }
+    monkeypatch.setattr(enrich_mod, "fetch_websites", lambda names, client=None: wiki)
+
+    filled = enrich_mod.enrich(overwrite=True)
+
+    assert filled == 2
+    assert str(load_council(council_path("council-001")).website) == "https://seed-alpha.org/"
+    assert str(load_council(council_path("council-002")).website) == "https://wiki-beta.org/"

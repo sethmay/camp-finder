@@ -11,6 +11,7 @@ skipped: that article's infobox website is the state program's, not the council'
 
 from __future__ import annotations
 
+import json
 import re
 
 import httpx
@@ -21,6 +22,10 @@ from .io import load_all_councils, save_council
 
 WIKI_API = "https://en.wikipedia.org/w/api.php"
 _BATCH = 50  # MediaWiki allows up to 50 titles per query
+
+# Curated council_id -> official website seed, applied fill-only before Wikipedia.
+# Populated by an agent-assisted web-search pass (see README "website enrichment").
+SEED_PATH = config.DATA_DIR / "council-websites.json"
 
 # Infobox website patterns, tried in order. Group 1 is the URL (scheme optional).
 _WEBSITE_RE: tuple[re.Pattern[str], ...] = (
@@ -118,11 +123,40 @@ def fetch_websites(names: list[str], client: httpx.Client | None = None) -> dict
     return out
 
 
+def load_seed(path=None) -> dict[str, HttpUrl]:
+    """Load the curated ``{council_id: website}`` seed, validating each URL."""
+    path = path or SEED_PATH
+    if not path.exists():
+        return {}
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    out: dict[str, HttpUrl] = {}
+    for cid, url in raw.items():
+        norm = normalize_url(str(url))
+        if norm is not None:
+            out[cid] = norm
+    return out
+
+
+def missing_websites() -> list:
+    """Councils that still have no ``website`` - the worklist for enrichment."""
+    return [c for c in load_all_councils() if not c.website]
+
+
 def enrich(overwrite: bool = False) -> int:
-    """Fill missing ``council.website`` from Wikipedia. Returns the number filled."""
-    targets = [c for c in load_all_councils() if overwrite or not c.website]
-    resolved = fetch_websites([c.name for c in targets])
+    """Fill missing ``council.website``: curated seed first, then Wikipedia. Returns count filled."""
+    councils = load_all_councils()
+    seed = load_seed()
     filled = 0
+    # 1. Curated seed by id - authoritative, applied fill-only (unless overwrite).
+    for council in councils:
+        url = seed.get(council.id)
+        if url is not None and (overwrite or not council.website) and council.website != url:
+            council.website = url
+            save_council(council)
+            filled += 1
+    # 2. Wikipedia by name fills anything still missing (never clobbers a seeded id).
+    targets = [c for c in councils if (overwrite and c.id not in seed) or not c.website]
+    resolved = fetch_websites([c.name for c in targets])
     for council in targets:
         url = resolved.get(council.name)
         if url is not None:

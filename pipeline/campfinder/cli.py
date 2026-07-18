@@ -108,6 +108,12 @@ def _cmd_zipcentroids(_: argparse.Namespace) -> int:
 
 
 def _cmd_enrich(args: argparse.Namespace) -> int:
+    if args.report_missing:
+        missing = enrich_mod.missing_websites()
+        for c in missing:
+            print(f"{c.id}\t{c.name}\t{c.state}\t{c.hq_city or ''}")
+        print(f"# {len(missing)} council(s) missing a website")
+        return 0
     n = enrich_mod.enrich(overwrite=args.overwrite)
     print(f"enrich: filled website for {n} council(s)")
     return 0
@@ -160,8 +166,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("schema", help="regenerate JSON Schemas").set_defaults(func=_cmd_schema)
     sub.add_parser("registry", help="build council registry").set_defaults(func=_cmd_registry)
 
-    p_enrich = sub.add_parser("enrich", help="resolve council websites from Wikipedia")
+    p_enrich = sub.add_parser("enrich", help="fill council websites (curated seed, then Wikipedia)")
     p_enrich.add_argument("--overwrite", action="store_true", help="refill even if website set")
+    p_enrich.add_argument(
+        "--report-missing", action="store_true", help="list councils lacking a website and exit"
+    )
     p_enrich.set_defaults(func=_cmd_enrich)
 
     p_detect = sub.add_parser("detect", help="detect registration platform")
