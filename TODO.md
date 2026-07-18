@@ -37,5 +37,6 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
     method/authority precedence before scrapes overlap curated camps (demo councils are
     excluded today, so not yet exercised).
 - Doubleknot scraper + LLM long-tail extractor with review queue — §6.2, §6.3.
-- CI: `deploy.yml` (GitHub Pages project site at `sethmay.github.io/camp-finder/`,
-  needs Astro `site` + `base: '/camp-finder'`) and `refresh.yml` — §10.
+- CI: **`deploy.yml` DONE (0.5.0)** — GitHub Pages project site at
+  `https://sethmay.github.io/camp-finder/` (enable once: Settings -> Pages -> Source =
+  GitHub Actions). Still TODO: **`refresh.yml`** scheduled scrape -> PR on data diff (§10).

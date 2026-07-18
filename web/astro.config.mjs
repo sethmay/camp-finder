@@ -7,5 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: "static",
   integrations: [react(), tailwind({ applyBaseStyles: false })],
-  site: "https://campfinder.example.org",
+  // GitHub Pages project site: https://sethmay.github.io/camp-finder/
+  site: "https://sethmay.github.io",
+  base: "/camp-finder",
 });

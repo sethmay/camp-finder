@@ -4,6 +4,7 @@ import { Map as MapIcon, List as ListIcon, SlidersHorizontal, X } from "lucide-r
 import type { Camp, Criteria, Meta, SortKey } from "@lib/types";
 import { rankCamps, sortRanked } from "@lib/filter";
 import { fromParams, toParams, type UiState } from "@lib/searchParams";
+import { withBase } from "@lib/paths";
 import { isValidZip, loadCentroids, setCentroids, zipToCentroid, type Centroid } from "@lib/zip";
 import Filters from "./Filters";
 import ResultsList from "./ResultsList";
@@ -31,9 +32,9 @@ export default function SearchApp() {
   useEffect(() => {
     setUi(fromParams(new URLSearchParams(window.location.search)));
     Promise.all([
-      fetch(`${import.meta.env.BASE_URL}data/camps.json`).then((r) => r.json()),
-      fetch(`${import.meta.env.BASE_URL}data/meta.json`).then((r) => r.json()),
-      fetch(`${import.meta.env.BASE_URL}data/zip-centroids.json`).then((r) => r.json()),
+      fetch(withBase("/data/camps.json")).then((r) => r.json()),
+      fetch(withBase("/data/meta.json")).then((r) => r.json()),
+      fetch(withBase("/data/zip-centroids.json")).then((r) => r.json()),
     ])
       .then(([c, m, z]: [Camp[], Meta, ZipData]) => {
         setCamps(c);
