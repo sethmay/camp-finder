@@ -174,7 +174,7 @@ export default function MapView({
     <div
       ref={containerRef}
       className="h-full w-full rounded-md"
-      style={{ filter: "saturate(0.62) brightness(1.03)" }}
+      style={{ filter: "saturate(0.62)" }}
       role="application"
       aria-label="Map of matching camps. A full list of the same camps is shown alongside."
     />
