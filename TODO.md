@@ -39,6 +39,12 @@ Merges baked into the seed: councils **302/303** (-> Mississippi Riverlands) and
 
 ## Next pipeline passes
 
+**Platform coverage — `detect` run across all 235 (0.10.1).** Now every council has a website,
+`campfinder detect` classified: **124 Black Pug + 34 Tentaroo = 158 programmatically scrapable**
+(was 30), 15 doubleknot, 61 unknown (custom CMS or Cloudflare-gated homepages, e.g. Sam
+Houston/576, Grand Canyon/010), 1 other. Next scrape ramp targets those 158. **Tentaroo scraper
+is net-new code (not built yet)**; the 34 Tentaroo councils are unlocked but not yet scrapable.
+
 - **Black Pug scraper — DONE (0.4.0).** `campfinder scrape`/`merge` off scoutingevent.com;
   14 camps / 51 sessions merged across 8 non-demo councils. Follow-ups:
   - **Fees**: DONE (0.7.0) — `ses.myPricing` POST to `/Ajax/SES` (needs `orgKey=BSA<nnn>`)

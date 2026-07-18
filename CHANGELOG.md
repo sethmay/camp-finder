@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.10.1 (patch) — 2026-07-17
+
+- `PENDING` Classify registration platforms across all 235 councils (`campfinder detect`),
+  now that every council has a website: programmatically scrapable councils **30 -> 158**
+  (124 Black Pug, 34 Tentaroo); 15 doubleknot, 61 unknown, 1 other remain. Data-only.
+
 ## 0.10.0 (minor) — 2026-07-17
 
 - `a46b787` Fill **all 235** council websites (was 95/235): `campfinder enrich` now applies
