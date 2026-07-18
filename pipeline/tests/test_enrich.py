@@ -62,3 +62,25 @@ def test_missing_websites_lists_only_empty(tmp_path, monkeypatch):
     save_council(_council("council-002", "Beta", website="https://existing.org/"))
     missing = enrich_mod.missing_websites()
     assert [c.id for c in missing] == ["council-001"]
+
+
+def test_enrich_overwrite_never_clobbers_seeded_id(tmp_path, monkeypatch):
+    councils_dir = tmp_path / "councils"
+    monkeypatch.setattr(enrich_mod.config, "COUNCILS_DIR", councils_dir)
+    save_council(_council("council-001", "Alpha", website="https://old-alpha.org/"))  # seeded
+    save_council(_council("council-002", "Beta", website="https://old-beta.org/"))  # not seeded
+    seed = tmp_path / "seed.json"
+    seed.write_text(json.dumps({"council-001": "https://seed-alpha.org/"}), encoding="utf-8")
+    monkeypatch.setattr(enrich_mod, "SEED_PATH", seed)
+    # Wikipedia would answer for BOTH names; the seeded id must be excluded from its targets.
+    wiki = {
+        "Alpha": enrich_mod.normalize_url("https://wiki-alpha.org/"),
+        "Beta": enrich_mod.normalize_url("https://wiki-beta.org/"),
+    }
+    monkeypatch.setattr(enrich_mod, "fetch_websites", lambda names, client=None: wiki)
+
+    filled = enrich_mod.enrich(overwrite=True)
+
+    assert filled == 2
+    assert str(load_council(council_path("council-001")).website) == "https://seed-alpha.org/"
+    assert str(load_council(council_path("council-002")).website) == "https://wiki-beta.org/"
