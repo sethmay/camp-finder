@@ -52,9 +52,12 @@ is net-new code (not built yet)**; the 34 Tentaroo councils are unlocked but not
     with no Youth category resolved null; part-time/sibling tiers ignored (regular price only).
   - **Name cleanup**: some events keep council-specific prefixes (e.g. MO council 358's
     "Summer Camp-Famous Eagle"); a curation/LLM pass could canonicalize to "Camp Famous Eagle".
-  - **Coverage ramp**: 5 blackpug councils returned 0 (no open resident events / different
-    landing); the 4 curated demo councils (492/606/609/697) were excluded from merge to
-    protect the hand-authored frontend fixtures — revisit once real data should replace demo.
+  - **Coverage ramp — 0.11.0:** scraped all 124 blackpug councils; merged 46 camps/178 sessions
+    across 45 councils (69 camps total). 13 out-of-scope events triaged to
+    `data/.review/blackpug-2026-07-18-manual-review.md`. Demo councils (492/606/609/697) now
+    skipped in `merge` via `config.DEMO_COUNCILS` (was incidental before). Remaining: 3 councils
+    dropped to review (039/178/553 — find their real resident camp); replace demo fixtures with
+    real data (needs merge-precedence guard below); the "Long-term Camp" suffix on 539.
   - **Merge precedence**: when a future scrape supersedes a *curated* camp, `merge._merge_camp`
     replaces `website_url` (with the scoutingevent URL) and `features` wholesale. Add
     method/authority precedence before scrapes overlap curated camps (demo councils are

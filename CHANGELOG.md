@@ -2,6 +2,16 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.11.0 (minor) — 2026-07-18
+
+- `PENDING` Ramp Black Pug coverage: scraped all 124 blackpug councils, reviewed the 81
+  candidates, and merged **46 camps / 178 sessions across 45 councils** (camp count 23 -> 69,
+  245/279 sessions priced). Excluded 13 out-of-scope events (day/specialty programs, merit-
+  badge signups, a care-package product, an OA fellowship, a donation page, etc.) to
+  `data/.review/blackpug-2026-07-18-manual-review.md`; fixed 4 malformed camp names. Adds
+  `config.DEMO_COUNCILS` + a `merge` skip so scrapes never clobber the hand-authored PNW
+  fixtures (now that `detect` classifies them as blackpug).
+
 ## 0.10.1 (patch) — 2026-07-17
 
 - `ed967f6` Classify registration platforms across all 235 councils (`campfinder detect`),
