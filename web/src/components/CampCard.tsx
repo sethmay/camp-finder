@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import type { RankedCamp } from "@lib/types";
+import { withBase } from "@lib/paths";
 import { formatDateRange, formatFeeFrom } from "@lib/format";
 import AvailabilityBadge from "./AvailabilityBadge";
 import FeatureChip from "./FeatureChip";
@@ -23,7 +24,7 @@ export default function CampCard({
 
   return (
     <a
-      href={`/camps/${camp.id}`}
+      href={withBase(`/camps/${camp.id}`)}
       onMouseEnter={() => onHover?.(camp.id)}
       onMouseLeave={onLeave}
       onFocus={() => onHover?.(camp.id)}

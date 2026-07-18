@@ -4,6 +4,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import type { RankedCamp } from "@lib/types";
 import { formatFeeFrom } from "@lib/format";
 import { MAP_COLORS, US_CENTER, US_ZOOM, mapStyle } from "@lib/map";
+import { withBase } from "@lib/paths";
 
 const SRC = "camps";
 
@@ -111,7 +112,7 @@ export default function MapView({
             `<div style="font-family:var(--cf-font-sans)">
                <strong>${props.name}</strong><br/>
                <span style="color:var(--cf-muted)">${props.fee}</span><br/>
-               <a href="/camps/${props.id}" style="color:var(--cf-primary)">View details →</a>
+               <a href="${withBase(`/camps/${props.id}`)}" style="color:var(--cf-primary)">View details →</a>
              </div>`,
           )
           .addTo(map);

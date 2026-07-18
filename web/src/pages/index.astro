@@ -2,6 +2,7 @@
 import Base from "../layouts/Base.astro";
 import SearchApp from "../components/SearchApp";
 import type { Camp } from "../lib/types";
+import { withBase } from "@lib/paths";
 import campsData from "../../public/data/camps.json";
 
 const camps = campsData as unknown as Camp[];
@@ -29,7 +30,7 @@ const camps = campsData as unknown as Camp[];
         {
           camps.map((c) => (
             <li>
-              <a class="text-primary underline" href={`/camps/${c.id}`}>
+              <a class="text-primary underline" href={withBase(`/camps/${c.id}`)}>
                 {c.name} — {c.council_name} ({c.state})
               </a>
             </li>

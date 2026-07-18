@@ -86,3 +86,22 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   `_address_state` mapping only full state names silently fell back to the council HQ state
   for postal-abbreviation addresses — mislabeling and mis-keying an out-of-state camp.
   Accept both "California" and "CA".
+
+## Frontend / deploy (GitHub Pages project site)
+
+- **Base-path acceptance bar is "does it 404 at the subpath", not "does it build".** For a
+  project site served under `/camp-finder/`, `import.meta.env.BASE_URL` is `/camp-finder`
+  (NO trailing slash), so `` `${BASE_URL}data/x` `` yields `/camp-finderdata/x`. Route every
+  app-internal URL through `withBase` (links, `fetch`, `src`, `url()`, form `action`,
+  canonical/OG/sitemap/favicon/manifest). A green `astro build` is not proof — grep the
+  emitted `dist/**` HTML + JS for the base prefix.
+
+- **Test env-dependent joins against the real value, not the tooling default.** vitest pins
+  `import.meta.env.BASE_URL` to `/`, so a test of base-joining only exercises root unless
+  you read the env inside the function and `vi.stubEnv("BASE_URL", "/camp-finder")` (or
+  extract a pure `join(base, path)`). Otherwise the exact production bug passes the suite.
+
+- **A CI gate must be non-vacuous, not just present.** Confirm (1) the gate command returns
+  non-zero on failure (e.g. `campfinder validate` → `SystemExit(1)`), (2) it's reachable
+  (console script / `__main__` wired), and (3) the deploy job `needs:` the gate job. GitHub
+  Actions' default `bash -eo pipefail` makes newline-separated `run:` steps fail fast.

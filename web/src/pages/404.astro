@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { withBase } from "@lib/paths";
 ---
 
 <Base title="Not found — Camp Finder">
@@ -10,7 +11,7 @@ import Base from "../layouts/Base.astro";
       The camp or page you're looking for may have moved.
     </p>
     <a
-      href="/"
+      href={withBase("/")}
       class="cf-tap mt-6 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
     >
       Back to search

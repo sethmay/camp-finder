@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.5.0 (minor) — 2026-07-17
+
+- `PENDING` Add GitHub Pages deploy (`.github/workflows/deploy.yml`) + subpath config
+  (`base: /camp-finder`, `withBase` helper): validate + web tests gate, then publish the
+  static site. Fixes base-relative data fetches and all internal links for the subpath.
+
 ## 0.4.0 (minor) — 2026-07-17
 
 - `4eeff13` Add Black Pug scraper (`scrapers/base` + `scrapers/blackpug`), `merge.py`, and

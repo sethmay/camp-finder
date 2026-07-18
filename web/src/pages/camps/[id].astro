@@ -6,6 +6,7 @@ import ProvenanceBadge from "../../components/ProvenanceBadge";
 import StaleBadge from "../../components/StaleBadge";
 import { formatDateRange, formatFee, isStale } from "../../lib/format";
 import type { Camp } from "../../lib/types";
+import { withBase } from "@lib/paths";
 import campsData from "../../../public/data/camps.json";
 
 export function getStaticPaths() {
@@ -20,7 +21,7 @@ const stale = isStale(camp.verified_at);
 
 <Base title={`${camp.name} — Camp Finder`} description={camp.description ?? undefined}>
   <article class="mx-auto max-w-3xl px-4 py-8">
-    <a href="/" class="text-sm text-primary">← Back to search</a>
+    <a href={withBase("/")} class="text-sm text-primary">← Back to search</a>
 
     <header class="mt-4">
       <div class="flex flex-wrap items-start justify-between gap-3">
@@ -142,7 +143,7 @@ const stale = isStale(camp.verified_at);
         Visit official council page →
       </a>
       <ProvenanceBadge sourceUrl={camp.source_url} verifiedAt={camp.verified_at} />
-      <a href="/about#corrections" class="text-xs text-muted underline">
+      <a href={withBase("/about#corrections")} class="text-xs text-muted underline">
         See a problem with this listing? Suggest a correction.
       </a>
     </div>
