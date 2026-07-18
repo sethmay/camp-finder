@@ -1,5 +1,124 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "185 Sly Pond Rd Fort Ann, New York 12827",
+      "council_id": "council-364",
+      "features": [],
+      "id": "ny-camp-wakpominee",
+      "lat": 43.4564655,
+      "lon": -73.5861915,
+      "name": "Camp Wakpominee",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/364-Wakpominee2026",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-wakpominee",
+          "end_date": "2026-08-01",
+          "fee_adult": 150,
+          "fee_youth": 600,
+          "id": "ny-camp-wakpominee-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/364-Wakpominee2026",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/364-Wakpominee2026",
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/364-Wakpominee2026"
+    },
+    {
+      "address": "279 Davitt Lake Rd Averill Park, New York 12018",
+      "council_id": "council-364",
+      "features": [],
+      "id": "ny-rotary-scout-reservation",
+      "lat": 42.70599,
+      "lon": -73.52813,
+      "name": "Rotary Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/364-RSR2026",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-rotary-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 600,
+          "id": "ny-rotary-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/364-RSR2026",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/364-RSR2026",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-rotary-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 150,
+          "fee_youth": 600,
+          "id": "ny-rotary-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/364-RSR2026",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/364-RSR2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-rotary-scout-reservation",
+          "end_date": "2026-08-08",
+          "fee_adult": 150,
+          "fee_youth": 600,
+          "id": "ny-rotary-scout-reservation-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/364-RSR2026",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/364-RSR2026",
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/364-RSR2026"
+    }
+  ],
   "hq_city": "Albany",
   "id": "council-364",
   "name": "Twin Rivers Council",

@@ -1,5 +1,141 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "N1910 Scout Road Birchwood, Wisconsin 54817 Adventure Camp; Tomahawk Tomahawk Scout Camp Monday 07-20-2026 9:00 AM CT to Friday 07-24-2026 4:00 PM CT More Information Map of Session $ View Pricing",
+      "council_id": "council-283",
+      "features": [],
+      "id": "wi-adventure-camp",
+      "lat": 45.700425,
+      "lon": -91.6827603,
+      "name": "Adventure Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/283-adventure",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-06-24",
+          "id": "wi-adventure-camp-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-06-27",
+          "id": "wi-adventure-camp-2026-06-24",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-06-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-07-03",
+          "id": "wi-adventure-camp-2026-06-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-07-15",
+          "id": "wi-adventure-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-07-24",
+          "id": "wi-adventure-camp-2026-07-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-07-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-07-31",
+          "id": "wi-adventure-camp-2026-07-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-07-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-08-14",
+          "id": "wi-adventure-camp-2026-08-10",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-08-10",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/283-adventure"
+    }
+  ],
   "hq_city": "Mankato",
   "id": "council-283",
   "name": "Twin Valley Council",

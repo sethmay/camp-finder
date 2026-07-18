@@ -1,5 +1,45 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2600 Winterbottom Rd Morris, Illinois 60450",
+      "council_id": "council-702",
+      "features": [],
+      "id": "il-rainbow-scout-reservation",
+      "lat": 41.325331243722,
+      "lon": -88.34371725042882,
+      "name": "Rainbow Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/702-2027scoutsbsacamp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-rainbow-scout-reservation",
+          "end_date": "2027-06-26",
+          "id": "il-rainbow-scout-reservation-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/702-2027scoutsbsacamp",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/702-2027scoutsbsacamp",
+          "start_date": "2027-06-20",
+          "year": 2027
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/702-2027scoutsbsacamp"
+    }
+  ],
   "hq_city": "Morris",
   "id": "council-702",
   "name": "Rainbow Council",

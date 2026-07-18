@@ -20,6 +20,11 @@ CACHE_DIR = DATA_DIR / ".cache"  # geocode + link-liveness cache (gitignored)
 CANDIDATES_DIR = DATA_DIR / "candidates"  # scraper output before merge (gitignored)
 WEB_DATA_DIR = REPO_ROOT / "web" / "public" / "data"  # build output
 
+# Hand-authored PNW demo fixtures (exercise every UI state). `merge` skips these so a
+# scrape/refresh never clobbers them; replacing them with real scraped data is a
+# deliberate future decision (see TODO.md). NOT a scraper allow/deny list.
+DEMO_COUNCILS = frozenset({"council-492", "council-606", "council-609", "council-697"})
+
 # --- LLM extraction ---
 LLM_MODEL = "claude-3-5-sonnet-latest"
 LLM_CONFIDENCE_THRESHOLD = 0.7  # below this -> review queue, never auto-published

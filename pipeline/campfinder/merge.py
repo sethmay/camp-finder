@@ -17,6 +17,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from . import config
 from .io import council_path, load_council, save_council
 from .models import Availability, Camp, Council, Provenance, Session
 
@@ -31,6 +32,7 @@ class MergeStats:
     camps_updated: int = 0
     sessions_added: int = 0
     sessions_updated: int = 0
+    demo_skipped: int = 0
 
     def total_changes(self) -> int:
         return self.camps_added + self.camps_updated + self.sessions_added + self.sessions_updated
@@ -141,6 +143,9 @@ def merge(candidates: list[Camp]) -> MergeStats:
 
     for council_id, camps in by_council.items():
         path = council_path(council_id)
+        if council_id in config.DEMO_COUNCILS:
+            stats.demo_skipped += len(camps)  # protect hand-authored fixtures
+            continue
         if not path.exists():
             continue  # candidate references an unknown council -> skip (registry owns councils)
         council = load_council(path)

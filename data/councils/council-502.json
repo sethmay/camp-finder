@@ -1,5 +1,119 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "106 Camp Minsi Rd Pocono Summit, Pennsylvania 18346",
+      "council_id": "council-502",
+      "features": [],
+      "id": "pa-camp-minsi",
+      "lat": 41.1179048,
+      "lon": -75.4209774,
+      "name": "Camp Minsi",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-minsi",
+          "end_date": "2026-07-01",
+          "fee_adult": 200,
+          "fee_youth": 430,
+          "id": "pa-camp-minsi-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-minsi",
+          "end_date": "2026-07-11",
+          "fee_adult": 200,
+          "fee_youth": 525,
+          "id": "pa-camp-minsi-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-minsi",
+          "end_date": "2026-07-18",
+          "fee_adult": 200,
+          "fee_youth": 525,
+          "id": "pa-camp-minsi-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-minsi",
+          "end_date": "2026-07-25",
+          "fee_adult": 200,
+          "fee_youth": 525,
+          "id": "pa-camp-minsi-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-minsi",
+          "end_date": "2026-08-01",
+          "fee_adult": 200,
+          "fee_youth": 525,
+          "id": "pa-camp-minsi-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/502-2026CampMinsiSummer",
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/502-2026CampMinsiSummer"
+    }
+  ],
   "hq_city": "Lehigh Valley",
   "id": "council-502",
   "name": "Minsi Trails Council",

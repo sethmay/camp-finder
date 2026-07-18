@@ -1,5 +1,214 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "231 Ashford Center Road Ashford, Connecticut 06278",
+      "council_id": "council-066",
+      "features": [],
+      "id": "ct-j-n-webster",
+      "lat": 41.87092590332031,
+      "lon": -72.14141845703125,
+      "name": "J. N. Webster",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/066-102135",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-07-03",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-07-10",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-07-17",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-07-31",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-08-07",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-j-n-webster",
+          "end_date": "2026-08-14",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-j-n-webster-2026-08-09",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102135",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102135",
+          "start_date": "2026-08-09",
+          "year": 2026
+        }
+      ],
+      "state": "CT",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/066-102135"
+    },
+    {
+      "address": "221 Mount Tobe Road Plymouth, Connecticut 06782",
+      "council_id": "council-066",
+      "features": [],
+      "id": "ct-mattatuck",
+      "lat": 41.63344192504883,
+      "lon": -73.05036926269531,
+      "name": "Mattatuck",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/066-102136",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ct-mattatuck",
+          "end_date": "2026-07-25",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-mattatuck-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102136",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-mattatuck",
+          "end_date": "2026-08-01",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-mattatuck-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102136",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-mattatuck",
+          "end_date": "2026-08-08",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-mattatuck-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102136",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/066-102136",
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "CT",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/066-102136"
+    }
+  ],
   "hq_city": "Hartford",
   "id": "council-066",
   "name": "Connecticut Rivers Council",

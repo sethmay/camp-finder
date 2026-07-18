@@ -1,5 +1,65 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "12900 E. Organization Ridge Rd Tucson, Arizona 85619",
+      "council_id": "council-011",
+      "features": [],
+      "id": "az-scouts-bsa-weekend-camp-2026-new",
+      "lat": 32.4033251,
+      "lon": -110.7214508,
+      "name": "Scouts BSA Weekend Camp 2026 - New",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/011-112973",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "az-scouts-bsa-weekend-camp-2026-new",
+          "end_date": "2026-06-07",
+          "fee_adult": 75,
+          "fee_youth": 125,
+          "id": "az-scouts-bsa-weekend-camp-2026-new-2026-06-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/011-112973",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/011-112973",
+          "start_date": "2026-06-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-scouts-bsa-weekend-camp-2026-new",
+          "end_date": "2026-06-14",
+          "fee_adult": 75,
+          "fee_youth": 125,
+          "id": "az-scouts-bsa-weekend-camp-2026-new-2026-06-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/011-112973",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/011-112973",
+          "start_date": "2026-06-12",
+          "year": 2026
+        }
+      ],
+      "state": "AZ",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/011-112973"
+    }
+  ],
   "hq_city": "Tucson",
   "id": "council-011",
   "name": "Catalina Council",

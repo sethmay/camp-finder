@@ -1,5 +1,101 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "24201 Bobcat Rd Custer, South Dakota 57730",
+      "council_id": "council-695",
+      "features": [],
+      "id": "sd-medicine-mountain",
+      "lat": 43.8984566,
+      "lon": -103.7240745,
+      "name": "Medicine Mountain",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "sd-medicine-mountain",
+          "end_date": "2026-06-13",
+          "fee_adult": 300,
+          "fee_youth": 475,
+          "id": "sd-medicine-mountain-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sd-medicine-mountain",
+          "end_date": "2026-06-20",
+          "fee_adult": 300,
+          "fee_youth": 475,
+          "id": "sd-medicine-mountain-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sd-medicine-mountain",
+          "end_date": "2026-06-27",
+          "fee_adult": 300,
+          "fee_youth": 475,
+          "id": "sd-medicine-mountain-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "sd-medicine-mountain",
+          "end_date": "2026-07-11",
+          "fee_adult": 300,
+          "fee_youth": 475,
+          "id": "sd-medicine-mountain-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/695-MMSR2026SummerCamp",
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "SD",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/695-MMSR2026SummerCamp"
+    }
+  ],
   "hq_city": "Rapid City",
   "id": "council-695",
   "name": "Black Hills Area Council",

@@ -1,5 +1,342 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2331 County Road 68C Red Feather Lakes, Colorado 80545",
+      "council_id": "council-062",
+      "features": [],
+      "id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer",
+      "lat": 40.751441955566406,
+      "lon": -105.5020523071289,
+      "name": "Ben Delatour Scout Ranch Camp Jeffrey Summer",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/062-101580",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer",
+          "end_date": "2026-06-20",
+          "fee_adult": 275,
+          "fee_youth": 535,
+          "id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101580",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101580",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer",
+          "end_date": "2026-06-27",
+          "fee_adult": 275,
+          "fee_youth": 535,
+          "id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101580",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101580",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer",
+          "end_date": "2026-07-11",
+          "fee_adult": 275,
+          "fee_youth": 535,
+          "id": "co-ben-delatour-scout-ranch-camp-jeffrey-summer-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101580",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101580",
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/062-101580"
+    },
+    {
+      "address": "870 N Fork Hwy Cody, Wyoming 82414",
+      "council_id": "council-062",
+      "features": [],
+      "id": "wy-camp-buffalo-bill-summer",
+      "lat": 44.456806,
+      "lon": -109.844031,
+      "name": "Camp Buffalo Bill Summer",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/062-101576",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wy-camp-buffalo-bill-summer",
+          "end_date": "2026-06-20",
+          "fee_adult": 275,
+          "fee_youth": 550,
+          "id": "wy-camp-buffalo-bill-summer-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101576",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101576",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-camp-buffalo-bill-summer",
+          "end_date": "2026-06-27",
+          "fee_adult": 275,
+          "fee_youth": 550,
+          "id": "wy-camp-buffalo-bill-summer-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101576",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101576",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-camp-buffalo-bill-summer",
+          "end_date": "2026-07-11",
+          "fee_adult": 275,
+          "fee_youth": 550,
+          "id": "wy-camp-buffalo-bill-summer-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-101576",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-101576",
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "WY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/062-101576"
+    },
+    {
+      "address": "870 N Fork Hwy Cody, Wyoming 82414",
+      "council_id": "council-062",
+      "features": [],
+      "id": "wy-yellowstone-anglers-basecamp-full-week",
+      "lat": 44.456806,
+      "lon": -109.844031,
+      "name": "Yellowstone Anglers' Basecamp Full Week",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/062-105494",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-08-08",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-08-15",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-08-09",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-08-09",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-08-22",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-08-16",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-08-16",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-08-29",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-08-23",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-08-23",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-09-05",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-08-30",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-08-30",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-full-week",
+          "end_date": "2026-09-12",
+          "fee_adult": 1200,
+          "id": "wy-yellowstone-anglers-basecamp-full-week-2026-09-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105494",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105494",
+          "start_date": "2026-09-06",
+          "year": 2026
+        }
+      ],
+      "state": "WY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/062-105494"
+    },
+    {
+      "address": "870 N Fork Hwy Cody, Wyoming 82414",
+      "council_id": "council-062",
+      "features": [],
+      "id": "wy-yellowstone-anglers-basecamp-half-week",
+      "lat": 44.456806,
+      "lon": -109.844031,
+      "name": "Yellowstone Anglers' Basecamp (Half Week)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/062-105499",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-half-week",
+          "end_date": "2026-07-29",
+          "fee_adult": 800,
+          "id": "wy-yellowstone-anglers-basecamp-half-week-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105499",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105499",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wy-yellowstone-anglers-basecamp-half-week",
+          "end_date": "2026-08-01",
+          "fee_adult": 800,
+          "id": "wy-yellowstone-anglers-basecamp-half-week-2026-07-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/062-105499",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/062-105499",
+          "start_date": "2026-07-29",
+          "year": 2026
+        }
+      ],
+      "state": "WY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/062-105499"
+    }
+  ],
   "hq_city": "Greeley",
   "id": "council-062",
   "name": "Adventure West Council",

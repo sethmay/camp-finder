@@ -1,5 +1,47 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Herbert River Rd 30 miles outside of town between mile markers 26/27 Juneau, Alaska 99801",
+      "council_id": "council-610",
+      "features": [],
+      "id": "ak-eagle-river-scout-camp",
+      "lat": 58.5215652,
+      "lon": -134.7956835,
+      "name": "Eagle River Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/610-ERSC2026",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ak-eagle-river-scout-camp",
+          "end_date": "2026-07-25",
+          "fee_adult": 300,
+          "fee_youth": 500,
+          "id": "ak-eagle-river-scout-camp-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/610-ERSC2026",
+            "verified_at": "2026-07-18"
+          },
+          "registration_url": "https://scoutingevent.com/610-ERSC2026",
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/610-ERSC2026"
+    }
+  ],
   "hq_city": "Anchorage",
   "id": "council-610",
   "name": "Great Alaska Council",
