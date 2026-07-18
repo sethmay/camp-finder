@@ -20,7 +20,8 @@ from datetime import date
 import httpx
 
 from . import build as build_mod
-from . import config, enrich as enrich_mod, merge as merge_mod, registry, schema_gen, validate
+from . import config, enrich as enrich_mod, merge as merge_mod
+from . import registry, schema_gen, validate, zipcentroids
 from .geocode import geocode
 from .io import dumps_canonical, load_all_councils, save_council
 from .models import Camp, Platform
@@ -100,6 +101,12 @@ def _cmd_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_zipcentroids(_: argparse.Namespace) -> int:
+    n = zipcentroids.build()
+    print(f"zipcentroids: wrote {n} ZIP centroids to {config.WEB_DATA_DIR / 'zip-centroids.json'}")
+    return 0
+
+
 def _cmd_enrich(args: argparse.Namespace) -> int:
     n = enrich_mod.enrich(overwrite=args.overwrite)
     print(f"enrich: filled website for {n} council(s)")
@@ -173,6 +180,9 @@ def main(argv: list[str] | None = None) -> int:
     p_val.set_defaults(func=_cmd_validate)
 
     sub.add_parser("build", help="compile frontend data").set_defaults(func=_cmd_build)
+    sub.add_parser(
+        "zipcentroids", help="build zip-centroids.json from the Census gazetteer"
+    ).set_defaults(func=_cmd_zipcentroids)
 
     p_scrape = sub.add_parser("scrape", help="run platform scraper -> candidates JSON")
     p_scrape.add_argument("--council", default="all")

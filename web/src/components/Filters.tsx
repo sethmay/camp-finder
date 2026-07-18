@@ -59,6 +59,8 @@ export default function Filters({
           value={text}
           onChange={(e) => onText(e.target.value)}
           placeholder="Camp or council name"
+          data-lpignore="true"
+          autoComplete="off"
           className="cf-tap rounded-md border border-border bg-surface px-3 text-body font-normal"
         />
       </label>
@@ -73,6 +75,8 @@ export default function Filters({
             onChange={(e) => onPatch({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) || undefined })}
             placeholder="ZIP code"
             aria-label="ZIP code"
+            data-lpignore="true"
+            autoComplete="off"
             className="cf-tap w-28 rounded-md border border-border bg-surface px-3"
           />
           <select

@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.9.0 (minor) — 2026-07-17
+
+- `PENDING` Fix the distance filter: `zip-centroids.json` was a 16-ZIP placeholder, so most
+  ZIPs (e.g. 97405) resolved to nothing and the filter silently no-op'd. Add `campfinder
+  zipcentroids` (US Census ZCTA gazetteer, public domain) shipping all 33,791 ZIP centroids;
+  suppress the LastPass overlay on the ZIP/search inputs (`data-lpignore`).
+
 ## 0.8.0 (minor) — 2026-07-17
 
 - `3afc506` UI polish: fix the filter-rail date-range inputs overflowing into the results
