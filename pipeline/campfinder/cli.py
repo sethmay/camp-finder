@@ -113,9 +113,13 @@ def _cmd_scrape(args: argparse.Namespace) -> int:
         if not councils:
             print(f"no such council: {args.council}", file=sys.stderr)
             return 1
-    targets = [c for c in councils if c.platform is Platform.blackpug and c.number]
+    # Black Pug runs registration off scoutingevent.com by council number. Many councils
+    # whose CMS is Doubleknot still register there, so route both through BlackPugScraper
+    # (it returns [] when a council has no scoutingevent camp events).
+    routed = {Platform.blackpug, Platform.doubleknot}
+    targets = [c for c in councils if c.platform in routed and c.number]
     if not targets:
-        print("scrape: no Black Pug councils to scrape")
+        print("scrape: no Black Pug / Doubleknot councils to scrape")
         return 0
     candidates: list[Camp] = []
     with BlackPugScraper() as scraper:

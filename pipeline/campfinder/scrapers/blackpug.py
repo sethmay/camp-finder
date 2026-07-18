@@ -207,7 +207,7 @@ class BlackPugScraper(Scraper):
         if number is None:
             return []
         landing = self.get(f"{EVENT_BASE}/{number:03d}")
-        camps: list[Camp] = []
+        by_id: dict[str, Camp] = {}
         for url in discover_event_urls(landing.text, number):
             try:
                 page = self.get(url)
@@ -217,6 +217,14 @@ class BlackPugScraper(Scraper):
                 camp = parse_event_page(page.text, url, council.id, council.state)
             except ValueError:
                 continue  # anomalous page (bad dates/coords -> ValidationError) must not abort
-            if camp is not None:
-                camps.append(camp)
-        return camps
+            if camp is None:
+                continue
+            existing = by_id.get(camp.id)
+            if existing is None:
+                by_id[camp.id] = camp
+            else:
+                # Two events map to one camp (e.g. separate week groupings): fold sessions in.
+                seen = {s.id for s in existing.sessions}
+                existing.sessions.extend(s for s in camp.sessions if s.id not in seen)
+                existing.sessions.sort(key=lambda s: s.start_date)
+        return list(by_id.values())

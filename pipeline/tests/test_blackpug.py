@@ -95,11 +95,11 @@ def test_address_state_accepts_full_name_and_usps_code():
     assert _address_state("no state in here", "OR") == "OR"  # falls back to council state
 
 
-def _event_html(title: str, year: int) -> str:
+def _event_html(title: str, year: int, start: str = "06-21", end: str = "06-27") -> str:
     return (
         f"<html><head><title>{title}</title></head><body>"
         f"Coords: 40.0, -83.0 1 Main St, Ohio 44100 "
-        f"Week 1 Camp Sunday 06-21-{year} 1:00 PM to Saturday 06-27-{year} 9:30 AM"
+        f"Week 1 Camp Sunday {start}-{year} 1:00 PM to Saturday {end}-{year} 9:30 AM"
         "</body></html>"
     )
 
@@ -129,3 +129,28 @@ def test_scrape_isolates_a_bad_event_page(monkeypatch):
         camps = scraper.scrape(council)
     assert [c.id for c in camps] == ["oh-camp-good"]
     assert camps[0].sessions[0].start_date == date(2026, 6, 21)
+
+
+def test_scrape_dedups_camps_by_id(monkeypatch):
+    # Two events on one council that normalize to the same camp -> one camp, sessions folded.
+    from campfinder import config
+
+    monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
+    routes = {
+        "https://scoutingevent.com/999": (
+            '<a href="/999-a">Camp Good</a><a href="/999-b">Camp Good</a>'
+        ),
+        "https://scoutingevent.com/999-a": _event_html(
+            "T Council - Camp Good", 2026, "06-21", "06-27"
+        ),
+        "https://scoutingevent.com/999-b": _event_html(
+            "T Council - Camp Good", 2026, "07-05", "07-11"
+        ),
+        "https://scoutingevent.com/robots.txt": "<html>x</html>",
+    }
+    council = Council(id="council-999", name="T", number=999, state="OH")
+    with BlackPugScraper(client=_mock_client(routes)) as scraper:
+        camps = scraper.scrape(council)
+    assert len(camps) == 1
+    assert camps[0].id == "oh-camp-good"
+    assert [s.start_date for s in camps[0].sessions] == [date(2026, 6, 21), date(2026, 7, 5)]

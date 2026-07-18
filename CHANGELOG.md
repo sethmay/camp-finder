@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.6.0 (minor) — 2026-07-17
+
+- `PENDING` Route Doubleknot councils through the Black Pug scraper (their registration
+  runs on scoutingevent.com; doubleknot.com is just the CMS) + dedup camps by id per
+  council + add `scoutingevent.com` detect signature. Adds Camp Horseshoe (MD) and Camp
+  Yawgoog (RI) — dataset now spans 9 states / 23 camps.
+
 ## 0.5.0 (minor) — 2026-07-17
 
 - `b368530` Add GitHub Pages deploy (`.github/workflows/deploy.yml`) + subpath config

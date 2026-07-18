@@ -1,5 +1,189 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1286 Ridge Road Rising Sun, Maryland 21911",
+      "council_id": "council-539",
+      "features": [],
+      "id": "md-camp-horseshoe-long-term-camp",
+      "lat": 39.7177408,
+      "lon": -76.1159226,
+      "name": "Camp Horseshoe Long-term Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/539-101949",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2026-06-27",
+          "id": "md-camp-horseshoe-long-term-camp-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-101949",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-101949",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2026-07-04",
+          "id": "md-camp-horseshoe-long-term-camp-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-101949",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-101949",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2026-07-11",
+          "id": "md-camp-horseshoe-long-term-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-101949",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-101949",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2026-07-25",
+          "id": "md-camp-horseshoe-long-term-camp-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-101949",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-101949",
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2026-08-01",
+          "id": "md-camp-horseshoe-long-term-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-101949",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-101949",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2027-07-03",
+          "id": "md-camp-horseshoe-long-term-camp-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-116391",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-116391",
+          "start_date": "2027-06-27",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2027-07-10",
+          "id": "md-camp-horseshoe-long-term-camp-2027-07-04",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-116391",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-116391",
+          "start_date": "2027-07-04",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2027-07-17",
+          "id": "md-camp-horseshoe-long-term-camp-2027-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-116391",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-116391",
+          "start_date": "2027-07-11",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2027-07-24",
+          "id": "md-camp-horseshoe-long-term-camp-2027-07-18",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-116391",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-116391",
+          "start_date": "2027-07-18",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-horseshoe-long-term-camp",
+          "end_date": "2027-07-31",
+          "id": "md-camp-horseshoe-long-term-camp-2027-07-25",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/539-116391",
+            "verified_at": "2026-07-17"
+          },
+          "registration_url": "https://scoutingevent.com/539-116391",
+          "start_date": "2027-07-25",
+          "year": 2027
+        }
+      ],
+      "state": "MD",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/539-101949"
+    }
+  ],
   "hq_city": "Exton",
   "id": "council-539",
   "name": "Chester County Council",

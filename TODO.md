@@ -51,7 +51,13 @@ Key file: `pipeline/campfinder/enrich.py`. Unblocked by: a source decision.
     replaces `website_url` (with the scoutingevent URL) and `features` wholesale. Add
     method/authority precedence before scrapes overlap curated camps (demo councils are
     excluded today, so not yet exercised).
-- Doubleknot scraper + LLM long-tail extractor with review queue — §6.2, §6.3.
+- **Doubleknot — handled via Black Pug routing (0.6.0).** Most "doubleknot" councils are
+  doubleknot.com CMS but register on scoutingevent.com; scrape now routes them to
+  BlackPugScraper (got Camp Horseshoe/539, Camp Yawgoog/546). Remaining: (a) genuine
+  Doubleknot-registration councils (e.g. Three Harbors/636) whose event pages are
+  JS-rendered — would need a headless renderer; deferred. (b) reclassify these councils'
+  `platform` to blackpug via `detect --overwrite` (scoutingevent.com signature now added).
+  (c) name cleanup: strip "Long-term Camp" suffix (Camp Horseshoe). LLM long-tail — §6.3.
 - CI: **`deploy.yml` DONE (0.5.0)** — GitHub Pages project site at
   `https://sethmay.github.io/camp-finder/` (enable once: Settings -> Pages -> Source =
   GitHub Actions). Still TODO: **`refresh.yml`** scheduled scrape -> PR on data diff (§10).
