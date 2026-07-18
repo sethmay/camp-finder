@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.10.0 (minor) — 2026-07-17
 
-- `PENDING` Fill **all 235** council websites (was 95/235): `campfinder enrich` now applies
+- `a46b787` Fill **all 235** council websites (was 95/235): `campfinder enrich` now applies
   a curated `data/council-websites.json` seed (`council_id -> url`, fill-only) before the
   Wikipedia fallback, and gains `--report-missing` to list gaps. The 140
   Wikipedia-unresolvable councils were resolved by an agent-assisted `web_search` pass (14
