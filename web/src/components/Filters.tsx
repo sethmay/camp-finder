@@ -69,14 +69,17 @@ export default function Filters({
         <legend className="text-sm font-semibold text-ink">Distance</legend>
         <div className="flex gap-2">
           <input
+            type="text"
+            name="camp-zip"
             inputMode="numeric"
             maxLength={5}
             value={criteria.zip ?? ""}
             onChange={(e) => onPatch({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) || undefined })}
             placeholder="ZIP code"
             aria-label="ZIP code"
-            data-lpignore="true"
             autoComplete="off"
+            data-lpignore="true"
+            data-form-type="other"
             className="cf-tap w-28 rounded-md border border-border bg-surface px-3"
           />
           <select
