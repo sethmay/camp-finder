@@ -132,18 +132,26 @@ def test_scrape_isolates_a_bad_event_page(monkeypatch):
 
 
 def test_scrape_dedups_camps_by_id(monkeypatch):
-    # Two events on one council that normalize to the same camp -> one camp, sessions folded.
+    # Three events -> one camp: folds new sessions, drops a duplicate session id, sorts.
     from campfinder import config
 
     monkeypatch.setattr(config, "MIN_REQUEST_INTERVAL_S", 0)
     routes = {
         "https://scoutingevent.com/999": (
-            '<a href="/999-a">Camp Good</a><a href="/999-b">Camp Good</a>'
+            '<a href="/999-a">Camp Good</a>'
+            '<a href="/999-b">Camp Good</a>'
+            '<a href="/999-c">Camp Good</a>'
         ),
+        # discovered first, later week
         "https://scoutingevent.com/999-a": _event_html(
+            "T Council - Camp Good", 2026, "07-05", "07-11"
+        ),
+        # earlier week -> must sort before the first
+        "https://scoutingevent.com/999-b": _event_html(
             "T Council - Camp Good", 2026, "06-21", "06-27"
         ),
-        "https://scoutingevent.com/999-b": _event_html(
+        # duplicate of 999-a's session (same start date -> same session id) -> dropped
+        "https://scoutingevent.com/999-c": _event_html(
             "T Council - Camp Good", 2026, "07-05", "07-11"
         ),
         "https://scoutingevent.com/robots.txt": "<html>x</html>",
@@ -153,4 +161,5 @@ def test_scrape_dedups_camps_by_id(monkeypatch):
         camps = scraper.scrape(council)
     assert len(camps) == 1
     assert camps[0].id == "oh-camp-good"
+    # duplicate dropped (2 not 3) and sorted ascending
     assert [s.start_date for s in camps[0].sessions] == [date(2026, 6, 21), date(2026, 7, 5)]

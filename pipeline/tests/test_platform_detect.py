@@ -17,6 +17,9 @@ from campfinder.models import Council
 def test_signature_matches():
     assert detect_from_html('<a href="https://x.247scouting.com/e/1">reg</a>') is Platform.blackpug
     assert detect_from_html('<a href="https://scoutingevent.com/047">x</a>') is Platform.blackpug
+    # scoutingevent (registration) wins over a doubleknot CMS reference on the same page
+    m = '<a href="scoutingevent.com/047">r</a><iframe src="doubleknot.com/x">'
+    assert detect_from_html(m) is Platform.blackpug
     assert detect_from_html("<script src=blackpug.js>") is Platform.blackpug
     assert detect_from_html('<iframe src="https://doubleknot.com/x">') is Platform.doubleknot
     assert detect_from_html("register at tentaroo.com now") is Platform.tentaroo

@@ -224,6 +224,7 @@ class BlackPugScraper(Scraper):
                 by_id[camp.id] = camp
             else:
                 # Two events map to one camp (e.g. separate week groupings): fold sessions in.
+                # First-seen event wins camp-level fields (same id => same state; conflicts unobserved).
                 seen = {s.id for s in existing.sessions}
                 existing.sessions.extend(s for s in camp.sessions if s.id not in seen)
                 existing.sessions.sort(key=lambda s: s.start_date)
