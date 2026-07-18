@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.5.0 (minor) — 2026-07-17
 
-- `PENDING` Add GitHub Pages deploy (`.github/workflows/deploy.yml`) + subpath config
+- `b368530` Add GitHub Pages deploy (`.github/workflows/deploy.yml`) + subpath config
   (`base: /camp-finder`, `withBase` helper): validate + web tests gate, then publish the
   static site. Fixes base-relative data fetches and all internal links for the subpath.
 
