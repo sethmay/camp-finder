@@ -93,13 +93,13 @@ export default function Filters({
 
       <fieldset className="flex flex-col gap-2">
         <legend className="text-sm font-semibold text-ink">Weeks available</legend>
-        <div className="flex items-center gap-2">
+        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2">
           <input
             type="date"
             value={criteria.dateStart ?? ""}
             onChange={(e) => onPatch({ dateStart: e.target.value || undefined })}
             aria-label="Earliest start date"
-            className="cf-tap flex-1 rounded-md border border-border bg-surface px-3"
+            className="cf-tap w-full rounded-md border border-border bg-surface px-3"
           />
           <span className="text-muted" aria-hidden="true">–</span>
           <input
@@ -107,7 +107,7 @@ export default function Filters({
             value={criteria.dateEnd ?? ""}
             onChange={(e) => onPatch({ dateEnd: e.target.value || undefined })}
             aria-label="Latest end date"
-            className="cf-tap flex-1 rounded-md border border-border bg-surface px-3"
+            className="cf-tap w-full rounded-md border border-border bg-surface px-3"
           />
         </div>
       </fieldset>

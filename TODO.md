@@ -2,16 +2,21 @@
 
 Active queue and deferred work. Write each item to survive a clean context.
 
-## UI refinement (deferred) — live at https://sethmay.github.io/camp-finder/
+## UI refinement — live at https://sethmay.github.io/camp-finder/
 
-Site is deployed and clean; polish pass tabled. Observed so far:
-- **Map overlay clips at the top-left** — stray "…not posted / view details →" text bleeds
-  over the map's top-left corner on load (likely a marker popup / mini-CampCard positioned
-  at the origin, or z-index/overflow). See `web/src/components/MapView.tsx`.
-- General design polish: result-card spacing, "Fee not posted" treatment, filter rail
-  rhythm — review against the design spec (`.claude/handoffs/website_design/`).
-- Confirm map basemap renders on the live site (openfreemap.org tiles; showed an
-  intermittent abort under headless test) — swap tile source in `web/src/lib/map.ts` if flaky.
+Initial polish done in 0.8.0: date-range inputs no longer overflow the rail; map load-race
+hardened (data + fitBounds now apply on first load, not just after a filter change); basemap
+muted via a saturation filter. Remaining (bigger, "features down the road"):
+- **Verify map markers on the live site.** Headless software-WebGL here paints the basemap but
+  not the added circle layers, so marker rendering couldn't be confirmed locally — check the
+  deployed site. Source now carries all camp features and fitBounds runs (verified).
+- **Price-pill markers** (design §9): replace the plain circle layers with white/ink price
+  pills + primary-green hover/selected; count clusters. `web/src/components/MapView.tsx`.
+- **Popup positioning** — the "…not posted / view details →" overlay you saw at the map's
+  top-left is the marker popup; confirm/fix its anchor once markers are verified live.
+- **Custom muted basemap style** to the exact handoff palette (land #E6E2D6, water #CBD9DE,
+  ...) instead of the CSS saturation filter, in `web/src/lib/map.ts`.
+- General design-spec pass: card spacing, "Fee not posted" treatment, mobile list/map toggle.
 
 CI note (informational, not a failure): the deploy workflow logs "Node.js 20 is deprecated"
 for GitHub's own actions (checkout/setup-node/setup-python/deploy-pages); GitHub auto-forces

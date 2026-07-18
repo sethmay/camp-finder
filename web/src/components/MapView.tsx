@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { RankedCamp } from "@lib/types";
@@ -36,7 +36,7 @@ export default function MapView({
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
-  const readyRef = useRef(false);
+  const [ready, setReady] = useState(false);
   const fittedRef = useRef(false);
 
   // Init once.
@@ -123,13 +123,13 @@ export default function MapView({
         map.on("mouseleave", layer, () => (map.getCanvas().style.cursor = ""));
       }
 
-      readyRef.current = true;
+      setReady(true);
     });
 
     return () => {
       map.remove();
       mapRef.current = null;
-      readyRef.current = false;
+      setReady(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -137,7 +137,7 @@ export default function MapView({
   // Update data on result changes.
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !readyRef.current) return;
+    if (!map || !ready) return;
     const src = map.getSource(SRC) as maplibregl.GeoJSONSource | undefined;
     if (!src) return;
     const data = toGeoJSON(ranked);
@@ -148,12 +148,12 @@ export default function MapView({
       map.fitBounds(bounds, { padding: 60, maxZoom: 9, duration: 0 });
       fittedRef.current = true;
     }
-  }, [ranked]);
+  }, [ranked, ready]);
 
   // Reflect selection: recolor points + fly to the chosen camp.
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !readyRef.current) return;
+    if (!map || !ready) return;
     if (map.getLayer("point")) {
       map.setPaintProperty("point", "circle-color", [
         "case",
@@ -168,12 +168,13 @@ export default function MapView({
         map.flyTo({ center: [hit.camp.lon, hit.camp.lat], zoom: Math.max(map.getZoom(), 8) });
       }
     }
-  }, [selectedId, ranked]);
+  }, [selectedId, ranked, ready]);
 
   return (
     <div
       ref={containerRef}
       className="h-full w-full rounded-md"
+      style={{ filter: "saturate(0.62) brightness(1.03)" }}
       role="application"
       aria-label="Map of matching camps. A full list of the same camps is shown alongside."
     />
