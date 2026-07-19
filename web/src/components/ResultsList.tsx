@@ -34,10 +34,7 @@ export default function ResultsList({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center justify-between gap-3">
-        <p className="text-sm text-muted" role="status" aria-live="polite">
-          {ranked.length} {ranked.length === 1 ? "camp" : "camps"}
-        </p>
+      <div className="flex items-center justify-end gap-3">
         <label className="flex items-center gap-2 text-sm text-muted">
           Sort
           <select
