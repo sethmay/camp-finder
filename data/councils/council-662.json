@@ -1,5 +1,80 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1518 Worth Ranch Road",
+      "city": "Palo Pinto",
+      "council_id": "council-662",
+      "description": "Longhorn Council's traditional Scouts BSA resident summer camp since 1929, 60 miles west of Fort Worth on the Brazos River; climbing gardens, river aquatics, two pools, hiking Kyle Mountain, and an ATV program.",
+      "features": [],
+      "id": "tx-worth-ranch",
+      "lat": 32.815982,
+      "lon": -98.316739,
+      "name": "Worth Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://scoutingevent.com/662-WRSummerCamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-worth-ranch",
+          "end_date": "2026-06-13",
+          "id": "tx-worth-ranch-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/662-WRSummerCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-worth-ranch",
+          "end_date": "2026-06-20",
+          "id": "tx-worth-ranch-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/662-WRSummerCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-worth-ranch",
+          "end_date": "2026-06-27",
+          "id": "tx-worth-ranch-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/662-WRSummerCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/662-WRSummerCamp2026"
+    }
+  ],
   "hq_city": "Hurst",
   "id": "council-662",
   "name": "Longhorn Council",

@@ -1,5 +1,122 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "142 Scout Camp Road",
+      "city": "Whitesburg",
+      "council_id": "council-713",
+      "description": "Sequoyah Council's Scouts BSA resident summer camp on 1,865 acres in the foothills of the Great Smoky Mountains on Cherokee Lake; 50+ merit badges, Frontier Camp living history, COPE/climbing, aquatics, and horsemanship.",
+      "features": [],
+      "id": "tn-camp-davy-crockett",
+      "lat": 36.3,
+      "lon": -83.3,
+      "name": "Camp Davy Crockett",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-davy-crockett",
+          "end_date": "2026-06-13",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "tn-camp-davy-crockett-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-davy-crockett",
+          "end_date": "2026-06-20",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "tn-camp-davy-crockett-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-davy-crockett",
+          "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "tn-camp-davy-crockett-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-davy-crockett",
+          "end_date": "2026-07-04",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "tn-camp-davy-crockett-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-davy-crockett",
+          "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 385,
+          "id": "tn-camp-davy-crockett-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://campdavycrockett.org/scouts-bsa-summer-camp/"
+    }
+  ],
   "hq_city": "Johnson City",
   "id": "council-713",
   "name": "Sequoyah Council",

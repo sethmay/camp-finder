@@ -1,6 +1,81 @@
 {
   "camps": [
     {
+      "address": "22700 Camp Gorsuch Road",
+      "city": "Chugiak",
+      "council_id": "council-610",
+      "description": "Great Alaska Council's traditional Scouts BSA resident summer camp on Mirror Lake at the Rasmuson Scout Reservation, offering merit badges plus Project C.O.P.E. and a climbing tower.",
+      "features": [],
+      "id": "ak-camp-gorsuch",
+      "lat": 61.427217832452,
+      "lon": -149.407162629386,
+      "name": "Camp Gorsuch",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://scoutingalaska.org/camping/camp-gorsuch/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ak-camp-gorsuch",
+          "end_date": "2026-06-18",
+          "id": "ak-camp-gorsuch-2026-06-14",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingalaska.org/camping/camp-gorsuch/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ak-camp-gorsuch",
+          "end_date": "2026-06-26",
+          "id": "ak-camp-gorsuch-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingalaska.org/camping/camp-gorsuch/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ak-camp-gorsuch",
+          "end_date": "2026-07-03",
+          "id": "ak-camp-gorsuch-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingalaska.org/camping/camp-gorsuch/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://scoutingalaska.org/camping/camp-gorsuch/"
+    },
+    {
       "address": "Herbert River Rd 30 miles outside of town between mile markers 26/27 Juneau, Alaska 99801",
       "council_id": "council-610",
       "features": [],
@@ -40,6 +115,31 @@
       "state": "AK",
       "status": "active",
       "website_url": "https://scoutingevent.com/610-ERSC2026"
+    },
+    {
+      "address": "Lost Lake Road, Richardson Highway",
+      "city": "Fairbanks",
+      "council_id": "council-610",
+      "description": "Scouts BSA resident camp and Northern Lights High Adventure Base on 600+ acres south of Fairbanks (Great Alaska Council, legacy Midnight Sun Council). No 2026 session dates/fees cleanly published.",
+      "features": [],
+      "id": "ak-lost-lake-scout-camp",
+      "lat": 64.2,
+      "lon": -146.4,
+      "name": "Lost Lake Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://www.midnightsunbsa.org/lost-lake-scout-camp/lost-lake-scout-camp.html",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://www.midnightsunbsa.org/lost-lake-scout-camp/lost-lake-scout-camp.html"
     }
   ],
   "hq_city": "Anchorage",

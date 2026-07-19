@@ -460,7 +460,7 @@
       "address": "880 E Sutton Road",
       "city": "Metamora",
       "council_id": "council-272",
-      "description": "Michigan Crossroads Council 1,700-acre ranch north of Detroit; Ranch Hand resident program.",
+      "description": "1,700-acre Michigan Crossroads Council ranch north of Detroit. No longer runs a traditional Scouts BSA summer resident camp (hosts other scouting events); it is MCC's only site offering the Horsemanship merit badge.",
       "features": [],
       "id": "mi-d-bar-a-scout-ranch",
       "lat": 42.948,
@@ -476,44 +476,9 @@
         "source_url": "https://michiganscouting.org/camping/properties/d-bar-a-scout-ranch/",
         "verified_at": "2026-07-17"
       },
-      "sessions": [
-        {
-          "availability": "unknown",
-          "camp_id": "mi-d-bar-a-scout-ranch",
-          "end_date": "2026-07-04",
-          "fee_youth": 530,
-          "id": "mi-d-bar-a-scout-ranch-2026-06-28",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 0.6,
-            "method": "llm_extraction",
-            "notes": "agent-extracted from council website (program-cats pass)",
-            "source_url": "https://michiganscouting.org/camping/properties/d-bar-a-scout-ranch/",
-            "verified_at": "2026-07-17"
-          },
-          "start_date": "2026-06-28",
-          "year": 2026
-        },
-        {
-          "availability": "unknown",
-          "camp_id": "mi-d-bar-a-scout-ranch",
-          "end_date": "2026-07-11",
-          "fee_youth": 530,
-          "id": "mi-d-bar-a-scout-ranch-2026-07-05",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 0.6,
-            "method": "llm_extraction",
-            "notes": "agent-extracted from council website (program-cats pass)",
-            "source_url": "https://michiganscouting.org/camping/properties/d-bar-a-scout-ranch/",
-            "verified_at": "2026-07-17"
-          },
-          "start_date": "2026-07-05",
-          "year": 2026
-        }
-      ],
+      "sessions": [],
       "state": "MI",
-      "status": "active",
+      "status": "not_operating",
       "website_url": "https://michiganscouting.org/camping/properties/d-bar-a-scout-ranch/"
     },
     {

@@ -1,5 +1,182 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "23516 S ID-97",
+      "city": "Harrison",
+      "council_id": "council-611",
+      "description": "Inland Northwest Council's Scouts BSA resident summer camp on the shore of Lake Coeur d'Alene, offering week-long sessions with a wide merit-badge program including SCUBA.",
+      "features": [],
+      "id": "id-camp-easton",
+      "lat": 47.6025876,
+      "lon": -116.7757634,
+      "name": "Camp Easton",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-easton",
+          "end_date": "2026-07-11",
+          "fee_adult": 310,
+          "fee_youth": 560,
+          "id": "id-camp-easton-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-easton",
+          "end_date": "2026-07-18",
+          "fee_adult": 310,
+          "fee_youth": 560,
+          "id": "id-camp-easton-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-easton",
+          "end_date": "2026-07-25",
+          "fee_adult": 310,
+          "fee_youth": 560,
+          "id": "id-camp-easton-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-easton",
+          "end_date": "2026-08-01",
+          "fee_adult": 310,
+          "fee_youth": 560,
+          "id": "id-camp-easton-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-easton",
+          "end_date": "2026-08-08",
+          "fee_adult": 310,
+          "fee_youth": 560,
+          "id": "id-camp-easton-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-2026_EastonSummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-02",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/611-2026_EastonSummerCamp"
+    },
+    {
+      "address": "1101 Palouse River Rd",
+      "city": "Harvard",
+      "council_id": "council-611",
+      "description": "Inland Northwest Council's historic Scouts BSA resident summer camp on the Palouse River in the Hoodoo Mountains, featuring six shooting-sports ranges and the Eagle's Nest new-Scout program.",
+      "features": [],
+      "id": "id-camp-grizzly",
+      "lat": 46.944339416469,
+      "lon": -116.661258661248,
+      "name": "Camp Grizzly",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://scoutingevent.com/611-26GrizzlySummerCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-grizzly",
+          "end_date": "2026-07-18",
+          "id": "id-camp-grizzly-2026-07-15",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-26CubCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-grizzly",
+          "end_date": "2026-08-01",
+          "fee_youth": 500,
+          "id": "id-camp-grizzly-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/611-26GrizzlySummerCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/611-26GrizzlySummerCamp"
+    }
+  ],
   "hq_city": "Spokane",
   "id": "council-611",
   "name": "Inland Northwest Council",

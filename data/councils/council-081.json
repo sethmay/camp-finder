@@ -1,6 +1,48 @@
 {
   "camps": [
     {
+      "address": "1910 Baden Powell Way",
+      "city": "Dover",
+      "council_id": "council-081",
+      "description": "Del-Mar-Va Council Cub Scout day camp at the 85-acre lakeside Akridge Scout Reservation in Dover, DE (grades 1-5): nature, sports, aquatics, crafts, and shooting sports. Akridge also hosts weekend camping and rentals year-round.",
+      "features": [],
+      "id": "de-akridge-scout-reservation",
+      "lat": 39.129160237811,
+      "lon": -75.548081443295,
+      "name": "Akridge Scout Reservation",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://scoutingevent.com/081-ASRDayCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "de-akridge-scout-reservation",
+          "end_date": "2026-07-31",
+          "id": "de-akridge-scout-reservation-2026-07-27",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://scoutingevent.com/081-ASRDayCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-27",
+          "year": 2026
+        }
+      ],
+      "state": "DE",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/081-ASRDayCamp"
+    },
+    {
       "address": "5700 Nanticoke Rd Rhodesdale, Maryland 21659",
       "council_id": "council-081",
       "features": [],
