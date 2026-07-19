@@ -1,5 +1,80 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Camp Bartlett Road",
+      "city": "Montpelier",
+      "council_id": "council-590",
+      "description": "Crossroads of the West Council's resident camp in Idaho's Bear Lake Valley near Montpelier; 50+ campsites around a stocked lake, with swimming, paddling, range sports, climbing, and slacklining. 2026 offers 3- and 4-day youth camps.",
+      "features": [],
+      "id": "id-camp-bartlett",
+      "lat": 42.3,
+      "lon": -111.4,
+      "name": "Camp Bartlett",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://www.utahscouts.org/bartlett",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-bartlett",
+          "end_date": "2026-06-10",
+          "id": "id-camp-bartlett-2026-06-08",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.utahscouts.org/bartlett",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-08",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-bartlett",
+          "end_date": "2026-06-13",
+          "id": "id-camp-bartlett-2026-06-10",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.utahscouts.org/bartlett",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-camp-bartlett",
+          "end_date": "2026-06-17",
+          "id": "id-camp-bartlett-2026-06-15",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.utahscouts.org/bartlett",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://www.utahscouts.org/bartlett"
+    }
+  ],
   "hq_city": "Ogden",
   "id": "council-590",
   "name": "Crossroads of the West Council",

@@ -49,6 +49,176 @@
       "state": "NM",
       "status": "active",
       "website_url": "https://www.philmontscoutranch.org/"
+    },
+    {
+      "address": "2550 Jack Furst Drive",
+      "city": "Glen Jean",
+      "council_id": "council-999",
+      "description": "Week-long Scouts BSA/Venturing resident camp at the Summit Bechtel Reserve; 70+ merit badges, the Brownsea first-year program, and access to high-adventure venues (whitewater, ziplining, BMX, mountain biking). Dates shown are the currently-published 2027 season ($480/person).",
+      "features": [],
+      "id": "wv-james-c-justice-national-scout-camp",
+      "lat": 37.9159909,
+      "lon": -81.1230247,
+      "name": "James C. Justice National Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://www.summitbsa.org/scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-06-12",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-06-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-06",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-06-19",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-06-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-13",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-06-26",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-20",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-07-03",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-27",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-07-10",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-07-04",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-04",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-07-17",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-11",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-07-24",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-07-18",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-18",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wv-james-c-justice-national-scout-camp",
+          "end_date": "2027-07-31",
+          "fee_adult": 480,
+          "fee_youth": 480,
+          "id": "wv-james-c-justice-national-scout-camp-2027-07-25",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.summitbsa.org/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-25",
+          "year": 2027
+        }
+      ],
+      "state": "WV",
+      "status": "active",
+      "website_url": "https://www.summitbsa.org/scout-camp/"
     }
   ],
   "hq_city": "Irving",

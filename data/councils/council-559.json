@@ -1,5 +1,85 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "455 Camp Mack Morris Rd",
+      "city": "Camden",
+      "council_id": "council-559",
+      "description": "West Tennessee Area Council's Scouts BSA resident summer camp on ~500 acres on the Tennessee River (Birdsong Creek); shooting sports, COPE/climbing, aquatics, merit badges, and a First Year Camper program.",
+      "features": [],
+      "id": "tn-camp-mack-morris",
+      "lat": 35.969630559712,
+      "lon": -88.067116989527,
+      "name": "Camp Mack Morris",
+      "program_types": [
+        "scouts_bsa_resident",
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://www.westtnscouts.org/cmm",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-mack-morris",
+          "end_date": "2026-06-13",
+          "fee_adult": 100,
+          "fee_youth": 310,
+          "id": "tn-camp-mack-morris-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.westtnscouts.org/cmm",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-mack-morris",
+          "end_date": "2026-06-20",
+          "fee_adult": 100,
+          "fee_youth": 310,
+          "id": "tn-camp-mack-morris-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.westtnscouts.org/cmm",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-mack-morris",
+          "end_date": "2026-06-21",
+          "id": "tn-camp-mack-morris-2026-06-20",
+          "program_type": "webelos",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.westtnscouts.org/cmm",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-20",
+          "year": 2026
+        }
+      ],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://www.westtnscouts.org/cmm"
+    }
+  ],
   "hq_city": "Jackson",
   "id": "council-559",
   "name": "West Tennessee Area Council",

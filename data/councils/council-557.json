@@ -1,5 +1,112 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "373 Camp Buck Toms Rd",
+      "city": "Rockwood",
+      "council_id": "council-557",
+      "description": "Great Smoky Mountain Council's Scouts BSA resident summer camp on a cove of Watts Bar Lake; Dan Beard first-year program, high adventure, and 50+ merit badges. (Dates shown are the currently-published 2027 weeks; 2026 fees not posted.)",
+      "features": [],
+      "id": "tn-camp-buck-toms",
+      "lat": 35.7807376,
+      "lon": -84.6847142,
+      "name": "Camp Buck Toms",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://easttnscouts.org/summercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-buck-toms",
+          "end_date": "2027-06-05",
+          "id": "tn-camp-buck-toms-2027-05-30",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://easttnscouts.org/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-05-30",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-buck-toms",
+          "end_date": "2027-06-12",
+          "id": "tn-camp-buck-toms-2027-06-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://easttnscouts.org/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-06",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-buck-toms",
+          "end_date": "2027-06-19",
+          "id": "tn-camp-buck-toms-2027-06-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://easttnscouts.org/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-13",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-buck-toms",
+          "end_date": "2027-06-26",
+          "id": "tn-camp-buck-toms-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://easttnscouts.org/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-20",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-camp-buck-toms",
+          "end_date": "2027-07-03",
+          "id": "tn-camp-buck-toms-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://easttnscouts.org/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-27",
+          "year": 2027
+        }
+      ],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://easttnscouts.org/summercamp/"
+    }
+  ],
   "hq_city": "Knoxville",
   "id": "council-557",
   "name": "Great Smoky Mountain Council",

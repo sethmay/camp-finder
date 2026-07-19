@@ -1,9 +1,9 @@
 {
-  "build_time": "2026-07-19T22:56:29+00:00",
-  "camp_count": 174,
+  "build_time": "2026-07-19T23:44:24+00:00",
+  "camp_count": 186,
   "council_count": 236,
   "dead_link_count": 0,
-  "session_count": 684,
+  "session_count": 728,
   "states_covered": [
     "AK",
     "AL",
@@ -15,6 +15,7 @@
     "DE",
     "FL",
     "GA",
+    "HI",
     "ID",
     "IL",
     "IN",
@@ -46,6 +47,7 @@
     "VT",
     "WA",
     "WI",
+    "WV",
     "WY"
   ],
   "upcoming_summer_year": 2026

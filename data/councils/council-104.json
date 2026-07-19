@@ -1,5 +1,69 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "59-780 Pupukea Road",
+      "city": "Haleiwa",
+      "council_id": "council-104",
+      "description": "Aloha Council's flagship Scouts BSA resident camp on the North Shore of Oahu; three weeks of long-term troop-cook summer camp. In-council registered adult leaders attend free.",
+      "features": [],
+      "id": "hi-camp-pupukea",
+      "lat": 21.6456838,
+      "lon": -158.046301,
+      "name": "Camp Pupukea",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://scoutingevent.com/104-summercamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "hi-camp-pupukea",
+          "end_date": "2026-07-11",
+          "fee_adult": 0,
+          "fee_youth": 450,
+          "id": "hi-camp-pupukea-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://scoutingevent.com/104-summercamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "hi-camp-pupukea",
+          "end_date": "2026-07-25",
+          "fee_adult": 0,
+          "fee_youth": 450,
+          "id": "hi-camp-pupukea-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://scoutingevent.com/104-summercamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "HI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/104-summercamp2026"
+    }
+  ],
   "hq_city": "Honolulu",
   "id": "council-104",
   "name": "Aloha Council",
