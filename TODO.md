@@ -2,6 +2,32 @@
 
 Active queue and deferred work. Write each item to survive a clean context.
 
+## External data sources (Reddit feedback, 2026-07-18)
+
+- **`scoutingevent.com/Global` (`indexMap.php`) — HIGH VALUE, robots-clear, easily scraped.**
+  One static page server-renders all **235 councils** as `createMarker(lat,lon,name,campID,managed,
+  orgKey,council,website)` calls (regex-parse, no JS needed; robots.txt is empty). Gives, authoritatively
+  from Black Pug itself: exact **orgKey** per council, a **"managed" flag** (166 councils register on
+  Black Pug vs our `detect`'s 124 — ~42 more scrapable via the WORKING scraper), council **websites**
+  (49/224 differ from our agent seed — theirs is higher authority), and HQ **coords**. Actions: (a) re-run
+  Black Pug against the 166 managed councils — likely unlocks real sessions/fees for councils we
+  agent-extracted (e.g. 85/92/98) or left empty; (b) reconcile platform classification from the managed
+  flag instead of HTML `detect`; (c) correct council websites from this list; (d) HQ-coord fallback.
+- **`usscouts.org` Online Camp Database (scoutcamp.org) — do NOT scrape.** 1416 camps (363 with
+  lat/lon), crowdsourced, server-rendered — BUT `robots.txt` **disallows `/databases/`**, so it's
+  off-limits to our (robots-respecting) pipeline. No sessions/fees (inventory only), mixed camp types,
+  volunteer-maintained (staleness). Use only as a manual reference, or email the admin for
+  permission/a data dump. It's also a crowdsourcing precedent (see below).
+
+## Crowdsourcing (PARKED — design discussed 2026-07-18)
+
+Let users add/correct camp info; leverage the Reddit BSA community. Fits our model (there's already a
+`community` provenance method + `data/.review/` queue + a "Suggest a correction" link). Preserve identity:
+never auto-publish (human/agent review), keep every fact source-linked. Intake options: Tier 1 GitHub
+Issue Forms + agent triage->PR (recommended, $0, no backend); Tier 2 hosted form (Google/Tally); Tier 3
+in-site backend (breaks no-backend principle). Open decisions: intake channel, require council-page URL,
+precedence (council-verified > community > scraped > llm), attribution. Resume when ready to scope.
+
 ## UI refinement — live at https://sethmay.github.io/camp-finder/
 
 Initial polish done in 0.8.0: date-range inputs no longer overflow the rail; map load-race
