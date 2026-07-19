@@ -4,6 +4,7 @@ import FeatureChip from "../../components/FeatureChip";
 import AvailabilityBadge from "../../components/AvailabilityBadge";
 import ProvenanceBadge from "../../components/ProvenanceBadge";
 import StaleBadge from "../../components/StaleBadge";
+import CampLocationMap from "../../components/CampLocationMap";
 import { formatDateRange, formatFee, isStale } from "../../lib/format";
 import type { Camp } from "../../lib/types";
 import { withBase } from "@lib/paths";
@@ -24,22 +25,30 @@ const stale = isStale(camp.verified_at);
     <a href={withBase("/")} class="text-sm text-primary">← Back to search</a>
 
     <header class="mt-4">
-      <div class="flex flex-wrap items-start justify-between gap-3">
+      <h1 class="font-display text-h1 text-ink">{camp.name}</h1>
+      <div class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,340px)] lg:items-start">
         <div>
-          <h1 class="font-display text-h1 text-ink">{camp.name}</h1>
-          <p class="mt-1 text-body text-muted">{camp.council_name} · {location}</p>
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <p class="text-body text-muted">{camp.council_name} · {location}</p>
+            <StaleBadge verifiedAt={camp.verified_at} />
+          </div>
+          <a
+            href={camp.website_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cf-tap mt-4 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
+          >
+            Visit official council page →
+          </a>
         </div>
-        <StaleBadge verifiedAt={camp.verified_at} />
+        {
+          camp.lat != null && camp.lon != null && (
+            <div class="h-64 overflow-hidden rounded-md border border-border">
+              <CampLocationMap client:visible lat={camp.lat} lon={camp.lon} name={camp.name} />
+            </div>
+          )
+        }
       </div>
-
-      <a
-        href={camp.website_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="cf-tap mt-4 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
-      >
-        Visit official council page →
-      </a>
     </header>
 
     {

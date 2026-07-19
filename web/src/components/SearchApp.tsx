@@ -24,7 +24,7 @@ export default function SearchApp() {
   const [error, setError] = useState(false);
   const [ui, setUi] = useState<UiState>(EMPTY);
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [mobileView, setMobileView] = useState<"list" | "map">("list");
+  const [view, setView] = useState<"list" | "map">("map");
   const [showFilters, setShowFilters] = useState(false);
   const centroidsRef = useRef<Map<string, Centroid> | null>(null);
 
@@ -117,48 +117,53 @@ export default function SearchApp() {
   );
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-4">
-      <div className="grid gap-6 lg:grid-cols-[264px_minmax(0,1fr)_470px]">
+      <div className="grid gap-6 lg:grid-cols-[264px_minmax(0,1fr)]">
         {/* Desktop filter rail */}
         <aside className="hidden lg:block">
           <div className="sticky top-20">{filtersEl}</div>
         </aside>
 
-        {/* Results */}
         <section aria-label="Search results">
-          {/* Mobile controls */}
-          <div className="mb-3 flex items-center gap-2 lg:hidden">
+          {/* Controls: filters (mobile), result count, and the view toggle (all breakpoints) */}
+          <div className="mb-3 flex items-center gap-3">
             <button
               type="button"
               onClick={() => setShowFilters(true)}
-              className="cf-tap inline-flex items-center gap-2 rounded-md border border-border bg-surface px-3 font-semibold"
+              className="cf-tap inline-flex items-center gap-2 rounded-md border border-border bg-surface px-3 font-semibold lg:hidden"
             >
               <SlidersHorizontal size={16} aria-hidden="true" /> Filters
             </button>
+            {!loading && (
+              <p className="text-sm text-muted" role="status" aria-live="polite">
+                {ranked.length} {ranked.length === 1 ? "camp" : "camps"}
+              </p>
+            )}
             <div className="ml-auto inline-flex rounded-md border border-border bg-surface p-0.5">
               <button
                 type="button"
-                onClick={() => setMobileView("list")}
-                aria-pressed={mobileView === "list"}
+                onClick={() => setView("map")}
+                aria-pressed={view === "map"}
                 className={`cf-tap inline-flex items-center gap-1 rounded px-3 text-sm font-semibold ${
-                  mobileView === "list" ? "bg-primary text-surface" : "text-muted"
-                }`}
-              >
-                <ListIcon size={16} aria-hidden="true" /> List
-              </button>
-              <button
-                type="button"
-                onClick={() => setMobileView("map")}
-                aria-pressed={mobileView === "map"}
-                className={`cf-tap inline-flex items-center gap-1 rounded px-3 text-sm font-semibold ${
-                  mobileView === "map" ? "bg-primary text-surface" : "text-muted"
+                  view === "map" ? "bg-primary text-surface" : "text-muted"
                 }`}
               >
                 <MapIcon size={16} aria-hidden="true" /> Map
               </button>
+              <button
+                type="button"
+                onClick={() => setView("list")}
+                aria-pressed={view === "list"}
+                className={`cf-tap inline-flex items-center gap-1 rounded px-3 text-sm font-semibold ${
+                  view === "list" ? "bg-primary text-surface" : "text-muted"
+                }`}
+              >
+                <ListIcon size={16} aria-hidden="true" /> List
+              </button>
             </div>
           </div>
 
-          <div className={mobileView === "map" ? "hidden lg:block" : "block"}>
+          {/* List view */}
+          <div className={view === "list" ? "block" : "hidden"}>
             <ResultsList
               ranked={ranked}
               selectedId={selectedId}
@@ -171,18 +176,13 @@ export default function SearchApp() {
             />
           </div>
 
-          {/* Mobile map */}
-          <div className={mobileView === "map" ? "block h-[70vh] lg:hidden" : "hidden"}>
-            <MapView ranked={ranked} selectedId={selectedId} onSelect={setSelectedId} />
+          {/* Map view */}
+          <div className={view === "map" ? "block" : "hidden"}>
+            <div className="h-[70vh] rounded-md lg:sticky lg:top-20 lg:h-[calc(100vh-9rem)]">
+              <MapView ranked={ranked} selectedId={selectedId} onSelect={setSelectedId} />
+            </div>
           </div>
         </section>
-
-        {/* Desktop sticky map */}
-        <aside className="hidden lg:block">
-          <div className="sticky top-20 h-[calc(100vh-6rem)]">
-            <MapView ranked={ranked} selectedId={selectedId} onSelect={setSelectedId} />
-          </div>
-        </aside>
       </div>
 
       {/* Mobile filter sheet */}
