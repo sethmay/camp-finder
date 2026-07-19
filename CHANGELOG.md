@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.17.0 (minor) — 2026-07-19
+
+- `706ceb7` Add **15 community-suggested camps** (+51 sessions across 12 councils) from the r/BSA
+  thread — Camp Gorsuch (AK), Camp Easton/Camp Grizzly (ID), Camp Bud Schiele (NC), Camp Davy Crockett
+  (TN), H. Roe Bartle + Theodore Naish (Heart of America), Camp Arrowhead (Ozark Trails), Camp La-No-Che
+  (FL), Worth Ranch (Longhorn/TX), Camp Liberty (Laurel Highlands), Goose Pond (NE PA), Akridge day camp
+  (DE), Ventura County Cub day camp (CA), Lost Lake (AK). **Corrections:** D-bar-A Scout Ranch (272) →
+  `not_operating` (no summer resident camp; per community); Camp Three Falls excluded (sold Nov 2024);
+  Camp Catoctin excluded (not a BAC summer camp); Camp Liberty supersedes the generic Heritage SBSA entry.
+  Camp count 160 → 173, sessions 635 → 678. Full r/BSA cross-check logged in
+  `data/.review/community-suggested-camps.md`.
+
 ## 0.16.0 (minor) — 2026-07-19
 
 - `4f5cc34` Add **program categories** (Scouts BSA / Cub Scout / High Adventure): surface the
