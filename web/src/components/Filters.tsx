@@ -1,12 +1,13 @@
 import { X } from "lucide-react";
-import type { Feature } from "@lib/types";
-import { FEATURE_LABEL } from "@lib/format";
+import type { Feature, ProgramCategory } from "@lib/types";
+import { FEATURE_LABEL, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import type { UiState } from "@lib/searchParams";
 
 type CriteriaPatch = Partial<UiState["criteria"]>;
 
 const RADII = [25, 50, 100, 150, 250];
 const ALL_FEATURES = Object.keys(FEATURE_LABEL) as Feature[];
+const ALL_CATEGORIES = Object.keys(PROGRAM_CATEGORY_LABEL) as ProgramCategory[];
 
 export default function Filters({
   criteria,
@@ -28,6 +29,13 @@ export default function Filters({
     onPatch({
       features: features.includes(f) ? features.filter((x) => x !== f) : [...features, f],
     });
+  const categories = criteria.categories ?? [];
+  const toggleCategory = (cat: ProgramCategory) =>
+    onPatch({
+      categories: categories.includes(cat)
+        ? categories.filter((x) => x !== cat)
+        : [...categories, cat],
+    });
 
   const activeCount =
     (criteria.zip ? 1 : 0) +
@@ -35,6 +43,7 @@ export default function Filters({
     (criteria.maxCost !== undefined ? 1 : 0) +
     (criteria.state ? 1 : 0) +
     features.length +
+    categories.length +
     (text ? 1 : 0);
 
   return (
@@ -152,7 +161,31 @@ export default function Filters({
       </label>
 
       <fieldset className="flex flex-col gap-2">
-        <legend className="text-sm font-semibold text-ink">Program &amp; features</legend>
+        <legend className="text-sm font-semibold text-ink">Program</legend>
+        <div className="flex flex-wrap gap-1.5">
+          {ALL_CATEGORIES.map((cat) => {
+            const on = categories.includes(cat);
+            return (
+              <button
+                key={cat}
+                type="button"
+                aria-pressed={on}
+                onClick={() => toggleCategory(cat)}
+                className={`rounded-pill border px-3 py-1.5 text-xs font-medium transition ${
+                  on
+                    ? "border-primary bg-primary text-surface"
+                    : "border-border bg-surface text-ink hover:border-primary"
+                }`}
+              >
+                {PROGRAM_CATEGORY_LABEL[cat]}
+              </button>
+            );
+          })}
+        </div>
+      </fieldset>
+
+      <fieldset className="flex flex-col gap-2">
+        <legend className="text-sm font-semibold text-ink">Features</legend>
         <div className="flex flex-wrap gap-1.5">
           {ALL_FEATURES.map((f) => {
             const on = features.includes(f);

@@ -1,6 +1,365 @@
 {
   "camps": [
     {
+      "address": "Rhodes France Scout Reservation",
+      "city": "Pana",
+      "council_id": "council-312",
+      "description": "Overnight Cub Scout resident adventure camp at Rhodes France Scout Reservation.",
+      "features": [],
+      "id": "il-rfsr-cub-scout-adventure-camp",
+      "name": "RFSR Cub Scout Adventure Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-rfsr-cub-scout-adventure-camp",
+          "end_date": "2026-07-12",
+          "id": "il-rfsr-cub-scout-adventure-camp-2026-07-09",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-09",
+          "year": 2026
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/"
+    },
+    {
+      "address": "Rhodes France Scout Reservation",
+      "city": "Pana",
+      "council_id": "council-312",
+      "description": "Greater St. Louis Area Council dining-hall Scouts BSA summer camp in central Illinois.",
+      "features": [],
+      "id": "il-rhodes-france-scout-reservation",
+      "name": "Rhodes France Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-rhodes-france-scout-reservation",
+          "end_date": "2027-06-19",
+          "id": "il-rhodes-france-scout-reservation-2027-06-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-13",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-rhodes-france-scout-reservation",
+          "end_date": "2027-06-26",
+          "id": "il-rhodes-france-scout-reservation-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-20",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-rhodes-france-scout-reservation",
+          "end_date": "2027-07-03",
+          "id": "il-rhodes-france-scout-reservation-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-27",
+          "year": 2027
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
+    },
+    {
+      "address": "Camp Lewallen",
+      "city": "Silva",
+      "council_id": "council-312",
+      "description": "Greater St. Louis Area Council Scouts BSA summer camp in the Ozark Plateau along the St. Francis River.",
+      "features": [],
+      "id": "mo-camp-lewallen",
+      "lat": 37.13,
+      "lon": -90.47,
+      "name": "Camp Lewallen",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-lewallen",
+          "end_date": "2027-07-17",
+          "id": "mo-camp-lewallen-2027-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-11",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-lewallen",
+          "end_date": "2027-07-24",
+          "id": "mo-camp-lewallen-2027-07-18",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-18",
+          "year": 2027
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
+    },
+    {
+      "address": "Camp May, Beaumont Scout Reservation",
+      "city": "High Ridge",
+      "council_id": "council-312",
+      "description": "Overnight Cub Scout advancement resident camp (Wolf and Bear) at Camp May.",
+      "features": [],
+      "id": "mo-cub-scout-advancement-camp-at-camp-may",
+      "name": "Cub Scout Advancement Camp at Camp May",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-cub-scout-advancement-camp-at-camp-may",
+          "end_date": "2026-06-16",
+          "fee_adult": 85,
+          "fee_youth": 95,
+          "id": "mo-cub-scout-advancement-camp-at-camp-may-2026-06-15",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-cub-scout-advancement-camp-at-camp-may",
+          "end_date": "2026-06-23",
+          "fee_adult": 85,
+          "fee_youth": 95,
+          "id": "mo-cub-scout-advancement-camp-at-camp-may-2026-06-22",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-cub-scout-advancement-camp-at-camp-may",
+          "end_date": "2026-06-30",
+          "fee_adult": 85,
+          "fee_youth": 95,
+          "id": "mo-cub-scout-advancement-camp-at-camp-may-2026-06-29",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-29",
+          "year": 2026
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/cub-scout-overnight-camps/"
+    },
+    {
+      "address": "Beaumont Scout Reservation",
+      "city": "High Ridge",
+      "council_id": "council-312",
+      "description": "Cub Scout day camp at Beaumont Scout Reservation.",
+      "features": [],
+      "id": "mo-grizzly-day-camp",
+      "lat": 38.42,
+      "lon": -90.63,
+      "name": "Grizzly Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-grizzly-day-camp",
+          "end_date": "2026-07-10",
+          "fee_youth": 125,
+          "id": "mo-grizzly-day-camp-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-grizzly-day-camp",
+          "end_date": "2026-07-17",
+          "fee_youth": 125,
+          "id": "mo-grizzly-day-camp-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-grizzly-day-camp",
+          "end_date": "2026-07-24",
+          "fee_youth": 125,
+          "id": "mo-grizzly-day-camp-2026-07-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-grizzly-day-camp",
+          "end_date": "2026-07-31",
+          "fee_youth": 125,
+          "id": "mo-grizzly-day-camp-2026-07-27",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-grizzly-day-camp",
+          "end_date": "2026-08-07",
+          "fee_youth": 125,
+          "id": "mo-grizzly-day-camp-2026-08-03",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/cub-scout-day-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-03",
+          "year": 2026
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/cub-scout-day-camps/"
+    },
+    {
       "address": "6480 Beaumont Scout Reservation High Ridge, Missouri 63049",
       "council_id": "council-312",
       "features": [],
@@ -40,6 +399,64 @@
       "state": "MO",
       "status": "active",
       "website_url": "https://scoutingevent.com/312-horse26"
+    },
+    {
+      "address": "S-F Scout Ranch",
+      "city": "Knob Lick",
+      "council_id": "council-312",
+      "description": "Week-long backcountry backpacking trek across the S-F Scout Ranch (age 14+).",
+      "features": [],
+      "id": "mo-s-f-ranger-program",
+      "lat": 37.6480085,
+      "lon": -90.3486169,
+      "name": "S-F Ranger Program",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-ranger-program",
+          "end_date": "2026-06-26",
+          "id": "mo-s-f-ranger-program-2026-06-21",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-ranger-program",
+          "end_date": "2026-07-10",
+          "id": "mo-s-f-ranger-program-2026-07-05",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
     },
     {
       "address": "120 US Hwy 67 Knob Lick, Missouri 63651",
@@ -194,6 +611,64 @@
       "state": "MO",
       "status": "active",
       "website_url": "https://scoutingevent.com/312-101416"
+    },
+    {
+      "address": "S-F Scout Ranch",
+      "city": "Knob Lick",
+      "council_id": "council-312",
+      "description": "High-adventure base at S-F Scout Ranch for older Scouts and Venturers.",
+      "features": [],
+      "id": "mo-swift-high-adventure-base",
+      "lat": 37.6480085,
+      "lon": -90.3486169,
+      "name": "Swift High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-swift-high-adventure-base",
+          "end_date": "2027-06-19",
+          "id": "mo-swift-high-adventure-base-2027-06-13",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-06-13",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-swift-high-adventure-base",
+          "end_date": "2027-07-17",
+          "id": "mo-swift-high-adventure-base-2027-07-11",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-11",
+          "year": 2027
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
     }
   ],
   "hq_city": "Saint Louis",

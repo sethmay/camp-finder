@@ -1,7 +1,7 @@
 // Serialize filter state <-> URL query params so every search is shareable/bookmarkable
 // (IMPLEMENTATION.md §8.4). Pure; unit-testable.
 
-import type { Criteria, Feature, SortKey } from "./types";
+import type { Criteria, Feature, ProgramCategory, SortKey } from "./types";
 
 export interface UiState {
   criteria: Omit<Criteria, "upcomingYear" | "textIds">;
@@ -19,6 +19,7 @@ export function toParams(state: UiState): URLSearchParams {
   if (c.maxCost !== undefined) p.set("cost", String(c.maxCost));
   if (c.state) p.set("state", c.state);
   if (c.features && c.features.length) p.set("feat", c.features.join(","));
+  if (c.categories && c.categories.length) p.set("prog", c.categories.join(","));
   if (state.text) p.set("q", state.text);
   if (state.sort !== "distance") p.set("sort", state.sort);
   return p;
@@ -45,6 +46,7 @@ export function fromParams(p: URLSearchParams): UiState {
       maxCost: num(p.get("cost")),
       state: p.get("state") ?? undefined,
       features: (p.get("feat")?.split(",").filter(Boolean) as Feature[]) ?? undefined,
+      categories: (p.get("prog")?.split(",").filter(Boolean) as ProgramCategory[]) ?? undefined,
     },
   };
 }
