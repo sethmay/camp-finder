@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "9994 Camp Drake Rd, Fairmount, IL 61841",
+      "city": "Fairmount",
+      "council_id": "council-117",
+      "description": "Scouts BSA resident summer camp on the Salt Fork River in central Illinois.",
+      "features": [],
+      "id": "il-camp-robert-drake",
+      "lat": 40.0928,
+      "lon": -87.7536,
+      "name": "Camp Robert Drake",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.campdrake.com/scouts-bsa-camp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-camp-robert-drake",
+          "end_date": "2026-06-20",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "il-camp-robert-drake-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campdrake.com/scouts-bsa-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-camp-robert-drake",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "il-camp-robert-drake-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campdrake.com/scouts-bsa-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-camp-robert-drake",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "il-camp-robert-drake-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campdrake.com/scouts-bsa-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://www.campdrake.com/scouts-bsa-camp"
+    }
+  ],
   "hq_city": "Champaign",
   "id": "council-117",
   "name": "Prairielands Council",

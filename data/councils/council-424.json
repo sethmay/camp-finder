@@ -1,5 +1,64 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Four Oaks, NC",
+      "city": "Four Oaks",
+      "council_id": "council-424",
+      "description": "Tuscarora Council's resident Scouts BSA summer camp in Four Oaks, NC.",
+      "features": [],
+      "id": "nc-camp-tuscarora",
+      "lat": 35.4455571,
+      "lon": -78.4294653,
+      "name": "Camp Tuscarora",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.tuscarorabsa.org/Summercamp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-tuscarora",
+          "end_date": "2026-06-20",
+          "id": "nc-camp-tuscarora-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.tuscarorabsa.org/Summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-tuscarora",
+          "end_date": "2026-06-27",
+          "id": "nc-camp-tuscarora-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.tuscarorabsa.org/Summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.tuscarorabsa.org/Summercamp"
+    }
+  ],
   "hq_city": "Goldsboro",
   "id": "council-424",
   "name": "Tuscarora Council",

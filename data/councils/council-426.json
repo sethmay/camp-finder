@@ -1,5 +1,104 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "419 Camp Bonner Boy Scout Rd, Blounts Creek, NC 27814",
+      "city": "Blounts Creek",
+      "council_id": "council-426",
+      "description": "East Carolina Scout Reservation's Scouts BSA resident summer camp on the Pamlico River.",
+      "features": [],
+      "id": "nc-camp-boddie",
+      "lat": 35.433933006025,
+      "lon": -76.949336316887,
+      "name": "Camp Boddie",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.scoutingecc.org/",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-boddie",
+          "end_date": "2026-06-20",
+          "fee_adult": 150,
+          "fee_youth": 450,
+          "id": "nc-camp-boddie-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.scoutingecc.org/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-boddie",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 450,
+          "id": "nc-camp-boddie-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.scoutingecc.org/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-boddie",
+          "end_date": "2026-07-04",
+          "fee_adult": 150,
+          "fee_youth": 450,
+          "id": "nc-camp-boddie-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.scoutingecc.org/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-boddie",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 450,
+          "id": "nc-camp-boddie-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.scoutingecc.org/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.scoutingecc.org/"
+    }
+  ],
   "hq_city": "Kinston",
   "id": "council-426",
   "name": "East Carolina Council",

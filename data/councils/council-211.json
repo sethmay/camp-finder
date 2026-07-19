@@ -1,5 +1,31 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "LA Highway 10, Clinton, LA 70722",
+      "city": "Clinton",
+      "council_id": "council-211",
+      "description": "Scouts BSA resident summer camp at the 1,680-acre Avondale Scout Reservation.",
+      "features": [],
+      "id": "la-camp-avondale",
+      "lat": 30.86,
+      "lon": -90.9689,
+      "name": "Camp Avondale",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.istroumascouting.org/AvondaleSummerCamp22",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [],
+      "state": "LA",
+      "status": "active",
+      "website_url": "https://www.istroumascouting.org/AvondaleSummerCamp22"
+    }
+  ],
   "hq_city": "Baton Rouge",
   "id": "council-211",
   "name": "Istrouma Area Council",

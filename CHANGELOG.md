@@ -2,6 +2,15 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.12.0 (minor) — 2026-07-18
+
+- `PENDING` Cover the 34 Tentaroo councils by agent-assisted extraction (Tentaroo itself is
+  auth-gated + robots-blocked + JS — not publicly scrapable; deferred, see
+  `data/.review/tentaroo-deferred-2026-07-18.md`). A 7-`scout` swarm read each council's OWN
+  website; merged **35 camps / 116 sessions across 29 councils** (method `llm_extraction`,
+  confidence 0.6, human-reviewed + fee spot-checks). Camp count 69 -> 104; all 35 camps
+  geocoded to precise coords (0 validate warnings). 3 councils have no resident camp, 2 uncertain excluded.
+
 ## 0.11.0 (minor) — 2026-07-18
 
 - `e0a73b6` Ramp Black Pug coverage: scraped all 124 blackpug councils, reviewed the 81

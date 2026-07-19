@@ -1,5 +1,80 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Camp Rainey Mountain, Clayton, GA 30525",
+      "city": "Clayton",
+      "council_id": "council-101",
+      "description": "Scouts BSA resident summer camp in the mountains of Northeast Georgia.",
+      "features": [],
+      "id": "ga-camp-rainey-mountain",
+      "lat": 34.8653,
+      "lon": -83.3429,
+      "name": "Camp Rainey Mountain",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.nega-bsa.org/campraineymountain",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-rainey-mountain",
+          "end_date": "2026-06-27",
+          "id": "ga-camp-rainey-mountain-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nega-bsa.org/campraineymountain",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-rainey-mountain",
+          "end_date": "2026-07-04",
+          "id": "ga-camp-rainey-mountain-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nega-bsa.org/campraineymountain",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-rainey-mountain",
+          "end_date": "2026-07-11",
+          "id": "ga-camp-rainey-mountain-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nega-bsa.org/campraineymountain",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://www.nega-bsa.org/campraineymountain"
+    }
+  ],
   "hq_city": "Jefferson",
   "id": "council-101",
   "name": "Northeast Georgia Council",

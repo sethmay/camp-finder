@@ -1,5 +1,68 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Bradley Scout Reservation, near Stanley, ID",
+      "city": "Stanley",
+      "council_id": "council-106",
+      "description": "Scouts BSA resident summer camp with a mountain outdoor program.",
+      "features": [],
+      "id": "id-bradley-scout-reservation",
+      "lat": 44.398,
+      "lon": -115.1482,
+      "name": "Bradley Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.mountainwestcouncil.org/bradley",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-bradley-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 325,
+          "id": "id-bradley-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.mountainwestcouncil.org/bradley",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-bradley-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 150,
+          "fee_youth": 325,
+          "id": "id-bradley-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.mountainwestcouncil.org/bradley",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://www.mountainwestcouncil.org/bradley"
+    }
+  ],
   "hq_city": "Boise",
   "id": "council-106",
   "name": "Mountain West Council",

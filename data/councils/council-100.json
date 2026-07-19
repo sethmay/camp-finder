@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Subligna, GA",
+      "city": "Subligna",
+      "council_id": "council-100",
+      "description": "Northwest Georgia Council's 650-acre Scouts BSA resident summer camp.",
+      "features": [],
+      "id": "ga-camp-sidney-dew",
+      "lat": 34.5601535,
+      "lon": -85.1881791,
+      "name": "Camp Sidney Dew",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.nwgascouting.org/summer-camp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-sidney-dew",
+          "end_date": "2026-06-13",
+          "fee_adult": 145,
+          "fee_youth": 360,
+          "id": "ga-camp-sidney-dew-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nwgascouting.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-sidney-dew",
+          "end_date": "2026-06-20",
+          "fee_adult": 145,
+          "fee_youth": 360,
+          "id": "ga-camp-sidney-dew-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nwgascouting.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-sidney-dew",
+          "end_date": "2026-06-27",
+          "fee_adult": 145,
+          "fee_youth": 360,
+          "id": "ga-camp-sidney-dew-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.nwgascouting.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://www.nwgascouting.org/summer-camp"
+    }
+  ],
   "hq_city": "Rome",
   "id": "council-100",
   "name": "Northwest Georgia Council",
