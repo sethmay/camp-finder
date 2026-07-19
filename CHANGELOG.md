@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.16.0 (minor) — 2026-07-19
+
+- `4f5cc34` Add **program categories** (Scouts BSA / Cub Scout / High Adventure): surface the
+  pipeline's per-camp `program_types` as a frontend filter facet (category chips, URL `?prog=`
+  round-trip, mirrors the features facet) with category badges on cards and the detail page.
+  Agent extraction added **+35 camps / +121 sessions** across 13 councils incl. new **Michigan
+  Crossroads Council (272)** (camp count 126 -> 160, session 515 -> 635). Deduped vs existing
+  data: skipped Camp Gamble/Famous Eagle (312), Camp Frontier (460), Long Beach Sea Base (032)
+  where scraped data is better; superseded the thin "Camp Snyder Specialty Weeks" with a full
+  multi-program Camp William B. Snyder. Fixed 11 geocode misses; adds unit tests for the category
+  mapping + filter.
+
 ## 0.15.0 (minor) — 2026-07-19
 
 - `0aac927` Add `campfinder global-sync`: parse Black Pug's authoritative Global index
