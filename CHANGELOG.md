@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.15.0 (minor) — 2026-07-19
 
-- `PENDING` Add `campfinder global-sync`: parse Black Pug's authoritative Global index
+- `0aac927` Add `campfinder global-sync`: parse Black Pug's authoritative Global index
   (`scoutingevent.com/indexMap.php`) and upgrade `unknown`/`other` councils that are "managed"
   on Black Pug to `blackpug` (**+29 councils**; never downgrades; skips tentaroo to avoid dupes;
   reports website discrepancies + deferred tentaroo to a review file). Re-ran the Black Pug scrape
