@@ -42,8 +42,16 @@ Merges baked into the seed: councils **302/303** (-> Mississippi Riverlands) and
 **Platform coverage — `detect` run across all 235 (0.10.1).** Now every council has a website,
 `campfinder detect` classified: **124 Black Pug + 34 Tentaroo = 158 programmatically scrapable**
 (was 30), 15 doubleknot, 61 unknown (custom CMS or Cloudflare-gated homepages, e.g. Sam
-Houston/576, Grand Canyon/010), 1 other. Next scrape ramp targets those 158. **Tentaroo scraper
-is net-new code (not built yet)**; the 34 Tentaroo councils are unlocked but not yet scrapable.
+Houston/576, Grand Canyon/010), 1 other.
+
+**Tentaroo — DEFERRED (not publicly scrapable), 0.12.0.** The 34 Tentaroo councils cannot be
+scraped politely: event pages are auth-gated (redirect to `/admin2/login` even with JS), robots
+disallows `/admin2/` + `/calendar/`, and the pages are JS-rendered SPAs. Full recon + per-council
+tentaroo links in `data/.review/tentaroo-deferred-2026-07-18.md`. **Covered by agent-assisted
+extraction (0.12.0)**: a 7-scout swarm read each council's OWN website -> 35 camps / 116 sessions
+across 29 councils (method `llm_extraction`, conf 0.6). Follow-ups in the review file: 3 councils
+with no resident camp, 2 uncertain excluded, 13 camps need precise addresses to map. A future
+headless+login scrape of Tentaroo itself is out of scope (no credentials).
 
 - **Black Pug scraper — DONE (0.4.0).** `campfinder scrape`/`merge` off scoutingevent.com;
   14 camps / 51 sessions merged across 8 non-demo councils. Follow-ups:

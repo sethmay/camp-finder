@@ -1,5 +1,198 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Comer Scout Reservation, near Mentone, AL",
+      "city": "Mentone",
+      "council_id": "council-001",
+      "description": "1,000-acre resident Scouts BSA summer camp atop Lookout Mountain.",
+      "features": [],
+      "id": "al-camp-comer",
+      "name": "Camp Comer",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-comer",
+          "end_date": "2026-06-13",
+          "id": "al-camp-comer-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-comer",
+          "end_date": "2026-06-20",
+          "id": "al-camp-comer-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-comer",
+          "end_date": "2026-06-27",
+          "id": "al-camp-comer-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-comer",
+          "end_date": "2026-07-04",
+          "id": "al-camp-comer-2026-06-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-comer",
+          "end_date": "2026-07-11",
+          "id": "al-camp-comer-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-comer/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "AL",
+      "status": "active",
+      "website_url": "https://1bsa.org/summer-camp-at-camp-comer/"
+    },
+    {
+      "address": "Camp Sequoyah, Delta, AL (Talladega National Forest)",
+      "city": "Delta",
+      "council_id": "council-001",
+      "description": "1,447-acre resident Scouts BSA summer camp near Mt. Cheaha.",
+      "features": [],
+      "id": "al-camp-sequoyah",
+      "name": "Camp Sequoyah",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-sequoyah",
+          "end_date": "2026-06-13",
+          "id": "al-camp-sequoyah-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-sequoyah",
+          "end_date": "2026-06-20",
+          "id": "al-camp-sequoyah-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-sequoyah",
+          "end_date": "2026-06-27",
+          "id": "al-camp-sequoyah-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-sequoyah",
+          "end_date": "2026-07-04",
+          "id": "al-camp-sequoyah-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "AL",
+      "status": "active",
+      "website_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/"
+    }
+  ],
   "hq_city": "Birmingham",
   "id": "council-001",
   "name": "Greater Alabama Council",

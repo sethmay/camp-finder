@@ -1,5 +1,64 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1453 Baden Powell Rd, Hawthorne, FL 32640",
+      "city": "Hawthorne",
+      "council_id": "council-087",
+      "description": "North Florida Council's Scouts BSA resident summer camp with aquatics, COPE, climbing and shooting sports.",
+      "features": [],
+      "id": "fl-camp-shands",
+      "lat": 29.660476316318,
+      "lon": -81.992568186152,
+      "name": "Camp Shands",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.campshands.org/summercamp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "fl-camp-shands",
+          "end_date": "2026-06-27",
+          "id": "fl-camp-shands-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campshands.org/summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "fl-camp-shands",
+          "end_date": "2026-07-11",
+          "id": "fl-camp-shands-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campshands.org/summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://www.campshands.org/summercamp"
+    }
+  ],
   "hq_city": "Jacksonville",
   "id": "council-087",
   "name": "North Florida Council",

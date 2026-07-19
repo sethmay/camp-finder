@@ -1,5 +1,138 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "7371 County Road S, Pioneer, OH 43554",
+      "city": "Pioneer",
+      "council_id": "council-460",
+      "description": "Erie Shores Council's Scouts BSA resident summer camp at Pioneer Scout Reservation (in-council Meal Plan A early-bird rates).",
+      "features": [],
+      "id": "oh-camp-frontier",
+      "name": "Camp Frontier",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.psrweb.org/SummerCamp2026",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-06-27",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-07-04",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-07-11",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-07-18",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-07-25",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-frontier",
+          "end_date": "2026-08-01",
+          "fee_adult": 238,
+          "fee_youth": 486,
+          "id": "oh-camp-frontier-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.psrweb.org/SummerCamp2026",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://www.psrweb.org/SummerCamp2026"
+    }
+  ],
   "hq_city": "Toledo",
   "id": "council-460",
   "name": "Erie Shores Council",

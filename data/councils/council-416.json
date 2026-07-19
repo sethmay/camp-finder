@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "44184 Cannon Rd, New London, NC 28127",
+      "city": "New London",
+      "council_id": "council-416",
+      "description": "Central NC Council's resident Scouts BSA summer camp on the Cannon Scout Reservation.",
+      "features": [],
+      "id": "nc-camp-john-j-barnhardt",
+      "lat": 35.442074922574,
+      "lon": -80.139400180552,
+      "name": "Camp John J. Barnhardt",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.campjohnjbarnhardt.org/summercamp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-john-j-barnhardt",
+          "end_date": "2026-06-27",
+          "fee_adult": 100,
+          "fee_youth": 435,
+          "id": "nc-camp-john-j-barnhardt-2026-06-22",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campjohnjbarnhardt.org/summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-john-j-barnhardt",
+          "end_date": "2026-07-04",
+          "fee_adult": 100,
+          "fee_youth": 435,
+          "id": "nc-camp-john-j-barnhardt-2026-06-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campjohnjbarnhardt.org/summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-john-j-barnhardt",
+          "end_date": "2026-07-11",
+          "fee_adult": 100,
+          "fee_youth": 435,
+          "id": "nc-camp-john-j-barnhardt-2026-07-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.campjohnjbarnhardt.org/summercamp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.campjohnjbarnhardt.org/summercamp"
+    }
+  ],
   "hq_city": "Albemarle",
   "id": "council-416",
   "name": "Central North Carolina Council",

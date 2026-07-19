@@ -1,5 +1,64 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "8501 SE Boy Scout Rd, Jupiter, FL 33469",
+      "city": "Jupiter",
+      "council_id": "council-085",
+      "description": "Gulf Stream Council's Scouts BSA resident summer camp.",
+      "features": [],
+      "id": "fl-tanah-keeta-scout-reservation",
+      "lat": 26.985616303151,
+      "lon": -80.131185508119,
+      "name": "Tanah Keeta Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.gulfstreamcouncil.org/summer-camp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "fl-tanah-keeta-scout-reservation",
+          "end_date": "2026-06-20",
+          "id": "fl-tanah-keeta-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.gulfstreamcouncil.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "fl-tanah-keeta-scout-reservation",
+          "end_date": "2026-06-27",
+          "id": "fl-tanah-keeta-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.gulfstreamcouncil.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://www.gulfstreamcouncil.org/summer-camp"
+    }
+  ],
   "hq_city": "Palm Beach Gardens",
   "id": "council-085",
   "name": "Gulf Stream Council",

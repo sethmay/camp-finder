@@ -1,5 +1,104 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "13165 NC Hwy 53 W, White Oak, NC 28399",
+      "city": "White Oak",
+      "council_id": "council-425",
+      "description": "Cape Fear Council's resident Scouts BSA summer camp on Lake Katherine.",
+      "features": [],
+      "id": "nc-camp-bowers",
+      "lat": 34.788876632821,
+      "lon": -78.726101489648,
+      "name": "Camp Bowers",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-bowers",
+          "end_date": "2026-06-27",
+          "fee_adult": 125,
+          "fee_youth": 400,
+          "id": "nc-camp-bowers-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-bowers",
+          "end_date": "2026-07-04",
+          "fee_adult": 125,
+          "fee_youth": 400,
+          "id": "nc-camp-bowers-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-bowers",
+          "end_date": "2026-07-11",
+          "fee_adult": 125,
+          "fee_youth": 400,
+          "id": "nc-camp-bowers-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-bowers",
+          "end_date": "2026-07-18",
+          "fee_adult": 125,
+          "fee_youth": 400,
+          "id": "nc-camp-bowers-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.capefearscouting.org/content/132782/Camp-Bowers"
+    }
+  ],
   "hq_city": "Wilmington",
   "id": "council-425",
   "name": "Cape Fear Council",

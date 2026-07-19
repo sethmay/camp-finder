@@ -1,5 +1,66 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Buffalo Trail Scout Ranch, Fort Davis, TX 79734",
+      "city": "Fort Davis",
+      "council_id": "council-567",
+      "description": "9,000-acre council resident camp in the Davis Mountains of West Texas.",
+      "features": [],
+      "id": "tx-buffalo-trail-scout-ranch",
+      "name": "Buffalo Trail Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.btsr.org/summer-camp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-buffalo-trail-scout-ranch",
+          "end_date": "2026-06-27",
+          "fee_adult": 300,
+          "fee_youth": 450,
+          "id": "tx-buffalo-trail-scout-ranch-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.btsr.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-buffalo-trail-scout-ranch",
+          "end_date": "2026-07-04",
+          "fee_adult": 300,
+          "fee_youth": 450,
+          "id": "tx-buffalo-trail-scout-ranch-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.btsr.org/summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.btsr.org/summer-camp"
+    }
+  ],
   "hq_city": "Midland",
   "id": "council-567",
   "name": "Buffalo Trail Council",

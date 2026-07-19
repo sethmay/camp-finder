@@ -1,5 +1,140 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "266 Raven Knob Road, Mount Airy, NC 27030",
+      "city": "Mount Airy",
+      "council_id": "council-427",
+      "description": "Old Hickory Council's Scouts BSA resident camp in the Blue Ridge Mountains.",
+      "features": [],
+      "id": "nc-camp-raven-knob",
+      "lat": 36.479072671786,
+      "lon": -80.843080887322,
+      "name": "Camp Raven Knob",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.ravenknob.com/summercampdates",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-06-20",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-06-27",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-07-04",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-07-11",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-07-18",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nc-camp-raven-knob",
+          "end_date": "2026-07-25",
+          "fee_adult": 225,
+          "fee_youth": 450,
+          "id": "nc-camp-raven-knob-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.ravenknob.com/summercampdates",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.ravenknob.com/summercampdates"
+    }
+  ],
   "hq_city": "Winston-Salem",
   "id": "council-427",
   "name": "Old Hickory Council",

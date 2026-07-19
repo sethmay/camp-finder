@@ -1,5 +1,90 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "795 Boy Scout Road, Trout, LA 71371",
+      "city": "Trout",
+      "council_id": "council-213",
+      "description": "Week 2 Scouts BSA National-accredited resident summer camp.",
+      "features": [],
+      "id": "la-camp-attakapas",
+      "lat": 31.695286326812,
+      "lon": -92.209521872877,
+      "name": "Camp Attakapas",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.louisianapurchasecouncil.org/summercamps",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "la-camp-attakapas",
+          "end_date": "2026-06-18",
+          "id": "la-camp-attakapas-2026-06-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.louisianapurchasecouncil.org/summercamps",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-12",
+          "year": 2026
+        }
+      ],
+      "state": "LA",
+      "status": "active",
+      "website_url": "https://www.louisianapurchasecouncil.org/summercamps"
+    },
+    {
+      "address": "105 Camp T.L. James Road, Downsville, LA 71234",
+      "city": "Downsville",
+      "council_id": "council-213",
+      "description": "Week 1 Scouts BSA National-accredited resident summer camp.",
+      "features": [],
+      "id": "la-camp-t-l-james",
+      "lat": 32.622507385596,
+      "lon": -92.363576154802,
+      "name": "Camp T. L. James",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.louisianapurchasecouncil.org/summercamps",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "la-camp-t-l-james",
+          "end_date": "2026-06-11",
+          "id": "la-camp-t-l-james-2026-06-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.louisianapurchasecouncil.org/summercamps",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-06-05",
+          "year": 2026
+        }
+      ],
+      "state": "LA",
+      "status": "active",
+      "website_url": "https://www.louisianapurchasecouncil.org/summercamps"
+    }
+  ],
   "hq_city": "Monroe",
   "id": "council-213",
   "name": "Louisiana Purchase Council",

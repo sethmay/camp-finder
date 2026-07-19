@@ -1,5 +1,68 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "229 Brookville Road, Barnegat, NJ 08005",
+      "city": "Barnegat",
+      "council_id": "council-341",
+      "description": "Scouts BSA resident summer camp in the NJ Pine Barrens (Week 3 cancelled for 2026).",
+      "features": [],
+      "id": "nj-joseph-a-citta-scout-reservation",
+      "lat": 39.780444018546,
+      "lon": -74.308898281813,
+      "name": "Joseph A. Citta Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+        "source_url": "https://www.cittascoutreservation.org/bs-summer-camp",
+        "verified_at": "2026-07-18"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nj-joseph-a-citta-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 165,
+          "fee_youth": 550,
+          "id": "nj-joseph-a-citta-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.cittascoutreservation.org/bs-summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nj-joseph-a-citta-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 165,
+          "fee_youth": 550,
+          "id": "nj-joseph-a-citta-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "Agent-extracted from council website (Tentaroo council; not scrapable). Verify dates/fees.",
+            "source_url": "https://www.cittascoutreservation.org/bs-summer-camp",
+            "verified_at": "2026-07-18"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "NJ",
+      "status": "active",
+      "website_url": "https://www.cittascoutreservation.org/bs-summer-camp"
+    }
+  ],
   "hq_city": "Toms River",
   "id": "council-341",
   "name": "Jersey Shore Council",
