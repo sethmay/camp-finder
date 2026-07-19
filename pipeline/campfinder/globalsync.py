@@ -41,7 +41,7 @@ _MARKER_RE = re.compile(
     r"(\d+),\s*"  # managed
     r"'(BSA\d+)',\s*"  # orgKey
     r"'(?:[^'\\]|\\.)*',\s*"  # council (unused)
-    r"'([^']*)'"  # website
+    r"'((?:[^'\\]|\\.)*)'"  # website (escape-aware, matching the name/council groups)
 )
 
 
@@ -97,6 +97,8 @@ def sync(client: httpx.Client | None = None) -> dict:
         n = council.number
         if n is None or n not in idx:
             continue
+        if council.id in config.DEMO_COUNCILS:
+            continue  # never mutate hand-authored demo fixtures (merge.py skips them too)
         row = idx[n]
         if (
             council.website
