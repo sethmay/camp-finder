@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.12.0 (minor) — 2026-07-18
 
-- `PENDING` Cover the 34 Tentaroo councils by agent-assisted extraction (Tentaroo itself is
+- `4f748c9` Cover the 34 Tentaroo councils by agent-assisted extraction (Tentaroo itself is
   auth-gated + robots-blocked + JS — not publicly scrapable; deferred, see
   `data/.review/tentaroo-deferred-2026-07-18.md`). A 7-`scout` swarm read each council's OWN
   website; merged **35 camps / 116 sessions across 29 councils** (method `llm_extraction`,
