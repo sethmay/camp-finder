@@ -1,53 +1,96 @@
-# Community-suggested camps — to investigate individually
+# Community-suggested camps & feedback — Reddit r/BSA
 
-Source: Reddit r/BSA thread "I'm building a tool to find BSA summer camps" (2026-07-19).
-Status legend: **MISSING** (not in dataset) · **HAVE** (present) · **PARTIAL** (related entry exists) ·
-**OUT?** (likely out of v1 scope — high-adventure/national base or non-BSA land). Cross-checked
-against the 126 camps in `web/public/data/camps.json`.
+Source: r/BSA thread "I'm building a tool to find BSA summer camps" (`1v0tqo9`).
+Full-comment pass on 2026-07-19, cross-checked against **160 camps** in `web/public/data/camps.json` (v0.16.0).
 
-| Status | Camp | State | Council (hint) | Source | Notes |
-|---|---|---|---|---|---|
-| MISSING | Camp Cutler | NY | Greater Finger Lakes / Seneca Waterways (397) | joshf81 | council renamed from Seneca Waterways |
-| PARTIAL | Camp Massawepie | NY | Seneca Waterways (397) | joshf81 | we have "Massawepie Scout Camps – Camp Pioneer/Adirondack Treks" |
-| MISSING | Camp Geronimo | AZ | Grand Canyon (010) | HockeyPhoenician | GC on Tentaroo/custom — Black Pug scrape missed |
-| MISSING | R-C Scout Reserve | AZ | Grand Canyon (010) | HockeyPhoenician | |
-| MISSING | Camp Lawton | AZ | Catalina (011) | HockeyPhoenician | |
-| MISSING | Camp Fiesta Island | CA | San Diego-Imperial (049) | HockeyPhoenician | likely Cub/day |
-| MISSING | Camp Emerald Bay | CA | Western LA County (051) | HockeyPhoenician | Catalina Island |
-| MISSING | Camp Whitsett | CA | Western LA County (051) | HockeyPhoenician | |
-| MISSING | Camp Wehinahpay | NM | Conquistador (413) | HockeyPhoenician | |
-| MISSING | Camp Alexander | CO | Pikes Peak / Pathway to the Rockies | HockeyPhoenician | |
-| MISSING | D-A Scout Ranch (D-Bar-A) | MI | Michigan Crossroads (272) | HockeyPhoenician, errol | |
-| MISSING | Cole Canoe Base | MI | Michigan Crossroads (272) | HockeyPhoenician, errol | |
-| MISSING | Camp Hiawatha | MI | Michigan Crossroads (272) | errol | |
-| MISSING | Gerber Scout Reservation | MI | Michigan Crossroads (272) | errol | |
-| MISSING | Camp Teetonkah | MI | Michigan Crossroads (272) | errol | Cubs |
-| MISSING | Camp Pioneer (Ohio) | OH | Ohio council TBD | errol | NB: our "Camp Pioneer" is the Oregon demo one — different camp |
-| MISSING | Camp Lakota | OH | Ohio council TBD | errol | |
-| MISSING | Goshen Scout Reservation | VA | National Capital (082) | looktowindward | reservation w/ ~6 camps; we have only Olmsted + Ross |
-| PARTIAL | Camp Snyder | VA | National Capital (082) | looktowindward | we have "Camp Snyder Specialty Weeks" only |
-| MISSING | Camp T. Brady Saunders | VA | Heart of Virginia (602) | looktowindward | |
-| MISSING | Greater St. Louis camps (312) | MO | Greater St. Louis (312) | random8765309 | Scouts BSA/Venturing/Sea Scouts + Cub day/overnight (stlbsa.org/camps) |
-| HAVE | Camp Big Horn | CA | Greater LA (033) | HockeyPhoenician | "HESR Camp Big Horn at Circle X Ranch" |
-| OUT? | Philmont Scout Ranch | NM | National HA base | HockeyPhoenician | high-adventure, not a council resident camp |
-| OUT? | Sea Base Florida | FL | National HA base | HockeyPhoenician | high-adventure |
-| OUT? | Sea Base California | CA | Long Beach (032) | HockeyPhoenician | aquatics HA; we have "Sea Base Aquatics" specialty |
+Status legend: **MISSING** (not in dataset, council exists) · **NEW-COUNCIL** (council also absent) ·
+**HAVE** (present) · **VERIFY** (ambiguous match) · **CORRECTION** (data fix) · **OUT?** (beyond v1 scope).
 
-## Leads / patterns
-- **Michigan Crossroads Council (272) — 5 camps, NONE in dataset.** Statewide MI council; our Black Pug
-  scrape returned nothing for it. Investigate: is 272 "managed" on the Global index? Do its camps register
-  on a separate system/site? High-value gap (Hiawatha, Gerber, Cole Canoe, D-Bar-A, Teetonkah).
-- **Goshen Scout Reservation (National Capital 082):** a reservation hosting ~6 camps; we captured only
-  Olmsted + Ross. Others (Bowman, Marriott, PMI, Lenhok'sin/HA) to add — like the sub-camp collapse question.
-- **AZ/CA/NM council camps missing** (Grand Canyon, Catalina, Conquistador, Western LA, San Diego) —
-  these councils are Tentaroo/custom-CMS, exactly the pool the community can help fill.
+---
 
-## Meta-suggestions from the thread
-- **errol_timo_malcom & UI feedback:** add labels/tags for **High Adventure, Cub, and special programs
-  (NYLT)**. Schema already has `ProgramType` (scouts_bsa_resident, cub_resident, cub_day, high_adventure,
-  webelos) + `high_adventure_option` feature. Logged as a feature in TODO.md.
-- **Breitsol_Victor:** (a) follow up on *former* camps sold to orgs that still allow scout camping;
-  (b) local/state/fed camping locations (Current River/Elephant Rocks MO, Wolf River WI). Both are
-  **beyond v1 scope** (v1 = BSA council resident summer camps) — park as possible future scope.
-- **Data sources mentioned:** Wikipedia "List of council camps" (stale, dead links — supplementary only);
-  usscouts Online Camp Database (robots-blocked, assessed); scoutingevent.com/Global (integrated 0.15.0).
+## 1. Missing camps to add (actionable — council already in registry)
+
+| Camp | State | Council (id · #camps) | Source | Notes |
+|---|---|---|---|---|
+| Camp Gorsuch | AK | Great Alaska (610 · 1) | 358STA | Anchorage |
+| Lost Lake | AK | Great Alaska (610 · 1) | 358STA | Fairbanks |
+| Camp Easton | ID | Inland Northwest (611 · 0) | TheseusOPL | nwscouts.org |
+| Camp Grizzly | ID | Inland Northwest (611 · 0) | TheseusOPL | distinct from MO "Grizzly Day Camp" |
+| Camp Bud Schiele | NC | Piedmont NC (420 · 0) | elephagreen | Rutherfordton |
+| Camp Davy Crockett | TN | Sequoyah (713 · 0) | elephagreen | |
+| H. Roe Bartle | MO | Heart of America (307 · 0) | elephagreen | Osceola |
+| Camp La-No-Che | FL | Central Florida (083 · 0) | fla_john | camplanoche.com |
+| Longhorn Council camps | TX | Longhorn (662 · 0) | bonniebelle29 | whole TX council empty — Worth Ranch, Sid Richardson SR, etc. (longhorncouncil.org/camp-properties) |
+| Camp Arrowhead | MO | Ozark Trails (306 · 0) | Lakota_Six | Marshfield; oldest continuously-run camp W of the Mississippi (100 yrs) |
+| Camp Three Falls | CA | Ventura County (057 · 0) | HockeyPhoenician | |
+| Camp Liberty | PA | Laurel Highlands (527 · 2) | Here_Lah | Heritage Reservation (heritagereservation.org/camp-liberty) |
+| Goose Pond Scout Reservation | PA | Northeastern PA (501 · 0) | Here_Lah | gpsr.nepabsa.org |
+| Akridge Scout Reservation | DE | Del-Mar-Va (081 · 2) | pgm928 | Dover; Cub in summer, year-round for Scouts |
+| Camp Catoctin | MD | Baltimore Area (220 · 1) | Here_Lah | weownadventure.com/camp-catoctin-2026 |
+
+## 2. Missing — council also absent (needs council add first)
+
+| Camp | State | Council | Source | Notes |
+|---|---|---|---|---|
+| Camp Sinoquipe | PA | Mason-Dixon (NOT in registry) | DrFiveLittleMonkeys | "between Tuckahoe and Heritage, mid/southern PA" |
+
+## 3. VERIFY — ambiguous / possible duplicate
+
+| Camp | Source | Notes |
+|---|---|---|
+| "Summit" (summitbsa.org/scout-camp) | Here_Lah | council unclear; not the national Summit Bechtel — confirm which council |
+| Tuscarora (bpcouncil.org) | Here_Lah | we already have Camp Tuscarora (NC, Tuscarora Council) + Tuscarora SR (NY, Baden-Powell); confirm bpcouncil.org isn't a 3rd |
+| Camp Pioneer (Ohio) | errol_timo_malcom | our only "Camp Pioneer" is NY (Massawepie). errol's OH one is likely Erie Shores' Pioneer Scout Reservation (where we already have Camp Frontier) — confirm/don't dup |
+
+## 4. Corrections flagged by the community
+
+| Item | Source | Action |
+|---|---|---|
+| **D-bar-A Scout Ranch (272)** no longer runs a traditional summer resident camp — only scouting events; it is MCC's only horseback-riding MB site | CrayonsShallBeEaten | We added it in 0.16.0 **with 2 summer sessions** — reclassify `status: not_operating`, drop those sessions, note horseback MB. **Fix before next ship.** |
+| Activity/feature filter has visible errors; hard to find where to submit corrections | TheseusOPL | QA the `features` data; prioritize the crowdsource correction path |
+
+---
+
+## 5. Already resolved (added in v0.16.0 / prior) — for OP's reference
+
+All of these were requested in-thread and are now in the dataset:
+Camp Emerald Bay, Mataguay Scout Ranch, Camp Whitsett, Camp Fiesta Island (CA) · Camp Geronimo, R-C Scout
+Ranch, Camp Lawton (AZ) · Camp Wehinahpay (NM) · Camp Alexander (CO) · D-bar-A*, Cole Canoe Base, Camp
+Hiawatha, Gerber Scout Reservation, Camp Teetonkah (MCC 272) · Camp Lakota (OH, Black Swamp) · Camp Cutler
++ Massawepie (Seneca Waterways) · Goshen Scout Reservation camps — Bowman/Marriott/Lenhok'sin/PMI + prior
+Olmsted/Ross (NCAC) · Camp William B. Snyder (NCAC) · Camp T. Brady Saunders (Heart of Virginia) · Greater
+St. Louis camps (312) · Camp Big Horn (GLAAC) · Philmont, Florida Sea Base, Long Beach Sea Base ·
+Daniel Boone, Rodney SR, Raven Knob, Cherokee SR, Camp Boddie, Ockanickon (NC/DE/PA).
+(*D-bar-A needs the status correction in §4.)
+
+## 6. Feature requests
+
+- **Program-type labels** — High Adventure / Cub / NYLT / special programs (errol_timo_malcom).
+  HA + Cub **shipped** in 0.16.0 (program-category filter + badges). **NYLT** not yet a category — candidate tag.
+- **Specialty-program filters** (catdogfido): Horses, Whitewater, ATV, Scuba, Open Rock Climbing, Sporting
+  Arrows. Coverage today via `Feature` enum: horseback ✓, atv ✓, scuba ✓, climbing ✓, shooting_sports (~archery) ✓;
+  **whitewater is missing** — candidate feature. (Distance search already exists.)
+- **Make filters more visible** (Capable_Function5498; OP agreed).
+- **Crowdsource correction/submission** (multiple + OP) — already parked in TODO; thread shows real demand.
+- **Pin/FAQ the tool in r/BSA** (HockeyPhoenician).
+- **OUT? (park — beyond v1 "council resident summer camp" scope):** off-season facility rental / lodging
+  info (elephagreen); former/defunct camps sold to orgs that still allow scout camping + local/state/fed
+  camping lands e.g. Current River/Elephant Rocks MO, Wolf River WI (Breitsol_Victor).
+
+## 7. Data sources mentioned
+
+- **scoutingevent.com/Global** (looktowindward) — integrated in 0.15.0.
+- **Google Maps custom "BSA Camps" maps** ×2 (Sinister-Aglets; Joetoise `mid=1DI12Q2fJ4JKEs0pw9PaZ9QnMC_dOuvj7`) — new leads, community-maintained.
+- **campreservation.com** (TheseusOPL) — Black Pug map; overlaps our Global-index integration.
+- **usscouts.org Online Camp Database** (random8765309) — assessed; robots-blocked, humans-only reference.
+- **Wikipedia "List of council camps (BSA)"** (HockeyPhoenician) — stale/dead links, seed-only.
+- **OA forms / Black Pug control boxes** for full council lists (princeofwanders).
+- **Reddit API** (S_Alaska) — MCP now installed (this pass).
+
+## 8. Contributor offers (community help)
+
+- **dmurawsky** — devops/devex/platform/architecture; building an open-source scouting design system.
+- **S_Alaska** — nosql + debug; wrote a Python per-camp sentiment scraper; building a JOTA/JOTI tool.
+- **CallingDrPug** — 20+ yrs in the space; DM offered.
+- **coel03** — offered to do camp reviews/data QA.
+- **joshf81 / elephagreen / catdogfido** — general help + testing.
