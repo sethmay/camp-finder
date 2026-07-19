@@ -4,15 +4,17 @@ Active queue and deferred work. Write each item to survive a clean context.
 
 ## External data sources (Reddit feedback, 2026-07-18)
 
-- **`scoutingevent.com/Global` (`indexMap.php`) — HIGH VALUE, robots-clear, easily scraped.**
-  One static page server-renders all **235 councils** as `createMarker(lat,lon,name,campID,managed,
-  orgKey,council,website)` calls (regex-parse, no JS needed; robots.txt is empty). Gives, authoritatively
-  from Black Pug itself: exact **orgKey** per council, a **"managed" flag** (166 councils register on
-  Black Pug vs our `detect`'s 124 — ~42 more scrapable via the WORKING scraper), council **websites**
-  (49/224 differ from our agent seed — theirs is higher authority), and HQ **coords**. Actions: (a) re-run
-  Black Pug against the 166 managed councils — likely unlocks real sessions/fees for councils we
-  agent-extracted (e.g. 85/92/98) or left empty; (b) reconcile platform classification from the managed
-  flag instead of HTML `detect`; (c) correct council websites from this list; (d) HQ-coord fallback.
+- **`scoutingevent.com/Global` (`indexMap.php`) — DONE (0.15.0) via `campfinder global-sync`.**
+  Parses the static index (regex, no JS; robots empty); the authoritative **managed** flag upgraded 29
+  `unknown`/`other` councils to `blackpug`, and re-scraping added **+22 camps / +142 sessions**. Remaining
+  follow-ups (in `data/.review/global-sync-2026-07-18.md`):
+  - **Tentaroo precedence (11 councils):** 85/92/98/106/205/211/234/424/425/426/460 are managed on Black
+    Pug but hold agent-extracted (`llm_extraction`) camps. Skipped to avoid dupes; needs a merge
+    precedence rule (blackpug supersedes llm per council) before re-scraping them. Tentaroo shuts down
+    Oct 2026, so this migration matters.
+  - **Website reconcile (49 discrepancies):** index URLs sometimes older than our seed (e.g. Natural
+    State: ours `naturalstatecouncil.org` newer than index `quapawbsa.org`) — needs per-case judgment,
+    NOT auto-applied. List in the review file.
 - **`usscouts.org` Online Camp Database (scoutcamp.org) — do NOT scrape.** 1416 camps (363 with
   lat/lon), crowdsourced, server-rendered — BUT `robots.txt` **disallows `/databases/`**, so it's
   off-limits to our (robots-respecting) pipeline. No sessions/fees (inventory only), mixed camp types,

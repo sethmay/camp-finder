@@ -1,10 +1,66 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "9906 175th St W Illinois City, Illinois 61259",
+      "council_id": "council-133",
+      "features": [],
+      "id": "il-scouts-bsa-resident-camp-at-loud-thunder",
+      "lat": 41.4238274,
+      "lon": -90.8106336,
+      "name": "Scouts BSA Resident Camp at Loud Thunder",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-scouts-bsa-resident-camp-at-loud-thunder",
+          "end_date": "2027-06-26",
+          "id": "il-scouts-bsa-resident-camp-at-loud-thunder-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp",
+          "start_date": "2027-06-20",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-scouts-bsa-resident-camp-at-loud-thunder",
+          "end_date": "2027-07-03",
+          "id": "il-scouts-bsa-resident-camp-at-loud-thunder-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp",
+          "start_date": "2027-06-27",
+          "year": 2027
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/133-ScoutsBSAResidentCamp"
+    }
+  ],
   "hq_city": "Davenport",
   "id": "council-133",
   "name": "Illowa Council",
   "number": 133,
-  "platform": "unknown",
+  "platform": "blackpug",
   "state": "IA",
   "website": "https://illowascouting.org/"
 }

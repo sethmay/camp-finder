@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/364-Wakpominee2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -56,9 +56,26 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/364-RSR2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-rotary-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_youth": 600,
+          "id": "ny-rotary-scout-reservation-2026-06-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/364-RSR2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/364-RSR2026",
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
         {
           "availability": "unknown",
           "camp_id": "ny-rotary-scout-reservation",

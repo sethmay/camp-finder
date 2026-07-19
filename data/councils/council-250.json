@@ -1,10 +1,468 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "41408 Many Point Camp Rd Ponsford, Minnesota 56575",
+      "council_id": "council-250",
+      "features": [],
+      "id": "mn-many-point-scout-camp",
+      "lat": 47.0920981,
+      "lon": -95.5229044,
+      "name": "Many Point Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/250-MPAllStar2026",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 425,
+          "id": "mn-many-point-scout-camp-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-MPAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-MPAllStar2026",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-07-04",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "mn-many-point-scout-camp-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-Buckskin2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-Buckskin2026",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 425,
+          "id": "mn-many-point-scout-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-MPAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-MPAllStar2026",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-07-18",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "mn-many-point-scout-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-Buckskin2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-Buckskin2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-08-01",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "mn-many-point-scout-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-Buckskin2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-Buckskin2026",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-08-08",
+          "fee_adult": 150,
+          "fee_youth": 425,
+          "id": "mn-many-point-scout-camp-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-MPAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-MPAllStar2026",
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-many-point-scout-camp",
+          "end_date": "2026-08-15",
+          "fee_adult": 150,
+          "fee_youth": 425,
+          "id": "mn-many-point-scout-camp-2026-08-09",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-MPAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-MPAllStar2026",
+          "start_date": "2026-08-09",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/250-MPAllStar2026"
+    },
+    {
+      "address": "N1910 Scout Rd Birchwood, Wisconsin 54817",
+      "council_id": "council-250",
+      "features": [],
+      "id": "wi-discovery-adventure-camp",
+      "lat": 45.7045588,
+      "lon": -91.6788074,
+      "name": "Discovery Adventure Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/250-2026dac",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-06-24",
+          "fee_youth": 375,
+          "id": "wi-discovery-adventure-camp-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-06-27",
+          "fee_youth": 375,
+          "id": "wi-discovery-adventure-camp-2026-06-24",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-06-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-07-03",
+          "fee_youth": 525,
+          "id": "wi-discovery-adventure-camp-2026-06-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-07-15",
+          "fee_youth": 375,
+          "id": "wi-discovery-adventure-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-07-18",
+          "fee_youth": 375,
+          "id": "wi-discovery-adventure-camp-2026-07-15",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-07-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-07-31",
+          "fee_youth": 525,
+          "id": "wi-discovery-adventure-camp-2026-07-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-07-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-08-07",
+          "fee_youth": 525,
+          "id": "wi-discovery-adventure-camp-2026-08-03",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-08-03",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-discovery-adventure-camp",
+          "end_date": "2026-08-14",
+          "fee_youth": 525,
+          "id": "wi-discovery-adventure-camp-2026-08-10",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-2026dac",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-2026dac",
+          "start_date": "2026-08-10",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/250-2026dac"
+    },
+    {
+      "address": "N1910 Scout Rd Birchwood, Wisconsin 54817",
+      "council_id": "council-250",
+      "features": [],
+      "id": "wi-tomahawk-scout-camp",
+      "lat": 45.7045588,
+      "lon": -91.6788074,
+      "name": "Tomahawk Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-07-04",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-07-11",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-07-18",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCChip2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCChip2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-08-01",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-08-08",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-08-02",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tomahawk-scout-camp",
+          "end_date": "2026-08-15",
+          "fee_adult": 150,
+          "fee_youth": 415,
+          "id": "wi-tomahawk-scout-camp-2026-08-09",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/250-TSCAllStar2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/250-TSCAllStar2026",
+          "start_date": "2026-08-09",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/250-TSCAllStar2026"
+    }
+  ],
   "hq_city": "Saint Paul",
   "id": "council-250",
   "name": "Northern Star Council",
   "number": 250,
-  "platform": "unknown",
+  "platform": "blackpug",
   "state": "MN",
   "website": "http://www.northernstar.org/"
 }

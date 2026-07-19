@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/456-101136",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -85,6 +85,22 @@
         {
           "availability": "unknown",
           "camp_id": "mi-owasippe-camp-blackhawk",
+          "end_date": "2026-07-18",
+          "id": "mi-owasippe-camp-blackhawk-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101136",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/456-101136",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-blackhawk",
           "end_date": "2026-07-25",
           "id": "mi-owasippe-camp-blackhawk-2026-07-19",
           "program_type": "scouts_bsa_resident",
@@ -134,7 +150,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/456-101134",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -199,6 +215,22 @@
           },
           "registration_url": "https://scoutingevent.com/456-101134",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-owasippe-camp-wolverine",
+          "end_date": "2026-07-18",
+          "id": "mi-owasippe-camp-wolverine-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/456-101134",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/456-101134",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

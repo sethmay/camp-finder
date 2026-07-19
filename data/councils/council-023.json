@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/023-CR2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -75,6 +75,24 @@
         {
           "availability": "unknown",
           "camp_id": "ca-camp-royaneh",
+          "end_date": "2026-07-18",
+          "fee_adult": 500,
+          "fee_youth": 850,
+          "id": "ca-camp-royaneh-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/023-CR2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/023-CR2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-royaneh",
           "end_date": "2026-07-25",
           "fee_adult": 500,
           "fee_youth": 850,
@@ -128,7 +146,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/023-CW2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -188,6 +206,24 @@
         {
           "availability": "unknown",
           "camp_id": "ca-camp-wolfeboro",
+          "end_date": "2026-07-18",
+          "fee_adult": 500,
+          "fee_youth": 840,
+          "id": "ca-camp-wolfeboro-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/023-CW2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/023-CW2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-wolfeboro",
           "end_date": "2026-07-25",
           "fee_adult": 500,
           "fee_youth": 840,
@@ -241,7 +277,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/023-WSR2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -296,6 +332,24 @@
           },
           "registration_url": "https://scoutingevent.com/023-WSR2026",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-wente-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 500,
+          "fee_youth": 850,
+          "id": "ca-wente-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/023-WSR2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/023-WSR2026",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

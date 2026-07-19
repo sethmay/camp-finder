@@ -1,10 +1,183 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "W6500 Spring Lake Rd Pearson, Wisconsin 54462",
+      "council_id": "council-129",
+      "features": [],
+      "id": "wi-ma-ka-ja-wan-scout-reservation-east",
+      "lat": 45.3689328,
+      "lon": -88.9651634,
+      "name": "Ma-Ka-Ja-Wan Scout Reservation - East",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/129-2026MSREastCamp",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-east",
+          "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-east-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSREastCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSREastCamp",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-east",
+          "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-east-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSREastCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSREastCamp",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-east",
+          "end_date": "2026-07-18",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-east-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSREastCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSREastCamp",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/129-2026MSREastCamp"
+    },
+    {
+      "address": "W6500 Spring Lake Rd Pearson, Wisconsin 54462",
+      "council_id": "council-129",
+      "features": [],
+      "id": "wi-ma-ka-ja-wan-scout-reservation-west",
+      "lat": 45.3689328,
+      "lon": -88.9651634,
+      "name": "Ma-Ka-Ja-Wan Scout Reservation - West",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-west",
+          "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-west-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-west",
+          "end_date": "2026-07-04",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-west-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-west",
+          "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-west-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-ma-ka-ja-wan-scout-reservation-west",
+          "end_date": "2026-07-18",
+          "fee_adult": 175,
+          "fee_youth": 495,
+          "id": "wi-ma-ka-ja-wan-scout-reservation-west-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/129-2026MSRWestCamp",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/129-2026MSRWestCamp"
+    }
+  ],
   "hq_city": "Highland Park",
   "id": "council-129",
   "name": "Northeast Illinois Council",
   "number": 129,
-  "platform": "unknown",
+  "platform": "blackpug",
   "state": "IL",
   "website": "https://neic.org/"
 }

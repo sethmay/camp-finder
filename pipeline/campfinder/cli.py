@@ -21,7 +21,7 @@ import httpx
 
 from . import build as build_mod
 from . import config, enrich as enrich_mod, merge as merge_mod
-from . import registry, schema_gen, validate, zipcentroids
+from . import globalsync, registry, schema_gen, validate, zipcentroids
 from .geocode import geocode
 from .io import dumps_canonical, load_all_councils, save_council
 from .models import Camp, Platform
@@ -107,6 +107,12 @@ def _cmd_zipcentroids(_: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_global_sync(_: argparse.Namespace) -> int:
+    stats = globalsync.sync()
+    print(json.dumps(stats, indent=2))
+    return 0
+
+
 def _cmd_enrich(args: argparse.Namespace) -> int:
     if args.report_missing:
         missing = enrich_mod.missing_websites()
@@ -165,6 +171,9 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("schema", help="regenerate JSON Schemas").set_defaults(func=_cmd_schema)
     sub.add_parser("registry", help="build council registry").set_defaults(func=_cmd_registry)
+    sub.add_parser(
+        "global-sync", help="reconcile platform from Black Pug's Global index (scoutingevent.com)"
+    ).set_defaults(func=_cmd_global_sync)
 
     p_enrich = sub.add_parser("enrich", help="fill council websites (curated seed, then Wikipedia)")
     p_enrich.add_argument("--overwrite", action="store_true", help="refill even if website set")

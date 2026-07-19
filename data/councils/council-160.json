@@ -1,10 +1,130 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "7599 E Waldrip Creek Rd Bloomington, Indiana 47401",
+      "council_id": "council-160",
+      "features": [],
+      "id": "in-ransburg",
+      "lat": 39.053851,
+      "lon": -86.42983,
+      "name": "Ransburg",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "blackpug",
+        "source_url": "https://scoutingevent.com/160-2026Ransburg",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-06-13",
+          "id": "in-ransburg-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-06-20",
+          "id": "in-ransburg-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-06-27",
+          "id": "in-ransburg-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-07-04",
+          "id": "in-ransburg-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-07-11",
+          "id": "in-ransburg-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-ransburg",
+          "end_date": "2026-07-18",
+          "id": "in-ransburg-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/160-2026Ransburg",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/160-2026Ransburg",
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/160-2026Ransburg"
+    }
+  ],
   "hq_city": "Indianapolis",
   "id": "council-160",
   "name": "Crossroads of America Council",
   "number": 160,
-  "platform": "unknown",
+  "platform": "blackpug",
   "state": "IN",
   "website": "https://www.joinscoutsin.org/"
 }

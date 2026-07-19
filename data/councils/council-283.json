@@ -1,7 +1,7 @@
 {
   "camps": [
     {
-      "address": "N1910 Scout Road Birchwood, Wisconsin 54817 Adventure Camp; Tomahawk Tomahawk Scout Camp Monday 07-20-2026 9:00 AM CT to Friday 07-24-2026 4:00 PM CT More Information Map of Session $ View Pricing",
+      "address": "N1910 Scout Road Birchwood, Wisconsin 54817 Adventure Camp; Tomahawk Tomahawk Scout Camp Monday 07-27-2026 9:00 AM CT to Friday 07-31-2026 4:00 PM CT More Information Map of Session $ View Pricing",
       "council_id": "council-283",
       "features": [],
       "id": "wi-adventure-camp",
@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/283-adventure",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -80,6 +80,22 @@
           },
           "registration_url": "https://scoutingevent.com/283-adventure",
           "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-adventure-camp",
+          "end_date": "2026-07-18",
+          "id": "wi-adventure-camp-2026-07-15",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/283-adventure",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/283-adventure",
+          "start_date": "2026-07-15",
           "year": 2026
         },
         {

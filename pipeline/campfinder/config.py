@@ -72,12 +72,13 @@ EXCLUDE_KEYWORDS = (
 )
 
 # --- Geographic sanity bounds (validation) ---
-# Continental US + Alaska + Hawaii coarse bounding boxes. A camp lat/lon must fall in one.
+# Continental US + Alaska + Hawaii + Puerto Rico coarse bounding boxes. A camp lat/lon must fall in one.
 US_BBOXES = (
     # (min_lat, max_lat, min_lon, max_lon)
     (24.5, 49.5, -125.0, -66.9),  # CONUS
     (51.0, 71.5, -179.9, -129.0),  # Alaska
     (18.5, 22.5, -160.5, -154.5),  # Hawaii
+    (17.8, 18.6, -67.4, -65.2),  # Puerto Rico
 )
 
 # --- Session sanity bounds (validation warnings) ---
