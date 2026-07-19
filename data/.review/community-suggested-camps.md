@@ -99,7 +99,7 @@ Daniel Boone, Rodney SR, Raven Knob, Cherokee SR, Camp Boddie, Ockanickon (NC/DE
 
 ## 9. Update — shipped in v0.17.0 (2026-07-19)
 
-**Added (agent-extracted, conf 0.6, per-council official pages) — 14 camps / 51 sessions across 12 councils:**
+**Added (agent-extracted, conf 0.6, per-council official pages) — 15 camps / 51 sessions across 12 councils:**
 Camp Gorsuch (Scouts BSA + Cub, AK/610) · Lost Lake Scout Camp (AK/610, no published dates) ·
 Camp Easton, Camp Grizzly (Scouts BSA + Cub) (ID/611) · Camp Bud Schiele (Scouts BSA + Cub, NC/420) ·
 Camp Davy Crockett (TN/713) · H. Roe Bartle Scout Reservation (10-day sessions) + Theodore Naish Scout
