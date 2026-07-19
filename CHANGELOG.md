@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.13.1 (patch) — 2026-07-18
+
+- `7a7590c` Fix the search map showing no camps at the default zoom: the clustered GeoJSON
+  source never tiled at low zoom (1 of 104 features queryable; camps only appeared after
+  several zoom-ins). Dropped clustering so every camp renders as a point at the default view
+  (295 features tiled at z3 in the same probe); source now created with real data on first load.
+
 ## 0.13.0 (minor) — 2026-07-18
 
 - `62123aa` UI: replace the desktop 3-column search layout (filters | list | map-always-on)
