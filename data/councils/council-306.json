@@ -1,5 +1,117 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "4202 State Hwy DD",
+      "city": "Marshfield",
+      "council_id": "council-306",
+      "description": "Ozark Trails Council's Scouts BSA resident camp near Marshfield, MO, the oldest Scout camp west of the Mississippi (est. 1924), on ~600 wooded acres with lakefront activities, a pool, and shooting sports.",
+      "features": [],
+      "id": "mo-camp-arrowhead",
+      "lat": 37.283,
+      "lon": -92.86,
+      "name": "Camp Arrowhead",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://otcscouting.org/camp-arrowhead/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-arrowhead",
+          "end_date": "2026-06-13",
+          "id": "mo-camp-arrowhead-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://otcscouting.org/camp-arrowhead/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-arrowhead",
+          "end_date": "2026-06-20",
+          "id": "mo-camp-arrowhead-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://otcscouting.org/camp-arrowhead/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-arrowhead",
+          "end_date": "2026-06-27",
+          "id": "mo-camp-arrowhead-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://otcscouting.org/camp-arrowhead/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-arrowhead",
+          "end_date": "2026-07-01",
+          "fee_adult": 155,
+          "fee_youth": 200,
+          "id": "mo-camp-arrowhead-2026-06-28",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://ozarktrailsbsa.org/cub-scout-resident-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-camp-arrowhead",
+          "end_date": "2026-07-09",
+          "fee_adult": 155,
+          "fee_youth": 200,
+          "id": "mo-camp-arrowhead-2026-07-06",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://ozarktrailsbsa.org/cub-scout-resident-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://otcscouting.org/camp-arrowhead/"
+    }
+  ],
   "hq_city": "Springfield",
   "id": "council-306",
   "name": "Ozark Trails Council",

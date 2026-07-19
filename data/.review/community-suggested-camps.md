@@ -94,3 +94,28 @@ Daniel Boone, Rodney SR, Raven Knob, Cherokee SR, Camp Boddie, Ockanickon (NC/DE
 - **CallingDrPug** — 20+ yrs in the space; DM offered.
 - **coel03** — offered to do camp reviews/data QA.
 - **joshf81 / elephagreen / catdogfido** — general help + testing.
+
+---
+
+## 9. Update — shipped in v0.17.0 (2026-07-19)
+
+**Added (agent-extracted, conf 0.6, per-council official pages) — 15 camps / 51 sessions across 12 councils:**
+Camp Gorsuch (Scouts BSA + Cub, AK/610) · Lost Lake Scout Camp (AK/610, no published dates) ·
+Camp Easton, Camp Grizzly (Scouts BSA + Cub) (ID/611) · Camp Bud Schiele (Scouts BSA + Cub, NC/420) ·
+Camp Davy Crockett (TN/713) · H. Roe Bartle Scout Reservation (10-day sessions) + Theodore Naish Scout
+Reservation (Scouts BSA + Webelos) (MO/KS, HoAC/307) · Camp Arrowhead (Scouts BSA + Cub, MO/306) ·
+Camp La-No-Che (FL/083) · Worth Ranch (TX/662) · Camp Liberty (PA/527) · Goose Pond Scout Reservation
+(PA/501) · Akridge Scout Reservation day camp (DE/081) · Ventura County Cub Scout Day Camp (CA/057).
+
+**Corrections applied:**
+- **D-bar-A Scout Ranch (272)** → `not_operating`, sessions removed (no longer a summer resident camp; noted horseback-MB).
+- **Camp Three Falls (Ventura, 057)** — sold Nov 2024; NOT added. Added VCC's current Cub day camp instead.
+- **Camp Catoctin** — not a Baltimore Area Council summer camp on verification; excluded.
+- **Akridge (081)** — is a Cub *day* camp; the council's Cub *resident* camp is at Henson SR (already in data).
+- **Camp Liberty (527)** — superseded the generic Black-Pug entry `pa-heritage-reservation-sbsa-camp` (Heritage's two named Scouts BSA camps are now Independence + Liberty).
+
+**Still open (deferred):**
+- Camp Sinoquipe — **Mason-Dixon Council not in registry** (needs council add first).
+- VERIFY items unresolved: "Summit" (summitbsa.org, council?), Tuscarora (bpcouncil.org) vs our 2 Tuscaroras, Camp Pioneer (Ohio) vs Erie Shores' Pioneer Scout Reservation.
+- Sid Richardson Scout Ranch (Longhorn) — not confirmed as a summer *resident* camp; only Worth Ranch added.
+- Fees null for many new camps (posted only behind registration portals) — enrich later.

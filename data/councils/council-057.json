@@ -1,5 +1,48 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "13950 Peach Hill Road",
+      "city": "Moorpark",
+      "council_id": "council-057",
+      "description": "Ventura County Council's Cub Scout day camp (grades 1-5): a multi-day daytime program with archery, BB guns, climbing wall, outdoor skills, crafts, and advancement. (The council's former resident camp, Camp Three Falls, was sold in November 2024.)",
+      "features": [],
+      "id": "ca-ventura-county-cub-scout-day-camp",
+      "lat": 34.282,
+      "lon": -118.86,
+      "name": "Ventura County Cub Scout Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+        "source_url": "https://www.scoutingamericavc.org/CSCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ca-ventura-county-cub-scout-day-camp",
+          "end_date": "2026-06-18",
+          "id": "ca-ventura-county-cub-scout-day-camp-2026-06-15",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (community-camps pass, r/BSA)",
+            "source_url": "https://www.scoutingamericavc.org/CSCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        }
+      ],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://www.scoutingamericavc.org/CSCamp"
+    }
+  ],
   "hq_city": "Camarillo",
   "id": "council-057",
   "name": "Ventura County Council",
