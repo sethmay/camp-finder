@@ -7,6 +7,8 @@
       "description": "Overnight Cub Scout resident adventure camp at Rhodes France Scout Reservation.",
       "features": [],
       "id": "il-rfsr-cub-scout-adventure-camp",
+      "lat": 39.3,
+      "lon": -89.13,
       "name": "RFSR Cub Scout Adventure Camp",
       "program_types": [
         "cub_resident"
@@ -47,6 +49,8 @@
       "description": "Greater St. Louis Area Council dining-hall Scouts BSA summer camp in central Illinois.",
       "features": [],
       "id": "il-rhodes-france-scout-reservation",
+      "lat": 39.3,
+      "lon": -89.13,
       "name": "Rhodes France Scout Reservation",
       "program_types": [
         "scouts_bsa_resident"
@@ -177,6 +181,8 @@
       "description": "Overnight Cub Scout advancement resident camp (Wolf and Bear) at Camp May.",
       "features": [],
       "id": "mo-cub-scout-advancement-camp-at-camp-may",
+      "lat": 38.42,
+      "lon": -90.63,
       "name": "Cub Scout Advancement Camp at Camp May",
       "program_types": [
         "cub_resident"

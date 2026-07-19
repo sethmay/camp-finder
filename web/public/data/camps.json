@@ -3450,8 +3450,8 @@
     "features": [],
     "fee_from": null,
     "id": "il-rfsr-cub-scout-adventure-camp",
-    "lat": null,
-    "lon": null,
+    "lat": 39.3,
+    "lon": -89.13,
     "method": "llm_extraction",
     "name": "RFSR Cub Scout Adventure Camp",
     "program_types": [
@@ -3491,8 +3491,8 @@
     "features": [],
     "fee_from": null,
     "id": "il-rhodes-france-scout-reservation",
-    "lat": null,
-    "lon": null,
+    "lat": 39.3,
+    "lon": -89.13,
     "method": "llm_extraction",
     "name": "Rhodes France Scout Reservation",
     "program_types": [
@@ -5510,8 +5510,8 @@
     "features": [],
     "fee_from": 95,
     "id": "mo-cub-scout-advancement-camp-at-camp-may",
-    "lat": null,
-    "lon": null,
+    "lat": 38.42,
+    "lon": -90.63,
     "method": "llm_extraction",
     "name": "Cub Scout Advancement Camp at Camp May",
     "program_types": [
@@ -9258,8 +9258,8 @@
     "features": [],
     "fee_from": null,
     "id": "oh-camp-lakota",
-    "lat": null,
-    "lon": null,
+    "lat": 41.245,
+    "lon": -84.568,
     "method": "llm_extraction",
     "name": "Camp Lakota",
     "program_types": [

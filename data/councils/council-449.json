@@ -7,6 +7,8 @@
       "description": "Black Swamp Area Council's 640-acre Scouts BSA resident summer camp on Lake Glengary.",
       "features": [],
       "id": "oh-camp-lakota",
+      "lat": 41.245,
+      "lon": -84.568,
       "name": "Camp Lakota",
       "program_types": [
         "scouts_bsa_resident"
