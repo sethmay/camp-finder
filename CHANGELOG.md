@@ -2,6 +2,15 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.18.0 (minor) — 2026-07-19
+
+- `2c27947` Add **Camp Sinoquipe Scout Reservation** (6 Scouts BSA sessions, $525/$225) under
+  Shenandoah Area Council (598) — the former Mason-Dixon Council is now a district of 598, so no
+  council was added. Resolved the deferred verify items (no new camps): "Summit" = the national
+  Summit Bechtel Reserve (out of scope); Tuscarora/bpcouncil.org = Baden-Powell's Tuscarora SR
+  (already have); Camp Pioneer OH = Erie Shores' Camp Frontier (already have). Confirmed Camp Fiesta
+  Island already present and accurate. Camp count 173 → 174, sessions 678 → 684.
+
 ## 0.17.0 (minor) — 2026-07-19
 
 - `706ceb7` Add **15 community-suggested camps** (+51 sessions across 12 councils) from the r/BSA
