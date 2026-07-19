@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.19.0 (minor) — 2026-07-19
+
+- `95fd812` Add **12 user-verified camps** (+44 sessions across 11 councils, all already in the
+  registry): Skymont, Camp Buck Toms, Boxwell (TN), Camp Mack Morris (+Webelos), Kia Kima (+Cub, AR),
+  Camp Catoctin (Baltimore Area), Camp Hart + Camp Garrison (Musser SR), Camp Pupukea (+Cub, HI),
+  Camp Bartlett (ID), Camp Hohn (+Cub+Webelos, MO), and the James C. Justice National Scout Camp at
+  the Summit Bechtel Reserve (WV). Corrects earlier 0.18.0 calls: "Summit" is a real Scouts BSA
+  resident camp (added), and Camp Catoctin is a Baltimore Area Council camp (added). Also mined two
+  untrusted lead sources into research files: `data/.review/mymaps-camp-leads.md` (358 from the
+  crowdsourced Google My Maps) and `data/.review/usscouts-ocd-leads.md` (425 incremental from the
+  usscouts OCD export). Camp count 174 → 186, sessions 684 → 728.
+
 ## 0.18.0 (minor) — 2026-07-19
 
 - `2c27947` Add **Camp Sinoquipe Scout Reservation** (6 Scouts BSA sessions, $525/$225) under
