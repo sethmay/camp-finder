@@ -1,5 +1,140 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "677 Boy Scout Rd",
+      "city": "Fort Littleton",
+      "council_id": "council-598",
+      "description": "Shenandoah Area Council's 530-acre Scouts BSA resident summer camp in Fulton County, PA, with a 10-acre lake, 40+ merit badges, and first-year (Lakusin) and second-year (Trailblazer) programs. (The council's Mason-Dixon District was the former Mason-Dixon Council.)",
+      "features": [],
+      "id": "pa-camp-sinoquipe-scout-reservation",
+      "lat": 40.0892691,
+      "lon": -77.9680072,
+      "name": "Camp Sinoquipe Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+        "source_url": "https://www.campsinoquipe.org/summercamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-07-04",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-sinoquipe-scout-reservation",
+          "end_date": "2026-07-25",
+          "fee_adult": 225,
+          "fee_youth": 525,
+          "id": "pa-camp-sinoquipe-scout-reservation-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (r/BSA Camp Sinoquipe)",
+            "source_url": "https://www.campsinoquipe.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://www.campsinoquipe.org/summercamp"
+    }
+  ],
   "hq_city": "Winchester",
   "id": "council-598",
   "name": "Shenandoah Area Council",

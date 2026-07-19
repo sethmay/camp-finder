@@ -119,3 +119,18 @@ Camp La-No-Che (FL/083) · Worth Ranch (TX/662) · Camp Liberty (PA/527) · Goos
 - VERIFY items unresolved: "Summit" (summitbsa.org, council?), Tuscarora (bpcouncil.org) vs our 2 Tuscaroras, Camp Pioneer (Ohio) vs Erie Shores' Pioneer Scout Reservation.
 - Sid Richardson Scout Ranch (Longhorn) — not confirmed as a summer *resident* camp; only Worth Ranch added.
 - Fees null for many new camps (posted only behind registration portals) — enrich later.
+
+---
+
+## 10. Update — shipped in v0.18.0 (2026-07-19)
+
+Deferred items from §9 resolved:
+- **Camp Sinoquipe** — ADDED (`pa-camp-sinoquipe-scout-reservation`, 6 Scouts BSA sessions, $525/$225). **Correction:** "Mason-Dixon Council" is defunct — it is now the Mason-Dixon *District* of **Shenandoah Area Council (#598, Winchester VA)**, which was already in the registry. No new council added; camp filed under council-598. (Camp is in Fort Littleton, PA.)
+- **"Summit"** — OUT OF SCOPE: `summitbsa.org` is the national Summit Bechtel Reserve high-adventure base, not a council resident camp. Not added.
+- **Tuscarora (bpcouncil.org)** — HAVE: `bpcouncil.org` is Baden-Powell Council (NY, council-368); same Tuscarora Scout Reservation already in our data. No action.
+- **Camp Pioneer (Ohio)** — HAVE: it is Erie Shores Council's Pioneer Scout Reservation / Camp Frontier (council-460), already in our data. The paired "Camp Lakota" (Black Swamp Area Council, OH) is also already in our data. No action.
+- **Camp Fiesta Island** — no change: already present (council-049) and verified accurate against the official page (7 sessions Jun 14–Aug 1, $740/$520). Note: the site also runs a Scouts BSA "Day Trekker" *day* program with no matching schema `program_type` — left out.
+
+Camp count 173 → 174, sessions 678 → 684.
+
+Still open: Sid Richardson Scout Ranch (Longhorn) resident status; NYLT / whitewater as new filter facets; fee enrichment for camps that post fees only behind registration portals.
