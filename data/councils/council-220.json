@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/220-bc26",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -52,6 +52,24 @@
           },
           "registration_url": "https://scoutingevent.com/220-bc26",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "md-broad-creek-scout",
+          "end_date": "2026-07-18",
+          "fee_adult": 190,
+          "fee_youth": 500,
+          "id": "md-broad-creek-scout-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/220-bc26",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/220-bc26",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

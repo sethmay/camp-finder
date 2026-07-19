@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/640-aq26",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -34,6 +34,24 @@
           },
           "registration_url": "https://scoutingevent.com/640-aq26",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-aquehonga",
+          "end_date": "2026-07-18",
+          "fee_adult": 335,
+          "fee_youth": 695,
+          "id": "ny-camp-aquehonga-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/640-aq26",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/640-aq26",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {
@@ -128,7 +146,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/640-ke26",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -147,6 +165,24 @@
           },
           "registration_url": "https://scoutingevent.com/640-ke26",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-keowa",
+          "end_date": "2026-07-18",
+          "fee_adult": 335,
+          "fee_youth": 695,
+          "id": "ny-camp-keowa-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/640-ke26",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/640-ke26",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

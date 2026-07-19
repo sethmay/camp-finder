@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/066-102135",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -146,9 +146,27 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/066-102136",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ct-mattatuck",
+          "end_date": "2026-07-18",
+          "fee_adult": 180,
+          "fee_youth": 599,
+          "id": "ct-mattatuck-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/066-102136",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/066-102136",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
         {
           "availability": "unknown",
           "camp_id": "ct-mattatuck",

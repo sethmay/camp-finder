@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/368-Tusky2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -34,6 +34,24 @@
           },
           "registration_url": "https://scoutingevent.com/368-Tusky2026",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-tuscarora-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 215,
+          "fee_youth": 645,
+          "id": "ny-tuscarora-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/368-Tusky2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/368-Tusky2026",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/330-2026AKELACAMP",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -110,7 +110,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/330-108266",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -205,7 +205,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/330-105629",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -242,6 +242,24 @@
           },
           "registration_url": "https://scoutingevent.com/330-105629",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nh-griswold-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 295,
+          "fee_youth": 610,
+          "id": "nh-griswold-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/330-105629",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/330-105629",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

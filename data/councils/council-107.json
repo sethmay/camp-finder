@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/107-2026IPSC",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -34,6 +34,24 @@
           },
           "registration_url": "https://scoutingevent.com/107-2026IPSC",
           "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-island-park-scout-camp",
+          "end_date": "2026-07-18",
+          "fee_adult": 140,
+          "fee_youth": 295,
+          "id": "id-island-park-scout-camp-2026-07-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/107-2026IPSC",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/107-2026IPSC",
+          "start_date": "2026-07-13",
           "year": 2026
         },
         {

@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.15.0 (minor) — 2026-07-19
+
+- `PENDING` Add `campfinder global-sync`: parse Black Pug's authoritative Global index
+  (`scoutingevent.com/indexMap.php`) and upgrade `unknown`/`other` councils that are "managed"
+  on Black Pug to `blackpug` (**+29 councils**; never downgrades; skips tentaroo to avoid dupes;
+  reports website discrepancies + deferred tentaroo to a review file). Re-ran the Black Pug scrape
+  over the newly-managed councils and merged **+22 camps / +142 sessions** (camp count 104 -> 126,
+  session 373 -> 515) — National Capital, Northern Star (Many Point/Tomahawk), Crossroads/Ransburg,
+  Long Island/Baiting Hollow, Puerto Rico, etc. Sub-camp program areas collapsed to one camp each;
+  treks/high-adventure kept; junk (day/weekend/OA/campaign) excluded; names cleaned. Adds a Puerto
+  Rico validation bounding box.
+
 ## 0.14.0 (minor) — 2026-07-18
 
 - `9a0705a` Map: label each camp with its name once zoomed past the regional view (`minzoom` 6),

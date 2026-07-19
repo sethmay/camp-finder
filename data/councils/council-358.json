@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampSomers",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -34,6 +34,24 @@
           },
           "registration_url": "https://scoutingevent.com/358-CampSomers",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nj-camp-somers",
+          "end_date": "2026-07-18",
+          "fee_adult": 200,
+          "fee_youth": 660,
+          "id": "nj-camp-somers-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/358-CampSomers",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/358-CampSomers",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {
@@ -92,7 +110,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampWheeler",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -205,7 +223,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/358-CampWinnebago",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -224,6 +242,24 @@
           },
           "registration_url": "https://scoutingevent.com/358-CampWinnebago",
           "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "nj-camp-winnebago",
+          "end_date": "2026-07-18",
+          "fee_adult": 200,
+          "fee_youth": 660,
+          "id": "nj-camp-winnebago-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/358-CampWinnebago",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/358-CampWinnebago",
+          "start_date": "2026-07-12",
           "year": 2026
         },
         {

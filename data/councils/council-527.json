@@ -15,7 +15,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/527-HRSBSA2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
@@ -75,6 +75,24 @@
         {
           "availability": "unknown",
           "camp_id": "pa-heritage-reservation-sbsa-camp",
+          "end_date": "2026-07-18",
+          "fee_adult": 215,
+          "fee_youth": 540,
+          "id": "pa-heritage-reservation-sbsa-camp-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "blackpug",
+            "source_url": "https://scoutingevent.com/527-HRSBSA2026",
+            "verified_at": "2026-07-19"
+          },
+          "registration_url": "https://scoutingevent.com/527-HRSBSA2026",
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-heritage-reservation-sbsa-camp",
           "end_date": "2026-07-25",
           "fee_adult": 215,
           "fee_youth": 440,
@@ -128,7 +146,7 @@
         "confidence": 1.0,
         "method": "blackpug",
         "source_url": "https://scoutingevent.com/527-CampIndependence2026",
-        "verified_at": "2026-07-18"
+        "verified_at": "2026-07-19"
       },
       "sessions": [
         {
