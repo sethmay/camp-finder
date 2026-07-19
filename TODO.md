@@ -30,6 +30,19 @@ Issue Forms + agent triage->PR (recommended, $0, no backend); Tier 2 hosted form
 in-site backend (breaks no-backend principle). Open decisions: intake channel, require council-page URL,
 precedence (council-verified > community > scraped > llm), attribution. Resume when ready to scope.
 
+## Feature ideas (Reddit feedback, 2026-07-19)
+
+- **Program-type tags / filter (High Adventure, Cub, NYLT/special).** Requested twice (errol_timo_malcom
+  + earlier UI feedback). Schema already supports it: `ProgramType` enum (scouts_bsa_resident, cub_resident,
+  cub_day, high_adventure, webelos) + `Feature.high_adventure_option`. Two tiers: (a) tag existing camps
+  that also run HA/Cub (cheap, additive badge); (b) expand v1 scope to list Cub-resident/HA programs as
+  their own filterable categories (new data + a program-type filter facet + UI). Decide tag-only vs full.
+- **Community-suggested camps to add:** ~21 camps folks flagged as missing — see
+  `data/.review/community-suggested-camps.md`. Biggest lead: **Michigan Crossroads (272)** has 5 camps,
+  none in the dataset. Also Goshen Scout Reservation (National Capital, ~6 camps; have 2).
+- **Possible future scope (Breitsol_Victor):** former camps sold to orgs that still allow scout camping;
+  local/state/federal camping locations. Beyond v1 (BSA council resident camps) — park.
+
 ## UI refinement — live at https://sethmay.github.io/camp-finder/
 
 Initial polish done in 0.8.0: date-range inputs no longer overflow the rail; map load-race
