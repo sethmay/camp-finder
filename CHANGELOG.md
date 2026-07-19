@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.13.0 (minor) — 2026-07-18
+
+- `62123aa` UI: replace the desktop 3-column search layout (filters | list | map-always-on)
+  with filters + a single map-or-list view toggled at every breakpoint, defaulting to the map.
+  Result count moved to the always-visible controls row. Camp detail pages gain a single-location
+  map (`CampLocationMap`) in the header — under the name, right of the basic info — when the camp
+  has coordinates. `role="application"` keeps its zoom controls in the accessibility tree.
+
 ## 0.12.0 (minor) — 2026-07-18
 
 - `4f748c9` Cover the 34 Tentaroo councils by agent-assisted extraction (Tentaroo itself is
