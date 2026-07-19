@@ -74,11 +74,11 @@ Merged **35 camps / 116 sessions across 29 councils**. Spot-checked fees against
   Central Georgia (Camp Benjamin Hawkins sold 2024; site shows only Cub/day camp).
 - **Excluded as uncertain (2):** council-098 Camp Osborn and council-212 Mountain Bayou Scout
   Camp — council camp properties with no published resident Scouts BSA summer sessions.
-- **Listed but not mapped (13 camps, vague address -> no geocode):** al-camp-comer,
-  al-camp-sequoyah, ar-camp-de-soto, ar-camp-orr, ga-woodruff-scout-camp, ga-camp-rainey-mountain,
+- **Geocoded to precise coords (13 camps, RESOLVED):** al-camp-comer, al-camp-sequoyah,
+  ar-camp-de-soto, ar-camp-orr, ga-woodruff-scout-camp, ga-camp-rainey-mountain,
   id-bradley-scout-reservation, il-camp-robert-drake, la-camp-avondale, oh-camp-frontier,
-  tx-buffalo-trail-scout-ranch, wi-camp-decorah, ms-camp-yocona. (No map pin / excluded from
-  distance search until a precise address is added.)
+  tx-buffalo-trail-scout-ranch, wi-camp-decorah, ms-camp-yocona — coordinates researched from
+  TopoZone/USGS + official council GPS listings and applied; all 35 camps now map (0 warnings).
 - **No sessions (dates not posted):** la-camp-avondale, ms-camp-yocona (real camps, listed w/o dates).
 - **Prior-year dates:** council-205 Pfeffer Scout Reservation lists only 2027 dates; council-211
   Camp Avondale had only 2022 (dropped).

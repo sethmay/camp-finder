@@ -7,6 +7,8 @@
       "description": "Erie Shores Council's Scouts BSA resident summer camp at Pioneer Scout Reservation (in-council Meal Plan A early-bird rates).",
       "features": [],
       "id": "oh-camp-frontier",
+      "lat": 41.6941,
+      "lon": -84.6824,
       "name": "Camp Frontier",
       "program_types": [
         "scouts_bsa_resident"

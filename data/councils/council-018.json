@@ -7,6 +7,8 @@
       "description": "WildQuest 4-day Scouts BSA resident summer camp.",
       "features": [],
       "id": "ar-camp-de-soto",
+      "lat": 33.0533,
+      "lon": -92.6788,
       "name": "Camp De Soto",
       "program_types": [
         "scouts_bsa_resident"
@@ -47,6 +49,8 @@
       "description": "Scouts BSA merit-badge resident summer camp (also offers high-adventure treks).",
       "features": [],
       "id": "ar-camp-orr",
+      "lat": 36.0581,
+      "lon": -93.2674,
       "name": "Camp Orr",
       "program_types": [
         "scouts_bsa_resident"

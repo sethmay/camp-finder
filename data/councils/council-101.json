@@ -7,6 +7,8 @@
       "description": "Scouts BSA resident summer camp in the mountains of Northeast Georgia.",
       "features": [],
       "id": "ga-camp-rainey-mountain",
+      "lat": 34.8653,
+      "lon": -83.3429,
       "name": "Camp Rainey Mountain",
       "program_types": [
         "scouts_bsa_resident"

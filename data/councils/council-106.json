@@ -7,6 +7,8 @@
       "description": "Scouts BSA resident summer camp with a mountain outdoor program.",
       "features": [],
       "id": "id-bradley-scout-reservation",
+      "lat": 44.398,
+      "lon": -115.1482,
       "name": "Bradley Scout Reservation",
       "program_types": [
         "scouts_bsa_resident"

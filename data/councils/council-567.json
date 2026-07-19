@@ -7,6 +7,8 @@
       "description": "9,000-acre council resident camp in the Davis Mountains of West Texas.",
       "features": [],
       "id": "tx-buffalo-trail-scout-ranch",
+      "lat": 30.8121,
+      "lon": -103.9463,
       "name": "Buffalo Trail Scout Ranch",
       "program_types": [
         "scouts_bsa_resident"

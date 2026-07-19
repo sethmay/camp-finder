@@ -7,6 +7,8 @@
       "description": "Council Scouts BSA resident summer camp near Tupelo; no session dates published on the council site.",
       "features": [],
       "id": "ms-camp-yocona",
+      "lat": 34.2368,
+      "lon": -89.1867,
       "name": "Camp Yocona",
       "program_types": [
         "scouts_bsa_resident"

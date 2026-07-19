@@ -7,6 +7,8 @@
       "description": "Scouts BSA resident summer camp on the Salt Fork River in central Illinois.",
       "features": [],
       "id": "il-camp-robert-drake",
+      "lat": 40.0928,
+      "lon": -87.7536,
       "name": "Camp Robert Drake",
       "program_types": [
         "scouts_bsa_resident"

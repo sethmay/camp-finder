@@ -97,6 +97,8 @@
       "description": "Atlanta Area Council Scouts BSA resident summer camp in the north Georgia mountains.",
       "features": [],
       "id": "ga-woodruff-scout-camp",
+      "lat": 34.9341,
+      "lon": -84.1365,
       "name": "Woodruff Scout Camp",
       "program_types": [
         "scouts_bsa_resident"
