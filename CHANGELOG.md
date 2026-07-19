@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.14.0 (minor) — 2026-07-18
+
+- `9a0705a` Map: label each camp with its name once zoomed past the regional view (`minzoom` 6),
+  via a symbol layer on the camps source with a white halo; MapLibre collision detection hides
+  overlapping labels so dense areas stay legible. Uses the OpenFreeMap Noto Sans glyphs.
+
 ## 0.13.1 (patch) — 2026-07-18
 
 - `7a7590c` Fix the search map showing no camps at the default zoom: the clustered GeoJSON
