@@ -1,6 +1,89 @@
 {
   "camps": [
     {
+      "address": "1425 Camp Road",
+      "city": "Pennsburg",
+      "council_id": "council-525",
+      "description": "Camp Garrison at Musser Scout Reservation hosts the Cradle of Liberty Council's Cub World day camp (Mon-Fri): archery, BB, handicraft, STEM, and more. Two weeks offered in 2026.",
+      "features": [],
+      "id": "pa-camp-garrison",
+      "lat": 40.42,
+      "lon": -75.43,
+      "name": "Camp Garrison",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://mussersr.org/summer/day-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-garrison",
+          "end_date": "2026-07-17",
+          "id": "pa-camp-garrison-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://mussersr.org/summer/day-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-garrison",
+          "end_date": "2026-07-24",
+          "id": "pa-camp-garrison-2026-07-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://mussersr.org/summer/day-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://mussersr.org/summer/day-camp"
+    },
+    {
+      "address": "1425 Camp Road",
+      "city": "Pennsburg",
+      "council_id": "council-525",
+      "description": "Camp Hart is the Cradle of Liberty Council's Cub Scout summer resident program (Cub Adventures) for Cub Scouts and Webelos, on the 1,400-acre Musser Scout Reservation along Unami Creek. 2026 resident dates/fees not cleanly published.",
+      "features": [],
+      "id": "pa-camp-hart",
+      "lat": 40.42,
+      "lon": -75.43,
+      "name": "Camp Hart",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://mussersr.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://mussersr.org/"
+    },
+    {
       "address": "1200 Resica Falls Rd East Stroudsburg, Pennsylvania 18302",
       "council_id": "council-525",
       "features": [],

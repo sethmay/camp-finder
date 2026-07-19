@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "3344 Cabbage Patch Rd",
+      "city": "Altamont",
+      "council_id": "council-556",
+      "description": "Cherokee Area Council's Scouts BSA summer camp on 2,200+ acres of the Cumberland Plateau, with 50 merit badges, first-year programs, and off-site high-adventure/hiking options.",
+      "features": [],
+      "id": "tn-skymont-scout-reservation",
+      "lat": 35.432501473301,
+      "lon": -85.862878340314,
+      "name": "Skymont Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://www.cherokeeareabsa.com/skymont",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tn-skymont-scout-reservation",
+          "end_date": "2026-06-13",
+          "fee_adult": 150,
+          "fee_youth": 380,
+          "id": "tn-skymont-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.cherokeeareabsa.com/skymont",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-skymont-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 150,
+          "fee_youth": 380,
+          "id": "tn-skymont-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.cherokeeareabsa.com/skymont",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tn-skymont-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 380,
+          "id": "tn-skymont-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.cherokeeareabsa.com/skymont",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://www.cherokeeareabsa.com/skymont"
+    }
+  ],
   "hq_city": "Chattanooga",
   "id": "council-556",
   "name": "Cherokee Area Council",

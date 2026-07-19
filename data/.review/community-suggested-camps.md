@@ -134,3 +134,16 @@ Deferred items from §9 resolved:
 Camp count 173 → 174, sessions 678 → 684.
 
 Still open: Sid Richardson Scout Ranch (Longhorn) resident status; NYLT / whitewater as new filter facets; fee enrichment for camps that post fees only behind registration portals.
+
+---
+
+## 11. Update — shipped in v0.19.0 (2026-07-19)
+
+User-supplied batch of manually-verified missing camps — **12 records / 44 sessions across 11 councils** (all councils already in registry):
+Skymont Scout Reservation (Cherokee Area 556) · Camp Buck Toms (Great Smoky Mtn 557; 2027 dates published) · Boxwell Reservation (Middle TN 560) · Camp Mack Morris (Scouts BSA + Webelos, West TN 559) · Kia Kima Scout Reservation (Scouts BSA + Cub, Chickasaw 558; camp is in Hardy **AR**) · Camp Catoctin (Baltimore Area 220) · Camp Hart + Camp Garrison (Musser SR, Cradle of Liberty 525) · Camp Pupukea (Scouts BSA + Cub, Aloha 104) · Camp Bartlett (Crossroads of the West 590; camp is in Montpelier **ID**) · Camp Hohn (Scouts BSA + Cub + Webelos, Great Rivers 653) · James C. Justice National Scout Camp (Summit Bechtel, National 999; 2027 dates).
+
+**Corrections to §9/§10 (my earlier calls were wrong):**
+- **"Summit"** is NOT out of scope — the Summit Bechtel Reserve runs a genuine week-long Scouts BSA merit-badge resident camp (James C. Justice National Scout Camp), added as `scouts_bsa_resident` (consistent with carrying Philmont / Sea Base).
+- **Camp Catoctin** IS a Baltimore Area Council Scouts BSA resident camp (Aug 10–16, $475/$155) — the earlier "not a BAC camp" verdict was incorrect.
+
+Also: **usscouts OCD** processed from a user-supplied export → `data/.review/usscouts-ocd-leads.md` (425 incremental Scout-owned leads). My Maps leads in `data/.review/mymaps-camp-leads.md` (358). Camp count 174 → 186, sessions 684 → 728.

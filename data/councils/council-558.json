@@ -1,5 +1,155 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "629 Kia Kima Trail",
+      "city": "Hardy",
+      "council_id": "council-558",
+      "description": "Chickasaw Council's Scouts BSA summer camp in the Arkansas Ozarks on the South Fork River (~540 acres): Camp Osage (dining hall, all 5 weeks) and Camp Cherokee (troop cooking, weeks 1-2). Scoutcraft, aquatics, shooting sports, climbing/COPE, Trailblazers first-year program, and Ozark Venture high adventure.",
+      "features": [],
+      "id": "ar-kia-kima-scout-reservation",
+      "lat": 36.34,
+      "lon": -91.47,
+      "name": "Kia Kima Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (user-verified batch 1)",
+        "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-06-02",
+          "id": "ar-kia-kima-scout-reservation-2026-05-30",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/cub-scout-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-30",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-06-06",
+          "id": "ar-kia-kima-scout-reservation-2026-06-03",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/cub-scout-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-03",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-06-13",
+          "fee_adult": 175,
+          "fee_youth": 330,
+          "id": "ar-kia-kima-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 175,
+          "fee_youth": 330,
+          "id": "ar-kia-kima-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_adult": 175,
+          "fee_youth": 330,
+          "id": "ar-kia-kima-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-07-04",
+          "fee_adult": 175,
+          "fee_youth": 330,
+          "id": "ar-kia-kima-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ar-kia-kima-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 175,
+          "fee_youth": 330,
+          "id": "ar-kia-kima-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (user-verified batch 1)",
+            "source_url": "https://www.chickasaw.org/events-master/summer-camp-2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "AR",
+      "status": "active",
+      "website_url": "https://www.chickasaw.org/events-master/summer-camp-2026"
+    }
+  ],
   "hq_city": "Memphis",
   "id": "council-558",
   "name": "Chickasaw Council",
