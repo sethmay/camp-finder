@@ -1,6 +1,80 @@
 {
   "camps": [
     {
+      "address": "12900 E Organization Ridge Rd",
+      "city": "Tucson",
+      "council_id": "council-011",
+      "description": "Catalina Council's Scouts BSA resident camp in the Santa Catalina Mountains near Tucson.",
+      "features": [],
+      "id": "az-camp-lawton",
+      "lat": 32.407766,
+      "lon": -110.7166163,
+      "name": "Camp Lawton",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://catalinacouncil.org/outdoors/lawton/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-lawton",
+          "end_date": "2026-06-07",
+          "id": "az-camp-lawton-2026-06-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://catalinacouncil.org/outdoors/lawton/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-lawton",
+          "end_date": "2026-06-14",
+          "id": "az-camp-lawton-2026-06-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://catalinacouncil.org/outdoors/lawton/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-lawton",
+          "end_date": "2026-06-28",
+          "id": "az-camp-lawton-2026-06-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://catalinacouncil.org/outdoors/lawton/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        }
+      ],
+      "state": "AZ",
+      "status": "active",
+      "website_url": "https://catalinacouncil.org/outdoors/lawton/"
+    },
+    {
       "address": "12900 E. Organization Ridge Rd Tucson, Arizona 85619",
       "council_id": "council-011",
       "features": [],

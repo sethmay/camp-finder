@@ -1,5 +1,96 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "south of Defiance, Ohio",
+      "city": "Defiance",
+      "council_id": "council-449",
+      "description": "Black Swamp Area Council's 640-acre Scouts BSA resident summer camp on Lake Glengary.",
+      "features": [],
+      "id": "oh-camp-lakota",
+      "lat": 41.245,
+      "lon": -84.568,
+      "name": "Camp Lakota",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lakota",
+          "end_date": "2026-06-20",
+          "id": "oh-camp-lakota-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lakota",
+          "end_date": "2026-06-27",
+          "id": "oh-camp-lakota-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lakota",
+          "end_date": "2026-07-04",
+          "id": "oh-camp-lakota-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lakota",
+          "end_date": "2026-07-11",
+          "id": "oh-camp-lakota-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://www.blackswampbsa.org/camping/scouts-bsa-summer-camp/63247"
+    }
+  ],
   "hq_city": "Findlay",
   "id": "council-449",
   "name": "Black Swamp Area Council",

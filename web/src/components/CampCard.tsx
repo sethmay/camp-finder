@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import type { RankedCamp } from "@lib/types";
 import { withBase } from "@lib/paths";
-import { formatDateRange, formatFeeFrom } from "@lib/format";
+import { formatDateRange, formatFeeFrom, programCategories, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import AvailabilityBadge from "./AvailabilityBadge";
 import FeatureChip from "./FeatureChip";
 import StaleBadge from "./StaleBadge";
@@ -21,6 +21,7 @@ export default function CampCard({
 }) {
   const { camp, distanceMiles, nextSession } = ranked;
   const extraChips = camp.features.length - MAX_CHIPS;
+  const badgeCats = programCategories(camp.program_types).filter((c) => c !== "scouts_bsa");
 
   return (
     <a
@@ -37,6 +38,18 @@ export default function CampCard({
         <div className="min-w-0">
           <h3 className="truncate font-display text-h3 text-ink">{camp.name}</h3>
           <p className="mt-0.5 truncate text-sm text-muted">{camp.council_name}</p>
+          {badgeCats.length > 0 && (
+            <div className="mt-1 flex flex-wrap gap-1">
+              {badgeCats.map((c) => (
+                <span
+                  key={c}
+                  className="inline-flex items-center rounded-pill border border-primary px-2 py-0.5 text-xs font-semibold text-primary"
+                >
+                  {PROGRAM_CATEGORY_LABEL[c]}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
         <StaleBadge verifiedAt={camp.verified_at} />
       </div>

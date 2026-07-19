@@ -98,6 +98,18 @@ describe("rankCamps", () => {
     const r = rankCamps([near, far], { upcomingYear: 2026, textIds: new Set(["wa-far"]) }, null);
     expect(r.map((x) => x.camp.id)).toEqual(["wa-far"]);
   });
+
+  it("filters by program category with OR semantics across categories", () => {
+    const sbsa = camp({ id: "or-sbsa", name: "SBSA", state: "OR" });
+    const ha = camp({ id: "or-ha", name: "HA", state: "OR", program_types: ["high_adventure"] });
+    const both = camp({ id: "or-both", name: "Both", state: "OR", program_types: ["cub_resident", "high_adventure"] });
+    const camps = [sbsa, ha, both];
+    expect(
+      rankCamps(camps, { upcomingYear: 2026, categories: ["high_adventure"] }, null).map((r) => r.camp.id).sort(),
+    ).toEqual(["or-both", "or-ha"]);
+    expect(rankCamps(camps, { upcomingYear: 2026, categories: ["cub"] }, null).map((r) => r.camp.id)).toEqual(["or-both"]);
+    expect(rankCamps(camps, { upcomingYear: 2026 }, null).length).toBe(3);
+  });
 });
 
 describe("sortRanked", () => {

@@ -21,6 +21,9 @@ export type Feature =
   | "scuba"
   | "mountain_biking";
 
+// A camp's program_types (from the pipeline) collapse into these user-facing categories.
+export type ProgramCategory = "scouts_bsa" | "cub" | "high_adventure";
+
 export interface Session {
   id: string;
   year: number;
@@ -85,6 +88,7 @@ export interface Criteria {
   dateEnd?: string; // ISO
   maxCost?: number;
   features?: Feature[];
+  categories?: ProgramCategory[];
   state?: string;
   /** Ids matched by the text search island; undefined = text filter inactive. */
   textIds?: Set<string>;

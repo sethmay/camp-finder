@@ -1,5 +1,156 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2599 W Webber Creek Road",
+      "city": "Payson",
+      "council_id": "council-010",
+      "description": "Grand Canyon Council's Scouts BSA week-long resident summer camp below the Mogollon Rim north of Payson.",
+      "features": [],
+      "id": "az-camp-geronimo",
+      "lat": 34.40667009891,
+      "lon": -111.374455715094,
+      "name": "Camp Geronimo",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.campgeronimo.org/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-geronimo",
+          "end_date": "2026-06-06",
+          "id": "az-camp-geronimo-2026-05-31",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.campgeronimo.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-geronimo",
+          "end_date": "2026-06-13",
+          "id": "az-camp-geronimo-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.campgeronimo.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-geronimo",
+          "end_date": "2026-06-20",
+          "id": "az-camp-geronimo-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.campgeronimo.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-geronimo",
+          "end_date": "2026-06-27",
+          "id": "az-camp-geronimo-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.campgeronimo.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "az-camp-geronimo",
+          "end_date": "2026-07-11",
+          "id": "az-camp-geronimo-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.campgeronimo.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "AZ",
+      "status": "active",
+      "website_url": "https://www.campgeronimo.org/summer-camp/"
+    },
+    {
+      "address": "7709 S Boy Scout Camp Road",
+      "city": "Parks",
+      "council_id": "council-010",
+      "description": "Grand Canyon Council's Raymond-Cragin (R-C) Scout Reservation hosting the Cub Scout resident camp near Parks/Flagstaff.",
+      "features": [],
+      "id": "az-r-c-scout-ranch",
+      "lat": 35.1430036,
+      "lon": -111.9686245,
+      "name": "R-C Scout Ranch",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://scoutingevent.com/010-CubRaymond2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "az-r-c-scout-ranch",
+          "end_date": "2026-06-21",
+          "fee_adult": 215,
+          "fee_youth": 235,
+          "id": "az-r-c-scout-ranch-2026-06-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://scoutingevent.com/010-CubRaymond2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-19",
+          "year": 2026
+        }
+      ],
+      "state": "AZ",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/010-CubRaymond2026"
+    }
+  ],
   "hq_city": "Phoenix",
   "id": "council-010",
   "name": "Grand Canyon Council",

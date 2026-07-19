@@ -2,6 +2,7 @@
 // The app resolves ZIP -> origin centroid and text -> matched ids, then calls rankCamps.
 
 import { haversineMiles } from "./distance";
+import { programCategories } from "./format";
 import type { Camp, Criteria, RankedCamp, Session, SortKey } from "./types";
 import type { Centroid } from "./zip";
 
@@ -27,12 +28,15 @@ export function rankCamps(
   origin: Centroid | null,
 ): RankedCamp[] {
   const feats = criteria.features ?? [];
+  const cats = criteria.categories ?? [];
   const out: RankedCamp[] = [];
 
   for (const camp of camps) {
     if (criteria.state && camp.state !== criteria.state) continue;
     if (criteria.textIds && !criteria.textIds.has(camp.id)) continue;
     if (feats.length && !feats.every((f) => camp.features.includes(f))) continue;
+    if (cats.length && !programCategories(camp.program_types).some((c) => cats.includes(c)))
+      continue;
 
     // Sessions that count for this query: upcoming, and within the date range if set.
     const sessions = upcomingSessions(camp, criteria.upcomingYear).filter((s) =>

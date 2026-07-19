@@ -1,5 +1,183 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2182 County Rd 96",
+      "city": "Lake George",
+      "council_id": "council-060",
+      "description": "Pathway to the Rockies Council's Scouts BSA resident camp in the Pike National Forest.",
+      "features": [],
+      "id": "co-camp-alexander",
+      "lat": 38.952,
+      "lon": -105.301,
+      "name": "Camp Alexander",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://campalexandercolorado.org/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-06-06",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-05-31",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-06-13",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-06-20",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-06-27",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-07-04",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-07-11",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-alexander",
+          "end_date": "2026-07-18",
+          "fee_adult": 420,
+          "fee_youth": 380,
+          "id": "co-camp-alexander-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://campalexandercolorado.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://campalexandercolorado.org/summer-camp/"
+    },
+    {
+      "address": "2182 County Rd 96",
+      "city": "Lake George",
+      "council_id": "council-060",
+      "description": "High-adventure trek program operated at Camp Alexander in the Colorado Rockies.",
+      "features": [],
+      "id": "co-camp-alexander-outback",
+      "lat": 38.952,
+      "lon": -105.301,
+      "name": "Camp Alexander Outback",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://campalexandercolorado.org/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://campalexandercolorado.org/summer-camp/"
+    }
+  ],
   "hq_city": "Colorado Springs",
   "id": "council-060",
   "name": "Pathway to the Rockies Council",

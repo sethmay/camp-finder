@@ -1,5 +1,263 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1750 Fiesta Island Rd",
+      "city": "San Diego",
+      "council_id": "council-049",
+      "description": "San Diego-Imperial Council's waterfront Scouts BSA resident camp on Fiesta Island, Mission Bay.",
+      "features": [],
+      "id": "ca-camp-fiesta-island",
+      "lat": 32.767380879733,
+      "lon": -117.214594642155,
+      "name": "Camp Fiesta Island",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-06-20",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-06-27",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-07-04",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-07-11",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-07-18",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-07-25",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-fiesta-island",
+          "end_date": "2026-08-01",
+          "fee_adult": 520,
+          "fee_youth": 740,
+          "id": "ca-camp-fiesta-island-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://www.sdicscouting.org/camping/summer-programs/camp-fiesta-island"
+    },
+    {
+      "address": "27955 Highway 79",
+      "city": "Santa Ysabel",
+      "council_id": "council-049",
+      "description": "San Diego-Imperial Council's mountain Scouts BSA resident summer camp near Lake Henshaw.",
+      "features": [],
+      "id": "ca-mataguay-scout-ranch",
+      "lat": 33.2019679,
+      "lon": -116.6535825,
+      "name": "Mataguay Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.sdicscouting.org/camping/summer-programs/mataguay-scout-ranch-summer-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ca-mataguay-scout-ranch",
+          "end_date": "2026-06-20",
+          "fee_adult": 375,
+          "fee_youth": 590,
+          "id": "ca-mataguay-scout-ranch-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/mataguay-scout-ranch-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-mataguay-scout-ranch",
+          "end_date": "2026-06-27",
+          "fee_adult": 375,
+          "fee_youth": 590,
+          "id": "ca-mataguay-scout-ranch-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/mataguay-scout-ranch-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ca-mataguay-scout-ranch",
+          "end_date": "2026-07-04",
+          "fee_adult": 375,
+          "fee_youth": 590,
+          "id": "ca-mataguay-scout-ranch-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://www.sdicscouting.org/camping/summer-programs/mataguay-scout-ranch-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://www.sdicscouting.org/camping/summer-programs/mataguay-scout-ranch-summer-camp"
+    },
+    {
+      "address": "1750 Fiesta Island Rd",
+      "city": "San Diego",
+      "council_id": "council-049",
+      "description": "San Diego-Imperial Council's Cub Scout (Webelos/Arrow of Light) resident camp on Mission Bay.",
+      "features": [],
+      "id": "ca-webelos-and-aol-resident-camp",
+      "lat": 32.767380879733,
+      "lon": -117.214594642155,
+      "name": "Webelos and AOL Resident Camp",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.sdicscouting.org/camping/summer-programs",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://www.sdicscouting.org/camping/summer-programs"
+    }
+  ],
   "hq_city": "San Diego",
   "id": "council-049",
   "name": "San Diego-Imperial Council",

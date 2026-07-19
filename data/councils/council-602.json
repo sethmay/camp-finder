@@ -1,5 +1,184 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1723 Maidens Road",
+      "city": "Maidens",
+      "council_id": "council-602",
+      "description": "Heart of Virginia Council's Scouts BSA long-term resident summer camp, operating since 1965.",
+      "features": [],
+      "id": "va-camp-t-brady-saunders",
+      "lat": 37.6839671,
+      "lon": -77.8675371,
+      "name": "Camp T. Brady Saunders",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://bradysaunders.net/camp/summercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-t-brady-saunders",
+          "end_date": "2026-06-27",
+          "fee_adult": 195,
+          "fee_youth": 460,
+          "id": "va-camp-t-brady-saunders-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://bradysaunders.net/camp/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-t-brady-saunders",
+          "end_date": "2026-07-04",
+          "fee_adult": 195,
+          "fee_youth": 460,
+          "id": "va-camp-t-brady-saunders-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://bradysaunders.net/camp/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-t-brady-saunders",
+          "end_date": "2026-07-11",
+          "fee_adult": 195,
+          "fee_youth": 460,
+          "id": "va-camp-t-brady-saunders-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://bradysaunders.net/camp/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-t-brady-saunders",
+          "end_date": "2026-07-18",
+          "fee_adult": 195,
+          "fee_youth": 460,
+          "id": "va-camp-t-brady-saunders-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://bradysaunders.net/camp/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "VA",
+      "status": "active",
+      "website_url": "https://bradysaunders.net/camp/summercamp/"
+    },
+    {
+      "address": "1723 Maidens Road",
+      "city": "Maidens",
+      "council_id": "council-602",
+      "description": "Heart of Virginia Council's Cub Scout resident camp (4-day/3-night) at the Heart of Virginia Scout Reservation.",
+      "features": [],
+      "id": "va-cub-and-webelos-adventure-camp",
+      "lat": 37.6839671,
+      "lon": -77.8675371,
+      "name": "Cub and Webelos Adventure Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://cubadventurecamp.net/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "va-cub-and-webelos-adventure-camp",
+          "end_date": "2026-06-15",
+          "fee_adult": 210,
+          "fee_youth": 210,
+          "id": "va-cub-and-webelos-adventure-camp-2026-06-12",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://cubadventurecamp.net/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-cub-and-webelos-adventure-camp",
+          "end_date": "2026-06-20",
+          "fee_adult": 210,
+          "fee_youth": 210,
+          "id": "va-cub-and-webelos-adventure-camp-2026-06-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://cubadventurecamp.net/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-cub-and-webelos-adventure-camp",
+          "end_date": "2026-07-20",
+          "fee_adult": 210,
+          "fee_youth": 210,
+          "id": "va-cub-and-webelos-adventure-camp-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (program-cats pass)",
+            "source_url": "https://cubadventurecamp.net/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        }
+      ],
+      "state": "VA",
+      "status": "active",
+      "website_url": "https://cubadventurecamp.net/summer-camp/"
+    }
+  ],
   "hq_city": "Richmond",
   "id": "council-602",
   "name": "Heart of Virginia Council",

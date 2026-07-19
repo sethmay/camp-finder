@@ -1,5 +1,56 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "73800 Overseas Highway",
+      "city": "Islamorada",
+      "council_id": "council-999",
+      "description": "Scouting America's national ocean high-adventure base: sailing, scuba, and fishing treks in the Florida Keys.",
+      "features": [],
+      "id": "fl-florida-sea-base",
+      "lat": 24.8519204,
+      "lon": -80.7373146,
+      "name": "Florida Sea Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.bsaseabase.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://www.bsaseabase.org/"
+    },
+    {
+      "address": "17 Deer Run Road",
+      "city": "Cimarron",
+      "council_id": "council-999",
+      "description": "Scouting America's flagship high-adventure base: 7-, 9-, and 12-day backcountry backpacking treks in northern New Mexico.",
+      "features": [],
+      "id": "nm-philmont-scout-ranch",
+      "lat": 36.4419,
+      "lon": -105.2497,
+      "name": "Philmont Scout Ranch",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (program-cats pass)",
+        "source_url": "https://www.philmontscoutranch.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NM",
+      "status": "active",
+      "website_url": "https://www.philmontscoutranch.org/"
+    }
+  ],
   "hq_city": "Irving",
   "id": "council-999",
   "name": "National Council",

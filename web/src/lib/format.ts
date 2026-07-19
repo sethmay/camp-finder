@@ -1,6 +1,6 @@
 // Display formatting + small static lookup tables. Pure; unit-tested.
 
-import type { Availability, Feature } from "./types";
+import type { Availability, Feature, ProgramCategory } from "./types";
 
 export const FEATURE_LABEL: Record<Feature, string> = {
   dining_hall: "Dining hall",
@@ -17,6 +17,30 @@ export const FEATURE_LABEL: Record<Feature, string> = {
   scuba: "Scuba",
   mountain_biking: "Mountain biking",
 };
+
+export const PROGRAM_CATEGORY_LABEL: Record<ProgramCategory, string> = {
+  scouts_bsa: "Scouts BSA",
+  cub: "Cub Scout",
+  high_adventure: "High Adventure",
+};
+
+const PROGRAM_TYPE_TO_CATEGORY: Record<string, ProgramCategory> = {
+  scouts_bsa_resident: "scouts_bsa",
+  cub_resident: "cub",
+  cub_day: "cub",
+  webelos: "cub",
+  high_adventure: "high_adventure",
+};
+
+/** Distinct user-facing categories a camp belongs to, from its program_types. */
+export function programCategories(programTypes: string[]): ProgramCategory[] {
+  const out: ProgramCategory[] = [];
+  for (const pt of programTypes) {
+    const cat = PROGRAM_TYPE_TO_CATEGORY[pt];
+    if (cat && !out.includes(cat)) out.push(cat);
+  }
+  return out;
+}
 
 // Status tone -> Tailwind classes (color + we always pair with icon + text in the UI).
 export const AVAILABILITY_LABEL: Record<Availability, string> = {
