@@ -40,7 +40,7 @@ export default function CampLocationMap({
       ref={containerRef}
       className="h-full w-full rounded-md"
       style={{ filter: "saturate(0.62)" }}
-      role="img"
+      role="application"
       aria-label={`Map showing the location of ${name}`}
     />
   );
