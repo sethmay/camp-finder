@@ -97,6 +97,28 @@ export default function MapView({
         "circle-stroke-color": "#FFFFFF",
       },
     });
+    // Camp-name labels appear once zoomed past the regional view; MapLibre's collision
+    // detection hides overlapping labels, so dense areas stay legible.
+    map.addLayer({
+      id: "point-label",
+      type: "symbol",
+      source: SRC,
+      minzoom: 6,
+      layout: {
+        "text-field": ["get", "name"],
+        "text-font": ["Noto Sans Regular"],
+        "text-size": 12,
+        "text-anchor": "left",
+        "text-offset": [0.8, 0],
+        "text-max-width": 12,
+        "text-optional": true,
+      },
+      paint: {
+        "text-color": MAP_COLORS.markerDefault,
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5,
+      },
+    });
 
     map.on("click", "point", (e) => {
       const feat = e.features?.[0];
