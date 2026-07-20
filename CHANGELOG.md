@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.20.0 (minor) — 2026-07-19
+
+- `c78121c` **Indiana leads batch** — first pass through the untrusted My Maps + usscouts OCD leads
+  (IN pool), scout-verified against each council's official site: added **11 camps (+35 sessions)
+  across 7 councils** — Camp Chief Little Turtle (Scouts BSA+Cub, Anthony Wayne 157), Camp ToPeNeBee
+  (La Salle 165), Camp Tamarack (La Salle, MI), Camp Frank S. Betz (Pathway to Adventure 456, MI),
+  Camp Belzer / Kikthawenund / Wildwood (Crossroads 160), Camp Buffalo (Scouts BSA+Cub) + Franklin L.
+  Cary Camp (Sagamore 162), Maumee Scout Reservation (Hoosier Trails 145), Tunnel Mill Scout
+  Reservation (Lincoln Heritage 205). Dropped as defunct/unconfirmed/out-of-scope: Camp Krietenstein
+  (sold), Old Ben, Red Wing, Bear Creek, Louis Ernst, Rice Woods, and a Woodland Trails OH event hall.
+  Camp count 186 → 197, sessions 728 → 763.
+
 ## 0.19.0 (minor) — 2026-07-19
 
 - `95fd812` Add **12 user-verified camps** (+44 sessions across 11 councils, all already in the
