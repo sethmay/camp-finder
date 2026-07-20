@@ -2,6 +2,19 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.23.0 (minor) — 2026-07-19
+
+- `2b3dac6` **Leads batch 4 (SC/UT/CT/IA/KY/LA/MS/OK/RI/NH)** — processed ~70 crowdsourced My Maps +
+  OCD leads across ten state pools (one scout each), plus community-suggested **Camp McKee** (Blue
+  Grass 204) and the deferred **Saukenauk SR** (corrected to Mississippi Valley 141, Mendon IL). Added
+  **50 camps (+82 sessions) across 27 councils**. A global (name, state) + substring dedup caught 6
+  cross-batch duplicates — including a mis-keyed Camp Daniel Marshall (returned under CA council 041 but
+  already held under GA 093) and "Adventure Day Camp at Camp Norse" vs the existing Camp Norse. Handled
+  cross-state camps (Camp Loll → WY, Camp V-Bar → MS under a LA council, Quivira → KS, Little Sioux →
+  NE). Coordinates geocoded then recovered from map pins (25 fixed, 3 nulled, ~13 coordinate-less).
+  Deferred Will Rogers SR (Cimarron council 474 not in registry). Camp count 324 → 374, sessions
+  1054 → 1136.
+
 ## 0.22.0 (minor) — 2026-07-19
 
 - `41327d7` **Leads batch 3 (MN/PA/GA/AL/NY/MA/TN/WV/IL/ME)** — processed ~100 crowdsourced My Maps +
