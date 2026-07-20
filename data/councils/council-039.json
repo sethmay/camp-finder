@@ -1,6 +1,28 @@
 {
   "camps": [
     {
+      "city": "Orange",
+      "council_id": "council-039",
+      "description": "Orange County Council 210-acre outdoor education center in Orange, CA. Operating 2026 summer day-camp programs including Paddle Sport Aquatics Camp, Junior Aquatics Camp, and Adventure Hill (zip line, high/low ropes, climbing tower).",
+      "features": [],
+      "id": "ca-irvine-ranch-outdoor-education-center",
+      "name": "Irvine Ranch Outdoor Education Center",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://ocbsa.org/summercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://ocbsa.org/summercamp/"
+    },
+    {
       "address": "1931 W Coast Hwy",
       "city": "Newport Beach",
       "council_id": "council-039",

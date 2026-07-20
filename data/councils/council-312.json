@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "3463 Trout Camp Road",
+      "city": "Waterloo",
+      "council_id": "council-312",
+      "description": "Greater St. Louis Area Council (Cahokia Mounds District) camp in Waterloo, IL used for Cub Adventure Camp and Cub Scout day camp during the summer; pool, shooting ranges, fishing, trails, rappelling. 2026 day camp session dates not cleanly published.",
+      "features": [],
+      "id": "il-camp-vandeventer",
+      "lat": 38.330168601582,
+      "lon": -90.208147034763,
+      "name": "Camp Vandeventer",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://stlbsa.org/find-your-district/cahokia-mounds-district/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://stlbsa.org/find-your-district/cahokia-mounds-district/"
+    },
+    {
       "address": "Rhodes France Scout Reservation",
       "city": "Pana",
       "council_id": "council-312",

@@ -1,5 +1,28 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Woodville",
+      "council_id": "council-578",
+      "description": "Three Rivers Council's ~715-acre scout ranch in the East Texas Piney Woods near Woodville (about 50 miles north of Beaumont). Open year-round for camping and hosts council-run resident summer and winter camps. Specific 2026 summer session dates not cleanly published.",
+      "features": [],
+      "id": "tx-scott-scout-ranch",
+      "name": "Scott Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://3riversbsa.org/scott-scout-ranch/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://3riversbsa.org/scott-scout-ranch/"
+    }
+  ],
   "hq_city": "Beaumont",
   "id": "council-578",
   "name": "Three Rivers Council",

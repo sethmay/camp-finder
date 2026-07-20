@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "3000 Shoshonean Rd",
+      "city": "San Pedro",
+      "council_id": "council-033",
+      "description": "Greater Los Angeles Area Council beachfront aquatics/camping center on Cabrillo Beach in San Pedro (est. 1946). Hosts Cub Scout and Scout day camps with swimming, kayaking, canoeing, archery, and merit badge programs.",
+      "features": [],
+      "id": "ca-cabrillo-beach-youth-waterfront-sports-center",
+      "lat": 33.717687,
+      "lon": -118.28446,
+      "name": "Cabrillo Beach Youth Waterfront Sports Center",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://cabrillobeachyouthcenter.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://cabrillobeachyouthcenter.org/"
+    },
+    {
       "address": "1 Cherry Valley Road Avalon, California 90704",
       "council_id": "council-033",
       "features": [],

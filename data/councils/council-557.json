@@ -105,6 +105,30 @@
       "state": "TN",
       "status": "active",
       "website_url": "https://easttnscouts.org/summercamp/"
+    },
+    {
+      "city": "Andersonville",
+      "council_id": "council-557",
+      "description": "Great Smoky Mountain Council camp on Norris Lake serving as the home base for Winding Waters Adventures, the council's signature high-adventure program (mountain biking, backpacking/Trek Tennessee, rock climbing, whitewater rafting, canoeing/kayaking/River Runner). Open to Scouts BSA, Venturers, and Sea Scouts 14+. Confirmed operating for 2026 (trek registrations close June 2026).",
+      "features": [],
+      "id": "tn-camp-pellissippi",
+      "lat": 36.2684,
+      "lon": -84.0018,
+      "name": "Camp Pellissippi",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://easttnscouts.org/high-adventure/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://easttnscouts.org/high-adventure/"
     }
   ],
   "hq_city": "Knoxville",

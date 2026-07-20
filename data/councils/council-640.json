@@ -293,6 +293,56 @@
       "state": "NY",
       "status": "active",
       "website_url": "https://scoutingevent.com/640-ke26"
+    },
+    {
+      "address": "1481 Crystal Lake Road",
+      "city": "Narrowsburg",
+      "council_id": "council-640",
+      "description": "Rustic Scouts BSA resident summer camp on Lake Nianque at the Ten Mile River Scout Camps reservation (Greater New York Councils); in full operation July and August. Specific 2026 weekly session dates not separately published.",
+      "features": [],
+      "id": "ny-camp-ranachqua-ten-mile-river-scout-camps",
+      "lat": 42.0459145,
+      "lon": -75.3608552,
+      "name": "Camp Ranachqua (Ten Mile River Scout Camps)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://tenmileriver.org/ra/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://tenmileriver.org/ra/"
+    },
+    {
+      "address": "1465 Manor Rd",
+      "city": "Staten Island",
+      "council_id": "council-640",
+      "description": "Greater New York Councils camp on Staten Island (NYC's only Scout camp). Runs Pouch Day Camp as part of the Staten Island summer day camp program, plus weekend and merit badge programs. Specific 2026 day camp dates not cleanly published.",
+      "features": [],
+      "id": "ny-william-h-pouch-scout-camp",
+      "lat": 40.5904894,
+      "lon": -74.1260274,
+      "name": "William H. Pouch Scout Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://camppouch.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://camppouch.org/"
     }
   ],
   "hq_city": "New York",

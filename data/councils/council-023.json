@@ -1,6 +1,28 @@
 {
   "camps": [
     {
+      "city": "El Cerrito",
+      "council_id": "council-023",
+      "description": "Golden Gate Area Council Cub/Webelos camp est. 1930 in the hills of El Cerrito. Operating in 2026 with weekend Cub Scout events and a space-themed Adventure Camp for Webelos and Arrow of Light Scouts designed to prepare them for Scouts BSA summer camp.",
+      "features": [],
+      "id": "ca-camp-herms",
+      "name": "Camp Herms",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://goldengatescouting.org/cub-scouts/cub-scouts-camping/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://goldengatescouting.org/cub-scouts/cub-scouts-camping/"
+    },
+    {
       "address": "PO Box 39 Cazadero, California 95421",
       "council_id": "council-023",
       "features": [],

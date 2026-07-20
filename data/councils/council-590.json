@@ -240,6 +240,27 @@
     },
     {
       "council_id": "council-590",
+      "description": "Crossroads of the West Council (formerly Great Salt Lake Council #590) resident Scout camp in the High Uintas Wilderness area of Summit County, Utah (mailing address Evanston, WY). Formerly the East Fork of the Bear Scout Camp, renamed in 2012; centerpiece is the Thomas S. Monson Lodge. Confirmed operating for summer 2026 with council camp registration active; serves as a base for weeklong Scouts BSA/youth-group camping. Includes North Slope, Trail Head, Frontier, Tomahawk, Pinnacle, Riverview & Ridgeline base camps.",
+      "features": [],
+      "id": "ut-hinckley-scout-ranch",
+      "name": "Hinckley Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.saltlakescouts.org/hinckley/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "UT",
+      "status": "active",
+      "website_url": "https://www.saltlakescouts.org/hinckley/"
+    },
+    {
+      "council_id": "council-590",
       "description": "Crossroads of the West Council wilderness Scouts BSA resident camp in Teton County, Wyoming, on Lake of the Woods ~1 mile south of Yellowstone. Classic camp program plus high-adventure options and the A.C.E. program for older youth. Physically located in Wyoming. 2026 registration was offered; session dates/fees not cleanly published.",
       "features": [],
       "id": "wy-camp-loll",

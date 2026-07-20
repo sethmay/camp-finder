@@ -1,6 +1,29 @@
 {
   "camps": [
     {
+      "address": "1207 Upas St",
+      "city": "San Diego",
+      "council_id": "council-049",
+      "description": "San Diego-Imperial Council urban Cub Scout camp in Balboa Park adjacent to the council service center. Operates summer Cub Scout day camp weeks plus family and weekend camping; full-size swimming pool and ten campsites.",
+      "features": [],
+      "id": "ca-camp-balboa",
+      "name": "Camp Balboa",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://camping.sdicbsa.org/Balboa/SummerDayCamp.php",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://camping.sdicbsa.org/Balboa/SummerDayCamp.php"
+    },
+    {
       "address": "1750 Fiesta Island Rd",
       "city": "San Diego",
       "council_id": "council-049",
@@ -159,8 +182,6 @@
       "description": "San Diego-Imperial Council's mountain Scouts BSA resident summer camp near Lake Henshaw.",
       "features": [],
       "id": "ca-mataguay-scout-ranch",
-      "lat": 33.2019679,
-      "lon": -116.6535825,
       "name": "Mataguay Scout Ranch",
       "program_types": [
         "scouts_bsa_resident"

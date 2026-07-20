@@ -175,6 +175,48 @@
       "state": "WV",
       "status": "active",
       "website_url": "https://mountaineerscouting.org/scouts-bsa-resident-camp/"
+    },
+    {
+      "address": "192 McColloch Drive",
+      "city": "Wheeling",
+      "council_id": "council-615",
+      "description": "Mountaineer Area Council Cub Scout Day Camp associated with Sandscrest Scout Reservation, Wheeling WV, for youth entering grades 1-5. 2026 day camp scheduled June 8-12.",
+      "features": [],
+      "id": "wv-sandscrest-scout-reservation-cub-scout-day-camp",
+      "lat": 40.121944,
+      "lon": -80.6461675,
+      "name": "Sandscrest Scout Reservation Cub Scout Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingevent.com/615-95179",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wv-sandscrest-scout-reservation-cub-scout-day-camp",
+          "end_date": "2026-06-12",
+          "id": "wv-sandscrest-scout-reservation-cub-scout-day-camp-2026-06-08",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://scoutingevent.com/615-95179",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-08",
+          "year": 2026
+        }
+      ],
+      "state": "WV",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/615-95179"
     }
   ],
   "hq_city": "Fairmont",

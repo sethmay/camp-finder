@@ -1,5 +1,44 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "council_id": "council-058",
+      "description": "Verdugo Hills Council camp off I-5 at Templin Highway north of Glendale. Hosts the 2026 'Roar Into Adventure' Cub Scout Day Camp and Cub Cup family camp; swimming pool, archery/BB ranges, and nature trail.",
+      "features": [],
+      "id": "ca-camp-verdugo-oaks",
+      "name": "Camp Verdugo Oaks",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.vhscouting.org/CubDayCamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-verdugo-oaks",
+          "end_date": "2026-07-10",
+          "id": "ca-camp-verdugo-oaks-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://www.vhscouting.org/CubDayCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        }
+      ],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://www.vhscouting.org/CubDayCamp2026"
+    }
+  ],
   "hq_city": "Glendale",
   "id": "council-058",
   "name": "Verdugo Hills Council",

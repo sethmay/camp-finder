@@ -176,6 +176,28 @@
       "state": "CO",
       "status": "active",
       "website_url": "https://campalexandercolorado.org/summer-camp/"
+    },
+    {
+      "city": "Rye",
+      "council_id": "council-060",
+      "description": "Pathway to the Rockies Council NCAP-accredited high-adventure base operating at San Isabel Scout Ranch in the Wet Mountains; whitewater rafting, climbing/rappelling, mountain biking, peak summits.",
+      "features": [],
+      "id": "co-rocky-mountain-high-adventure-base",
+      "name": "Rocky Mountain High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://pathwaytotherockies.org/facilities/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://pathwaytotherockies.org/facilities/"
     }
   ],
   "hq_city": "Colorado Springs",

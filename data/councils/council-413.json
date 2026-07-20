@@ -1,6 +1,28 @@
 {
   "camps": [
     {
+      "city": "Carlsbad",
+      "council_id": "council-413",
+      "description": "Conquistador Council aquatics specialty camp on the Pecos River in Carlsbad, NM; stand-up paddle-boarding, swimming, canoeing. Only aquatics-dedicated Scout camp in New Mexico.",
+      "features": [],
+      "id": "nm-dowling-aquatic-base",
+      "name": "Dowling Aquatic Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.nmscouts.org/dowling-aquatic-base",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NM",
+      "status": "active",
+      "website_url": "https://www.nmscouts.org/dowling-aquatic-base"
+    },
+    {
       "address": "319 Potato Canyon Rd",
       "city": "Sacramento",
       "council_id": "council-413",

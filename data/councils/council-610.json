@@ -7,6 +7,8 @@
       "description": "Great Alaska Council's council-operated high-adventure trek program based out of the Denali High Adventure Scout Base. Custom trek dates; not cleanly published for 2026.",
       "features": [],
       "id": "ak-alaska-ultimate-high-adventure",
+      "lat": 32.1043276,
+      "lon": -104.4242689,
       "name": "Alaska Ultimate High Adventure",
       "program_types": [
         "high_adventure"
@@ -97,6 +99,31 @@
       "state": "AK",
       "status": "active",
       "website_url": "https://scoutingalaska.org/camping/camp-gorsuch/"
+    },
+    {
+      "address": "PO Box 1081, Haines, AK",
+      "city": "Haines",
+      "council_id": "council-610",
+      "description": "Great Alaska Council high-adventure base on the Chilkat Peninsula near Haines. Custom multi-day backpacking, sea kayaking, mountaineering, and whitewater rafting expeditions for Scouts BSA; accepting 2026 reservations. Custom-scheduled treks, no fixed published session dates.",
+      "features": [],
+      "id": "ak-chilkoot-high-adventure-base",
+      "lat": 62.5391,
+      "lon": -150.1603,
+      "name": "Chilkoot High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://alaskascoutingadventures.org/chilkoot-base/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://alaskascoutingadventures.org/chilkoot-base/"
     },
     {
       "address": "Mile 133 N Parks Highway",

@@ -78,6 +78,85 @@
       "website_url": "https://scoutingevent.com/062-101580"
     },
     {
+      "city": "Red Feather Lakes",
+      "council_id": "council-062",
+      "description": "Adventure West Council 5-day/4-night backpacking high-adventure base at Ben Delatour Scout Ranch, in the Roosevelt National Forest/Rawah Wilderness. Rock climbing, rappelling, black-powder shooting.",
+      "features": [],
+      "id": "co-elkhorn-high-adventure-base",
+      "name": "Elkhorn High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://awbsa.org/ehab/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "co-elkhorn-high-adventure-base",
+          "end_date": "2026-07-11",
+          "fee_youth": 600,
+          "id": "co-elkhorn-high-adventure-base-2026-07-05",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://awbsa.org/ehab/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-elkhorn-high-adventure-base",
+          "end_date": "2026-07-18",
+          "fee_youth": 600,
+          "id": "co-elkhorn-high-adventure-base-2026-07-12",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://awbsa.org/ehab/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://awbsa.org/ehab/"
+    },
+    {
+      "city": "Red Feather Lakes",
+      "council_id": "council-062",
+      "description": "Adventure West Council Cub Scout resident camp (Cub World) at Ben Delatour Scout Ranch; 3-day/2-night experience for Lions through Webelos/AOL with medieval castle, frontier fort, and STEM themes.",
+      "features": [],
+      "id": "co-jack-nicol-cub-scout-camp",
+      "name": "Jack Nicol Cub Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://awbsa.org/cub-world/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://awbsa.org/cub-world/"
+    },
+    {
       "address": "870 N Fork Hwy Cody, Wyoming 82414",
       "council_id": "council-062",
       "features": [],

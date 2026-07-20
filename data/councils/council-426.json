@@ -97,6 +97,28 @@
       "state": "NC",
       "status": "active",
       "website_url": "https://www.scoutingecc.org/"
+    },
+    {
+      "city": "Blounts Creek",
+      "council_id": "council-426",
+      "description": "East Carolina Council high-adventure camp on the Pamlico River adjacent to Camp Boddie, offering week-long summer treks (Sea Kayak Trek along the Outer Banks/Cape Lookout, Blackbeard Sailing Expedition, Inner Banks Expedition watersports, and SCUBA certification camp). Operates on a Sunday check-in through Saturday schedule; confirmed operating for 2026.",
+      "features": [],
+      "id": "nc-pamlico-sea-base",
+      "name": "Pamlico Sea Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.scoutingecc.org/pamlico-sea-base",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.scoutingecc.org/pamlico-sea-base"
     }
   ],
   "hq_city": "Kinston",
