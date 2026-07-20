@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.24.0 (minor) — 2026-07-19
+
+- `967a6fa` **Leads batch 5 — long-tail sweep (23 states)** — final pass over the remaining My Maps +
+  OCD leads (WA/OR/AK/HI/ID/MT/WY/CO/NM/AZ/KS/NE/ND/MO/AR/NC/VA/DC/MD/DE/MI/VT/PR) via 9 regional
+  scouts. Added **43 camps (+82 sessions) across 25 councils** — incl. Camp Melita Island + K-M Ranch
+  (Montana), Camp Cris Dobbins + Tahosa HAB (Colorado), Camp Geiger (Pony Express), Camp Maluhia + Alan
+  Faye (Hawaii), Salmon River HAB (Idaho), and the Great Lakes Sailing Adventure (Michigan). Appended 7
+  camps to the legacy PNW "demo" councils (Chief Seattle, Cascade Pacific, Pacific Crest) that `merge()`
+  guards — Camp Pigott/Edward, Butte Creek, Camp Pioneer (OR), Cascade Trek, Camp McLoughlin ×2.
+  Dedup caught Camp Coker + J. Edward Mack (already present). Dropped Will Rogers SR (Cimarron merged
+  into Last Frontier; no resident camp). Camp count 374 → 417, sessions 1136 → 1218.
+
 ## 0.23.0 (minor) — 2026-07-19
 
 - `2b3dac6` **Leads batch 4 (SC/UT/CT/IA/KY/LA/MS/OK/RI/NH)** — processed ~70 crowdsourced My Maps +
