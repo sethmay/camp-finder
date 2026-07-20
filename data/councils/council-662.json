@@ -89,6 +89,8 @@
       "description": "Longhorn Council's Scouts BSA resident summer camp on 2,500 acres with 15 miles of shoreline on Lake Bridgeport. SR2 provides four weeks of 'Great American West' themed summer camp in 2026; specific session dates not cleanly published at time of research.",
       "features": [],
       "id": "tx-sid-richardson-scout-ranch-sr2",
+      "lat": 39.8586606,
+      "lon": -86.0327115,
       "name": "Sid Richardson Scout Ranch (SR2)",
       "program_types": [
         "scouts_bsa_resident"

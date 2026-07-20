@@ -1,6 +1,47 @@
 {
   "camps": [
     {
+      "city": "East Jewett",
+      "council_id": "council-364",
+      "description": "Cub Scout Day Camp session held at Camp Tri-Mount in the northern Catskills (registered through Twin Rivers Council). Note: Tri-Mount's traditional resident summer camp is closed; this is a day-camp session at the site.",
+      "features": [],
+      "id": "ny-camp-tri-mount",
+      "lat": 42.2497,
+      "lon": -74.148,
+      "name": "Camp Tri-Mount",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/364-daycamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-tri-mount",
+          "end_date": "2026-07-16",
+          "id": "ny-camp-tri-mount-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/364-daycamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        }
+      ],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/364-daycamp2026"
+    },
+    {
       "address": "185 Sly Pond Rd Fort Ann, New York 12827",
       "council_id": "council-364",
       "features": [],

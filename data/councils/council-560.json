@@ -97,6 +97,50 @@
       "state": "TN",
       "status": "active",
       "website_url": "https://www.mtcscouting.org/scoutsbsasummercamp"
+    },
+    {
+      "address": "767 Boy Scout Road",
+      "city": "Linden",
+      "council_id": "council-560",
+      "description": "Middle Tennessee Council high-adventure canoe/kayak base on the Buffalo River. 2026 'Paddle the Buffalo' is a 3-night, 4-day guided river trip for Troops and Crews (ages 11+); fee includes transportation, boats, meals, lodging, and a patch.",
+      "features": [],
+      "id": "tn-grimes-canoe-base",
+      "lat": 35.1818901,
+      "lon": -85.2414843,
+      "name": "Grimes Canoe Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/560-113545",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tn-grimes-canoe-base",
+          "end_date": "2026-07-15",
+          "fee_adult": 225,
+          "fee_youth": 225,
+          "id": "tn-grimes-canoe-base-2026-07-12",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/560-113545",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "TN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/560-113545"
     }
   ],
   "hq_city": "Nashville",

@@ -1,6 +1,234 @@
 {
   "camps": [
     {
+      "address": "7200 Rice Lake Rd",
+      "city": "Duluth",
+      "council_id": "council-250",
+      "description": "Northern Star Scouting (former Voyageurs Area Council, merged 2024) Duluth Area Summer Discovery Day Camp on Island Lake Reservoir. Week-long day program with two 2026 sessions.",
+      "features": [],
+      "id": "mn-camp-horace-johnson",
+      "lat": 47.0360361,
+      "lon": -92.1297154,
+      "name": "Camp Horace Johnson",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://camp.northernstar.org/Camp-Horace-Johnson",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-horace-johnson",
+          "end_date": "2026-07-31",
+          "id": "mn-camp-horace-johnson-2026-07-27",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Camp-Horace-Johnson",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-horace-johnson",
+          "end_date": "2026-08-07",
+          "id": "mn-camp-horace-johnson-2026-08-03",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Camp-Horace-Johnson",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-03",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://camp.northernstar.org/Camp-Horace-Johnson"
+    },
+    {
+      "address": "15987 St Croix Trail N",
+      "city": "Marine on St. Croix",
+      "council_id": "council-250",
+      "description": "Northern Star Scouting Cub Scout Summer Camp on the St. Croix River. Full weekend (Fri-Sun) overnight program with indoor bunk housing option, ponies, climbing and shooting sports. Eight 2026 sessions with optional Webelos Outpost (+$36). Youth $155 ($160 after May 1); adult $90.",
+      "features": [],
+      "id": "mn-kiwanis-scout-camp",
+      "lat": 45.1799192,
+      "lon": -92.7673596,
+      "name": "Kiwanis Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-06-21",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-06-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-06-28",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-07-12",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-07-10",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-07-19",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-07-26",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-07-24",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-08-02",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-08-09",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-08-07",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-kiwanis-scout-camp",
+          "end_date": "2026-08-16",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-kiwanis-scout-camp-2026-08-14",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-14",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://camp.northernstar.org/Kiwanis-Scout-Camp"
+    },
+    {
       "address": "41408 Many Point Camp Rd Ponsford, Minnesota 56575",
       "council_id": "council-250",
       "features": [],
@@ -148,6 +376,218 @@
       "state": "MN",
       "status": "active",
       "website_url": "https://scoutingevent.com/250-MPAllStar2026"
+    },
+    {
+      "address": "30654 32nd Ave Way",
+      "city": "Cannon Falls",
+      "council_id": "council-250",
+      "description": "Northern Star Scouting Cub Scout Summer Camp, a full weekend (Fri-Sun) overnight program. Eight 2026 sessions with an optional Webelos Outpost extra night (+$36). Youth $155 ($160 after May 1); adult $90.",
+      "features": [],
+      "id": "mn-phillippo-scout-camp",
+      "lat": 44.502149,
+      "lon": -92.9745538,
+      "name": "Phillippo Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-06-21",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-06-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-06-28",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-07-12",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-07-10",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-07-19",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-07-26",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-07-24",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-08-02",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-08-09",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-08-07",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-phillippo-scout-camp",
+          "end_date": "2026-08-16",
+          "fee_adult": 90,
+          "fee_youth": 155,
+          "id": "mn-phillippo-scout-camp-2026-08-14",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/phillippo-scout-reservation",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-14",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://camp.northernstar.org/phillippo-scout-reservation"
+    },
+    {
+      "address": "15659 St. Francis Blvd",
+      "city": "Anoka",
+      "council_id": "council-250",
+      "description": "Northern Star Scouting Summer Discovery Day Camp, a week-long day program (K-6th grade) at the 167-acre Rum River Scout Camp on the banks of the Rum River.",
+      "features": [],
+      "id": "mn-rum-river-scout-camp",
+      "lat": 45.2562,
+      "lon": -93.4094,
+      "name": "Rum River Scout Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://camp.northernstar.org/rum-river-scout-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-rum-river-scout-camp",
+          "end_date": "2026-08-21",
+          "id": "mn-rum-river-scout-camp-2026-08-17",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://camp.northernstar.org/rum-river-scout-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-17",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://camp.northernstar.org/rum-river-scout-camp"
     },
     {
       "address": "N1910 Scout Rd Birchwood, Wisconsin 54817",

@@ -1,6 +1,64 @@
 {
   "camps": [
     {
+      "address": "2144 Camp Daniel Marshall Rd",
+      "city": "Lincolnton",
+      "council_id": "council-093",
+      "description": "Georgia-Carolina Council Scouts BSA resident summer camp in Lincolnton, GA. Two week-long sessions in 2026.",
+      "features": [],
+      "id": "ga-camp-daniel-marshall",
+      "lat": 33.763,
+      "lon": -82.2838,
+      "name": "Camp Daniel Marshall",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.gacacouncil.org/summer-camps",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-daniel-marshall",
+          "end_date": "2026-06-13",
+          "id": "ga-camp-daniel-marshall-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.gacacouncil.org/summer-camps",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-daniel-marshall",
+          "end_date": "2026-06-20",
+          "id": "ga-camp-daniel-marshall-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.gacacouncil.org/summer-camps",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        }
+      ],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://www.gacacouncil.org/summer-camps"
+    },
+    {
       "address": "1150 Fred R. Prather Parkway Lincolnton, Georgia 30817",
       "council_id": "council-093",
       "features": [],

@@ -1,5 +1,97 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "5015 Simpson Rd SE",
+      "city": "Rochester",
+      "council_id": "council-299",
+      "description": "Gamehaven Council Summer Cub Adventures overnight weekend camps at Gamehaven Scout Camp, 5 miles SE of Rochester. Swimming, shooting, hiking, cooking and advancement; all youth receive a patch and T-shirt.",
+      "features": [],
+      "id": "mn-gamehaven-scout-camp",
+      "lat": 43.945557,
+      "lon": -92.4306138,
+      "name": "Gamehaven Scout Camp",
+      "program_types": [
+        "cub_resident",
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://gamehavenbsa.org/gamehaven-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-gamehaven-scout-camp",
+          "end_date": "2026-06-28",
+          "id": "mn-gamehaven-scout-camp-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://gamehavenbsa.org/gamehaven-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-gamehaven-scout-camp",
+          "end_date": "2026-07-11",
+          "id": "mn-gamehaven-scout-camp-2026-07-11",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/299",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-11",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-gamehaven-scout-camp",
+          "end_date": "2026-07-19",
+          "id": "mn-gamehaven-scout-camp-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://gamehavenbsa.org/gamehaven-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-gamehaven-scout-camp",
+          "end_date": "2026-08-08",
+          "id": "mn-gamehaven-scout-camp-2026-08-08",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/299",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-08",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://gamehavenbsa.org/gamehaven-scout-camp/"
+    }
+  ],
   "hq_city": "Rochester",
   "id": "council-299",
   "name": "Gamehaven Council",

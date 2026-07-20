@@ -7,6 +7,8 @@
       "description": "Orange County Council's aquatics high-adventure base on Newport Harbor. Summer camp (quarter-, half-, or full-day sessions) offers sailing, rowing, kayaking, fishing, oceanography, and STEM for youth ages 5-17. Pricing starts at $289; program runs June 8 - August 14, 2026.",
       "features": [],
       "id": "ca-newport-sea-base",
+      "lat": 33.615861,
+      "lon": -117.9136662,
       "name": "Newport Sea Base",
       "program_types": [
         "high_adventure"

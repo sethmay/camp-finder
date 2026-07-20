@@ -1,6 +1,29 @@
 {
   "camps": [
     {
+      "address": "125 200th Ave",
+      "city": "Fairmont",
+      "council_id": "council-283",
+      "description": "Twin Valley Council Cub Scout Resident Camp (overnight, Sat-Sun) at Cedar Point Scout Camp near Fairmont. 2026 theme 'Into The Woods' with NOVA modules, RAD Zoo, astronomy, ice cream making and shooting sports. Cub $60, adult $40, siblings $40. Exact 2026 session date not cleanly published; reservations via Northernstar.org as of June 1, 2026.",
+      "features": [],
+      "id": "mn-cedar-point-scout-camp",
+      "name": "Cedar Point Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/283-CubScoutResidentCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/283-CubScoutResidentCamp"
+    },
+    {
       "address": "N1910 Scout Road Birchwood, Wisconsin 54817 Adventure Camp; Tomahawk Tomahawk Scout Camp Monday 07-27-2026 9:00 AM CT to Friday 07-31-2026 4:00 PM CT More Information Map of Session $ View Pricing",
       "council_id": "council-283",
       "features": [],

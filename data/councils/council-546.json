@@ -1,6 +1,64 @@
 {
   "camps": [
     {
+      "address": "112 Parting Ways Rd",
+      "city": "Kingston",
+      "council_id": "council-546",
+      "description": "Narragansett Council's Cub Scout Day Camp at Camp Norse for youth entering grades 1-5; eight weekly sessions with archery, BB, boating, swimming, crafts, outdoor cooking and STEM. Runs Mon-Fri 9am-4pm; middle-week dates not individually published.",
+      "features": [],
+      "id": "ma-camp-norse",
+      "lat": 41.944402105916,
+      "lon": -70.742925413311,
+      "name": "Camp Norse",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/546-98625",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ma-camp-norse",
+          "end_date": "2026-06-26",
+          "id": "ma-camp-norse-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/546-98625",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ma-camp-norse",
+          "end_date": "2026-08-14",
+          "id": "ma-camp-norse-2026-08-10",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/546-98625",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-10",
+          "year": 2026
+        }
+      ],
+      "state": "MA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/546-98625"
+    },
+    {
       "address": "61 Camp Yawgoog Road Rockville, Rhode Island 02873",
       "council_id": "council-546",
       "features": [],

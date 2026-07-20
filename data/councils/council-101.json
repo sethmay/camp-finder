@@ -73,6 +73,31 @@
       "state": "GA",
       "status": "active",
       "website_url": "https://www.nega-bsa.org/campraineymountain"
+    },
+    {
+      "address": "3685 Looper Lake Rd",
+      "city": "Gainesville",
+      "council_id": "council-101",
+      "description": "Northeast Georgia Council's 140-acre Cub Scout camp on Lake Lanier. 2026 Day/Twilight/STEM camps for youth entering grades 1-5. Early fee $100 (by May 7), regular $120, late/on-site $130. Specific session dates not cleanly published.",
+      "features": [],
+      "id": "ga-scoutland",
+      "lat": 34.339642,
+      "lon": -83.879691,
+      "name": "Scoutland",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.nega-bsa.org/cs-twi-stem-cmp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://www.nega-bsa.org/cs-twi-stem-cmp"
     }
   ],
   "hq_city": "Jefferson",

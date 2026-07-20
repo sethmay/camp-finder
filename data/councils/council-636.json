@@ -7,6 +7,8 @@
       "description": "Three Harbors Council Cub Scout day camp on 185 acres with waterfront on Dyer Lake near Burlington. Four days of boating, swimming, fishing, field sports, nature, and shooting sports. Certified Cub Scout day camp and family camping facility.",
       "features": [],
       "id": "wi-camp-oh-da-ko-ta",
+      "lat": 44.7022588,
+      "lon": -85.70886,
       "name": "Camp Oh-Da-Ko-Ta",
       "program_types": [
         "cub_day"
@@ -30,6 +32,8 @@
       "description": "Three Harbors Council overnight First Year Camper program for new Scouts BSA at Camp Oh-Da-Ko-Ta; work toward Tenderfoot, Second Class, and First Class requirements plus up to 2 merit badges.",
       "features": [],
       "id": "wi-camp-oh-da-ko-ta-first-year-camper-program",
+      "lat": 44.7022588,
+      "lon": -85.70886,
       "name": "Camp Oh-Da-Ko-Ta - First Year Camper Program",
       "program_types": [
         "scouts_bsa_resident"

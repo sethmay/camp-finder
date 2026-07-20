@@ -195,6 +195,49 @@
       "state": "AL",
       "status": "active",
       "website_url": "https://1bsa.org/summer-camp-at-camp-sequoyah/"
+    },
+    {
+      "address": "596 Westmoreland Rd",
+      "city": "Florence",
+      "council_id": "council-001",
+      "description": "Greater Alabama Council Cub Scout Twilight (day) camp at historic Camp Westmoreland; BB guns, archery, STEM, field sports, nature. Fee includes t-shirt, water bottle, patch.",
+      "features": [],
+      "id": "al-camp-westmoreland-cub-scout-twilight-camp",
+      "lat": 32.5309159,
+      "lon": -85.0021621,
+      "name": "Camp Westmoreland Cub Scout Twilight Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://1bsa.org/cub-scout-day-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "al-camp-westmoreland-cub-scout-twilight-camp",
+          "end_date": "2026-06-05",
+          "fee_youth": 75,
+          "id": "al-camp-westmoreland-cub-scout-twilight-camp-2026-06-01",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://1bsa.org/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-01",
+          "year": 2026
+        }
+      ],
+      "state": "AL",
+      "status": "active",
+      "website_url": "https://1bsa.org/cub-scout-day-camp/"
     }
   ],
   "hq_city": "Birmingham",

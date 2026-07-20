@@ -1,5 +1,31 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "261 Burnt Church Rd",
+      "city": "Lakeland",
+      "council_id": "council-098",
+      "description": "South Georgia Council's Cub Scout Day Camp on the Alapaha River in Lakeland, GA (Lanier County). Archery, Pinewood Derby, STEM, BB guns, canoeing, swimming. 2026 dates not cleanly published.",
+      "features": [],
+      "id": "ga-camp-patten",
+      "lat": 31.0208,
+      "lon": -83.051,
+      "name": "Camp Patten",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.sgcbsa.org/camppatten",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://www.sgcbsa.org/camppatten"
+    }
+  ],
   "hq_city": "Valdosta",
   "id": "council-098",
   "name": "South Georgia Council",

@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "33 Knox Road, 650 E",
+      "city": "London Mills",
+      "council_id": "council-138",
+      "description": "W. D. Boyce Council's primary Scouts BSA resident camp on ~650 acres near London Mills, featuring a 50-foot climbing tower/zipline, Lake Roberts waterfront, shooting sports, Eco-Con, Scoutcraft, and cooking. Three one-week sessions in 2026 (early-bird youth fee shown).",
+      "features": [],
+      "id": "il-ingersoll-scout-reservation",
+      "lat": 40.718916975703,
+      "lon": -90.320068043229,
+      "name": "Ingersoll Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://wdboyce.org/scouts-summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-ingersoll-scout-reservation",
+          "end_date": "2026-06-13",
+          "fee_adult": 185,
+          "fee_youth": 390,
+          "id": "il-ingersoll-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://wdboyce.org/scouts-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-ingersoll-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 185,
+          "fee_youth": 390,
+          "id": "il-ingersoll-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://wdboyce.org/scouts-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "il-ingersoll-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_adult": 185,
+          "fee_youth": 390,
+          "id": "il-ingersoll-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://wdboyce.org/scouts-summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://wdboyce.org/scouts-summer-camp/"
+    }
+  ],
   "hq_city": "Peoria",
   "id": "council-138",
   "name": "W. D. Boyce Council",
