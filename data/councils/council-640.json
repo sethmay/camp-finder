@@ -1,6 +1,56 @@
 {
   "camps": [
     {
+      "address": "441 Route 9W",
+      "city": "Alpine",
+      "council_id": "council-640",
+      "description": "Cub Scout day camp operated by Greater New York Councils at Alpine Scout Camp, Alpine, NJ, on 500 acres along Palisades Park with indoor/outdoor climbing and an Olympic-sized pool. 2026 program runs June 22 through August 14 (8 weeks).",
+      "features": [],
+      "id": "nj-alpine-day-camp",
+      "lat": 42.5992164,
+      "lon": -73.7937659,
+      "name": "Alpine Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/640-AlpineDayCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NJ",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/640-AlpineDayCamp"
+    },
+    {
+      "address": "441 Route 9W",
+      "city": "Alpine",
+      "council_id": "council-640",
+      "description": "Cub Scout resident camp operated by Greater New York Councils on 500 wooded acres along the Palisades in Alpine, NJ. 2026 season runs July 5 through August 8, with 6-night and 3-night session options; campers stay in 2-person wall tents on platforms.",
+      "features": [],
+      "id": "nj-john-e-reeves-cub-world-at-alpine-scout-camp",
+      "lat": 42.5992164,
+      "lon": -73.7937659,
+      "name": "John E. Reeves Cub World at Alpine Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://alpinescoutcamp.org/cubworld/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NJ",
+      "status": "active",
+      "website_url": "https://alpinescoutcamp.org/cubworld/"
+    },
+    {
       "address": "125 Aquehonga Rd Narrowsburg, New York 12764",
       "council_id": "council-640",
       "features": [],

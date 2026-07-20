@@ -1,5 +1,45 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Harlingen",
+      "council_id": "council-775",
+      "description": "Rio Grande Council's Scouts BSA summer camp on 260 acres along the Arroyo Colorado near Harlingen, TX. In-council unit camping is free; out-of-council participants pay $20/person.",
+      "features": [],
+      "id": "tx-camp-perry-scout-reservation",
+      "name": "Camp Perry Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.riograndecouncil.org/camping/campperry/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-perry-scout-reservation",
+          "end_date": "2026-06-27",
+          "id": "tx-camp-perry-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.riograndecouncil.org/camping/campperry/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.riograndecouncil.org/camping/campperry/"
+    }
+  ],
   "hq_city": "Harlingen",
   "id": "council-775",
   "name": "Rio Grande Council",

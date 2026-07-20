@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "359 Acahela Road",
+      "city": "Blakeslee",
+      "council_id": "council-501",
+      "description": "Northeastern Pennsylvania Council Cub Scout resident camp on 250 acres of Pocono woodlands near Blakeslee, PA, at the confluence of the Lehigh River and Tobyhanna Creek. In 2026 (season July 1-24) it offers three one-week Cub Scout Resident Camp sessions (6 days/5 nights, 2-person canvas tents) plus three 3-day Adventure Camp sessions; sessions begin Sunday afternoon and end Friday ~4pm.",
+      "features": [],
+      "id": "pa-camp-acahela",
+      "lat": 41.12146059686,
+      "lon": -75.639451783765,
+      "name": "Camp Acahela",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.acahela.org/acahela-cub-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://www.acahela.org/acahela-cub-camp"
+    },
+    {
       "address": "Goose Pond Road",
       "city": "Lake Ariel",
       "council_id": "council-501",

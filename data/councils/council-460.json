@@ -133,6 +133,116 @@
       "state": "OH",
       "status": "active",
       "website_url": "https://www.psrweb.org/SummerCamp2026"
+    },
+    {
+      "city": "Toledo",
+      "council_id": "council-460",
+      "description": "Erie Shores Council Cub Scout Day Camp at Camp Miakonda in Toledo; Mon-Fri 8:30am-4:15pm (Week 3 is an evening Twilight Camp). Early-bird fees by June 1, 2026.",
+      "features": [],
+      "id": "oh-camp-miakonda",
+      "lat": 41.6947,
+      "lon": -83.679,
+      "name": "Camp Miakonda",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.erieshorescouncil.org/cdc",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-miakonda",
+          "end_date": "2026-06-19",
+          "fee_youth": 255,
+          "id": "oh-camp-miakonda-2026-06-15",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.erieshorescouncil.org/cdc",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-miakonda",
+          "end_date": "2026-06-26",
+          "fee_youth": 255,
+          "id": "oh-camp-miakonda-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.erieshorescouncil.org/cdc",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-miakonda",
+          "end_date": "2026-07-02",
+          "fee_youth": 105,
+          "id": "oh-camp-miakonda-2026-06-29",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.erieshorescouncil.org/cdc",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-miakonda",
+          "end_date": "2026-07-10",
+          "fee_youth": 255,
+          "id": "oh-camp-miakonda-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.erieshorescouncil.org/cdc",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-miakonda",
+          "end_date": "2026-07-17",
+          "fee_youth": 255,
+          "id": "oh-camp-miakonda-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.erieshorescouncil.org/cdc",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://www.erieshorescouncil.org/cdc"
     }
   ],
   "hq_city": "Toledo",

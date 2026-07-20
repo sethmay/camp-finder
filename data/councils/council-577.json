@@ -1,5 +1,61 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Mathis",
+      "council_id": "council-577",
+      "description": "South Texas Council's Scouts BSA summer camp on 130 acres along Lake Corpus Christi near Mathis, TX, with a new air-conditioned dining hall. Also offers a Scouts BSA mini merit-badge camp in July.",
+      "features": [],
+      "id": "tx-camp-karankawa",
+      "name": "Camp Karankawa",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.southtexasscouting.org/events-3/scouts-bsa-camping/summer-camp-scouts-bsa/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-karankawa",
+          "end_date": "2026-06-13",
+          "id": "tx-camp-karankawa-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.southtexasscouting.org/events-3/scouts-bsa-camping/summer-camp-scouts-bsa/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-karankawa",
+          "end_date": "2026-07-26",
+          "id": "tx-camp-karankawa-2026-07-23",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.southtexasscouting.org/events-3/scouts-bsa-camping/summer-camp-scouts-bsa/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-23",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.southtexasscouting.org/events-3/scouts-bsa-camping/summer-camp-scouts-bsa/"
+    }
+  ],
   "hq_city": "Corpus Christi",
   "id": "council-577",
   "name": "South Texas Council",

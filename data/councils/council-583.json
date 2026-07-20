@@ -1,5 +1,50 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "125 Bear Creek Scout Rd W",
+      "city": "Hunt",
+      "council_id": "council-583",
+      "description": "Alamo Area Council's Scouts BSA resident summer camp near Hunt, TX, returning to full operation in 2026 with Bear Claw, Ranger (first-year), and traditional tracks.",
+      "features": [],
+      "id": "tx-bear-creek-scout-camp",
+      "lat": 30.058937891444,
+      "lon": -99.41733329681,
+      "name": "Bear Creek Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.alamoareascouting.org/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-bear-creek-scout-camp",
+          "end_date": "2026-06-20",
+          "fee_adult": 175,
+          "fee_youth": 375,
+          "id": "tx-bear-creek-scout-camp-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.alamoareascouting.org/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.alamoareascouting.org/summer-camp/"
+    }
+  ],
   "hq_city": "San Antonio",
   "id": "council-583",
   "name": "Alamo Area Council",

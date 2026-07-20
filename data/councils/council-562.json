@@ -1,5 +1,29 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "15427 FM 1541",
+      "city": "Canyon",
+      "council_id": "council-562",
+      "description": "Golden Spread Council's Cub Scout day camp on 1,600+ acres in Palo Duro Canyon south of Amarillo. 2026 registration closes May 29; council also runs Scouts BSA programming here.",
+      "features": [],
+      "id": "tx-camp-don-harrington",
+      "name": "Camp Don Harrington",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/562-2026CubDayCampDon",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/562-2026CubDayCampDon"
+    }
+  ],
   "hq_city": "Amarillo",
   "id": "council-562",
   "name": "Golden Spread Council",

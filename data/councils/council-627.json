@@ -1,5 +1,278 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "Crystal Lake Scout Reservation",
+      "city": "Rhinelander",
+      "council_id": "council-627",
+      "description": "Samoset Council's Cub Scout weekend resident camp (Friday-Sunday) at Crystal Lake Scout Reservation near Rhinelander. Six weekend sessions for Cub Scout packs with high-energy activities.",
+      "features": [],
+      "id": "wi-akelas-world-cub-scout-camp",
+      "name": "Akela's World Cub Scout Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://samoset.org/camping/akelas-world/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-06-21",
+          "id": "wi-akelas-world-cub-scout-camp-2026-06-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-06-28",
+          "id": "wi-akelas-world-cub-scout-camp-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-07-12",
+          "id": "wi-akelas-world-cub-scout-camp-2026-07-10",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-07-19",
+          "id": "wi-akelas-world-cub-scout-camp-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-07-26",
+          "id": "wi-akelas-world-cub-scout-camp-2026-07-24",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-akelas-world-cub-scout-camp",
+          "end_date": "2026-08-02",
+          "id": "wi-akelas-world-cub-scout-camp-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/akelas-world/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://samoset.org/camping/akelas-world/"
+    },
+    {
+      "address": "Crystal Lake Scout Reservation",
+      "city": "Rhinelander",
+      "council_id": "council-627",
+      "description": "Samoset Council's flagship Scouts BSA resident camp at Crystal Lake Scout Reservation near Rhinelander. Seven week-long periods with 50+ merit badges. 2026 fee $450/scout, $252/adult (plus troop fee).",
+      "features": [],
+      "id": "wi-tesomas-scout-camp",
+      "lat": 45.7299,
+      "lon": -89.4199,
+      "name": "Tesomas Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://samoset.org/camping/tesomas/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-06-26",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-07-03",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-07-10",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-07-04",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-04",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-07-17",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-11",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-07-24",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-07-18",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-18",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-07-31",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-07-25",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-25",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wi-tesomas-scout-camp",
+          "end_date": "2026-08-07",
+          "fee_adult": 252,
+          "fee_youth": 450,
+          "id": "wi-tesomas-scout-camp-2026-08-01",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://samoset.org/camping/tesomas/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-01",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://samoset.org/camping/tesomas/"
+    }
+  ],
   "hq_city": "Weston",
   "id": "council-627",
   "name": "Samoset Council",

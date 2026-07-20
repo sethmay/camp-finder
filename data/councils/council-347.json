@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "56 La Valley Drive",
+      "city": "Manalapan",
+      "council_id": "council-347",
+      "description": "Monmouth Council Cub Scout day camp in Manalapan/Englishtown, NJ, open to youth ages 6-10 (Tigers and younger with an adult). Arrive 8:45am, depart 4:30pm, Monday-Friday; attend as many weeks as desired. 2026 day camp fee $285/week (+$30 late fee after June 15); pre/post care $75/week add-on. A Cub residence camp is also offered.",
+      "features": [],
+      "id": "nj-quail-hill-scout-reservation",
+      "lat": 40.2653,
+      "lon": -74.3924,
+      "name": "Quail Hill Scout Reservation",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.monmouthcouncilscouting.org/quailhill",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NJ",
+      "status": "active",
+      "website_url": "https://www.monmouthcouncilscouting.org/quailhill"
+    },
+    {
       "address": "1945 NY-42, Monticello, NY 12777",
       "city": "Monticello",
       "council_id": "council-347",

@@ -132,6 +132,48 @@
       "website_url": "https://scoutingevent.com/033-CherryValley"
     },
     {
+      "address": "1100 N Canyon Blvd",
+      "city": "Monrovia",
+      "council_id": "council-033",
+      "description": "Greater Los Angeles Area Council's Trask Scout Reservation in Monrovia Canyon Park runs a week-long Cub Scout Twilight Camp (4:30-7:30pm daily), an advancement-driven day-camp program. Activities include BB/target sports, archery, swimming pool, historic fort, and campfire programs. (Trask also hosts Scouts BSA Trail to Eagle / Trail to First Class weeks.)",
+      "features": [],
+      "id": "ca-camp-trask-cub-twilight-camp",
+      "lat": 34.1747955,
+      "lon": -117.9880102,
+      "name": "Camp Trask (Cub Twilight Camp)",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://greaterlascouting.org/camp-trask/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ca-camp-trask-cub-twilight-camp",
+          "end_date": "2026-07-10",
+          "id": "ca-camp-trask-cub-twilight-camp-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://greaterlascouting.org/camp-trask/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        }
+      ],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://greaterlascouting.org/camp-trask/"
+    },
+    {
       "address": "29485 Hook Creek Rd Cedar Glen, California 92321",
       "council_id": "council-033",
       "features": [],

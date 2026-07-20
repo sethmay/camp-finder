@@ -1,5 +1,103 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "New Ringgold",
+      "council_id": "council-528",
+      "description": "Hawk Mountain Council (#528) Scouts BSA resident camp near New Ringgold, PA (Schuylkill County). 6-night sessions; programs include first-year camper program, aquatics (pool and lakefront), range/target activities, outdoor skills, conservation, handicraft, climbing, and zip-lining.",
+      "features": [],
+      "id": "pa-hawk-mountain-scout-reservation",
+      "lat": 40.5425,
+      "lon": -76.2298,
+      "name": "Hawk Mountain Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://hmcscouting.org/summer-camp-2026/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-hawk-mountain-scout-reservation",
+          "end_date": "2026-07-04",
+          "fee_adult": 200,
+          "fee_youth": 550,
+          "id": "pa-hawk-mountain-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://hmcscouting.org/summer-camp-2026/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-hawk-mountain-scout-reservation",
+          "end_date": "2026-07-11",
+          "fee_adult": 200,
+          "fee_youth": 550,
+          "id": "pa-hawk-mountain-scout-reservation-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://hmcscouting.org/summer-camp-2026/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-hawk-mountain-scout-reservation",
+          "end_date": "2026-07-18",
+          "fee_adult": 200,
+          "fee_youth": 550,
+          "id": "pa-hawk-mountain-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://hmcscouting.org/summer-camp-2026/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-hawk-mountain-scout-reservation",
+          "end_date": "2026-07-25",
+          "fee_adult": 200,
+          "fee_youth": 550,
+          "id": "pa-hawk-mountain-scout-reservation-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://hmcscouting.org/summer-camp-2026/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://hmcscouting.org/summer-camp-2026/"
+    }
+  ],
   "hq_city": "Reading",
   "id": "council-528",
   "name": "Hawk Mountain Council",

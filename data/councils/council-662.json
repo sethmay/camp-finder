@@ -1,6 +1,111 @@
 {
   "camps": [
     {
+      "city": "Belton",
+      "council_id": "council-662",
+      "description": "Longhorn Council's ~150-acre family adventure campground in Belton, TX. Hosts 2026 Cub Quest advancement day events for Cub Scouts.",
+      "features": [],
+      "id": "tx-camp-tahuaya",
+      "lat": 31.0075,
+      "lon": -97.5066,
+      "name": "Camp Tahuaya",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.longhorncouncil.org/camp-tahuaya",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-tahuaya",
+          "end_date": "2026-06-20",
+          "id": "tx-camp-tahuaya-2026-06-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.longhorncouncil.org/camp-tahuaya",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-tahuaya",
+          "end_date": "2026-07-18",
+          "id": "tx-camp-tahuaya-2026-07-18",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.longhorncouncil.org/camp-tahuaya",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-18",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.longhorncouncil.org/camp-tahuaya"
+    },
+    {
+      "address": "Boy Scout Rd",
+      "city": "Runaway Bay",
+      "council_id": "council-662",
+      "description": "Longhorn Council's flagship high-adventure program at Sid Richardson Scout Ranch on 10,000-acre Lake Bridgeport, using pontoon boats to reach watersports bases and outposts along 15 miles of shoreline. Week 3 and Week 4 discounts offered; specific 2026 dates not cleanly published.",
+      "features": [],
+      "id": "tx-chisholm-trail-adventure-base",
+      "lat": 33.2203,
+      "lon": -97.9107,
+      "name": "Chisholm Trail Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/662-ChisholmTrail",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/662-ChisholmTrail"
+    },
+    {
+      "address": "Boy Scout Rd",
+      "city": "Runaway Bay",
+      "council_id": "council-662",
+      "description": "Longhorn Council's Scouts BSA resident summer camp on 2,500 acres with 15 miles of shoreline on Lake Bridgeport. SR2 provides four weeks of 'Great American West' themed summer camp in 2026; specific session dates not cleanly published at time of research.",
+      "features": [],
+      "id": "tx-sid-richardson-scout-ranch-sr2",
+      "name": "Sid Richardson Scout Ranch (SR2)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.longhorncouncil.org/sid-richardson-scout-ranch",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://www.longhorncouncil.org/sid-richardson-scout-ranch"
+    },
+    {
       "address": "1518 Worth Ranch Road",
       "city": "Palo Pinto",
       "council_id": "council-662",
