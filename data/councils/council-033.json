@@ -4,7 +4,7 @@
       "address": "3000 Shoshonean Rd",
       "city": "San Pedro",
       "council_id": "council-033",
-      "description": "Greater Los Angeles Area Council beachfront aquatics/camping center on Cabrillo Beach in San Pedro (est. 1946). Hosts Cub Scout and Scout day camps with swimming, kayaking, canoeing, archery, and merit badge programs.",
+      "description": "Greater Los Angeles Area Council beachfront aquatics/camping center on Cabrillo Beach in San Pedro (est. 1946). Hosts Cub Scout and Scout day camps with swimming, kayaking, canoeing, archery, and merit badge programs. CLOSED: site reclaimed for the LA 2028 Olympic sailing venue; no longer an operating Scout camp.",
       "features": [],
       "id": "ca-cabrillo-beach-youth-waterfront-sports-center",
       "lat": 33.717687,
@@ -22,7 +22,7 @@
       },
       "sessions": [],
       "state": "CA",
-      "status": "active",
+      "status": "closed",
       "website_url": "https://cabrillobeachyouthcenter.org/"
     },
     {
