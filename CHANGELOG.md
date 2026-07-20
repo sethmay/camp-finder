@@ -2,6 +2,16 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.26.0 (minor) — 2026-07-19
+
+- `5bd2b34` **More app** — distance filter gains **300 / 400 / 500 / 600 mi** options; added
+  **S-F Scout Ranch** (Greater St. Louis Area Council, 312), superseding the junk-named
+  `Summer Camp-Gamble` / `Summer Camp-Famous Eagle` scrape dups (its two program styles). Added two
+  overseas councils: **Far East Council** (803, AP) with 4 Scouts BSA camps (Okinawa, Tokyo, Malaysia,
+  Philippines) and **Transatlantic Council** (802, AE) with 3 camps (Croatia, Kandersteg CH, Germany);
+  overseas camps carry real foreign coordinates (outside US bounds — a benign validate warning) and use
+  military USPS state codes AP/AE. Councils 236 → 238, camps 478 → 486, sessions 1271 → 1277.
+
 ## 0.25.0 (minor) — 2026-07-19
 
 - `abf2a76` **usscouts OCD sweep** — worked the full 320-lead OCD review list via 16 scouts. Added
