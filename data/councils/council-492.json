@@ -115,6 +115,29 @@
       "website_url": "https://cpcbsa.org/camping/camp-baldwin/"
     },
     {
+      "address": "17500 Cape Lookout Road",
+      "city": "Cloverdale",
+      "council_id": "council-492",
+      "description": "Cascade Pacific Council coastal high-adventure program (Adventure Cove) on the 780-acre Meriwether/Clark Scout Reservation at Cape Lookout, ~20 miles south of Tillamook. Sea kayaking, rock climbing, sandboarding, shooting sports, clamming/crabbing. Operating in 2026 (family camp sessions published); clean Scouts BSA/high-adventure session dates not cleanly published.",
+      "features": [],
+      "id": "or-camp-clark-adventure-cove",
+      "name": "Camp Clark / Adventure Cove",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://cpcscouting.org/project/camp-clark/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://cpcscouting.org/project/camp-clark/"
+    },
+    {
       "address": "Camp Meriwether, Cloverdale, OR 97112",
       "city": "Cloverdale",
       "council_id": "council-492",

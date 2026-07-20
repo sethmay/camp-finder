@@ -121,6 +121,28 @@
       "state": "NC",
       "status": "active",
       "website_url": "https://www.campdanielboone.org/"
+    },
+    {
+      "city": "Franklin",
+      "council_id": "council-414",
+      "description": "Daniel Boone Council 117-acre high-adventure base in the Tessentee Valley against the Nantahala National Forest, used as the staging base for the council's week-long backpacking treks (e.g., Bartram Trail Trek) exploring the mountains of NC/TN/GA. Confirmed operating for 2026 (participants must be 13 by June 1, 2026).",
+      "features": [],
+      "id": "nc-lumpkin-adventure-base",
+      "name": "Lumpkin Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.danielboonecouncil.org/Adventure",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.danielboonecouncil.org/Adventure"
     }
   ],
   "hq_city": "Asheville",

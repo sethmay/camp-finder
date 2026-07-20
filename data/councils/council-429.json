@@ -229,6 +229,8 @@
       "description": "Northern Lights Council D11 Minot Cub Scout Day Camp held at Big Four Camp property in Minot. 2026 'Dino Discovery' theme with BB guns, archery, slingshots, and games. A parent/adult must attend with each Cub Scout.",
       "features": [],
       "id": "nd-big-four-camp",
+      "lat": 40.637405,
+      "lon": -74.003778,
       "name": "Big Four Camp",
       "program_types": [
         "cub_day"

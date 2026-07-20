@@ -1,6 +1,30 @@
 {
   "camps": [
     {
+      "city": "Acton",
+      "council_id": "council-218",
+      "description": "30-acre Pine Tree Council property on Loon Pond in Acton, currently used by the York District for weekend events and Cub Scout Day Camp. 2026 day-camp session dates not cleanly published.",
+      "features": [],
+      "id": "me-camp-nutter",
+      "lat": 43.5098,
+      "lon": -70.8721,
+      "name": "Camp Nutter",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.pinetreescouting.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "ME",
+      "status": "active",
+      "website_url": "https://www.pinetreescouting.org/"
+    },
+    {
       "address": "146 Plains Road",
       "city": "Raymond",
       "council_id": "council-218",

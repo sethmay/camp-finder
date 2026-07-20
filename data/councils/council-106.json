@@ -63,6 +63,31 @@
       "website_url": "https://www.mountainwestcouncil.org/bradley"
     },
     {
+      "address": "4544 E 3175 N",
+      "city": "Murtaugh",
+      "council_id": "council-106",
+      "description": "Cub Scout / Webelos day camp on Murtaugh Lake southeast of Twin Falls, operated by Mountain West Council (#106). Used for single-day events. 2026 day-camp dates not cleanly published.",
+      "features": [],
+      "id": "id-camp-murtaugh",
+      "lat": 42.4571076,
+      "lon": -114.1673768,
+      "name": "Camp Murtaugh",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.mountainwestcouncil.org/content/98896/Day-Camp---Camp-Murtaugh-",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://www.mountainwestcouncil.org/content/98896/Day-Camp---Camp-Murtaugh-"
+    },
+    {
       "city": "Riggins",
       "council_id": "council-106",
       "description": "Mountain West Council three-day whitewater rafting high-adventure trek on the lower Salmon River in the remote Salmon River Canyon. Minimum crew 3 adults and 3 youth. Fee shown is in-council rate ($275 out-of-council).",

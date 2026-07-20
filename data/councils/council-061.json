@@ -1,12 +1,36 @@
 {
   "camps": [
     {
+      "city": "Elbert",
+      "council_id": "council-061",
+      "description": "Scouts BSA patrol-method resident summer camp at Peaceful Valley (McNeil) Scout Ranch, Denver Area Council. Emphasizes patrol cooking and high-adventure outposts alongside merit badges.",
+      "features": [],
+      "id": "co-camp-cortlandt-dietler",
+      "name": "Camp Cortlandt Dietler",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingcolorado.org/programs/camps/mcneil-scout-ranch/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingcolorado.org/programs/camps/mcneil-scout-ranch/"
+    },
+    {
       "address": "22799 Elbert Road",
       "city": "Elbert",
       "council_id": "council-061",
       "description": "Scouts BSA resident summer camp at Camp Cris Dobbins, McNeil Scout Ranch at Peaceful Valley (Greater Colorado Council). 50+ merit badges, outdoor pool water slides, Olympic shotgun range. Six one-week sessions in 2026. Per-scout fees not publicly published.",
       "features": [],
       "id": "co-camp-cris-dobbins",
+      "lat": 64.88379,
+      "lon": -147.7897051,
       "name": "Camp Cris Dobbins",
       "program_types": [
         "scouts_bsa_resident"
@@ -127,6 +151,8 @@
       "description": "Cub Scout resident overnight camp (4-day/3-night) at Camp Cris Dobbins, McNeil Scout Ranch at Peaceful Valley (Greater Colorado Council). Age-specific program: sports, handicrafts, nature, swimming, boating. Each Cub must be accompanied by a parent/guardian. Fees not publicly published.",
       "features": [],
       "id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins",
+      "lat": 64.88379,
+      "lon": -147.7897051,
       "name": "Cub Scout Adventure Camp at Camp Cris Dobbins",
       "program_types": [
         "cub_resident"
@@ -175,6 +201,28 @@
       "state": "CO",
       "status": "active",
       "website_url": "https://scoutingevent.com/061-2026CubAdventureCamp"
+    },
+    {
+      "city": "Elbert",
+      "council_id": "council-061",
+      "description": "Denver Area Council's Cub Scout resident camp at Peaceful Valley (McNeil) Scout Ranch; lake activities, BB gun and archery ranges.",
+      "features": [],
+      "id": "co-magness-adventure-camp",
+      "name": "Magness Adventure Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingcolorado.org/programs/camps/mcneil-scout-ranch/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingcolorado.org/programs/camps/mcneil-scout-ranch/"
     },
     {
       "address": "173 County Road 96",

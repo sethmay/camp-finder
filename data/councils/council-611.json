@@ -177,6 +177,31 @@
       "website_url": "https://scoutingevent.com/611-26GrizzlySummerCamp"
     },
     {
+      "address": "23516 S ID-97",
+      "city": "Harrison",
+      "council_id": "council-611",
+      "description": "Council high-adventure base operated by Inland Northwest Council at Camp Easton on Lake Coeur d'Alene, offering peak climbing, whitewater rafting, mountain biking and backcountry treks. Distinct trek program; specific 2026 HAB dates not cleanly published.",
+      "features": [],
+      "id": "id-north-idaho-high-adventure-base",
+      "lat": 47.5977773,
+      "lon": -116.7710295,
+      "name": "North Idaho High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.nwscouts.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://www.nwscouts.org/"
+    },
+    {
       "address": "4161 North Shore Diamond Lake Rd",
       "city": "Newport",
       "council_id": "council-611",

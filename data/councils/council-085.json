@@ -1,6 +1,49 @@
 {
   "camps": [
     {
+      "address": "8598 Potomac Ave",
+      "city": "Sebastian",
+      "council_id": "council-085",
+      "description": "Gulf Stream Council wilderness camp in an oak hammock on the Sebastian River; hosts the Indian River District Cub Scout Day Camp for Tigers through Arrow of Light. Daily 9:00 AM-4:00 PM. (Camp pledged in BSA settlement but council fundraising to retain; day camp scheduled for 2026.)",
+      "features": [],
+      "id": "fl-camp-oklawaha",
+      "lat": 27.7906333,
+      "lon": -80.5059434,
+      "name": "Camp Oklawaha",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.gulfstreamcouncil.org/IR-daycamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "fl-camp-oklawaha",
+          "end_date": "2026-06-12",
+          "fee_youth": 165,
+          "id": "fl-camp-oklawaha-2026-06-08",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://www.gulfstreamcouncil.org/IR-daycamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-08",
+          "year": 2026
+        }
+      ],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://www.gulfstreamcouncil.org/IR-daycamp"
+    },
+    {
       "address": "8501 SE Boy Scout Rd, Jupiter, FL 33469",
       "city": "Jupiter",
       "council_id": "council-085",

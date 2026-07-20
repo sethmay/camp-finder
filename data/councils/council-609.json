@@ -1,6 +1,32 @@
 {
   "camps": [
     {
+      "address": "733 Bonaparte Lake Rd",
+      "city": "Tonasket",
+      "council_id": "council-609",
+      "description": "Chief Seattle Council Cub Scout resident camp on Bonaparte Lake in the Colville National Forest. 2026 Cub Resident Camp confirmed (registration closes 2026-07-15); archery, BB guns, swimming, boating, climbing wall. Clean session dates not published on council page.",
+      "features": [],
+      "id": "wa-camp-bonaparte",
+      "lat": 48.809980394186,
+      "lon": -119.033325216963,
+      "name": "Camp Bonaparte",
+      "program_types": [
+        "cub_resident",
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingseattle.org/camp-bonaparte/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WA",
+      "status": "active",
+      "website_url": "https://scoutingseattle.org/camp-bonaparte/"
+    },
+    {
       "address": "25600-B Monroe Camp Rd",
       "city": "Snohomish",
       "council_id": "council-609",
@@ -294,6 +320,28 @@
       "state": "WA",
       "status": "active",
       "website_url": "https://seattlebsa.org/camp-sheppard/"
+    },
+    {
+      "city": "Wenatchee",
+      "council_id": "council-609",
+      "description": "Chief Seattle Council (Grand Columbia) alpine camp northeast of Mission Ridge Ski Resort near Wenatchee; hosts a Cub Scout Day Camp. Clean 2026 day-camp dates not cleanly published.",
+      "features": [],
+      "id": "wa-scout-a-vista",
+      "name": "Scout-A-Vista",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingseattle.org/scout-a-vista/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WA",
+      "status": "active",
+      "website_url": "https://scoutingseattle.org/scout-a-vista/"
     }
   ],
   "hq_city": "Seattle",

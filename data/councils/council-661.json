@@ -76,6 +76,93 @@
       "state": "PR",
       "status": "active",
       "website_url": "https://scoutingevent.com/661-GSR2026"
+    },
+    {
+      "city": "San Sebastian",
+      "council_id": "council-661",
+      "description": "Puerto Rico Council's traditional summer camp on Guajataca Lake, San Sebastian. 2026 program serves Scouts BSA (55+ merit badges, Tenderfoot/Second/First Class) plus Cub Scouts and Venturing. Sessions run Sunday 11:00 AM to Saturday 11:00 AM AST.",
+      "features": [],
+      "id": "pr-guajataka-scout-reservation-camp-guajataka",
+      "name": "Guajataka Scout Reservation (Camp Guajataka)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingevent.com/661-108970",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pr-guajataka-scout-reservation-camp-guajataka",
+          "end_date": "2026-07-04",
+          "id": "pr-guajataka-scout-reservation-camp-guajataka-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://scoutingevent.com/661-108970",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pr-guajataka-scout-reservation-camp-guajataka",
+          "end_date": "2026-07-11",
+          "id": "pr-guajataka-scout-reservation-camp-guajataka-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://scoutingevent.com/661-108970",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pr-guajataka-scout-reservation-camp-guajataka",
+          "end_date": "2026-07-18",
+          "id": "pr-guajataka-scout-reservation-camp-guajataka-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://scoutingevent.com/661-108970",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pr-guajataka-scout-reservation-camp-guajataka",
+          "end_date": "2026-07-25",
+          "id": "pr-guajataka-scout-reservation-camp-guajataka-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://scoutingevent.com/661-108970",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "PR",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/661-108970"
     }
   ],
   "hq_city": "Guaynabo",

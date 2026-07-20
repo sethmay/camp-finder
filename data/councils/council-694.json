@@ -1,6 +1,45 @@
 {
   "camps": [
     {
+      "city": "Vadito",
+      "council_id": "council-694",
+      "description": "South Plains Council high-altitude Scouts BSA resident summer camp in the Sangre de Cristo Mountains of New Mexico; patrol-style cooking and merit-badge program (units bring own tents/cooking gear).",
+      "features": [],
+      "id": "nm-camp-tres-ritos",
+      "name": "Camp Tres Ritos",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.spccamps.org/tres-ritos",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nm-camp-tres-ritos",
+          "end_date": "2026-07-18",
+          "id": "nm-camp-tres-ritos-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://www.spccamps.org/tres-ritos",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "NM",
+      "status": "active",
+      "website_url": "https://www.spccamps.org/tres-ritos"
+    },
+    {
       "city": "Post",
       "council_id": "council-694",
       "description": "South Plains Council's Scouts BSA camp in Garza County near Post, TX, offering horseback riding, mountain biking, climbing, and shooting sports, plus a 135,000-gallon pool. Includes a June resident session and a Summer Merit Badge Camp.",

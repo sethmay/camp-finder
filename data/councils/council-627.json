@@ -121,6 +121,31 @@
       "website_url": "https://samoset.org/camping/akelas-world/"
     },
     {
+      "address": "5403 Spider Lake Rd",
+      "city": "Rhinelander",
+      "council_id": "council-627",
+      "description": "Samoset Council high-adventure base at Crystal Lake Scout Reservation offering week-long wilderness treks (Apostle Islands, Porcupine Mountains) for Scouts and Venturers 14+. Treks run weekly from mid-June through mid-August, Sunday afternoon to Saturday morning; gear provided.",
+      "features": [],
+      "id": "wi-hanna-venture-base",
+      "lat": 45.7293892,
+      "lon": -89.42282,
+      "name": "Hanna Venture Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "http://clsr.samoset.org/hanna/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WI",
+      "status": "active",
+      "website_url": "http://clsr.samoset.org/hanna/"
+    },
+    {
       "address": "Crystal Lake Scout Reservation",
       "city": "Rhinelander",
       "council_id": "council-627",

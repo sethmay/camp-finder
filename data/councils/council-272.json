@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "3213 Walker Ave NW",
+      "city": "Grand Rapids",
+      "council_id": "council-272",
+      "description": "Michigan Crossroads Council STEM/leadership/outdoor adventure center at the DeVos Family Center for Scouting; runs a Cub Scout (and public) summer day camp in 2026.",
+      "features": [],
+      "id": "mi-adventure-point",
+      "lat": 42.989542,
+      "lon": -85.7118244,
+      "name": "Adventure Point",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://michiganscouting.org/adventurepoint/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://michiganscouting.org/adventurepoint/"
+    },
+    {
       "address": "E6350 Doe Lake Road",
       "city": "Munising",
       "council_id": "council-272",
@@ -59,6 +84,94 @@
       "state": "MI",
       "status": "active",
       "website_url": "https://michiganscouting.org/camping/properties/camp-hiawatha/"
+    },
+    {
+      "address": "20120 Bartell Road",
+      "city": "Gregory",
+      "council_id": "council-272",
+      "description": "Michigan Crossroads Council Cub Scout resident camp on Buin Lake; largest attended Cub resident camp in Michigan. 2026 sessions confirmed on the council cub camping page.",
+      "features": [],
+      "id": "mi-camp-munhacke",
+      "name": "Camp Munhacke",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://michiganscouting.org/camping/cub-scout-camping/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-munhacke",
+          "end_date": "2026-07-01",
+          "id": "mi-camp-munhacke-2026-06-28",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://michiganscouting.org/camping/cub-scout-camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-munhacke",
+          "end_date": "2026-07-04",
+          "id": "mi-camp-munhacke-2026-07-01",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://michiganscouting.org/camping/cub-scout-camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-01",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-munhacke",
+          "end_date": "2026-07-22",
+          "id": "mi-camp-munhacke-2026-07-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://michiganscouting.org/camping/cub-scout-camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-munhacke",
+          "end_date": "2026-07-25",
+          "id": "mi-camp-munhacke-2026-07-22",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://michiganscouting.org/camping/cub-scout-camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-22",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://michiganscouting.org/camping/cub-scout-camping/"
     },
     {
       "address": "3201 S Clare Avenue",
@@ -723,6 +836,31 @@
       "state": "MI",
       "status": "active",
       "website_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/"
+    },
+    {
+      "address": "6278 Texas Drive",
+      "city": "Kalamazoo",
+      "council_id": "council-272",
+      "description": "Michigan Crossroads Council 199-acre Cub Scout resident camp on Bass Lake with aquatics, shooting sports, ecology, and Scoutcraft. Operating; 2026 session dates not cleanly published.",
+      "features": [],
+      "id": "mi-rota-kiwan-scout-reservation",
+      "lat": 42.211962,
+      "lon": -85.6733764,
+      "name": "Rota-Kiwan Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://michiganscouting.org/camping/properties/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://michiganscouting.org/camping/properties/"
     }
   ],
   "hq_city": "Lansing",

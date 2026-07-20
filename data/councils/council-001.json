@@ -107,6 +107,28 @@
       "website_url": "https://1bsa.org/summer-camp-at-camp-comer/"
     },
     {
+      "city": "Scottsboro",
+      "council_id": "council-001",
+      "description": "515-acre Greater Alabama Council camp on the Tennessee River near Scottsboro (Jones Cove, off Hwy 40/35). Hosts a 5-week traditional Scouts BSA resident summer camp beginning in June; waterfalls, 10+ miles of trails, fishing, canoeing, mountain boards, swimming. Specific 2026 session dates not cleanly published.",
+      "features": [],
+      "id": "al-camp-jackson",
+      "name": "Camp Jackson",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://1bsa.org/camp-jackson/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AL",
+      "status": "active",
+      "website_url": "https://1bsa.org/camp-jackson/"
+    },
+    {
       "address": "Camp Sequoyah, Delta, AL (Talladega National Forest)",
       "city": "Delta",
       "council_id": "council-001",

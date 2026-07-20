@@ -1,5 +1,29 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "6918 Tennessee St",
+      "city": "Texarkana",
+      "council_id": "council-584",
+      "description": "Caddo Area Council's 250-acre year-round camp on the outskirts of Texarkana, AR; operates a Cub Scout and Webelos resident camp with swimming pool, dining hall, canoe lake, cub pirate ship, and COPE course. 2026 session dates not cleanly published.",
+      "features": [],
+      "id": "ar-camp-preston-hunt",
+      "name": "Camp Preston Hunt",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingevent.com/584-Cubsummer",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AR",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/584-Cubsummer"
+    }
+  ],
   "hq_city": "Texarkana",
   "id": "council-584",
   "name": "Caddo Area Council",

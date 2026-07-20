@@ -7,6 +7,8 @@
       "description": "Cornhusker Council's 480-acre Scouts BSA Resident Camp near Du Bois in southeast Nebraska, a seven-day/six-night long-term camping experience with over fifty years of resident camping tradition.",
       "features": [],
       "id": "ne-camp-cornhusker",
+      "lat": 40.017037,
+      "lon": -95.9440314,
       "name": "Camp Cornhusker",
       "program_types": [
         "scouts_bsa_resident"

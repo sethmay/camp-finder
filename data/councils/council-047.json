@@ -1,6 +1,28 @@
 {
   "camps": [
     {
+      "city": "Cisco Grove",
+      "council_id": "council-047",
+      "description": "Golden Empire Council high-elevation (7,200 ft) wilderness camp on Lake Sterling in the Tahoe National Forest north of Cisco Grove. Reservable by units for a true wilderness experience with First Class advancement and intensive merit badge programs; fishing and stargazing.",
+      "features": [],
+      "id": "ca-camp-robert-l-cole",
+      "name": "Camp Robert L. Cole",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://camprobertlcole.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CA",
+      "status": "active",
+      "website_url": "https://camprobertlcole.org/"
+    },
+    {
       "address": "40800 CA-88 Pioneer, California 95666",
       "council_id": "council-047",
       "features": [],

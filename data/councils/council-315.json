@@ -1,6 +1,28 @@
 {
   "camps": [
     {
+      "city": "Anaconda",
+      "council_id": "council-315",
+      "description": "Montana Council rugged high-adventure/primitive camp near the Anaconda-Pintler Wilderness in Beaverhead National Forest, 5 miles from the Big Hole River; backpacking, fishing, wilderness survival for experienced units.",
+      "features": [],
+      "id": "mt-arcola-scout-camp",
+      "name": "Arcola Scout Camp",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingmontana.org/camps/arcola/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MT",
+      "status": "active",
+      "website_url": "https://scoutingmontana.org/camps/arcola/"
+    },
+    {
       "city": "Big Arm",
       "council_id": "council-315",
       "description": "Montana Council island resident camp on Flathead Lake with a heavily water-based program (whitewater rafting, sailing, water skiing, snorkeling) for seasoned Scouts BSA. Youth fee increases to $575 if not paid in full by 5/15/2026.",
@@ -112,6 +134,28 @@
       "state": "MT",
       "status": "active",
       "website_url": "https://scoutingmontana.org/camps/melita-island/"
+    },
+    {
+      "city": "Bigfork",
+      "council_id": "council-315",
+      "description": "Montana Council high-adventure base camp near Bigfork, 40 miles south of Glacier NP and 5 miles north of Flathead Lake; launch point for unit-planned Bob Marshall Wilderness and Glacier adventures. Does not offer basic Scout-camp program.",
+      "features": [],
+      "id": "mt-grizzly-base",
+      "name": "Grizzly Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://scoutingmontana.org/camps/grizzly-base/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MT",
+      "status": "active",
+      "website_url": "https://scoutingmontana.org/camps/grizzly-base/"
     },
     {
       "city": "Hilger",

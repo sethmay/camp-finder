@@ -149,6 +149,28 @@
       "state": "MO",
       "status": "active",
       "website_url": "https://www.hoac-bsa.org/bartle"
+    },
+    {
+      "city": "Lees Summit",
+      "council_id": "council-307",
+      "description": "Heart of America Council long-term resident Scouts BSA camp at Rotary Youth Camp for Scouts with special needs/disabilities; merit-badge advancement program, held annually in July. 2026 dates not cleanly confirmed on the live page.",
+      "features": [],
+      "id": "mo-rotary-scout-camp",
+      "name": "Rotary Scout Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.hoac-bsa.org/rotary-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://www.hoac-bsa.org/rotary-camp"
     }
   ],
   "hq_city": "Kansas City",

@@ -148,6 +148,48 @@
       "state": "AR",
       "status": "active",
       "website_url": "https://www.chickasaw.org/events-master/summer-camp-2026"
+    },
+    {
+      "address": "9700 Highway 304, Hernando, MS",
+      "city": "Eudora",
+      "council_id": "council-558",
+      "description": "Chickasaw Council camp in Eudora/Hernando, MS. Council's resident summer camp is Kia Kima; Currier hosts the council Twilight (Cub day) Camp July 13-17, 2026 and district events.",
+      "features": [],
+      "id": "ms-camp-currier",
+      "lat": 34.831135125001,
+      "lon": -90.16371534755,
+      "name": "Camp Currier",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.campcurrier.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ms-camp-currier",
+          "end_date": "2026-07-17",
+          "id": "ms-camp-currier-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (OCD sweep)",
+            "source_url": "https://www.campcurrier.org/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        }
+      ],
+      "state": "MS",
+      "status": "active",
+      "website_url": "https://www.campcurrier.org/"
     }
   ],
   "hq_city": "Memphis",

@@ -42,6 +42,56 @@
       "website_url": "https://www.okscouts.org/campscubscouts"
     },
     {
+      "address": "Skiatook Lake",
+      "city": "Skiatook",
+      "council_id": "council-488",
+      "description": "Indian Nations Council family/Cub Scout program area at Zink Scout Ranch near Skiatook, OK.",
+      "features": [],
+      "id": "ok-babbitt-cub-world-at-zink-scout-ranch",
+      "lat": 36.3425491,
+      "lon": -96.107347,
+      "name": "Babbitt Cub World at Zink Scout Ranch",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.okscouts.org/cub-world-at-zink-ranch",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.okscouts.org/cub-world-at-zink-ranch"
+    },
+    {
+      "address": "Broken Arrow",
+      "city": "Broken Arrow",
+      "council_id": "council-488",
+      "description": "Indian Nations Council 180-acre property in Broken Arrow, OK, used for Cub Scout and Webelos day camp; also home to the Outer Limits COPE/high-elements course.",
+      "features": [],
+      "id": "ok-camp-robson-jack-graves-outdoor-education-center-and-outer-limits",
+      "lat": 36.0525993,
+      "lon": -95.7908195,
+      "name": "Camp Robson (Jack Graves Outdoor Education Center & Outer Limits)",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.okscouts.org/reservations",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.okscouts.org/reservations"
+    },
+    {
       "city": "Talihina",
       "council_id": "council-488",
       "description": "Indian Nations Council's 620-acre Scouts BSA resident camp in the Winding Stair Mountains, Ouachita National Forest. Youth fee is early-bird ($375 if paid by Feb 1).",
@@ -116,6 +166,29 @@
       "state": "OK",
       "status": "active",
       "website_url": "https://www.halescoutreservation.org/"
+    },
+    {
+      "address": "5 miles south of Locust Grove along Spring Creek",
+      "city": "Locust Grove",
+      "council_id": "council-488",
+      "description": "Indian Nations Council 600-acre reservation near Locust Grove, OK, hosting Cub Scout Resident Camp, Webelos Woods, high adventure, and shooting sports.",
+      "features": [],
+      "id": "ok-mabee-scout-reservation",
+      "name": "Mabee Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (OCD sweep)",
+        "source_url": "https://www.okscouts.org/camps-1/mabee-scout-reservation",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.okscouts.org/camps-1/mabee-scout-reservation"
     },
     {
       "city": "Skiatook",
