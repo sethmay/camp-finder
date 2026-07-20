@@ -2,6 +2,18 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.22.0 (minor) — 2026-07-19
+
+- `41327d7` **Leads batch 3 (MN/PA/GA/AL/NY/MA/TN/WV/IL/ME)** — processed ~100 crowdsourced My Maps +
+  OCD leads across ten state pools (one scout each), verified against council sites; dropped
+  defunct/duplicate/non-BSA/venue-pin noise. Added **64 camps (+146 sessions) across 43 councils**,
+  including **Fort Steuben Scout Reservation** (Mountaineer Area Council 615, physically in Tippecanoe,
+  OH) and Camp Mountaineer. Remapped a Black Pug org id (375 → BSA council 380, Great Falls) and
+  handled border-council camps (Camp Horseshoe MD, Camp Merz/Wanocksett cross-border). Coordinates
+  geocoded then recovered from map pins (17 fixed, 9 wrong-region nulled, ~14 left coordinate-less).
+  Skipped Spanish Trail (already present); deferred Saukenauk SR (ambiguous council key). Camp count
+  260 → 324, sessions 908 → 1054.
+
 ## 0.21.0 (minor) — 2026-07-19
 
 - `ca9f93b` **Leads batch 2 (OH/TX/NJ/FL/CA/WI)** — processed ~94 crowdsourced My Maps + OCD leads
