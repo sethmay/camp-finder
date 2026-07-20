@@ -1,13 +1,14 @@
-# usscouts OCD camp leads — still to review (UNTRUSTED)
+# usscouts OCD camp leads — PROCESSED (UNTRUSTED)
 
-Source: usscouts.org Online Camp Database (user-supplied export). Re-deduped 2026-07-19 against the
-current **417-camp** dataset (normalized name + state). Of the original ~425 Scout-owned leads,
-**103** are now already in the dataset and **320** remain to review below.
+**Status: swept in v0.25.0 (2026-07-19).** All 320 leads below were researched via a 16-scout pass.
+Outcome: **61 genuine operating in-scope camps added** (mostly council high-adventure/aquatics bases and
+Cub camps), ~32 dropped as duplicates (auto + manual name-variants), and the remainder were
+**unconfirmable** — defunct/sold properties, council service centers, non-BSA/non-summer sites, or camps
+whose councils don't publish an operating 2026 program. The list is retained below as a record of what
+was reviewed; no further action expected unless a specific entry resurfaces.
 
-**UNTRUSTED / low-signal.** The OCD tags these 'Scout-owned', but the remainder still skews toward
-duplicates our dedup missed (name variants), Cub-only/day camps, defunct/sold properties, council
-service centers, and non-summer sites. Each needs a look at the council's official page before entering
-the candidate→review→merge flow. No coordinates in this source.
+Source: usscouts.org Online Camp Database (user-supplied export). Original ~425 Scout-owned leads →
+103 already in dataset at first dedup → 320 reviewed here. No coordinates in this source.
 
 ## AK (1)
 - Chilkoot High Adventure Base
