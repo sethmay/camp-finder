@@ -2,6 +2,17 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.21.0 (minor) — 2026-07-19
+
+- `ca9f93b` **Leads batch 2 (OH/TX/NJ/FL/CA/WI)** — processed ~94 crowdsourced My Maps + OCD leads
+  across six state pools (one scout each), verified against council sites; dropped defunct/sold,
+  duplicate, non-BSA, and out-of-scope venue pins. Added **63 camps (+145 sessions) across 43
+  councils**, including correct border-council attributions (PA Hawk Mountain / Minsi Trails, NY
+  Greater NY / Greater Hudson Valley, AL Alabama-Florida, IL Three Fires / Blackhawk). Coordinates
+  geocoded then recovered from the map pins where geocoding missed (23 fixed, 6 wrong-region nulled,
+  18 left coordinate-less pending enrichment). Deferred Fort Steuben SR (council 619 not in registry).
+  Camp count 197 → 260, sessions 763 → 908.
+
 ## 0.20.0 (minor) — 2026-07-19
 
 - `c78121c` **Indiana leads batch** — first pass through the untrusted My Maps + usscouts OCD leads
