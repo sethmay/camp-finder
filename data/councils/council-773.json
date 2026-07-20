@@ -82,6 +82,8 @@
       "description": "Gulf Coast Council Cub Scout resident camp at Camp Euchee, Spanish Trail Scout Reservation, NW Florida. Fees not cleanly published on public page.",
       "features": [],
       "id": "fl-spanish-trail-scout-reservation-cub-scout-resident-camp",
+      "lat": 30.731622998752,
+      "lon": -86.208906881908,
       "name": "Spanish Trail Scout Reservation Cub Scout Resident Camp",
       "program_types": [
         "cub_resident"

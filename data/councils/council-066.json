@@ -1,6 +1,128 @@
 {
   "camps": [
     {
+      "address": "169 Camp Workcoeman Road",
+      "city": "New Hartford",
+      "council_id": "council-066",
+      "description": "Connecticut Rivers Council Cub Scout day camp at Camp Workcoeman. Youth $325 (until June 1; $335 after); $250 second week; sibling and den-leader discounts available.",
+      "features": [],
+      "id": "ct-camp-workcoeman-cub-scout-day-camp",
+      "lat": 41.8914514,
+      "lon": -73.0477717,
+      "name": "Camp Workcoeman - Cub Scout Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ct-camp-workcoeman-cub-scout-day-camp",
+          "end_date": "2026-07-24",
+          "fee_youth": 325,
+          "id": "ct-camp-workcoeman-cub-scout-day-camp-2026-07-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-camp-workcoeman-cub-scout-day-camp",
+          "end_date": "2026-07-31",
+          "fee_youth": 325,
+          "id": "ct-camp-workcoeman-cub-scout-day-camp-2026-07-27",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-27",
+          "year": 2026
+        }
+      ],
+      "state": "CT",
+      "status": "active",
+      "website_url": "https://campworkcoeman.org/cub-scouts/fees/"
+    },
+    {
+      "address": "169 Camp Workcoeman Road",
+      "city": "New Hartford",
+      "council_id": "council-066",
+      "description": "Connecticut Rivers Council Cub Scout resident (overnight) summer camp on West Hill Pond. Youth $525 (until June 1; $555 after); adult leader/Den Chief $140.",
+      "features": [],
+      "id": "ct-camp-workcoeman-cub-scout-resident-camp",
+      "lat": 41.8914514,
+      "lon": -73.0477717,
+      "name": "Camp Workcoeman - Cub Scout Resident Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ct-camp-workcoeman-cub-scout-resident-camp",
+          "end_date": "2026-07-24",
+          "fee_adult": 140,
+          "fee_youth": 525,
+          "id": "ct-camp-workcoeman-cub-scout-resident-camp-2026-07-19",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ct-camp-workcoeman-cub-scout-resident-camp",
+          "end_date": "2026-07-31",
+          "fee_adult": 140,
+          "fee_youth": 525,
+          "id": "ct-camp-workcoeman-cub-scout-resident-camp-2026-07-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://campworkcoeman.org/cub-scouts/fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "CT",
+      "status": "active",
+      "website_url": "https://campworkcoeman.org/cub-scouts/fees/"
+    },
+    {
       "address": "231 Ashford Center Road Ashford, Connecticut 06278",
       "council_id": "council-066",
       "features": [],

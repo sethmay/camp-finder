@@ -7,6 +7,8 @@
       "description": "Abraham Lincoln Council Scouts BSA resident summer camp on 600+ acres near Hettick, with a private lake (Lake Freesen), small-boat sailing, COPE/climbing, shooting sports, and merit badge programs. 2026 fees not cleanly published at time of research.",
       "features": [],
       "id": "il-camp-bunn",
+      "lat": 35.1335252,
+      "lon": -101.8932952,
       "name": "Camp Bunn",
       "program_types": [
         "scouts_bsa_resident"
@@ -47,6 +49,8 @@
       "description": "Abraham Lincoln Council Cub Scout Adventure Camp: a 3-night resident camp at Camp Illinek near Chatham for Cub Scouts, with swimming (via bussing to a local pool), archery/BB, crafts and outdoor program. Two 2026 sessions; fee amounts not published at time of research.",
       "features": [],
       "id": "il-camp-illinek",
+      "lat": 37.4252525,
+      "lon": -77.4987913,
       "name": "Camp Illinek",
       "program_types": [
         "cub_resident"

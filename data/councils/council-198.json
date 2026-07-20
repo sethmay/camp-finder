@@ -1,5 +1,78 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "1781 Road 19",
+      "city": "Sedan",
+      "council_id": "council-198",
+      "description": "Quivira Council Scouts BSA/Venturing resident summer camp (physically in Kansas). Three one-week June 2026 sessions.",
+      "features": [],
+      "id": "ks-quivira-scout-ranch",
+      "name": "Quivira Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutingevent.com/198-101442",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ks-quivira-scout-ranch",
+          "end_date": "2026-06-13",
+          "id": "ks-quivira-scout-ranch-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingevent.com/198-101442",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ks-quivira-scout-ranch",
+          "end_date": "2026-06-20",
+          "id": "ks-quivira-scout-ranch-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingevent.com/198-101442",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ks-quivira-scout-ranch",
+          "end_date": "2026-06-27",
+          "id": "ks-quivira-scout-ranch-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingevent.com/198-101442",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "KS",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/198-101442"
+    }
+  ],
   "hq_city": "Wichita",
   "id": "council-198",
   "name": "Quivira Council",

@@ -7,6 +7,8 @@
       "description": "Laurel Highlands Council dining-hall Scouts BSA resident camp at Heritage Reservation, Farmington, PA.",
       "features": [],
       "id": "pa-camp-freedom",
+      "lat": 37.687867,
+      "lon": -89.225411,
       "name": "Camp Freedom",
       "program_types": [
         "scouts_bsa_resident"

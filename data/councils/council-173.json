@@ -1,5 +1,78 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Waverly",
+      "council_id": "council-173",
+      "description": "Winnebago Council's Scouts BSA resident camp at Ingawanis Adventure Base near Waverly, IA (direct Cedar River access). Confirmed operating property; specific 2026 session dates not cleanly published on the council site at time of research.",
+      "features": [],
+      "id": "ia-ingawanis-adventure-base",
+      "lat": 42.6877,
+      "lon": -92.4234,
+      "name": "Ingawanis Adventure Base",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.winnebagocouncil.org/camping/iab/scouts-bsa-resident-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://www.winnebagocouncil.org/camping/iab/scouts-bsa-resident-camp/"
+    },
+    {
+      "city": "Waverly",
+      "council_id": "council-173",
+      "description": "Winnebago Council Cub Scout resident camp (4 days/3 nights) at Ingawanis Adventure Base. 2026 dates not cleanly published on the council site at time of research (page still showed prior-year dates).",
+      "features": [],
+      "id": "ia-ingawanis-adventure-base-cub-scout-resident-camp",
+      "lat": 42.6877,
+      "lon": -92.4234,
+      "name": "Ingawanis Adventure Base - Cub Scout Resident Camp",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.winnebagocouncil.org/camping/iab/cub-scout-resident-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://www.winnebagocouncil.org/camping/iab/cub-scout-resident-camp/"
+    },
+    {
+      "city": "Waverly",
+      "council_id": "council-173",
+      "description": "Winnebago Council Webelos resident camp at Ingawanis Adventure Base. 2026 dates not cleanly published on the council site at time of research.",
+      "features": [],
+      "id": "ia-ingawanis-adventure-base-webelos-resident-camp",
+      "lat": 42.6877,
+      "lon": -92.4234,
+      "name": "Ingawanis Adventure Base - Webelos Resident Camp",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.winnebagocouncil.org/camping/iab/webelos-resident-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://www.winnebagocouncil.org/camping/iab/webelos-resident-camp/"
+    }
+  ],
   "hq_city": "Waterloo",
   "id": "council-173",
   "name": "Winnebago Council",

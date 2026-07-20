@@ -1,5 +1,93 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Hazlehurst",
+      "council_id": "council-303",
+      "description": "Scouts BSA resident summer camp operated by the Mississippi Riverlands Council (formed March 2026 from the merger of Andrew Jackson Council #303 and Choctaw Area Council #302) at the 1,300-acre Hood Scout Reservation in Copiah County. Four one-week sessions in June 2026.",
+      "features": [],
+      "id": "ms-warren-a-hood-scout-reservation",
+      "name": "Warren A. Hood Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ms-warren-a-hood-scout-reservation",
+          "end_date": "2026-06-06",
+          "id": "ms-warren-a-hood-scout-reservation-2026-05-31",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ms-warren-a-hood-scout-reservation",
+          "end_date": "2026-06-13",
+          "id": "ms-warren-a-hood-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ms-warren-a-hood-scout-reservation",
+          "end_date": "2026-06-20",
+          "id": "ms-warren-a-hood-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ms-warren-a-hood-scout-reservation",
+          "end_date": "2026-06-27",
+          "id": "ms-warren-a-hood-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "MS",
+      "status": "active",
+      "website_url": "https://scoutingriverlands.org/hood-scout-reservation/summer-camp/"
+    }
+  ],
   "hq_city": "Jackson",
   "id": "council-303",
   "name": "Andrew Jackson Council",

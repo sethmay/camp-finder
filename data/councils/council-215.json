@@ -1,5 +1,68 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "3492 Hwy 171",
+      "city": "Stonewall",
+      "council_id": "council-215",
+      "description": "Norwela Council's 1,600-acre Scouts BSA resident summer camp in northwest Louisiana, ~30 min from Shreveport. Two summer camp weeks in 2026 with aquatics, shooting sports, climbing (Mount Haley), outdoor skills, nature, handicraft, Trail to First Class, and Star-to-Eagle (STEP) programs. Youth fee: $285 early bird (by Apr 1) / $325 regular; adult leaders $90 early bird / $300 regular, with two free adult leaders per six registered Scouts.",
+      "features": [],
+      "id": "la-kinsey-scout-reservation",
+      "lat": 30.3608351,
+      "lon": -93.2001624,
+      "name": "Kinsey Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://norwela.org/summer-camp-dates-and-fees/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "la-kinsey-scout-reservation",
+          "end_date": "2026-06-21",
+          "fee_adult": 300,
+          "fee_youth": 325,
+          "id": "la-kinsey-scout-reservation-2026-06-15",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://norwela.org/summer-camp-dates-and-fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "la-kinsey-scout-reservation",
+          "end_date": "2026-06-28",
+          "fee_adult": 300,
+          "fee_youth": 325,
+          "id": "la-kinsey-scout-reservation-2026-06-22",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://norwela.org/summer-camp-dates-and-fees/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        }
+      ],
+      "state": "LA",
+      "status": "active",
+      "website_url": "https://norwela.org/summer-camp-dates-and-fees/"
+    }
+  ],
   "hq_city": "Shreveport",
   "id": "council-215",
   "name": "Norwela Council",

@@ -98,6 +98,94 @@
       "state": "IL",
       "status": "active",
       "website_url": "https://mvcscouting.org/camping/"
+    },
+    {
+      "address": "2948 E 1000th St",
+      "city": "Mendon",
+      "council_id": "council-141",
+      "description": "Mississippi Valley Council Scouts BSA week-long troop summer camp at Saukenauk Scout Reservation (602 acres, 40-acre lake, 30ft climbing wall, zipline). NOTE: This camp belongs to Mississippi Valley Council (#141), not Illowa Council; it sits near Mendon/Lima IL (not Milan). Fees shown are early-bird (before 4/20/2026).",
+      "features": [],
+      "id": "il-saukenauk-scout-reservation",
+      "lat": 40.1885197,
+      "lon": -91.3208037,
+      "name": "Saukenauk Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://mvcscouting.org/camping/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-saukenauk-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 215,
+          "fee_youth": 410,
+          "id": "il-saukenauk-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://mvcscouting.org/camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://mvcscouting.org/camping/"
+    },
+    {
+      "address": "2948 E 1000th St",
+      "city": "Mendon",
+      "council_id": "council-141",
+      "description": "Mississippi Valley Council 3-night/4-day Webelos & Arrow of Light resident camp at Saukenauk for youth entering grades 4-5. Fees are early-bird (before 4/20/2026).",
+      "features": [],
+      "id": "il-saukenauk-scout-reservation-webelos-and-arrow-of-light-adventure-camp",
+      "lat": 40.1885197,
+      "lon": -91.3208037,
+      "name": "Saukenauk Scout Reservation - Webelos & Arrow of Light Adventure Camp",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://mvcscouting.org/camping/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "il-saukenauk-scout-reservation-webelos-and-arrow-of-light-adventure-camp",
+          "end_date": "2026-06-27",
+          "fee_adult": 135,
+          "fee_youth": 255,
+          "id": "il-saukenauk-scout-reservation-webelos-and-arrow-of-light-adventure-camp-2026-06-24",
+          "program_type": "webelos",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://mvcscouting.org/camping/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-24",
+          "year": 2026
+        }
+      ],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://mvcscouting.org/camping/"
     }
   ],
   "hq_city": "Quincy",

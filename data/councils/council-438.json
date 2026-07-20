@@ -1,6 +1,48 @@
 {
   "camps": [
     {
+      "address": "3486 Hathaway Rd",
+      "city": "Union",
+      "council_id": "council-438",
+      "description": "Dan Beard Council's Cub Scout Day Camp at Camp Michaels near Union, KY, for youth entering grades 1-5. 2026 theme: Space Exploration in the Great Outdoors, with hiking, range sports, games, crafts, cooking, STEM, and conservation projects. Runs 8am-4pm daily.",
+      "features": [],
+      "id": "ky-camp-michaels",
+      "lat": 38.9416,
+      "lon": -84.7437,
+      "name": "Camp Michaels",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutingevent.com/438-cubdaycamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ky-camp-michaels",
+          "end_date": "2026-06-26",
+          "id": "ky-camp-michaels-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutingevent.com/438-cubdaycamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        }
+      ],
+      "state": "KY",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/438-cubdaycamp"
+    },
+    {
       "address": "581 Ibold Rd Loveland, Ohio 45140",
       "council_id": "council-438",
       "features": [],

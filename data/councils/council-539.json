@@ -7,6 +7,8 @@
       "description": "Chester County Council's Scouts BSA resident camp at Horseshoe Scout Reservation (physically in Rising Sun, MD).",
       "features": [],
       "id": "md-camp-horseshoe",
+      "lat": 32.9141927,
+      "lon": -96.4618009,
       "name": "Camp Horseshoe",
       "program_types": [
         "scouts_bsa_resident"
@@ -348,6 +350,8 @@
       "description": "Chester County Council Cub Scout overnight resident camp at Horseshoe Scout Reservation, Peach Bottom, PA.",
       "features": [],
       "id": "pa-camp-john-h-ware-iii",
+      "lat": 36.0468342,
+      "lon": -115.102133,
       "name": "Camp John H. Ware III",
       "program_types": [
         "cub_resident"

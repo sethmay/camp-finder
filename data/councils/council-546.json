@@ -59,6 +59,202 @@
       "website_url": "https://scoutingevent.com/546-98625"
     },
     {
+      "address": "223 Scituate Avenue",
+      "city": "Cranston",
+      "council_id": "council-546",
+      "description": "Narragansett Council Cub Scout Adventure Day Camp for youth in grades 1-5 (non-Scouts welcome), held at Champlin Scout Reservation / Adventure Base Camp in Cranston, RI. Runs 9am-4pm Mon-Fri with weekly themes; activities include archery, BB, boating, swimming, crafts, outdoor cooking, and STEM. Council Scout fee $300/week ($325 out-of-council/non-Scout), extended care $65.",
+      "features": [],
+      "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+      "lat": 41.7787921,
+      "lon": -71.4847418,
+      "name": "Adventure Day Camp at Champlin (Adventure Base Camp)",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-04-24",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-04-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-04-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-06-26",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-07-03",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-06-29",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-29",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-07-10",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-07-17",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-07-24",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-07-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-07-31",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-07-27",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-08-07",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-08-03",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-03",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-08-14",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-08-10",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ri-adventure-day-camp-at-champlin-adventure-base-camp",
+          "end_date": "2026-08-21",
+          "fee_youth": 300,
+          "id": "ri-adventure-day-camp-at-champlin-adventure-base-camp-2026-08-17",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-17",
+          "year": 2026
+        }
+      ],
+      "state": "RI",
+      "status": "active",
+      "website_url": "https://www.narragansettbsa.org/camping-activities/cub-scout-camping-programs/day-camp/39833"
+    },
+    {
       "address": "61 Camp Yawgoog Road Rockville, Rhode Island 02873",
       "council_id": "council-546",
       "features": [],

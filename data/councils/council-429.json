@@ -7,6 +7,8 @@
       "description": "Northern Lights Council's premier 2,400-acre Scouts BSA summer camp in the Paul Bunyan State Forest. Five one-week sessions in 2026 with merit badges, COPE/climbing, ATV, shooting sports, aquatics and white water rafting. Youth fee regular $505 (early bird $455); adult regular $220.",
       "features": [],
       "id": "mn-camp-wilderness",
+      "lat": 48.4806138,
+      "lon": -114.3337984,
       "name": "Camp Wilderness",
       "program_types": [
         "scouts_bsa_resident"

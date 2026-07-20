@@ -1,5 +1,45 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Perkinston",
+      "council_id": "council-214",
+      "description": "Scouts BSA resident summer camp operated by the Southeast Louisiana Council (Sela Council #214) at Camp V-Bar, Salmen Scout Reservation, physically located in Perkinston/Stone County, Mississippi (~70 mi north of New Orleans). One week in July 2026.",
+      "features": [],
+      "id": "ms-camp-v-bar-salmen-scout-reservation",
+      "name": "Camp V-Bar (Salmen Scout Reservation)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.bsa-selacouncil.org/summercamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ms-camp-v-bar-salmen-scout-reservation",
+          "end_date": "2026-07-18",
+          "id": "ms-camp-v-bar-salmen-scout-reservation-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.bsa-selacouncil.org/summercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "MS",
+      "status": "active",
+      "website_url": "https://www.bsa-selacouncil.org/summercamp"
+    }
+  ],
   "hq_city": "Metairie",
   "id": "council-214",
   "name": "Southeast Louisiana Council",

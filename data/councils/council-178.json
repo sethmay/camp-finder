@@ -1,5 +1,261 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "P.O. Box 236",
+      "city": "Colesburg",
+      "council_id": "council-178",
+      "description": "Northeast Iowa Council Scouts BSA resident summer camp at Camp C.S. Klaus (200-acre wooded valley near Colesburg, IA). 45+ merit badges, COPE/climbing tower, aquatics on Lake John Deere, BASE Camp for new Scouts. Youth fee is in-council early rate ($385 after 4/24; out-of-council $385/$405). Leaders $165.",
+      "features": [],
+      "id": "ia-camp-c-s-klaus",
+      "lat": 42.6565,
+      "lon": -91.248,
+      "name": "Camp C.S. Klaus",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutsiowa.org/camping/scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus",
+          "end_date": "2026-06-27",
+          "fee_adult": 165,
+          "fee_youth": 365,
+          "id": "ia-camp-c-s-klaus-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus",
+          "end_date": "2026-07-11",
+          "fee_adult": 165,
+          "fee_youth": 365,
+          "id": "ia-camp-c-s-klaus-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus",
+          "end_date": "2026-07-18",
+          "fee_adult": 165,
+          "fee_youth": 365,
+          "id": "ia-camp-c-s-klaus-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://scoutsiowa.org/camping/scout-camp/"
+    },
+    {
+      "address": "P.O. Box 236",
+      "city": "Colesburg",
+      "council_id": "council-178",
+      "description": "Northeast Iowa Council 3-day Cub Scout Adventure resident camp at Camp C.S. Klaus for youth entering grades 1-5 (families camp together). Youth fee is early rate ($170 after 5/15/2026); adults $65.",
+      "features": [],
+      "id": "ia-camp-c-s-klaus-cub-scout-adventure",
+      "lat": 42.6565,
+      "lon": -91.248,
+      "name": "Camp C.S. Klaus - Cub Scout Adventure",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus-cub-scout-adventure",
+          "end_date": "2026-06-20",
+          "fee_adult": 65,
+          "fee_youth": 150,
+          "id": "ia-camp-c-s-klaus-cub-scout-adventure-2026-06-18",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-18",
+          "year": 2026
+        }
+      ],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://scoutsiowa.org/camping/cub-scout-camp/"
+    },
+    {
+      "address": "P.O. Box 236",
+      "city": "Colesburg",
+      "council_id": "council-178",
+      "description": "Northeast Iowa Council one-day Cub Scout Day Camp at Camp C.S. Klaus for youth entering grades 1-5; archery, BBs, slingshots, climbing tower. Parents attend free, lunch included. Youth fee is early rate ($75 after 5/15/2026).",
+      "features": [],
+      "id": "ia-camp-c-s-klaus-cub-scout-day-camp",
+      "lat": 42.6565,
+      "lon": -91.248,
+      "name": "Camp C.S. Klaus - Cub Scout Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus-cub-scout-day-camp",
+          "end_date": "2026-06-13",
+          "fee_adult": 0,
+          "fee_youth": 55,
+          "id": "ia-camp-c-s-klaus-cub-scout-day-camp-2026-06-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-13",
+          "year": 2026
+        }
+      ],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://scoutsiowa.org/camping/cub-scout-camp/"
+    },
+    {
+      "address": "P.O. Box 236",
+      "city": "Colesburg",
+      "council_id": "council-178",
+      "description": "Northeast Iowa Council 2-day/1-night Cub Scout Overnight at Camp C.S. Klaus (first overnight for younger Cubs). Youth fee is early rate ($145 after 5/15/2026).",
+      "features": [],
+      "id": "ia-camp-c-s-klaus-cub-scout-overnight",
+      "lat": 42.6565,
+      "lon": -91.248,
+      "name": "Camp C.S. Klaus - Cub Scout Overnight",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus-cub-scout-overnight",
+          "end_date": "2026-07-12",
+          "fee_youth": 125,
+          "id": "ia-camp-c-s-klaus-cub-scout-overnight-2026-07-11",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-11",
+          "year": 2026
+        }
+      ],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://scoutsiowa.org/camping/cub-scout-camp/"
+    },
+    {
+      "address": "P.O. Box 236",
+      "city": "Colesburg",
+      "council_id": "council-178",
+      "description": "Northeast Iowa Council 4-day/3-night Webelos & Arrow of Light resident camp at Camp C.S. Klaus for rising 4th-5th graders. Youth fee is early rate ($205 after 5/15/2026); adults $90.",
+      "features": [],
+      "id": "ia-camp-c-s-klaus-webelos-and-arrow-of-light-camp",
+      "lat": 42.6565,
+      "lon": -91.248,
+      "name": "Camp C.S. Klaus - Webelos & Arrow of Light Camp",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ia-camp-c-s-klaus-webelos-and-arrow-of-light-camp",
+          "end_date": "2026-06-30",
+          "fee_adult": 90,
+          "fee_youth": 185,
+          "id": "ia-camp-c-s-klaus-webelos-and-arrow-of-light-camp-2026-06-27",
+          "program_type": "webelos",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://scoutsiowa.org/camping/cub-scout-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-27",
+          "year": 2026
+        }
+      ],
+      "state": "IA",
+      "status": "active",
+      "website_url": "https://scoutsiowa.org/camping/cub-scout-camp/"
+    }
+  ],
   "hq_city": "Dubuque",
   "id": "council-178",
   "name": "Northeast Iowa Council",

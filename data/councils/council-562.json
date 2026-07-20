@@ -24,6 +24,29 @@
       "state": "TX",
       "status": "active",
       "website_url": "https://scoutingevent.com/562-2026CubDayCampDon"
+    },
+    {
+      "address": "8425 FM 3182",
+      "city": "Mobeetie",
+      "council_id": "council-562",
+      "description": "Golden Spread Council Scouts BSA resident summer camp (physically in the Texas Panhandle, just across the OK border). 2026 registration closes June 3; exact session dates not cleanly published.",
+      "features": [],
+      "id": "tx-camp-m-k-brown",
+      "name": "Camp M.K. Brown",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://scoutingevent.com/562-2026SummerCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/562-2026SummerCamp"
     }
   ],
   "hq_city": "Amarillo",
