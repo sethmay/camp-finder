@@ -1,5 +1,104 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "12975 W County Road 925 N",
+      "city": "Norman",
+      "council_id": "council-145",
+      "description": "Hoosier Trails Council's Scouts BSA resident summer camp on 640+ acres around 64-acre Lake Tarzian; four weeks with 60+ merit badges, aquatics, and shooting sports.",
+      "features": [],
+      "id": "in-maumee-scout-reservation",
+      "lat": 39.008807,
+      "lon": -86.2795709,
+      "name": "Maumee Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://hoosiertrails.org/summer-camp-portal/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-maumee-scout-reservation",
+          "end_date": "2026-06-13",
+          "fee_adult": 195,
+          "fee_youth": 440,
+          "id": "in-maumee-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://hoosiertrails.org/summer-camp-portal/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-maumee-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_adult": 195,
+          "fee_youth": 440,
+          "id": "in-maumee-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://hoosiertrails.org/summer-camp-portal/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-maumee-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_adult": 195,
+          "fee_youth": 440,
+          "id": "in-maumee-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://hoosiertrails.org/summer-camp-portal/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-maumee-scout-reservation",
+          "end_date": "2026-07-04",
+          "fee_adult": 195,
+          "fee_youth": 440,
+          "id": "in-maumee-scout-reservation-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://hoosiertrails.org/summer-camp-portal/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://hoosiertrails.org/summer-camp-portal/"
+    }
+  ],
   "hq_city": "Bloomington",
   "id": "council-145",
   "name": "Hoosier Trails Council",

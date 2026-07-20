@@ -1,5 +1,144 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "9400 N Boy Scout Rd",
+      "city": "Monticello",
+      "council_id": "council-162",
+      "description": "Sagamore Council's Scouts BSA resident summer camp on the Tippecanoe River north of Monticello; aquatics, shooting sports, outdoor skills, skilled trades, ecology, and Brownsea Island.",
+      "features": [],
+      "id": "in-camp-buffalo",
+      "lat": 40.889457,
+      "lon": -86.727241,
+      "name": "Camp Buffalo",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://scoutingevent.com/162-100977",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-camp-buffalo",
+          "end_date": "2026-06-13",
+          "id": "in-camp-buffalo-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/162-100977",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-camp-buffalo",
+          "end_date": "2026-06-20",
+          "id": "in-camp-buffalo-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/162-100977",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-camp-buffalo",
+          "end_date": "2026-06-24",
+          "fee_adult": 150,
+          "fee_youth": 200,
+          "id": "in-camp-buffalo-2026-06-21",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/162-102006",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-camp-buffalo",
+          "end_date": "2026-06-28",
+          "fee_adult": 150,
+          "fee_youth": 200,
+          "id": "in-camp-buffalo-2026-06-25",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/162-102006",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-25",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/162-100977"
+    },
+    {
+      "address": "6286 IN-26",
+      "city": "Lafayette",
+      "council_id": "council-162",
+      "description": "Sagamore Council (Wabash Valley) Cub Scout day camp at Franklin L. Cary Camp east of Lafayette; Monday-Friday daytime program.",
+      "features": [],
+      "id": "in-franklin-l-cary-camp",
+      "lat": 40.4216,
+      "lon": -86.7832,
+      "name": "Franklin L. Cary Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://scoutingevent.com/162-103288",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-franklin-l-cary-camp",
+          "end_date": "2026-07-10",
+          "fee_youth": 225,
+          "id": "in-franklin-l-cary-camp-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/162-103288",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/162-103288"
+    }
+  ],
   "hq_city": "Kokomo",
   "id": "council-162",
   "name": "Sagamore Council",
