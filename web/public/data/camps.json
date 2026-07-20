@@ -1625,32 +1625,6 @@
     "website_url": "https://scoutingevent.com/011-112973"
   },
   {
-    "address": "3000 Shoshonean Rd",
-    "city": "San Pedro",
-    "confidence": 0.6,
-    "council_id": "council-033",
-    "council_name": "Greater Los Angeles Area Council",
-    "council_platform": "blackpug",
-    "council_website": "https://www.glaacbsa.org/",
-    "description": "Greater Los Angeles Area Council beachfront aquatics/camping center on Cabrillo Beach in San Pedro (est. 1946). Hosts Cub Scout and Scout day camps with swimming, kayaking, canoeing, archery, and merit badge programs.",
-    "features": [],
-    "fee_from": null,
-    "id": "ca-cabrillo-beach-youth-waterfront-sports-center",
-    "lat": 33.717687,
-    "lon": -118.28446,
-    "method": "llm_extraction",
-    "name": "Cabrillo Beach Youth Waterfront Sports Center",
-    "program_types": [
-      "cub_day"
-    ],
-    "sessions": [],
-    "source_url": "https://cabrillobeachyouthcenter.org/",
-    "state": "CA",
-    "status": "active",
-    "verified_at": "2026-07-17",
-    "website_url": "https://cabrillobeachyouthcenter.org/"
-  },
-  {
     "address": "1207 Upas St",
     "city": "San Diego",
     "confidence": 0.6,
