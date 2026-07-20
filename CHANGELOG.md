@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.26.1 (patch) — 2026-07-19
+
+- `42228f0` Mark **Cabrillo Beach Youth Waterfront Sports Center** (Greater Los Angeles Area Council,
+  033) **closed** — the site was reclaimed for the LA 2028 Olympic sailing venue. First use of
+  `status: "closed"`: the canonical record is retained as a tombstone but excluded from the published
+  site by `build._include_camp` (build camps 484 → 483).
+
 ## 0.26.0 (minor) — 2026-07-19
 
 - `5bd2b34` **More app** — distance filter gains **300 / 400 / 500 / 600 mi** options; added
