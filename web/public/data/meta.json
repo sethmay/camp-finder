@@ -1,9 +1,9 @@
 {
-  "build_time": "2026-07-20T03:29:52+00:00",
-  "camp_count": 374,
+  "build_time": "2026-07-20T03:48:12+00:00",
+  "camp_count": 417,
   "council_count": 236,
   "dead_link_count": 0,
-  "session_count": 1136,
+  "session_count": 1218,
   "states_covered": [
     "AK",
     "AL",
@@ -30,7 +30,9 @@
     "MN",
     "MO",
     "MS",
+    "MT",
     "NC",
+    "ND",
     "NE",
     "NH",
     "NJ",

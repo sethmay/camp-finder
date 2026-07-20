@@ -1,6 +1,46 @@
 {
   "camps": [
     {
+      "city": "Rigby",
+      "council_id": "council-107",
+      "description": "Grand Teton Council Cub Scout day camp at Scout Hollow near Rigby, Idaho, for Cub Scouts entering grades K-5. Archery, BB guns, crafts and nature hikes; two sessions. $3 early discount before 5/16/2026.",
+      "features": [],
+      "id": "id-cub-scout-day-camp-at-krupp-scout-hollow",
+      "name": "Cub Scout Day Camp at Krupp Scout Hollow",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://tetonscouts.org/summer-camps/cub-scout-day-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-cub-scout-day-camp-at-krupp-scout-hollow",
+          "end_date": "2026-06-25",
+          "fee_youth": 28,
+          "id": "id-cub-scout-day-camp-at-krupp-scout-hollow-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://tetonscouts.org/summer-camps/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://tetonscouts.org/summer-camps/cub-scout-day-camp/"
+    },
+    {
       "address": "4355 Griffel Road Island Park, Idaho 83429",
       "council_id": "council-107",
       "features": [],

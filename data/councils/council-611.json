@@ -175,6 +175,31 @@
       "state": "ID",
       "status": "active",
       "website_url": "https://scoutingevent.com/611-26GrizzlySummerCamp"
+    },
+    {
+      "address": "4161 North Shore Diamond Lake Rd",
+      "city": "Newport",
+      "council_id": "council-611",
+      "description": "Inland Northwest Council Cub Scout overnight/resident camp at Cowles Scout Reservation on Diamond Lake, Newport, WA. 2026 event registration is open; specific session dates not yet cleanly published.",
+      "features": [],
+      "id": "wa-cowles-scout-reservation-cub-scout-overnight-camp",
+      "lat": 48.1352658,
+      "lon": -117.207537,
+      "name": "Cowles Scout Reservation (Cub Scout Overnight Camp)",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingevent.com/611-26CubCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/611-26CubCamp"
     }
   ],
   "hq_city": "Spokane",

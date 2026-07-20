@@ -107,6 +107,31 @@
       "website_url": "https://www.campgeronimo.org/summer-camp/"
     },
     {
+      "address": "1901 E. Dobbins Rd.",
+      "city": "Phoenix",
+      "council_id": "council-010",
+      "description": "Grand Canyon Council 500-acre camp at the base of South Mountain in Phoenix; hosts the council's Cub Scout Day Camp (youth K-5) and shooting sports each summer. Specific 2026 day-camp session dates/fees not cleanly published.",
+      "features": [],
+      "id": "az-heard-scout-pueblo",
+      "lat": 33.3624979,
+      "lon": -112.0423881,
+      "name": "Heard Scout Pueblo",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.scoutingaz.org/heard-scout-pueblo/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AZ",
+      "status": "active",
+      "website_url": "https://www.scoutingaz.org/heard-scout-pueblo/"
+    },
+    {
       "address": "7709 S Boy Scout Camp Road",
       "city": "Parks",
       "council_id": "council-010",

@@ -32,6 +32,8 @@
       "description": "Golden Spread Council Scouts BSA resident summer camp (physically in the Texas Panhandle, just across the OK border). 2026 registration closes June 3; exact session dates not cleanly published.",
       "features": [],
       "id": "tx-camp-m-k-brown",
+      "lat": 35.521778733208,
+      "lon": -100.361532352271,
       "name": "Camp M.K. Brown",
       "program_types": [
         "scouts_bsa_resident"

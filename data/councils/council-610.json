@@ -1,6 +1,29 @@
 {
   "camps": [
     {
+      "address": "Mile 133 N Parks Highway",
+      "city": "Trapper Creek",
+      "council_id": "council-610",
+      "description": "Great Alaska Council's council-operated high-adventure trek program based out of the Denali High Adventure Scout Base. Custom trek dates; not cleanly published for 2026.",
+      "features": [],
+      "id": "ak-alaska-ultimate-high-adventure",
+      "name": "Alaska Ultimate High Adventure",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.scoutingalaska.org/auha",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://www.scoutingalaska.org/auha"
+    },
+    {
       "address": "22700 Camp Gorsuch Road",
       "city": "Chugiak",
       "council_id": "council-610",
@@ -74,6 +97,31 @@
       "state": "AK",
       "status": "active",
       "website_url": "https://scoutingalaska.org/camping/camp-gorsuch/"
+    },
+    {
+      "address": "Mile 133 N Parks Highway",
+      "city": "Trapper Creek",
+      "council_id": "council-610",
+      "description": "Great Alaska Council's 2,000-acre camp property at mile 133 on the Parks Highway offering week-long resident Scouts BSA summer camp to in-council and visiting units. 2026 session dates not cleanly published.",
+      "features": [],
+      "id": "ak-denali-high-adventure-scout-base",
+      "lat": 62.5391,
+      "lon": -150.1603,
+      "name": "Denali High Adventure Scout Base",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingalaska.org/camping/denali-high-adventure-scout-base/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://scoutingalaska.org/camping/denali-high-adventure-scout-base/"
     },
     {
       "address": "Herbert River Rd 30 miles outside of town between mile markers 26/27 Juneau, Alaska 99801",

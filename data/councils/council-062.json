@@ -155,6 +155,31 @@
       "website_url": "https://scoutingevent.com/062-101576"
     },
     {
+      "address": "65 Forest Service Road #633",
+      "city": "Wheatland",
+      "council_id": "council-062",
+      "description": "Adventure West Council (formerly Longs Peak Council) family-style dining-hall Scouts BSA resident camp at the base of Black Mountain near Wheatland, next to Medicine Bow National Forest. Programs from the Roaring Lion first-year program to high-adventure (rock climbing, mountain boarding, ATVs). 2026 applications open; specific session dates not cleanly published.",
+      "features": [],
+      "id": "wy-camp-laramie-peak",
+      "lat": 42.3313,
+      "lon": -105.3423,
+      "name": "Camp Laramie Peak",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://campreservation.com/062/Camps/718",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WY",
+      "status": "active",
+      "website_url": "https://campreservation.com/062/Camps/718"
+    },
+    {
       "address": "870 N Fork Hwy Cody, Wyoming 82414",
       "council_id": "council-062",
       "features": [],

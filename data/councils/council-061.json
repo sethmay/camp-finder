@@ -1,5 +1,205 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "22799 Elbert Road",
+      "city": "Elbert",
+      "council_id": "council-061",
+      "description": "Scouts BSA resident summer camp at Camp Cris Dobbins, McNeil Scout Ranch at Peaceful Valley (Greater Colorado Council). 50+ merit badges, outdoor pool water slides, Olympic shotgun range. Six one-week sessions in 2026. Per-scout fees not publicly published.",
+      "features": [],
+      "id": "co-camp-cris-dobbins",
+      "name": "Camp Cris Dobbins",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-06-13",
+          "id": "co-camp-cris-dobbins-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-06-20",
+          "id": "co-camp-cris-dobbins-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-06-27",
+          "id": "co-camp-cris-dobbins-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-07-04",
+          "id": "co-camp-cris-dobbins-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-07-11",
+          "id": "co-camp-cris-dobbins-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-camp-cris-dobbins",
+          "end_date": "2026-07-18",
+          "id": "co-camp-cris-dobbins-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingcolorado.org/camps/peaceful-valley-scout-ranch/camp-cris-dobbins/"
+    },
+    {
+      "address": "22799 Elbert Road",
+      "city": "Elbert",
+      "council_id": "council-061",
+      "description": "Cub Scout resident overnight camp (4-day/3-night) at Camp Cris Dobbins, McNeil Scout Ranch at Peaceful Valley (Greater Colorado Council). Age-specific program: sports, handicrafts, nature, swimming, boating. Each Cub must be accompanied by a parent/guardian. Fees not publicly published.",
+      "features": [],
+      "id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins",
+      "name": "Cub Scout Adventure Camp at Camp Cris Dobbins",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingevent.com/061-2026CubAdventureCamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins",
+          "end_date": "2026-07-25",
+          "id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins-2026-07-22",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingevent.com/061-2026CubAdventureCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-22",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins",
+          "end_date": "2026-07-29",
+          "id": "co-cub-scout-adventure-camp-at-camp-cris-dobbins-2026-07-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingevent.com/061-2026CubAdventureCamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/061-2026CubAdventureCamp"
+    },
+    {
+      "address": "173 County Road 96",
+      "city": "Ward",
+      "council_id": "council-061",
+      "description": "Greater Colorado Council high-adventure base at 9,000 ft near Ward, CO. Summer programs include Tahosa Trek (backpacking), Alpine Adventure, Mountain Men provisional camping, EaglePoint, and NYLT. Specific 2026 session dates/fees not cleanly published.",
+      "features": [],
+      "id": "co-tahosa-high-adventure-base",
+      "name": "Tahosa High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingcolorado.org/camps/tahosa-high-adventure-base/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "CO",
+      "status": "active",
+      "website_url": "https://scoutingcolorado.org/camps/tahosa-high-adventure-base/"
+    }
+  ],
   "hq_city": "Denver",
   "id": "council-061",
   "name": "Greater Colorado Council",

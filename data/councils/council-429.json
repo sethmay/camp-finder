@@ -221,6 +221,89 @@
       "state": "MN",
       "status": "active",
       "website_url": "https://scoutingnlc.org/campingprograms/adventurecamp/"
+    },
+    {
+      "address": "900 54th Street",
+      "city": "Minot",
+      "council_id": "council-429",
+      "description": "Northern Lights Council D11 Minot Cub Scout Day Camp held at Big Four Camp property in Minot. 2026 'Dino Discovery' theme with BB guns, archery, slingshots, and games. A parent/adult must attend with each Cub Scout.",
+      "features": [],
+      "id": "nd-big-four-camp",
+      "name": "Big Four Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingnlc.org/campingprograms/daycamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nd-big-four-camp",
+          "end_date": "2026-06-20",
+          "fee_youth": 35,
+          "id": "nd-big-four-camp-2026-06-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingnlc.org/campingprograms/daycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-20",
+          "year": 2026
+        }
+      ],
+      "state": "ND",
+      "status": "active",
+      "website_url": "https://scoutingnlc.org/campingprograms/daycamp/"
+    },
+    {
+      "address": "5680 ND49",
+      "city": "Elgin",
+      "council_id": "council-429",
+      "description": "Northern Lights Council Cub Scout Adventure Camp at Heart Butte Scout Reservation on the Lake Tschida reservoir in southwest North Dakota (south of Glen Ullin). Family-style Cub overnight camp with archery, BB guns, crafts, fishing, games, and campfire show; tent camping with hot meals in the dining hall.",
+      "features": [],
+      "id": "nd-heart-butte-scout-reservation",
+      "lat": 46.223587,
+      "lon": -97.1341834,
+      "name": "Heart Butte Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nd-heart-butte-scout-reservation",
+          "end_date": "2026-07-19",
+          "id": "nd-heart-butte-scout-reservation-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        }
+      ],
+      "state": "ND",
+      "status": "active",
+      "website_url": "https://scoutingnlc.org/campingprograms/adventurecamp/"
     }
   ],
   "hq_city": "Fargo",

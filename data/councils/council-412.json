@@ -1,5 +1,45 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Chimayo",
+      "council_id": "council-412",
+      "description": "High Desert Council (Great Southwest-Yucca) scout ranch in the Sangre de Cristo Mountains ~45 min north of Santa Fe. Regular summer camp is NOT operating in 2026; the only 2026 resident program is Brownsea 22 Adventure (first-year Scouts BSA age 11-13, not beyond First Class), limited to 56 participants. Fees not publicly published.",
+      "features": [],
+      "id": "nm-gorham-scout-ranch",
+      "name": "Gorham Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.scoutingamericahighdesertcouncil.org/gorham-scout-ranch",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nm-gorham-scout-ranch",
+          "end_date": "2026-06-13",
+          "id": "nm-gorham-scout-ranch-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.scoutingamericahighdesertcouncil.org/gorham-scout-ranch",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        }
+      ],
+      "state": "NM",
+      "status": "active",
+      "website_url": "https://www.scoutingamericahighdesertcouncil.org/gorham-scout-ranch"
+    }
+  ],
   "hq_city": "Albuquerque",
   "id": "council-412",
   "name": "High Desert Council",

@@ -61,6 +61,101 @@
       "state": "ID",
       "status": "active",
       "website_url": "https://www.mountainwestcouncil.org/bradley"
+    },
+    {
+      "city": "Riggins",
+      "council_id": "council-106",
+      "description": "Mountain West Council three-day whitewater rafting high-adventure trek on the lower Salmon River in the remote Salmon River Canyon. Minimum crew 3 adults and 3 youth. Fee shown is in-council rate ($275 out-of-council).",
+      "features": [],
+      "id": "id-salmon-river-high-adventure-base",
+      "name": "Salmon River High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.mountainwestcouncil.org/srhab",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "id-salmon-river-high-adventure-base",
+          "end_date": "2026-07-04",
+          "fee_adult": 250,
+          "fee_youth": 250,
+          "id": "id-salmon-river-high-adventure-base-2026-07-02",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.mountainwestcouncil.org/srhab",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-salmon-river-high-adventure-base",
+          "end_date": "2026-07-11",
+          "fee_adult": 250,
+          "fee_youth": 250,
+          "id": "id-salmon-river-high-adventure-base-2026-07-09",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.mountainwestcouncil.org/srhab",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-09",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-salmon-river-high-adventure-base",
+          "end_date": "2026-07-18",
+          "fee_adult": 250,
+          "fee_youth": 250,
+          "id": "id-salmon-river-high-adventure-base-2026-07-16",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.mountainwestcouncil.org/srhab",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-16",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "id-salmon-river-high-adventure-base",
+          "end_date": "2026-07-25",
+          "fee_adult": 250,
+          "fee_youth": 250,
+          "id": "id-salmon-river-high-adventure-base-2026-07-23",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.mountainwestcouncil.org/srhab",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-23",
+          "year": 2026
+        }
+      ],
+      "state": "ID",
+      "status": "active",
+      "website_url": "https://www.mountainwestcouncil.org/srhab"
     }
   ],
   "hq_city": "Boise",
