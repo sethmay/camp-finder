@@ -1,5 +1,109 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "337 N Holmesville Road",
+      "city": "Michigan City",
+      "council_id": "council-165",
+      "description": "La Salle Council Cub Scout day camp (grades 1-5): four days of archery, BBs, STEM, crafts, and athletics.",
+      "features": [],
+      "id": "in-camp-topenebee",
+      "lat": 41.6124351,
+      "lon": -86.8795712,
+      "name": "Camp ToPeNeBee",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://scoutingevent.com/165-113437",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-camp-topenebee",
+          "end_date": "2026-06-12",
+          "fee_youth": 100,
+          "id": "in-camp-topenebee-2026-06-09",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://scoutingevent.com/165-113437",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-09",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/165-113437"
+    },
+    {
+      "address": "10891 Withers St",
+      "city": "Jones",
+      "council_id": "council-165",
+      "description": "La Salle Council's Scouts BSA resident summer camp on ~500 acres at Wood Lake Scout Reservation south of Jones, MI (physically in Michigan); nationally accredited, 40+ merit badges.",
+      "features": [],
+      "id": "mi-camp-tamarack",
+      "lat": 41.8581391,
+      "lon": -85.777364,
+      "name": "Camp Tamarack",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://lasallecouncil.org/venue/camptamarack/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-tamarack",
+          "end_date": "2026-06-27",
+          "fee_youth": 375,
+          "id": "mi-camp-tamarack-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://lasallecouncil.org/venue/camptamarack/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-tamarack",
+          "end_date": "2026-07-18",
+          "fee_youth": 375,
+          "id": "mi-camp-tamarack-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://lasallecouncil.org/venue/camptamarack/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://lasallecouncil.org/venue/camptamarack/"
+    }
+  ],
   "hq_city": "South Bend",
   "id": "council-165",
   "name": "La Salle Council",

@@ -1,6 +1,140 @@
 {
   "camps": [
     {
+      "address": "3858 E Snow Rd",
+      "city": "Berrien Springs",
+      "council_id": "council-456",
+      "description": "Pathway to Adventure Council Cub Scout family (resident) camp on a 57-acre preserve on Lake Chapin, MI (since 1922); weekend sessions with range/target, waterfront, boating, and handicrafts.",
+      "features": [],
+      "id": "mi-camp-frank-s-betz",
+      "lat": 41.9248104,
+      "lon": -86.3642888,
+      "name": "Camp Frank S. Betz",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-06-28",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-07-12",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-07-10",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-07-19",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-07-17",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-17",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-07-26",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-07-24",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-24",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-08-02",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-camp-frank-s-betz",
+          "end_date": "2026-08-09",
+          "fee_adult": 55,
+          "fee_youth": 95,
+          "id": "mi-camp-frank-s-betz-2026-08-07",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-07",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://pathwaytoadventure.org/cubscoutfamilycamp/"
+    },
+    {
       "address": "9900 Russell Rd Twin Lake, Michigan 49457",
       "council_id": "council-456",
       "features": [],

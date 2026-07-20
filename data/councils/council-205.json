@@ -1,6 +1,68 @@
 {
   "camps": [
     {
+      "address": "3913 Tunnel Mill Road",
+      "city": "Charlestown",
+      "council_id": "council-205",
+      "description": "Lincoln Heritage Council's Cub Scout overnight resident camp at Tunnel Mill Reservation (4 days/3 nights) for Tigers through Arrow of Light: water activities, fishing, shooting sports, Scout skills, and STEM.",
+      "features": [],
+      "id": "in-tunnel-mill-scout-reservation",
+      "lat": 38.482569227792,
+      "lon": -85.622466577543,
+      "name": "Tunnel Mill Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+        "source_url": "https://lhcbsa.org/resident-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "in-tunnel-mill-scout-reservation",
+          "end_date": "2026-06-28",
+          "fee_adult": 90,
+          "fee_youth": 175,
+          "id": "in-tunnel-mill-scout-reservation-2026-06-25",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://lhcbsa.org/resident-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-25",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "in-tunnel-mill-scout-reservation",
+          "end_date": "2026-07-12",
+          "fee_adult": 90,
+          "fee_youth": 175,
+          "id": "in-tunnel-mill-scout-reservation-2026-07-09",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (IN leads batch; My Maps/OCD untrusted source)",
+            "source_url": "https://lhcbsa.org/resident-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-09",
+          "year": 2026
+        }
+      ],
+      "state": "IN",
+      "status": "active",
+      "website_url": "https://lhcbsa.org/resident-camp/"
+    },
+    {
       "address": "950 Terry Drive, Shepherdsville, KY 40165",
       "city": "Shepherdsville",
       "council_id": "council-205",
