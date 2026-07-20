@@ -279,6 +279,28 @@
       "state": "WY",
       "status": "active",
       "website_url": "https://www.utahscouts.org/loll"
+    },
+    {
+      "city": "Jackson",
+      "council_id": "council-590",
+      "description": "Crossroads of the West Council nationally accredited high-adventure base 16 miles south of Jackson Hole, offering whitewater rafting, kayaking, mountain biking, backpacking and rope course. Bunkhouse/tent lodging with dining hall. Specific 2026 dates and fees not cleanly published.",
+      "features": [],
+      "id": "wy-teton-high-adventure-base",
+      "name": "Teton High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.utahscouts.org/teton",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WY",
+      "status": "active",
+      "website_url": "https://www.utahscouts.org/teton"
     }
   ],
   "hq_city": "Ogden",

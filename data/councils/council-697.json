@@ -69,6 +69,130 @@
       "website_url": "https://www.otcbsa.org/camp-baker"
     },
     {
+      "address": "OR-140",
+      "city": "Klamath Falls",
+      "council_id": "council-697",
+      "description": "Pacific Crest Council Cub Scout resident summer camp on Lake of the Woods near Klamath Falls, OR. Fees shown are standard rates (early-bird lower).",
+      "features": [],
+      "id": "or-camp-mcloughlin",
+      "lat": 42.1926622,
+      "lon": -121.7971171,
+      "name": "Camp McLoughlin",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+        "source_url": "https://scoutingevent.com/697-99662",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "or-camp-mcloughlin",
+          "end_date": "2026-07-11",
+          "fee_adult": 145,
+          "fee_youth": 275,
+          "id": "or-camp-mcloughlin-2026-07-08",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+            "source_url": "https://scoutingevent.com/697-99662",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-08",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "or-camp-mcloughlin",
+          "end_date": "2026-07-15",
+          "fee_adult": 145,
+          "fee_youth": 275,
+          "id": "or-camp-mcloughlin-2026-07-12",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+            "source_url": "https://scoutingevent.com/697-99662",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "or-camp-mcloughlin",
+          "end_date": "2026-07-18",
+          "fee_adult": 145,
+          "fee_youth": 275,
+          "id": "or-camp-mcloughlin-2026-07-15",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+            "source_url": "https://scoutingevent.com/697-99662",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-15",
+          "year": 2026
+        }
+      ],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/697-99662"
+    },
+    {
+      "address": "OR-140",
+      "city": "Klamath Falls",
+      "council_id": "council-697",
+      "description": "Pacific Crest Council Webelos/Arrow of Light resident camp at Camp McLoughlin near Klamath Falls, OR. Fees shown are standard rates (early-bird lower).",
+      "features": [],
+      "id": "or-camp-mcloughlin-webelos-aol-camp",
+      "lat": 42.1926622,
+      "lon": -121.7971171,
+      "name": "Camp McLoughlin - Webelos/AOL Camp",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+        "source_url": "https://scoutingevent.com/697-99662",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "or-camp-mcloughlin-webelos-aol-camp",
+          "end_date": "2026-07-24",
+          "fee_adult": 175,
+          "fee_youth": 345,
+          "id": "or-camp-mcloughlin-webelos-aol-camp-2026-07-20",
+          "program_type": "webelos",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+            "source_url": "https://scoutingevent.com/697-99662",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        }
+      ],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/697-99662"
+    },
+    {
       "address": "Camp Melakwa, McKenzie Bridge, OR 97413",
       "city": "McKenzie Bridge",
       "council_id": "council-697",

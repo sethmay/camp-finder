@@ -1,5 +1,104 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "11740 Summit Lake Rd NW",
+      "city": "Olympia",
+      "council_id": "council-612",
+      "description": "Pacific Harbors Council Cub Scout resident summer camp on Summit Lake, 16 miles west of Olympia, WA (Cub Scouts entering 1st-5th grade).",
+      "features": [],
+      "id": "wa-camp-thunderbird",
+      "lat": 47.0485424,
+      "lon": -123.125928,
+      "name": "Camp Thunderbird",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.pacificharbors.org/camp/summer-camps/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wa-camp-thunderbird",
+          "end_date": "2026-07-12",
+          "fee_adult": 150,
+          "fee_youth": 345,
+          "id": "wa-camp-thunderbird-2026-07-09",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.pacificharbors.org/camp/summer-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-09",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wa-camp-thunderbird",
+          "end_date": "2026-07-19",
+          "fee_adult": 150,
+          "fee_youth": 345,
+          "id": "wa-camp-thunderbird-2026-07-16",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.pacificharbors.org/camp/summer-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-16",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wa-camp-thunderbird",
+          "end_date": "2026-07-26",
+          "fee_adult": 150,
+          "fee_youth": 345,
+          "id": "wa-camp-thunderbird-2026-07-23",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.pacificharbors.org/camp/summer-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-23",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "wa-camp-thunderbird",
+          "end_date": "2026-08-02",
+          "fee_adult": 150,
+          "fee_youth": 345,
+          "id": "wa-camp-thunderbird-2026-07-30",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.pacificharbors.org/camp/summer-camps/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-30",
+          "year": 2026
+        }
+      ],
+      "state": "WA",
+      "status": "active",
+      "website_url": "https://www.pacificharbors.org/camp/summer-camps/"
+    }
+  ],
   "hq_city": "Tacoma",
   "id": "council-612",
   "name": "Pacific Harbors Council",

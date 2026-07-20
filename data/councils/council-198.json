@@ -7,6 +7,8 @@
       "description": "Quivira Council Scouts BSA/Venturing resident summer camp (physically in Kansas). Three one-week June 2026 sessions.",
       "features": [],
       "id": "ks-quivira-scout-ranch",
+      "lat": 41.1544703,
+      "lon": -84.2279735,
       "name": "Quivira Scout Ranch",
       "program_types": [
         "scouts_bsa_resident"

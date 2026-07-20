@@ -7,6 +7,8 @@
       "description": "Last Frontier Council Cub & Webelos resident camp; three 3-night sessions in June 2026 (Thu-Sun).",
       "features": [],
       "id": "ok-camp-george-thomas",
+      "lat": 41.3199035,
+      "lon": -72.9380083,
       "name": "Camp George Thomas",
       "program_types": [
         "cub_resident"

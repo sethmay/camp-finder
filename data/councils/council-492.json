@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "13462 S Butte Creek Rd",
+      "city": "Scotts Mills",
+      "council_id": "council-492",
+      "description": "Cascade Pacific Council Cub Scout resident (Wild West horse ranch) camp for Tiger/Wolf/Bear, including Rover individual-Scout program. Multiple 4-night sessions July-August 2026; exact dates only on registration calendar.",
+      "features": [],
+      "id": "or-butte-creek-scout-ranch",
+      "lat": 45.0157485,
+      "lon": -122.59339,
+      "name": "Butte Creek Scout Ranch",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+        "source_url": "https://cpcscouting.org/project/butte-creek/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://cpcscouting.org/project/butte-creek/"
+    },
+    {
       "address": "27650 SE Baldwin Rd, Sandy, OR 97055",
       "city": "Sandy",
       "council_id": "council-492",
@@ -158,6 +183,56 @@
       "state": "OR",
       "status": "active",
       "website_url": "https://cpcbsa.org/camping/camp-meriwether/"
+    },
+    {
+      "address": "62681 Twin Meadows Rd",
+      "city": "Idanha",
+      "council_id": "council-492",
+      "description": "Cascade Pacific Council mountain camp (4,500 ft, Mount Jefferson) offering non-traditional Scouts BSA programs: TTFC+ (Tenderfoot-First Class), Eagle Camp, and Throne Quest. 2026 registration open; dates on registration calendar.",
+      "features": [],
+      "id": "or-camp-pioneer",
+      "lat": 44.5557581,
+      "lon": -121.9337722,
+      "name": "Camp Pioneer",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+        "source_url": "https://cpcscouting.org/project/camp-pioneer/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://cpcscouting.org/project/camp-pioneer/"
+    },
+    {
+      "address": "62681 Twin Meadows Rd",
+      "city": "Idanha",
+      "council_id": "council-492",
+      "description": "Cascade Pacific Council high-adventure backpacking treks in the high-altitude backcountry of the Oregon Cascades, based at Camp Pioneer (4-day and 7-day trek options). 2026 dates on registration calendar.",
+      "features": [],
+      "id": "or-camp-pioneer-cascade-trek",
+      "lat": 44.5557581,
+      "lon": -121.9337722,
+      "name": "Camp Pioneer - Cascade Trek",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail; PNW fixture council append)",
+        "source_url": "https://cpcscouting.org/summercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OR",
+      "status": "active",
+      "website_url": "https://cpcscouting.org/summercamp/"
     }
   ],
   "hq_city": "Beaverton",

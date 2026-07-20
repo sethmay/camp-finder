@@ -1,6 +1,49 @@
 {
   "camps": [
     {
+      "city": "Oldtown",
+      "council_id": "council-527",
+      "description": "Laurel Highlands Council's 114-acre resident camp in Oldtown, MD. Hosts the biennial 'Scouts at Work' Scouts BSA resident camp, an immersive trades/STEM career program (aviation, welding, robotics, railroading, archaeology, etc.) plus traditional camp elements. Offered every other year; next session summer 2027.",
+      "features": [],
+      "id": "md-camp-potomac-scouts-at-work-camp",
+      "lat": 39.5584,
+      "lon": -78.625,
+      "name": "Camp Potomac (Scouts at Work Camp)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://lhcscouting.org/scouts-work/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "md-camp-potomac-scouts-at-work-camp",
+          "end_date": "2027-07-17",
+          "fee_adult": 300,
+          "fee_youth": 500,
+          "id": "md-camp-potomac-scouts-at-work-camp-2027-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://lhcscouting.org/scouts-work/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-11",
+          "year": 2027
+        }
+      ],
+      "state": "MD",
+      "status": "active",
+      "website_url": "https://lhcscouting.org/scouts-work/"
+    },
+    {
       "address": "300 Heritage Road",
       "city": "Farmington",
       "council_id": "council-527",

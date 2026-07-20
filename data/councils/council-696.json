@@ -1,5 +1,28 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Fairbanks",
+      "council_id": "council-696",
+      "description": "Midnight Sun Council's remote wilderness high-adventure base offering 3-day to 3-week guided Alaska treks (staged from Fairbanks). Confirmed operating for 2026 (deposit balance due Feb 1, 2026). Custom trek dates, not fixed sessions.",
+      "features": [],
+      "id": "ak-northern-lights-high-adventure-base",
+      "name": "Northern Lights High Adventure Base",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://midnightsunbsa.org/northern-lights-high-adventure-base-treks/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "AK",
+      "status": "active",
+      "website_url": "https://midnightsunbsa.org/northern-lights-high-adventure-base-treks/"
+    }
+  ],
   "hq_city": "Fairbanks",
   "id": "council-696",
   "name": "Midnight Sun Council",

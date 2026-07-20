@@ -133,6 +133,86 @@
       "state": "PA",
       "status": "active",
       "website_url": "https://www.campsinoquipe.org/summercamp"
+    },
+    {
+      "address": "292 Rock Enon Springs Rd",
+      "city": "Gore",
+      "council_id": "council-598",
+      "description": "Shenandoah Area Council Cub Scout & Webelos resident summer camp (full-week and half-week options); rank Adventures, aquatics, climbing, range & target sports. Full-week youth fee $455 / half-week $285; adult $150 full / $75 half.",
+      "features": [],
+      "id": "va-camp-rock-enon",
+      "lat": 39.219128893027,
+      "lon": -78.386617326488,
+      "name": "Camp Rock Enon",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.camprockenon.org/cubsummercamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-rock-enon",
+          "end_date": "2026-06-20",
+          "fee_adult": 150,
+          "fee_youth": 455,
+          "id": "va-camp-rock-enon-2026-06-14",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.camprockenon.org/cubsummercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-rock-enon",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 455,
+          "id": "va-camp-rock-enon-2026-06-21",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.camprockenon.org/cubsummercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "va-camp-rock-enon",
+          "end_date": "2026-07-04",
+          "fee_adult": 150,
+          "fee_youth": 455,
+          "id": "va-camp-rock-enon-2026-06-28",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.camprockenon.org/cubsummercamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "VA",
+      "status": "active",
+      "website_url": "https://www.camprockenon.org/cubsummercamp"
     }
   ],
   "hq_city": "Winchester",

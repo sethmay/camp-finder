@@ -540,6 +540,189 @@
       "state": "MI",
       "status": "active",
       "website_url": "https://michiganscouting.org/camping/properties/gerber-scout-reservation/"
+    },
+    {
+      "city": "Mackinaw City",
+      "council_id": "council-272",
+      "description": "Michigan Crossroads Council high-adventure sailing program aboard the Retriever, a 52-ft ketch based in Mackinaw City, MI, cruising the northern Great Lakes (Mackinac Island, Beaver Island, Charlevoix, etc.). Participants learn sail trim, helmsmanship, navigation and marine safety. Open to any BSA Troop/Team/Crew/Ship; youth must be 13+ by Sept 1. Six-day/five-night weeklong expeditions plus an extended Labor Day weekend. Max 10 youth + 2 adults per crew. 2026 fees not cleanly published online.",
+      "features": [],
+      "id": "mi-great-lakes-sailing-adventure-the-retriever",
+      "name": "Great Lakes Sailing Adventure (The Retriever)",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-06-26",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-06-21",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-07-03",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-06-28",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-07-10",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-07-05",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-07-17",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-07-12",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-07-24",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-07-19",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-07-31",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-07-26",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-08-07",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-08-02",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-02",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-08-14",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-08-09",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-09",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-08-21",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-08-16",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-16",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mi-great-lakes-sailing-adventure-the-retriever",
+          "end_date": "2026-08-31",
+          "id": "mi-great-lakes-sailing-adventure-the-retriever-2026-08-28",
+          "program_type": "high_adventure",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-28",
+          "year": 2026
+        }
+      ],
+      "state": "MI",
+      "status": "active",
+      "website_url": "https://michiganscouting.org/camping/great-lakes-sailing-adventure/"
     }
   ],
   "hq_city": "Lansing",

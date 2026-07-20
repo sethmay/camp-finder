@@ -1,6 +1,49 @@
 {
   "camps": [
     {
+      "address": "9408 Belt Road",
+      "city": "Midland",
+      "council_id": "council-415",
+      "description": "Mecklenburg County Council Cub Scout Day Camp for rising 1st-5th graders; STEM, archery, BB, obstacle courses; lunch and snacks included. Owned/operated by Mecklenburg County Council (415).",
+      "features": [],
+      "id": "nc-belk-scout-camp",
+      "lat": 35.2070942,
+      "lon": -80.5573318,
+      "name": "Belk Scout Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch5 long-tail)",
+        "source_url": "https://www.belkscoutcamp.org/cubcamp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "nc-belk-scout-camp",
+          "end_date": "2026-07-17",
+          "fee_youth": 200,
+          "id": "nc-belk-scout-camp-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch5 long-tail)",
+            "source_url": "https://www.belkscoutcamp.org/cubcamp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        }
+      ],
+      "state": "NC",
+      "status": "active",
+      "website_url": "https://www.belkscoutcamp.org/cubcamp"
+    },
+    {
       "address": "383 Vein Mountain Rd, Nebo, NC 28761",
       "city": "Nebo",
       "council_id": "council-415",
