@@ -1,12 +1,14 @@
 {
-  "build_time": "2026-07-20T13:50:40+00:00",
-  "camp_count": 478,
-  "council_count": 236,
+  "build_time": "2026-07-20T23:49:24+00:00",
+  "camp_count": 484,
+  "council_count": 238,
   "dead_link_count": 0,
-  "session_count": 1271,
+  "session_count": 1277,
   "states_covered": [
+    "AE",
     "AK",
     "AL",
+    "AP",
     "AR",
     "AZ",
     "CA",

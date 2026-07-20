@@ -1,0 +1,169 @@
+{
+  "camps": [
+    {
+      "address": "White Beach, Okinawa, Japan",
+      "city": "White Beach, Okinawa",
+      "council_id": "council-803",
+      "description": "Far East Council Scouts BSA resident camp at White Beach, Okinawa, Japan. Registration via ScoutingEvent (Black Pug).",
+      "features": [],
+      "id": "ap-camp-dragon",
+      "lat": 26.312,
+      "lon": 127.929,
+      "name": "Camp Dragon",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "community",
+        "source_url": "https://scoutingevent.com/803-2026CampDragon",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ap-camp-dragon",
+          "end_date": "2026-04-04",
+          "id": "ap-camp-dragon-2026-03-29",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://scoutingevent.com/803-2026CampDragon",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2026-03-29",
+          "year": 2026
+        }
+      ],
+      "state": "AP",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/803-2026CampDragon"
+    },
+    {
+      "address": "Tama Hills Recreation Center, Tokyo, Japan",
+      "city": "Tama Hills, Tokyo",
+      "council_id": "council-803",
+      "description": "Far East Council Scouts BSA resident camp at Tama Hills Recreation Center (US military recreation area), Tokyo, Japan.",
+      "features": [],
+      "id": "ap-camp-okami",
+      "lat": 35.624,
+      "lon": 139.466,
+      "name": "Camp Okami",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "community",
+        "source_url": "https://scoutingevent.com/803-2026CampOkami",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ap-camp-okami",
+          "end_date": "2026-07-03",
+          "id": "ap-camp-okami-2026-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://scoutingevent.com/803-2026CampOkami",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2026-06-27",
+          "year": 2026
+        }
+      ],
+      "state": "AP",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/803-2026CampOkami"
+    },
+    {
+      "address": "Malaysia",
+      "city": "Malaysia",
+      "council_id": "council-803",
+      "description": "Far East Council Scouts BSA resident 'Asia Trilogy' camp in Malaysia. Registration via ScoutingEvent (Black Pug).",
+      "features": [],
+      "id": "ap-asia-trilogy-camp-malaysia",
+      "name": "Asia Trilogy Camp Malaysia",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "community",
+        "source_url": "https://scoutingevent.com/803-2026FECTrilogyMalaysia",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ap-asia-trilogy-camp-malaysia",
+          "end_date": "2026-08-01",
+          "id": "ap-asia-trilogy-camp-malaysia-2026-07-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://scoutingevent.com/803-2026FECTrilogyMalaysia",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "AP",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/803-2026FECTrilogyMalaysia"
+    },
+    {
+      "address": "Angeles City, Philippines",
+      "city": "Angeles City, Philippines",
+      "council_id": "council-803",
+      "description": "Far East Council Scouts BSA resident 'Christmas Camp' at Angeles City, Philippines.",
+      "features": [],
+      "id": "ap-christmas-camp",
+      "lat": 15.145,
+      "lon": 120.596,
+      "name": "Christmas Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "community",
+        "source_url": "https://www.fareastcouncil.org/camping/council-resident-camps",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ap-christmas-camp",
+          "end_date": "2026-12-31",
+          "id": "ap-christmas-camp-2026-12-26",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://www.fareastcouncil.org/camping/council-resident-camps",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2026-12-26",
+          "year": 2026
+        }
+      ],
+      "state": "AP",
+      "status": "active",
+      "website_url": "https://www.fareastcouncil.org/camping/council-resident-camps"
+    }
+  ],
+  "hq_city": "Okinawa, Japan",
+  "id": "council-803",
+  "name": "Far East Council",
+  "number": 803,
+  "platform": "blackpug",
+  "state": "AP",
+  "website": "https://www.fareastcouncil.org/"
+}

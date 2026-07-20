@@ -490,160 +490,6 @@
       "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
     },
     {
-      "address": "120 US Hwy 67 Knob Lick, Missouri 63651",
-      "council_id": "council-312",
-      "features": [],
-      "id": "mo-summer-camp-famous-eagle",
-      "lat": 37.6755044,
-      "lon": -90.3676269,
-      "name": "Summer Camp-Famous Eagle",
-      "program_types": [
-        "scouts_bsa_resident"
-      ],
-      "provenance": {
-        "confidence": 1.0,
-        "method": "blackpug",
-        "source_url": "https://scoutingevent.com/312-101413",
-        "verified_at": "2026-07-18"
-      },
-      "sessions": [
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-famous-eagle",
-          "end_date": "2026-06-20",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-famous-eagle-2026-06-14",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101413",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101413",
-          "start_date": "2026-06-14",
-          "year": 2026
-        },
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-famous-eagle",
-          "end_date": "2026-06-27",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-famous-eagle-2026-06-21",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101413",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101413",
-          "start_date": "2026-06-21",
-          "year": 2026
-        },
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-famous-eagle",
-          "end_date": "2026-07-11",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-famous-eagle-2026-07-05",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101413",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101413",
-          "start_date": "2026-07-05",
-          "year": 2026
-        }
-      ],
-      "state": "MO",
-      "status": "active",
-      "website_url": "https://scoutingevent.com/312-101413"
-    },
-    {
-      "address": "120 US Hwy 67 Knob Lick, Missouri 63651",
-      "council_id": "council-312",
-      "features": [],
-      "id": "mo-summer-camp-gamble",
-      "lat": 37.6755044,
-      "lon": -90.3676269,
-      "name": "Summer Camp-Gamble",
-      "program_types": [
-        "scouts_bsa_resident"
-      ],
-      "provenance": {
-        "confidence": 1.0,
-        "method": "blackpug",
-        "source_url": "https://scoutingevent.com/312-101416",
-        "verified_at": "2026-07-18"
-      },
-      "sessions": [
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-gamble",
-          "end_date": "2026-06-20",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-gamble-2026-06-14",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101416",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101416",
-          "start_date": "2026-06-14",
-          "year": 2026
-        },
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-gamble",
-          "end_date": "2026-06-27",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-gamble-2026-06-21",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101416",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101416",
-          "start_date": "2026-06-21",
-          "year": 2026
-        },
-        {
-          "availability": "unknown",
-          "camp_id": "mo-summer-camp-gamble",
-          "end_date": "2026-07-11",
-          "fee_adult": 175,
-          "fee_youth": 445,
-          "id": "mo-summer-camp-gamble-2026-07-05",
-          "program_type": "scouts_bsa_resident",
-          "provenance": {
-            "confidence": 1.0,
-            "method": "blackpug",
-            "source_url": "https://scoutingevent.com/312-101416",
-            "verified_at": "2026-07-17"
-          },
-          "registration_url": "https://scoutingevent.com/312-101416",
-          "start_date": "2026-07-05",
-          "year": 2026
-        }
-      ],
-      "state": "MO",
-      "status": "active",
-      "website_url": "https://scoutingevent.com/312-101416"
-    },
-    {
       "address": "S-F Scout Ranch",
       "city": "Knob Lick",
       "council_id": "council-312",
@@ -692,6 +538,121 @@
             "notes": "agent-extracted from council website (program-cats pass)",
             "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
             "verified_at": "2026-07-17"
+          },
+          "start_date": "2027-07-11",
+          "year": 2027
+        }
+      ],
+      "state": "MO",
+      "status": "active",
+      "website_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/"
+    },
+    {
+      "address": "120 US-67, Farmington, MO 63640",
+      "city": "Farmington",
+      "council_id": "council-312",
+      "description": "Greater St. Louis Area Council's 5,200-acre S-F (S Bar F) Scout Ranch on 270-acre Nims Lake, ~1.5 hrs SW of St. Louis near Farmington/Knob Lick, MO. Scouts BSA resident summer camp in two styles: Camp Famous Eagle (air-conditioned dining-hall) and Camp Gamble (patrol-method campsite cooking). Aquatics on Nims Lake, Huck's Cove water park, Eagle Range shooting sports, STEM, rock climbing/challenge course, APEX older-Scout track.",
+      "features": [],
+      "id": "mo-s-f-scout-ranch",
+      "lat": 37.652685946526,
+      "lon": -90.365478883376,
+      "name": "S-F Scout Ranch",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 1.0,
+        "method": "community",
+        "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+        "verified_at": "2026-07-19"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-scout-ranch",
+          "end_date": "2027-06-19",
+          "fee_adult": 175,
+          "fee_notes": "Early bird $415 by Apr 15, $445 by May 31, $455 after; leaders free by ratio, +$175 each extra.",
+          "fee_youth": 455,
+          "id": "mo-s-f-scout-ranch-2027-06-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2027-06-13",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-scout-ranch",
+          "end_date": "2027-06-26",
+          "fee_adult": 175,
+          "fee_notes": "Early bird $415 by Apr 15, $445 by May 31, $455 after; leaders free by ratio, +$175 each extra.",
+          "fee_youth": 455,
+          "id": "mo-s-f-scout-ranch-2027-06-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2027-06-20",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-scout-ranch",
+          "end_date": "2027-07-03",
+          "fee_adult": 175,
+          "fee_notes": "Early bird $415 by Apr 15, $445 by May 31, $455 after; leaders free by ratio, +$175 each extra.",
+          "fee_youth": 455,
+          "id": "mo-s-f-scout-ranch-2027-06-27",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2027-06-27",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-scout-ranch",
+          "end_date": "2027-07-10",
+          "fee_adult": 175,
+          "fee_notes": "Early bird $415 by Apr 15, $445 by May 31, $455 after; leaders free by ratio, +$175 each extra.",
+          "fee_youth": 455,
+          "id": "mo-s-f-scout-ranch-2027-07-04",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-19"
+          },
+          "start_date": "2027-07-04",
+          "year": 2027
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mo-s-f-scout-ranch",
+          "end_date": "2027-07-17",
+          "fee_adult": 175,
+          "fee_notes": "Early bird $415 by Apr 15, $445 by May 31, $455 after; leaders free by ratio, +$175 each extra.",
+          "fee_youth": 455,
+          "id": "mo-s-f-scout-ranch-2027-07-11",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 1.0,
+            "method": "community",
+            "source_url": "https://stlbsa.org/camps/scouts-bsa-venturing-summer-camp/",
+            "verified_at": "2026-07-19"
           },
           "start_date": "2027-07-11",
           "year": 2027
