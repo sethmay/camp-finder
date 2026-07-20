@@ -1,5 +1,268 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Newark",
+      "council_id": "council-441",
+      "description": "Simon Kenton Council Scouts BSA resident camp, 600+ acres 11 miles north of Newark; six weeks in 2026. $400 rate or $40 deposit due by April 30, 2026.",
+      "features": [],
+      "id": "oh-camp-falling-rock",
+      "lat": 40.1706,
+      "lon": -82.3062,
+      "name": "Camp Falling Rock",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://skcscouts.org/bsaresidentcamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-06-20",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-06-28",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-07-04",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-07-11",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-07-18",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-07-25",
+          "fee_youth": 400,
+          "id": "oh-camp-falling-rock-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/bsaresidentcamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-falling-rock",
+          "end_date": "2026-07-29",
+          "fee_youth": 250,
+          "id": "oh-camp-falling-rock-2026-07-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/camps/summercamps/cub-adventure-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-26",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://skcscouts.org/bsaresidentcamp/"
+    },
+    {
+      "city": "Delaware",
+      "council_id": "council-441",
+      "description": "Simon Kenton Council Cub Scout day camp site north of Columbus; hosts multiple 2026 district day camps and a STEM day camp. $150 fee (rises to $200 within 60 days); includes t-shirt, patch, program.",
+      "features": [],
+      "id": "oh-camp-lazarus",
+      "lat": 40.2331,
+      "lon": -83.0454,
+      "name": "Camp Lazarus",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lazarus",
+          "end_date": "2026-07-10",
+          "fee_youth": 150,
+          "id": "oh-camp-lazarus-2026-07-06",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lazarus",
+          "end_date": "2026-07-17",
+          "fee_youth": 150,
+          "id": "oh-camp-lazarus-2026-07-13",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-lazarus",
+          "end_date": "2026-07-24",
+          "fee_youth": 150,
+          "id": "oh-camp-lazarus-2026-07-20",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/"
+    },
+    {
+      "council_id": "council-441",
+      "description": "Simon Kenton Council camp in Shawnee State Forest (Scioto County) hosting the 2026 Frontier District Cub Scout Day Camp. $150 fee (rises to $200 within 60 days).",
+      "features": [],
+      "id": "oh-camp-oyo",
+      "lat": 38.7259,
+      "lon": -83.1524,
+      "name": "Camp Oyo",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-oyo",
+          "end_date": "2026-06-19",
+          "fee_youth": 150,
+          "id": "oh-camp-oyo-2026-06-15",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://skcscouts.org/camps/summercamps/cub-scout-day-camp/"
+    }
+  ],
   "hq_city": "Columbus",
   "id": "council-441",
   "name": "Simon Kenton Council",

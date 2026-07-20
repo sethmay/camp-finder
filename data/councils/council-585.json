@@ -1,5 +1,61 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Gary",
+      "council_id": "council-585",
+      "description": "East Texas Area Council's Scouts BSA summer camp near Gary, TX. 2026 offerings include a Scouts BSA First Class Trail (first-year) camp June 4-6 and a Scouts BSA Aquatics camp June 12-16, plus Cub/Webelos weeks.",
+      "features": [],
+      "id": "tx-george-w-pirtle-scout-reservation",
+      "name": "George W. Pirtle Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/585-2026FirstClassTrail",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-george-w-pirtle-scout-reservation",
+          "end_date": "2026-06-06",
+          "id": "tx-george-w-pirtle-scout-reservation-2026-06-04",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/585-2026FirstClassTrail",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-04",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-george-w-pirtle-scout-reservation",
+          "end_date": "2026-06-16",
+          "id": "tx-george-w-pirtle-scout-reservation-2026-06-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/585-2026FirstClassTrail",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-12",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/585-2026FirstClassTrail"
+    }
+  ],
   "hq_city": "Tyler",
   "id": "council-585",
   "name": "East Texas Area Council",

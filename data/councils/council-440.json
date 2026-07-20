@@ -94,6 +94,64 @@
       "state": "OH",
       "status": "active",
       "website_url": "https://scoutingevent.com/440-98819"
+    },
+    {
+      "address": "52500 Bates Rd",
+      "city": "Wakeman",
+      "council_id": "council-440",
+      "description": "Lake Erie Council's home base for Cub Scout and Webelos resident camps; 'S'more Cub Adventures' overnight sessions at Camp Wyandot. Fee includes Saturday/Sunday breakfast and lunch plus t-shirt. (Council's Scouts BSA summer camp is held at Beaumont, not Firelands.)",
+      "features": [],
+      "id": "oh-firelands-scout-reservation",
+      "lat": 41.2761658,
+      "lon": -82.3341084,
+      "name": "Firelands Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/440-smores2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-firelands-scout-reservation",
+          "end_date": "2026-06-28",
+          "id": "oh-firelands-scout-reservation-2026-06-26",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/440-smores2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-26",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-firelands-scout-reservation",
+          "end_date": "2026-08-02",
+          "id": "oh-firelands-scout-reservation-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/440-smores2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/440-smores2026"
     }
   ],
   "hq_city": "Cleveland",

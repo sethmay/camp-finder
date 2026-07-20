@@ -1,5 +1,131 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Navasota",
+      "council_id": "council-576",
+      "description": "Sam Houston Area Council's Adventure Camp, a weekend Cub Scout resident/family campout at Bovay Scout Ranch (includes Tellepsen Scout Camp) near Navasota. Registration is $50 per person and includes meals, patch, and supplies; exact 2026 weekend dates not cleanly published.",
+      "features": [],
+      "id": "tx-bovay-scout-ranch",
+      "name": "Bovay Scout Ranch",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://shacbsa.org/adventure-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://shacbsa.org/adventure-camp"
+    },
+    {
+      "city": "Coldspring",
+      "council_id": "council-576",
+      "description": "Sam Houston Area Council's Scouts BSA resident summer camp at the new Camp Strake near Coldspring, TX. Fee includes meals, patch, and program supplies.",
+      "features": [],
+      "id": "tx-camp-strake",
+      "name": "Camp Strake",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://shacbsa.org/summer-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-strake",
+          "end_date": "2026-06-13",
+          "id": "tx-camp-strake-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://shacbsa.org/summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-strake",
+          "end_date": "2026-06-20",
+          "id": "tx-camp-strake-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://shacbsa.org/summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-strake",
+          "end_date": "2026-06-27",
+          "id": "tx-camp-strake-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://shacbsa.org/summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-strake",
+          "end_date": "2026-07-11",
+          "id": "tx-camp-strake-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://shacbsa.org/summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "tx-camp-strake",
+          "end_date": "2026-07-18",
+          "id": "tx-camp-strake-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://shacbsa.org/summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        }
+      ],
+      "state": "TX",
+      "status": "active",
+      "website_url": "https://shacbsa.org/summer-camp"
+    }
+  ],
   "hq_city": "Houston",
   "id": "council-576",
   "name": "Sam Houston Area Council",

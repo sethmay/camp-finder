@@ -1,5 +1,31 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "3551 SW 142 Avenue",
+      "city": "Davie",
+      "council_id": "council-084",
+      "description": "120-acre South Florida Council camp in Davie (Broward County) that hosts themed Cub Scout Day Camp weeks each summer with Scout skills, archery, BB shooting, arts & crafts, land sports and conservation programs.",
+      "features": [],
+      "id": "fl-camp-elmore",
+      "lat": 26.0777,
+      "lon": -80.3424,
+      "name": "Camp Elmore",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://sfcscouting.org/camps/camp-elmore/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://sfcscouting.org/camps/camp-elmore/"
+    }
+  ],
   "hq_city": "Miami Lakes",
   "id": "council-084",
   "name": "South Florida Council",

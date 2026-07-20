@@ -1,6 +1,48 @@
 {
   "camps": [
     {
+      "city": "Canfield",
+      "council_id": "council-433",
+      "description": "Great Trail Council Cub Scout Day Camp at Camp Stambaugh (Youngstown/Mahoning area); 3-day session. $85 early bird / $95 after deadline.",
+      "features": [],
+      "id": "oh-camp-stambaugh",
+      "lat": 41.0071,
+      "lon": -80.7204,
+      "name": "Camp Stambaugh",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.manatoc.org/day-camps",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-camp-stambaugh",
+          "end_date": "2026-06-21",
+          "fee_youth": 95,
+          "id": "oh-camp-stambaugh-2026-06-19",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://www.manatoc.org/day-camps",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-19",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://www.manatoc.org/day-camps"
+    },
+    {
       "address": "1075 Truxell Rd Peninsula, Ohio 44264",
       "council_id": "council-433",
       "features": [],

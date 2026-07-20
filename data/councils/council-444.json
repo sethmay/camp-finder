@@ -1,5 +1,64 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "6675 Brantford Road",
+      "city": "Dayton",
+      "council_id": "council-444",
+      "description": "Miami Valley Council Cub Scout Day Camp ('Jurassic Camp') at Cricket Holler; two 2026 sessions, Mon-Fri.",
+      "features": [],
+      "id": "oh-cricket-holler-scout-camp",
+      "lat": 39.8444144,
+      "lon": -84.2178525,
+      "name": "Cricket Holler Scout Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/444-JurassicCamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "oh-cricket-holler-scout-camp",
+          "end_date": "2026-06-19",
+          "id": "oh-cricket-holler-scout-camp-2026-06-15",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/444-JurassicCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-15",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "oh-cricket-holler-scout-camp",
+          "end_date": "2026-06-26",
+          "id": "oh-cricket-holler-scout-camp-2026-06-22",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/444-JurassicCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-22",
+          "year": 2026
+        }
+      ],
+      "state": "OH",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/444-JurassicCamp2026"
+    }
+  ],
   "hq_city": "Dayton",
   "id": "council-444",
   "name": "Miami Valley Council",

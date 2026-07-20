@@ -1,5 +1,30 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Stockton",
+      "council_id": "council-660",
+      "description": "Blackhawk Area Council Scouts BSA resident summer camp near Galena/Stockton, IL (physically in Illinois; listed as a WI-border lead). Established 1936; 55+ merit badges and specialty programs. 2026 prices frozen at 2025 rates. Session dates not cleanly published online.",
+      "features": [],
+      "id": "il-canyon-camp",
+      "lat": 42.3529,
+      "lon": -90.0281,
+      "name": "Canyon Camp",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.canyoncampbsa.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "IL",
+      "status": "active",
+      "website_url": "https://www.canyoncampbsa.org/"
+    }
+  ],
   "hq_city": "Rockford",
   "id": "council-660",
   "name": "Blackhawk Area Council",

@@ -1,5 +1,69 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "3363 Dyer Lake Road",
+      "city": "Burlington",
+      "council_id": "council-636",
+      "description": "Three Harbors Council Cub Scout day camp on 185 acres with waterfront on Dyer Lake near Burlington. Four days of boating, swimming, fishing, field sports, nature, and shooting sports. Certified Cub Scout day camp and family camping facility.",
+      "features": [],
+      "id": "wi-camp-oh-da-ko-ta",
+      "name": "Camp Oh-Da-Ko-Ta",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://www.threeharborsscouting.org/camping/cub-scout-summer-camp-2026/76668",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://www.threeharborsscouting.org/camping/cub-scout-summer-camp-2026/76668"
+    },
+    {
+      "address": "3363 Dyer Lake Road",
+      "city": "Burlington",
+      "council_id": "council-636",
+      "description": "Three Harbors Council overnight First Year Camper program for new Scouts BSA at Camp Oh-Da-Ko-Ta; work toward Tenderfoot, Second Class, and First Class requirements plus up to 2 merit badges.",
+      "features": [],
+      "id": "wi-camp-oh-da-ko-ta-first-year-camper-program",
+      "name": "Camp Oh-Da-Ko-Ta - First Year Camper Program",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+        "source_url": "https://scoutingevent.com/636-109480",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "wi-camp-oh-da-ko-ta-first-year-camper-program",
+          "end_date": "2026-06-30",
+          "id": "wi-camp-oh-da-ko-ta-first-year-camper-program-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch2: My Maps/OCD untrusted)",
+            "source_url": "https://scoutingevent.com/636-109480",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "WI",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/636-109480"
+    }
+  ],
   "hq_city": "Milwaukee",
   "id": "council-636",
   "name": "Three Harbors Council",
