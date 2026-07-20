@@ -1,5 +1,147 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Talihina",
+      "council_id": "council-488",
+      "description": "Indian Nations Council Arrow of Light resident camp for rising 5th graders at Hale Scout Reservation.",
+      "features": [],
+      "id": "ok-arrow-of-light-trail-to-troop-resident-camp-at-hale",
+      "name": "Arrow of Light Trail to Troop Resident Camp at Hale",
+      "program_types": [
+        "webelos"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.okscouts.org/campscubscouts",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ok-arrow-of-light-trail-to-troop-resident-camp-at-hale",
+          "end_date": "2026-07-01",
+          "fee_adult": 125,
+          "fee_youth": 200,
+          "id": "ok-arrow-of-light-trail-to-troop-resident-camp-at-hale-2026-06-28",
+          "program_type": "webelos",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.okscouts.org/campscubscouts",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        }
+      ],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.okscouts.org/campscubscouts"
+    },
+    {
+      "city": "Talihina",
+      "council_id": "council-488",
+      "description": "Indian Nations Council's 620-acre Scouts BSA resident camp in the Winding Stair Mountains, Ouachita National Forest. Youth fee is early-bird ($375 if paid by Feb 1).",
+      "features": [],
+      "id": "ok-hale-scout-reservation",
+      "lat": 34.7409,
+      "lon": -94.9048,
+      "name": "Hale Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.halescoutreservation.org/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ok-hale-scout-reservation",
+          "end_date": "2026-06-13",
+          "fee_youth": 375,
+          "id": "ok-hale-scout-reservation-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.halescoutreservation.org/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-hale-scout-reservation",
+          "end_date": "2026-06-20",
+          "fee_youth": 375,
+          "id": "ok-hale-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.halescoutreservation.org/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-hale-scout-reservation",
+          "end_date": "2026-06-27",
+          "fee_youth": 375,
+          "id": "ok-hale-scout-reservation-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.halescoutreservation.org/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.halescoutreservation.org/"
+    },
+    {
+      "city": "Skiatook",
+      "council_id": "council-488",
+      "description": "Indian Nations Council high-adventure base on 35,000 acres of Zink Ranch and Skiatook Lake; 7-day treks with start dates daily May 31-June 21, 2026 (early-bird $675/youth if paid by Apr 1). Discrete session dates not fixed.",
+      "features": [],
+      "id": "ok-zbase-jack-zink-high-adventure-base",
+      "lat": 36.3102,
+      "lon": -96.1207,
+      "name": "ZBASE (Jack Zink High Adventure Base)",
+      "program_types": [
+        "high_adventure"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://zbase.camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://zbase.camp/"
+    }
+  ],
   "hq_city": "Tulsa",
   "id": "council-488",
   "name": "Indian Nations Council",

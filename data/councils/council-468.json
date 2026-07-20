@@ -1,5 +1,45 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Milburn",
+      "council_id": "council-468",
+      "description": "Arbuckle Area Council's fully accredited 2,000-acre Scouts BSA resident camp near Tishomingo. Fee not publicly published.",
+      "features": [],
+      "id": "ok-camp-simpson",
+      "name": "Camp Simpson",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://arbucklebsa.org/camping/campsimpsonsummercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ok-camp-simpson",
+          "end_date": "2026-06-06",
+          "id": "ok-camp-simpson-2026-05-31",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://arbucklebsa.org/camping/campsimpsonsummercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-31",
+          "year": 2026
+        }
+      ],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://arbucklebsa.org/camping/campsimpsonsummercamp/"
+    }
+  ],
   "hq_city": "Ardmore",
   "id": "council-468",
   "name": "Arbuckle Area Council",

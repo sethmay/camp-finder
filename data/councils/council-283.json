@@ -7,6 +7,8 @@
       "description": "Twin Valley Council Cub Scout Resident Camp (overnight, Sat-Sun) at Cedar Point Scout Camp near Fairmont. 2026 theme 'Into The Woods' with NOVA modules, RAD Zoo, astronomy, ice cream making and shooting sports. Cub $60, adult $40, siblings $40. Exact 2026 session date not cleanly published; reservations via Northernstar.org as of June 1, 2026.",
       "features": [],
       "id": "mn-cedar-point-scout-camp",
+      "lat": 43.8195994,
+      "lon": -85.4830497,
       "name": "Cedar Point Scout Camp",
       "program_types": [
         "cub_resident"

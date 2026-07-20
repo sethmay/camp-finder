@@ -1,5 +1,158 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "45456 County Street 2520",
+      "city": "Apache",
+      "council_id": "council-480",
+      "description": "Last Frontier Council Cub & Webelos resident camp; three 3-night sessions in June 2026 (Thu-Sun).",
+      "features": [],
+      "id": "ok-camp-george-thomas",
+      "name": "Camp George Thomas",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.scoutingevent.com/480-CGT2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ok-camp-george-thomas",
+          "end_date": "2026-06-14",
+          "id": "ok-camp-george-thomas-2026-06-11",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-CGT2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-11",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-camp-george-thomas",
+          "end_date": "2026-06-21",
+          "id": "ok-camp-george-thomas-2026-06-18",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-CGT2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-18",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-camp-george-thomas",
+          "end_date": "2026-06-28",
+          "id": "ok-camp-george-thomas-2026-06-25",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-CGT2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-25",
+          "year": 2026
+        }
+      ],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.scoutingevent.com/480-CGT2026"
+    },
+    {
+      "address": "4500 S. Bullet Prairie Road",
+      "city": "Tishomingo",
+      "council_id": "council-480",
+      "description": "Last Frontier Council's Scouts BSA resident summer camp near Tishomingo; three one-week June 2026 sessions.",
+      "features": [],
+      "id": "ok-kerr-scout-ranch-at-slippery-falls",
+      "lat": 34.310062362626,
+      "lon": -96.7233350509,
+      "name": "Kerr Scout Ranch at Slippery Falls",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch4)",
+        "source_url": "https://www.scoutingevent.com/480-KSRSFSUMMERCAMP2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ok-kerr-scout-ranch-at-slippery-falls",
+          "end_date": "2026-06-13",
+          "fee_adult": 200,
+          "fee_youth": 310,
+          "id": "ok-kerr-scout-ranch-at-slippery-falls-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-KSRSFSUMMERCAMP2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-kerr-scout-ranch-at-slippery-falls",
+          "end_date": "2026-06-20",
+          "fee_adult": 200,
+          "fee_youth": 310,
+          "id": "ok-kerr-scout-ranch-at-slippery-falls-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-KSRSFSUMMERCAMP2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ok-kerr-scout-ranch-at-slippery-falls",
+          "end_date": "2026-06-27",
+          "fee_adult": 200,
+          "fee_youth": 310,
+          "id": "ok-kerr-scout-ranch-at-slippery-falls-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch4)",
+            "source_url": "https://www.scoutingevent.com/480-KSRSFSUMMERCAMP2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "OK",
+      "status": "active",
+      "website_url": "https://www.scoutingevent.com/480-KSRSFSUMMERCAMP2026"
+    }
+  ],
   "hq_city": "Oklahoma City",
   "id": "council-480",
   "name": "Last Frontier Council",
