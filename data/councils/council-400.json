@@ -1,5 +1,65 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "5328 Tuffy Rd",
+      "city": "Ava",
+      "council_id": "council-400",
+      "description": "Leatherstocking Council Scouts BSA resident camp in Oneida County (foothills of the Adirondacks). Two 4-day weeks and one 3-day week; 2026 theme America The Beautiful. Tiered Early Bird/Base/Late pricing.",
+      "features": [],
+      "id": "ny-camp-kingsley",
+      "lat": 43.3995,
+      "lon": -75.5348,
+      "name": "Camp Kingsley",
+      "program_types": [
+        "scouts_bsa_resident",
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.leatherstockingcouncil.org/about-us/districts-camps/camps/camp-kingsley/summer-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-kingsley",
+          "end_date": "2026-07-19",
+          "id": "ny-camp-kingsley-2026-07-16",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.leatherstockingcouncil.org/about-us/districts-camps/camps/camp-kingsley/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-16",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-kingsley",
+          "end_date": "2026-07-26",
+          "id": "ny-camp-kingsley-2026-07-22",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.leatherstockingcouncil.org/about-us/districts-camps/camps/camp-kingsley/summer-camp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-22",
+          "year": 2026
+        }
+      ],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://www.leatherstockingcouncil.org/about-us/districts-camps/camps/camp-kingsley/summer-camp/"
+    }
+  ],
   "hq_city": "Utica",
   "id": "council-400",
   "name": "Leatherstocking Council",

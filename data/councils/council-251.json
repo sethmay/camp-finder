@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "129 Hudson Road",
+      "city": "Bolton",
+      "council_id": "council-251",
+      "description": "Mayflower Council Cub Scout Adventure Day Camp at Camp Resolute on Little Pond; Mon-Fri 9am-4pm with archery, BB, nature, fishing, swimming and outdoor camp skills. 2026 weekly dates/fees not published on public pages.",
+      "features": [],
+      "id": "ma-camp-resolute-e-paul-robsham-scout-reservation-adventure-day-camp",
+      "lat": 44.8654855,
+      "lon": -68.8304781,
+      "name": "Camp Resolute (E. Paul Robsham Scout Reservation) — Adventure Day Camp",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.resolutebasecamp.net/adventure-day-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "MA",
+      "status": "active",
+      "website_url": "https://www.resolutebasecamp.net/adventure-day-camp/"
+    },
+    {
       "address": "200 CuttersField Road Plymouth, Massachusetts 02360",
       "council_id": "council-251",
       "features": [],

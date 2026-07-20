@@ -4,6 +4,120 @@
       "address": "300 Heritage Road",
       "city": "Farmington",
       "council_id": "council-527",
+      "description": "Laurel Highlands Council dining-hall Scouts BSA resident camp at Heritage Reservation, Farmington, PA.",
+      "features": [],
+      "id": "pa-camp-freedom",
+      "name": "Camp Freedom",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/527-HRSBSA2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-freedom",
+          "end_date": "2026-06-27",
+          "id": "pa-camp-freedom-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/527-HRSBSA2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-freedom",
+          "end_date": "2026-07-04",
+          "id": "pa-camp-freedom-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/527-HRSBSA2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-freedom",
+          "end_date": "2026-07-11",
+          "id": "pa-camp-freedom-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/527-HRSBSA2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/527-HRSBSA2026"
+    },
+    {
+      "address": "300 23rd Street Extension",
+      "city": "Pittsburgh",
+      "council_id": "council-527",
+      "description": "Laurel Highlands Council Cub Scout day camp (no overnight) at Camp Guyasuta, Pittsburgh, PA.",
+      "features": [],
+      "id": "pa-camp-guyasuta",
+      "lat": 40.5011,
+      "lon": -79.9104,
+      "name": "Camp Guyasuta",
+      "program_types": [
+        "cub_day"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/527-CSDayCamp2026",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-camp-guyasuta",
+          "end_date": "2026-08-04",
+          "id": "pa-camp-guyasuta-2026-08-01",
+          "program_type": "cub_day",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/527-CSDayCamp2026",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-01",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/527-CSDayCamp2026"
+    },
+    {
+      "address": "300 Heritage Road",
+      "city": "Farmington",
+      "council_id": "council-527",
       "description": "Laurel Highlands Council's Scouts BSA week-long resident camp at Heritage Reservation, on a peninsula in Lake Courage; one of the few remaining full patrol-cooking camps, with 50+ merit badges, a First Year Camper program, and a Day Trek high-adventure option (ages 14+).",
       "features": [],
       "id": "pa-camp-liberty",

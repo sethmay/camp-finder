@@ -1,5 +1,86 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "518 Thundering Springs Rd",
+      "city": "Molena",
+      "council_id": "council-095",
+      "description": "Flint River Council Scouts BSA resident summer camp at the Gerald I. Lawhorn Scouting Base, between the Flint River and Pine Mountain. Traditional merit badges plus evening adventures; optional whitewater rafting. All-inclusive fee.",
+      "features": [],
+      "id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base",
+      "lat": 32.96256814374,
+      "lon": -84.498044041566,
+      "name": "Camp Thunder (Gerald I. Lawhorn Scouting Base)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/095-95749",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base",
+          "end_date": "2026-06-13",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base-2026-06-07",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/095-95749",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base",
+          "end_date": "2026-06-20",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/095-95749",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base",
+          "end_date": "2026-06-27",
+          "fee_adult": 150,
+          "fee_youth": 375,
+          "id": "ga-camp-thunder-gerald-i-lawhorn-scouting-base-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/095-95749",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        }
+      ],
+      "state": "GA",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/095-95749"
+    }
+  ],
   "hq_city": "Griffin",
   "id": "council-095",
   "name": "Flint River Council",

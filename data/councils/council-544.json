@@ -1,6 +1,31 @@
 {
   "camps": [
     {
+      "address": "450 Boy Scout Road",
+      "city": "New Oxford",
+      "council_id": "council-544",
+      "description": "New Birth of Freedom Council Cub Scout overnight camp (three-day, two-night) at Camp Conewago, New Oxford, PA. Specific 2026 session dates not cleanly published; early-bird youth fee ~$210, adult $118.",
+      "features": [],
+      "id": "pa-camp-conewago",
+      "lat": 39.8927,
+      "lon": -77.0712,
+      "name": "Camp Conewago",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://newbirthoffreedom.org/camping/summer-camp-adventures/pack-camp/cub-scout-camp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://newbirthoffreedom.org/camping/summer-camp-adventures/pack-camp/cub-scout-camp/"
+    },
+    {
       "address": "400 Tuckahoe Road, Dillsburg, PA 17019",
       "city": "Dillsburg",
       "council_id": "council-544",

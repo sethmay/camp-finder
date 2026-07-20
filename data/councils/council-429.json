@@ -1,5 +1,226 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "29984 Journey Trail",
+      "city": "Park Rapids",
+      "council_id": "council-429",
+      "description": "Northern Lights Council's premier 2,400-acre Scouts BSA summer camp in the Paul Bunyan State Forest. Five one-week sessions in 2026 with merit badges, COPE/climbing, ATV, shooting sports, aquatics and white water rafting. Youth fee regular $505 (early bird $455); adult regular $220.",
+      "features": [],
+      "id": "mn-camp-wilderness",
+      "name": "Camp Wilderness",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness",
+          "end_date": "2026-06-27",
+          "fee_adult": 220,
+          "fee_youth": 505,
+          "id": "mn-camp-wilderness-2026-06-21",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-21",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness",
+          "end_date": "2026-07-04",
+          "fee_adult": 220,
+          "fee_youth": 505,
+          "id": "mn-camp-wilderness-2026-06-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-28",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness",
+          "end_date": "2026-07-11",
+          "fee_adult": 220,
+          "fee_youth": 505,
+          "id": "mn-camp-wilderness-2026-07-05",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-05",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness",
+          "end_date": "2026-07-18",
+          "fee_adult": 220,
+          "fee_youth": 505,
+          "id": "mn-camp-wilderness-2026-07-12",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-12",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness",
+          "end_date": "2026-07-25",
+          "fee_adult": 220,
+          "fee_youth": 505,
+          "id": "mn-camp-wilderness-2026-07-19",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-19",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://scoutingnlc.org/campingprograms/properties/camp-wilderness/"
+    },
+    {
+      "address": "29984 Journey Trail",
+      "city": "Park Rapids",
+      "council_id": "council-429",
+      "description": "Northern Lights Council Cub Scout Adventure Camp at the Butler Wilderness Outpost of Camp Wilderness. Family/pack overnight sessions with archery, swimming, crafts, fishing and boating. Five 2026 sessions.",
+      "features": [],
+      "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+      "lat": 47.0937,
+      "lon": -94.9447,
+      "name": "Camp Wilderness - Butler Wilderness Outpost (Cub Adventure Camp)",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+          "end_date": "2026-08-03",
+          "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp-2026-07-31",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-31",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+          "end_date": "2026-08-06",
+          "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp-2026-08-03",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-03",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+          "end_date": "2026-08-10",
+          "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp-2026-08-07",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-07",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+          "end_date": "2026-08-13",
+          "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp-2026-08-10",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-10",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp",
+          "end_date": "2026-08-17",
+          "id": "mn-camp-wilderness-butler-wilderness-outpost-cub-adventure-camp-2026-08-14",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingnlc.org/campingprograms/adventurecamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-08-14",
+          "year": 2026
+        }
+      ],
+      "state": "MN",
+      "status": "active",
+      "website_url": "https://scoutingnlc.org/campingprograms/adventurecamp/"
+    }
+  ],
   "hq_city": "Fargo",
   "id": "council-429",
   "name": "Northern Lights Council",

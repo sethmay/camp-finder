@@ -1,5 +1,48 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "23 Wallwood BSA Dr",
+      "city": "Quincy",
+      "council_id": "council-664",
+      "description": "Suwannee River Area Council Scouts BSA resident summer camp on 600+ acres along Lake Talquin in Gadsden County, FL. Lead appeared under GA (near the GA/FL line) but the camp physically sits in Quincy, Florida.",
+      "features": [],
+      "id": "fl-wallwood-scout-reservation",
+      "lat": 30.4474,
+      "lon": -84.605,
+      "name": "Wallwood Scout Reservation",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingevent.com/664-SC26",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "fl-wallwood-scout-reservation",
+          "end_date": "2026-06-20",
+          "id": "fl-wallwood-scout-reservation-2026-06-14",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingevent.com/664-SC26",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-14",
+          "year": 2026
+        }
+      ],
+      "state": "FL",
+      "status": "active",
+      "website_url": "https://scoutingevent.com/664-SC26"
+    }
+  ],
   "hq_city": "Tallahassee",
   "id": "council-664",
   "name": "Suwannee River Area Council",

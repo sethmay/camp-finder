@@ -1,5 +1,48 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "address": "2332 Camp Maubila Road",
+      "city": "Grove Hill",
+      "council_id": "council-004",
+      "description": "Mobile Area Council's Scouts BSA summer camp, run as the multi-day Maubila Summer Express program (merit badges, waterfront, shooting sports). Fees not cleanly published post-registration.",
+      "features": [],
+      "id": "al-maubila-scout-reservation-maubila-summer-express",
+      "lat": 31.617460739327,
+      "lon": -87.824559389875,
+      "name": "Maubila Scout Reservation (Maubila Summer Express)",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://scoutingmac.org/camp-maubila/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "al-maubila-scout-reservation-maubila-summer-express",
+          "end_date": "2026-05-31",
+          "id": "al-maubila-scout-reservation-maubila-summer-express-2026-05-28",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://scoutingmac.org/camp-maubila/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-05-28",
+          "year": 2026
+        }
+      ],
+      "state": "AL",
+      "status": "active",
+      "website_url": "https://scoutingmac.org/camp-maubila/"
+    }
+  ],
   "hq_city": "Mobile",
   "id": "council-004",
   "name": "Mobile Area Council",

@@ -151,6 +151,104 @@
       "state": "PA",
       "status": "active",
       "website_url": "http://padutchbsa.org/camping/bashore/summercamp/"
+    },
+    {
+      "address": "2 Scout Lane",
+      "city": "Newmanstown",
+      "council_id": "council-524",
+      "description": "Pennsylvania Dutch Council Cub Scout summer camp (weekend and week-long resident sessions) at Camp Mack, Newmanstown, PA. Dates listed are the 2026 weekend resident sessions.",
+      "features": [],
+      "id": "pa-j-edward-mack-scout-reservation",
+      "lat": 40.2491,
+      "lon": -76.306,
+      "name": "J. Edward Mack Scout Reservation",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "http://padutchbsa.org/camping/mack/summercamp/",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "pa-j-edward-mack-scout-reservation",
+          "end_date": "2026-06-22",
+          "fee_adult": 175,
+          "fee_youth": 365,
+          "id": "pa-j-edward-mack-scout-reservation-2026-06-20",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "http://padutchbsa.org/camping/mack/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-20",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-j-edward-mack-scout-reservation",
+          "end_date": "2026-06-29",
+          "fee_adult": 175,
+          "fee_youth": 365,
+          "id": "pa-j-edward-mack-scout-reservation-2026-06-27",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "http://padutchbsa.org/camping/mack/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-06-27",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-j-edward-mack-scout-reservation",
+          "end_date": "2026-07-13",
+          "fee_adult": 175,
+          "fee_youth": 365,
+          "id": "pa-j-edward-mack-scout-reservation-2026-07-11",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "http://padutchbsa.org/camping/mack/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-11",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "pa-j-edward-mack-scout-reservation",
+          "end_date": "2026-07-20",
+          "fee_adult": 175,
+          "fee_youth": 365,
+          "id": "pa-j-edward-mack-scout-reservation-2026-07-18",
+          "program_type": "cub_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "http://padutchbsa.org/camping/mack/summercamp/",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-18",
+          "year": 2026
+        }
+      ],
+      "state": "PA",
+      "status": "active",
+      "website_url": "http://padutchbsa.org/camping/mack/summercamp/"
     }
   ],
   "hq_city": "Lancaster",

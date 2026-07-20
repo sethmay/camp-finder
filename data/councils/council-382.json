@@ -1,5 +1,102 @@
 {
-  "camps": [],
+  "camps": [
+    {
+      "city": "Mayville",
+      "council_id": "council-382",
+      "description": "Allegheny Highlands Council Scouts BSA resident camp on Chautauqua Lake, Mayville, NY (lead filed under PA but camp sits in NY).",
+      "features": [],
+      "id": "ny-camp-merz",
+      "name": "Camp Merz",
+      "program_types": [
+        "scouts_bsa_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.campmerz.org/scouts-bsa-summer-camp",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-merz",
+          "end_date": "2026-07-11",
+          "id": "ny-camp-merz-2026-07-06",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.campmerz.org/scouts-bsa-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-06",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-merz",
+          "end_date": "2026-07-18",
+          "id": "ny-camp-merz-2026-07-13",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.campmerz.org/scouts-bsa-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-13",
+          "year": 2026
+        },
+        {
+          "availability": "unknown",
+          "camp_id": "ny-camp-merz",
+          "end_date": "2026-07-25",
+          "id": "ny-camp-merz-2026-07-20",
+          "program_type": "scouts_bsa_resident",
+          "provenance": {
+            "confidence": 0.6,
+            "method": "llm_extraction",
+            "notes": "agent-extracted from council website (leads batch3)",
+            "source_url": "https://www.campmerz.org/scouts-bsa-summer-camp",
+            "verified_at": "2026-07-17"
+          },
+          "start_date": "2026-07-20",
+          "year": 2026
+        }
+      ],
+      "state": "NY",
+      "status": "active",
+      "website_url": "https://www.campmerz.org/scouts-bsa-summer-camp"
+    },
+    {
+      "address": "2420 Bordell Rd",
+      "city": "Smethport",
+      "council_id": "council-382",
+      "description": "Allegheny Highlands Council Cub Scout resident camp (four sessions plus family camp) in Smethport, PA. 2026 dates not yet published at research time.",
+      "features": [],
+      "id": "pa-elk-lick-scout-reserve",
+      "lat": 41.850432,
+      "lon": -78.4952498,
+      "name": "Elk Lick Scout Reserve",
+      "program_types": [
+        "cub_resident"
+      ],
+      "provenance": {
+        "confidence": 0.6,
+        "method": "llm_extraction",
+        "notes": "agent-extracted from council website (leads batch3)",
+        "source_url": "https://www.alleghenyhighlands.org/camping",
+        "verified_at": "2026-07-17"
+      },
+      "sessions": [],
+      "state": "PA",
+      "status": "active",
+      "website_url": "https://www.alleghenyhighlands.org/camping"
+    }
+  ],
   "hq_city": "Falconer",
   "id": "council-382",
   "name": "Allegheny Highlands Council",
