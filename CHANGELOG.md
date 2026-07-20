@@ -2,6 +2,20 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.25.0 (minor) — 2026-07-19
+
+- `abf2a76` **usscouts OCD sweep** — worked the full 320-lead OCD review list via 16 scouts. Added
+  **61 camps (+53 sessions) across 44 councils**, heavy on council **high-adventure / aquatics bases**
+  and **Cub camps** the resident-camp passes missed: Pamlico Sea Base, Hanna Venture Base, Camp
+  Pellissippi, and the Lumpkin / Dowling / Elkhorn / Rocky Mountain / Chilkoot / North Idaho HABs;
+  MOHAB / Grizzly Base (MT); Camp Powhatan + Ottari (Blue Ridge SR); Camp Tres Ritos; Hinckley Scout
+  Ranch; Medicine Mountain + Lewis & Clark (Sioux 695); Ten Mile River's Camp Ranachqua; plus many
+  day/Cub camps. Dedup dropped 25 automatically + 7 manual name-variants (Hubert Eaton = HESR Big Horn,
+  June Norcross Webster = J.N. Webster, ZBASE, Heritage Reservation umbrella, Camp Charles F. Perry =
+  Camp Perry, Floodwood Mountain = Floodwood Trek); 3 appended to the PNW demo councils. Remaining OCD
+  leads were unconfirmable (defunct / non-BSA / service centers). Camp count 417 → 478, sessions
+  1218 → 1271.
+
 ## 0.24.0 (minor) — 2026-07-19
 
 - `967a6fa` **Leads batch 5 — long-tail sweep (23 states)** — final pass over the remaining My Maps +
