@@ -2,6 +2,11 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.27.0 (minor) — 2026-07-19
+
+- `3cd2253` Extend the distance filter with **800 / 1000 / 1500 / 2000 mi** options (`RADII` in
+  `Filters.tsx`) — reach for cross-country, Alaska/Hawaii, and overseas searches.
+
 ## 0.26.1 (patch) — 2026-07-19
 
 - `42228f0` Mark **Cabrillo Beach Youth Waterfront Sports Center** (Greater Los Angeles Area Council,
