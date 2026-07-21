@@ -5,7 +5,7 @@ import type { UiState } from "@lib/searchParams";
 
 type CriteriaPatch = Partial<UiState["criteria"]>;
 
-const RADII = [25, 50, 100, 150, 250, 300, 400, 500, 600];
+const RADII = [25, 50, 100, 150, 250, 300, 400, 500, 600, 800, 1000, 1500, 2000];
 const ALL_FEATURES = Object.keys(FEATURE_LABEL) as Feature[];
 const ALL_CATEGORIES = Object.keys(PROGRAM_CATEGORY_LABEL) as ProgramCategory[];
 
