@@ -5,6 +5,9 @@
 # must be deployable from a clean checkout and data diffs must be reviewable.
 # See IMPLEMENTATION.md §7.3.
 # ---------------------------------------------------------------------------
+.claude/handoffs
+.claude/maps
+.workbench
 
 # --- OS / editor ---
 .DS_Store
