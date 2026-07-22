@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.29.0 (minor) — 2026-07-21
 
-- `PENDING` Polish the search map (design §9): mute the vector basemap to the handoff palette
+- `75cf473` Polish the search map (design §9): mute the vector basemap to the handoff palette
   via `muteBasemap` (land/water/park/road/label) and drop the CSS saturation hack; render
   single camps as brand dot pins and reservations as primary-green **count pills**.
 
