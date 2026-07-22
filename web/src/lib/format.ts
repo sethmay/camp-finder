@@ -1,22 +1,41 @@
-// Display formatting + small static lookup tables. Pure; unit-tested.
+// Display formatting + label lookups. Pure; unit-tested.
+// Vocabulary labels come from web/public/data/vocab.json (mirrors the Open Scout API
+// vocab endpoints), so the site renders any code the API emits and falls back to a
+// humanized code for anything not yet in the vocab.
 
-import type { Availability, Feature, ProgramCategory } from "./types";
+import type { ProgramCategory } from "./types";
+import vocabData from "../../public/data/vocab.json";
 
-export const FEATURE_LABEL: Record<Feature, string> = {
-  dining_hall: "Dining hall",
-  waterfront: "Waterfront",
-  pool: "Pool",
-  shooting_sports: "Shooting sports",
-  climbing: "Climbing",
-  horseback: "Horseback",
-  atv: "ATV",
-  cope: "COPE",
-  older_scout_program: "Older-scout program",
-  high_adventure_option: "High adventure",
-  stem: "STEM",
-  scuba: "Scuba",
-  mountain_biking: "Mountain biking",
-};
+interface Term {
+  code: string;
+  label: string;
+}
+interface Vocab {
+  features: Term[];
+  program_types: Term[];
+  camp_types: Term[];
+}
+
+const vocab = vocabData as Vocab;
+
+function humanize(code: string): string {
+  return code
+    .split("_")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+function lookup(terms: Term[]): (code: string) => string {
+  const map = new Map(terms.map((t) => [t.code, t.label]));
+  return (code) => map.get(code) ?? humanize(code);
+}
+
+export const featureLabel = lookup(vocab.features);
+export const campTypeLabel = lookup(vocab.camp_types);
+export const programTypeLabel = lookup(vocab.program_types);
+
+/** Feature codes the API defines, in vocab order — drives the feature filter list. */
+export const ALL_FEATURE_CODES: string[] = vocab.features.map((t) => t.code);
 
 export const PROGRAM_CATEGORY_LABEL: Record<ProgramCategory, string> = {
   scouts_bsa: "Scouts BSA",
@@ -42,21 +61,6 @@ export function programCategories(programTypes: string[]): ProgramCategory[] {
   return out;
 }
 
-// Status tone -> Tailwind classes (color + we always pair with icon + text in the UI).
-export const AVAILABILITY_LABEL: Record<Availability, string> = {
-  open: "Open",
-  waitlist: "Waitlist",
-  full: "Full",
-  unknown: "Availability unknown",
-};
-
-export const AVAILABILITY_CLASS: Record<Availability, string> = {
-  open: "bg-open-bg text-open-ink",
-  waitlist: "bg-waitlist-bg text-waitlist-ink",
-  full: "bg-full-bg text-full-ink",
-  unknown: "bg-unknown-bg text-unknown-ink",
-};
-
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function parseISO(iso: string): { y: number; m: number; d: number } {
@@ -64,24 +68,7 @@ function parseISO(iso: string): { y: number; m: number; d: number } {
   return { y, m, d };
 }
 
-/** "Jun 21–27" within a month; "Jun 28 – Jul 4" across months. */
-export function formatDateRange(startISO: string, endISO: string): string {
-  const s = parseISO(startISO);
-  const e = parseISO(endISO);
-  const left = `${MONTHS[s.m - 1]} ${s.d}`;
-  if (s.m === e.m) return `${left}–${e.d}`;
-  return `${left} – ${MONTHS[e.m - 1]} ${e.d}`;
-}
-
-export function formatFee(cents: number | null): string {
-  return cents === null ? "Fee TBD" : `$${cents.toLocaleString("en-US")}`;
-}
-
-export function formatFeeFrom(feeFrom: number | null): string {
-  return feeFrom === null ? "Fee not posted" : `From $${feeFrom.toLocaleString("en-US")}`;
-}
-
-/** True when the newest verification is more than 12 months old. */
+/** True when the source was last verified more than 12 months ago. */
 export function isStale(verifiedISO: string, now: Date = new Date()): boolean {
   const v = parseISO(verifiedISO);
   const monthsOld = (now.getFullYear() - v.y) * 12 + (now.getMonth() + 1 - v.m);

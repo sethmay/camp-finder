@@ -69,7 +69,7 @@ export default function SearchApp() {
   }, [camps]);
 
   const states = useMemo(
-    () => Array.from(new Set(camps.map((c) => c.state))).sort(),
+    () => Array.from(new Set(camps.map((c) => c.state).filter((s): s is string => !!s))).sort(),
     [camps],
   );
 
@@ -83,7 +83,6 @@ export default function SearchApp() {
     const criteria: Criteria = {
       ...ui.criteria,
       textIds,
-      upcomingYear: meta.upcoming_summer_year,
     };
     return sortRanked(rankCamps(camps, criteria, origin), ui.sort);
   }, [camps, meta, ui, search]);

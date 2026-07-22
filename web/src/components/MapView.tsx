@@ -2,33 +2,75 @@ import { useEffect, useRef, useState } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { RankedCamp } from "@lib/types";
-import { formatFeeFrom } from "@lib/format";
 import { MAP_COLORS, US_CENTER, US_ZOOM, mapStyle } from "@lib/map";
 import { withBase } from "@lib/paths";
 
 const SRC = "camps";
 
-function toGeoJSON(ranked: RankedCamp[]): GeoJSON.FeatureCollection {
+interface Member {
+  id: string;
+  name: string;
+}
+interface Group {
+  key: string;
+  lat: number;
+  lon: number;
+  name: string;
+  count: number;
+  members: Member[];
+}
+
+// Camps that share a reservation collapse to one pin at their centroid so co-located
+// camps (e.g. the camps of one Scout reservation) don't stack into an indistinguishable dot.
+function groupCamps(ranked: RankedCamp[]): Group[] {
+  const byKey = new Map<string, RankedCamp[]>();
+  for (const r of ranked) {
+    if (r.camp.lat === null || r.camp.lon === null) continue;
+    const key = r.camp.reservation?.id ?? r.camp.id;
+    const arr = byKey.get(key);
+    if (arr) arr.push(r);
+    else byKey.set(key, [r]);
+  }
+  const groups: Group[] = [];
+  for (const [key, members] of byKey) {
+    const lat = members.reduce((s, r) => s + (r.camp.lat as number), 0) / members.length;
+    const lon = members.reduce((s, r) => s + (r.camp.lon as number), 0) / members.length;
+    const resName = members[0].camp.reservation?.name ?? null;
+    const name = members.length > 1 ? resName ?? `${members.length} camps` : members[0].camp.name;
+    groups.push({
+      key,
+      lat,
+      lon,
+      name,
+      count: members.length,
+      members: members.map((r) => ({ id: r.camp.id, name: r.camp.name })),
+    });
+  }
+  return groups;
+}
+
+// The reservation/camp key of the selected camp, so the whole group highlights.
+function groupKeyOf(ranked: RankedCamp[], selectedId: string | null): string | null {
+  if (!selectedId) return null;
+  const hit = ranked.find((r) => r.camp.id === selectedId);
+  return hit ? hit.camp.reservation?.id ?? hit.camp.id : null;
+}
+
+function toGeoJSON(groups: Group[]): GeoJSON.FeatureCollection {
   return {
     type: "FeatureCollection",
-    features: ranked
-      .filter((r) => r.camp.lat !== null && r.camp.lon !== null)
-      .map((r) => ({
-        type: "Feature",
-        geometry: { type: "Point", coordinates: [r.camp.lon as number, r.camp.lat as number] },
-        properties: {
-          id: r.camp.id,
-          name: r.camp.name,
-          fee: formatFeeFrom(r.camp.fee_from),
-        },
-      })),
+    features: groups.map((g) => ({
+      type: "Feature",
+      geometry: { type: "Point", coordinates: [g.lon, g.lat] },
+      properties: { key: g.key, name: g.name, count: g.count, members: JSON.stringify(g.members) },
+    })),
   };
 }
 
-function pointColor(selectedId: string | null): maplibregl.ExpressionSpecification {
+function pointColor(selectedKey: string | null): maplibregl.ExpressionSpecification {
   return [
     "case",
-    ["==", ["get", "id"], selectedId ?? ""],
+    ["==", ["get", "key"], selectedKey ?? ""],
     MAP_COLORS.markerActive,
     MAP_COLORS.markerDefault,
   ];
@@ -70,13 +112,13 @@ export default function MapView({
   }, []);
 
   // Build the source + point layer on first data, then keep the source in sync.
-  // Every camp is its own marker (no clustering: with a few hundred points a
-  // clustered GeoJSON source failed to tile at low zoom, so nothing showed until
-  // the user zoomed in — the whole point of the map is to see camps immediately).
+  // Every group is its own marker (no MapLibre clustering: with a few hundred points a
+  // clustered GeoJSON source failed to tile at low zoom, so nothing showed until the user
+  // zoomed in — the whole point of the map is to see camps immediately).
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready) return;
-    const data = toGeoJSON(ranked);
+    const data = toGeoJSON(groupCamps(ranked));
 
     if (builtRef.current) {
       const src = map.getSource(SRC) as maplibregl.GeoJSONSource | undefined;
@@ -92,7 +134,7 @@ export default function MapView({
       source: SRC,
       paint: {
         "circle-radius": 7,
-        "circle-color": pointColor(selectedId),
+        "circle-color": pointColor(groupKeyOf(ranked, selectedId)),
         "circle-stroke-width": 2,
         "circle-stroke-color": "#FFFFFF",
       },
@@ -123,15 +165,24 @@ export default function MapView({
     map.on("click", "point", (e) => {
       const feat = e.features?.[0];
       if (!feat) return;
-      const props = feat.properties as { id: string; name: string; fee: string };
-      onSelect(props.id);
+      const props = feat.properties as { key: string; name: string; count: number; members: string };
+      const members = JSON.parse(props.members) as Member[];
+      onSelect(members[0].id);
+      const body =
+        members.length === 1
+          ? `<a href="${withBase(`/camps/${members[0].id}`)}" style="color:var(--cf-primary)">View details →</a>`
+          : members
+              .map(
+                (m) =>
+                  `<a href="${withBase(`/camps/${m.id}`)}" style="color:var(--cf-primary)">${m.name} →</a>`,
+              )
+              .join("<br/>");
       new maplibregl.Popup({ offset: 12, closeButton: false })
         .setLngLat((feat.geometry as GeoJSON.Point).coordinates as [number, number])
         .setHTML(
           `<div style="font-family:var(--cf-font-sans)">
              <strong>${props.name}</strong><br/>
-             <span style="color:var(--cf-muted)">${props.fee}</span><br/>
-             <a href="${withBase(`/camps/${props.id}`)}" style="color:var(--cf-primary)">View details →</a>
+             ${body}
            </div>`,
         )
         .addTo(map);
@@ -151,7 +202,7 @@ export default function MapView({
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !ready || !map.getLayer("point")) return;
-    map.setPaintProperty("point", "circle-color", pointColor(selectedId));
+    map.setPaintProperty("point", "circle-color", pointColor(groupKeyOf(ranked, selectedId)));
     if (selectedId) {
       const hit = ranked.find((r) => r.camp.id === selectedId);
       if (hit && hit.camp.lat !== null && hit.camp.lon !== null) {

@@ -7,17 +7,18 @@ import {
   Mountain,
   Droplets,
   Target,
+  Tent,
   Truck,
   Users,
   Utensils,
   Waves,
   type LucideIcon,
 } from "lucide-react";
-import type { Feature } from "@lib/types";
-import { FEATURE_LABEL } from "@lib/format";
+import { featureLabel } from "@lib/format";
 
-// Lucide (MIT) glyph per feature. `horseback` gets a custom inline glyph (handoff §3).
-const ICON: Record<Exclude<Feature, "horseback">, LucideIcon> = {
+// Lucide (MIT) glyph per known feature code; `horseback` gets a custom inline glyph
+// (handoff §3). Unknown codes (open vocab) fall back to a generic tent.
+const ICON: Record<string, LucideIcon> = {
   dining_hall: Utensils,
   waterfront: Waves,
   pool: Droplets,
@@ -32,7 +33,7 @@ const ICON: Record<Exclude<Feature, "horseback">, LucideIcon> = {
   mountain_biking: Bike,
 };
 
-function FeatureIcon({ feature }: { feature: Feature }) {
+function FeatureIcon({ feature }: { feature: string }) {
   if (feature === "horseback") {
     return (
       <svg width={14} height={14} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
@@ -40,15 +41,15 @@ function FeatureIcon({ feature }: { feature: Feature }) {
       </svg>
     );
   }
-  const Icon = ICON[feature];
+  const Icon = ICON[feature] ?? Tent;
   return <Icon size={14} aria-hidden="true" />;
 }
 
-export default function FeatureChip({ feature }: { feature: Feature }) {
+export default function FeatureChip({ feature }: { feature: string }) {
   return (
     <span className="inline-flex items-center gap-1 rounded-pill border border-border bg-bg px-2 py-1 text-xs font-medium text-ink">
       <FeatureIcon feature={feature} />
-      {FEATURE_LABEL[feature]}
+      {featureLabel(feature)}
     </span>
   );
 }

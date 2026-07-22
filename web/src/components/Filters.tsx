@@ -1,12 +1,11 @@
 import { X } from "lucide-react";
-import type { Feature, ProgramCategory } from "@lib/types";
-import { FEATURE_LABEL, PROGRAM_CATEGORY_LABEL } from "@lib/format";
+import type { ProgramCategory } from "@lib/types";
+import { ALL_FEATURE_CODES, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import type { UiState } from "@lib/searchParams";
 
 type CriteriaPatch = Partial<UiState["criteria"]>;
 
 const RADII = [25, 50, 100, 150, 250, 300, 400, 500, 600, 800, 1000, 1500, 2000];
-const ALL_FEATURES = Object.keys(FEATURE_LABEL) as Feature[];
 const ALL_CATEGORIES = Object.keys(PROGRAM_CATEGORY_LABEL) as ProgramCategory[];
 
 export default function Filters({
@@ -25,7 +24,7 @@ export default function Filters({
   onClearAll: () => void;
 }) {
   const features = criteria.features ?? [];
-  const toggleFeature = (f: Feature) =>
+  const toggleFeature = (f: string) =>
     onPatch({
       features: features.includes(f) ? features.filter((x) => x !== f) : [...features, f],
     });
@@ -39,8 +38,6 @@ export default function Filters({
 
   const activeCount =
     (criteria.zip ? 1 : 0) +
-    (criteria.dateStart || criteria.dateEnd ? 1 : 0) +
-    (criteria.maxCost !== undefined ? 1 : 0) +
     (criteria.state ? 1 : 0) +
     features.length +
     categories.length +
@@ -107,43 +104,6 @@ export default function Filters({
         </div>
       </fieldset>
 
-      <fieldset className="flex flex-col gap-2">
-        <legend className="text-sm font-semibold text-ink">Weeks available</legend>
-        <div className="grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-2">
-          <input
-            type="date"
-            value={criteria.dateStart ?? ""}
-            onChange={(e) => onPatch({ dateStart: e.target.value || undefined })}
-            aria-label="Earliest start date"
-            className="cf-tap w-full rounded-md border border-border bg-surface px-3"
-          />
-          <span className="text-muted" aria-hidden="true">–</span>
-          <input
-            type="date"
-            value={criteria.dateEnd ?? ""}
-            onChange={(e) => onPatch({ dateEnd: e.target.value || undefined })}
-            aria-label="Latest end date"
-            className="cf-tap w-full rounded-md border border-border bg-surface px-3"
-          />
-        </div>
-      </fieldset>
-
-      <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
-        Max cost per Scout: {criteria.maxCost !== undefined ? `$${criteria.maxCost}` : "Any"}
-        <input
-          type="range"
-          min={100}
-          max={1500}
-          step={25}
-          value={criteria.maxCost ?? 1500}
-          onChange={(e) => {
-            const v = Number(e.target.value);
-            onPatch({ maxCost: v >= 1500 ? undefined : v });
-          }}
-          className="accent-primary"
-        />
-      </label>
-
       <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
         State
         <select
@@ -187,7 +147,7 @@ export default function Filters({
       <fieldset className="flex flex-col gap-2">
         <legend className="text-sm font-semibold text-ink">Features</legend>
         <div className="flex flex-wrap gap-1.5">
-          {ALL_FEATURES.map((f) => {
+          {ALL_FEATURE_CODES.map((f) => {
             const on = features.includes(f);
             return (
               <button
@@ -201,7 +161,7 @@ export default function Filters({
                     : "border-border bg-surface text-ink hover:border-primary"
                 }`}
               >
-                {FEATURE_LABEL[f]}
+                {featureLabel(f)}
               </button>
             );
           })}

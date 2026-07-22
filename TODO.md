@@ -2,6 +2,14 @@
 
 Active queue and deferred work. Write each item to survive a clean context.
 
+## Data source — Open Scout API (2026-07-21, 0.28.0)
+
+Camp/council data now comes from the **Open Scout API** (registry-only) via `npm run data`
+(`web/scripts/build-data.mjs`). The Python `pipeline/` and the canonical `data/` tree were
+**removed** in 0.28.0 — the scraper / enrich / detect / global-sync sections below are
+**historical**, describing the retired pipeline. Data corrections now happen upstream in
+open-scout-api.
+
 ## External data sources (Reddit feedback, 2026-07-18)
 
 - **`scoutingevent.com/Global` (`indexMap.php`) — DONE (0.15.0) via `campfinder global-sync`.**
@@ -42,6 +50,11 @@ precedence (council-verified > community > scraped > llm), attribution. Resume w
   none in the dataset. Also Goshen Scout Reservation (National Capital, ~6 camps; have 2).
 - **Possible future scope (Breitsol_Victor):** former camps sold to orgs that still allow scout camping;
   local/state/federal camping locations. Beyond v1 (BSA council resident camps) — park.
+- **Filter by camp elevation.** Altitude facet (e.g. "under 3,000 ft" vs alpine) — troops care
+  about acclimatization and heat. Needs an `elevation` field per camp from the Open Scout API
+  (derivable from lat/lon via a DEM lookup). **API-maintainer ask.**
+- **Filter by average summer temperature.** Screen for cooler/warmer camps — needs a climate
+  field (e.g. average July high) per camp from the API, joined by coordinates. **API-maintainer ask.**
 
 ## UI refinement — live at https://sethmay.github.io/camp-finder/
 

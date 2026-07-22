@@ -1,10 +1,10 @@
 // Serialize filter state <-> URL query params so every search is shareable/bookmarkable
 // (IMPLEMENTATION.md §8.4). Pure; unit-testable.
 
-import type { Criteria, Feature, ProgramCategory, SortKey } from "./types";
+import type { Criteria, ProgramCategory, SortKey } from "./types";
 
 export interface UiState {
-  criteria: Omit<Criteria, "upcomingYear" | "textIds">;
+  criteria: Omit<Criteria, "textIds">;
   text: string;
   sort: SortKey;
 }
@@ -14,9 +14,6 @@ export function toParams(state: UiState): URLSearchParams {
   const c = state.criteria;
   if (c.zip) p.set("zip", c.zip);
   if (c.radiusMiles !== undefined) p.set("radius", String(c.radiusMiles));
-  if (c.dateStart) p.set("from", c.dateStart);
-  if (c.dateEnd) p.set("to", c.dateEnd);
-  if (c.maxCost !== undefined) p.set("cost", String(c.maxCost));
   if (c.state) p.set("state", c.state);
   if (c.features && c.features.length) p.set("feat", c.features.join(","));
   if (c.categories && c.categories.length) p.set("prog", c.categories.join(","));
@@ -32,20 +29,15 @@ function num(v: string | null): number | undefined {
 }
 
 export function fromParams(p: URLSearchParams): UiState {
-  const sortRaw = p.get("sort");
-  const sort: SortKey =
-    sortRaw === "cost" || sortRaw === "name" ? sortRaw : "distance";
+  const sort: SortKey = p.get("sort") === "name" ? "name" : "distance";
   return {
     text: p.get("q") ?? "",
     sort,
     criteria: {
       zip: p.get("zip") ?? undefined,
       radiusMiles: num(p.get("radius")),
-      dateStart: p.get("from") ?? undefined,
-      dateEnd: p.get("to") ?? undefined,
-      maxCost: num(p.get("cost")),
       state: p.get("state") ?? undefined,
-      features: (p.get("feat")?.split(",").filter(Boolean) as Feature[]) ?? undefined,
+      features: p.get("feat")?.split(",").filter(Boolean) ?? undefined,
       categories: (p.get("prog")?.split(",").filter(Boolean) as ProgramCategory[]) ?? undefined,
     },
   };

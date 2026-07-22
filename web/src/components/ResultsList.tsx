@@ -43,7 +43,6 @@ export default function ResultsList({
             className="cf-tap rounded-md border border-border bg-surface px-2 text-ink"
           >
             <option value="distance">Distance</option>
-            <option value="cost">Cost</option>
             <option value="name">Name</option>
           </select>
         </label>
