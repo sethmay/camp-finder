@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.29.2 (patch) — 2026-07-21
+
+- `PENDING` Fix the map camera yanking back to a previously selected camp: fly only on a
+  genuine new selection (ref-guarded, not on every filter/`ranked` change), and clear the
+  selection on a background-map click (the map's only deselect).
+
 ## 0.29.1 (patch) — 2026-07-21
 
 - `8ead3ed` Fix stale registry-cutover copy: the home hero, `Base.astro` meta description, and
