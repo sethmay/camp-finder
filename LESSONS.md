@@ -156,3 +156,13 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   Wire click/hover per interactive layer id, not per source.
 - **Map a11y is a manual check.** No axe/pa11y in the web toolchain, so marker/label/selection
   contrast is verified only by eye on the live GPU render against `tokens.css` ratios.
+- **Camera moves must fire only on a genuine new selection.** The selection effect is keyed
+  `[selectedId, ranked, ready]`, so it re-runs on filter/`ranked` changes; guard `flyTo` with a
+  `lastFlownRef` updated every run and reset to `null` on deselect — otherwise the camera yanks
+  back to a still-selected camp on any filter tweak. Note `selectedId` is shared state for BOTH
+  map selection and list-card hover (`SearchApp`: `onHover={setSelectedId}`), so a selection-keyed
+  effect also fires on hover — reason about hover when touching fly/popup/recolor.
+- **The background-deselect hit-test must list EVERY clickable overlay layer**, not just the
+  marker circles: `queryRenderedFeatures(e.point, { layers: ["point","cluster","point-label","cluster-count"] })`.
+  Omitting the text layers makes a click on a camp's name/count read as "empty map" and wrongly
+  deselect. Same sync discipline as `OVERLAY_LAYERS`.

@@ -87,12 +87,15 @@ export default function MapView({
 }: {
   ranked: RankedCamp[];
   selectedId: string | null;
-  onSelect: (id: string) => void;
+  onSelect: (id: string | null) => void;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [ready, setReady] = useState(false);
   const builtRef = useRef(false);
+  // Last camp/reservation key we flew to, so a re-run of the selection effect (e.g. on a
+  // ranked/filter change) never re-flies the camera to a camp that stayed selected.
+  const lastFlownRef = useRef<string | null>(null);
 
   // Create the map once; the source/layers are added on first data (below).
   useEffect(() => {
@@ -231,6 +234,14 @@ export default function MapView({
       map.on("mouseenter", id, () => (map.getCanvas().style.cursor = "pointer"));
       map.on("mouseleave", id, () => (map.getCanvas().style.cursor = ""));
     }
+    // Click on empty map (not on any marker, label, or count) clears the selection — the
+    // map's only deselect. Include the text layers so clicking a camp's name isn't "empty".
+    map.on("click", (e) => {
+      const onMarker = map.queryRenderedFeatures(e.point, {
+        layers: ["point", "cluster", "point-label", "cluster-count"],
+      });
+      if (!onMarker.length) onSelect(null);
+    });
 
     const bounds = new maplibregl.LngLatBounds();
     for (const f of data.features) bounds.extend((f.geometry as GeoJSON.Point).coordinates as [number, number]);
@@ -247,12 +258,15 @@ export default function MapView({
     const key = groupKeyOf(ranked, selectedId);
     map.setPaintProperty("point", "circle-color", keyColor(key, MAP_COLORS.markerActive, MAP_COLORS.markerDefault));
     map.setPaintProperty("cluster", "circle-color", keyColor(key, CLUSTER_ACTIVE, MAP_COLORS.cluster));
-    if (selectedId) {
+    // Fly only on a genuine NEW selection — not when this effect re-runs for a ranked/ready
+    // change while the same camp stays selected (that yanked the camera back to it).
+    if (selectedId && selectedId !== lastFlownRef.current) {
       const hit = ranked.find((r) => r.camp.id === selectedId);
       if (hit && hit.camp.lat !== null && hit.camp.lon !== null) {
         map.flyTo({ center: [hit.camp.lon, hit.camp.lat], zoom: Math.max(map.getZoom(), 8) });
       }
     }
+    lastFlownRef.current = selectedId;
   }, [selectedId, ranked, ready]);
 
   return (
