@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.29.1 (patch) — 2026-07-21
 
-- `PENDING` Fix stale registry-cutover copy: the home hero, `Base.astro` meta description, and
+- `8ead3ed` Fix stale registry-cutover copy: the home hero, `Base.astro` meta description, and
   the empty-state strings still named the weeks/cost/dates filters removed in 0.28.0.
 
 ## 0.29.0 (minor) — 2026-07-21
