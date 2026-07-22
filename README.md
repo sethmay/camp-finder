@@ -1,49 +1,47 @@
 # Camp Finder
 
 A free, static website that helps Scout troops discover **Scouts BSA resident summer
-camps** across the ~235 Scouting America councils — filter by distance, available weeks,
-cost, and program — and click through to each camp's **official council page**.
+camps** across the ~230 Scouting America councils — filter by distance, program, and
+features — and click through to each camp's **official council page** for dates and fees.
 
 > **Unofficial community tool.** Not affiliated with, endorsed by, or sponsored by
-> Scouting America (Boy Scouts of America). Camp Finder aggregates public information and
-> links to authoritative sources; always confirm dates and fees on the council's own page.
+> Scouting America (Boy Scouts of America). Camp Finder is a directory and a pointer to
+> authoritative sources; always confirm dates and fees on the council's own page.
 
 Planning & specs: [`PLAN.md`](./PLAN.md) · [`IMPLEMENTATION.md`](./IMPLEMENTATION.md) ·
 [`DESIGN_BRIEF.md`](./DESIGN_BRIEF.md) · agent guide: [`CLAUDE.md`](./CLAUDE.md).
 
 ## Architecture
 
-A **Python pipeline** (`pipeline/`) turns council/camp data into a canonical,
-human-reviewed dataset (`data/councils/<id>.json`, one file per council). A build step
-flattens it to static JSON (`web/public/data/*.json`). An **Astro + React static site**
-(`web/`) loads that JSON and filters entirely **client-side** — no backend, no runtime
-database.
+Camp and council data comes from the **[Open Scout API](https://github.com/sethmay/open-scout-api)**
+— an open, versioned dataset of Scouting America reference data. A small refresh step
+(`web/scripts/build-data.mjs`) fetches the API's denormalized `current/camps.json` +
+vocabularies, filters to the camps this site surfaces, and writes static JSON to
+`web/public/data/`. An **Astro + React static site** (`web/`) loads that JSON and filters
+entirely **client-side** — no backend, no runtime database.
 
 ```
-data/councils/*.json  --(campfinder build)-->  web/public/data/{camps,meta}.json  -->  Astro static site
+Open Scout API (current/camps.json + vocab)  --(npm run data)-->  web/public/data/*.json  -->  Astro static site
 ```
 
-## Pipeline (`pipeline/`)
+**Registry only.** The site carries durable registry facts — location, council, program,
+features, reservation grouping, and a durable link to the council page. Highly transitory
+data (session dates, fees, availability) deliberately lives on each council's own site,
+reached via each camp's `url`.
 
-Requires Python 3.11+. `uv` is recommended; a plain venv works too.
+## Data (`web/scripts/build-data.mjs`)
+
+The emitted JSON is **committed** so the site deploys from a clean checkout with no
+network. Refreshing it is a deliberate step, pinned to an API version:
 
 ```bash
-cd pipeline
-python -m venv .venv && . .venv/Scripts/activate   # Windows: .venv\Scripts\activate
-pip install -e ".[dev,llm]"
-
-campfinder schema        # regenerate data/schema/*.json from the models
-campfinder registry      # build/refresh council stubs from Wikipedia
-campfinder detect --council all   # classify registration platform per council
-campfinder enrich        # fill council websites: curated seed then Wikipedia
-campfinder enrich --report-missing   # list councils still lacking a website
-campfinder geocode       # fill missing camp lat/lon from addresses
-campfinder validate      # schema + referential + sanity gate (exits nonzero on error)
-campfinder build         # compile data/ -> web/public/data/*.json
-campfinder zipcentroids  # (re)build web/public/data/zip-centroids.json from the Census gazetteer
-
-pytest                   # pipeline suite (models, registry, enrich, validate, build, scrapers)
+cd web
+npm run data      # fetch open-scout-api -> web/public/data/{camps,meta,vocab}.json
 ```
+
+The pinned API version lives in `EXPECTED_VERSION` at the top of `build-data.mjs`; a
+version mismatch fails the refresh loudly so changes are reviewed before they land.
+`zip-centroids.json` (US Census ZCTA gazetteer, public domain) is committed and static.
 
 ## Web (`web/`)
 
@@ -58,15 +56,14 @@ npm run test      # vitest: distance, filter, format, searchParams
 npm run check     # astro type-check
 ```
 
-The site reads `web/public/data/*.json`, which is produced by `campfinder build` and
-committed so the site deploys from a clean checkout.
+The site reads `web/public/data/*.json`, produced by `npm run data` and committed so the
+site deploys from a clean checkout.
 
 ## Status
 
-- **Done & verified:** canonical schema + pipeline (registry, validate, build, geocode,
-  platform detect) with 19 passing tests; a Pacific-Northwest fixture dataset (4 councils,
-  8 camps) exercising all UI states; the full frontend (search/map/filter island, static
-  camp pages, about, 404) built against the approved design system.
-- **Next:** platform scrapers (Black Pug, Doubleknot) + LLM long-tail extractor with
-  review queue; CI deploy + scheduled refresh; national coverage ramp. See
-  `IMPLEMENTATION.md` §6, §10, §12.
+- **Live data source:** Open Scout API (`v0.24.0`) — 449 camps across ~213 councils and
+  52 states/territories, classified by program and camp type, with reservation grouping
+  and honest coordinate precision.
+- **Frontend:** search/map/filter island (distance, state, program, features, text),
+  reservation-clustered map, static camp pages, about, 404 — built against the approved
+  design system.

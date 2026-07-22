@@ -1,9 +1,10 @@
 name: Deploy site
 
 # Build the static site and publish it to GitHub Pages on every push to main.
-# Data + frontend are gated first: `campfinder validate` and the web unit tests
-# must pass (IMPLEMENTATION.md §10). Enable Pages once: repo Settings -> Pages ->
-# Build and deployment -> Source = "GitHub Actions".
+# The camp dataset is committed (web/public/data/*.json), sourced from the Open Scout API
+# via `npm run data` (a deliberate refresh step, not part of the build). CI only gates the
+# frontend: web unit tests + type check must pass. Enable Pages once: repo Settings ->
+# Pages -> Build and deployment -> Source = "GitHub Actions".
 
 on:
   push:
@@ -25,17 +26,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Validate data tree
-        working-directory: pipeline
-        run: |
-          pip install -e .
-          python -m campfinder.cli validate
 
       - name: Set up Node
         uses: actions/setup-node@v4

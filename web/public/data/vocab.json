@@ -1,0 +1,128 @@
+{
+  "features": [
+    {
+      "code": "dining_hall",
+      "label": "Dining Hall"
+    },
+    {
+      "code": "waterfront",
+      "label": "Waterfront"
+    },
+    {
+      "code": "pool",
+      "label": "Swimming Pool"
+    },
+    {
+      "code": "shooting_sports",
+      "label": "Shooting Sports"
+    },
+    {
+      "code": "climbing",
+      "label": "Climbing"
+    },
+    {
+      "code": "horseback",
+      "label": "Horseback Riding"
+    },
+    {
+      "code": "atv",
+      "label": "ATV Program"
+    },
+    {
+      "code": "cope",
+      "label": "COPE"
+    },
+    {
+      "code": "older_scout_program",
+      "label": "Older-Scout Program"
+    },
+    {
+      "code": "high_adventure_option",
+      "label": "High-Adventure Option"
+    },
+    {
+      "code": "stem",
+      "label": "STEM"
+    },
+    {
+      "code": "scuba",
+      "label": "SCUBA"
+    },
+    {
+      "code": "mountain_biking",
+      "label": "Mountain Biking"
+    }
+  ],
+  "program_types": [
+    {
+      "code": "scouts_bsa_resident",
+      "label": "Scouts BSA Resident Camp"
+    },
+    {
+      "code": "cub_resident",
+      "label": "Cub Scout Resident Camp"
+    },
+    {
+      "code": "cub_day",
+      "label": "Cub Scout Day Camp"
+    },
+    {
+      "code": "webelos",
+      "label": "Webelos Camp"
+    },
+    {
+      "code": "high_adventure",
+      "label": "High Adventure"
+    },
+    {
+      "code": "short_term_camping",
+      "label": "Short-Term Camping"
+    },
+    {
+      "code": "venturing",
+      "label": "Venturing"
+    },
+    {
+      "code": "sea_scout",
+      "label": "Sea Scout"
+    },
+    {
+      "code": "family_camping",
+      "label": "Family Camping"
+    },
+    {
+      "code": "training",
+      "label": "Training"
+    }
+  ],
+  "camp_types": [
+    {
+      "code": "reservation",
+      "label": "Reservation"
+    },
+    {
+      "code": "resident_camp",
+      "label": "Resident Camp"
+    },
+    {
+      "code": "high_adventure_base",
+      "label": "High-Adventure Base"
+    },
+    {
+      "code": "short_term_camp",
+      "label": "Short-Term Camp"
+    },
+    {
+      "code": "day_camp",
+      "label": "Day Camp"
+    },
+    {
+      "code": "program_center",
+      "label": "Program Center"
+    },
+    {
+      "code": "other",
+      "label": "Other"
+    }
+  ]
+}

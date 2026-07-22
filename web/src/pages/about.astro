@@ -18,20 +18,22 @@ const meta = metaData as unknown as Meta;
 
     <h2 class="mt-8 font-display text-h2 text-ink">How it works</h2>
     <p class="mt-3 text-body text-ink">
-      We aggregate publicly available camp information — locations, session dates, fees,
-      and programs — from council websites and their registration platforms, and link
-      every listing back to the council's own page. We are a directory and a pointer,
-      never the authority. Always confirm details on the official council page before you
-      register.
+      We help you discover camps by location, program, and features, then link every
+      listing straight to the council's own page. Session dates, fees, and availability
+      change constantly, so we deliberately don't try to mirror them — the council site is
+      always the authority. We are a directory and a pointer, never the source of record.
     </p>
 
-    <h2 class="mt-8 font-display text-h2 text-ink">Data &amp; freshness</h2>
+    <h2 class="mt-8 font-display text-h2 text-ink">Where the data comes from</h2>
     <p class="mt-3 text-body text-ink">
-      Every camp and session records where its information came from and when it was last
-      verified. Listings older than a season are flagged. Camp data changes on a yearly
-      cycle, so some details may lag the council's latest updates.
+      Camp and council records come from the
+      <a href={meta.source_url} class="text-primary underline" target="_blank" rel="noopener noreferrer">
+        Open Scout API</a>, an open, versioned dataset of Scouting America reference data.
+      Each listing carries the date its information was last verified; listings older than
+      a year are flagged. Always confirm details on the official council page before you
+      register.
     </p>
-    <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-muted sm:grid-cols-4">
+    <ul class="mt-3 grid grid-cols-3 gap-2 text-sm text-muted">
       <li class="rounded-md border border-border bg-surface p-3">
         <span class="block font-mono text-h3 text-ink">{meta.camp_count}</span> camps
       </li>
@@ -41,15 +43,13 @@ const meta = metaData as unknown as Meta;
       <li class="rounded-md border border-border bg-surface p-3">
         <span class="block font-mono text-h3 text-ink">{meta.states_covered.length}</span> states
       </li>
-      <li class="rounded-md border border-border bg-surface p-3">
-        <span class="block font-mono text-h3 text-ink">{meta.upcoming_summer_year}</span> season
-      </li>
     </ul>
 
     <h2 id="corrections" class="mt-8 font-display text-h2 text-ink">Suggest a correction</h2>
     <p class="mt-3 text-body text-ink">
-      Found something wrong or missing? Corrections are reviewed by a maintainer before
-      they go live. Open an issue on the project repository with the camp name, what's
+      Found something wrong or missing? Camp and council facts are maintained in the
+      <a href={meta.source_url} class="text-primary underline" target="_blank" rel="noopener noreferrer">
+        Open Scout API</a> — open an issue or pull request there with the camp name, what's
       wrong, and a link to the authoritative source.
     </p>
 

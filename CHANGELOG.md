@@ -2,6 +2,15 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.28.0 (minor) — 2026-07-21
+
+- `PENDING` Re-source the site from the **Open Scout API** (`current/camps.json` v0.24.0):
+  new `web/scripts/build-data.mjs` refresh replaces the Python pipeline as the data source.
+  Registry only — drop session/fee/date data and the weeks/cost filters + sessions table;
+  the CTA points at each camp's durable `url`, feature/program labels come from the API vocab
+  endpoints, and co-located camps cluster by reservation on the map. Null-council national
+  bases handled. 449 camps / ~213 councils / 52 states.
+
 ## 0.27.0 (minor) — 2026-07-19
 
 - `3cd2253` Extend the distance filter with **800 / 1000 / 1500 / 2000 mi** options (`RADII` in
