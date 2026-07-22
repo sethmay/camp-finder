@@ -49,6 +49,16 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   counted from `data/councils/*.json` at the reviewed rev, and the filled + remaining
   figures must sum to 235. Pre-set fixtures make the run tally and the tree total differ.
 
+- **On any scope change (a filter/field removed or added), sweep ALL user-facing copy for its
+  terms before merge** — a code cutover easily leaves marketing/UI copy advertising the old
+  behavior (the 0.28.0 registry cutover left "weeks/cost" claims in the hero, meta description,
+  and empty states, caught only at the 0.29.x visual check). Copy surfaces: `index.astro`
+  (hero), `Base.astro` (title + meta/OG description), `EmptyState.tsx` (no-query + no-results),
+  `about.astro`, `camps/[id].astro` (link-out callout), `Footer.astro`. Distinguish stale
+  *claims* ("the site filters by X") from intentional *link-out* copy (dates/fees live on the
+  council page — keep). The registry-only filter set of record is `Filters.tsx` (name, distance,
+  state, program, features) — validate copy against it, not memory.
+
 ## Testing
 
 - **Test the loop, not just the pure helper.** Network-driven wiring (per-item exception
