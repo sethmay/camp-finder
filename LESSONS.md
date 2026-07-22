@@ -131,3 +131,18 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   non-zero on failure (e.g. `campfinder validate` → `SystemExit(1)`), (2) it's reachable
   (console script / `__main__` wired), and (3) the deploy job `needs:` the gate job. GitHub
   Actions' default `bash -eo pipefail` makes newline-separated `run:` steps fail fast.
+
+## Frontend / map (MapLibre)
+
+- **`muteBasemap` (`web/src/lib/map.ts`) is the single basemap-muting mechanism.** Every map
+  surface (MapView, CampLocationMap) mutes by reusing it on `map.on("load")`; never
+  reintroduce the CSS `filter: saturate()` hack, and keep all basemap styling behind
+  `map.ts` (IMPLEMENTATION.md §1). When you add a MapLibre overlay layer, add its id to
+  `OVERLAY_LAYERS` in the same change — a guard listing only some overlay ids silently
+  protects a subset, which is worse than no guard.
+- **Data-driven overlay layers must partition the source with no gap.** Give every feature a
+  discriminator (`count`) and make the layer `filter`s exhaustive (`IS_SINGLE == 1` +
+  `IS_GROUP > 1`); a feature matching no layer renders on nothing and vanishes silently.
+  Wire click/hover per interactive layer id, not per source.
+- **Map a11y is a manual check.** No axe/pa11y in the web toolchain, so marker/label/selection
+  contrast is verified only by eye on the live GPU render against `tokens.css` ratios.

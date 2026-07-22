@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import { MAP_COLORS, mapStyle } from "@lib/map";
+import { MAP_COLORS, mapStyle, muteBasemap } from "@lib/map";
 
 // Single-location map for a camp detail page: one marker, fixed zoom, no clustering.
 // scrollZoom is off so the map never traps the page scroll; pan/zoom via the controls.
@@ -29,6 +29,7 @@ export default function CampLocationMap({
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     new maplibregl.Marker({ color: MAP_COLORS.markerActive }).setLngLat([lon, lat]).addTo(map);
+    map.on("load", () => muteBasemap(map));
     return () => {
       map.remove();
       mapRef.current = null;
@@ -39,7 +40,6 @@ export default function CampLocationMap({
     <div
       ref={containerRef}
       className="h-full w-full rounded-md"
-      style={{ filter: "saturate(0.62)" }}
       role="application"
       aria-label={`Map showing the location of ${name}`}
     />

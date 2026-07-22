@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.29.0 (minor) — 2026-07-21
+
+- `PENDING` Polish the search map (design §9): mute the vector basemap to the handoff palette
+  via `muteBasemap` (land/water/park/road/label) and drop the CSS saturation hack; render
+  single camps as brand dot pins and reservations as primary-green **count pills**.
+
 ## 0.28.0 (minor) — 2026-07-21
 
 - `40ccc2e` Re-source the site from the **Open Scout API** (`current/camps.json` v0.24.0):
