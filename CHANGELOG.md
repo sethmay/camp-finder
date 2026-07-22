@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.29.2 (patch) — 2026-07-21
 
-- `PENDING` Fix the map camera yanking back to a previously selected camp: fly only on a
+- `01b6a2f` Fix the map camera yanking back to a previously selected camp: fly only on a
   genuine new selection (ref-guarded, not on every filter/`ranked` change), and clear the
   selection on a background-map click (the map's only deselect).
 
