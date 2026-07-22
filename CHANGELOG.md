@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.28.0 (minor) — 2026-07-21
 
-- `PENDING` Re-source the site from the **Open Scout API** (`current/camps.json` v0.24.0):
+- `40ccc2e` Re-source the site from the **Open Scout API** (`current/camps.json` v0.24.0):
   new `web/scripts/build-data.mjs` refresh replaces the Python pipeline as the data source.
   Registry only — drop session/fee/date data and the weeks/cost filters + sessions table;
   the CTA points at each camp's durable `url`, feature/program labels come from the API vocab
