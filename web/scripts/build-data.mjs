@@ -19,7 +19,7 @@ const BASE = "https://sethmay.github.io/open-scout-api";
 // Pin the release we built against. `current/*.json` is served latest-only from Pages, so
 // we assert the version instead of an immutable URL; a mismatch fails the refresh loudly.
 // Switch to the jsDelivr-pinned release tarball once `v*` tags are published.
-const EXPECTED_VERSION = "0.24.0";
+const EXPECTED_VERSION = "0.27.0";
 
 // Program types this site surfaces. A camp is included if it offers at least one.
 // Anything outside this set (e.g. venturing, sea_scout) is skipped until the UI supports it.
@@ -115,6 +115,8 @@ async function main() {
       city: c.city,
       lat: c.lat,
       lon: c.lon,
+      july_high_f: c.july_high_f,
+      july_low_f: c.july_low_f,
       geo_precision: c.geo_precision,
       reservation: c.reservation,
       verified_at: c.verified_at,

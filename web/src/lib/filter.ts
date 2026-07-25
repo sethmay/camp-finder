@@ -24,6 +24,14 @@ export function rankCamps(
     if (cats.length && !programCategories(camp.program_types).some((c) => cats.includes(c)))
       continue;
 
+    // Temperature: drop camps whose known July high exceeds the cap. Unknown temps pass.
+    if (
+      criteria.maxJulyHigh !== undefined &&
+      camp.july_high_f !== null &&
+      camp.july_high_f > criteria.maxJulyHigh
+    )
+      continue;
+
     // Distance: when an origin is set, a camp needs coords and must be within radius.
     let distanceMiles: number | null = null;
     if (origin) {

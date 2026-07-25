@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.30.0 (minor) — 2026-07-25
+
+- `PENDING` Add a **Max July daytime high** filter (avg July temps per camp from Open Scout API
+  v0.27.0): a slider drops camps hotter than the cap (unknown temps pass), the typical July high
+  shows on result cards, and the July low–high range shows on detail pages. Data refreshed to
+  v0.27.0 (449 → 448 camps).
+
 ## 0.29.2 (patch) — 2026-07-21
 
 - `01b6a2f` Fix the map camera yanking back to a previously selected camp: fly only on a

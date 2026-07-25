@@ -53,11 +53,15 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   terms before merge** — a code cutover easily leaves marketing/UI copy advertising the old
   behavior (the 0.28.0 registry cutover left "weeks/cost" claims in the hero, meta description,
   and empty states, caught only at the 0.29.x visual check). Copy surfaces: `index.astro`
-  (hero), `Base.astro` (title + meta/OG description), `EmptyState.tsx` (no-query + no-results),
-  `about.astro`, `camps/[id].astro` (link-out callout), `Footer.astro`. Distinguish stale
+  (hero), `Base.astro` (title + meta/OG description), `EmptyState.tsx` (no-query AND the
+  no-results *recovery* copy — a new filter that can zero results must be named there),
+  `about.astro`, `camps/[id].astro` (link-out callout), `Footer.astro`, and `README.md`
+  §Status (hardcodes the pinned API version + camp count + filter list). Distinguish stale
   *claims* ("the site filters by X") from intentional *link-out* copy (dates/fees live on the
-  council page — keep). The registry-only filter set of record is `Filters.tsx` (name, distance,
-  state, program, features) — validate copy against it, not memory.
+  council page — keep). The filter set of record is `Filters.tsx` (name, distance, state,
+  July-temperature, program, features) — validate copy against it, not memory. A dataset
+  refresh (bumping `EXPECTED_VERSION` in `build-data.mjs`) is itself a copy change: it desyncs
+  every quoted version/count (README §Status; `about.astro` is safe — it reads `meta.json`).
 
 ## Testing
 
@@ -77,6 +81,11 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   reordered). Likewise, when a first-match table encodes precedence (`detect_from_html` returns
   on the first `_SIGNATURES` hit), assert a page carrying BOTH competing signals resolves to the
   intended winner — a singleton "signal A -> A" test leaves the ordering unprotected.
+
+- **An inclusive range/cap filter needs an at-the-boundary test.** `value > cap → drop` keeps a
+  camp exactly at the cap; a test with only over/under/unknown cases passes identically if `>`
+  silently flips to `>=`. Add a camp whose value equals the cap and assert it's kept — "make
+  every guard bite" applied to range filters.
 
 - **Rate-limit spacing must account for the request already made in the same call.** Don't
   skip the polite delay on the first crawled link — the homepage was just fetched from the
@@ -166,3 +175,23 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   marker circles: `queryRenderedFeatures(e.point, { layers: ["point","cluster","point-label","cluster-count"] })`.
   Omitting the text layers makes a click on a camp's name/count read as "empty map" and wrongly
   deselect. Same sync discipline as `OVERLAY_LAYERS`.
+
+## Frontend / a11y (manual — no axe/pa11y in the toolchain)
+
+- **Every interactive control carries `cf-tap`** (`global.css`: `min-height: 44px`, the handoff
+  hit-target floor) — inputs, selects, buttons, and especially `input[type=range]`, which renders
+  ~20px tall by default (the worst offender). A control without it is a visible outlier.
+- **A slider whose max is a sentinel ("105 = Any") needs `aria-valuetext`** mirroring the visible
+  label ("85°F" when capped, "Any" when off); assistive tech reads the raw `value`, so the
+  off-state (the default) otherwise announces as a real cap. Check the sentinel against the real
+  data range first — here `july_high_f` maxes at exactly 105 with a `>` guard, so "cap 105" == "no
+  cap" with no off-by-one; a mirroring filter (e.g. elevation) may not be so lucky.
+
+## Data / provenance
+
+- **A displayed field from a derived/joined upstream source needs its own attribution + label.**
+  The detail page's single `ProvenanceBadge` reads "Source: council page · verified <date>" — it
+  covers council facts only. Climate normals / elevation / geocodes joined upstream are NOT the
+  council's data and `verified_at` doesn't describe them: label derived stats as such ("Typical
+  July … avg", not "July") and credit the source in the same change. IMPLEMENTATION.md §13: no
+  orphan or mis-attributed facts.

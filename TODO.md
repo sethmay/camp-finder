@@ -20,9 +20,8 @@ Refreshing the committed dataset is a deliberate step (`npm run data`), not part
 ## Feature ideas
 
 - **Filter by camp elevation.** Altitude facet (e.g. "under 3,000 ft" vs alpine) — troops care
-  about acclimatization and heat. Needs an `elevation` field per camp from the API. See API asks.
-- **Filter by average summer temperature.** Screen for cooler/warmer camps — needs a climate
-  field (e.g. average July high) per camp from the API. See API asks.
+  about acclimatization and heat. Data now in the API (`elevation_ft`); ready to build — mirror
+  the July-high slider (`maxJulyHigh` in `filter.ts` / `Filters.tsx` / `searchParams.ts`).
 - **Former/non-council camping (parked).** Camps sold to orgs that still allow Scout camping;
   local/state/federal camping locations. Beyond current scope (BSA council camps) — park.
 
@@ -33,8 +32,6 @@ Tracked here because each unblocks a camp-finder feature:
 - **`features` in `current/camps.json`.** Currently only on the canonical `camps/{id}.json`, so
   `build-data.mjs` fetches all ~449 canonical files just for it. Adding it to the projection
   (mirrors `program_types`; vocab already published) removes that whole enrichment pass.
-- **`elevation` per camp** (derivable from lat/lon via a DEM lookup) → enables the elevation filter.
-- **Average summer temperature per camp** (climate field, joined by coordinates) → enables the temp filter.
 
 ## Crowdsourcing / corrections (parked)
 

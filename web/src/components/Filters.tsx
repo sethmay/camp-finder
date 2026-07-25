@@ -39,6 +39,7 @@ export default function Filters({
   const activeCount =
     (criteria.zip ? 1 : 0) +
     (criteria.state ? 1 : 0) +
+    (criteria.maxJulyHigh !== undefined ? 1 : 0) +
     features.length +
     categories.length +
     (text ? 1 : 0);
@@ -118,6 +119,23 @@ export default function Filters({
             </option>
           ))}
         </select>
+      </label>
+
+      <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
+        Max July daytime high: {criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"}
+        <input
+          type="range"
+          min={70}
+          max={105}
+          step={5}
+          value={criteria.maxJulyHigh ?? 105}
+          aria-valuetext={criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"}
+          onChange={(e) => {
+            const v = Number(e.target.value);
+            onPatch({ maxJulyHigh: v >= 105 ? undefined : v });
+          }}
+          className="cf-tap accent-primary"
+        />
       </label>
 
       <fieldset className="flex flex-col gap-2">
