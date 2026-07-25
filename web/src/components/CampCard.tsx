@@ -61,6 +61,7 @@ export default function CampCard({
           {camp.city ? `${camp.city}, ${camp.state}` : camp.state}
         </span>
         {distanceMiles !== null && <span>{Math.round(distanceMiles)} mi away</span>}
+        {camp.july_high_f !== null && <span>July avg ~{camp.july_high_f}°F</span>}
       </div>
 
       {camp.features.length > 0 && (

@@ -18,6 +18,8 @@ function camp(over: Partial<Camp> & Pick<Camp, "id" | "name" | "state">): Camp {
     city: null,
     lat: 45.5,
     lon: -122.6,
+    july_high_f: 80,
+    july_low_f: 55,
     geo_precision: "exact",
     reservation: null,
     verified_at: "2026-06-01",
@@ -66,6 +68,15 @@ describe("rankCamps", () => {
   it("restricts by text-matched ids when provided", () => {
     const r = rankCamps([near, far], { textIds: new Set(["wa-far"]) }, null);
     expect(r.map((x) => x.camp.id)).toEqual(["wa-far"]);
+  });
+
+  it("drops camps over the July-high cap but keeps unknown-temp camps", () => {
+    const hot = camp({ id: "hot", name: "Hot", state: "OR", july_high_f: 95 });
+    const edge = camp({ id: "edge", name: "Edge", state: "OR", july_high_f: 85 });
+    const cool = camp({ id: "cool", name: "Cool", state: "OR", july_high_f: 78 });
+    const unknown = camp({ id: "unk", name: "Unknown", state: "OR", july_high_f: null });
+    const r = rankCamps([hot, edge, cool, unknown], { maxJulyHigh: 85 }, null);
+    expect(new Set(r.map((x) => x.camp.id))).toEqual(new Set(["edge", "cool", "unk"]));
   });
 
   it("filters by program category with OR semantics across categories", () => {

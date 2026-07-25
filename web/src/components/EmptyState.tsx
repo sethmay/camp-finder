@@ -23,7 +23,7 @@ export default function EmptyState({
     <div className="rounded-md border border-dashed border-border bg-surface p-8 text-center">
       <SearchX size={32} className="mx-auto text-muted" aria-hidden="true" />
       <p className="mt-3 font-display text-h3 text-ink">No camps match those filters</p>
-      <p className="mt-1 text-sm text-muted">Try widening the distance, or clearing the state, program, and feature filters.</p>
+      <p className="mt-1 text-sm text-muted">Try widening the distance or the July temperature cap, or clearing the state, program, and feature filters.</p>
       {onClear && (
         <button
           type="button"

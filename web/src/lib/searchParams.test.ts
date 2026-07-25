@@ -7,6 +7,7 @@ const state: UiState = {
   criteria: {
     zip: "97201",
     radiusMiles: 150,
+    maxJulyHigh: 85,
     state: "OR",
     features: ["waterfront", "climbing"],
     categories: ["cub"],

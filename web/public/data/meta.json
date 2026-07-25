@@ -1,9 +1,9 @@
 {
-  "build_time": "2026-07-22T19:33:51.924Z",
+  "build_time": "2026-07-25T19:34:44.666Z",
   "source": "open-scout-api",
-  "source_version": "0.24.0",
+  "source_version": "0.27.0",
   "source_url": "https://sethmay.github.io/open-scout-api",
-  "camp_count": 449,
+  "camp_count": 448,
   "council_count": 213,
   "states_covered": [
     "AE",

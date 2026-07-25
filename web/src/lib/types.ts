@@ -34,6 +34,8 @@ export interface Camp {
   city: string | null;
   lat: number | null;
   lon: number | null;
+  july_high_f: number | null; // avg July daytime high (°F); null when unknown
+  july_low_f: number | null; // avg July overnight low (°F)
   geo_precision: GeoPrecision; // "approximate" = centroid-level (co-located / city-level)
   reservation: Reservation | null;
   verified_at: string; // ISO date the source was last confirmed
@@ -59,6 +61,8 @@ export interface RankedCamp {
 export interface Criteria {
   zip?: string;
   radiusMiles?: number;
+  /** Max avg July daytime high (°F); camps hotter than this are dropped (unknown temps pass). */
+  maxJulyHigh?: number;
   features?: string[];
   categories?: ProgramCategory[];
   state?: string;

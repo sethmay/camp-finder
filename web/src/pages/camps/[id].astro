@@ -83,6 +83,14 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
     {camp.summary && <p class="mt-6 text-body text-ink">{camp.summary}</p>}
 
     {
+      camp.july_high_f !== null && (
+        <p class="mt-4 text-sm text-muted">
+          Typical July: {camp.july_low_f !== null ? `${camp.july_low_f}–${camp.july_high_f}` : `${camp.july_high_f}`}°F avg — climate normals via Open Scout API
+        </p>
+      )
+    }
+
+    {
       camp.features.length > 0 && (
         <section class="mt-6">
           <h2 class="font-display text-h3 text-ink">Program &amp; features</h2>
