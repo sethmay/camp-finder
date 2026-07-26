@@ -2,6 +2,7 @@
 // (IMPLEMENTATION.md §8.4). Pure; unit-testable.
 
 import type { Criteria, ProgramCategory, SortKey } from "./types";
+import { FEATURE_FACETS } from "./format";
 
 export interface UiState {
   criteria: Omit<Criteria, "textIds">;
@@ -39,7 +40,7 @@ export function fromParams(p: URLSearchParams): UiState {
       radiusMiles: num(p.get("radius")),
       maxJulyHigh: num(p.get("maxtemp")),
       state: p.get("state") ?? undefined,
-      features: p.get("feat")?.split(",").filter(Boolean) ?? undefined,
+      features: p.get("feat")?.split(",").filter((f) => FEATURE_FACETS.includes(f)) ?? undefined,
       categories: (p.get("prog")?.split(",").filter(Boolean) as ProgramCategory[]) ?? undefined,
     },
   };

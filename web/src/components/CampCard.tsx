@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import type { RankedCamp } from "@lib/types";
 import { withBase } from "@lib/paths";
-import { programCategories, PROGRAM_CATEGORY_LABEL } from "@lib/format";
+import { orderFeatures, programCategories, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import FeatureChip from "./FeatureChip";
 import StaleBadge from "./StaleBadge";
 
@@ -19,6 +19,8 @@ export default function CampCard({
   onLeave?: () => void;
 }) {
   const { camp, distanceMiles } = ranked;
+  const sig = new Set(camp.features_signature);
+  const orderedFeatures = orderFeatures(camp.features, camp.features_signature);
   const extraChips = camp.features.length - MAX_CHIPS;
   const badgeCats = programCategories(camp.program_types).filter((c) => c !== "scouts_bsa");
   const operator =
@@ -66,8 +68,8 @@ export default function CampCard({
 
       {camp.features.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-1.5">
-          {camp.features.slice(0, MAX_CHIPS).map((f) => (
-            <FeatureChip key={f} feature={f} />
+          {orderedFeatures.slice(0, MAX_CHIPS).map((f) => (
+            <FeatureChip key={f} feature={f} signature={sig.has(f)} />
           ))}
           {extraChips > 0 && (
             <span className="inline-flex items-center rounded-pill border border-border bg-bg px-2 py-1 text-xs text-muted">

@@ -7,9 +7,10 @@
 // clean checkout with no network. Registry only: sessions, fees, dates, and availability
 // are intentionally absent (they stay on each council's own page, reached via `url`).
 //
-// The denormalized projection carries council join, durable `url`, reservation grouping,
-// geo precision, and honest freshness dates. `features` is not in the projection, so we
-// enrich each camp from its canonical entity file (v1/camps/<id>.json).
+// The denormalized projection carries council join, durable `url`, reservation grouping, geo
+// precision, freshness dates, and (since v0.35.0) camp `features`, `features_signature`, and
+// `features_verified_at` — so no canonical per-camp fetch is needed; we deliberately avoid it
+// because canonical `features[]` became object-shaped at 0.29.0.
 
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
@@ -19,7 +20,7 @@ const BASE = "https://sethmay.github.io/open-scout-api";
 // Pin the release we built against. `current/*.json` is served latest-only from Pages, so
 // we assert the version instead of an immutable URL; a mismatch fails the refresh loudly.
 // Switch to the jsDelivr-pinned release tarball once `v*` tags are published.
-const EXPECTED_VERSION = "0.27.0";
+const EXPECTED_VERSION = "0.35.0";
 
 // Program types this site surfaces. A camp is included if it offers at least one.
 // Anything outside this set (e.g. venturing, sea_scout) is skipped until the UI supports it.
@@ -39,34 +40,13 @@ async function getJSON(url) {
   return res.json();
 }
 
-// Bounded-concurrency map so we don't fire 449 requests at once.
-async function pool(items, limit, fn) {
-  const out = new Array(items.length);
-  let i = 0;
-  async function worker() {
-    while (i < items.length) {
-      const idx = i++;
-      out[idx] = await fn(items[idx], idx);
-    }
-  }
-  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
-  return out;
-}
-
-async function fetchFeatures(id) {
-  // Canonical entity: features live on the latest version. Tolerate a miss (empty features).
-  try {
-    const entity = await getJSON(`${BASE}/v1/camps/${id}.json`);
-    const v = entity.versions?.[entity.versions.length - 1];
-    return Array.isArray(v?.features) ? v.features : [];
-  } catch (err) {
-    console.warn(`  ! features unavailable for ${id}: ${err.message}`);
-    return [];
-  }
-}
-
 function vocabTerms(doc) {
-  return (doc.terms ?? []).map((t) => ({ code: t.code, label: t.label }));
+  return (doc.terms ?? []).map((t) => ({
+    code: t.code,
+    label: t.label,
+    category: t.category ?? null,
+    broader: t.broader ?? null,
+  }));
 }
 
 async function main() {
@@ -89,15 +69,10 @@ async function main() {
   const included = campsDoc.items.filter((c) =>
     (c.program_types ?? []).some((p) => SUPPORTED_PROGRAMS.has(p)),
   );
-  console.log(
-    `Camps: ${campsDoc.items.length} current -> ${included.length} in scope. ` +
-      `Enriching features from canonical entities...`,
-  );
-
-  const featureLists = await pool(included, 12, (c) => fetchFeatures(c.id));
+  console.log(`Camps: ${campsDoc.items.length} current -> ${included.length} in scope.`);
 
   const camps = included
-    .map((c, idx) => ({
+    .map((c) => ({
       id: c.id,
       name: c.name,
       camp_type: c.camp_type,
@@ -110,7 +85,9 @@ async function main() {
       website: c.website,
       summary: c.summary,
       program_types: c.program_types ?? [],
-      features: featureLists[idx],
+      features: c.features ?? [],
+      features_signature: c.features_signature ?? [],
+      features_verified_at: c.features_verified_at ?? null,
       state: c.state,
       city: c.city,
       lat: c.lat,

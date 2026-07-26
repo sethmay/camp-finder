@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.31.0 (minor) — 2026-07-26
+
+- `PENDING` Upgrade to Open Scout API **v0.35.0**: source camp `features` (+ `features_signature`,
+  `features_verified_at`) straight from the projection, dropping the per-camp canonical fetch;
+  rework the feature filter to curated broad facets that expand the new 121-term vocabulary
+  hierarchy (e.g. "aquatics" matches a camp listing only "kayaking"), with signature features
+  highlighted. Data refreshed to v0.35.0 (78 camp websites / 75 URLs repaired upstream).
+
 ## 0.30.0 (minor) — 2026-07-25
 
 - `3174226` Add a **Max July daytime high** filter (avg July temps per camp from Open Scout API

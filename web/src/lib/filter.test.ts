@@ -15,6 +15,8 @@ function camp(over: Partial<Camp> & Pick<Camp, "id" | "name" | "state">): Camp {
     summary: null,
     program_types: ["scouts_bsa_resident"],
     features: [],
+    features_signature: [],
+    features_verified_at: null,
     city: null,
     lat: 45.5,
     lon: -122.6,
@@ -58,6 +60,13 @@ describe("rankCamps", () => {
     const b = camp({ id: "or-b", name: "B", state: "OR", features: ["waterfront"] });
     const r = rankCamps([a, b], { features: ["waterfront", "climbing"] }, null);
     expect(r.map((x) => x.camp.id)).toEqual(["or-a"]);
+  });
+
+  it("expands broad facets to descendants (kayaking matches aquatics)", () => {
+    const kayak = camp({ id: "or-k", name: "K", state: "OR", features: ["kayaking"] });
+    const dry = camp({ id: "or-d", name: "D", state: "OR", features: ["archery"] });
+    const r = rankCamps([kayak, dry], { features: ["aquatics"] }, null);
+    expect(r.map((x) => x.camp.id)).toEqual(["or-k"]);
   });
 
   it("filters by state", () => {

@@ -4,7 +4,7 @@
 // program category, and features, and links out for schedules and fees.
 
 import { haversineMiles } from "./distance";
-import { programCategories } from "./format";
+import { expandFeatures, programCategories } from "./format";
 import type { Camp, Criteria, RankedCamp, SortKey } from "./types";
 import type { Centroid } from "./zip";
 
@@ -20,7 +20,10 @@ export function rankCamps(
   for (const camp of camps) {
     if (criteria.state && camp.state !== criteria.state) continue;
     if (criteria.textIds && !criteria.textIds.has(camp.id)) continue;
-    if (feats.length && !feats.every((f) => camp.features.includes(f))) continue;
+    if (feats.length) {
+      const expanded = expandFeatures(camp.features);
+      if (!feats.every((f) => expanded.has(f))) continue;
+    }
     if (cats.length && !programCategories(camp.program_types).some((c) => cats.includes(c)))
       continue;
 

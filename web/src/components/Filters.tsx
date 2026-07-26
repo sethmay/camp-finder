@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import type { ProgramCategory } from "@lib/types";
-import { ALL_FEATURE_CODES, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
+import { FEATURE_FACETS, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import type { UiState } from "@lib/searchParams";
 
 type CriteriaPatch = Partial<UiState["criteria"]>;
@@ -165,7 +165,7 @@ export default function Filters({
       <fieldset className="flex flex-col gap-2">
         <legend className="text-sm font-semibold text-ink">Features</legend>
         <div className="flex flex-wrap gap-1.5">
-          {ALL_FEATURE_CODES.map((f) => {
+          {FEATURE_FACETS.map((f) => {
             const on = features.includes(f);
             return (
               <button

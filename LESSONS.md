@@ -62,6 +62,12 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   July-temperature, program, features) — validate copy against it, not memory. A dataset
   refresh (bumping `EXPECTED_VERSION` in `build-data.mjs`) is itself a copy change: it desyncs
   every quoted version/count (README §Status; `about.astro` is safe — it reads `meta.json`).
+  `IMPLEMENTATION.md` §8.3 (filter predicates + the `Camp` shape) is a copy surface too — a
+  `types.ts` field add or a filter-semantics change (e.g. literal → expanded-superset) must
+  update it; it's the contract that "wins on data shape and behavior".
+- **Run project checks inside the feature worktree, not the main checkout.** `cd web && npm run
+  check` from repo root validates `main`, not your branch (tell-tale: a `0.30.0` vs `0.31.0`
+  version banner). Confirm the path/version before citing a green result.
 
 ## Testing
 
@@ -186,6 +192,11 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   off-state (the default) otherwise announces as a real cap. Check the sentinel against the real
   data range first — here `july_high_f` maxes at exactly 105 with a `>` guard, so "cap 105" == "no
   cap" with no off-by-one; a mirroring filter (e.g. elevation) may not be so lucky.
+- **A new visual chip/badge state needs a text carrier, not a `title`.** `title` on a
+  non-focusable `<span>` is invisible on touch, unreachable by keyboard, inconsistently announced —
+  so colour + `title` reduces to colour alone (WCAG 1.4.1). Put the qualifier in the accessible
+  name (`sr-only` suffix or `aria-label`) AND give a non-colour visual cue (the signature chip uses
+  a leading ★ + `sr-only " (signature feature)"` + a detail-page legend).
 
 ## Data / provenance
 
@@ -195,3 +206,31 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   council's data and `verified_at` doesn't describe them: label derived stats as such ("Typical
   July … avg", not "July") and credit the source in the same change. IMPLEMENTATION.md §13: no
   orphan or mis-attributed facts.
+
+## Frontend / feature facets & vocab (Open Scout API)
+
+- **`FEATURE_FACETS` (`format.ts`) is a deliberately curated subset of the open vocab, NOT
+  `vocab.features.map(code)`.** The vocab is large (121 terms) and grows; the filter shows ~15
+  recognizable broad facets. Invariants on any change: every facet code must exist in the emitted
+  `vocab.json` (else the chip shows a humanized fallback) and must match a non-empty camp set under
+  `expandFeatures`. Recompute per-facet counts from `camps.json` before curating — don't assume a
+  rollup: `category:"facility"` terms (`waterfront` 209, `dining_hall` 161) sit OUTSIDE the activity
+  hierarchy, so `aquatics` never subsumes `waterfront`.
+- **Filter by expanding the camp's features UPWARD, not the selection downward.**
+  `feats.every((f) => expandFeatures(camp.features).has(f))` keeps AND-across-facets and needs no
+  descendants map; guard with `if (feats.length)` so the default path allocates nothing. The
+  upstream `broader` graph is a graph, not a list — `expandFeatures` must tolerate cycles /
+  self-parents / missing parents (visited-Set guard), which needs a unit test (the graph is
+  re-fetched every `npm run data`).
+- **Narrowing the chip list orphans URL state.** `fromParams` must drop `feat=` values that aren't
+  facets (`.filter((f) => FEATURE_FACETS.includes(f))`), else a stale/hand-crafted code filters
+  invisibly (no chip pressed), clearable only via "Clear all" — violating §8.4 shareable-URL state.
+- **Prove a dataset refresh is non-regressive with a per-id diff of the OLD vs new committed
+  `camps.json`**, not a build + eyeball: `git show <base>:web/public/data/camps.json` + a `node -e`
+  set-compare. It caught the v0.35 refresh silently dropping literal `climbing`/`shooting_sports`
+  from 5 camps (recovered only via the new `broader` rollup) and confirms id-set stability + no new
+  nulls on repaired URLs. For a facet rework, also assert monotonicity: for every facet, the OLD
+  matching id-set ⊆ the new one (counts can rise while individual camps drop out).
+- **Shared card/detail display rules go in one exported `web/src/lib` helper.** Signature-first
+  ordering was implemented twice (`CampCard` Set+sort vs `[id].astro` inline comparator) before
+  being unified as `orderFeatures` — same class as the "keep pure logic in lib + test it" rule.
