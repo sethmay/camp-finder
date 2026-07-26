@@ -9,6 +9,8 @@ import vocabData from "../../public/data/vocab.json";
 interface Term {
   code: string;
   label: string;
+  broader?: string | null;
+  category?: string | null;
 }
 interface Vocab {
   features: Term[];
@@ -34,8 +36,51 @@ export const featureLabel = lookup(vocab.features);
 export const campTypeLabel = lookup(vocab.camp_types);
 export const programTypeLabel = lookup(vocab.program_types);
 
-/** Feature codes the API defines, in vocab order — drives the feature filter list. */
-export const ALL_FEATURE_CODES: string[] = vocab.features.map((t) => t.code);
+// Feature hierarchy: each code's broader ancestor chain (shallow). Lets a broad facet
+// (e.g. "aquatics") match a camp that lists only a descendant ("kayaking") — Open Scout API
+// §4 rule 2: expand broader before filtering.
+const FEATURE_BROADER = new Map(vocab.features.map((t) => [t.code, t.broader ?? null]));
+
+/** A set of the given feature codes plus every broader ancestor, so filters expand upward. */
+export function expandFeatures(codes: string[], broader: Map<string, string | null> = FEATURE_BROADER): Set<string> {
+  const out = new Set<string>();
+  for (const code of codes) {
+    let c: string | null = code;
+    while (c && !out.has(c)) {
+      out.add(c);
+      c = broader.get(c) ?? null;
+    }
+  }
+  return out;
+}
+
+/** Curated broad feature facets shown as filter chips — the 121-term vocab is far too large
+ *  to list. Several roll up descendants via expandFeatures (aquatics / shooting_sports /
+ *  climbing / mountain_biking / fishing); the rest match literally. Recognizable troop draws,
+ *  editorially ordered. Unknown/new vocab codes still render as camp chips, just not facets. */
+export const FEATURE_FACETS: string[] = [
+  "aquatics",
+  "waterfront",
+  "pool",
+  "shooting_sports",
+  "climbing",
+  "cope",
+  "high_adventure_option",
+  "older_scout_program",
+  "first_year_program",
+  "stem",
+  "horseback",
+  "mountain_biking",
+  "atv",
+  "scuba",
+  "dining_hall",
+];
+
+/** Feature codes ordered signature-first (stable within each group), for chip display. */
+export function orderFeatures(features: string[], signature: string[]): string[] {
+  const sig = new Set(signature);
+  return [...features].sort((a, b) => Number(sig.has(b)) - Number(sig.has(a)));
+}
 
 export const PROGRAM_CATEGORY_LABEL: Record<ProgramCategory, string> = {
   scouts_bsa: "Scouts BSA",

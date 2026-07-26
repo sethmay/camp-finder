@@ -10,6 +10,14 @@ and canonical `data/` tree were removed in 0.28.0; all data authoring, correctio
 scraping now happen upstream in [open-scout-api](https://github.com/sethmay/open-scout-api).
 Refreshing the committed dataset is a deliberate step (`npm run data`), not part of the build.
 
+## Tech debt
+
+- **Refresh the stale root `CLAUDE.md`.** It still documents the removed Python `pipeline/` +
+  `data/councils/` as source of truth and a five-way field-add sequence (`models.py` → JSON Schema
+  → `types.ts` → `build.py` → frontend). Reality since 0.28.0 is registry-only: a field add goes
+  `build-data.mjs` → `types.ts` → frontend. Flagged by two code reviews as misrouting; refresh the
+  Architecture / Conventions / "adding a field" sections.
+
 ## Map & UI polish (active) — live at https://sethmay.github.io/camp-finder/
 
 - **Verify the map on the live site.** Headless software-WebGL paints the basemap but not the
@@ -24,14 +32,6 @@ Refreshing the committed dataset is a deliberate step (`npm run data`), not part
   the July-high slider (`maxJulyHigh` in `filter.ts` / `Filters.tsx` / `searchParams.ts`).
 - **Former/non-council camping (parked).** Camps sold to orgs that still allow Scout camping;
   local/state/federal camping locations. Beyond current scope (BSA council camps) — park.
-
-## Open Scout API asks (upstream, not in this repo)
-
-Tracked here because each unblocks a camp-finder feature:
-
-- **`features` in `current/camps.json`.** Currently only on the canonical `camps/{id}.json`, so
-  `build-data.mjs` fetches all ~449 canonical files just for it. Adding it to the projection
-  (mirrors `program_types`; vocab already published) removes that whole enrichment pass.
 
 ## Crowdsourcing / corrections (parked)
 

@@ -1,128 +1,836 @@
 {
   "features": [
     {
-      "code": "dining_hall",
-      "label": "Dining Hall"
+      "code": "accessible_facilities",
+      "label": "Accessible Facilities",
+      "category": "accommodation",
+      "broader": null
     },
     {
-      "code": "waterfront",
-      "label": "Waterfront"
+      "code": "adirondack_shelters",
+      "label": "Adirondack Shelters",
+      "category": "accommodation",
+      "broader": null
     },
     {
-      "code": "pool",
-      "label": "Swimming Pool"
+      "code": "air_conditioning",
+      "label": "Air Conditioning",
+      "category": "accommodation",
+      "broader": null
     },
     {
-      "code": "shooting_sports",
-      "label": "Shooting Sports"
+      "code": "alpine_tower",
+      "label": "Alpine Tower",
+      "category": "activity",
+      "broader": "climbing"
     },
     {
-      "code": "climbing",
-      "label": "Climbing"
+      "code": "amphitheater",
+      "label": "Amphitheater",
+      "category": "facility",
+      "broader": null
     },
     {
-      "code": "horseback",
-      "label": "Horseback Riding"
+      "code": "aquatics",
+      "label": "Aquatics",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "archery",
+      "label": "Archery",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "astronomy",
+      "label": "Astronomy",
+      "category": "subject",
+      "broader": null
     },
     {
       "code": "atv",
-      "label": "ATV Program"
+      "label": "ATV Program",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "automotive",
+      "label": "Automotive",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "backpacking",
+      "label": "Backpacking",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "bathhouse",
+      "label": "Bathhouse",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "bb_guns",
+      "label": "BB Guns",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "bike_park",
+      "label": "Bike Park",
+      "category": "activity",
+      "broader": "mountain_biking"
+    },
+    {
+      "code": "black_powder",
+      "label": "Black Powder",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "blacksmithing",
+      "label": "Blacksmithing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "boat_access",
+      "label": "Boat Access Only",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "bouldering",
+      "label": "Bouldering",
+      "category": "activity",
+      "broader": "climbing"
+    },
+    {
+      "code": "building_wifi",
+      "label": "Building Wi-Fi",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "cabins",
+      "label": "Cabins",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "campsite_electricity",
+      "label": "Campsite Electricity",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "campsite_wifi",
+      "label": "Campsite Wi-Fi",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "canoeing",
+      "label": "Canoeing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "caving",
+      "label": "Caving",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "chalkball",
+      "label": "Chalkball",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "chapel",
+      "label": "Chapel",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "cit_program",
+      "label": "Counsellor-in-Training",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "climbing",
+      "label": "Climbing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "climbing_tower",
+      "label": "Climbing Tower",
+      "category": "activity",
+      "broader": "climbing"
+    },
+    {
+      "code": "conservation_project",
+      "label": "Conservation Project",
+      "category": "program_model",
+      "broader": null
     },
     {
       "code": "cope",
-      "label": "COPE"
+      "label": "COPE",
+      "category": "activity",
+      "broader": null
     },
     {
-      "code": "older_scout_program",
-      "label": "Older-Scout Program"
+      "code": "coral_restoration",
+      "label": "Coral Restoration",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "cowboy_action_shooting",
+      "label": "Cowboy Action Shooting",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "cross_country_skiing",
+      "label": "Cross-Country Skiing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "digital_media",
+      "label": "Digital Media",
+      "category": "subject",
+      "broader": null
+    },
+    {
+      "code": "dining_hall",
+      "label": "Dining Hall",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "disc_golf",
+      "label": "Disc Golf",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "first_year_program",
+      "label": "First-Year Camper Program",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "fishing",
+      "label": "Fishing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "floating_obstacle_course",
+      "label": "Floating Obstacle Course",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "flush_toilets",
+      "label": "Flush Toilets",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "fossil_dig",
+      "label": "Fossil Dig",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "gaga_ball",
+      "label": "Gaga Ball",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "geocaching",
+      "label": "Geocaching",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "gold_panning",
+      "label": "Gold Panning",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "hammock_camping",
+      "label": "Hammock Camping",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "handicraft",
+      "label": "Handicraft",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "health_lodge",
+      "label": "Health Lodge",
+      "category": "facility",
+      "broader": null
     },
     {
       "code": "high_adventure_option",
-      "label": "High-Adventure Option"
+      "label": "High-Adventure Option",
+      "category": "program_model",
+      "broader": null
     },
     {
-      "code": "stem",
-      "label": "STEM"
+      "code": "hiking",
+      "label": "Hiking",
+      "category": "activity",
+      "broader": null
     },
     {
-      "code": "scuba",
-      "label": "SCUBA"
+      "code": "horseback",
+      "label": "Horseback Riding",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "hunter_safety",
+      "label": "Hunter Safety",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "ice_fishing",
+      "label": "Ice Fishing",
+      "category": "activity",
+      "broader": "fishing"
+    },
+    {
+      "code": "ice_skating",
+      "label": "Ice Skating",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "kayaking",
+      "label": "Kayaking",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "knife_throwing",
+      "label": "Knife Throwing",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "land_sailing",
+      "label": "Land Sailing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "leadership_training",
+      "label": "Leadership Training",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "living_history",
+      "label": "Living History",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "maple_sugaring",
+      "label": "Maple Sugaring",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "marine_science",
+      "label": "Marine Science",
+      "category": "subject",
+      "broader": null
+    },
+    {
+      "code": "motorboating",
+      "label": "Motorboating",
+      "category": "activity",
+      "broader": "aquatics"
     },
     {
       "code": "mountain_biking",
-      "label": "Mountain Biking"
+      "label": "Mountain Biking",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "mountain_boarding",
+      "label": "Mountain Boarding",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "mountaineering",
+      "label": "Mountaineering",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "museum",
+      "label": "Museum",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "nature_center",
+      "label": "Nature Center",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "nature_study",
+      "label": "Nature Study",
+      "category": "subject",
+      "broader": null
+    },
+    {
+      "code": "observatory",
+      "label": "Observatory",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "older_scout_program",
+      "label": "Older-Scout Program",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "orienteering",
+      "label": "Orienteering",
+      "category": "activity",
+      "broader": "scoutcraft"
+    },
+    {
+      "code": "outpost_overnight",
+      "label": "Outpost Overnight",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "packrafting",
+      "label": "Packrafting",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "paddleboarding",
+      "label": "Paddleboarding",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "patrol_cooking",
+      "label": "Patrol Cooking",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "pavilion",
+      "label": "Pavilion",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "performing_arts",
+      "label": "Performing Arts",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "personal_watercraft",
+      "label": "Personal Watercraft",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "pioneering",
+      "label": "Pioneering",
+      "category": "activity",
+      "broader": "scoutcraft"
+    },
+    {
+      "code": "pistol",
+      "label": "Pistol",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "platform_tents",
+      "label": "Platform Tents",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "pool",
+      "label": "Swimming Pool",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "provisional_attendance",
+      "label": "Provisional Attendance",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "rappelling",
+      "label": "Rappelling",
+      "category": "activity",
+      "broader": "climbing"
+    },
+    {
+      "code": "rifle",
+      "label": "Rifle",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "river_tubing",
+      "label": "River Tubing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "rock_climbing",
+      "label": "Natural Rock Climbing",
+      "category": "activity",
+      "broader": "climbing"
+    },
+    {
+      "code": "rocketry",
+      "label": "Rocketry",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "rowing",
+      "label": "Rowing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "rv_sites",
+      "label": "RV Sites",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "sailing",
+      "label": "Sailing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "sandboarding",
+      "label": "Sandboarding",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "scoutcraft",
+      "label": "Scoutcraft",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "scuba",
+      "label": "SCUBA",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "shooting_sports",
+      "label": "Shooting Sports",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "shotgun",
+      "label": "Shotgun",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "sledding",
+      "label": "Sledding",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "slingshot",
+      "label": "Slingshot",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "snorkeling",
+      "label": "Snorkelling",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "snowshoeing",
+      "label": "Snowshoeing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "special_needs_program",
+      "label": "Special-Needs Program",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "sports_field",
+      "label": "Sports Field",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "stem",
+      "label": "STEM",
+      "category": "subject",
+      "broader": null
+    },
+    {
+      "code": "storm_shelter",
+      "label": "Storm Shelter",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "surfing",
+      "label": "Surfing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "swimming",
+      "label": "Swimming",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "themed_lodging",
+      "label": "Themed Lodging",
+      "category": "accommodation",
+      "broader": null
+    },
+    {
+      "code": "tomahawk_throwing",
+      "label": "Tomahawk Throwing",
+      "category": "activity",
+      "broader": "shooting_sports"
+    },
+    {
+      "code": "trading_post",
+      "label": "Trading Post",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "water_blob",
+      "label": "Water Blob",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "water_skiing",
+      "label": "Water Skiing",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "water_slide",
+      "label": "Water Slide",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "water_trampoline",
+      "label": "Water Trampoline",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "waterfront",
+      "label": "Waterfront",
+      "category": "facility",
+      "broader": null
+    },
+    {
+      "code": "welding",
+      "label": "Welding",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "whitewater_rafting",
+      "label": "Whitewater Rafting",
+      "category": "activity",
+      "broader": "aquatics"
+    },
+    {
+      "code": "wilderness_survival",
+      "label": "Wilderness Survival",
+      "category": "activity",
+      "broader": "scoutcraft"
+    },
+    {
+      "code": "wildlife_viewing",
+      "label": "Wildlife Viewing",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "winter_camping",
+      "label": "Winter Camping",
+      "category": "program_model",
+      "broader": null
+    },
+    {
+      "code": "woodworking",
+      "label": "Woodworking",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "zip_line",
+      "label": "Zip Line",
+      "category": "activity",
+      "broader": null
     }
   ],
   "program_types": [
     {
       "code": "scouts_bsa_resident",
-      "label": "Scouts BSA Resident Camp"
+      "label": "Scouts BSA Resident Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "cub_resident",
-      "label": "Cub Scout Resident Camp"
+      "label": "Cub Scout Resident Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "cub_day",
-      "label": "Cub Scout Day Camp"
+      "label": "Cub Scout Day Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "webelos",
-      "label": "Webelos Camp"
+      "label": "Webelos Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "high_adventure",
-      "label": "High Adventure"
+      "label": "High Adventure",
+      "category": null,
+      "broader": null
     },
     {
       "code": "short_term_camping",
-      "label": "Short-Term Camping"
+      "label": "Short-Term Camping",
+      "category": null,
+      "broader": null
     },
     {
       "code": "venturing",
-      "label": "Venturing"
+      "label": "Venturing",
+      "category": null,
+      "broader": null
     },
     {
       "code": "sea_scout",
-      "label": "Sea Scout"
+      "label": "Sea Scout",
+      "category": null,
+      "broader": null
     },
     {
       "code": "family_camping",
-      "label": "Family Camping"
+      "label": "Family Camping",
+      "category": null,
+      "broader": null
     },
     {
       "code": "training",
-      "label": "Training"
+      "label": "Training",
+      "category": null,
+      "broader": null
     }
   ],
   "camp_types": [
     {
       "code": "reservation",
-      "label": "Reservation"
+      "label": "Reservation",
+      "category": null,
+      "broader": null
     },
     {
       "code": "resident_camp",
-      "label": "Resident Camp"
+      "label": "Resident Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "high_adventure_base",
-      "label": "High-Adventure Base"
+      "label": "High-Adventure Base",
+      "category": null,
+      "broader": null
     },
     {
       "code": "short_term_camp",
-      "label": "Short-Term Camp"
+      "label": "Short-Term Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "day_camp",
-      "label": "Day Camp"
+      "label": "Day Camp",
+      "category": null,
+      "broader": null
     },
     {
       "code": "program_center",
-      "label": "Program Center"
+      "label": "Program Center",
+      "category": null,
+      "broader": null
     },
     {
       "code": "other",
-      "label": "Other"
+      "label": "Other",
+      "category": null,
+      "broader": null
     }
   ]
 }

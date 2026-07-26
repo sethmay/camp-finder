@@ -409,7 +409,7 @@ against `web/src/lib/types.ts`, and `meta.json` counts match `data/`.
   - **weeks/date range**: camp has ≥1 session overlapping the selected range;
   - **cost**: min `fee_youth` across sessions ≤ `maxCost` (camps with all-null fees are
     included but visually flagged "fee unknown");
-  - **features**: camp `features ⊇` selected set;
+  - **features**: camp features **expanded up the vocab `broader` hierarchy** (`expandFeatures`) ⊇ the selected facet set — so a camp listing only `kayaking` matches the `aquatics` facet. The filter chips (`FEATURE_FACETS`) are a curated ~15-code **facet subset** of the 121-term open vocab, not the whole vocab. `features_signature` (headline draws) and `features_verified_at` (survey date) are display-only, never filter inputs;
   - **state**, **text** (MiniSearch over name + council).
   Returns camps annotated with computed `distanceMiles` + `nextSession` for display/sort.
 - Staleness rule: a session whose `year < currentSummerYear` is hidden; a camp whose

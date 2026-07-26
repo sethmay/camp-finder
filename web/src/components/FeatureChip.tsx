@@ -45,11 +45,24 @@ function FeatureIcon({ feature }: { feature: string }) {
   return <Icon size={14} aria-hidden="true" />;
 }
 
-export default function FeatureChip({ feature }: { feature: string }) {
+export default function FeatureChip({
+  feature,
+  signature = false,
+}: {
+  feature: string;
+  signature?: boolean;
+}) {
+  const tone = signature
+    ? "border-primary bg-surface text-primary"
+    : "border-border bg-bg text-ink";
   return (
-    <span className="inline-flex items-center gap-1 rounded-pill border border-border bg-bg px-2 py-1 text-xs font-medium text-ink">
+    <span
+      className={`inline-flex items-center gap-1 rounded-pill border px-2 py-1 text-xs font-medium ${tone}`}
+    >
+      {signature && <span aria-hidden="true">★</span>}
       <FeatureIcon feature={feature} />
       {featureLabel(feature)}
+      {signature && <span className="sr-only"> (signature feature)</span>}
     </span>
   );
 }

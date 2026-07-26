@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { featureLabel, isStale, programCategories } from "./format";
+import { expandFeatures, featureLabel, isStale, orderFeatures, programCategories } from "./format";
 
 describe("isStale", () => {
   const now = new Date("2026-07-17");
@@ -34,5 +34,34 @@ describe("programCategories", () => {
   it("ignores unknown program types and empty input", () => {
     expect(programCategories(["nonsense"])).toEqual([]);
     expect(programCategories([])).toEqual([]);
+  });
+});
+
+describe("expandFeatures", () => {
+  const g = new Map<string, string | null>([
+    ["kayaking", "aquatics"],
+    ["ice_fishing", "fishing"],
+    ["fishing", "aquatics"],
+    ["aquatics", null],
+    ["loop_a", "loop_b"],
+    ["loop_b", "loop_a"],
+  ]);
+  it("rolls a code up its full broader chain to the root", () => {
+    expect([...expandFeatures(["ice_fishing"], g)].sort()).toEqual(["aquatics", "fishing", "ice_fishing"]);
+  });
+  it("returns an unknown code as just itself", () => {
+    expect([...expandFeatures(["zip_line"], g)]).toEqual(["zip_line"]);
+  });
+  it("terminates on a cycle instead of looping forever", () => {
+    expect(new Set(expandFeatures(["loop_a"], g))).toEqual(new Set(["loop_a", "loop_b"]));
+  });
+  it("dedupes a shared ancestor across inputs", () => {
+    expect([...expandFeatures(["kayaking", "fishing"], g)].sort()).toEqual(["aquatics", "fishing", "kayaking"]);
+  });
+});
+
+describe("orderFeatures", () => {
+  it("puts signature features first, preserving order within each group", () => {
+    expect(orderFeatures(["a", "b", "c", "d"], ["b", "d"])).toEqual(["b", "d", "a", "c"]);
   });
 });

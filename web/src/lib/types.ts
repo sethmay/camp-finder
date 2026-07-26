@@ -30,6 +30,8 @@ export interface Camp {
   summary: string | null; // evergreen prose; null when none on record
   program_types: string[];
   features: string[]; // open vocab; labels resolved via vocab.json
+  features_signature: string[]; // headline-draw codes (subset of features); badges, not filtering
+  features_verified_at: string | null; // survey date; null = never surveyed (don't imply "none")
   state: string | null;
   city: string | null;
   lat: number | null;
