@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.31.3 (patch) — 2026-07-26
+
+- `PENDING` Update the Open Scout API pin to **v0.38.0** and refresh committed data (no schema
+  change): feature coverage 294 → 366 camps, +7 new feature vocab codes, +40 signature markers;
+  verified non-regressive (stable 448 ids, no camp lost a feature, every facet grew).
+
 ## 0.31.2 (patch) — 2026-07-26
 
 - `8e0cd54` Rename the July filter label from "Max July daytime high" to "Avg July daytime temp".

@@ -37,6 +37,12 @@
       "broader": null
     },
     {
+      "code": "archaeology",
+      "label": "Archaeology",
+      "category": "subject",
+      "broader": null
+    },
+    {
       "code": "archery",
       "label": "Archery",
       "category": "activity",
@@ -112,7 +118,7 @@
       "code": "building_wifi",
       "label": "Building Wi-Fi",
       "category": "accommodation",
-      "broader": null
+      "broader": "wifi"
     },
     {
       "code": "cabins",
@@ -130,7 +136,7 @@
       "code": "campsite_wifi",
       "label": "Campsite Wi-Fi",
       "category": "accommodation",
-      "broader": null
+      "broader": "wifi"
     },
     {
       "code": "canoeing",
@@ -223,6 +229,12 @@
       "broader": null
     },
     {
+      "code": "escape_room",
+      "label": "Escape Room",
+      "category": "activity",
+      "broader": null
+    },
+    {
       "code": "first_year_program",
       "label": "First-Year Camper Program",
       "category": "program_model",
@@ -265,8 +277,20 @@
       "broader": null
     },
     {
+      "code": "giant_swing",
+      "label": "Giant Swing",
+      "category": "activity",
+      "broader": "cope"
+    },
+    {
       "code": "gold_panning",
       "label": "Gold Panning",
+      "category": "activity",
+      "broader": null
+    },
+    {
+      "code": "golf",
+      "label": "Golf",
       "category": "activity",
       "broader": null
     },
@@ -353,6 +377,12 @@
       "label": "Living History",
       "category": "activity",
       "broader": null
+    },
+    {
+      "code": "lumberjack",
+      "label": "Lumberjack Sports",
+      "category": "activity",
+      "broader": "scoutcraft"
     },
     {
       "code": "maple_sugaring",
@@ -649,6 +679,12 @@
       "broader": "shooting_sports"
     },
     {
+      "code": "trade_skills",
+      "label": "Trade Skills",
+      "category": "activity",
+      "broader": null
+    },
+    {
       "code": "trading_post",
       "label": "Trading Post",
       "category": "facility",
@@ -695,6 +731,12 @@
       "label": "Whitewater Rafting",
       "category": "activity",
       "broader": "aquatics"
+    },
+    {
+      "code": "wifi",
+      "label": "Wi-Fi",
+      "category": "accommodation",
+      "broader": null
     },
     {
       "code": "wilderness_survival",
