@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.31.2 (patch) — 2026-07-26
 
-- `PENDING` Rename the July filter label from "Max July daytime high" to "Avg July daytime temp".
+- `8e0cd54` Rename the July filter label from "Max July daytime high" to "Avg July daytime temp".
 
 ## 0.31.1 (patch) — 2026-07-26
 
