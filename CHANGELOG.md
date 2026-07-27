@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.31.1 (patch) — 2026-07-26
 
-- `PENDING` Refresh the stale root `CLAUDE.md` for the registry-only architecture: it still
+- `d9c16eb` Refresh the stale root `CLAUDE.md` for the registry-only architecture: it still
   described the removed Python `pipeline/` + `data/councils/` and a five-way field-add sequence.
   Now documents the Open Scout API → `build-data.mjs` → `types.ts` → frontend flow, the current
   filters, and marks IMPLEMENTATION.md's pre-cutover pipeline / §8.3 sections as historical (a
