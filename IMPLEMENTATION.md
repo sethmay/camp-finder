@@ -5,6 +5,14 @@
 > rationale; `DESIGN_BRIEF.md` is the input for visual design. Where this doc and the
 > design package disagree on layout, the design package wins; where they disagree on
 > data shape or behavior, this doc wins.
+>
+> **⚠ Historical (pre-0.28.0).** This spec predates the registry cutover. The Python
+> `pipeline/`, canonical `data/`, scrapers, and the §12 build order it describes were
+> **removed in 0.28.0** — camp data is now the Open Scout API via `web/scripts/build-data.mjs`
+> (see `CLAUDE.md`). §8.3's `filterCamps` / weeks / cost / `nextSession` filter contract is
+> superseded by `rankCamps` in `web/src/lib/filter.ts` + `Criteria` in `web/src/lib/types.ts`
+> (§8.3's features/vocab rules are still current). The static-site / no-backend / disclaimer
+> invariants and the design/UX intent still hold.
 
 ---
 

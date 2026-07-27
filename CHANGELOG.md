@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.31.1 (patch) — 2026-07-26
+
+- `PENDING` Refresh the stale root `CLAUDE.md` for the registry-only architecture: it still
+  described the removed Python `pipeline/` + `data/councils/` and a five-way field-add sequence.
+  Now documents the Open Scout API → `build-data.mjs` → `types.ts` → frontend flow, the current
+  filters, and marks IMPLEMENTATION.md's pre-cutover pipeline / §8.3 sections as historical (a
+  pointer in `CLAUDE.md` plus a ⚠ banner atop `IMPLEMENTATION.md`).
+
 ## 0.31.0 (minor) — 2026-07-26
 
 - `26ac1bf` Upgrade to Open Scout API **v0.35.0**: source camp `features` (+ `features_signature`,
