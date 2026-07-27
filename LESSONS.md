@@ -217,12 +217,17 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 ## Frontend / feature facets & vocab (Open Scout API)
 
 - **`FEATURE_FACETS` (`format.ts`) is a deliberately curated subset of the open vocab, NOT
-  `vocab.features.map(code)`.** The vocab is large (121 terms) and grows; the filter shows ~15
-  recognizable broad facets. Invariants on any change: every facet code must exist in the emitted
+  `vocab.features.map(code)`.** The vocab is large (128 terms) and grows; the filter shows ~20
+  recognizable broad facets, rendered under category subheadings (see below). Invariants on any change: every facet code must exist in the emitted
   `vocab.json` (else the chip shows a humanized fallback) and must match a non-empty camp set under
   `expandFeatures`. Recompute per-facet counts from `camps.json` before curating — don't assume a
   rollup: `category:"facility"` terms (`waterfront` 209, `dining_hall` 161) sit OUTSIDE the activity
   hierarchy, so `aquatics` never subsumes `waterfront`.
+- **The Features filter groups facets by each term's vocab `category`** (`FEATURE_FACET_GROUPS`,
+  `format.ts`): `activity` → Activities, `subject` + `program_model` → Programs & audience,
+  `facility` + `accommodation` → Camp facilities & lodging. Adding a facet whose category is not
+  mapped in `FACET_GROUP_BY_CATEGORY` drops it into a trailing "More" bucket — the partition test
+  in `format.test.ts` fails loudly if that happens, so map new categories there when the vocab grows.
 - **Filter by expanding the camp's features UPWARD, not the selection downward.**
   `feats.every((f) => expandFeatures(camp.features).has(f))` keeps AND-across-facets and needs no
   descendants map; guard with `if (feats.length)` so the default path allocates nothing. The
