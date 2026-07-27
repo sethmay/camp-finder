@@ -2,6 +2,16 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.32.1 (patch) — 2026-07-27
+
+- `PENDING` Update the Open Scout API pin to **v0.46.1** and refresh committed data (no schema
+  change): 6 camps corrected upstream from council-page surveys. Camp Baker drops the unsourced
+  `mountain_biking`/`pool` (an LLM guess) and gains `orienteering`/`pioneering`/`wilderness_survival`;
+  Camp Parsons gains its ATV program (signature) + 10 features from its program page (11 → 22);
+  Baldwin/Sheppard/Melakwa/Fire Mountain shed unsupported `cope`/`stem` codes; Melakwa and Fire
+  Mountain also get repaired council URLs. Verified per-id against the upstream changelog — 6 camps
+  changed, no camp added/removed, vocab unchanged (128 terms).
+
 ## 0.32.0 (minor) — 2026-07-27
 
 - `e386f09` Add five feature filter facets — **Handicraft**, **Nature Study**, **Provisional

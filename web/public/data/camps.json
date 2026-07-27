@@ -13988,12 +13988,12 @@
       "health_lodge",
       "kayaking",
       "motorboating",
-      "mountain_biking",
       "nature_center",
       "nature_study",
       "older_scout_program",
+      "orienteering",
+      "pioneering",
       "platform_tents",
-      "pool",
       "rappelling",
       "rifle",
       "sailing",
@@ -14001,12 +14001,13 @@
       "scuba",
       "swimming",
       "water_skiing",
-      "waterfront"
+      "waterfront",
+      "wilderness_survival"
     ],
     "features_signature": [
       "sandboarding"
     ],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "OR",
     "city": "Florence",
     "lat": 44.0021,
@@ -14034,7 +14035,6 @@
       "scouts_bsa_resident"
     ],
     "features": [
-      "cope",
       "dining_hall",
       "fishing",
       "high_adventure_option",
@@ -14046,14 +14046,13 @@
       "provisional_attendance",
       "rock_climbing",
       "shooting_sports",
-      "stem",
       "waterfront",
       "whitewater_rafting"
     ],
     "features_signature": [
       "rock_climbing"
     ],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "OR",
     "city": "Sandy",
     "lat": 45.3712,
@@ -14171,15 +14170,14 @@
     "council_name": "Pacific Crest Council",
     "council_website": "https://www.otcbsa.org/",
     "council_number": 697,
-    "url": "https://www.otcbsa.org/camp-melakwa",
-    "website": "https://www.otcbsa.org/camp-melakwa",
+    "url": "https://pccscouting.org/camping/",
+    "website": "https://pccscouting.org/camping/",
     "summary": "High-Cascades resident camp set at elevation, offering mountain hiking, COPE, and climbing, plus a waterfront, dining hall, and programming for older Scouts including high-adventure options.",
     "program_types": [
       "scouts_bsa_resident"
     ],
     "features": [
       "aquatics",
-      "cope",
       "dining_hall",
       "high_adventure_option",
       "mountaineering",
@@ -14189,7 +14187,7 @@
       "waterfront"
     ],
     "features_signature": [],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "OR",
     "city": "McKenzie Bridge",
     "lat": 44.1783,
@@ -18797,21 +18795,33 @@
     ],
     "features": [
       "archery",
+      "atv",
+      "bouldering",
       "canoeing",
       "climbing_tower",
       "dining_hall",
+      "first_year_program",
       "handicraft",
       "high_adventure_option",
+      "hiking",
+      "kayaking",
+      "museum",
+      "nature_study",
       "older_scout_program",
+      "rappelling",
       "rifle",
       "sailing",
+      "scoutcraft",
+      "scuba",
+      "snorkeling",
       "swimming",
       "waterfront"
     ],
     "features_signature": [
+      "atv",
       "waterfront"
     ],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "WA",
     "city": "Brinnon",
     "lat": 47.6793,
@@ -18882,16 +18892,14 @@
       "bathhouse",
       "cabins",
       "climbing",
-      "cope",
       "cross_country_skiing",
       "dining_hall",
       "nature_study",
       "shooting_sports",
-      "sledding",
-      "stem"
+      "sledding"
     ],
     "features_signature": [],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "WA",
     "city": "Enumclaw",
     "lat": 47.0421,
@@ -18992,8 +19000,8 @@
     "council_name": "Mount Baker Council",
     "council_website": "https://www.mountbakerbsa.org/",
     "council_number": 606,
-    "url": "https://www.mountbakerbsa.org/fire-mountain",
-    "website": "https://www.mountbakerbsa.org/fire-mountain",
+    "url": "https://mountbakerscouting.org/firemountain/",
+    "website": "https://mountbakerscouting.org/firemountain/",
     "summary": "Resident camp in the North Cascades foothills near Mount Vernon, Washington, featuring a strong first-year program and mountain biking trails, plus a dining hall, waterfront, shooting sports, climbing, COPE, and STEM offerings.",
     "program_types": [
       "scouts_bsa_resident"
@@ -19011,13 +19019,12 @@
       "paddleboarding",
       "pavilion",
       "shooting_sports",
-      "stem",
       "swimming",
       "waterfront",
       "zip_line"
     ],
     "features_signature": [],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-07-27",
     "state": "WA",
     "city": "Mount Vernon",
     "lat": 48.4512,
