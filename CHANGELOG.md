@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.32.1 (patch) — 2026-07-27
 
-- `PENDING` Update the Open Scout API pin to **v0.46.1** and refresh committed data (no schema
+- `e0d3bb3` Update the Open Scout API pin to **v0.46.1** and refresh committed data (no schema
   change): 6 camps corrected upstream from council-page surveys. Camp Baker drops the unsourced
   `mountain_biking`/`pool` (an LLM guess) and gains `orienteering`/`pioneering`/`wilderness_survival`;
   Camp Parsons gains its ATV program (signature) + 10 features from its program page (11 → 22);
