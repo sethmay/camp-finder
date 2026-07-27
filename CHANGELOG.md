@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.31.3 (patch) — 2026-07-26
 
-- `PENDING` Update the Open Scout API pin to **v0.38.0** and refresh committed data (no schema
+- `c5491f2` Update the Open Scout API pin to **v0.38.0** and refresh committed data (no schema
   change): feature coverage 294 → 366 camps, +7 new feature vocab codes, +40 signature markers;
   verified non-regressive (stable 448 ids, no camp lost a feature, every facet grew).
 
