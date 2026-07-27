@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import type { ProgramCategory } from "@lib/types";
-import { FEATURE_FACETS, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
+import { FEATURE_FACET_GROUPS, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import type { UiState } from "@lib/searchParams";
 
 type CriteriaPatch = Partial<UiState["criteria"]>;
@@ -162,28 +162,33 @@ export default function Filters({
         </div>
       </fieldset>
 
-      <fieldset className="flex flex-col gap-2">
+      <fieldset className="flex flex-col gap-3">
         <legend className="text-sm font-semibold text-ink">Features</legend>
-        <div className="flex flex-wrap gap-1.5">
-          {FEATURE_FACETS.map((f) => {
-            const on = features.includes(f);
-            return (
-              <button
-                key={f}
-                type="button"
-                aria-pressed={on}
-                onClick={() => toggleFeature(f)}
-                className={`rounded-pill border px-3 py-1.5 text-xs font-medium transition ${
-                  on
-                    ? "border-primary bg-primary text-surface"
-                    : "border-border bg-surface text-ink hover:border-primary"
-                }`}
-              >
-                {featureLabel(f)}
-              </button>
-            );
-          })}
-        </div>
+        {FEATURE_FACET_GROUPS.map((group) => (
+          <div key={group.label} className="flex flex-col gap-1.5">
+            <p className="text-xs font-medium uppercase tracking-wide text-muted">{group.label}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {group.codes.map((f) => {
+                const on = features.includes(f);
+                return (
+                  <button
+                    key={f}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => toggleFeature(f)}
+                    className={`rounded-pill border px-3 py-1.5 text-xs font-medium transition ${
+                      on
+                        ? "border-primary bg-primary text-surface"
+                        : "border-border bg-surface text-ink hover:border-primary"
+                    }`}
+                  >
+                    {featureLabel(f)}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </fieldset>
     </div>
   );

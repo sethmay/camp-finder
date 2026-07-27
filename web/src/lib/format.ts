@@ -54,27 +54,71 @@ export function expandFeatures(codes: string[], broader: Map<string, string | nu
   return out;
 }
 
-/** Curated broad feature facets shown as filter chips — the 121-term vocab is far too large
- *  to list. Several roll up descendants via expandFeatures (aquatics / shooting_sports /
- *  climbing / mountain_biking / fishing); the rest match literally. Recognizable troop draws,
- *  editorially ordered. Unknown/new vocab codes still render as camp chips, just not facets. */
+/** Curated broad feature facets shown as filter chips — the full 128-term vocab is far too
+ *  large to list. Several roll up descendants via expandFeatures (aquatics / shooting_sports /
+ *  climbing / mountain_biking); the rest match literally. Recognizable troop draws, ordered so
+ *  each entry sits with its group-mates (see FEATURE_FACET_GROUPS). Unknown/new vocab codes
+ *  still render as camp chips, just not facets. */
 export const FEATURE_FACETS: string[] = [
+  // activities
   "aquatics",
-  "waterfront",
-  "pool",
   "shooting_sports",
   "climbing",
   "cope",
-  "high_adventure_option",
-  "older_scout_program",
-  "first_year_program",
-  "stem",
   "horseback",
   "mountain_biking",
   "atv",
   "scuba",
+  "handicraft",
+  "zip_line",
+  // programs & audience
+  "stem",
+  "nature_study",
+  "high_adventure_option",
+  "older_scout_program",
+  "first_year_program",
+  "provisional_attendance",
+  // camp facilities & lodging
+  "waterfront",
+  "pool",
   "dining_hall",
+  "cabins",
 ];
+
+// User-facing facet groups, keyed off each term's vocab `category` so the grouping is
+// data-driven (no second hand-maintained list). Categories collapse: subject + program_model
+// → "Programs & audience", facility + accommodation → "Camp facilities & lodging".
+const FACET_GROUP_BY_CATEGORY: Record<string, string> = {
+  activity: "Activities",
+  subject: "Programs & audience",
+  program_model: "Programs & audience",
+  facility: "Camp facilities & lodging",
+  accommodation: "Camp facilities & lodging",
+};
+const FACET_GROUP_ORDER = ["Activities", "Programs & audience", "Camp facilities & lodging"];
+const FEATURE_CATEGORY = new Map(vocab.features.map((t) => [t.code, t.category ?? null]));
+
+export interface FacetGroup {
+  label: string;
+  codes: string[];
+}
+
+/** FEATURE_FACETS bucketed into user-facing groups by vocab category — groups in
+ *  FACET_GROUP_ORDER, facet order preserved within each group. A facet whose category is
+ *  unknown lands in a trailing "More" group so it stays visible. */
+export const FEATURE_FACET_GROUPS: FacetGroup[] = (() => {
+  const byLabel = new Map<string, string[]>();
+  for (const code of FEATURE_FACETS) {
+    const category = FEATURE_CATEGORY.get(code);
+    const label = (category && FACET_GROUP_BY_CATEGORY[category]) ?? "More";
+    const bucket = byLabel.get(label);
+    if (bucket) bucket.push(code);
+    else byLabel.set(label, [code]);
+  }
+  return [...FACET_GROUP_ORDER, "More"]
+    .filter((label) => byLabel.has(label))
+    .map((label) => ({ label, codes: byLabel.get(label)! }));
+})();
 
 /** Feature codes ordered signature-first (stable within each group), for chip display. */
 export function orderFeatures(features: string[], signature: string[]): string[] {

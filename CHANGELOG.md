@@ -2,6 +2,15 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.32.0 (minor) — 2026-07-27
+
+- `PENDING` Add five feature filter facets — **Handicraft**, **Nature Study**, **Provisional
+  Attendance**, **Cabins**, **Zip Line** (15 → 20) — and group the Features filter into
+  category-driven subheadings (**Activities** / **Programs & audience** / **Camp facilities &
+  lodging**), derived from the vocab `category` field rather than a second hand-kept list.
+  New facets get distinct chip icons; filter semantics unchanged (one `feat=` param, AND across
+  selected).
+
 ## 0.31.3 (patch) — 2026-07-26
 
 - `c5491f2` Update the Open Scout API pin to **v0.38.0** and refresh committed data (no schema
