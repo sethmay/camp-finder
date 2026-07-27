@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.32.0 (minor) — 2026-07-27
 
-- `PENDING` Add five feature filter facets — **Handicraft**, **Nature Study**, **Provisional
+- `e386f09` Add five feature filter facets — **Handicraft**, **Nature Study**, **Provisional
   Attendance**, **Cabins**, **Zip Line** (15 → 20) — and group the Features filter into
   category-driven subheadings (**Activities** / **Programs & audience** / **Camp facilities &
   lodging**), derived from the vocab `category` field rather than a second hand-kept list.
