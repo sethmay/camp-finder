@@ -68,6 +68,13 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 - **Run project checks inside the feature worktree, not the main checkout.** `cd web && npm run
   check` from repo root validates `main`, not your branch (tell-tale: a `0.30.0` vs `0.31.0`
   version banner). Confirm the path/version before citing a green result.
+- **Docs that live in agent context must not carry values that restale.** `CLAUDE.md` is
+  auto-loaded every session, so never hardcode a per-merge value (the version) there — point at
+  `web/package.json` / `CHANGELOG.md`. For behavior a typed, unit-tested module pins down, point
+  at the code (`rankCamps` in `filter.ts`, `Criteria` in `types.ts`), not a spec section that can
+  drift. When blessing part of an older spec as "still current," read that part line-by-line first
+  (a partly-current section launders its stale half) and mark the stale doc at its source (an
+  in-file ⚠ banner), not only from elsewhere. Cross-document "§N" refs must name the file.
 
 ## Testing
 
