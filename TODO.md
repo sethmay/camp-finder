@@ -22,6 +22,13 @@ Refreshing the committed dataset is a deliberate step (`npm run data`), not part
 - **Filter by camp elevation.** Altitude facet (e.g. "under 3,000 ft" vs alpine) — troops care
   about acclimatization and heat. Data now in the API (`elevation_ft`); ready to build — mirror
   the July-high slider (`maxJulyHigh` in `filter.ts` / `Filters.tsx` / `searchParams.ts`).
+- **Export the filtered camp list** (CSV → opens in Excel / Google Sheets / LibreOffice) for
+  offline planning. Client-side only, no backend: a pure `web/src/lib/csv.ts` serializes the
+  current `ranked` set (from `SearchApp.tsx`) → CSV string; an "Export" button in the results
+  controls row (`SearchApp.tsx` ~L127, beside the view toggle / `ResultsList` sort) triggers a
+  Blob download. Export exactly what's currently filtered + sorted. Columns: name, council,
+  city/state, program categories, features, avg July temp, official `url`. Unit-test the
+  serializer (comma/quote/newline escaping).
 - **Former/non-council camping (parked).** Camps sold to orgs that still allow Scout camping;
   local/state/federal camping locations. Beyond current scope (BSA council camps) — park.
 
