@@ -56,7 +56,7 @@ export function expandFeatures(codes: string[], broader: Map<string, string | nu
 
 /** Curated broad feature facets shown as filter chips — the full 128-term vocab is far too
  *  large to list. Several roll up descendants via expandFeatures (aquatics / shooting_sports /
- *  climbing / mountain_biking); the rest match literally. Recognizable troop draws, ordered so
+ *  climbing / cope / mountain_biking); the rest match literally. Recognizable troop draws, ordered so
  *  each entry sits with its group-mates (see FEATURE_FACET_GROUPS). Unknown/new vocab codes
  *  still render as camp chips, just not facets. */
 export const FEATURE_FACETS: string[] = [
@@ -109,8 +109,7 @@ export interface FacetGroup {
 export const FEATURE_FACET_GROUPS: FacetGroup[] = (() => {
   const byLabel = new Map<string, string[]>();
   for (const code of FEATURE_FACETS) {
-    const category = FEATURE_CATEGORY.get(code);
-    const label = (category && FACET_GROUP_BY_CATEGORY[category]) ?? "More";
+    const label = FACET_GROUP_BY_CATEGORY[FEATURE_CATEGORY.get(code) ?? ""] ?? "More";
     const bucket = byLabel.get(label);
     if (bucket) bucket.push(code);
     else byLabel.set(label, [code]);

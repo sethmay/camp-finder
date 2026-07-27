@@ -50,7 +50,7 @@ describe("expandFeatures", () => {
     expect([...expandFeatures(["ice_fishing"], g)].sort()).toEqual(["aquatics", "fishing", "ice_fishing"]);
   });
   it("returns an unknown code as just itself", () => {
-    expect([...expandFeatures(["zip_line"], g)]).toEqual(["zip_line"]);
+    expect([...expandFeatures(["underwater_basket_weaving"], g)]).toEqual(["underwater_basket_weaving"]);
   });
   it("terminates on a cycle instead of looping forever", () => {
     expect(new Set(expandFeatures(["loop_a"], g))).toEqual(new Set(["loop_a", "loop_b"]));
@@ -69,7 +69,7 @@ describe("orderFeatures", () => {
 describe("FEATURE_FACET_GROUPS", () => {
   it("partitions every facet into exactly one group, none lost or duplicated", () => {
     const grouped = FEATURE_FACET_GROUPS.flatMap((g) => g.codes);
-    expect(grouped.slice().sort()).toEqual(FEATURE_FACETS.slice().sort());
+    expect(grouped).toEqual(FEATURE_FACETS);
     expect(new Set(grouped).size).toBe(grouped.length);
   });
   it("exposes the three category groups in order, each non-empty, no uncategorized bucket", () => {

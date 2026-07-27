@@ -165,8 +165,8 @@ export default function Filters({
       <fieldset className="flex flex-col gap-3">
         <legend className="text-sm font-semibold text-ink">Features</legend>
         {FEATURE_FACET_GROUPS.map((group) => (
-          <div key={group.label} className="flex flex-col gap-1.5">
-            <p className="text-xs font-medium uppercase tracking-wide text-muted">{group.label}</p>
+          <div key={group.label} role="group" aria-label={group.label} className="flex flex-col gap-1.5">
+            <p aria-hidden="true" className="text-xs font-medium uppercase tracking-wide text-muted">{group.label}</p>
             <div className="flex flex-wrap gap-1.5">
               {group.codes.map((f) => {
                 const on = features.includes(f);
