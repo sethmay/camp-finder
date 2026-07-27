@@ -122,7 +122,7 @@ export default function Filters({
       </label>
 
       <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
-        Max July daytime high: {criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"}
+        Avg July daytime temp: {criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"}
         <input
           type="range"
           min={70}

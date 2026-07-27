@@ -2,6 +2,10 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.31.2 (patch) — 2026-07-26
+
+- `PENDING` Rename the July filter label from "Max July daytime high" to "Avg July daytime temp".
+
 ## 0.31.1 (patch) — 2026-07-26
 
 - `d9c16eb` Refresh the stale root `CLAUDE.md` for the registry-only architecture: it still
