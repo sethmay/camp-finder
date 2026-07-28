@@ -57,16 +57,24 @@ function FeatureIcon({ feature }: { feature: string }) {
 }
 
 /**
- * A camp feature, rendered as icon + label with NO container.
+ * A camp feature, as an outlined pill on the raised (white) surface.
  *
- * This was a `Badge` (DS `subtle`/`outline`). Two problems with that: a detail page
- * lists ~20 features, and 20 filled pills read as a wall of tan blobs rather than
- * scannable facts; and these are DATA, not status or navigation, which is what a
- * badge is for. Dropping the container makes the icon the delimiter and lets the
- * labels sit on the page like a list -- denser, quieter, and it scales to 20 items.
+ * History worth keeping, because the middle step was wrong twice: this began as a DS
+ * `Badge` (`subtle` = `bg-secondary`), which put a TAN fill on a tan page -- 20 of
+ * them read as a wall of blobs. Stripping the container entirely fixed the weight
+ * but lost the pill shape that made each feature a discrete unit. The actual problem
+ * was only ever the fill: an outline pill on white is light AND still bounded.
+ *
+ * Border choice is deliberate. `--border` (2.66:1 on white), not `--input` (3.87:1):
+ * these are NOT interactive, so WCAG 1.4.11's 3:1 does not apply -- the label carries
+ * the meaning, the outline is decoration. The filter chips look superficially similar
+ * but use the heavier `--input` edge plus hover and focus states, so the two are
+ * distinguishable and a feature pill does not invite a click it cannot answer.
  *
  * Signature features stay distinguishable by three things, not colour alone
- * (WCAG 1.4.1): a star, the primary-tinted icon, and a heavier label.
+ * (WCAG 1.4.1): a star, the primary border + icon, and a heavier label. Emphasis is
+ * right here in a way it was not for filter chips -- one or two of ~20 are signature,
+ * where 20 of 23 filter chips are unselected at rest.
  */
 export default function FeatureChip({
   feature,
@@ -78,8 +86,10 @@ export default function FeatureChip({
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 text-xs",
-        signature ? "font-semibold text-foreground" : "text-foreground",
+        "inline-flex items-center gap-1.5 rounded-full border bg-card px-2.5 py-1 text-xs",
+        signature
+          ? "border-primary font-semibold text-foreground"
+          : "border-border text-foreground",
       )}
     >
       {signature && (
