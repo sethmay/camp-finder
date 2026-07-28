@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Camp Finder mark: the trailhead tent glyph from components/Header.astro, redrawn on a
+  32-unit grid for small sizes.
+
+  Two deliberate differences from the header version:
+  1. Solid primary tile plus a white glyph, not an outline on transparency. At 16px a 2px
+     outline on a transparent ground disappears into whatever colour the browser tab
+     strip happens to be; a filled tile always reads.
+  2. No accent-coloured leg strokes. The header draws the legs in the os-accent token
+     (SA Blue) against the green tent, which turns to mud below roughly 24px. One
+     colour survives.
+
+  Note: no double hyphen anywhere in this comment. XML forbids it, and sharp/librsvg
+  rejects the whole file with "Double hyphen within comment" rather than warning.
+
+  Our own artwork, not a Scouting America trademark (see the repo NOTICE on brand assets).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Camp Finder">
+  <rect width="32" height="32" rx="7" fill="#1D5E42" />
+  <g fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M16 6 5.5 26h21L16 6Z" />
+    <path d="M16 14 11.8 26M16 14l4.2 12" />
+  </g>
+</svg>

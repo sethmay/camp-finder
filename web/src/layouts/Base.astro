@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { withBase } from "@lib/paths";
 
 interface Props {
   title?: string;
@@ -26,6 +27,12 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <!-- Icons must go through withBase: this is a GitHub Pages project site served under
+         /camp-finder/, so a root-relative href resolves against the wrong origin path.
+         Declaring them also stops the browser's implicit /favicon.ico probe, which 404s. -->
+    <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+    <link rel="icon" href={withBase("/favicon.ico")} sizes="32x32" />
+    <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- The design system's one type pair: Montserrat display + Source Serif 4 body. -->
