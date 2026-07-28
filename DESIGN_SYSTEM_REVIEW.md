@@ -12,8 +12,15 @@ Version reviewed: **`0.2.0-alpha.0`**, program `scoutsbsa`. Every ratio below is
 `src/styles/tokens.css` or measured in Chromium; the arithmetic is reproducible from the token
 values quoted inline.
 
-Thank you for building this — the multi-program architecture genuinely works, and §7 says where.
+We then went further and **implemented every token-level proposal** as a consumer override
+stylesheet, so §11 reports what each one actually cost, which recommendation we got wrong, and the
+two additional bugs that only surfaced once the surface tokens were fixed. Where §11 disagrees with
+an earlier section, trust §11 — it was measured in a running app rather than reasoned from source.
+
+Thank you for building this — the multi-program architecture genuinely works, and §10 says where.
 The list is long because we exercised the whole surface, not because we think it's in bad shape.
+Notably, every fix below is a token value or one component axis; none of them touch the
+architecture.
 
 ## Triage
 
@@ -34,6 +41,13 @@ The list is long because we exercised the whole surface, not because we think it
 | 13 | `Dialog` can leave the page exposed to screen readers; no `aria-modal` | Medium | 1 line |
 | 14 | Missing primitives: Sheet, Slider, ToggleGroup, Link | Low-Medium | new work |
 | 15 | `TabsTrigger` uses `rounded-md`, outside the documented radius vocabulary | Low | 1 line |
+| 16 | `DialogContent` fills with `bg-background`; `--popover` ships but nothing consumes it | Medium | 1 line |
+| 17 | `Badge` has no light fill and no neutral outline, so a quiet chip is inexpressible | Medium | new axis |
+| 18 | `Card variant="flat"` ships no border, so a bordered/dashed panel re-hand-rolls all three | Low | 1 line |
+| 19 | No optional `maplibre.css`; every consumer with a map rewrites the same six selectors | Low | new file |
+
+§11 records which of these we actually applied, what each cost, and the two further bugs that
+only became visible once #5 was fixed.
 
 ---
 
@@ -566,3 +580,125 @@ Not padding — these are the things we'd have flagged if they'd gone the other 
 - **Per-program display voice** (weight / tracking / style / transform) is a nice idea that costs
   nothing at the call site, and it differentiates the programs more effectively than the radius
   spread does.
+
+---
+
+## §11. We applied the proposals. Here is what each one cost, and what it exposed.
+
+After writing §1–§10 we implemented every token-level proposal as a consumer override stylesheet
+and ran the whole app on it. That changed our confidence in several items and turned up two more
+bugs, so this section supersedes the guesswork in the sections above wherever they disagree.
+
+### What it cost
+
+| Proposal | Applied as | Cost |
+|---|---|---|
+| §4 surface split | `--card: 255 255 255`, `--popover` follows | **1 token**, and it deleted more code than it added (see below) |
+| §2 AAA `--muted-foreground` | `#434C3B` | 1 token. 7.97:1 card / 7.02:1 page |
+| §3 primary fill/text split | `--primary` `#1D5E42` + white label + new `--primary-on-surface` `#174E37` | 3 tokens + rerouting the `text-primary` utility |
+| §2 AAA destructive | `--destructive` `#9E0C1C` + `--destructive-on-surface` `#940C1B` | 2 tokens, same shape as primary |
+| §5 control fill + `--input` | `bg-card` fill, `--input` `#8E8065` | 1 token + 1 rule |
+| §6.1 radius | `--radius: 0.625rem` | 1 token |
+| §6.2 radius scale | multiplicative `calc()` | 4 lines |
+| §7 type scale | overrode Tailwind's `--text-2xl`…`--text-6xl` | **the only proposal we could not apply cleanly** — see below |
+| §2 target size | min-heights on `Button sm` / `TabsList` | 2 rules |
+
+Everything except §7 was a token value. **§7 was the exception that proves the point:** because
+`Heading`'s scale lives in the component, the only lever a consumer has is to redefine Tailwind's
+own `--text-*` steps globally — which happens to be safe in our app only because those steps are
+used exclusively by headings here. In an app that uses `text-3xl` for body copy it would be
+unusable. That is the strongest argument for moving the scale into tokens: right now the consumer
+workaround is "reach past the design system and edit Tailwind."
+
+### §4 is a smaller change than we implied, and Option A won
+
+We suggested Option B (keep tan paper as the card, darken the page). We built that first and then
+abandoned it. Two warm tans plus white chrome is one tier too many: once controls and chrome were
+white, the middle tone had no distinct job, and detail panels and map popups looked muddy beside
+them. **Option A — `--card: white` — is both simpler and better**, and it removed a local token plus
+three override rules we had needed for the header, footer and hero band, because every `bg-card`
+consumer landed on white for free. That one change was **−35 lines** in our override file.
+
+So the recommendation firms up: give `--card` a value distinct from `--background`, and in a tinted
+program make it white rather than a second tint.
+
+### Two bugs that only became visible after fixing §4
+
+**11.1 — `DialogContent` fills with `bg-background`, and `--popover` is dead code.** Stock, this is
+invisible: `--background`, `--card` and `--popover` are the same value, so a modal in the page colour
+looks fine. The moment `--background` becomes the page tone, every dialog renders *in the page
+colour* — a raised, focus-trapped surface that reads flat against what is behind it, separated only
+by the overlay scrim. The system already ships `--popover` and `--popover-foreground` and **no
+component consumes either.** The overlay recipes should use `bg-popover`.
+
+**11.2 — `Tabs`' active state gets worse, not better.** §8.7 measured it at 1.36:1. After the surface
+split the naive result is **1.06:1**, because the active trigger is `bg-background` on a `bg-muted`
+track and `--background` moved further from `--muted`. This is not a value problem: the shadcn "lift
+the active tab out of the muted track" idiom depends on the page being white and the track being
+grey, and it has no analogue in a tinted palette. We had to fill the active tab with `--primary`
+instead. **`Tabs` needs a filled/high-contrast active variant** for any program that is not the
+parent brand.
+
+Both of these are worth stating plainly: **the 1.00:1 surface binding has been masking downstream
+errors, not merely looking flat.** Expect a few more when you fix it.
+
+### §8.1 is three gaps, not one — we ended up hand-rolling the chip
+
+We tried to build one component — a feature pill listing ~20 camp amenities — out of `Badge`, and
+failed three separate times:
+
+1. **`uppercase tracking-wider`** shouted Title Case vocabulary labels (the original §8.1).
+2. **`subtle` is `bg-secondary`**, a mid-tone tan. On a tinted page that is a *filled blob*, not a
+   quiet chip. There is no light fill in the variant set.
+3. **`outline` is primary-tinted** — border *and* label. With 20 pills that reads as 20 emphasised
+   items; there is no neutral outline.
+
+So the final component uses no `Badge` at all: `rounded-full border bg-card px-2.5 py-1` hand-rolled.
+A `Badge` that offered {fill: none | light | solid} × {tone: neutral | primary | …} would have covered
+it. Worth noting we ALSO needed a neutral-vs-interactive distinction: our non-interactive feature
+pills use `--border` (2.66:1, decorative, 1.4.11 does not apply) while the interactive filter chips
+use `--input` (3.87:1) plus hover and focus. **Keeping `--border` and `--input` as genuinely
+different values is what makes "looks like a chip" and "is a control" distinguishable** — today they
+are set identically in all five programs, so that distinction is not available. That strengthens §5:
+it is not only a contrast fix, it is a missing design capability.
+
+### Target size and dense multi-select are in tension, and the system should say so
+
+Worth documenting because it is not obvious: **a non-overlapping 44px target forces a 44px row
+pitch.** For our 23-chip filter rail at a 30px visible chip, that leaves 14px of dead gap between
+every row and there is no way to spend it differently — the pitch is the target, not the chip.
+
+We ended up scoping the chips to 2.5.8 (AA, 24px) with a 36×60px target, which recovered ~112px
+(~25% of the block). Everything else in the app still holds 44px.
+
+If AAA is the system's posture, a shipped `ToggleGroup` should either take an explicit density
+prop or the docs should state that 2.5.5 and dense multi-select cannot both be satisfied, so
+consumers make that trade knowingly rather than discovering it in a layout review.
+
+### Two smaller ones
+
+**11.3 — `Card variant="flat"` ships no border at all** (`bg-muted/40` only). `border-dashed` alone
+renders nothing, because it sets border-*style* with no width or colour, so a dashed placeholder
+panel has to spell out `border border-dashed border-border` — exactly the hand-rolled string `Card`
+exists to absorb. The three-value `variant` enum conflates fill, border-width, border-colour and
+shadow; an orthogonal `bordered` axis would fix it.
+
+**11.4 — please ship an optional `maplibre.css`.** Once a map is framed with the system's border and
+radius, MapLibre's stock chrome (`background: #fff`, `border-radius: 3px`, its own shadow) sits right
+at the frame and reads as a different design system. It is the same six selectors for every consumer:
+`.maplibregl-popup-content`, the four per-anchor `.maplibregl-popup-tip` rules, `.maplibregl-ctrl-group`
+and `.maplibregl-ctrl-attrib`. One gotcha to bake in: the tip is a CSS triangle, so **only the single
+pointing border side may be coloured per anchor** — colour all four and the arrow becomes a solid
+square. (Ours is written and working; happy to hand it over.)
+
+### Confirmed by implementation
+
+- **§9.2 is real and it bites.** We had to move two declarations out of `@layer utilities` entirely,
+  because unlayered `.display` beats a layered rule *regardless of specificity* —
+  `[data-program] button[aria-pressed]` at 0,2,1 still loses to `.display` at 0,1,0. The failure is
+  silent: `font-medium` simply has no effect. Either document it prominently or find a way to layer
+  `.display` in the source builds while keeping it unlayered in the prebuilt exports.
+- **§3's headroom claim held.** `#1D5E42` with a white label measures 7.69:1 in the running app, and
+  the split let `Button secondary`/`ghost` and links stay AAA at 8.53:1 on the card.
+- **§4's ~1.1–1.2:1 target was right.** White on `#E9E3D3` measures 1.28:1 and reads as properly
+  layered without looking like a hard edge.
