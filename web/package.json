@@ -33,6 +33,7 @@
   },
   "allowScripts": {
     "esbuild@0.21.5": true,
-    "sharp@0.33.5": true
+    "sharp@0.33.5": true,
+    "@opensourcescouting/design-system@0.2.0-alpha.0": false
   }
 }

@@ -34,20 +34,25 @@ const meta = metaData as unknown as Meta;
       a year are flagged. Always confirm details on the official council page before you
       register.
     </p>
+    {/* Stat numerals use the DS `display` face, not `font-mono`. Base.astro no
+        longer requests a mono webfont, so `font-mono` now resolves to whatever
+        ui-monospace the OS supplies — the only typeface in the app the design
+        system never chose. Montserrat is already loaded and is the system's
+        emphasis face; these three numbers do not need tabular alignment. */}
     <ul class="mt-3 grid grid-cols-3 gap-2 text-sm text-muted-foreground">
       <li>
         <Card variant="elevated" className="p-3">
-          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.camp_count}</span> camps
+          <span class="display block text-xl sm:text-2xl text-foreground">{meta.camp_count}</span> camps
         </Card>
       </li>
       <li>
         <Card variant="elevated" className="p-3">
-          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.council_count}</span> councils
+          <span class="display block text-xl sm:text-2xl text-foreground">{meta.council_count}</span> councils
         </Card>
       </li>
       <li>
         <Card variant="elevated" className="p-3">
-          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.states_covered.length}</span> states
+          <span class="display block text-xl sm:text-2xl text-foreground">{meta.states_covered.length}</span> states
         </Card>
       </li>
     </ul>

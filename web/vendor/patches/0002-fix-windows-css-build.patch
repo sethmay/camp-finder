@@ -1,0 +1,30 @@
+Subject: [PATCH 2/2] fix(build): resolve the Tailwind CLI without the npm bin shim
+
+`npm run build` cannot complete on Windows. build-css.mjs calls execFileSync on
+node_modules/.bin/tailwindcss; the extensionless npm shim is not directly
+executable there (ENOENT), and switching to tailwindcss.cmd hits Node >=20's
+refusal to spawn .cmd without a shell (EINVAL). Since dist/ is a build artifact,
+no Windows contributor can produce the package at all.
+
+Resolves the CLI's ESM entry and runs it with the current Node binary, which is
+portable across platforms.
+
+--- a/scripts/build-css.mjs
++++ b/scripts/build-css.mjs
+@@ -39,10 +39,14 @@
+ mkdirSync(dist, { recursive: true });
+ 
+ // 1. Tailwind-process library.css into dist/styles.css (v4 CLI, @tailwindcss/cli).
+-const tailwindBin = path.join(root, "node_modules", ".bin", "tailwindcss");
++//    Resolve the CLI's ESM entry and run it with the current Node binary rather
++//    than the npm bin shim: on Windows the extensionless shim is not executable
++//    by execFileSync, and Node >=20 rejects spawning .cmd without a shell.
++const tailwindBin = path.join(root, "node_modules", "@tailwindcss", "cli", "dist", "index.mjs");
+ execFileSync(
+-  tailwindBin,
++  process.execPath,
+   [
++    tailwindBin,
+     "-i",
+     path.join(root, "src", "styles", "library.css"),
+     "-o",

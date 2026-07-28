@@ -15,8 +15,19 @@ via each camp's `url`.
 
 ## Read these first
 1. **`PLAN.md`** — strategy, feasibility, scope. *Why* we build it.
-2. **`DESIGN_BRIEF.md`** + `.claude/handoffs/website_design/` — the design system the frontend
-   is built against (tokens, components; map direction is §9 of `Camp-Finder-Design-Spec.html`).
+2. **The design system.** The frontend is themed by
+   **[`@opensourcescouting/design-system`](https://github.com/OpenSourceScouting/design-system)**,
+   a third-party package — tokens, components, and the Tailwind v4 theme all ship inside it. Start
+   at `web/src/styles/global.css` (three imports + the `@source` line that makes DS utilities
+   emit) and `web/src/styles/ds-overrides.css` (our token overrides, split into corrections vs
+   preferences). `DESIGN_SYSTEM_REVIEW.md` is the consumer review we sent upstream and the best
+   single explanation of *why* the overrides exist; `DESIGN_SYSTEM_SPIKE.md` records the port
+   itself. The package is **vendored, not installed from npm** — read `web/vendor/README.md`
+   before touching the dependency.
+   ⚠ `DESIGN_BRIEF.md` + `.claude/handoffs/website_design/` are the **retired** in-house design
+   system (the `--cf-*` tokens and `tailwind.config.mjs` mirror, both deleted). They remain
+   authoritative only for **product/UX intent** — information architecture, microcopy, map
+   direction (§9 of `Camp-Finder-Design-Spec.html`) — never for tokens, colour or type.
 3. **`IMPLEMENTATION.md`** — the original build spec. Its **design / UX intent** (§8.1–8.2,
    §8.4, §9) and repo-layout rationale remain useful, and §8.3's *features/vocab* rules are
    current. ⚠ But its `filterCamps` signature + **weeks / cost / `nextSession` / session-staleness**
@@ -59,8 +70,13 @@ runtime backend, and no runtime database** — data authoring/corrections happen
 
 ## Conventions
 - **Frontend** (`web/`): Astro 4 static output + React 18 islands, TypeScript `strict`,
-  Tailwind. Keep filter/format/distance logic **pure** in `web/src/lib/` and unit-test it.
-  Map tile source + basemap muting stay behind `web/src/lib/map.ts` (swappable).
+  **Tailwind v4** via `@tailwindcss/vite` — there is **no `tailwind.config`**; the theme is
+  configured in CSS and comes from the design system (`web/src/styles/global.css`). The program
+  palette is selected by `data-program="scoutsbsa"` on `<html>` in `Base.astro`, which themes
+  plain `.astro` markup with zero JS; only hydrated island roots need `ScoutThemeProvider`.
+  Keep filter/format/distance logic **pure** in `web/src/lib/` and unit-test it.
+  Map tile source + basemap muting stay behind `web/src/lib/map.ts` (swappable); the map resolves
+  its palette from the live CSS custom properties, so it cannot drift from the rest of the UI.
 - **Data** (`web/public/data/`): refreshed by `npm run data` from the Open Scout API, pinned
   by `EXPECTED_VERSION` in `build-data.mjs` (a version mismatch fails the refresh loudly).
   The JSON is **committed** so the site deploys from a clean checkout with no network; it is

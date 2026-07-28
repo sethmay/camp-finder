@@ -27,6 +27,28 @@
  * this, DS components render structurally correct but completely unstyled. */
 @source "../../node_modules/@opensourcescouting/design-system/dist";
 
+/* Accessible focus, restored for everything the DS recipes do not own: the
+ * native range slider, the header/footer nav links, and in-content links in the
+ * Astro pages. All of them fell back to the UA default when the pre-DS token
+ * sheet went away.
+ *
+ * `:where()` keeps it at zero specificity and `@layer base` keeps it below
+ * Tailwind's utilities, so a DS component's own focus-visible treatment always
+ * wins — layer order matters here, not just specificity (see ds-overrides.css
+ * PART 3.3 for the unlayered-beats-layered trap this avoids).
+ *
+ * The 2px offset is load-bearing: --ring is SA Blue #003F87, only 1.33:1 on the
+ * primary fill, so the ring has to land on the page behind it (7.95:1).
+ * Radius mirrors PART 1.7's --radius-sm, derived rather than referenced because
+ * Tailwind drops theme vars no utility uses and nothing emits `rounded-sm`. */
+@layer base {
+  :where(a, button, input, select, [tabindex]):focus-visible {
+    outline: 2px solid rgb(var(--ring));
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) * 0.5);
+  }
+}
+
 /* Minimum 44px hit target (WCAG 2.5.5 Target Size (Enhanced), AAA; the AA
  * criterion 2.5.8 only asks 24px). The DS Button sizes already clear it
  * (md = h-11); this covers the native inputs, selects and range slider that

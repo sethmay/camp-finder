@@ -22,11 +22,14 @@ const ALL_CATEGORIES = Object.keys(PROGRAM_CATEGORY_LABEL) as ProgramCategory[];
  * aria-pressed buttons and borrow the Badge recipe for their skin. The recipe is
  * built for a static <span>, so three things have to be undone or added by hand:
  * its uppercase/tracking-wider treatment (these are sentence-case labels), its
- * rounded-lg (chips are pills), and a focus-visible ring (a span never needs one). */
+ * rounded-lg (chips are pills), and a focus-visible ring (a span never needs one).
+ * No `cf-tap` here: ds-overrides.css PART 3.2 holds the chips to a 36px target
+ * (WCAG 2.5.8 AA) at higher specificity, so the class would be dead weight and
+ * would read as a 44px promise the CSS does not keep. */
 const chipClass = (on: boolean) =>
   cn(
     badgeVariants({ variant: on ? "primary" : "outline" }),
-    "cf-tap normal-case tracking-normal rounded-full px-3 text-xs transition-colors",
+    "normal-case tracking-normal rounded-full px-3 text-xs transition-colors",
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
     on ? "hover:bg-primary/90" : "hover:bg-muted",
   );

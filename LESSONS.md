@@ -212,9 +212,20 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 
 ## Frontend / a11y (manual — no axe/pa11y in the toolchain)
 
-- **Every interactive control carries `cf-tap`** (`global.css`: `min-height: 44px`, the handoff
-  hit-target floor) — inputs, selects, buttons, and especially `input[type=range]`, which renders
-  ~20px tall by default (the worst offender). A control without it is a visible outlier.
+- **Every interactive control carries `cf-tap`** (`global.css`: `min-height: 44px`) — inputs,
+  selects, buttons, and especially `input[type=range]`, which renders ~20px tall by default (the
+  worst offender). A control without it is a visible outlier.
+  **One deliberate exception: the filter chips.** `ds-overrides.css` (§3.2) releases the floor for
+  them — 30px box with a 36×60px non-overlapping target via a `::after` expansion — because a
+  non-overlapping 44px target forces a 44px row pitch, which cost ~112px across 14 rows in a
+  264px rail. That drops the chips from **WCAG 2.5.5 Target Size (Enhanced), AAA** to **2.5.8
+  Target Size (Minimum), AA**, which they clear comfortably; every other control still holds 44px.
+  Two traps this leaves behind, both already hit once: `cf-tap` on a chip is DEAD (the override
+  wins on specificity), so do not read its presence as proof of 44px; and if you revert the
+  override, restore the class too. The revert recipe is in that block's comment.
+- **44px is WCAG 2.5.5 (Enhanced, AAA), not 2.5.8** — 2.5.8 (Minimum, AA) asks only 24×24. Worth
+  knowing which one you are claiming: "we meet the 44px floor" is an AAA claim, and dropping to
+  24px is still AA-conformant rather than a failure.
 - **A slider whose max is a sentinel ("105 = Any") needs `aria-valuetext`** mirroring the visible
   label ("85°F" when capped, "Any" when off); assistive tech reads the raw `value`, so the
   off-state (the default) otherwise announces as a real cap. Check the sentinel against the real

@@ -18,6 +18,27 @@
    Part 2 = stand-ins for changes that would have to happen inside the DS
             components. These are the items to actually file upstream.
 
+   VERIFIED AGAINST: @opensourcescouting/design-system 0.2.0-alpha.0.
+   Part 1 keys on documented tokens and survives any DS bump. Part 2 does NOT
+   target the DS's API -- it targets the compiled Tailwind class names inside its
+   component recipes, which are unversioned implementation details. A rename
+   drops the override with no error, no type failure and no test, so re-verify
+   these hooks against the new dist on every upgrade:
+
+     .h-9 on button/a               Button size="sm"          -> Part 2.4
+     .bg-background on input,
+       select, textarea             controlClasses fill       -> Part 2.2
+     .text-primary, .border-primary,
+       .text-destructive            Button + link recipes     -> Part 2.1
+     .bg-card + .rounded-lg         Card / cardVariants       -> Part 2.5
+     .bg-background on
+       [role=dialog]/[alertdialog]  DialogContent fill        -> Part 2.6
+
+   Part 2.3 and Part 3.2 key on ARIA state ([role=tab][data-state=active],
+   button[aria-pressed]) instead, which is the stable surface -- prefer that, or
+   the call-site pattern SearchApp already uses (passing h-auto / cf-tap /
+   rounded-lg into the DS component), over any new class hook.
+
    To A/B: comment out the `@import "./ds-overrides.css"` line in global.css.
    ========================================================================== */
 
@@ -29,10 +50,13 @@
    depth falls to --os-shadow (which the forced-colors block zeroes).
 
    Direction B from the review: keep the tan *paper* as the raised card and drop
-   the page beneath it, rather than putting white cards on beige. Separation is
-   1.14:1 -- deliberately small. A large-area fill only needs ~1.1-1.2:1 to read
-   as layered; the pre-DS design shipped 1.20:1. The goal is "not exactly zero",
-   not a contrast threshold.
+   the page beneath it, rather than putting white cards on beige. That gave a
+   1.14:1 separation -- deliberately small. A large-area fill only needs
+   ~1.1-1.2:1 to read as layered; the pre-DS design shipped 1.20:1. The goal is
+   "not exactly zero", not a contrast threshold.
+
+   SUPERSEDED BY PART 1.9: --card ended up white, so the shipped separation is
+   1.28:1. The two-tier structure this part establishes is unchanged.
    -------------------------------------------------------------------------- */
 [data-program="scoutsbsa"] {
   --background: 233 227 211; /* #E9E3D3 was 245 241 230 (identical to --card) */
@@ -58,34 +82,35 @@
      PART 1.3 — Body copy to AAA (review §2)
 
      --muted-foreground is the most-used text colour after --foreground and
-     clears only AA in four of five programs (scoutsbsa was 6.09:1). Darkened
-     until it holds 7:1 on the card AND the darker page.
+     clears only AA in four of five programs (scoutsbsa 6.09:1, tan text on the
+     stock tan surface). Darkened until it holds 7:1 on the card AND the darker
+     page.
      ------------------------------------------------------------------------ */
-  --muted-foreground: 67 76 59; /* #434C3B  7.97:1 card / 7.02:1 page (was 6.09 / 5.37) */
+  --muted-foreground: 67 76 59; /* #434C3B  8.99:1 card / 7.02:1 page (stock #525E48: 6.88 / 5.37) */
 
   /* --------------------------------------------------------------------------
      PART 1.4 — Destructive needs the same split as primary
 
-     sa-red #CE1126 is 5.63:1 with a white label and 4.99:1 as text on the card
-     -- both fail AAA. Same fill/text split, same reasoning.
+     sa-red #CE1126 is 5.63:1 either way -- white label on the fill, or as text
+     on the white card -- and both fail AAA. Same fill/text split, same reasoning.
      ------------------------------------------------------------------------ */
   --destructive: 158 12 28; /* #9E0C1C  white label 8.32:1 (was 5.63) */
-  --destructive-on-surface: 148 12 27; /* #940C1B  7.99:1 card / 7.04:1 page (new token) */
+  --destructive-on-surface: 148 12 27; /* #940C1B  9.02:1 card / 7.04:1 page (new token) */
 
   /* --------------------------------------------------------------------------
      PART 1.5 — Control boundaries and placeholders (review §5)
 
      --input and --border are set to the same value in stock, so a decorative
-     keyline colour ends up carrying an interactive boundary at 2.36:1 -- under
+     keyline colour ends up carrying an interactive boundary at 2.66:1 -- under
      1.4.11's 3:1. --border is left alone deliberately: with Part 1.1 doing the
      separation work, card edges no longer need to shout.
 
-     Placeholders are text. --os-on-surface-faint at 3.07:1 fails even AA in
+     Placeholders are text. --os-on-surface-faint at 3.46:1 fails even AA in
      that role. Targeted at AA 4.5:1 rather than AAA 7:1 on purpose -- a 7:1
      placeholder is indistinguishable from a real value.
      ------------------------------------------------------------------------ */
-  --input: 142 128 101; /* #8E8065  3.43:1 card / 3.02:1 page (was 2.36 / 2.08) */
-  --os-on-surface-faint: 102 102 91; /* #66665B  5.14:1 card / 4.53:1 page (was 3.07 / 2.70) */
+  --input: 142 128 101; /* #8E8065  3.87:1 card / 3.02:1 page (stock #AD9D7B: 2.66 / 2.08) */
+  --os-on-surface-faint: 102 102 91; /* #66665B  5.81:1 card / 4.53:1 page (stock #8A8B7C: 3.46 / 2.70) */
 
   /* --------------------------------------------------------------------------
      PART 1.6 — Radius (review §6.1)
@@ -225,7 +250,7 @@
      2.3 — Tabs active state (review §8.7).
 
      TabsTrigger active is `bg-background` on a `bg-muted` track. Stock reads
-     1.36:1; after Part 1.1 the naive result would be 1.06:1, i.e. worse. The
+     1.39:1; after Part 1.1 the naive result would be 1.22:1, i.e. worse. The
      shadcn "lift out of the muted track" idiom assumes white-on-grey and does
      not survive a two-tan palette, so fill the active tab with the brand colour
      instead -- unmistakable, and 7.69:1 AAA for the label.
@@ -239,16 +264,18 @@
   /* ---------------------------------------------------------------------------
      2.4 — AAA target size (review §2, WCAG 2.5.5 Enhanced = 44x44).
 
-     Button size="sm" is h-9 = 36px and cannot conform. TabsList is h-10= 40px.
-     Raising the min-height keeps the compact look while clearing the floor;
-     upstream, `sm` either needs to be 44px tall or documented as AA-only.
+     Button size="sm" is h-9 = 36px and cannot conform. Raising the min-height
+     keeps the compact look while clearing the floor; upstream, `sm` either needs
+     to be 44px tall or documented as AA-only.
+
+     TabsList is deliberately NOT handled here. Its recipe's own h-10 never
+     reaches the DOM -- `cn` is tailwind-merge and SearchApp passes `h-auto`,
+     which strips it -- so any `.h-10` hook would match nothing. The two tab
+     targets get their 44px from `cf-tap` passed to TabsTrigger at the call site,
+     which is the pattern the rest of this part should be following.
      ------------------------------------------------------------------------ */
   [data-program] button.h-9,
   [data-program] a.h-9 {
-    min-height: 2.75rem;
-  }
-  [data-program] [role="tablist"].h-10 {
-    height: auto;
     min-height: 2.75rem;
   }
 
@@ -366,9 +393,10 @@
     inset-inline: 0;
   }
   /* 6px row gap exactly matches the 3px expansion on each side, so hit areas abut
-     without ever overlapping. Column gap unchanged -- horizontal never needed it. */
-  [data-program] div:has(> button[aria-pressed]),
-  [data-program] fieldset:has(> button[aria-pressed]) {
+     without ever overlapping. Column gap unchanged -- horizontal never needed it.
+     The wrapper is always a div (Filters.tsx puts the chips in a flex-wrap div
+     inside the fieldset), so there is no fieldset branch to write. */
+  [data-program] div:has(> button[aria-pressed]) {
     row-gap: 0.375rem;
     column-gap: 0.5rem;
   }

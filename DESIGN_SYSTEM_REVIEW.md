@@ -476,7 +476,7 @@ users have to rediscover it.
 (`rounded-lg` / `rounded-full`), and per §6.2 that value is invalid in two programs. Worth fixing
 mainly because it means the radius rule can't be enforced by auditing consumer code alone.
 
-**8.7 — `Tabs` active state is ~1.36:1 in `scoutsbsa`** (track `--muted` `#D6CEBD`, active trigger
+**8.7 — `Tabs` active state is 1.39:1 in `scoutsbsa`** (track `--muted` `#D6CEBD`, active trigger
 `--background` `#F5F1E6`). The shadcn "lift out of the muted track" idiom assumes white-on-grey; on
 two tans the only reliable cue for the selected view is text colour. This is §4 reappearing one token
 over, which is why we'd rather see the surface hierarchy fixed in the palette than patched per
@@ -591,10 +591,14 @@ bugs, so this section supersedes the guesswork in the sections above wherever th
 
 ### What it cost
 
+> Ratios in this section are against the **shipped** palette (page `#E9E3D3`, card `#FFFFFF`).
+> Figures in §2–§8 are against the **stock** palette, where the card is `#F5F1E6` — so the same
+> token legitimately shows two different numbers depending on which section you are reading.
+
 | Proposal | Applied as | Cost |
 |---|---|---|
 | §4 surface split | `--card: 255 255 255`, `--popover` follows | **1 token**, and it deleted more code than it added (see below) |
-| §2 AAA `--muted-foreground` | `#434C3B` | 1 token. 7.97:1 card / 7.02:1 page |
+| §2 AAA `--muted-foreground` | `#434C3B` | 1 token. 8.99:1 card / 7.02:1 page |
 | §3 primary fill/text split | `--primary` `#1D5E42` + white label + new `--primary-on-surface` `#174E37` | 3 tokens + rerouting the `text-primary` utility |
 | §2 AAA destructive | `--destructive` `#9E0C1C` + `--destructive-on-surface` `#940C1B` | 2 tokens, same shape as primary |
 | §5 control fill + `--input` | `bg-card` fill, `--input` `#8E8065` | 1 token + 1 rule |
@@ -631,8 +635,8 @@ colour* — a raised, focus-trapped surface that reads flat against what is behi
 by the overlay scrim. The system already ships `--popover` and `--popover-foreground` and **no
 component consumes either.** The overlay recipes should use `bg-popover`.
 
-**11.2 — `Tabs`' active state gets worse, not better.** §8.7 measured it at 1.36:1. After the surface
-split the naive result is **1.06:1**, because the active trigger is `bg-background` on a `bg-muted`
+**11.2 — `Tabs`' active state gets worse, not better.** §8.7 measured it at 1.39:1. After the surface
+split the naive result is **1.22:1**, because the active trigger is `bg-background` on a `bg-muted`
 track and `--background` moved further from `--muted`. This is not a value problem: the shadcn "lift
 the active tab out of the muted track" idiom depends on the page being white and the track being
 grey, and it has no analogue in a tinted palette. We had to fill the active tab with `--primary`
@@ -699,6 +703,7 @@ square. (Ours is written and working; happy to hand it over.)
   silent: `font-medium` simply has no effect. Either document it prominently or find a way to layer
   `.display` in the source builds while keeping it unlayered in the prebuilt exports.
 - **§3's headroom claim held.** `#1D5E42` with a white label measures 7.69:1 in the running app, and
-  the split let `Button secondary`/`ghost` and links stay AAA at 8.53:1 on the card.
+  the split let `Button secondary`/`ghost` and links stay AAA at 9.63:1 on the shipped white card
+  (8.53:1 against the tan card §3 originally assumed).
 - **§4's ~1.1–1.2:1 target was right.** White on `#E9E3D3` measures 1.28:1 and reads as properly
   layered without looking like a hard edge.

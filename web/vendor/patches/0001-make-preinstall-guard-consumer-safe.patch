@@ -1,0 +1,44 @@
+Subject: [PATCH 1/2] fix(pkg): make the preinstall guard safe for consumers
+
+The published package is uninstallable. `preinstall` runs
+`node scripts/check-npm-version.mjs`, but `files` is ["dist", "NOTICE.md"], so
+scripts/ is never shipped. npm runs a dependency's preinstall, so every consumer
+install dies with MODULE_NOT_FOUND. Reproduced against 0.1.1 from the registry in
+a clean project.
+
+Ships the script and makes the guard exit early when it detects it is running
+from inside a node_modules tree: the npm-10 lockfile hazard it guards
+(npm/cli#4828) is about developing this repo, and a consumer on npm 10 is
+unaffected.
+
+--- a/package.json
++++ b/package.json
+@@ -59,6 +59,7 @@
+   },
+   "files": [
+     "dist",
++    "scripts/check-npm-version.mjs",
+     "NOTICE.md"
+   ],
+   "scripts": {
+--- a/scripts/check-npm-version.mjs
++++ b/scripts/check-npm-version.mjs
+@@ -15,6 +15,18 @@
+ // npm exposes its own version to lifecycle scripts via the user-agent env var,
+ // e.g. "npm/11.18.0 node/v22.14.0 darwin arm64". If it is absent (script run
+ // outside an npm lifecycle) we cannot tell, so we do not block.
++// The hook is `preinstall`, which npm also runs for this package when it is
++// installed as somebody else's DEPENDENCY. The lockfile concern is purely about
++// developing THIS repo, and a consumer on npm 10 is unaffected, so bail out as
++// soon as we can tell we are running from inside a node_modules tree. (Without
++// this the guard is actively harmful: `files` does not ship scripts/, so a
++// consumer's install dies with MODULE_NOT_FOUND before npm ever reaches us.)
++import { fileURLToPath } from "node:url";
++
++if (fileURLToPath(import.meta.url).split(/[\\/]/).includes("node_modules")) {
++  process.exit(0);
++}
++
+ const ua = process.env.npm_config_user_agent ?? "";
+ const match = ua.match(/\bnpm\/(\d+)\./);
+ 
