@@ -140,11 +140,11 @@ enforced by auditing consumer code alone.
 `aria-describedby={undefined}`; `EventDialog` does it internally, so the knowledge is in the
 package but plain `DialogContent` users must rediscover it.
 
-### C. The `scoutsbsa` palette does not work for a data-dense app
+### C. The palette does not work for a data-dense app
 
-**C1. `--card` and `--background` are the same colour.** Measured live: page and card are both
-`rgb(245, 241, 230)`. So `Card variant="outlined"` is a 1.00:1 fill and `elevated` separates by
-**drop shadow only**. The borders do not rescue it either:
+**C1. `--card` and `--background` are the same colour — and not just in `scoutsbsa`.** Measured
+live: page and card are both `rgb(245, 241, 230)`. So `Card variant="outlined"` is a 1.00:1 fill and
+`elevated` separates by **drop shadow only**. The borders do not rescue it either:
 
 | boundary | contrast vs page |
 |---|---|
@@ -153,11 +153,20 @@ package but plain `DialogContent` users must rediscover it.
 | `border-border` at full strength | 2.36:1 |
 | `bg-muted/40` (`flat`) | 1.13:1 |
 
-All below WCAG 1.4.11's 3:1 floor for meaningful non-text boundaries, and shadows earn no credit
-there and vanish under `forced-colors`. Concretely: the index hero's `bg-card` band is now an
-invisible section marked only by a 1px border, and the loading skeleton is visible only because
-`animate-pulse` moves it. **This is a palette problem, not a Camp Finder problem** — `scoutsbsa`
-needs a `--card` distinct from `--background`, or a `--surface-raised` token.
+Checking `tokens.css` afterwards, **`--background`, `--card` and `--popover` are bound to one value
+in all five programs**, so this is systemic, not a `scoutsbsa` quirk. It is only *visible* in the
+four tinted programs — the parent brand is white-on-white, which reads as deliberate, so Storybook's
+default view hides it. Concretely here: the index hero's `bg-card` band is an invisible section
+marked only by a 1px border, and the loading skeleton is visible only because `animate-pulse` moves
+it. Worse, the `forced-colors` block sets `--os-shadow: none`, so in Windows High Contrast every
+panel boundary in the system disappears outright.
+
+⚠ **Correction to an earlier draft of this section:** we first called this a WCAG 1.4.11 failure.
+That is overstated for cards — 1.4.11's 3:1 applies to *UI component* boundaries and states, not
+decorative surface-vs-surface fills, and the design this app shipped pre-port is itself only 1.20:1
+(white `#FFFFFF` on `#EDEAE1`) and reads as properly layered. **~1.1-1.2:1 is all a large-area fill
+needs**; the problem is that 1.00:1 is exactly zero. Where 1.4.11 *is* genuinely violated is form
+controls — see C5.
 
 **C2. The same collision reappears in `Tabs`.** Track is `--muted` `rgb(214,206,189)`, active
 trigger is `--background` `rgb(245,241,230)` — a ~1.36:1 step. The shadcn "lift out of the muted
@@ -177,6 +186,21 @@ token-correct thing turned the header's warm rust accent (`#B5551F`) into cold n
 tent on tan paper. There is no warm accent anywhere in the palette to substitute. Defensible as
 "the DS is the source of truth now", but it is an identity change — **someone should eyeball the
 header and confirm they want it.**
+
+**C5. Form controls are painted with the page background — a real WCAG 1.4.11 failure.**
+`controlClasses` (`Field.tsx:39`) is `... border border-input bg-background ...`, so a text input's
+fill is the *page* colour and its only boundary is `--input`. In `scoutsbsa` that is `#AD9D7B` at
+**2.36:1** against the surface it sits on — under the 3:1 floor, and here the criterion genuinely
+applies, because identifying the boundary of a form control is exactly what it covers. `--input` and
+`--border` are set to the same value in all five programs, which is what let a decorative keyline
+colour end up carrying an interactive boundary. `#9A8862` would clear it at 3.06:1.
+
+**C6. The derived radius scale computes to negative values in two programs.** `theme.css:79-82`
+defines `--radius-sm: calc(var(--radius) - 4px)` and `--radius-md: calc(var(--radius) - 2px)`.
+Against the per-program `--radius` that yields `sm: -2px / md: 0px` for Venturing and
+`sm: -3px / md: -1px` for Sea Scouts. Negative `border-radius` is invalid, so `rounded-sm` and
+`rounded-md` silently do nothing there. Latent for our primitives, which use `rounded-lg` — but
+`TabsTrigger` already ships `rounded-md` (B5), so it is live today.
 
 ### D. Missing primitives — each one forced a hand-roll back to raw utilities
 
