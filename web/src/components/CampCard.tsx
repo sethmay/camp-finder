@@ -69,15 +69,14 @@ export default function CampCard({
       </div>
 
       {camp.features.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
           {orderedFeatures.slice(0, MAX_CHIPS).map((f) => (
             <FeatureChip key={f} feature={f} signature={sig.has(f)} />
           ))}
-          {/* Same casing/size override as FeatureChip: this chip lives in that row. */}
+          {/* Plain text, matching the containerless features beside it -- a filled Badge
+            * here would be the only pill left in the row and read as the loudest thing. */}
           {extraChips > 0 && (
-            <Badge variant="subtle" className="normal-case tracking-normal text-xs font-medium">
-              +{extraChips} more
-            </Badge>
+            <span className="text-xs text-muted-foreground">+{extraChips} more</span>
           )}
         </div>
       )}

@@ -19,7 +19,7 @@ import {
   WavesHorizontal,
   type LucideIcon,
 } from "lucide-react";
-import { Badge } from "@opensourcescouting/design-system";
+import { cn } from "@opensourcescouting/design-system";
 import { featureLabel } from "@lib/format";
 
 // Lucide (MIT) glyph per known feature code; `horseback` gets a custom inline glyph
@@ -56,6 +56,18 @@ function FeatureIcon({ feature }: { feature: string }) {
   return <Icon size={14} aria-hidden="true" />;
 }
 
+/**
+ * A camp feature, rendered as icon + label with NO container.
+ *
+ * This was a `Badge` (DS `subtle`/`outline`). Two problems with that: a detail page
+ * lists ~20 features, and 20 filled pills read as a wall of tan blobs rather than
+ * scannable facts; and these are DATA, not status or navigation, which is what a
+ * badge is for. Dropping the container makes the icon the delimiter and lets the
+ * labels sit on the page like a list -- denser, quieter, and it scales to 20 items.
+ *
+ * Signature features stay distinguishable by three things, not colour alone
+ * (WCAG 1.4.1): a star, the primary-tinted icon, and a heavier label.
+ */
 export default function FeatureChip({
   feature,
   signature = false,
@@ -63,19 +75,23 @@ export default function FeatureChip({
   feature: string;
   signature?: boolean;
 }) {
-  // Badge's recipe forces `text-[11px] uppercase tracking-wider`, which shouts
-  // Title Case vocab labels ("Adirondack Shelters" -> "ADIRONDACK SHELTERS") and
-  // widens a 4-chip row past the card. Feature chips are data, not eyebrows, so
-  // the casing/tracking is overridden here (see spike notes).
   return (
-    <Badge
-      variant={signature ? "outline" : "subtle"}
-      className="normal-case tracking-normal text-xs font-medium"
+    <span
+      className={cn(
+        "inline-flex items-center gap-1.5 text-xs",
+        signature ? "font-semibold text-foreground" : "text-foreground",
+      )}
     >
-      {signature && <span aria-hidden="true">★</span>}
-      <FeatureIcon feature={feature} />
+      {signature && (
+        <span aria-hidden="true" className="text-primary">
+          ★
+        </span>
+      )}
+      <span className={signature ? "text-primary" : "text-muted-foreground"}>
+        <FeatureIcon feature={feature} />
+      </span>
       {featureLabel(feature)}
       {signature && <span className="sr-only"> (signature feature)</span>}
-    </Badge>
+    </span>
   );
 }

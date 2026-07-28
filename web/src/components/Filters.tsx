@@ -72,7 +72,7 @@ export default function Filters({
   const julyHighId = useId();
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-5">
       <div className="flex items-center justify-between">
         <Heading level={2} size={4}>
           Filters
@@ -180,7 +180,7 @@ export default function Filters({
         />
       </Field>
 
-      <fieldset className="flex flex-col gap-2">
+      <fieldset className="flex flex-col gap-1.5">
         <legend className="display text-sm font-medium text-foreground">Program</legend>
         <div className="flex flex-wrap gap-1.5">
           {ALL_CATEGORIES.map((cat) => {
@@ -200,10 +200,10 @@ export default function Filters({
         </div>
       </fieldset>
 
-      <fieldset className="flex flex-col gap-3">
+      <fieldset className="flex flex-col gap-2.5">
         <legend className="display text-sm font-medium text-foreground">Features</legend>
         {FEATURE_FACET_GROUPS.map((group) => (
-          <div key={group.label} role="group" aria-label={group.label} className="flex flex-col gap-1.5">
+          <div key={group.label} role="group" aria-label={group.label} className="flex flex-col gap-1">
             <p aria-hidden="true" className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{group.label}</p>
             <div className="flex flex-wrap gap-1.5">
               {group.codes.map((f) => {
