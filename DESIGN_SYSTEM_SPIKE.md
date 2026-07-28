@@ -124,7 +124,13 @@ in the package.
 plus `cf-tap` on the triggers. Relatedly, **nothing in the public types guarantees any DS control
 clears 44px** — `TextInput`/`NativeSelect` are `h-11` today, exactly 44px with zero margin, but
 that is an implementation detail in the bundle. A minor bump to `h-10` would drop this app below
-WCAG 2.5.8 with no type error and no visual regression a reviewer would catch.
+the floor with no type error and no visual regression a reviewer would catch.
+
+⚠ **Correction:** an earlier draft cited WCAG 2.5.8 for the 44px figure. Wrong criterion — 2.5.8
+Target Size (Minimum) is Level **AA** at **24×24** CSS px. The 44×44 figure is **2.5.5 Target Size
+(Enhanced), Level AAA**. This matters because the design system's author is targeting AAA, which
+makes 44px a conformance requirement rather than a guideline — and it means **`Button size="sm"`
+(`h-9` = 36px) can never satisfy AAA target size**, alongside `TabsList`.
 
 **B4. `DialogContent` has no height cap and no overflow.** It is `grid gap-4 ... p-6` and nothing
 else, so any form taller than the viewport runs off the bottom unreachable. Needed

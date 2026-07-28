@@ -250,7 +250,10 @@ Small, but they mean the rules can't be enforced by auditing consumer code alone
   and a min-height on the triggers. More generally, nothing in the public types guarantees any
   control clears 44px: `TextInput` and `NativeSelect` are `h-11` today — exactly 44px with zero
   margin — but that's an implementation detail in the bundle, so a future bump to `h-10` would drop
-  consumers below WCAG 2.5.8 with no type error and no visual regression a reviewer would notice.
+  consumers below the floor with no type error and no visual regression a reviewer would notice.
+  (The 44px figure is WCAG **2.5.5** Target Size (Enhanced), Level AAA; 2.5.8 is AA at 24x24.
+  Since AAA is the stated goal, 44px is a conformance requirement — which also means
+  `Button size="sm"` at `h-9` = 36px can never conform.)
 
 Also worth surfacing while we're here: **`Tabs`' active state is ~1.36:1** in scoutsbsa (track
 `--muted` `#D6CEBD`, active trigger `--background` `#F5F1E6`). The shadcn "lift out of the muted

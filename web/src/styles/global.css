@@ -22,7 +22,8 @@
  * this, DS components render structurally correct but completely unstyled. */
 @source "../../node_modules/@opensourcescouting/design-system/dist";
 
-/* Minimum 44px hit target (WCAG 2.5.8). The DS Button sizes already clear it
+/* Minimum 44px hit target (WCAG 2.5.5 Target Size (Enhanced), AAA; the AA
+ * criterion 2.5.8 only asks 24px). The DS Button sizes already clear it
  * (md = h-11); this covers the native inputs, selects and range slider that
  * the DS form layer does not own. */
 @utility cf-tap {
