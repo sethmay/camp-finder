@@ -188,6 +188,27 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   marker circles: `queryRenderedFeatures(e.point, { layers: ["point","cluster","point-label","cluster-count"] })`.
   Omitting the text layers makes a click on a camp's name/count read as "empty map" and wrongly
   deselect. Same sync discipline as `OVERLAY_LAYERS`.
+- **A blank map after editing an island is Vite HMR, not your CSS.** MapLibre owns imperative
+  DOM inside a React island, so an HMR update to `SearchApp`/`MapView` can leave the live map
+  bound to a container React has already detached: canvas alive, tiles fetched, nothing
+  visible — and the frame/border still renders correctly, which sends you hunting the wrong
+  change. Restart `astro dev` (or hard-reload) before debugging. Confirmed: an apparent
+  "border broke the map" was pure HMR state; the same build rendered fine on `dev`, on
+  `preview`, cache-disabled, and across Map/List toggling.
+- **MapLibre fails silently in three different ways; handle all three or you get an empty
+  box.** `new maplibregl.Map()` THROWS when WebGL is unavailable (inside `useEffect`, so it
+  surfaces nowhere useful); a dead style/glyph endpoint does NOT throw and only fires
+  `map.on("error")`; and `webglcontextlost` blanks the canvas with no recovery. `MapView`
+  handles each and renders a fallback pointing at the list view. Keep the container mounted
+  and put the fallback INSIDE it — the `ref` must survive — and give it `bg-muted` so a blank
+  canvas can't show the page through the frame, which is what made "map missing" and "map
+  empty" indistinguishable. Drop `role="application"` when it fails. Test it by stubbing
+  `HTMLCanvasElement.prototype.getContext` to return `null` for `webgl*`.
+- **The map's boundary owes 3:1, not the decorative border tone.** Both map frames use
+  `border-input`, not `border-border`: a map is an interactive component (`role="application"`,
+  pan/zoom) so WCAG 1.4.11 applies to its edge. Pair the border with `overflow-hidden` or the
+  square tile canvas overflows the radius. (Watch for the two frames drifting apart — the
+  search map went a whole port without a border while the detail map had one.)
 
 ## Frontend / a11y (manual — no axe/pa11y in the toolchain)
 
