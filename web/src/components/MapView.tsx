@@ -6,7 +6,6 @@ import { MAP_COLORS, US_CENTER, US_ZOOM, mapStyle, muteBasemap } from "@lib/map"
 import { withBase } from "@lib/paths";
 
 const SRC = "camps";
-const CLUSTER_ACTIVE = "#164A34"; // primary-700, selected reservation pill
 
 interface Member {
   id: string;
@@ -149,7 +148,7 @@ export default function MapView({
         "circle-radius": 7,
         "circle-color": keyColor(groupKeyOf(ranked, selectedId), MAP_COLORS.markerActive, MAP_COLORS.markerDefault),
         "circle-stroke-width": 2,
-        "circle-stroke-color": "#FFFFFF",
+        "circle-stroke-color": MAP_COLORS.markerStroke,
       },
     });
 
@@ -161,9 +160,9 @@ export default function MapView({
       filter: IS_GROUP,
       paint: {
         "circle-radius": 12,
-        "circle-color": keyColor(groupKeyOf(ranked, selectedId), CLUSTER_ACTIVE, MAP_COLORS.cluster),
+        "circle-color": keyColor(groupKeyOf(ranked, selectedId), MAP_COLORS.clusterActive, MAP_COLORS.cluster),
         "circle-stroke-width": 2,
-        "circle-stroke-color": "#FFFFFF",
+        "circle-stroke-color": MAP_COLORS.markerStroke,
       },
     });
     map.addLayer({
@@ -199,7 +198,7 @@ export default function MapView({
       },
       paint: {
         "text-color": MAP_COLORS.markerDefault,
-        "text-halo-color": "#FFFFFF",
+        "text-halo-color": MAP_COLORS.labelHalo,
         "text-halo-width": 1.5,
       },
     });
@@ -212,18 +211,20 @@ export default function MapView({
       onSelect(members[0].id);
       const body =
         members.length === 1
-          ? `<a href="${withBase(`/camps/${members[0].id}`)}" style="color:var(--cf-primary)">View details →</a>`
+          ? `<a class="text-primary" href="${withBase(`/camps/${members[0].id}`)}">View details →</a>`
           : members
-              .map(
-                (m) =>
-                  `<a href="${withBase(`/camps/${m.id}`)}" style="color:var(--cf-primary)">${m.name} →</a>`,
-              )
+              .map((m) => `<a class="text-primary" href="${withBase(`/camps/${m.id}`)}">${m.name} →</a>`)
               .join("<br/>");
       new maplibregl.Popup({ offset: 14, closeButton: false })
         .setLngLat((feat.geometry as GeoJSON.Point).coordinates as [number, number])
+        // Tailwind classes rather than inline styles: `setHTML` injects into a MapLibre
+        // container that still lives inside <body>, so the data-program stamp on <html>
+        // applies and the DS variables resolve. `font-body` is required because
+        // `.maplibregl-map` sets a Helvetica `font` shorthand the popup would inherit;
+        // `display` is the DS display-type helper (a plain rule in tokens.css, never purged).
         .setHTML(
-          `<div style="font-family:var(--cf-font-sans)">
-             <strong>${props.name}</strong><br/>
+          `<div class="font-body text-foreground">
+             <strong class="display">${props.name}</strong><br/>
              ${body}
            </div>`,
         )
@@ -257,7 +258,7 @@ export default function MapView({
     if (!map || !ready || !map.getLayer("point")) return;
     const key = groupKeyOf(ranked, selectedId);
     map.setPaintProperty("point", "circle-color", keyColor(key, MAP_COLORS.markerActive, MAP_COLORS.markerDefault));
-    map.setPaintProperty("cluster", "circle-color", keyColor(key, CLUSTER_ACTIVE, MAP_COLORS.cluster));
+    map.setPaintProperty("cluster", "circle-color", keyColor(key, MAP_COLORS.clusterActive, MAP_COLORS.cluster));
     // Fly only on a genuine NEW selection — not when this effect re-runs for a ranked/ready
     // change while the same camp stays selected (that yanked the camera back to it).
     if (selectedId && selectedId !== lastFlownRef.current) {
@@ -272,7 +273,7 @@ export default function MapView({
   return (
     <div
       ref={containerRef}
-      className="h-full w-full rounded-md"
+      className="h-full w-full rounded-lg"
       role="application"
       aria-label="Map of matching camps. A full list of the same camps is shown alongside."
     />

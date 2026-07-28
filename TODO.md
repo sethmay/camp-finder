@@ -10,6 +10,26 @@ and canonical `data/` tree were removed in 0.28.0; all data authoring, correctio
 scraping now happen upstream in [open-scout-api](https://github.com/sethmay/open-scout-api).
 Refreshing the committed dataset is a deliberate step (`npm run data`), not part of the build.
 
+## Design system spike (parked, awaiting decision) — branch `feature/design-system-spike`
+
+Full UI retheme onto `@opensourcescouting/design-system` 0.2.0-alpha.0, done as a spike.
+**Not to be merged without explicit approval.** Builds clean (451 pages, `astro check` 0 errors,
+35/35 tests, 0 console errors across every route). Read **`DESIGN_SYSTEM_SPIKE.md` on that branch**
+— it is the deliverable: what the migration took, and ~30 findings grouped as upstream blockers
+(A), a11y bugs (B), palette problems (C), missing primitives (D), API friction (E), Astro traps (F).
+
+Blocking on somebody else, not on us:
+- **A1/A2 must be fixed upstream in the design system before real adoption.** The published package
+  is uninstallable (`preinstall` script excluded from `files`; reproduced against npm `0.1.1`), and
+  `npm run build` cannot complete on Windows. Both are fixed in the working tree of the clone at
+  `.claude/design_system` and **should be sent upstream as PRs** — they are not our repo's changes.
+- The branch depends on a vendored tarball (`web/vendor/*.tgz`, `file:` dependency) purely because
+  of A1. First task if the spike graduates: swap to a real registry version.
+
+Open questions for the humans (spike deliberately does not decide these): body serif for a
+data-dense UI, the 60px hero scale, whether `--card == --background` and the SA-Blue accent on
+`scoutsbsa` are ours to override or theirs to fix.
+
 ## Map & UI polish (active) — live at https://sethmay.github.io/camp-finder/
 
 - **Verify the map on the live site.** Headless software-WebGL paints the basemap but not the

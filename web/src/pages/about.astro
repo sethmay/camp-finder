@@ -2,59 +2,66 @@
 import Base from "../layouts/Base.astro";
 import type { Meta } from "../lib/types";
 import metaData from "../../public/data/meta.json";
+import { Card, Heading } from "@opensourcescouting/design-system";
 
 const meta = metaData as unknown as Meta;
 ---
 
 <Base title="About — Camp Finder">
   <article class="mx-auto max-w-2xl px-4 py-10">
-    <h1 class="font-display text-h1 text-ink">About Camp Finder</h1>
+    <Heading level={1} size={2}>About Camp Finder</Heading>
 
-    <p class="mt-4 text-body text-ink">
+    <p class="mt-4 text-base text-foreground">
       Camp Finder is an unofficial, community-built directory of Scouts BSA resident
       summer camps operated by local councils across the country. It exists to solve one
       problem: there is no single place to discover camps you don't already know about.
     </p>
 
-    <h2 class="mt-8 font-display text-h2 text-ink">How it works</h2>
-    <p class="mt-3 text-body text-ink">
+    <Heading level={2} size={3} className="mt-8">How it works</Heading>
+    <p class="mt-3 text-base text-foreground">
       We help you discover camps by location, program, and features, then link every
       listing straight to the council's own page. Session dates, fees, and availability
       change constantly, so we deliberately don't try to mirror them — the council site is
       always the authority. We are a directory and a pointer, never the source of record.
     </p>
 
-    <h2 class="mt-8 font-display text-h2 text-ink">Where the data comes from</h2>
-    <p class="mt-3 text-body text-ink">
+    <Heading level={2} size={3} className="mt-8">Where the data comes from</Heading>
+    <p class="mt-3 text-base text-foreground">
       Camp and council records come from the
-      <a href={meta.source_url} class="text-primary underline" target="_blank" rel="noopener noreferrer">
+      <a href={meta.source_url} class="text-primary underline underline-offset-2 hover:text-primary/90" target="_blank" rel="noopener noreferrer">
         Open Scout API</a>, an open, versioned dataset of Scouting America reference data.
       Each listing carries the date its information was last verified; listings older than
       a year are flagged. Always confirm details on the official council page before you
       register.
     </p>
-    <ul class="mt-3 grid grid-cols-3 gap-2 text-sm text-muted">
-      <li class="rounded-md border border-border bg-surface p-3">
-        <span class="block font-mono text-h3 text-ink">{meta.camp_count}</span> camps
+    <ul class="mt-3 grid grid-cols-3 gap-2 text-sm text-muted-foreground">
+      <li>
+        <Card variant="elevated" className="p-3">
+          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.camp_count}</span> camps
+        </Card>
       </li>
-      <li class="rounded-md border border-border bg-surface p-3">
-        <span class="block font-mono text-h3 text-ink">{meta.council_count}</span> councils
+      <li>
+        <Card variant="elevated" className="p-3">
+          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.council_count}</span> councils
+        </Card>
       </li>
-      <li class="rounded-md border border-border bg-surface p-3">
-        <span class="block font-mono text-h3 text-ink">{meta.states_covered.length}</span> states
+      <li>
+        <Card variant="elevated" className="p-3">
+          <span class="block font-mono text-xl sm:text-2xl text-foreground">{meta.states_covered.length}</span> states
+        </Card>
       </li>
     </ul>
 
-    <h2 id="corrections" class="mt-8 font-display text-h2 text-ink">Suggest a correction</h2>
-    <p class="mt-3 text-body text-ink">
+    <Heading level={2} size={3} id="corrections" className="mt-8">Suggest a correction</Heading>
+    <p class="mt-3 text-base text-foreground">
       Found something wrong or missing? Camp and council facts are maintained in the
-      <a href={meta.source_url} class="text-primary underline" target="_blank" rel="noopener noreferrer">
+      <a href={meta.source_url} class="text-primary underline underline-offset-2 hover:text-primary/90" target="_blank" rel="noopener noreferrer">
         Open Scout API</a> — open an issue or pull request there with the camp name, what's
       wrong, and a link to the authoritative source.
     </p>
 
-    <h2 class="mt-8 font-display text-h2 text-ink">Disclaimer</h2>
-    <p class="mt-3 text-body text-ink">
+    <Heading level={2} size={3} className="mt-8">Disclaimer</Heading>
+    <p class="mt-3 text-base text-foreground">
       Camp Finder is not affiliated with, endorsed by, or sponsored by Scouting America
       (Boy Scouts of America). All council and camp names are the property of their
       respective owners.

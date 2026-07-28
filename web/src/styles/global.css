@@ -1,28 +1,30 @@
-@import "./tokens.css";
+/* Camp Finder entry stylesheet — Tailwind v4, themed by the Open Source
+ * Scouting design system.
+ *
+ * There is no tailwind.config file: v4 is configured in CSS, and the palette,
+ * type, radius, shadow and motion scales all come from the design system's
+ * tokens + @theme mapping. Do not reintroduce a local colour/type scale beside
+ * them — override a `--os-*` / shadcn token instead (see the DS README,
+ * "Override colors for your council").
+ *
+ * The program is stamped once as data-program="scoutsbsa" on <html> in
+ * layouts/Base.astro, so every token resolves document-wide with no JS. React
+ * islands additionally wrap in <ScoutThemeProvider> for the components that
+ * read program metadata through context.
+ */
+@import "tailwindcss";
+@import "@opensourcescouting/design-system/tokens";
+@import "@opensourcescouting/design-system/theme";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind never scans node_modules, so the utilities baked into the design
+ * system's own components (bg-primary, shadow-program, border-b-rule, ...) are
+ * not emitted by our build unless we point the scan at the package. Without
+ * this, DS components render structurally correct but completely unstyled. */
+@source "../../node_modules/@opensourcescouting/design-system/dist";
 
-@layer base {
-  html {
-    font-family: var(--cf-font-sans);
-    color: var(--cf-text);
-    background: var(--cf-bg);
-    -webkit-text-size-adjust: 100%;
-  }
-  body { margin: 0; }
-  h1, h2, h3 { font-family: var(--cf-font-display); }
-
-  /* Accessible focus: 2px accent ring at 2px offset (handoff §2). */
-  :where(a, button, input, select, [tabindex]):focus-visible {
-    outline: 2px solid var(--cf-accent);
-    outline-offset: 2px;
-    border-radius: var(--cf-r-sm);
-  }
-}
-
-@layer components {
-  /* Minimum 44px hit targets for interactive controls (handoff a11y). */
-  .cf-tap { min-height: 44px; }
+/* Minimum 44px hit target (WCAG 2.5.8). The DS Button sizes already clear it
+ * (md = h-11); this covers the native inputs, selects and range slider that
+ * the DS form layer does not own. */
+@utility cf-tap {
+  min-height: 44px;
 }

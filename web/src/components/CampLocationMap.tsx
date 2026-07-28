@@ -39,7 +39,7 @@ export default function CampLocationMap({
   return (
     <div
       ref={containerRef}
-      className="h-full w-full rounded-md"
+      className="h-full w-full rounded-lg"
       role="application"
       aria-label={`Map showing the location of ${name}`}
     />

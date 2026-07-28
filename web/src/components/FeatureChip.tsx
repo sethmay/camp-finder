@@ -5,7 +5,7 @@ import {
   Cable,
   Compass,
   FlaskConical,
-  Home,
+  House,
   Leaf,
   Mountain,
   Droplets,
@@ -16,16 +16,17 @@ import {
   UserPlus,
   Users,
   Utensils,
-  Waves,
+  WavesHorizontal,
   type LucideIcon,
 } from "lucide-react";
+import { Badge } from "@opensourcescouting/design-system";
 import { featureLabel } from "@lib/format";
 
 // Lucide (MIT) glyph per known feature code; `horseback` gets a custom inline glyph
 // (handoff §3). Unknown codes (open vocab) fall back to a generic tent.
 const ICON: Record<string, LucideIcon> = {
   dining_hall: Utensils,
-  waterfront: Waves,
+  waterfront: WavesHorizontal,
   pool: Droplets,
   shooting_sports: Target,
   climbing: Mountain,
@@ -39,7 +40,7 @@ const ICON: Record<string, LucideIcon> = {
   handicraft: Palette,
   nature_study: Leaf,
   provisional_attendance: UserPlus,
-  cabins: Home,
+  cabins: House,
   zip_line: Cable,
 };
 
@@ -62,17 +63,19 @@ export default function FeatureChip({
   feature: string;
   signature?: boolean;
 }) {
-  const tone = signature
-    ? "border-primary bg-surface text-primary"
-    : "border-border bg-bg text-ink";
+  // Badge's recipe forces `text-[11px] uppercase tracking-wider`, which shouts
+  // Title Case vocab labels ("Adirondack Shelters" -> "ADIRONDACK SHELTERS") and
+  // widens a 4-chip row past the card. Feature chips are data, not eyebrows, so
+  // the casing/tracking is overridden here (see spike notes).
   return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-pill border px-2 py-1 text-xs font-medium ${tone}`}
+    <Badge
+      variant={signature ? "outline" : "subtle"}
+      className="normal-case tracking-normal text-xs font-medium"
     >
       {signature && <span aria-hidden="true">★</span>}
       <FeatureIcon feature={feature} />
       {featureLabel(feature)}
       {signature && <span className="sr-only"> (signature feature)</span>}
-    </span>
+    </Badge>
   );
 }
