@@ -91,6 +91,10 @@ export default function MapView({
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [ready, setReady] = useState(false);
+  // Set when MapLibre cannot start (no WebGL, lost GPU context, style fetch dead). Without
+  // this the container renders as a silently empty box -- indistinguishable from "the border
+  // is drawn but the map vanished" -- and the only clue is a console throw inside an effect.
+  const [failed, setFailed] = useState<string | null>(null);
   const builtRef = useRef(false);
   // Last camp/reservation key we flew to, so a re-run of the selection effect (e.g. on a
   // ranked/filter change) never re-flies the camera to a camp that stayed selected.
@@ -99,20 +103,44 @@ export default function MapView({
   // Create the map once; the source/layers are added on first data (below).
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      style: mapStyle(),
-      center: US_CENTER,
-      zoom: US_ZOOM,
-    });
+    let map: maplibregl.Map;
+    try {
+      map = new maplibregl.Map({
+        container: containerRef.current,
+        style: mapStyle(),
+        center: US_CENTER,
+        zoom: US_ZOOM,
+      });
+    } catch (err) {
+      // Constructor throws when WebGL is unavailable or the GPU context cannot be
+      // acquired. Surface it instead of leaving an empty framed box.
+      setFailed(err instanceof Error ? err.message : "Map could not be initialised.");
+      return;
+    }
     mapRef.current = map;
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     map.on("load", () => {
       muteBasemap(map);
       setReady(true);
     });
+    // A dead style/glyph endpoint fires here rather than throwing, and previously left the
+    // map blank with no signal. Only a style failure is fatal; individual tile 404s are not.
+    map.on("error", (e) => {
+      const msg = e.error?.message ?? "";
+      if (/style|sprite|glyph/i.test(msg)) setFailed(msg);
+      if (import.meta.env.DEV) console.warn("[MapView] maplibre error:", msg);
+    });
+    // Losing the GPU context (driver reset, too many live contexts, tab backgrounded on
+    // some machines) silently blanks the canvas; MapLibre does not recover on its own.
+    const canvas = map.getCanvas();
+    const onLost = (ev: Event) => {
+      ev.preventDefault();
+      setFailed("The map lost its graphics context. Reload the page to restore it.");
+    };
+    canvas.addEventListener("webglcontextlost", onLost);
 
     return () => {
+      canvas.removeEventListener("webglcontextlost", onLost);
       map.remove();
       mapRef.current = null;
       builtRef.current = false;
@@ -270,12 +298,26 @@ export default function MapView({
     lastFlownRef.current = selectedId;
   }, [selectedId, ranked, ready]);
 
+  // The container must keep its ref and stay mounted, so the fallback renders INSIDE it
+  // rather than replacing it. bg-muted stops a blank canvas showing the page through the
+  // frame, which is what made "map missing" and "map empty" look identical.
   return (
     <div
       ref={containerRef}
-      className="h-full w-full rounded-lg"
-      role="application"
-      aria-label="Map of matching camps. A full list of the same camps is shown alongside."
-    />
+      className="h-full w-full rounded-lg bg-muted"
+      role={failed ? undefined : "application"}
+      aria-label={
+        failed ? undefined : "Map of matching camps. A full list of the same camps is shown alongside."
+      }
+    >
+      {failed ? (
+        <div className="flex h-full w-full items-center justify-center p-6" role="status">
+          <p className="max-w-sm text-center text-sm text-muted-foreground">
+            The map couldn&rsquo;t load. Switch to the list view to browse the same camps.
+            <span className="mt-2 block text-xs text-os-on-surface-faint">{failed}</span>
+          </p>
+        </div>
+      ) : null}
+    </div>
   );
 }
