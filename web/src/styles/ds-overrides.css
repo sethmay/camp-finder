@@ -313,52 +313,106 @@
   }
 
   /* ---------------------------------------------------------------------------
-     3.2 — Filter chips: crisp fill, and tightened WITHOUT losing the AAA target.
+     3.2 — Filter chips: match the pre-port density WITHOUT losing the AAA target.
 
-     Measured before: 44px tall, 12px label, padding 4px 12px, 6px gaps. So the
-     bulk was never padding -- it was `cf-tap`'s `min-height: 44px` stretching a
-     ~20px content box, leaving ~24px of dead space.
+     Measured stock: 44px tall, 12px label, padding 4px 12px, 6px gaps. The bulk
+     was never padding -- it was `cf-tap`'s `min-height: 44px` stretching a ~20px
+     content box, leaving ~24px dead.
 
-     WCAG 2.5.5 (AAA) needs a 44x44 TARGET, and none of its exceptions
-     (equivalent control, inline-in-text, user-agent, essential) cover a filter
-     chip. But target size is the CLICKABLE area, not the visible box, so the two
-     are separable: shrink the box, extend the hit area into the gap with a
-     pseudo-element.
+     Then measured why a 36px chip STILL read heavier than the old one. It is not
+     the font size. Side by side:
 
-     The binding constraint is that hit areas must not overlap each other:
-     (44 - visual height) <= gap. At 36px visual the gap must be >= 8px, which
-     makes the row pitch exactly 44px -- hit areas abut without colliding.
+                      stock DS chip          pre-port chip
+       weight         700  (from .display)   500
+       size           13px                   12px
+       family         Montserrat display     Public Sans body
+       text colour    primary green          near-black ink (neutral)
+       border colour  primary green          light tan (neutral)
 
-     Worth knowing: with non-overlapping 44px targets the row pitch CANNOT go
-     below 44px, so the real vertical saving is 6px/row (50 -> 44), about 12% of
-     the chip block. Shrinking further only makes the visible chip smaller inside
-     the same pitch. The bigger win is that the chip now hugs its label instead
-     of floating in an empty box -- and the label goes 12px -> 13px, which in a
-     264px rail is a legibility gain, not a cost.
+     WEIGHT is the dominant factor, and the second is that the DS `outline` badge
+     variant paints BOTH the border and the label in --primary, so every
+     UNSELECTED chip reads as emphasised. The old design kept the off state
+     neutral and spent colour only on the on state -- which is the correct
+     signal: 20 of 23 chips are off at rest.
+
+     So: weight 500, 12px, neutral border + ink label when off, green fill when
+     on. That is a DS finding too, not just taste -- `Badge variant="outline"` has
+     no neutral option (primary | accent | subtle | outline, and outline is
+     primary-tinted), so a quiet bordered chip is not expressible.
+
+     Target size: box drops to 30px (the pre-port height), so the pseudo-element
+     grows by 7px each side to hold 44px. Row gap must then be >= 14px to keep
+     hit areas from overlapping; COLUMN gap can stay 8px because every chip is
+     already >= 59px wide. Row pitch is 44px either way -- with non-overlapping
+     44px targets it cannot be less -- so this costs no vertical space at all
+     versus the 36px version. It just looks lighter.
      ------------------------------------------------------------------------ */
   [data-program] button[aria-pressed] {
     min-height: 0; /* release cf-tap; the target moves to ::after */
-    height: 2.25rem; /* 36px visible */
-    padding-inline: 0.625rem; /* 12px -> 10px */
-    font-size: 13px;
+    height: 1.875rem; /* 30px visible, matching pre-port */
+    padding-inline: 0.75rem; /* 12px, matching pre-port */
     position: relative;
   }
-  [data-program] button[aria-pressed][aria-pressed="false"] {
+  /* Off state stays neutral. --input rather than --border for the edge: this is a
+     control boundary, so it owes 1.4.11's 3:1 (--input is 3.87:1 on white,
+     --border only 2.66:1). */
+  [data-program] button[aria-pressed="false"] {
     background-color: rgb(var(--os-surface-crisp));
+    border-color: rgb(var(--input));
+    color: rgb(var(--foreground));
   }
   /* The real 44px AAA target. inset-block only: every chip is already well over
      44px wide, so the horizontal axis needs no help. */
   [data-program] button[aria-pressed]::after {
     content: "";
     position: absolute;
-    inset-block: -4px;
+    inset-block: -7px;
     inset-inline: 0;
   }
-  /* 8px gap keeps the expanded targets from overlapping (see above). */
+  /* Row gap 14px keeps the expanded targets from touching; column gap stays
+     tight because the horizontal axis never needed expanding. */
   [data-program] div:has(> button[aria-pressed]),
   [data-program] fieldset:has(> button[aria-pressed]) {
-    gap: 0.5rem;
+    row-gap: 0.875rem;
+    column-gap: 0.5rem;
   }
+}
+
+/* -----------------------------------------------------------------------------
+   PART 3.3 — Chip typography, deliberately UNLAYERED
+
+   These two declarations cannot live in `@layer utilities` above. `.display` is
+   a plain unlayered rule in the design system's tokens.css (its comment explains
+   why: it must survive in the prebuilt CSS exports, which have no source scan).
+   Unlayered styles beat layered ones regardless of specificity, so
+   `@layer utilities { [data-program] button[aria-pressed] { font-weight: 500 } }`
+   loses to `.display { font-weight: var(--os-display-weight) }` even at 0,2,1 vs
+   0,1,0. The alternatives are `!important` or getting out of the layer; being
+   unlayered is the honest one.
+
+   This is review §9.2 in practice: you cannot restyle display-family type with a
+   utility, and the failure is silent -- the class simply has no effect.
+   -------------------------------------------------------------------------- */
+[data-program] button[aria-pressed] {
+  font-size: 12px; /* was 13px; pre-port was 12px */
+  font-weight: 500; /* the actual fix -- .display forces 700 */
+}
+
+/* -----------------------------------------------------------------------------
+   PART 3.4 — The hero band joins the crisp tier.
+
+   index.astro's hero is `<section class="border-b border-border bg-card">`. On
+   the card tone it was a barely-there band between the white header and the tan
+   page; on white it reads as one continuous masthead with the header, and the
+   page tone then starts cleanly at the results area.
+
+   Unlayered for the same reason as 3.3 is not required here, but keeping the two
+   crisp-tier surface rules together is clearer than splitting them across the
+   layer boundary. `main > section` scopes it to the hero so no other bg-card
+   section is caught.
+   -------------------------------------------------------------------------- */
+[data-program] main > section.bg-card {
+  background-color: rgb(var(--os-surface-crisp));
 }
 
 /* -----------------------------------------------------------------------------
