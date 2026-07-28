@@ -1,0 +1,260 @@
+/* =============================================================================
+   Design-system override trial — Camp Finder
+   =============================================================================
+   Applies the proposals in ../../../DESIGN_SYSTEM_REVIEW.md on top of
+   @opensourcescouting/design-system 0.2.0-alpha.0, so the "fixed" version can be
+   looked at side by side with the stock one. Imported last from global.css.
+
+   DELETE THIS FILE if the changes land upstream. Nothing here is a Camp Finder
+   design decision; it is a proposal rendered in CSS.
+
+   Every value is computed for WCAG AAA (1.4.6, 7:1 normal text) against BOTH
+   surfaces, because the surface split in Part 1.1 means primary-coloured text
+   now has to survive on the card AND on the darker page. Non-text boundaries
+   target 1.4.11's 3:1 (which has no AAA tier).
+
+   Part 1 = token-only overrides. Legal today via the documented
+            `[data-program]` escape hatch; needs no upstream component changes.
+   Part 2 = stand-ins for changes that would have to happen inside the DS
+            components. These are the items to actually file upstream.
+
+   To A/B: comment out the `@import "./ds-overrides.css"` line in global.css.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   PART 1.1 — Surface hierarchy (review §4)
+
+   Stock binds --background == --card == --popover to one value in all five
+   programs, so nothing in the system can separate a panel from the page and all
+   depth falls to --os-shadow (which the forced-colors block zeroes).
+
+   Direction B from the review: keep the tan *paper* as the raised card and drop
+   the page beneath it, rather than putting white cards on beige. Separation is
+   1.14:1 -- deliberately small. A large-area fill only needs ~1.1-1.2:1 to read
+   as layered; the pre-DS design shipped 1.20:1. The goal is "not exactly zero",
+   not a contrast threshold.
+   -------------------------------------------------------------------------- */
+[data-program="scoutsbsa"] {
+  --background: 233 227 211; /* #E9E3D3 was 245 241 230 (identical to --card) */
+  --card: 245 241 230; /* #F5F1E6 unchanged; now actually raised */
+  --popover: 245 241 230; /* #F5F1E6 follows --card, as shadcn intends */
+
+  /* ---------------------------------------------------------------------------
+     PART 1.2 — Split --primary into its two roles (review §3, Option 2)
+
+     Stock uses one --primary for a FILL (label sits on it) and for TEXT ON A
+     SURFACE (Button secondary/ghost, links). Those have different ceilings, and
+     at AAA the conflation is the actual blocker: #1D5E42 is AAA-legal as a fill
+     with a white label (7.69:1) but only 6.00:1 as text on the page.
+
+     Splitting lets the fill be the softer, more saturated green we want while
+     the text role stays dark enough to clear 7:1 everywhere.
+     ------------------------------------------------------------------------ */
+  --primary: 29 94 66; /* #1D5E42  softer green, FILL role */
+  --primary-foreground: 255 255 255; /* white, not warm paper -- this is what unlocks it */
+  --primary-on-surface: 23 78 55; /* #174E37  primary-COLOURED TEXT role (new token) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.3 — Body copy to AAA (review §2)
+
+     --muted-foreground is the most-used text colour after --foreground and
+     clears only AA in four of five programs (scoutsbsa was 6.09:1). Darkened
+     until it holds 7:1 on the card AND the darker page.
+     ------------------------------------------------------------------------ */
+  --muted-foreground: 67 76 59; /* #434C3B  7.97:1 card / 7.02:1 page (was 6.09 / 5.37) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.4 — Destructive needs the same split as primary
+
+     sa-red #CE1126 is 5.63:1 with a white label and 4.99:1 as text on the card
+     -- both fail AAA. Same fill/text split, same reasoning.
+     ------------------------------------------------------------------------ */
+  --destructive: 158 12 28; /* #9E0C1C  white label 8.32:1 (was 5.63) */
+  --destructive-on-surface: 148 12 27; /* #940C1B  7.99:1 card / 7.04:1 page (new token) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.5 — Control boundaries and placeholders (review §5)
+
+     --input and --border are set to the same value in stock, so a decorative
+     keyline colour ends up carrying an interactive boundary at 2.36:1 -- under
+     1.4.11's 3:1. --border is left alone deliberately: with Part 1.1 doing the
+     separation work, card edges no longer need to shout.
+
+     Placeholders are text. --os-on-surface-faint at 3.07:1 fails even AA in
+     that role. Targeted at AA 4.5:1 rather than AAA 7:1 on purpose -- a 7:1
+     placeholder is indistinguishable from a real value.
+     ------------------------------------------------------------------------ */
+  --input: 142 128 101; /* #8E8065  3.43:1 card / 3.02:1 page (was 2.36 / 2.08) */
+  --os-on-surface-faint: 102 102 91; /* #66665B  5.14:1 card / 4.53:1 page (was 3.07 / 2.70) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.6 — Radius (review §6.1)
+
+     4px on a 44px-tall button and a 500px-wide card reads as unstyled rather
+     than as intentional restraint. 10px is what this app used pre-port.
+     ------------------------------------------------------------------------ */
+  --radius: 0.625rem; /* 10px, was 0.25rem */
+}
+
+/* -----------------------------------------------------------------------------
+   PART 1.7 — Radius scale, derived multiplicatively (review §6.2)
+
+   Stock derives it subtractively: `calc(var(--radius) - 4px)`, which computes to
+   -2px for Venturing and -3px for Sea Scouts. Negative border-radius is invalid,
+   so `rounded-sm`/`rounded-md` silently do nothing in those programs -- live
+   today, because TabsTrigger ships rounded-md.
+
+   Multiplicative keeps the ratios meaningful across a 6px->14px spread.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+
+  /* Utilities for the new text-role tokens, so call sites *can* use
+     text-primary-on-surface explicitly. Part 2.1 also redirects the existing
+     text-primary so the trial works without editing every call site. */
+  --color-primary-on-surface: rgb(var(--primary-on-surface));
+  --color-destructive-on-surface: rgb(var(--destructive-on-surface));
+}
+
+/* -----------------------------------------------------------------------------
+   PART 1.8 — A UI type scale (review §7)
+
+   Heading's scale is hardcoded in the component, so it cannot be retuned by
+   token -- the one visual axis in the system that isn't a variable. Until it is,
+   the only consumer-side lever is Tailwind's own --text-* steps.
+
+   Stock Heading size 1 is 36/48/60px; a 60px h1 takes the top third of the
+   viewport, and a five-word headline still wrapped at 1125px.
+
+   SAFE HERE ONLY: in this app, text-2xl..text-6xl are used exclusively by
+   heading recipes (verified). In an app that uses those steps for body content
+   this would be too blunt -- which is exactly why the scale belongs in tokens.
+   -------------------------------------------------------------------------- */
+@theme {
+  --text-2xl: 1.375rem; /* 22px, was 24 */
+  --text-2xl--line-height: 1.25;
+  --text-3xl: 1.5rem; /* 24px, was 30 */
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 1.75rem; /* 28px, was 36 */
+  --text-4xl--line-height: 1.15;
+  --text-5xl: 2rem; /* 32px, was 48 */
+  --text-5xl--line-height: 1.1;
+  --text-6xl: 2.25rem; /* 36px, was 60 */
+  --text-6xl--line-height: 1.05;
+}
+
+/* =============================================================================
+   PART 2 — Stand-ins for upstream component changes
+
+   Each of these patches a decision baked into a DS component. They are the
+   items worth filing: a consumer should not have to write any of this.
+
+   Selectors are prefixed with [data-program] purely for specificity, so the
+   overrides win regardless of Tailwind's layer emission order.
+   ========================================================================== */
+
+@layer utilities {
+  /* ---------------------------------------------------------------------------
+     2.1 — Route the text uses of --primary to the text-role token.
+
+     Button secondary/ghost are `text-primary`; links use it too. bg-primary and
+     ring-primary intentionally keep the lighter FILL value -- that is the whole
+     point of the split. Upstream this belongs in the component recipes, not in
+     a utility override.
+     ------------------------------------------------------------------------ */
+  [data-program] .text-primary {
+    color: rgb(var(--primary-on-surface));
+  }
+  [data-program] .border-primary {
+    border-color: rgb(var(--primary-on-surface));
+  }
+  [data-program] .text-destructive {
+    color: rgb(var(--destructive-on-surface));
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.2 — Form controls belong on the raised surface (review §5).
+
+     controlClasses is `... border border-input bg-background ...`, so a control
+     is painted with the PAGE colour. Now that --card is distinct, moving the
+     fill to --card is what makes an input look enterable. Scoped to real form
+     elements so the body/page use of bg-background is untouched.
+     ------------------------------------------------------------------------ */
+  input.bg-background,
+  select.bg-background,
+  textarea.bg-background {
+    background-color: rgb(var(--card));
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.3 — Tabs active state (review §8.7).
+
+     TabsTrigger active is `bg-background` on a `bg-muted` track. Stock reads
+     1.36:1; after Part 1.1 the naive result would be 1.06:1, i.e. worse. The
+     shadcn "lift out of the muted track" idiom assumes white-on-grey and does
+     not survive a two-tan palette, so fill the active tab with the brand colour
+     instead -- unmistakable, and 7.69:1 AAA for the label.
+     ------------------------------------------------------------------------ */
+  [data-program] [role="tab"][data-state="active"] {
+    background-color: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
+    box-shadow: var(--os-shadow);
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.4 — AAA target size (review §2, WCAG 2.5.5 Enhanced = 44x44).
+
+     Button size="sm" is h-9 = 36px and cannot conform. TabsList is h-10= 40px.
+     Raising the min-height keeps the compact look while clearing the floor;
+     upstream, `sm` either needs to be 44px tall or documented as AA-only.
+     ------------------------------------------------------------------------ */
+  [data-program] button.h-9,
+  [data-program] a.h-9 {
+    min-height: 2.75rem;
+  }
+  [data-program] [role="tablist"].h-10 {
+    height: auto;
+    min-height: 2.75rem;
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.5 — Give Card the larger radius rung (review §6.3).
+
+     One radius for a 44px control and a 500px panel reads generous on the
+     control and stingy on the panel. Nudging panels to --radius-xl while
+     controls keep --radius-lg costs nothing and does most of the work.
+
+     Keyed on `bg-card` specifically, NOT on `shadow-program`: Button primary is
+     `bg-primary ... shadow-program rounded-lg`, so a shadow-based selector also
+     rounds every button to 15px. (It did, on the first pass.) `bg-card` hits the
+     Card outlined/elevated recipes and CampCard's cardVariants anchor, and
+     misses buttons, form controls (which are `bg-background`) and the header
+     (which is `bg-card/95`, a different class).
+     ------------------------------------------------------------------------ */
+  [data-program] .bg-card.rounded-lg {
+    border-radius: var(--radius-xl);
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   NOT overridden, on purpose -- these need real upstream work, not a token:
+
+   - Badge's `text-[11px] uppercase tracking-wider` base (review §8.1). Already
+     defeated per-call-site in this app with `normal-case tracking-normal`;
+     patching it globally here would hide how often that was necessary.
+   - Badge having no `warning` tone (§8.2) and no focus treatment (§8.3).
+   - Alert's hardcoded `bg-[#FCD116]` / `border-[#996633]/40` -- the one place
+     the system leaves the token model, so a consumer cannot retint it at all.
+   - DialogContent's missing aria-modal (§8.4) and height cap (§8.5); both are
+     patched at the call site in SearchApp.tsx instead.
+   - The missing Sheet / Slider / ToggleGroup / Link primitives (§8.8).
+
+   Worth recording, since it looks like a bug and isn't: --ring is SA Blue
+   #003F87, which is only 1.33:1 against the primary fill. The focus ring is
+   drawn at `outline-offset: 2px`, so it lands on the page (7.95:1) rather than
+   on the button. That 2px offset is load-bearing for 1.4.11 -- don't let it
+   become 0.
+   -------------------------------------------------------------------------- */

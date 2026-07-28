@@ -16,6 +16,11 @@
 @import "@opensourcescouting/design-system/tokens";
 @import "@opensourcescouting/design-system/theme";
 
+/* Trial overrides for the design-system proposals in DESIGN_SYSTEM_REVIEW.md.
+ * Comment this one line out to see the stock design system instead. Delete the
+ * file entirely if the proposals land upstream. */
+@import "./ds-overrides.css";
+
 /* Tailwind never scans node_modules, so the utilities baked into the design
  * system's own components (bg-primary, shadow-program, border-b-rule, ...) are
  * not emitted by our build unless we point the scan at the package. Without
