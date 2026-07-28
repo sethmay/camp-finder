@@ -416,6 +416,56 @@
 }
 
 /* -----------------------------------------------------------------------------
+   PART 3.5 — MapLibre chrome, themed (review §9.5 / the "known visual seam")
+
+   maplibre-gl.css hardcodes `background: #fff`, `border-radius: 3px` and its own
+   shadow on the popup, and 4px radius on the control group. Once the map is
+   framed with our border and radius, those stock corners sit right at the frame
+   and read as a different design system -- which they are.
+
+   This is the six-selector fix that every design-system consumer with a map has
+   to write, which is the argument for shipping it upstream as an optional
+   `maplibre.css`. Nothing here is app-specific.
+
+   Prefixed with [data-program] for specificity: maplibre-gl.css is imported from
+   inside the island component, so its position relative to this file in the
+   cascade is a bundler detail we should not depend on. Popups render inside the
+   map container, which is inside the themed subtree, so the prefix always matches.
+
+   The tip is a CSS triangle -- only the ONE coloured border side may be set per
+   anchor, or the arrow becomes a solid square.
+   -------------------------------------------------------------------------- */
+[data-program] .maplibregl-popup-content {
+  background-color: rgb(var(--card));
+  color: rgb(var(--foreground));
+  border: 1px solid rgb(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--os-shadow);
+}
+[data-program] :is(.maplibregl-popup-anchor-top, .maplibregl-popup-anchor-top-left, .maplibregl-popup-anchor-top-right) .maplibregl-popup-tip {
+  border-bottom-color: rgb(var(--card));
+}
+[data-program] :is(.maplibregl-popup-anchor-bottom, .maplibregl-popup-anchor-bottom-left, .maplibregl-popup-anchor-bottom-right) .maplibregl-popup-tip {
+  border-top-color: rgb(var(--card));
+}
+[data-program] .maplibregl-popup-anchor-left .maplibregl-popup-tip {
+  border-right-color: rgb(var(--card));
+}
+[data-program] .maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-left-color: rgb(var(--card));
+}
+[data-program] .maplibregl-ctrl-group {
+  background-color: rgb(var(--os-surface-crisp));
+  border: 1px solid rgb(var(--input));
+  border-radius: var(--radius);
+  box-shadow: var(--os-shadow);
+}
+[data-program] .maplibregl-ctrl-attrib.maplibregl-compact {
+  background-color: rgb(var(--os-surface-crisp) / 0.9);
+  border-radius: var(--radius);
+}
+
+/* -----------------------------------------------------------------------------
    NOT overridden, on purpose -- these need real upstream work, not a token:
 
    - Badge's `text-[11px] uppercase tracking-wider` base (review §8.1). Already

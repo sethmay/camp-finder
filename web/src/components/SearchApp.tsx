@@ -192,7 +192,11 @@ export default function SearchApp() {
             </TabsContent>
 
             <TabsContent value="map" forceMount className="data-[state=inactive]:hidden">
-              <div className="h-[70vh] rounded-lg lg:sticky lg:top-20 lg:h-[calc(100vh-9rem)]">
+              {/* border-input, not border-border: the map is an interactive component
+                * (role="application", pan/zoom), so its boundary owes WCAG 1.4.11's 3:1.
+                * --border is 2.08:1 against the page, --input is 3.02:1. overflow-hidden
+                * clips the tile canvas and MapLibre's own controls to the radius. */}
+              <div className="h-[70vh] overflow-hidden rounded-lg border border-input lg:sticky lg:top-20 lg:h-[calc(100vh-9rem)]">
                 <MapView ranked={ranked} selectedId={selectedId} onSelect={setSelectedId} />
               </div>
             </TabsContent>

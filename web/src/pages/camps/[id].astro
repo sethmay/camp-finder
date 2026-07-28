@@ -62,7 +62,7 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
         </div>
         {
           camp.lat != null && camp.lon != null && (
-            <div class="h-64 overflow-hidden rounded-lg border border-border">
+            <div class="h-64 overflow-hidden rounded-lg border border-input">
               <CampLocationMap client:visible lat={camp.lat} lon={camp.lon} name={camp.name} />
             </div>
           )
