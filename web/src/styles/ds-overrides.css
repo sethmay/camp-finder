@@ -94,6 +94,32 @@
      than as intentional restraint. 10px is what this app used pre-port.
      ------------------------------------------------------------------------ */
   --radius: 0.625rem; /* 10px, was 0.25rem */
+
+  /* --------------------------------------------------------------------------
+     PART 1.9 — A crisp (white) tier for chrome and controls
+
+     NOT one of the review's findings -- this is a Camp Finder taste call, kept
+     here so it can be pulled out separately. The review's proposals correct
+     things that are wrong; this one is a preference.
+
+     Rationale: two warm tans give a legible content hierarchy but everything
+     interactive still reads as "paper". Adding white as a third tier splits the
+     system by ROLE rather than by depth:
+
+       page    #E9E3D3  content ground
+       card    #F5F1E6  content panels (result cards, detail panels)
+       crisp   #FFFFFF  app chrome + anything you can type in or toggle
+
+     Measured: white vs page 1.28:1, white vs card 1.13:1. All text tokens still
+     clear AAA on white -- foreground 17.47:1, muted-foreground 8.99:1,
+     primary-on-surface 9.63:1, destructive-on-surface 9.02:1 -- and --input
+     clears 1.4.11 at 3.87:1.
+
+     Upstream equivalent: an `--input-background` token plus some notion of a
+     nav/chrome surface. The system currently has neither, which is why this has
+     to be a local token.
+     ------------------------------------------------------------------------ */
+  --os-surface-crisp: 255 255 255;
 }
 
 /* -----------------------------------------------------------------------------
@@ -176,17 +202,21 @@
   }
 
   /* ---------------------------------------------------------------------------
-     2.2 — Form controls belong on the raised surface (review §5).
+     2.2 — Form controls belong on their own fill, not the page (review §5).
 
      controlClasses is `... border border-input bg-background ...`, so a control
-     is painted with the PAGE colour. Now that --card is distinct, moving the
-     fill to --card is what makes an input look enterable. Scoped to real form
-     elements so the body/page use of bg-background is untouched.
+     is painted with the PAGE colour. Routed to --os-surface-crisp (Part 3), so
+     a field reads as something you can type in. Scoped to real form elements so
+     the body/page use of bg-background is untouched.
+
+     Upstream this wants to be an `--input-background` token: shadcn ships
+     --input as a BORDER colour only and has no fill token for controls, which is
+     why `bg-background` ends up hardcoded in the recipe.
      ------------------------------------------------------------------------ */
   input.bg-background,
   select.bg-background,
   textarea.bg-background {
-    background-color: rgb(var(--card));
+    background-color: rgb(var(--os-surface-crisp));
   }
 
   /* ---------------------------------------------------------------------------
@@ -236,6 +266,98 @@
      ------------------------------------------------------------------------ */
   [data-program] .bg-card.rounded-lg {
     border-radius: var(--radius-xl);
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.6 — Overlay surfaces should use --popover, not --background.
+
+     `DialogContent` fills with `bg-background`. Stock that is invisible-but-
+     harmless, because --background == --card == --popover. Once --background
+     becomes the page tone (Part 1.1) the bug shows: a modal panel renders in the
+     PAGE colour, so the raised surface reads flat against the page behind it and
+     only the overlay scrim separates them.
+
+     The system already ships --popover and --popover-foreground for exactly this
+     and no component consumes them. Upstream: the overlay recipes should use
+     bg-popover. Found by fixing §4, not visible before it.
+     ------------------------------------------------------------------------ */
+  [data-program] [role="dialog"].bg-background,
+  [data-program] [role="alertdialog"].bg-background {
+    background-color: rgb(var(--popover));
+  }
+
+  /* =========================================================================
+     PART 3 — Camp Finder preferences, not design-system findings
+
+     Everything above corrects something measurably wrong. This part is taste:
+     pull it out before quoting any of this upstream.
+     ====================================================================== */
+
+  /* ---------------------------------------------------------------------------
+     3.1 — Chrome sits on the crisp tier.
+
+     The header was `bg-card/95` and the footer `bg-card`, so both matched the
+     content panels exactly. White separates chrome from content (1.28:1 against
+     the page) and gives the sticky header a real edge when the page scrolls
+     under it. The header keeps its 95% alpha so backdrop-blur still reads.
+
+     Note: `border-border` on white is 2.66:1, under 1.4.11's 3:1. Acceptable
+     here because these are decorative keylines, not control boundaries -- the
+     surface change is what separates chrome now, not the rule.
+     ------------------------------------------------------------------------ */
+  [data-program] header.bg-card\/95 {
+    background-color: rgb(var(--os-surface-crisp) / 0.95);
+  }
+  [data-program] footer.bg-card {
+    background-color: rgb(var(--os-surface-crisp));
+  }
+
+  /* ---------------------------------------------------------------------------
+     3.2 — Filter chips: crisp fill, and tightened WITHOUT losing the AAA target.
+
+     Measured before: 44px tall, 12px label, padding 4px 12px, 6px gaps. So the
+     bulk was never padding -- it was `cf-tap`'s `min-height: 44px` stretching a
+     ~20px content box, leaving ~24px of dead space.
+
+     WCAG 2.5.5 (AAA) needs a 44x44 TARGET, and none of its exceptions
+     (equivalent control, inline-in-text, user-agent, essential) cover a filter
+     chip. But target size is the CLICKABLE area, not the visible box, so the two
+     are separable: shrink the box, extend the hit area into the gap with a
+     pseudo-element.
+
+     The binding constraint is that hit areas must not overlap each other:
+     (44 - visual height) <= gap. At 36px visual the gap must be >= 8px, which
+     makes the row pitch exactly 44px -- hit areas abut without colliding.
+
+     Worth knowing: with non-overlapping 44px targets the row pitch CANNOT go
+     below 44px, so the real vertical saving is 6px/row (50 -> 44), about 12% of
+     the chip block. Shrinking further only makes the visible chip smaller inside
+     the same pitch. The bigger win is that the chip now hugs its label instead
+     of floating in an empty box -- and the label goes 12px -> 13px, which in a
+     264px rail is a legibility gain, not a cost.
+     ------------------------------------------------------------------------ */
+  [data-program] button[aria-pressed] {
+    min-height: 0; /* release cf-tap; the target moves to ::after */
+    height: 2.25rem; /* 36px visible */
+    padding-inline: 0.625rem; /* 12px -> 10px */
+    font-size: 13px;
+    position: relative;
+  }
+  [data-program] button[aria-pressed][aria-pressed="false"] {
+    background-color: rgb(var(--os-surface-crisp));
+  }
+  /* The real 44px AAA target. inset-block only: every chip is already well over
+     44px wide, so the horizontal axis needs no help. */
+  [data-program] button[aria-pressed]::after {
+    content: "";
+    position: absolute;
+    inset-block: -4px;
+    inset-inline: 0;
+  }
+  /* 8px gap keeps the expanded targets from overlapping (see above). */
+  [data-program] div:has(> button[aria-pressed]),
+  [data-program] fieldset:has(> button[aria-pressed]) {
+    gap: 0.5rem;
   }
 }
 
