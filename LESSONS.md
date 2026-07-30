@@ -278,3 +278,45 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 - **Shared card/detail display rules go in one exported `web/src/lib` helper.** Signature-first
   ordering was implemented twice (`CampCard` Set+sort vs `[id].astro` inline comparator) before
   being unified as `orderFeatures` — same class as the "keep pure logic in lib + test it" rule.
+
+## Frontend / design system (vendored `@opensourcescouting/design-system`)
+
+- **A vendored `file:` tarball is reproducible only if its INPUTS are in version control.** A
+  committed `.tgz` whose sha512 matches `package-lock.json` proves the bytes cannot change
+  unnoticed — it proves nothing about where they came from. `npm ci` succeeds while the build
+  inputs live on one machine. If a pre-release must be vendored: commit the patches as files,
+  record the upstream sha + the exact `npm pack` command beside the tarball, and add
+  `*.tgz binary` to `.gitattributes` (git's binary auto-detection is the ONLY thing keeping the
+  integrity hash valid — a later `* text=auto` breaks `npm ci` with EINTEGRITY on CI, no local
+  repro). Exit criterion: swap to a registry version. See `web/vendor/README.md`.
+- **Override a design system's TOKENS, never its compiled class names.** Token overrides
+  (`--primary`, `--radius`) are the supported surface and survive version bumps. Selectors that
+  key on the vendor's compiled Tailwind literals — `button.h-9`, `[role="tablist"].h-10`,
+  `.bg-card.rounded-lg`, `[role="dialog"].bg-background` — are a silent time bomb: a patch bump
+  renames one and the override vanishes with no error, no type failure, no test. One such rule
+  shipped **dead on arrival** here (`tailwind-merge` strips `h-10` when the call site passes
+  `h-auto`, so it could never match, while its comment claimed it did the work). Prefer passing
+  classes at the call site; when a selector override is unavoidable, name the exact DS version it
+  was verified against so a bump has a re-check list (see the header block in `ds-overrides.css`).
+- **CSS custom properties and JS token data are two different sources of truth; a CSS override
+  cannot reach a `<canvas>`/WebGL consumer.** Retuning `--primary` in a stylesheet leaves MapLibre
+  (paint evaluated in JS) painting the stock value — same semantic role, two colours on one
+  screen. Anything reading tokens through JS must be re-pointed in the same change, or read the
+  resolved values via `getComputedStyle(document.documentElement)` at init. `map.ts` now does the
+  latter, so it cannot drift from the CSS; do the same for any future charting/canvas surface.
+- **Importing one data constant from a component barrel drags the whole library into the chunk.**
+  `import { TOKENS } from "@opensourcescouting/design-system"` for eight hex values added ~213 KB
+  (+27%) of Radix + sonner to the map chunk — on the search page AND all 451 detail pages —
+  because the package's `sideEffects: ["**/*.css"]` blocks Rollup tree-shaking. Prefer a data-only
+  subpath (`/tokens.json`) or `getComputedStyle`. Verify by diffing `dist/_astro/*.js` byte sizes
+  against the previous build, not by reading the import.
+- **A contrast audit is scoped to the surfaces it enumerated.** `ds-overrides.css` computes every
+  token against *card* and *page* and says so — then a fallback put text on a third surface
+  (`bg-muted`), where `os-on-surface-faint` landed at 3.71:1 (fails AA). Adding a new surface
+  class means re-running the pairings; and inline ratio annotations go stale when an earlier part
+  of the same file changes a surface (the `--card` tan→white collapse left two annotations wrong).
+  Recompute, don't eyeball.
+- **When a redesign moves a documented a11y floor, edit the doc in the SAME commit.** Releasing
+  `cf-tap`'s 44px floor for the filter chips (a defensible 2.5.5 AAA → 2.5.8 AA change) while this
+  file still asserted "every interactive control carries `cf-tap`" left a written invariant
+  contradicting shipped CSS — the worst failure mode in a repo whose a11y checks are manual.

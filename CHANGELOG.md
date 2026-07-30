@@ -2,6 +2,19 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.33.0 (minor) — 2026-07-30
+
+- `PENDING` Retheme the UI onto the **Open Source Scouting design system**. Migrate Tailwind v3 →
+  v4 (configured in CSS via `@tailwindcss/vite`; `tailwind.config.mjs` + `--cf-*` tokens deleted),
+  stamp `data-program="scoutsbsa"` on `<html>`, and adopt DS components (`Heading`, `Button`,
+  `Badge`, `Card`, `Alert`, `Field`, Radix `Dialog`/`Tabs`). Add `ds-overrides.css` — a token
+  override sheet (two-tier white-on-tan surfaces, AAA-tuned primary/muted/destructive, tightened
+  filter chips, outlined feature pills) with the DS-facing findings in `DESIGN_SYSTEM_REVIEW.md`.
+  Resolve the MapLibre palette from live CSS vars (fixes marker/UI colour drift, drops ~213 KB of
+  barrel imports) and harden map init against WebGL/style failures. Add a favicon. Depends on a
+  **vendored** DS pre-release (`web/vendor/`, see its README) until an upstream registry release
+  lands the two committed patches.
+
 ## 0.32.1 (patch) — 2026-07-27
 
 - `e0d3bb3` Update the Open Scout API pin to **v0.46.1** and refresh committed data (no schema
