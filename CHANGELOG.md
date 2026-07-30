@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.33.0 (minor) — 2026-07-30
 
-- `PENDING` Retheme the UI onto the **Open Source Scouting design system**. Migrate Tailwind v3 →
+- `014d658` Retheme the UI onto the **Open Source Scouting design system**. Migrate Tailwind v3 →
   v4 (configured in CSS via `@tailwindcss/vite`; `tailwind.config.mjs` + `--cf-*` tokens deleted),
   stamp `data-program="scoutsbsa"` on `<html>`, and adopt DS components (`Heading`, `Button`,
   `Badge`, `Card`, `Alert`, `Field`, Radix `Dialog`/`Tabs`). Add `ds-overrides.css` — a token
