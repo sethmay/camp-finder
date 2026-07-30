@@ -7,6 +7,7 @@ import CampLocationMap from "../../components/CampLocationMap";
 import { formatVerified, isStale, orderFeatures, programCategories, PROGRAM_CATEGORY_LABEL } from "../../lib/format";
 import type { Camp } from "../../lib/types";
 import { withBase } from "@lib/paths";
+import { Alert, Badge, Card, CardBody, Heading, buttonVariants, cn } from "@opensourcescouting/design-system";
 import campsData from "../../../public/data/camps.json";
 
 export function getStaticPaths() {
@@ -27,14 +28,12 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
     <a href={withBase("/")} class="text-sm text-primary">← Back to search</a>
 
     <header class="mt-4">
-      <h1 class="font-display text-h1 text-ink">{camp.name}</h1>
+      <Heading level={1} size={2}>{camp.name}</Heading>
       {
         badgeCats.length > 0 && (
           <div class="mt-2 flex flex-wrap gap-1">
             {badgeCats.map((c) => (
-              <span class="inline-flex items-center rounded-pill border border-primary px-2 py-0.5 text-xs font-semibold text-primary">
-                {PROGRAM_CATEGORY_LABEL[c]}
-              </span>
+              <Badge variant="outline">{PROGRAM_CATEGORY_LABEL[c]}</Badge>
             ))}
           </div>
         )
@@ -42,28 +41,28 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
       <div class="mt-4 grid gap-6 lg:grid-cols-[1fr_minmax(0,340px)] lg:items-start">
         <div>
           <div class="flex flex-wrap items-start justify-between gap-3">
-            <p class="text-body text-muted">
+            <p class="text-base text-muted-foreground">
               {operator ? `${operator} · ${location}` : location}
             </p>
             <StaleBadge verifiedAt={camp.verified_at} />
           </div>
           {
             camp.reservation?.name && (
-              <p class="mt-1 text-sm text-muted">Part of {camp.reservation.name}</p>
+              <p class="mt-1 text-sm text-muted-foreground">Part of {camp.reservation.name}</p>
             )
           }
           <a
             href={camp.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="cf-tap mt-4 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
+            class:list={[buttonVariants({ variant: "primary", size: "md" }), "mt-4"]}
           >
             Visit official council page →
           </a>
         </div>
         {
           camp.lat != null && camp.lon != null && (
-            <div class="h-64 overflow-hidden rounded-md border border-border">
+            <div class="h-64 overflow-hidden rounded-lg border border-input">
               <CampLocationMap client:visible lat={camp.lat} lon={camp.lon} name={camp.name} />
             </div>
           )
@@ -73,18 +72,18 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
 
     {
       stale && (
-        <p class="mt-6 rounded-md bg-waitlist-bg px-4 py-3 text-sm text-waitlist-ink">
+        <Alert tone="warning" className="mt-6">
           This listing hasn't been verified in over a year. Confirm all details on the
           official council page before registering.
-        </p>
+        </Alert>
       )
     }
 
-    {camp.summary && <p class="mt-6 text-body text-ink">{camp.summary}</p>}
+    {camp.summary && <p class="mt-6 text-base text-foreground">{camp.summary}</p>}
 
     {
       camp.july_high_f !== null && (
-        <p class="mt-4 text-sm text-muted">
+        <p class="mt-4 text-sm text-muted-foreground">
           Typical July: {camp.july_low_f !== null ? `${camp.july_low_f}–${camp.july_high_f}` : `${camp.july_high_f}`}°F avg — climate normals via Open Scout API
         </p>
       )
@@ -93,7 +92,9 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
     {
       camp.features.length > 0 && (
         <section class="mt-6">
-          <h2 class="font-display text-h3 text-ink">Program &amp; features</h2>
+          <Heading level={2} size={3}>Program &amp; features</Heading>
+          {/* The pill bounds each feature, so the gap only has to separate outlines --
+              back to a tight chip row from the wider spacing a containerless list needed. */}
           <div class="mt-3 flex flex-wrap gap-1.5">
             {orderFeatures(camp.features, camp.features_signature).map((f) => (
               <FeatureChip feature={f} signature={camp.features_signature.includes(f)} />
@@ -101,7 +102,7 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
           </div>
           {
             (camp.features_signature.length > 0 || camp.features_verified_at) && (
-              <p class="mt-2 text-xs text-muted">
+              <p class="mt-2 text-xs text-muted-foreground">
                 {camp.features_signature.length > 0 && "★ signature feature. "}
                 {camp.features_verified_at && `Features surveyed ${formatVerified(camp.features_verified_at)}.`}
               </p>
@@ -111,38 +112,54 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
       )
     }
 
-    <section class="mt-8 rounded-md border border-border bg-surface p-4">
-      <h2 class="font-display text-h3 text-ink">Sessions, dates &amp; fees</h2>
-      <p class="mt-2 text-sm text-muted">
-        Session weeks, fees, and availability change often and live on the council's own
-        site — always the authoritative source. Check there for the current schedule and
-        to register.
-      </p>
-      <a
-        href={camp.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary"
-      >
-        Dates &amp; registration on the council site →
-      </a>
-    </section>
-
-    <div class="mt-8 flex flex-col gap-4 rounded-md border border-border bg-surface p-4">
-      {camp.council_website && (
+    <Card variant="elevated" className="mt-8">
+      <CardBody>
+        <Heading level={2} size={3}>Sessions, dates &amp; fees</Heading>
+        <p class="mt-2 text-sm text-muted-foreground">
+          Session weeks, fees, and availability change often and live on the council's own
+          site — always the authoritative source. Check there for the current schedule and
+          to register.
+        </p>
+        {/* A DS ghost button needs h-auto/whitespace-normal to survive this long label in a
+            narrow card (buttonVariants pins h-11 and whitespace-nowrap, and Card clips with
+            overflow-hidden); -ml-5 cancels the button padding so it aligns with the copy. */}
         <a
-          href={camp.council_website}
+          href={camp.url}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm font-semibold text-primary"
+          class={cn(
+            buttonVariants({ variant: "ghost", size: "md" }),
+            "-ml-5 mt-1 h-auto min-h-11 whitespace-normal py-2",
+          )}
         >
-          {camp.council_name ?? "Council"} website →
+          Dates &amp; registration on the council site →
         </a>
-      )}
-      <ProvenanceBadge sourceUrl={camp.url} verifiedAt={camp.verified_at} />
-      <a href={withBase("/about#corrections")} class="text-xs text-muted underline">
-        See a problem with this listing? Suggest a correction.
-      </a>
-    </div>
+      </CardBody>
+    </Card>
+
+    <Card variant="elevated" className="mt-8">
+      <CardBody>
+        {/* The flex column sits on a plain div, not on CardBody: Astro wraps a React
+            component's slotted children in an <astro-static-slot> element, and the
+            display:contents rule that neutralises it only ships on pages that have a
+            hydrated island. Flexing CardBody itself would collapse to a single item. */}
+        <div class="flex flex-col gap-4">
+          {camp.council_website && (
+            <a
+              href={camp.council_website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-semibold text-primary"
+            >
+              {camp.council_name ?? "Council"} website →
+            </a>
+          )}
+          <ProvenanceBadge sourceUrl={camp.url} verifiedAt={camp.verified_at} />
+          <a href={withBase("/about#corrections")} class="text-xs text-muted-foreground underline">
+            See a problem with this listing? Suggest a correction.
+          </a>
+        </div>
+      </CardBody>
+    </Card>
   </article>
 </Base>

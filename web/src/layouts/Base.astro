@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { withBase } from "@lib/paths";
 
 interface Props {
   title?: string;
@@ -14,20 +15,33 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<!--
+  data-program stamps the design system's Scouts BSA palette on the document
+  root, so every DS token resolves in plain Astro markup with no JS. React
+  islands additionally wrap in <ScoutThemeProvider program="scoutsbsa"> for the
+  components that read program metadata through context.
+-->
+<html lang="en" data-program="scoutsbsa">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <!-- Icons must go through withBase: this is a GitHub Pages project site served under
+         /camp-finder/, so a root-relative href resolves against the wrong origin path.
+         Declaring them also stops the browser's implicit /favicon.ico probe, which 404s. -->
+    <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+    <link rel="icon" href={withBase("/favicon.ico")} sizes="32x32" />
+    <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- The design system's one type pair: Montserrat display + Source Serif 4 body. -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400..900&family=Public+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400..600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
     />
   </head>
-  <body class="min-h-screen bg-bg text-ink">
+  <body class="min-h-screen bg-background text-foreground">
     <Header />
     <main>
       <slot />

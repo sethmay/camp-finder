@@ -1,0 +1,493 @@
+/* =============================================================================
+   Design-system override trial — Camp Finder
+   =============================================================================
+   Applies the proposals in ../../../DESIGN_SYSTEM_REVIEW.md on top of
+   @opensourcescouting/design-system 0.2.0-alpha.0, so the "fixed" version can be
+   looked at side by side with the stock one. Imported last from global.css.
+
+   DELETE THIS FILE if the changes land upstream. Nothing here is a Camp Finder
+   design decision; it is a proposal rendered in CSS.
+
+   Every value is computed for WCAG AAA (1.4.6, 7:1 normal text) against BOTH
+   surfaces, because the surface split in Part 1.1 means primary-coloured text
+   now has to survive on the card AND on the darker page. Non-text boundaries
+   target 1.4.11's 3:1 (which has no AAA tier).
+
+   Part 1 = token-only overrides. Legal today via the documented
+            `[data-program]` escape hatch; needs no upstream component changes.
+   Part 2 = stand-ins for changes that would have to happen inside the DS
+            components. These are the items to actually file upstream.
+
+   VERIFIED AGAINST: @opensourcescouting/design-system 0.2.0-alpha.0.
+   Part 1 keys on documented tokens and survives any DS bump. Part 2 does NOT
+   target the DS's API -- it targets the compiled Tailwind class names inside its
+   component recipes, which are unversioned implementation details. A rename
+   drops the override with no error, no type failure and no test, so re-verify
+   these hooks against the new dist on every upgrade:
+
+     .h-9 on button/a               Button size="sm"          -> Part 2.4
+     .bg-background on input,
+       select, textarea             controlClasses fill       -> Part 2.2
+     .text-primary, .border-primary,
+       .text-destructive            Button + link recipes     -> Part 2.1
+     .bg-card + .rounded-lg         Card / cardVariants       -> Part 2.5
+     .bg-background on
+       [role=dialog]/[alertdialog]  DialogContent fill        -> Part 2.6
+
+   Part 2.3 and Part 3.2 key on ARIA state ([role=tab][data-state=active],
+   button[aria-pressed]) instead, which is the stable surface -- prefer that, or
+   the call-site pattern SearchApp already uses (passing h-auto / cf-tap /
+   rounded-lg into the DS component), over any new class hook.
+
+   To A/B: comment out the `@import "./ds-overrides.css"` line in global.css.
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   PART 1.1 — Surface hierarchy (review §4)
+
+   Stock binds --background == --card == --popover to one value in all five
+   programs, so nothing in the system can separate a panel from the page and all
+   depth falls to --os-shadow (which the forced-colors block zeroes).
+
+   Direction B from the review: keep the tan *paper* as the raised card and drop
+   the page beneath it, rather than putting white cards on beige. That gave a
+   1.14:1 separation -- deliberately small. A large-area fill only needs
+   ~1.1-1.2:1 to read as layered; the pre-DS design shipped 1.20:1. The goal is
+   "not exactly zero", not a contrast threshold.
+
+   SUPERSEDED BY PART 1.9: --card ended up white, so the shipped separation is
+   1.28:1. The two-tier structure this part establishes is unchanged.
+   -------------------------------------------------------------------------- */
+[data-program="scoutsbsa"] {
+  --background: 233 227 211; /* #E9E3D3 was 245 241 230 (identical to --card) */
+  --card: 255 255 255; /* white; every raised surface (see PART 1.9) */
+  --popover: 255 255 255; /* follows --card, as shadcn intends */
+
+  /* ---------------------------------------------------------------------------
+     PART 1.2 — Split --primary into its two roles (review §3, Option 2)
+
+     Stock uses one --primary for a FILL (label sits on it) and for TEXT ON A
+     SURFACE (Button secondary/ghost, links). Those have different ceilings, and
+     at AAA the conflation is the actual blocker: #1D5E42 is AAA-legal as a fill
+     with a white label (7.69:1) but only 6.00:1 as text on the page.
+
+     Splitting lets the fill be the softer, more saturated green we want while
+     the text role stays dark enough to clear 7:1 everywhere.
+     ------------------------------------------------------------------------ */
+  --primary: 29 94 66; /* #1D5E42  softer green, FILL role */
+  --primary-foreground: 255 255 255; /* white, not warm paper -- this is what unlocks it */
+  --primary-on-surface: 23 78 55; /* #174E37  primary-COLOURED TEXT role (new token) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.3 — Body copy to AAA (review §2)
+
+     --muted-foreground is the most-used text colour after --foreground and
+     clears only AA in four of five programs (scoutsbsa 6.09:1, tan text on the
+     stock tan surface). Darkened until it holds 7:1 on the card AND the darker
+     page.
+     ------------------------------------------------------------------------ */
+  --muted-foreground: 67 76 59; /* #434C3B  8.99:1 card / 7.02:1 page (stock #525E48: 6.88 / 5.37) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.4 — Destructive needs the same split as primary
+
+     sa-red #CE1126 is 5.63:1 either way -- white label on the fill, or as text
+     on the white card -- and both fail AAA. Same fill/text split, same reasoning.
+     ------------------------------------------------------------------------ */
+  --destructive: 158 12 28; /* #9E0C1C  white label 8.32:1 (was 5.63) */
+  --destructive-on-surface: 148 12 27; /* #940C1B  9.02:1 card / 7.04:1 page (new token) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.5 — Control boundaries and placeholders (review §5)
+
+     --input and --border are set to the same value in stock, so a decorative
+     keyline colour ends up carrying an interactive boundary at 2.66:1 -- under
+     1.4.11's 3:1. --border is left alone deliberately: with Part 1.1 doing the
+     separation work, card edges no longer need to shout.
+
+     Placeholders are text. --os-on-surface-faint at 3.46:1 fails even AA in
+     that role. Targeted at AA 4.5:1 rather than AAA 7:1 on purpose -- a 7:1
+     placeholder is indistinguishable from a real value.
+     ------------------------------------------------------------------------ */
+  --input: 142 128 101; /* #8E8065  3.87:1 card / 3.02:1 page (stock #AD9D7B: 2.66 / 2.08) */
+  --os-on-surface-faint: 102 102 91; /* #66665B  5.81:1 card / 4.53:1 page (stock #8A8B7C: 3.46 / 2.70) */
+
+  /* --------------------------------------------------------------------------
+     PART 1.6 — Radius (review §6.1)
+
+     4px on a 44px-tall button and a 500px-wide card reads as unstyled rather
+     than as intentional restraint. 10px is what this app used pre-port.
+     ------------------------------------------------------------------------ */
+  --radius: 0.625rem; /* 10px, was 0.25rem */
+
+  /* --------------------------------------------------------------------------
+     PART 1.9 — Two tiers, not three: warm page, white everything-raised
+
+     NOT one of the review's findings -- a Camp Finder taste call, kept here so it
+     can be pulled out separately. The review's proposals correct things that are
+     wrong; this one is a preference.
+
+     An earlier pass had three tiers (tan page / tan paper card / white chrome and
+     controls) with a local --os-surface-crisp token. Two tans plus white turned
+     out to be one tier too many: the middle tone had no distinct job once chrome
+     and controls were white, and it left detail panels and map popups looking
+     muddy against them. Collapsing --card to white removes the token entirely and
+     every `bg-card` consumer -- result cards, detail panels, dialogs, popovers,
+     the header, footer, hero band, form fills, unselected chips, MapLibre's popup
+     and controls -- lands on white with no per-element rules.
+
+       page  #E9E3D3  content ground
+       card  #FFFFFF  every raised surface
+
+     Measured: white vs page 1.28:1 (stronger than the 1.14:1 the tan card gave).
+     Every text token still clears AAA on white -- foreground 17.47:1,
+     muted-foreground 8.99:1, primary-on-surface 9.63:1,
+     destructive-on-surface 9.02:1 -- and --input clears 1.4.11 at 3.87:1.
+
+     Upstream this is just "give --card a value distinct from --background", i.e.
+     review §4 option A. No new token needed after all.
+     ------------------------------------------------------------------------ */
+}
+
+/* -----------------------------------------------------------------------------
+   PART 1.7 — Radius scale, derived multiplicatively (review §6.2)
+
+   Stock derives it subtractively: `calc(var(--radius) - 4px)`, which computes to
+   -2px for Venturing and -3px for Sea Scouts. Negative border-radius is invalid,
+   so `rounded-sm`/`rounded-md` silently do nothing in those programs -- live
+   today, because TabsTrigger ships rounded-md.
+
+   Multiplicative keeps the ratios meaningful across a 6px->14px spread.
+   -------------------------------------------------------------------------- */
+@theme inline {
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+
+  /* Utilities for the new text-role tokens, so call sites *can* use
+     text-primary-on-surface explicitly. Part 2.1 also redirects the existing
+     text-primary so the trial works without editing every call site. */
+  --color-primary-on-surface: rgb(var(--primary-on-surface));
+  --color-destructive-on-surface: rgb(var(--destructive-on-surface));
+}
+
+/* -----------------------------------------------------------------------------
+   PART 1.8 — A UI type scale (review §7)
+
+   Heading's scale is hardcoded in the component, so it cannot be retuned by
+   token -- the one visual axis in the system that isn't a variable. Until it is,
+   the only consumer-side lever is Tailwind's own --text-* steps.
+
+   Stock Heading size 1 is 36/48/60px; a 60px h1 takes the top third of the
+   viewport, and a five-word headline still wrapped at 1125px.
+
+   SAFE HERE ONLY: in this app, text-2xl..text-6xl are used exclusively by
+   heading recipes (verified). In an app that uses those steps for body content
+   this would be too blunt -- which is exactly why the scale belongs in tokens.
+   -------------------------------------------------------------------------- */
+@theme {
+  --text-2xl: 1.375rem; /* 22px, was 24 */
+  --text-2xl--line-height: 1.25;
+  --text-3xl: 1.5rem; /* 24px, was 30 */
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 1.75rem; /* 28px, was 36 */
+  --text-4xl--line-height: 1.15;
+  --text-5xl: 2rem; /* 32px, was 48 */
+  --text-5xl--line-height: 1.1;
+  --text-6xl: 2.25rem; /* 36px, was 60 */
+  --text-6xl--line-height: 1.05;
+}
+
+/* =============================================================================
+   PART 2 — Stand-ins for upstream component changes
+
+   Each of these patches a decision baked into a DS component. They are the
+   items worth filing: a consumer should not have to write any of this.
+
+   Selectors are prefixed with [data-program] purely for specificity, so the
+   overrides win regardless of Tailwind's layer emission order.
+   ========================================================================== */
+
+@layer utilities {
+  /* ---------------------------------------------------------------------------
+     2.1 — Route the text uses of --primary to the text-role token.
+
+     Button secondary/ghost are `text-primary`; links use it too. bg-primary and
+     ring-primary intentionally keep the lighter FILL value -- that is the whole
+     point of the split. Upstream this belongs in the component recipes, not in
+     a utility override.
+     ------------------------------------------------------------------------ */
+  [data-program] .text-primary {
+    color: rgb(var(--primary-on-surface));
+  }
+  [data-program] .border-primary {
+    border-color: rgb(var(--primary-on-surface));
+  }
+  [data-program] .text-destructive {
+    color: rgb(var(--destructive-on-surface));
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.2 — Form controls belong on their own fill, not the page (review §5).
+
+     controlClasses is `... border border-input bg-background ...`, so a control
+     is painted with the PAGE colour. Routed to --card (white, Part 1.9), so
+     a field reads as something you can type in. Scoped to real form elements so
+     the body/page use of bg-background is untouched.
+
+     Upstream this wants to be an `--input-background` token: shadcn ships
+     --input as a BORDER colour only and has no fill token for controls, which is
+     why `bg-background` ends up hardcoded in the recipe.
+     ------------------------------------------------------------------------ */
+  input.bg-background,
+  select.bg-background,
+  textarea.bg-background {
+    background-color: rgb(var(--card));
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.3 — Tabs active state (review §8.7).
+
+     TabsTrigger active is `bg-background` on a `bg-muted` track. Stock reads
+     1.39:1; after Part 1.1 the naive result would be 1.22:1, i.e. worse. The
+     shadcn "lift out of the muted track" idiom assumes white-on-grey and does
+     not survive a two-tan palette, so fill the active tab with the brand colour
+     instead -- unmistakable, and 7.69:1 AAA for the label.
+     ------------------------------------------------------------------------ */
+  [data-program] [role="tab"][data-state="active"] {
+    background-color: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
+    box-shadow: var(--os-shadow);
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.4 — AAA target size (review §2, WCAG 2.5.5 Enhanced = 44x44).
+
+     Button size="sm" is h-9 = 36px and cannot conform. Raising the min-height
+     keeps the compact look while clearing the floor; upstream, `sm` either needs
+     to be 44px tall or documented as AA-only.
+
+     TabsList is deliberately NOT handled here. Its recipe's own h-10 never
+     reaches the DOM -- `cn` is tailwind-merge and SearchApp passes `h-auto`,
+     which strips it -- so any `.h-10` hook would match nothing. The two tab
+     targets get their 44px from `cf-tap` passed to TabsTrigger at the call site,
+     which is the pattern the rest of this part should be following.
+     ------------------------------------------------------------------------ */
+  [data-program] button.h-9,
+  [data-program] a.h-9 {
+    min-height: 2.75rem;
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.5 — Give Card the larger radius rung (review §6.3).
+
+     One radius for a 44px control and a 500px panel reads generous on the
+     control and stingy on the panel. Nudging panels to --radius-xl while
+     controls keep --radius-lg costs nothing and does most of the work.
+
+     Keyed on `bg-card` specifically, NOT on `shadow-program`: Button primary is
+     `bg-primary ... shadow-program rounded-lg`, so a shadow-based selector also
+     rounds every button to 15px. (It did, on the first pass.) `bg-card` hits the
+     Card outlined/elevated recipes and CampCard's cardVariants anchor, and
+     misses buttons, form controls (which are `bg-background`) and the header
+     (which is `bg-card/95`, a different class).
+     ------------------------------------------------------------------------ */
+  [data-program] .bg-card.rounded-lg {
+    border-radius: var(--radius-xl);
+  }
+
+  /* ---------------------------------------------------------------------------
+     2.6 — Overlay surfaces should use --popover, not --background.
+
+     `DialogContent` fills with `bg-background`. Stock that is invisible-but-
+     harmless, because --background == --card == --popover. Once --background
+     becomes the page tone (Part 1.1) the bug shows: a modal panel renders in the
+     PAGE colour, so the raised surface reads flat against the page behind it and
+     only the overlay scrim separates them.
+
+     The system already ships --popover and --popover-foreground for exactly this
+     and no component consumes them. Upstream: the overlay recipes should use
+     bg-popover. Found by fixing §4, not visible before it.
+     ------------------------------------------------------------------------ */
+  [data-program] [role="dialog"].bg-background,
+  [data-program] [role="alertdialog"].bg-background {
+    background-color: rgb(var(--popover));
+  }
+
+  /* =========================================================================
+     PART 3 — Camp Finder preferences, not design-system findings
+
+     Everything above corrects something measurably wrong. This part is taste:
+     pull it out before quoting any of this upstream.
+     ====================================================================== */
+
+  /* ---------------------------------------------------------------------------
+     3.2 — Filter chips: match the pre-port density WITHOUT losing the AAA target.
+
+     Measured stock: 44px tall, 12px label, padding 4px 12px, 6px gaps. The bulk
+     was never padding -- it was `cf-tap`'s `min-height: 44px` stretching a ~20px
+     content box, leaving ~24px dead.
+
+     Then measured why a 36px chip STILL read heavier than the old one. It is not
+     the font size. Side by side:
+
+                      stock DS chip          pre-port chip
+       weight         700  (from .display)   500
+       size           13px                   12px
+       family         Montserrat display     Public Sans body
+       text colour    primary green          near-black ink (neutral)
+       border colour  primary green          light tan (neutral)
+
+     WEIGHT is the dominant factor, and the second is that the DS `outline` badge
+     variant paints BOTH the border and the label in --primary, so every
+     UNSELECTED chip reads as emphasised. The old design kept the off state
+     neutral and spent colour only on the on state -- which is the correct
+     signal: 20 of 23 chips are off at rest.
+
+     So: weight 500, 12px, neutral border + ink label when off, green fill when
+     on. That is a DS finding too, not just taste -- `Badge variant="outline"` has
+     no neutral option (primary | accent | subtle | outline, and outline is
+     primary-tinted), so a quiet bordered chip is not expressible.
+
+     TARGET SIZE — a deliberate level change, read this before reverting it.
+     The chip block was still reading spread out, because a 44px non-overlapping
+     target FORCES a 44px row pitch: at a 30px box that leaves 14px of visible gap
+     between rows and there is no way to spend it differently. The only lever left
+     is the target itself.
+
+     So the chips now hold a 36px target (30px box + 3px each side) on a 6px row
+     gap, giving a 36px pitch. That is:
+       - WCAG 2.5.8 Target Size (Minimum), Level AA: PASSES outright at 36x60px,
+         well clear of the 24x24 floor, and hit areas still never overlap.
+       - WCAG 2.5.5 Target Size (Enhanced), Level AAA: NO LONGER MET (needs 44px).
+     It saves 8px per row over 14 rows -- about 112px, ~25% of the chip block.
+
+     Judgement: these are non-destructive multi-select toggles with visible state
+     and an undo one tap away, they are 60px+ wide, and the pre-port design shipped
+     at this density. Everything else in the app still holds 44px (buttons, inputs,
+     selects, tabs), so this is a scoped exception rather than a policy change.
+     To restore AAA: set the box back to 1.875rem with `inset-block: -7px` and the
+     row gap to 0.875rem.
+     ------------------------------------------------------------------------ */
+  [data-program] button[aria-pressed] {
+    min-height: 0; /* release cf-tap; the target moves to ::after */
+    height: 1.875rem; /* 30px visible, matching pre-port */
+    padding-inline: 0.75rem; /* 12px, matching pre-port */
+    position: relative;
+  }
+  /* Off state stays neutral. --input rather than --border for the edge: this is a
+     control boundary, so it owes 1.4.11's 3:1 (--input is 3.87:1 on white,
+     --border only 2.66:1). */
+  [data-program] button[aria-pressed="false"] {
+    background-color: rgb(var(--card));
+    border-color: rgb(var(--input));
+    color: rgb(var(--foreground));
+  }
+  /* 36px target (30px box + 3px each side). inset-block only: every chip is
+     already >= 60px wide, so the horizontal axis needs no help. */
+  [data-program] button[aria-pressed]::after {
+    content: "";
+    position: absolute;
+    inset-block: -3px;
+    inset-inline: 0;
+  }
+  /* 6px row gap exactly matches the 3px expansion on each side, so hit areas abut
+     without ever overlapping. Column gap unchanged -- horizontal never needed it.
+     The wrapper is always a div (Filters.tsx puts the chips in a flex-wrap div
+     inside the fieldset), so there is no fieldset branch to write. */
+  [data-program] div:has(> button[aria-pressed]) {
+    row-gap: 0.375rem;
+    column-gap: 0.5rem;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   PART 3.3 — Chip typography, deliberately UNLAYERED
+
+   These two declarations cannot live in `@layer utilities` above. `.display` is
+   a plain unlayered rule in the design system's tokens.css (its comment explains
+   why: it must survive in the prebuilt CSS exports, which have no source scan).
+   Unlayered styles beat layered ones regardless of specificity, so
+   `@layer utilities { [data-program] button[aria-pressed] { font-weight: 500 } }`
+   loses to `.display { font-weight: var(--os-display-weight) }` even at 0,2,1 vs
+   0,1,0. The alternatives are `!important` or getting out of the layer; being
+   unlayered is the honest one.
+
+   This is review §9.2 in practice: you cannot restyle display-family type with a
+   utility, and the failure is silent -- the class simply has no effect.
+   -------------------------------------------------------------------------- */
+[data-program] button[aria-pressed] {
+  font-size: 12px; /* was 13px; pre-port was 12px */
+  font-weight: 500; /* the actual fix -- .display forces 700 */
+}
+
+/* -----------------------------------------------------------------------------
+   PART 3.5 — MapLibre chrome, themed (review §9.5 / the "known visual seam")
+
+   maplibre-gl.css hardcodes `background: #fff`, `border-radius: 3px` and its own
+   shadow on the popup, and 4px radius on the control group. Once the map is
+   framed with our border and radius, those stock corners sit right at the frame
+   and read as a different design system -- which they are.
+
+   This is the six-selector fix that every design-system consumer with a map has
+   to write, which is the argument for shipping it upstream as an optional
+   `maplibre.css`. Nothing here is app-specific.
+
+   Prefixed with [data-program] for specificity: maplibre-gl.css is imported from
+   inside the island component, so its position relative to this file in the
+   cascade is a bundler detail we should not depend on. Popups render inside the
+   map container, which is inside the themed subtree, so the prefix always matches.
+
+   The tip is a CSS triangle -- only the ONE coloured border side may be set per
+   anchor, or the arrow becomes a solid square.
+   -------------------------------------------------------------------------- */
+[data-program] .maplibregl-popup-content {
+  background-color: rgb(var(--card));
+  color: rgb(var(--foreground));
+  border: 1px solid rgb(var(--border));
+  border-radius: var(--radius);
+  box-shadow: var(--os-shadow);
+}
+[data-program] :is(.maplibregl-popup-anchor-top, .maplibregl-popup-anchor-top-left, .maplibregl-popup-anchor-top-right) .maplibregl-popup-tip {
+  border-bottom-color: rgb(var(--card));
+}
+[data-program] :is(.maplibregl-popup-anchor-bottom, .maplibregl-popup-anchor-bottom-left, .maplibregl-popup-anchor-bottom-right) .maplibregl-popup-tip {
+  border-top-color: rgb(var(--card));
+}
+[data-program] .maplibregl-popup-anchor-left .maplibregl-popup-tip {
+  border-right-color: rgb(var(--card));
+}
+[data-program] .maplibregl-popup-anchor-right .maplibregl-popup-tip {
+  border-left-color: rgb(var(--card));
+}
+[data-program] .maplibregl-ctrl-group {
+  background-color: rgb(var(--card));
+  border: 1px solid rgb(var(--input));
+  border-radius: var(--radius);
+  box-shadow: var(--os-shadow);
+}
+[data-program] .maplibregl-ctrl-attrib.maplibregl-compact {
+  background-color: rgb(var(--card) / 0.9);
+  border-radius: var(--radius);
+}
+
+/* -----------------------------------------------------------------------------
+   NOT overridden, on purpose -- these need real upstream work, not a token:
+
+   - Badge's `text-[11px] uppercase tracking-wider` base (review §8.1). Already
+     defeated per-call-site in this app with `normal-case tracking-normal`;
+     patching it globally here would hide how often that was necessary.
+   - Badge having no `warning` tone (§8.2) and no focus treatment (§8.3).
+   - Alert's hardcoded `bg-[#FCD116]` / `border-[#996633]/40` -- the one place
+     the system leaves the token model, so a consumer cannot retint it at all.
+   - DialogContent's missing aria-modal (§8.4) and height cap (§8.5); both are
+     patched at the call site in SearchApp.tsx instead.
+   - The missing Sheet / Slider / ToggleGroup / Link primitives (§8.8).
+
+   Worth recording, since it looks like a bug and isn't: --ring is SA Blue
+   #003F87, which is only 1.33:1 against the primary fill. The focus ring is
+   drawn at `outline-offset: 2px`, so it lands on the page (7.95:1) rather than
+   on the button. That 2px offset is load-bearing for 1.4.11 -- don't let it
+   become 0.
+   -------------------------------------------------------------------------- */

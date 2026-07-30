@@ -1,0 +1,9 @@
+# Vendored npm tarballs are binary. `package-lock.json` records a sha512 integrity hash for
+# web/vendor/*.tgz, so any byte change — including a line-ending rewrite from a future
+# `* text=auto` rule — breaks `npm ci` with EINTEGRITY, in CI, with no local reproduction.
+# See web/vendor/README.md.
+*.tgz binary
+
+# Same reasoning for the generated icon assets.
+*.png binary
+*.ico binary

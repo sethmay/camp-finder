@@ -8,6 +8,12 @@
 .claude/handoffs
 .claude/maps
 .workbench
+# WORKFLOW.md mandates feature worktrees at .claude/worktrees/<slug>, so this path is
+# permanent rigging and would otherwise show as untracked noise on every branch.
+.claude/worktrees/
+# Local working copy of the Open Scout design system, used to build the vendored tarball.
+# Not ours to commit; see web/vendor/README.md for how it is reproduced.
+.claude/design_system/
 
 # --- OS / editor ---
 .DS_Store

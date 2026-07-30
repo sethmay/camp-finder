@@ -1,19 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
 import { withBase } from "@lib/paths";
+import { buttonVariants, Heading } from "@opensourcescouting/design-system";
 ---
 
 <Base title="Not found — Camp Finder">
   <div class="mx-auto max-w-md px-4 py-20 text-center">
-    <p class="font-display text-display text-primary">404</p>
-    <h1 class="mt-2 font-display text-h2 text-ink">We couldn't find that page</h1>
-    <p class="mt-2 text-body text-muted">
+    <!-- Decorative status numeral, not a heading: the h1 below carries the page title. -->
+    <p class="display text-4xl sm:text-5xl md:text-6xl text-primary">404</p>
+    <Heading level={1} size={3} className="mt-2">We couldn't find that page</Heading>
+    <p class="mt-2 text-base text-muted-foreground">
       The camp or page you're looking for may have moved.
     </p>
-    <a
-      href={withBase("/")}
-      class="cf-tap mt-6 inline-flex items-center justify-center rounded-md bg-primary px-6 font-semibold text-surface hover:bg-primary-700"
-    >
+    <a href={withBase("/")} class:list={[buttonVariants({ variant: "primary", size: "md" }), "mt-6"]}>
       Back to search
     </a>
   </div>

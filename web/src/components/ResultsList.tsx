@@ -1,3 +1,4 @@
+import { Field, NativeSelect } from "@opensourcescouting/design-system";
 import type { RankedCamp, SortKey } from "@lib/types";
 import CampCard from "./CampCard";
 import EmptyState from "./EmptyState";
@@ -26,7 +27,7 @@ export default function ResultsList({
     return (
       <ul className="flex flex-col gap-3" aria-busy="true" aria-label="Loading camps">
         {Array.from({ length: 5 }).map((_, i) => (
-          <li key={i} className="h-36 animate-pulse rounded-md border border-border bg-surface" />
+          <li key={i} className="h-36 animate-pulse rounded-lg border border-border bg-muted/40" />
         ))}
       </ul>
     );
@@ -34,18 +35,17 @@ export default function ResultsList({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex items-center justify-end gap-3">
-        <label className="flex items-center gap-2 text-sm text-muted">
-          Sort
-          <select
+      <div className="flex items-end justify-end gap-3">
+        <Field label="Sort by" className="w-44">
+          <NativeSelect
+            className="cf-tap"
             value={sort}
             onChange={(e) => onSort(e.target.value as SortKey)}
-            className="cf-tap rounded-md border border-border bg-surface px-2 text-ink"
           >
             <option value="distance">Distance</option>
             <option value="name">Name</option>
-          </select>
-        </label>
+          </NativeSelect>
+        </Field>
       </div>
 
       {ranked.length === 0 ? (

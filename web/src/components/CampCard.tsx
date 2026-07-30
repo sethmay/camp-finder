@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { Badge, Heading, cardVariants, cn } from "@opensourcescouting/design-system";
 import type { RankedCamp } from "@lib/types";
 import { withBase } from "@lib/paths";
 import { orderFeatures, programCategories, PROGRAM_CATEGORY_LABEL } from "@lib/format";
@@ -33,23 +34,24 @@ export default function CampCard({
       onMouseLeave={onLeave}
       onFocus={() => onHover?.(camp.id)}
       onBlur={onLeave}
-      className={`block rounded-md border bg-surface p-4 shadow-sh-1 transition hover:shadow-sh-2 ${
-        selected ? "border-primary ring-1 ring-primary" : "border-border"
-      }`}
+      className={cn(
+        cardVariants({ variant: "elevated" }),
+        "block p-4 hover:shadow-md",
+        selected && "border-primary ring-1 ring-inset ring-primary",
+      )}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="truncate font-display text-h3 text-ink">{camp.name}</h3>
-          {operator && <p className="mt-0.5 truncate text-sm text-muted">{operator}</p>}
+          <Heading level={3} size={4} className="truncate">
+            {camp.name}
+          </Heading>
+          {operator && <p className="mt-0.5 truncate text-sm text-muted-foreground">{operator}</p>}
           {badgeCats.length > 0 && (
             <div className="mt-1 flex flex-wrap gap-1">
               {badgeCats.map((c) => (
-                <span
-                  key={c}
-                  className="inline-flex items-center rounded-pill border border-primary px-2 py-0.5 text-xs font-semibold text-primary"
-                >
+                <Badge key={c} variant="outline">
                   {PROGRAM_CATEGORY_LABEL[c]}
-                </span>
+                </Badge>
               ))}
             </div>
           )}
@@ -57,7 +59,7 @@ export default function CampCard({
         <StaleBadge verifiedAt={camp.verified_at} />
       </div>
 
-      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+      <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted-foreground">
         <span className="inline-flex items-center gap-1">
           <MapPin size={14} aria-hidden="true" />
           {camp.city ? `${camp.city}, ${camp.state}` : camp.state}
@@ -71,8 +73,10 @@ export default function CampCard({
           {orderedFeatures.slice(0, MAX_CHIPS).map((f) => (
             <FeatureChip key={f} feature={f} signature={sig.has(f)} />
           ))}
+          {/* Matches FeatureChip's outline pill so the row reads as one set, but muted and
+            * icon-less: it is a count, not a feature. */}
           {extraChips > 0 && (
-            <span className="inline-flex items-center rounded-pill border border-border bg-bg px-2 py-1 text-xs text-muted">
+            <span className="inline-flex items-center rounded-full border border-border bg-card px-2.5 py-1 text-xs text-muted-foreground">
               +{extraChips} more
             </span>
           )}

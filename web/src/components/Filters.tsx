@@ -1,4 +1,14 @@
+import { useId } from "react";
 import { X } from "lucide-react";
+import {
+  badgeVariants,
+  Button,
+  Field,
+  Heading,
+  NativeSelect,
+  TextInput,
+  cn,
+} from "@opensourcescouting/design-system";
 import type { ProgramCategory } from "@lib/types";
 import { FEATURE_FACET_GROUPS, featureLabel, PROGRAM_CATEGORY_LABEL } from "@lib/format";
 import type { UiState } from "@lib/searchParams";
@@ -7,6 +17,22 @@ type CriteriaPatch = Partial<UiState["criteria"]>;
 
 const RADII = [25, 50, 100, 150, 250, 300, 400, 500, 600, 800, 1000, 1500, 2000];
 const ALL_CATEGORIES = Object.keys(PROGRAM_CATEGORY_LABEL) as ProgramCategory[];
+
+/* The DS has no ToggleGroup/Chip primitive, so the multi-select chips stay
+ * aria-pressed buttons and borrow the Badge recipe for their skin. The recipe is
+ * built for a static <span>, so three things have to be undone or added by hand:
+ * its uppercase/tracking-wider treatment (these are sentence-case labels), its
+ * rounded-lg (chips are pills), and a focus-visible ring (a span never needs one).
+ * No `cf-tap` here: ds-overrides.css PART 3.2 holds the chips to a 36px target
+ * (WCAG 2.5.8 AA) at higher specificity, so the class would be dead weight and
+ * would read as a 44px promise the CSS does not keep. */
+const chipClass = (on: boolean) =>
+  cn(
+    badgeVariants({ variant: on ? "primary" : "outline" }),
+    "normal-case tracking-normal rounded-full px-3 text-xs transition-colors",
+    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring",
+    on ? "hover:bg-primary/90" : "hover:bg-muted",
+  );
 
 export default function Filters({
   criteria,
@@ -44,73 +70,85 @@ export default function Filters({
     categories.length +
     (text ? 1 : 0);
 
+  // Both a desktop rail and a mobile dialog render this component at the same time, so
+  // the one id we wire by hand has to be per-instance.
+  const julyHighId = useId();
+
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-5">
       <div className="flex items-center justify-between">
-        <h2 className="font-display text-h3 text-ink">Filters</h2>
+        <Heading level={2} size={4}>
+          Filters
+        </Heading>
         {activeCount > 0 && (
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="sm"
+            leadingIcon={<X size={14} aria-hidden="true" />}
             onClick={onClearAll}
-            className="inline-flex items-center gap-1 text-sm text-muted hover:text-ink"
           >
-            <X size={14} aria-hidden="true" /> Clear all
-          </button>
+            Clear all
+          </Button>
         )}
       </div>
 
-      <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
-        Search by name
-        <input
+      <Field label="Search by name">
+        <TextInput
           type="search"
           value={text}
           onChange={(e) => onText(e.target.value)}
           placeholder="Camp or council name"
           data-lpignore="true"
           autoComplete="off"
-          className="cf-tap rounded-md border border-border bg-surface px-3 text-body font-normal"
+          className="cf-tap"
         />
-      </label>
+      </Field>
 
       <fieldset className="flex flex-col gap-2">
-        <legend className="text-sm font-semibold text-ink">Distance</legend>
+        <legend className="display text-sm font-medium text-foreground">Distance</legend>
         <div className="flex gap-2">
-          <input
-            type="text"
-            name="near-code"
-            inputMode="numeric"
-            maxLength={5}
-            value={criteria.zip ?? ""}
-            onChange={(e) => onPatch({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) || undefined })}
-            placeholder="97405"
-            aria-label="Distance origin, 5-digit code"
-            autoComplete="off"
-            data-lpignore="true"
-            data-form-type="other"
-            className="cf-tap w-28 rounded-md border border-border bg-surface px-3"
-          />
-          <select
-            value={criteria.radiusMiles ?? ""}
-            onChange={(e) => onPatch({ radiusMiles: e.target.value ? Number(e.target.value) : undefined })}
-            aria-label="Radius in miles"
-            className="cf-tap flex-1 rounded-md border border-border bg-surface px-3"
-          >
-            <option value="">Any distance</option>
-            {RADII.map((r) => (
-              <option key={r} value={r}>
-                Within {r} mi
-              </option>
-            ))}
-          </select>
+          {/* No Field label on either control: the legend is the visible label for the
+           * pair, and each control carries its own aria-label. Passing a Field label
+           * would give them a second, duplicated accessible name. */}
+          <Field className="w-28">
+            <TextInput
+              type="text"
+              name="near-code"
+              inputMode="numeric"
+              maxLength={5}
+              value={criteria.zip ?? ""}
+              onChange={(e) => onPatch({ zip: e.target.value.replace(/\D/g, "").slice(0, 5) || undefined })}
+              placeholder="97405"
+              aria-label="Distance origin, 5-digit code"
+              autoComplete="off"
+              data-lpignore="true"
+              data-form-type="other"
+              className="cf-tap"
+            />
+          </Field>
+          <Field className="flex-1">
+            <NativeSelect
+              value={criteria.radiusMiles ?? ""}
+              onChange={(e) => onPatch({ radiusMiles: e.target.value ? Number(e.target.value) : undefined })}
+              aria-label="Radius in miles"
+              className="cf-tap"
+            >
+              <option value="">Any distance</option>
+              {RADII.map((r) => (
+                <option key={r} value={r}>
+                  Within {r} mi
+                </option>
+              ))}
+            </NativeSelect>
+          </Field>
         </div>
       </fieldset>
 
-      <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
-        State
-        <select
+      <Field label="State">
+        <NativeSelect
           value={criteria.state ?? ""}
           onChange={(e) => onPatch({ state: e.target.value || undefined })}
-          className="cf-tap rounded-md border border-border bg-surface px-3 font-normal"
+          className="cf-tap"
         >
           <option value="">All states</option>
           {states.map((s) => (
@@ -118,12 +156,19 @@ export default function Filters({
               {s}
             </option>
           ))}
-        </select>
-      </label>
+        </NativeSelect>
+      </Field>
 
-      <label className="flex flex-col gap-1 text-sm font-semibold text-ink">
-        Avg July daytime temp: {criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"}
+      {/* The DS ships no Slider, so this stays a native range input. Field only wires
+       * its own text-like controls through context, so the id association is manual. */}
+      <Field
+        htmlFor={julyHighId}
+        label={`Avg July daytime temp: ${
+          criteria.maxJulyHigh !== undefined ? `${criteria.maxJulyHigh}°F` : "Any"
+        }`}
+      >
         <input
+          id={julyHighId}
           type="range"
           min={70}
           max={105}
@@ -136,10 +181,10 @@ export default function Filters({
           }}
           className="cf-tap accent-primary"
         />
-      </label>
+      </Field>
 
-      <fieldset className="flex flex-col gap-2">
-        <legend className="text-sm font-semibold text-ink">Program</legend>
+      <fieldset className="flex flex-col gap-1.5">
+        <legend className="display text-sm font-medium text-foreground">Program</legend>
         <div className="flex flex-wrap gap-1.5">
           {ALL_CATEGORIES.map((cat) => {
             const on = categories.includes(cat);
@@ -149,11 +194,7 @@ export default function Filters({
                 type="button"
                 aria-pressed={on}
                 onClick={() => toggleCategory(cat)}
-                className={`rounded-pill border px-3 py-1.5 text-xs font-medium transition ${
-                  on
-                    ? "border-primary bg-primary text-surface"
-                    : "border-border bg-surface text-ink hover:border-primary"
-                }`}
+                className={chipClass(on)}
               >
                 {PROGRAM_CATEGORY_LABEL[cat]}
               </button>
@@ -162,11 +203,11 @@ export default function Filters({
         </div>
       </fieldset>
 
-      <fieldset className="flex flex-col gap-3">
-        <legend className="text-sm font-semibold text-ink">Features</legend>
+      <fieldset className="flex flex-col gap-2.5">
+        <legend className="display text-sm font-medium text-foreground">Features</legend>
         {FEATURE_FACET_GROUPS.map((group) => (
-          <div key={group.label} role="group" aria-label={group.label} className="flex flex-col gap-1.5">
-            <p aria-hidden="true" className="text-xs font-medium uppercase tracking-wide text-muted">{group.label}</p>
+          <div key={group.label} role="group" aria-label={group.label} className="flex flex-col gap-1">
+            <p aria-hidden="true" className="text-xs font-medium uppercase tracking-wide text-muted-foreground">{group.label}</p>
             <div className="flex flex-wrap gap-1.5">
               {group.codes.map((f) => {
                 const on = features.includes(f);
@@ -176,11 +217,7 @@ export default function Filters({
                     type="button"
                     aria-pressed={on}
                     onClick={() => toggleFeature(f)}
-                    className={`rounded-pill border px-3 py-1.5 text-xs font-medium transition ${
-                      on
-                        ? "border-primary bg-primary text-surface"
-                        : "border-border bg-surface text-ink hover:border-primary"
-                    }`}
+                    className={chipClass(on)}
                   >
                     {featureLabel(f)}
                   </button>

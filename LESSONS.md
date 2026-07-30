@@ -188,12 +188,44 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   marker circles: `queryRenderedFeatures(e.point, { layers: ["point","cluster","point-label","cluster-count"] })`.
   Omitting the text layers makes a click on a camp's name/count read as "empty map" and wrongly
   deselect. Same sync discipline as `OVERLAY_LAYERS`.
+- **A blank map after editing an island is Vite HMR, not your CSS.** MapLibre owns imperative
+  DOM inside a React island, so an HMR update to `SearchApp`/`MapView` can leave the live map
+  bound to a container React has already detached: canvas alive, tiles fetched, nothing
+  visible — and the frame/border still renders correctly, which sends you hunting the wrong
+  change. Restart `astro dev` (or hard-reload) before debugging. Confirmed: an apparent
+  "border broke the map" was pure HMR state; the same build rendered fine on `dev`, on
+  `preview`, cache-disabled, and across Map/List toggling.
+- **MapLibre fails silently in three different ways; handle all three or you get an empty
+  box.** `new maplibregl.Map()` THROWS when WebGL is unavailable (inside `useEffect`, so it
+  surfaces nowhere useful); a dead style/glyph endpoint does NOT throw and only fires
+  `map.on("error")`; and `webglcontextlost` blanks the canvas with no recovery. `MapView`
+  handles each and renders a fallback pointing at the list view. Keep the container mounted
+  and put the fallback INSIDE it — the `ref` must survive — and give it `bg-muted` so a blank
+  canvas can't show the page through the frame, which is what made "map missing" and "map
+  empty" indistinguishable. Drop `role="application"` when it fails. Test it by stubbing
+  `HTMLCanvasElement.prototype.getContext` to return `null` for `webgl*`.
+- **The map's boundary owes 3:1, not the decorative border tone.** Both map frames use
+  `border-input`, not `border-border`: a map is an interactive component (`role="application"`,
+  pan/zoom) so WCAG 1.4.11 applies to its edge. Pair the border with `overflow-hidden` or the
+  square tile canvas overflows the radius. (Watch for the two frames drifting apart — the
+  search map went a whole port without a border while the detail map had one.)
 
 ## Frontend / a11y (manual — no axe/pa11y in the toolchain)
 
-- **Every interactive control carries `cf-tap`** (`global.css`: `min-height: 44px`, the handoff
-  hit-target floor) — inputs, selects, buttons, and especially `input[type=range]`, which renders
-  ~20px tall by default (the worst offender). A control without it is a visible outlier.
+- **Every interactive control carries `cf-tap`** (`global.css`: `min-height: 44px`) — inputs,
+  selects, buttons, and especially `input[type=range]`, which renders ~20px tall by default (the
+  worst offender). A control without it is a visible outlier.
+  **One deliberate exception: the filter chips.** `ds-overrides.css` (§3.2) releases the floor for
+  them — 30px box with a 36×60px non-overlapping target via a `::after` expansion — because a
+  non-overlapping 44px target forces a 44px row pitch, which cost ~112px across 14 rows in a
+  264px rail. That drops the chips from **WCAG 2.5.5 Target Size (Enhanced), AAA** to **2.5.8
+  Target Size (Minimum), AA**, which they clear comfortably; every other control still holds 44px.
+  Two traps this leaves behind, both already hit once: `cf-tap` on a chip is DEAD (the override
+  wins on specificity), so do not read its presence as proof of 44px; and if you revert the
+  override, restore the class too. The revert recipe is in that block's comment.
+- **44px is WCAG 2.5.5 (Enhanced, AAA), not 2.5.8** — 2.5.8 (Minimum, AA) asks only 24×24. Worth
+  knowing which one you are claiming: "we meet the 44px floor" is an AAA claim, and dropping to
+  24px is still AA-conformant rather than a failure.
 - **A slider whose max is a sentinel ("105 = Any") needs `aria-valuetext`** mirroring the visible
   label ("85°F" when capped, "Any" when off); assistive tech reads the raw `value`, so the
   off-state (the default) otherwise announces as a real cap. Check the sentinel against the real
@@ -246,3 +278,45 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
 - **Shared card/detail display rules go in one exported `web/src/lib` helper.** Signature-first
   ordering was implemented twice (`CampCard` Set+sort vs `[id].astro` inline comparator) before
   being unified as `orderFeatures` — same class as the "keep pure logic in lib + test it" rule.
+
+## Frontend / design system (vendored `@opensourcescouting/design-system`)
+
+- **A vendored `file:` tarball is reproducible only if its INPUTS are in version control.** A
+  committed `.tgz` whose sha512 matches `package-lock.json` proves the bytes cannot change
+  unnoticed — it proves nothing about where they came from. `npm ci` succeeds while the build
+  inputs live on one machine. If a pre-release must be vendored: commit the patches as files,
+  record the upstream sha + the exact `npm pack` command beside the tarball, and add
+  `*.tgz binary` to `.gitattributes` (git's binary auto-detection is the ONLY thing keeping the
+  integrity hash valid — a later `* text=auto` breaks `npm ci` with EINTEGRITY on CI, no local
+  repro). Exit criterion: swap to a registry version. See `web/vendor/README.md`.
+- **Override a design system's TOKENS, never its compiled class names.** Token overrides
+  (`--primary`, `--radius`) are the supported surface and survive version bumps. Selectors that
+  key on the vendor's compiled Tailwind literals — `button.h-9`, `[role="tablist"].h-10`,
+  `.bg-card.rounded-lg`, `[role="dialog"].bg-background` — are a silent time bomb: a patch bump
+  renames one and the override vanishes with no error, no type failure, no test. One such rule
+  shipped **dead on arrival** here (`tailwind-merge` strips `h-10` when the call site passes
+  `h-auto`, so it could never match, while its comment claimed it did the work). Prefer passing
+  classes at the call site; when a selector override is unavoidable, name the exact DS version it
+  was verified against so a bump has a re-check list (see the header block in `ds-overrides.css`).
+- **CSS custom properties and JS token data are two different sources of truth; a CSS override
+  cannot reach a `<canvas>`/WebGL consumer.** Retuning `--primary` in a stylesheet leaves MapLibre
+  (paint evaluated in JS) painting the stock value — same semantic role, two colours on one
+  screen. Anything reading tokens through JS must be re-pointed in the same change, or read the
+  resolved values via `getComputedStyle(document.documentElement)` at init. `map.ts` now does the
+  latter, so it cannot drift from the CSS; do the same for any future charting/canvas surface.
+- **Importing one data constant from a component barrel drags the whole library into the chunk.**
+  `import { TOKENS } from "@opensourcescouting/design-system"` for eight hex values added ~213 KB
+  (+27%) of Radix + sonner to the map chunk — on the search page AND all 451 detail pages —
+  because the package's `sideEffects: ["**/*.css"]` blocks Rollup tree-shaking. Prefer a data-only
+  subpath (`/tokens.json`) or `getComputedStyle`. Verify by diffing `dist/_astro/*.js` byte sizes
+  against the previous build, not by reading the import.
+- **A contrast audit is scoped to the surfaces it enumerated.** `ds-overrides.css` computes every
+  token against *card* and *page* and says so — then a fallback put text on a third surface
+  (`bg-muted`), where `os-on-surface-faint` landed at 3.71:1 (fails AA). Adding a new surface
+  class means re-running the pairings; and inline ratio annotations go stale when an earlier part
+  of the same file changes a surface (the `--card` tan→white collapse left two annotations wrong).
+  Recompute, don't eyeball.
+- **When a redesign moves a documented a11y floor, edit the doc in the SAME commit.** Releasing
+  `cf-tap`'s 44px floor for the filter chips (a defensible 2.5.5 AAA → 2.5.8 AA change) while this
+  file still asserted "every interactive control carries `cf-tap`" left a written invariant
+  contradicting shipped CSS — the worst failure mode in a repo whose a11y checks are manual.
