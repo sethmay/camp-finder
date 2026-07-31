@@ -36,7 +36,8 @@ const DASH_GLYPH = "#6E6449"; // "not offered" glyph; ring uses --input (border-
 const TERM_TOTAL = FEATURE_CATEGORIES.reduce((n, c) => n + c.members.length, 0);
 // Keep a focused element clear of the pinned camp row + section header when tab/anchor scrolls to it.
 const SCROLL_MT: CSSProperties = {
-  scrollMarginTop: "calc(var(--compare-header-h) + var(--compare-section-h))",
+  scrollMarginTop:
+    "calc(var(--site-header-h) + var(--compare-header-h) + var(--compare-section-h))",
 };
 
 export default function CompareTable({
@@ -64,12 +65,15 @@ export default function CompareTable({
   const sectionRef = useRef<HTMLHeadingElement>(null);
   const [headerH, setHeaderH] = useState(120);
   const [sectionH, setSectionH] = useState(44);
+  const [siteHeaderH, setSiteHeaderH] = useState(56);
 
-  // Measure the sticky camp row AND a section header so the section headers pin directly beneath
-  // the camp row and focused rows clear the whole pinned stack — both heights change with content
-  // (long names, badge wrapping), so hard-coded offsets would drift (the handoff warns on this).
+  // Measure the global site header (Header.astro is `sticky top-0 z-30` and would otherwise
+  // cover the pinned camp row — only the badge cleared it), the camp row, and a section header,
+  // so each sticky layer pins directly beneath the one above and focused rows clear the whole
+  // stack. Heights change with content/viewport, so hard-coded offsets would drift.
   useEffect(() => {
     const targets: [HTMLElement | null, (n: number) => void][] = [
+      [document.querySelector("header"), setSiteHeaderH],
       [headerRef.current, setHeaderH],
       [sectionRef.current, setSectionH],
     ];
@@ -84,7 +88,9 @@ export default function CompareTable({
   const cols: CSSProperties = {
     gridTemplateColumns: `var(--compare-gutter) repeat(${camps.length}, minmax(0, 1fr))`,
   };
-  const sectionTop: CSSProperties = { top: "var(--compare-header-h)" };
+  const sectionTop: CSSProperties = {
+    top: "calc(var(--site-header-h) + var(--compare-header-h))",
+  };
   const expandedById = useMemo(
     () => new Map(camps.map((c) => [c.id, expandFeatures(c.features)])),
     [camps],
@@ -101,6 +107,7 @@ export default function CompareTable({
     <div
       style={
         {
+          ["--site-header-h"]: `${siteHeaderH}px`,
           ["--compare-header-h"]: `${headerH}px`,
           ["--compare-section-h"]: `${sectionH}px`,
         } as CSSProperties
@@ -111,8 +118,8 @@ export default function CompareTable({
         {/* Sticky camp header row */}
         <div
           ref={headerRef}
-          style={cols}
-          className="sticky top-0 z-20 grid gap-2 bg-background pb-3 pt-[10px] shadow-[0_8px_12px_-8px_rgba(34,39,28,0.28)]"
+          style={{ ...cols, top: "var(--site-header-h)" }}
+          className="sticky z-20 grid gap-2 bg-background pb-3 pt-[10px] shadow-[0_8px_12px_-8px_rgba(34,39,28,0.28)]"
         >
           <div className="sticky left-0 z-[1] flex items-end bg-background pb-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             Camp
