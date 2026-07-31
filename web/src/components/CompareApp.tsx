@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import MiniSearch from "minisearch";
 import { Plus, Search, X } from "lucide-react";
-import { Checkbox, ScoutThemeProvider } from "@opensourcescouting/design-system";
+import { Alert, Checkbox, ScoutThemeProvider } from "@opensourcescouting/design-system";
 import type { Camp } from "@lib/types";
 import { FEATURE_CATEGORIES } from "@lib/format";
 import {
@@ -156,6 +156,13 @@ export default function CompareApp() {
             </label>
           )}
         </div>
+
+        <Alert tone="warning" title="Confirm details before you decide" className="mb-5">
+          This side-by-side is a convenience view built from community-maintained registry data —
+          it can be out of date or incomplete, and camps change their programs year to year. Open
+          each camp's page and confirm current programs, dates, and fees on the official council
+          page before you choose.
+        </Alert>
 
         {/* Announce selection changes for assistive tech (the add/remove controls are otherwise silent). */}
         <p role="status" aria-live="polite" className="sr-only">
