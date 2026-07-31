@@ -22,6 +22,8 @@ function camp(over: Partial<Camp> & Pick<Camp, "id" | "name" | "state">): Camp {
     lon: -122.6,
     july_high_f: 80,
     july_low_f: 55,
+    elevation_ft: 1000,
+    operating_status: "active",
     geo_precision: "exact",
     reservation: null,
     verified_at: "2026-06-01",

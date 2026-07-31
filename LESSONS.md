@@ -320,3 +320,80 @@ Distilled from `code-reviewer` output; dedupe and fold, don't append blindly.
   `cf-tap`'s 44px floor for the filter chips (a defensible 2.5.5 AAA → 2.5.8 AA change) while this
   file still asserted "every interactive control carries `cf-tap`" left a written invariant
   contradicting shipped CSS — the worst failure mode in a repo whose a11y checks are manual.
+
+## Frontend / sticky layout (Camp Compare, 0.34.0)
+
+- **`overflow-x: auto` is not a horizontal-only decision — it kills vertical `position: sticky`
+  for every descendant.** Per CSS Overflow L3, when one axis is neither `visible` nor `clip` the
+  other computes to `auto`, so an `overflow-x-auto` wrapper becomes a scroll container in *both*
+  axes; a `sticky top-0` child then resolves against that box (usually no vertical overflow) and
+  never pins. Same family as the `overflow: hidden → clip` fix, but sneakier — `clip` isn't an
+  option when you genuinely need horizontal scroll. Fixes: (a) let the *document* scroll
+  horizontally (`min-w-[…]` on the content, no wrapper scroller) so both axes resolve against the
+  viewport — what `/compare` does; or (b) give the scroller a real height (`max-h-[100dvh]`). A
+  responsive `overflow-*` on an ancestor of anything sticky needs a comment saying which it is.
+- **A measured sticky offset needs the whole stack measured — `scroll-margin-top` too.** `/compare`
+  measures both the camp row (`--compare-header-h`) and a section header (`--compare-section-h`)
+  with one `ResizeObserver` and composes them; hard-coding either (an earlier `+ 52px`) reintroduces
+  the magic number the measurement existed to kill. Put the scroll margin on focusable elements in
+  the sticky-covered region (out-links, inputs, disclosures), not just the disclosure.
+
+## Frontend / design system — extends the `.display` + token entries above
+
+- **`.display` silently eats `font-*`, `tracking-*`, `uppercase`, `leading-*` — wrong tool for an
+  11px eyebrow.** The unlayered DS rule sets family/weight/tracking/style/transform/line-height at
+  once; for `scoutsbsa` that's weight 700, tracking 0, transform none, so
+  `display … uppercase tracking-[0.12em] font-semibold` renders sentence-case/untracked/700 with no
+  error. Tell: two eyebrows with identical utilities but only one carrying `display` visibly
+  disagree. For an eyebrow, drop `display` and let the utilities apply.
+- **`--os-font-body` is Source Serif 4 — this site's default body face is already serif;** Montserrat
+  is the *display* face, reached only via `.display`. Any handoff wanting "serif for editorial
+  emphasis, sans elsewhere" is inverted here — setting `fontFamily: var(--os-font-body)` to "make it
+  serif" is a no-op. Get editorial lift another way (italic) and flag the conflict, don't ship a dead style.
+- **A hex constant in a component is a token duplicate even when the comment says `// == --primary`.**
+  It's correct only until `ds-overrides.css` retunes the token — same drift class as the MapLibre
+  JS-token lesson. Reserve raw hex for colours with genuinely no token (the amber data-gap family,
+  `#E2DAC7`/`#EFEADD`/`#A79877`/`#6E6449`); everything else goes through `bg-primary`/`text-primary`/etc.
+
+## Frontend / a11y — extends the manual-a11y section above
+
+- **Any state where the primary component doesn't render needs its own affordances.** `/compare`
+  hides the whole table below 2 camps — and with it every `Remove` button; at one selection there
+  was no way to undo the pick, and the slot rail showing it was `aria-hidden`. Enumerate
+  below-threshold states and ask what a user can still *do*. Corollary: `aria-hidden` on a decorative
+  container is a bug the moment real content renders inside it — hide the placeholders, not the list.
+  Pair count-gated UI with a `role="status"` live region so add/remove is announced.
+- **A `role="combobox"` typeahead needs `aria-activedescendant`, and `role="option"` must not wrap a
+  `<button>`.** ARIA APG shape: focus stays on the input, each `<li role="option">` gets a stable id,
+  `aria-activedescendant` points at the active one, and the option's content is non-focusable
+  (`onMouseDown`, not a nested button). camp-finder now has two typeaheads and no automated check.
+- **Choosing per-cell `aria-label`s + heading navigation over ARIA table roles makes the heading
+  outline load-bearing.** Defensible over a CSS grid with sticky/`overflow-clip` ancestors (fragile
+  for real table roles), but only if the outline has no jumps (no h1 → h3) and *every* cell variant
+  carries its prefix — the unsurveyed cells (the null-vs-empty carriers) were the branch that lost theirs.
+
+## URL / state — extends the shareable-URL rules above
+
+- **Format validation is not existence validation.** `/^\d{5}$/` accepts `00000`; `zipToCentroid`
+  then returns `null` and the UI degrades to em-dashes with the entry prompt already gone. A lookup
+  keyed on user input has three states — absent, present-and-resolvable, present-and-unresolvable —
+  and the third needs copy. (Both `/compare` and the search page share the ZIP surface.)
+- **localStorage needs the clear path, not just the set path.** `if (value) setItem(...)` with no
+  `removeItem` means a deliberate "clear" returns on reload, because the load path falls back to the
+  stored value when the URL carries none.
+
+## Data / provenance + testing — extends the entries above
+
+- **Surfacing an existing API field on a *new* page re-triggers the attribution rule.** `elevation_ft`
+  was always in the API; rendering it (and July normals) on `/compare` for the first time shipped with
+  no derived-source label until caught — the detail page's "via Open Scout API" credit doesn't travel
+  with the field. Checklist for any new page rendering climate/elevation/geocodes: does it carry its
+  own attribution, or borrow one that lives elsewhere?
+- **The per-id refresh diff should also assert "no new empty arrays", not just "no new nulls"** — treat
+  `[]` as null-equivalent so a silently emptied `features`/`features_signature` is caught, alongside
+  id-set stability, feature-code loss, and `features_verified_at` demotion, in one `node -e` pass.
+- **A vocab-derived grouping deserves a partition test that tolerates the head-vs-member distinction.**
+  `FEATURE_CATEGORIES` makes a `broader` cluster *head* the category label, never a member row, so a
+  naive "every term appears in some `members`" assertion fails on a correct build; assert
+  `covered = members ∪ {cluster head codes}` equals the full vocab. This is what keeps "no second
+  hand-maintained membership list" safe as the vocab grows.

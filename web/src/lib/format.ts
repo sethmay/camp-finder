@@ -167,3 +167,72 @@ export function formatVerified(verifiedISO: string): string {
   const v = parseISO(verifiedISO);
   return `${MONTHS[v.m - 1]} ${v.y}`;
 }
+
+export interface CompareCategory {
+  key: string; // stable id for URL state + aria-controls
+  label: string; // display heading
+  members: string[]; // child feature codes in display order; length is the "of" total
+}
+
+/** Card-3 comparison categories, derived entirely from the vocab hierarchy (no second
+ *  hand-kept membership list). Two tiers: (1) activity clusters — a top-level `activity`
+ *  term that is the `broader` parent of >=2 others (Aquatics, Shooting Sports, Climbing,
+ *  Scoutcraft), ordered by depth; (2) every remaining term bucketed by vocab `category`
+ *  using the same mapping the search facets use. Each of the 128 vocab terms lands in
+ *  exactly one category, and `of` counts come from the taxonomy, not the selected camps.
+ *  A cluster's own head code (e.g. `aquatics`) is the category label, not a member, so a
+ *  camp that lists the bare parent with no children reads "0 of N" — acceptable and rare. */
+export const FEATURE_CATEGORIES: CompareCategory[] = (() => {
+  const children = new Map<string, string[]>();
+  for (const t of vocab.features) {
+    if (!t.broader) continue;
+    const arr = children.get(t.broader);
+    if (arr) arr.push(t.code);
+    else children.set(t.broader, [t.code]);
+  }
+  const byLabel = (a: string, b: string) => featureLabel(a).localeCompare(featureLabel(b));
+  const clusters = vocab.features
+    .filter(
+      (t) =>
+        (t.category ?? null) === "activity" &&
+        !t.broader &&
+        (children.get(t.code)?.length ?? 0) >= 2,
+    )
+    .map((t) => ({
+      key: t.code,
+      label: featureLabel(t.code),
+      members: children.get(t.code)!.slice().sort(byLabel),
+    }))
+    .sort((a, b) => b.members.length - a.members.length || a.label.localeCompare(b.label));
+
+  const assigned = new Set<string>();
+  for (const c of clusters) {
+    assigned.add(c.key);
+    for (const m of c.members) assigned.add(m);
+  }
+
+  // Leftover terms bucketed by vocab category. Distinct labels from the clusters so the
+  // activity bucket reads as "Other activities", not a second "Activities".
+  const BUCKET: Record<string, string> = {
+    activity: "Other activities",
+    subject: "Programs & audience",
+    program_model: "Programs & audience",
+    facility: "Camp facilities & lodging",
+    accommodation: "Camp facilities & lodging",
+  };
+  const ORDER = ["Other activities", "Programs & audience", "Camp facilities & lodging", "More"];
+  const buckets = new Map<string, string[]>();
+  for (const t of vocab.features) {
+    if (assigned.has(t.code)) continue;
+    const b = BUCKET[t.category ?? ""] ?? "More";
+    const arr = buckets.get(b);
+    if (arr) arr.push(t.code);
+    else buckets.set(b, [t.code]);
+  }
+  const leftovers = ORDER.filter((b) => buckets.has(b)).map((b) => ({
+    key: b.toLowerCase().replace(/[^a-z]+/g, "_").replace(/^_|_$/g, ""),
+    label: b,
+    members: buckets.get(b)!.slice().sort(byLabel),
+  }));
+  return [...clusters, ...leftovers];
+})();

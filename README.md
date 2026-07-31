@@ -61,9 +61,10 @@ site deploys from a clean checkout.
 
 ## Status
 
-- **Live data source:** Open Scout API (`v0.35.0`) — 448 camps across ~213 councils and
+- **Live data source:** Open Scout API (`v0.58.1`) — 445 camps across ~211 councils and
   52 states/territories, classified by program and camp type, with reservation grouping,
-  coordinate precision, avg July temperatures, and surveyed camp features (121-term vocab).
+  coordinate precision, elevation, avg July temperatures, and surveyed camp features
+  (128-term vocab).
 - **Frontend:** search/map/filter island (distance, state, July temperature, program,
-  features, text), reservation-clustered map, static camp pages, about, 404 — built against
-  the approved design system.
+  features, text), reservation-clustered map, static camp pages, a `/compare` side-by-side
+  view, about, 404 — built against the approved design system.

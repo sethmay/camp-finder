@@ -2,6 +2,19 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.34.0 (minor) — 2026-07-31
+
+- `PENDING` Add **Camp Compare** (`/compare`): a client-side side-by-side of up to 5 camps on
+  program features (vocab-hierarchy categories with offered / not-offered / not-surveyed marks +
+  dot-track depth), straight-line distance from a home ZIP, July climate, elevation, and operator
+  council. Selection, ZIP, open categories, and the differences toggle live in the URL (shareable).
+  Honors the registry non-negotiables — no routing backend (haversine, not drive time), and the
+  `features_verified_at` null-vs-empty + `geo_precision` area-rounding integrity rules are
+  load-bearing throughout. Pure logic (`lib/compare.ts`, `FEATURE_CATEGORIES`) unit-tested.
+- `PENDING` Update the Open Scout API pin to **v0.58.1** and refresh committed data: add
+  `elevation_ft` + `operating_status` to the projection and drop `closed`/`not_operating` camps
+  (448 → 445, exactly the 3 non-active removed; per-id diff proves no other regressions).
+
 ## 0.33.0 (minor) — 2026-07-30
 
 - `014d658` Retheme the UI onto the **Open Source Scouting design system**. Migrate Tailwind v3 →

@@ -20,7 +20,7 @@ const BASE = "https://sethmay.github.io/open-scout-api";
 // Pin the release we built against. `current/*.json` is served latest-only from Pages, so
 // we assert the version instead of an immutable URL; a mismatch fails the refresh loudly.
 // Switch to the jsDelivr-pinned release tarball once `v*` tags are published.
-const EXPECTED_VERSION = "0.46.1";
+const EXPECTED_VERSION = "0.58.1";
 
 // Program types this site surfaces. A camp is included if it offers at least one.
 // Anything outside this set (e.g. venturing, sea_scout) is skipped until the UI supports it.
@@ -66,8 +66,14 @@ async function main() {
     );
   }
 
-  const included = campsDoc.items.filter((c) =>
-    (c.program_types ?? []).some((p) => SUPPORTED_PROGRAMS.has(p)),
+  // Registry scope: a supported program AND currently operating. Camps the API marks
+  // `closed` / `not_operating` are dropped — a directory used to pick next summer's camp
+  // must not surface a camp that no longer runs (any other/unknown status passes).
+  const included = campsDoc.items.filter(
+    (c) =>
+      (c.program_types ?? []).some((p) => SUPPORTED_PROGRAMS.has(p)) &&
+      c.operating_status !== "closed" &&
+      c.operating_status !== "not_operating",
   );
   console.log(`Camps: ${campsDoc.items.length} current -> ${included.length} in scope.`);
 
@@ -94,6 +100,8 @@ async function main() {
       lon: c.lon,
       july_high_f: c.july_high_f,
       july_low_f: c.july_low_f,
+      elevation_ft: c.elevation_ft,
+      operating_status: c.operating_status,
       geo_precision: c.geo_precision,
       reservation: c.reservation,
       verified_at: c.verified_at,

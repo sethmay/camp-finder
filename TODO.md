@@ -10,6 +10,16 @@ and canonical `data/` tree were removed in 0.28.0; all data authoring, correctio
 scraping now happen upstream in [open-scout-api](https://github.com/sethmay/open-scout-api).
 Refreshing the committed dataset is a deliberate step (`npm run data`), not part of the build.
 
+**Pin + fields (done, shipped 0.34.0):** `EXPECTED_VERSION` is now `0.58.1`; the projection
+carries `elevation_ft` + `operating_status` and drops `closed`/`not_operating` camps (448 → 445).
+Refresh proven non-regressive by per-id diff.
+
+**Still-unused upstream camp fields** (present in `v1/current/camps.json`, not projected):
+
+- `features_source_tier` — `camp_page` (237) / `guide` (129) / null (82). A finer signal than
+  the null-vs-empty split (how a surveyed camp's features were sourced) if a UI ever wants it.
+- `parent` — camp hierarchy; unexamined.
+
 ## Design system — post-merge debt (shipped in 0.33.0)
 
 The retheme onto `@opensourcescouting/design-system` merged in 0.33.0. Deliverables live in
@@ -43,8 +53,9 @@ The retheme onto `@opensourcescouting/design-system` merged in 0.33.0. Deliverab
 ## Feature ideas
 
 - **Filter by camp elevation.** Altitude facet (e.g. "under 3,000 ft" vs alpine) — troops care
-  about acclimatization and heat. Data now in the API (`elevation_ft`); ready to build — mirror
-  the July-high slider (`maxJulyHigh` in `filter.ts` / `Filters.tsx` / `searchParams.ts`).
+  about acclimatization and heat. Projection prereq is **done** (`elevation_ft` shipped 0.34.0);
+  the filter UI is not built — mirror the July-high slider (`maxJulyHigh` in `filter.ts` /
+  `Filters.tsx` / `searchParams.ts`).
 - **Export the filtered camp list** (CSV → opens in Excel / Google Sheets / LibreOffice) for
   offline planning. Client-side only, no backend: a pure `web/src/lib/csv.ts` serializes the
   current `ranked` set (from `SearchApp.tsx`) → CSV string; an "Export" button in the results
@@ -54,6 +65,53 @@ The retheme onto `@opensourcescouting/design-system` merged in 0.33.0. Deliverab
   serializer (comma/quote/newline escaping).
 - **Former/non-council camping (parked).** Camps sold to orgs that still allow Scout camping;
   local/state/federal camping locations. Beyond current scope (BSA council camps) — park.
+
+**From the open-scout-api idea inventory** (`D:\repos\claude\personal\open-scout-api\.workbench\appideas.md`,
+triaged 2026-07-31; numbers below are that doc's). Rejected for this app, don't re-open without new
+reasoning: the advancement, history, and unit-utility sections are off-domain (different datasets,
+different audience — and the camps dataset has no merit-badge offerings, `features[]` is facilities);
+drive-time isochrones (#3) need a routing service at runtime, which the great-circle ZIP radius
+already covers ~80% of; MCP server, notebooks, embeddable widgets, and B2B reference sync (#28,
+#30, #31, #33) belong upstream in open-scout-api; the market-gap dashboard (#8) serves council
+camping directors, not troops.
+
+Tier 1 — build (Camp Compare shipped 0.34.0):
+
+- **Reservation pages (#7).** `/reservations/[id].astro` mirroring `camps/[id].astro`: the
+  sub-camps of one property, what each offers, one map. 18 reservations covering 41 camps (Goshen
+  6, Peaceful Valley 3, the rest mostly pairs). The grouping is already in the projection and the
+  map already clusters on it. Handle `reservation.name === null` (Goshen) with an id-derived title.
+  Small build; the `reservation` grouping exists nowhere else as data.
+- **High-adventure collection page (#4).** Static curated page over the 35 `high_adventure_base`
+  camps (4 national operator). Zero new fields — today they're reachable only by filtering. Lead
+  with elevation + July normals; altitude acclimatization is the actual planning input.
+
+Tier 2 — only with the stated reframing:
+
+- **Shortlist / saved camps (#5-lite).** A `localStorage` set of camp ids; no accounts, no backend.
+  The gamified "Camp Passport" (check-ins, social layer) is out — accounts are a non-negotiable.
+  Camp Compare (shipped) already threads a selected set through the URL; a shortlist + the CSV
+  export can reuse that same selected-set primitive rather than inventing their own.
+- **Council camp pages (#21-lite).** `/councils/[slug]` listing that council's camps from the
+  already-joined `council*` fields (211 councils in scope), linking out to `council_website`. Stop
+  there — lineage, territories, and OA lodges need the upstream `councils` dataset (428 rows) and
+  are a history product, not this one.
+- **Climate note on the camp detail page (#6 reframed).** The packing-list generator as pitched
+  ("pack a fleece") is advice traceable to no source and contradicts "aggregates and points; never
+  the source of truth." Ship the grounded fact instead — "July lows near 48°F at 3,880 ft" — and
+  let the reader conclude. `july_low_f` and `elevation_ft` are both ~100% covered.
+- **Guided filtering, not a match score (#2).** The "Camp Match quiz" duplicates `Filters.tsx`
+  behind a friendlier funnel, and any match percentage buries the 82 unsurveyed camps while
+  implying precision the feature survey doesn't have. Acceptable only as a wizard that sets real
+  filter state and hands off to the existing results view. Lowest priority of this group.
+
+**Camp Compare follow-ups (shipped 0.34.0, deferred polish):** mobile uses native horizontal
+scroll, not the prototype's swipe pager + page-dot indicator (design_handoff §Responsive) —
+revisit if a pager is wanted. `features_source_tier` is not yet surfaced as a per-cell provenance
+cue. Deferred `1c` head-to-head ("compare just these two") remains a natural follow-on.
+
+Suggested order: elevation filter → reservation pages (#7) → high-adventure page (#4) →
+shortlist + CSV export → council pages.
 
 ## Crowdsourcing / corrections (parked)
 

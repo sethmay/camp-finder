@@ -41,11 +41,12 @@ Don't duplicate those docs here; if a rule changes, change it there and keep thi
 
 ## Current status
 Live at https://sethmay.github.io/camp-finder/ · current version in `web/package.json` (see `CHANGELOG.md` for what shipped).
-Registry-only, sourced from the **Open Scout API** (pinned `v0.35.0`): ~448 camps across
-~213 councils / 52 states. Search island filters distance / state / July-temperature /
+Registry-only, sourced from the **Open Scout API** (pinned `v0.58.1`): ~445 camps across
+~211 councils / 52 states. Search island filters distance / state / July-temperature /
 program / features (client-side); reservation-clustered MapLibre map; static camp detail
-pages. Shipped since the cutover: API cutover (0.28), map polish (0.29), July-temp filter
-(0.30), API v0.35 upgrade + hierarchical feature filter (0.31).
+pages; a `/compare` side-by-side view. Shipped since the cutover: API cutover (0.28), map
+polish (0.29), July-temp filter (0.30), API v0.35 + hierarchical feature filter (0.31),
+design-system retheme (0.33), Camp Compare + v0.58.1 refresh (0.34).
 
 ## Architecture in three sentences
 A refresh step (`web/scripts/build-data.mjs`, run via `npm run data`) fetches the **Open
