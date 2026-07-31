@@ -5,11 +5,11 @@ import {
   compareFromParams,
   compareToParams,
   dotTrack,
+  elevationDisplay,
   elevationNote,
   featureDiffers,
   featureMark,
   formatDistance,
-  formatElevation,
   isAreaGeo,
   isSurveyed,
   nearestCampId,
@@ -105,10 +105,12 @@ describe("distance + elevation formatting (geo precision)", () => {
     expect(formatDistance(71.2, true)).toBe("\u224870 mi");
     expect(formatDistance(null, false)).toBeNull();
   });
-  it("formats elevation with a thousands separator; area rounds to 50 ft", () => {
-    expect(formatElevation(4180, false)).toBe("4,180 ft");
-    expect(formatElevation(4137, true)).toBe("4,150 ft");
-    expect(formatElevation(null, true)).toBeNull();
+  it("elevation: thousands separator, area rounds to 50 ft, note derived from the shown value", () => {
+    expect(elevationDisplay(4180, false)).toEqual({ text: "4,180 ft", note: "Cool nights, thin air" });
+    expect(elevationDisplay(4137, true)).toEqual({ text: "4,150 ft", note: "Cool nights, thin air" });
+    // m8: at an area boundary the note must agree with the ROUNDED number (3,000 ft → not ">3000").
+    expect(elevationDisplay(3020, true)).toEqual({ text: "3,000 ft", note: "Mid-elevation" });
+    expect(elevationDisplay(null, true)).toBeNull();
   });
 });
 

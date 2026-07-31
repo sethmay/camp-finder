@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import MiniSearch from "minisearch";
-import { Plus, Search } from "lucide-react";
-import { Checkbox, ScoutThemeProvider, TooltipProvider } from "@opensourcescouting/design-system";
+import { Plus, Search, X } from "lucide-react";
+import { Checkbox, ScoutThemeProvider } from "@opensourcescouting/design-system";
 import type { Camp } from "@lib/types";
 import { FEATURE_CATEGORIES } from "@lib/format";
 import {
@@ -67,13 +67,14 @@ export default function CompareApp() {
       });
   }, []);
 
-  // Reflect state in the URL (shareable) and remember the ZIP.
+  // Reflect state in the URL (shareable) and remember (or forget) the ZIP.
   useEffect(() => {
     if (loading) return;
     const qs = compareToParams(ui).toString();
     const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
     window.history.replaceState(null, "", url);
     if (ui.zip) window.localStorage.setItem(ZIP_STORAGE_KEY, ui.zip);
+    else window.localStorage.removeItem(ZIP_STORAGE_KEY);
   }, [ui, loading]);
 
   const byId = useMemo(() => new Map(camps.map((c) => [c.id, c])), [camps]);
@@ -93,8 +94,7 @@ export default function CompareApp() {
     [ui.campIds, byId],
   );
 
-  const origin: Centroid | null =
-    ui.zip && isValidZip(ui.zip) ? zipToCentroid(ui.zip) : null;
+  const origin: Centroid | null = ui.zip && isValidZip(ui.zip) ? zipToCentroid(ui.zip) : null;
 
   const addCamp = (id: string) =>
     setUi((s) =>
@@ -102,8 +102,12 @@ export default function CompareApp() {
         ? s
         : { ...s, campIds: [...s.campIds, id] },
     );
-  const removeCamp = (id: string) =>
+  const removeCamp = (id: string) => {
     setUi((s) => ({ ...s, campIds: s.campIds.filter((x) => x !== id) }));
+    // The removed camp's button is now gone; keep focus on the page rather than dropping it to
+    // <body> (n6). The picker is always present below two camps and a reliable landing spot.
+    queueMicrotask(() => document.getElementById("camp-picker")?.focus());
+  };
   const toggleOpen = (key: string) =>
     setUi((s) => {
       const open = new Set(s.open);
@@ -135,80 +139,83 @@ export default function CompareApp() {
 
   return (
     <ScoutThemeProvider program="scoutsbsa">
-      <TooltipProvider>
-        <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6">
-          <div className="mb-4 flex flex-col gap-3 md:mb-[18px] md:flex-row md:items-end md:justify-between md:gap-6">
-            <div>
-              <h1 className="text-[27px] font-bold leading-tight tracking-[-0.01em] text-foreground">
-                {heading}
-              </h1>
-              <p className="mt-1 max-w-2xl text-[13px] text-muted-foreground">
-                Registry facts only. Sessions, fees, and availability live on each council's own page.
-              </p>
-            </div>
-            {selected.length >= 2 && (
-              <label className="flex min-h-[44px] shrink-0 items-center gap-2 self-start rounded-[var(--radius)] border border-input bg-card px-3 text-[13px] font-medium md:self-auto">
-                <Checkbox
-                  checked={ui.onlyDiff}
-                  onChange={(e) => setOnlyDiff(e.currentTarget.checked)}
-                />
-                Only show differences
-              </label>
-            )}
+      <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6">
+        <div className="mb-4 flex flex-col gap-3 md:mb-[18px] md:flex-row md:items-end md:justify-between md:gap-6">
+          <div>
+            <h1 className="text-[27px] font-bold leading-tight tracking-[-0.01em] text-foreground">
+              {heading}
+            </h1>
+            <p className="mt-1 max-w-2xl text-[13px] text-muted-foreground">
+              Registry facts only. Sessions, fees, and availability live on each council's own page.
+            </p>
           </div>
-
-          {!atMax && (
-            <CampPicker
-              search={search}
-              byId={byId}
-              selectedIds={ui.campIds}
-              onAdd={addCamp}
-              slots={selected.length < 2 ? MAX_COMPARE : undefined}
-            />
-          )}
-          {atMax && (
-            <p className="mb-4 text-[13px] text-muted-foreground">
-              Comparing the maximum of {MAX_COMPARE} camps. Remove one to add another.
-            </p>
-          )}
-
-          {selected.length < 2 ? (
-            <p className="mt-6 text-[13px] text-muted-foreground">
-              Add at least two camps to see the comparison.
-            </p>
-          ) : (
-            <CompareTable
-              camps={selected}
-              origin={origin}
-              zip={ui.zip}
-              onSetZip={setZip}
-              open={ui.open}
-              onToggleOpen={toggleOpen}
-              onlyDiff={ui.onlyDiff}
-              onRemove={removeCamp}
-              verifyHref={VERIFY_HREF}
-            />
+          {selected.length >= 2 && (
+            <label className="flex min-h-[44px] shrink-0 items-center gap-2 self-start rounded-[var(--radius)] border border-input bg-card px-3 text-[13px] font-medium md:self-auto">
+              <Checkbox checked={ui.onlyDiff} onChange={(e) => setOnlyDiff(e.currentTarget.checked)} />
+              Only show differences
+            </label>
           )}
         </div>
-      </TooltipProvider>
+
+        {/* Announce selection changes for assistive tech (the add/remove controls are otherwise silent). */}
+        <p role="status" aria-live="polite" className="sr-only">
+          {selected.length} of {MAX_COMPARE} camps selected
+        </p>
+
+        {!atMax && (
+          <CampPicker
+            search={search}
+            byId={byId}
+            selectedIds={ui.campIds}
+            onAdd={addCamp}
+            onRemove={removeCamp}
+            showSlots={selected.length < 2}
+          />
+        )}
+        {atMax && (
+          <p className="mb-4 text-[13px] text-muted-foreground">
+            Comparing the maximum of {MAX_COMPARE} camps. Remove one to add another.
+          </p>
+        )}
+
+        {selected.length < 2 ? (
+          <p className="mt-6 text-[13px] text-muted-foreground">
+            Add at least two camps to see the comparison.
+          </p>
+        ) : (
+          <CompareTable
+            camps={selected}
+            origin={origin}
+            zip={ui.zip}
+            onSetZip={setZip}
+            open={ui.open}
+            onToggleOpen={toggleOpen}
+            onlyDiff={ui.onlyDiff}
+            onRemove={removeCamp}
+            verifyHref={VERIFY_HREF}
+          />
+        )}
+      </div>
     </ScoutThemeProvider>
   );
 }
 
-// --- Camp picker (typeahead combobox) ----------------------------------------
+// --- Camp picker (typeahead combobox, ARIA APG combobox-with-listbox) ---------
 
 function CampPicker({
   search,
   byId,
   selectedIds,
   onAdd,
-  slots,
+  onRemove,
+  showSlots,
 }: {
   search: MiniSearch<Camp>;
   byId: Map<string, Camp>;
   selectedIds: string[];
   onAdd: (id: string) => void;
-  slots?: number; // when set, render the empty-state slot rail beneath the field
+  onRemove: (id: string) => void;
+  showSlots: boolean; // render the empty-state slot rail (removable chips) beneath the field
 }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
@@ -246,6 +253,8 @@ function CampPicker({
     }
   };
 
+  const activeId = results[active] ? `camp-opt-${results[active].id}` : undefined;
+
   return (
     <div className="mb-5">
       <label htmlFor="camp-picker" className="mb-1 block text-[13px] font-semibold text-foreground">
@@ -260,7 +269,8 @@ function CampPicker({
           type="text"
           role="combobox"
           aria-expanded={results.length > 0}
-          aria-controls={listId}
+          aria-controls={results.length ? listId : undefined}
+          aria-activedescendant={activeId}
           aria-autocomplete="list"
           autoComplete="off"
           value={query}
@@ -278,44 +288,64 @@ function CampPicker({
             role="listbox"
             className="absolute z-30 mt-1 w-full overflow-clip rounded-[var(--radius)] border border-border bg-card shadow-lg"
           >
+            {/* Options carry no focusable descendants (ARIA forbids it); the input keeps focus
+                and drives selection via aria-activedescendant. mousedown fires before blur. */}
             {results.map((c, i) => (
-              <li key={c.id} role="option" aria-selected={i === active}>
-                <button
-                  type="button"
-                  onClick={() => pick(c)}
-                  onMouseEnter={() => setActive(i)}
-                  className={`flex w-full flex-col items-start gap-0.5 px-3 py-2 text-left ${
-                    i === active ? "bg-[#F7F4EC]" : "bg-card"
-                  }`}
-                >
-                  <span className="text-[14px] font-semibold text-foreground">{c.name}</span>
-                  <span className="text-[12px] text-muted-foreground">
-                    {[c.city, c.state].filter(Boolean).join(", ")}
-                    {c.council_name ? ` · ${c.council_name}` : ""}
-                  </span>
-                </button>
+              <li
+                key={c.id}
+                id={`camp-opt-${c.id}`}
+                role="option"
+                aria-selected={i === active}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  pick(c);
+                }}
+                onMouseEnter={() => setActive(i)}
+                className={`flex cursor-pointer flex-col items-start gap-0.5 px-3 py-2 ${
+                  i === active ? "bg-[#F7F4EC]" : "bg-card"
+                }`}
+              >
+                <span className="text-[14px] font-semibold text-foreground">{c.name}</span>
+                <span className="text-[12px] text-muted-foreground">
+                  {[c.city, c.state].filter(Boolean).join(", ")}
+                  {c.council_name ? ` · ${c.council_name}` : ""}
+                </span>
               </li>
             ))}
           </ul>
         )}
       </div>
 
-      {slots !== undefined && (
-        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5" aria-hidden="true">
-          {Array.from({ length: slots }).map((_, i) => (
-            <li
-              key={i}
-              className="flex min-h-[96px] items-center justify-center rounded-[var(--radius)] border border-dashed border-input text-[13px] text-muted-foreground"
-            >
-              {i < selectedIds.length ? (
-                <span className="font-medium text-foreground">{byId.get(selectedIds[i])?.name}</span>
-              ) : (
-                <span className="inline-flex items-center gap-1">
-                  <Plus size={14} aria-hidden="true" /> Add camp
-                </span>
-              )}
-            </li>
-          ))}
+      {showSlots && (
+        <ul className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+          {Array.from({ length: MAX_COMPARE }).map((_, i) => {
+            const id = selectedIds[i];
+            const camp = id ? byId.get(id) : undefined;
+            return (
+              <li
+                key={id ?? `empty-${i}`}
+                className="relative flex min-h-[96px] items-center justify-center rounded-[var(--radius)] border border-dashed border-input p-2 text-center text-[13px] text-muted-foreground"
+              >
+                {camp ? (
+                  <>
+                    <span className="font-medium text-foreground">{camp.name}</span>
+                    <button
+                      type="button"
+                      onClick={() => onRemove(camp.id)}
+                      aria-label={`Remove ${camp.name} from comparison`}
+                      className="absolute right-1 top-1 flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-[#F7F4EC] hover:text-foreground"
+                    >
+                      <X size={16} aria-hidden="true" />
+                    </button>
+                  </>
+                ) : (
+                  <span className="inline-flex items-center gap-1" aria-hidden="true">
+                    <Plus size={14} /> Add camp
+                  </span>
+                )}
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

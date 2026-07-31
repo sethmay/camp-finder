@@ -13,11 +13,10 @@ import {
   campDistanceMiles,
   categoryCount,
   dotTrack,
-  elevationNote,
+  elevationDisplay,
   featureDiffers,
   featureMark,
   formatDistance,
-  formatElevation,
   isAreaGeo,
   isSurveyed,
   nearestCampId,
@@ -26,15 +25,19 @@ import {
 } from "@lib/compare";
 
 // Non-token palette from the design handoff (the amber "data gap" family, inner rules, panel
-// fill). None of these has a design-system token; every colour that DOES is used via its token.
+// fill, and the two "not offered" mark tones). Every colour that HAS a design-system token is
+// used via that token (bg-primary / text-primary / border-input / …), never re-hardcoded.
 const AMBER_TEXT = "#6B4708";
 const AMBER_BORDER = "#8A5A0B";
 const AMBER_FILL = "#FBF3E3";
 const PANEL_FILL = "#FAF7F0";
-const PRIMARY_FILL = "#1D5E42"; // == --primary; used where a raw hex is needed (dot track, marks)
-const SERIF = "var(--os-font-body)"; // Source Serif 4 — the one editorial touch (signature)
+const DASH_GLYPH = "#6E6449"; // "not offered" glyph; ring uses --input (border-input) for 3:1 (m13)
 
 const TERM_TOTAL = FEATURE_CATEGORIES.reduce((n, c) => n + c.members.length, 0);
+// Keep a focused element clear of the pinned camp row + section header when tab/anchor scrolls to it.
+const SCROLL_MT: CSSProperties = {
+  scrollMarginTop: "calc(var(--compare-header-h) + var(--compare-section-h))",
+};
 
 export default function CompareTable({
   camps,
@@ -58,16 +61,23 @@ export default function CompareTable({
   verifyHref: string;
 }) {
   const headerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLHeadingElement>(null);
   const [headerH, setHeaderH] = useState(120);
+  const [sectionH, setSectionH] = useState(44);
 
-  // Measure the sticky camp row so section headers pin directly beneath it — its height changes
-  // with long names and badge wrapping, so a hard-coded offset would drift (handoff warns on this).
+  // Measure the sticky camp row AND a section header so the section headers pin directly beneath
+  // the camp row and focused rows clear the whole pinned stack — both heights change with content
+  // (long names, badge wrapping), so hard-coded offsets would drift (the handoff warns on this).
   useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(() => setHeaderH(el.offsetHeight));
-    ro.observe(el);
-    setHeaderH(el.offsetHeight);
+    const targets: [HTMLElement | null, (n: number) => void][] = [
+      [headerRef.current, setHeaderH],
+      [sectionRef.current, setSectionH],
+    ];
+    const ro = new ResizeObserver(() => {
+      for (const [el, set] of targets) if (el) set(el.offsetHeight);
+    });
+    for (const [el] of targets) if (el) ro.observe(el);
+    for (const [el, set] of targets) if (el) set(el.offsetHeight);
     return () => ro.disconnect();
   }, [camps.length]);
 
@@ -80,11 +90,22 @@ export default function CompareTable({
     [camps],
   );
   const nearestId = nearestCampId(camps, origin);
+  const zipUnresolved = !!zip && isValidZip(zip) && !origin;
 
+  // Responsive story: below lg the min-w-[680px] inner block overflows the container, so the
+  // DOCUMENT scrolls horizontally (gutter pinned via sticky left-0) rather than an inner
+  // overflow-x wrapper — an inner scroll container would compute overflow-y:auto too (CSS
+  // Overflow L3) and break the vertical sticky headers. The prototype's phone pager (swipe +
+  // page dots) is deliberately simplified to native horizontal scroll here (see TODO.md).
   return (
     <div
-      style={{ ["--compare-header-h"]: `${headerH}px` } as CSSProperties}
-      className="[--compare-gutter:176px] max-lg:overflow-x-auto max-lg:[--compare-gutter:120px]"
+      style={
+        {
+          ["--compare-header-h"]: `${headerH}px`,
+          ["--compare-section-h"]: `${sectionH}px`,
+        } as CSSProperties
+      }
+      className="[--compare-gutter:176px] max-lg:[--compare-gutter:120px]"
     >
       <div className="min-w-[680px]">
         {/* Sticky camp header row */}
@@ -114,6 +135,7 @@ export default function CompareTable({
                 type="button"
                 onClick={() => onRemove(camp.id)}
                 aria-label={`Remove ${camp.name} from comparison`}
+                style={SCROLL_MT}
                 className="absolute right-1 top-1 flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground hover:bg-[#F7F4EC] hover:text-foreground"
               >
                 <X size={16} aria-hidden="true" />
@@ -124,24 +146,31 @@ export default function CompareTable({
 
         {/* Card 1 — the decision */}
         <section className="overflow-clip rounded-[var(--radius)] border border-border bg-card">
-          <SectionHeader style={sectionTop}>The decision</SectionHeader>
+          <SectionHeader style={sectionTop} innerRef={sectionRef}>
+            The decision
+          </SectionHeader>
 
           {/* Distance */}
           <div style={cols} className="grid items-center gap-2 border-b border-[#E2DAC7] p-[14px]">
             <RowLabel>
               <div className="text-[13px] font-semibold text-foreground">
-                Distance{zip ? ` from ${zip}` : ""}
+                Distance{origin ? ` from ${zip}` : ""}
               </div>
-              {zip && (
+              {origin && (
                 <div className="mt-0.5 text-[11px] text-muted-foreground">
                   Straight-line miles ·{" "}
-                  <button type="button" onClick={() => onSetZip(null)} className="text-primary underline">
+                  <button
+                    type="button"
+                    onClick={() => onSetZip(null)}
+                    style={SCROLL_MT}
+                    className="text-primary underline"
+                  >
                     change
                   </button>
                 </div>
               )}
             </RowLabel>
-            {zip
+            {origin
               ? camps.map((camp) => {
                   const area = isAreaGeo(camp);
                   const text = formatDistance(campDistanceMiles(camp, origin), area);
@@ -152,7 +181,7 @@ export default function CompareTable({
                         {text ?? "—"}
                       </span>
                       {camp.id === nearestId && (
-                        <span className="mt-[5px] block w-fit rounded-full px-[7px] py-[3px] text-[10px] font-semibold text-white" style={{ backgroundColor: PRIMARY_FILL }}>
+                        <span className="mt-[5px] block w-fit rounded-full bg-primary px-[7px] py-[3px] text-[10px] font-semibold text-white">
                           Nearest
                         </span>
                       )}
@@ -170,13 +199,13 @@ export default function CompareTable({
                   </div>
                 ))}
           </div>
-          {!zip && <ZipPrompt onSet={onSetZip} />}
+          {!origin && <ZipPrompt onSet={onSetZip} unresolvedZip={zipUnresolved ? zip : null} />}
 
           {/* July high/low */}
           <DecisionRow
             cols={cols}
             label="July high / low"
-            sublabel="30-yr average °F"
+            sublabel="30-yr avg °F · via Open Scout API"
             camps={camps}
             render={(camp) => {
               if (camp.july_high_f === null)
@@ -201,16 +230,16 @@ export default function CompareTable({
           <DecisionRow
             cols={cols}
             label="Elevation"
+            sublabel="via Open Scout API"
             camps={camps}
             render={(camp) => {
-              const text = formatElevation(camp.elevation_ft, isAreaGeo(camp));
-              if (!text) return <span className="text-[13px] text-muted-foreground">Not on record</span>;
-              const note = elevationNote(camp.elevation_ft);
+              const elev = elevationDisplay(camp.elevation_ft, isAreaGeo(camp));
+              if (!elev) return <span className="text-[13px] text-muted-foreground">Not on record</span>;
               return (
                 <>
                   <span className="sr-only">{camp.name}: elevation </span>
-                  <span className="text-[15px] font-semibold text-foreground">{text}</span>
-                  {note && <span className="mt-1 block text-[12px] text-muted-foreground">{note}</span>}
+                  <span className="text-[15px] font-semibold text-foreground">{elev.text}</span>
+                  <span className="mt-1 block text-[12px] text-muted-foreground">{elev.note}</span>
                 </>
               );
             }}
@@ -234,6 +263,7 @@ export default function CompareTable({
                     href={camp.council_website || camp.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={SCROLL_MT}
                     className="mt-1.5 block text-[12px] font-semibold text-primary underline"
                   >
                     Council page →
@@ -265,9 +295,9 @@ export default function CompareTable({
             style={sectionTop}
             className="sticky z-10 flex flex-wrap items-center justify-between gap-2 border-b border-[#E2DAC7] bg-[#F7F4EC] px-[14px] py-[11px]"
           >
-            <h3 className="display text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
               Program features · {TERM_TOTAL} terms in {FEATURE_CATEGORIES.length} categories
-            </h3>
+            </h2>
             <Legend />
           </div>
 
@@ -285,10 +315,10 @@ export default function CompareTable({
                   <button
                     type="button"
                     aria-expanded={isOpen}
-                    aria-controls={panelId}
+                    aria-controls={isOpen ? panelId : undefined}
                     onClick={() => onToggleOpen(cat.key)}
-                    style={{ scrollMarginTop: "calc(var(--compare-header-h) + 52px)" }}
-                    className="sticky left-0 z-[1] flex min-h-[44px] items-center gap-1.5 bg-card text-left text-[13px] font-semibold text-foreground"
+                    style={SCROLL_MT}
+                    className="sticky left-0 z-[1] flex min-h-[44px] items-center gap-1.5 bg-card text-left text-[13px] font-semibold text-foreground shadow-[6px_0_6px_-6px_rgba(34,39,28,0.16)]"
                   >
                     {isOpen ? (
                       <ChevronDown size={14} className="text-muted-foreground" aria-hidden="true" />
@@ -302,11 +332,12 @@ export default function CompareTable({
                     if (!tally)
                       return (
                         <div key={camp.id}>
+                          <span className="sr-only">{camp.name}: {cat.label}, </span>
                           <span className="text-[13px] font-semibold" style={{ color: AMBER_TEXT }}>
                             not surveyed
                           </span>
                           <span
-                            className="block font-mono text-[12px] leading-none tracking-[0.1em]"
+                            className="block break-all font-mono text-[12px] leading-none tracking-[0.1em]"
                             style={{ color: AMBER_TEXT }}
                             aria-hidden="true"
                           >
@@ -323,8 +354,7 @@ export default function CompareTable({
                           {tally.n} of {tally.of}
                         </span>
                         <span
-                          className="block break-all font-mono text-[12px] leading-none tracking-[0.1em]"
-                          style={{ color: PRIMARY_FILL }}
+                          className="block break-all font-mono text-[12px] leading-none tracking-[0.1em] text-primary"
                           aria-hidden="true"
                         >
                           {dotTrack(tally.n, tally.of)}
@@ -338,7 +368,7 @@ export default function CompareTable({
                   <div id={panelId} style={{ backgroundColor: PANEL_FILL }}>
                     {memberRows.length === 0 ? (
                       <div className="px-[14px] py-2 pl-[30px] text-[12px] text-muted-foreground">
-                        {onlyDiff ? "No differences in this category." : "No features listed."}
+                        No differences in this category.
                       </div>
                     ) : (
                       memberRows.map((code) => (
@@ -348,7 +378,7 @@ export default function CompareTable({
                           className="grid items-center gap-2 border-b border-[#EFEADD] py-2 pl-[30px] pr-[14px]"
                         >
                           <div
-                            className="sticky left-0 z-[1] text-[12px] text-muted-foreground"
+                            className="sticky left-0 z-[1] text-[12px] text-muted-foreground shadow-[6px_0_6px_-6px_rgba(34,39,28,0.12)]"
                             style={{ backgroundColor: PANEL_FILL }}
                           >
                             {featureLabel(code)}
@@ -371,9 +401,9 @@ export default function CompareTable({
           })}
 
           <p className="px-[14px] py-3 text-[12px] leading-relaxed text-muted-foreground">
-            A solid green <span className="font-semibold" style={{ color: PRIMARY_FILL }}>✓</span> is the
-            only mark that means “offered.” A dashed <span style={{ color: "#6E6449" }}>−</span> means we
-            surveyed the camp and it genuinely doesn't offer that. An amber{" "}
+            A solid green <span className="font-semibold text-primary">✓</span> is the only mark that
+            means “offered.” A dashed <span style={{ color: DASH_GLYPH }}>−</span> means we surveyed
+            the camp and it genuinely doesn't offer that. An amber{" "}
             <span className="font-semibold" style={{ color: AMBER_TEXT }}>?</span> means we've never
             surveyed that camp — unknown, not “no.”
           </p>
@@ -385,19 +415,32 @@ export default function CompareTable({
 
 // --- pieces ------------------------------------------------------------------
 
-function SectionHeader({ children, style }: { children: React.ReactNode; style?: CSSProperties }) {
+function SectionHeader({
+  children,
+  style,
+  innerRef,
+}: {
+  children: React.ReactNode;
+  style?: CSSProperties;
+  innerRef?: React.Ref<HTMLHeadingElement>;
+}) {
   return (
-    <h3
+    <h2
+      ref={innerRef}
       style={style}
-      className="display sticky z-10 border-b border-[#E2DAC7] bg-[#F7F4EC] px-[14px] py-[11px] text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground"
+      className="sticky z-10 border-b border-[#E2DAC7] bg-[#F7F4EC] px-[14px] py-[11px] text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground"
     >
       {children}
-    </h3>
+    </h2>
   );
 }
 
 function RowLabel({ children }: { children: React.ReactNode }) {
-  return <div className="sticky left-0 z-[1] bg-card">{children}</div>;
+  return (
+    <div className="sticky left-0 z-[1] bg-card shadow-[6px_0_6px_-6px_rgba(34,39,28,0.16)]">
+      {children}
+    </div>
+  );
 }
 
 function DecisionRow({
@@ -454,6 +497,9 @@ function VerifyBadge({ camp }: { camp: Camp }) {
   );
 }
 
+// The all-serif design system means the signature cannot use a serif/sans contrast (the whole
+// site body is Source Serif 4); italic gives the editorial lift the handoff wanted without a
+// second typeface (a documented handoff-vs-codebase resolution).
 function SignatureCell({ camp, verifyHref }: { camp: Camp; verifyHref: string }) {
   if (!isSurveyed(camp))
     return (
@@ -467,7 +513,7 @@ function SignatureCell({ camp, verifyHref }: { camp: Camp; verifyHref: string })
   if (camp.features_signature.length === 0)
     return <p className="text-[12px] text-muted-foreground">Surveyed — none flagged</p>;
   return (
-    <p className="text-[14px] leading-snug text-foreground" style={{ fontFamily: SERIF }}>
+    <p className="text-[14px] italic leading-snug text-foreground">
       {camp.features_signature.map((c) => featureLabel(c)).join(", ")}
     </p>
   );
@@ -489,8 +535,7 @@ function Mark({
     return (
       <span
         aria-hidden={decorative || undefined}
-        className="inline-flex h-5 w-5 items-center justify-center rounded-full text-white"
-        style={{ backgroundColor: PRIMARY_FILL }}
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-white"
       >
         <Check size={12} strokeWidth={3} aria-hidden="true" />
         {sr}
@@ -500,8 +545,8 @@ function Mark({
     return (
       <span
         aria-hidden={decorative || undefined}
-        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-dashed"
-        style={{ borderColor: "#A79877", color: "#6E6449" }}
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-dashed border-input"
+        style={{ color: DASH_GLYPH }}
       >
         <Minus size={13} aria-hidden="true" />
         {sr}
@@ -537,7 +582,13 @@ function Legend() {
   );
 }
 
-function ZipPrompt({ onSet }: { onSet: (zip: string) => void }) {
+function ZipPrompt({
+  onSet,
+  unresolvedZip,
+}: {
+  onSet: (zip: string) => void;
+  unresolvedZip: string | null; // a well-formed ZIP we have no centroid for (vs no ZIP at all)
+}) {
   const [value, setValue] = useState("");
   const valid = isValidZip(value);
   const submit = () => {
@@ -549,7 +600,9 @@ function ZipPrompt({ onSet }: { onSet: (zip: string) => void }) {
       style={{ backgroundColor: AMBER_FILL, borderColor: AMBER_BORDER }}
     >
       <div className="text-[12px] font-semibold" style={{ color: AMBER_TEXT }}>
-        Add your ZIP to see distances
+        {unresolvedZip
+          ? `We don't have a location for ${unresolvedZip} — try a nearby ZIP.`
+          : "Add your ZIP to see distances"}
       </div>
       <div className="mt-2 flex gap-2">
         <input
@@ -566,8 +619,7 @@ function ZipPrompt({ onSet }: { onSet: (zip: string) => void }) {
           type="button"
           onClick={submit}
           disabled={!valid}
-          className="min-h-[44px] rounded-[var(--radius)] px-4 text-[13px] font-semibold text-white disabled:opacity-50"
-          style={{ backgroundColor: PRIMARY_FILL }}
+          className="min-h-[44px] rounded-[var(--radius)] bg-primary px-4 text-[13px] font-semibold text-white disabled:opacity-50"
         >
           Go
         </button>

@@ -3,13 +3,11 @@ import Base from "../layouts/Base.astro";
 import CompareApp from "../components/CompareApp";
 import { withBase } from "@lib/paths";
 import { Heading } from "@opensourcescouting/design-system";
-import type { Camp } from "../lib/types";
-import campsData from "../../public/data/camps.json";
 
 // The comparison is driven entirely by the ?camps= query string, which a statically hosted
 // page can only resolve in the browser — so the interactive view is a client island (the same
-// pattern the search page uses). The noscript block keeps every camp crawlable and reachable.
-const camps = campsData as unknown as Camp[];
+// pattern the search page uses). The noscript block points at the search page, which already
+// lists every camp as a crawlable link (no need to re-ship all 445 here for the JS majority).
 ---
 
 <Base
@@ -26,17 +24,6 @@ const camps = campsData as unknown as Camp[];
         <a class="text-primary underline underline-offset-2" href={withBase("/")}>search every camp</a>
         and open any camp's page directly.
       </p>
-      <ul class="mt-4 grid gap-2 md:grid-cols-2">
-        {
-          camps.map((c) => (
-            <li>
-              <a class="text-primary underline underline-offset-2 hover:text-primary/90" href={withBase(`/camps/${c.id}`)}>
-                {c.name} — {c.council_name} ({c.state})
-              </a>
-            </li>
-          ))
-        }
-      </ul>
     </div>
   </noscript>
 </Base>

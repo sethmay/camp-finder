@@ -71,11 +71,15 @@ export function formatDistance(miles: number | null, area: boolean): string | nu
   return (area ? "\u2248" : "") + v.toLocaleString("en-US") + " mi";
 }
 
-/** Elevation display. Area camps round to 50 ft; thousands separator always. */
-export function formatElevation(ft: number | null, area: boolean): string | null {
+/** Elevation display + interpretive note, both derived from the SAME (area-rounded) value so
+ *  the shown number and its note can never disagree at a threshold. Null when unknown. */
+export function elevationDisplay(
+  ft: number | null,
+  area: boolean,
+): { text: string; note: string } | null {
   if (ft === null) return null;
   const v = area ? round(ft, ELEVATION_ROUND_FT) : ft;
-  return v.toLocaleString("en-US") + " ft";
+  return { text: v.toLocaleString("en-US") + " ft", note: elevationNote(v)! };
 }
 
 /** Id of the single closest camp, or null. Suppressed when there is no origin, fewer than two
@@ -155,9 +159,10 @@ export function compareToParams(state: CompareState): URLSearchParams {
   const p = new URLSearchParams();
   if (state.campIds.length) p.set("camps", state.campIds.join(","));
   if (state.zip) p.set("zip", state.zip);
-  // Always emit `open` once state is serialized so a closed-everything view is distinct from
-  // a first visit; an empty value round-trips to the empty set.
-  p.set("open", [...state.open].join(","));
+  // Emit `open` only once a comparison exists, so a bare /compare visit is not rewritten to
+  // ?open=aquatics. With a selection present, an empty value round-trips to the empty set and
+  // is thus distinct from a first visit (which defaults to aquatics open).
+  if (state.campIds.length) p.set("open", [...state.open].join(","));
   if (state.onlyDiff) p.set("diff", "1");
   return p;
 }

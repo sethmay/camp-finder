@@ -179,7 +179,9 @@ export interface CompareCategory {
  *  term that is the `broader` parent of >=2 others (Aquatics, Shooting Sports, Climbing,
  *  Scoutcraft), ordered by depth; (2) every remaining term bucketed by vocab `category`
  *  using the same mapping the search facets use. Each of the 128 vocab terms lands in
- *  exactly one category, and `of` counts come from the taxonomy, not the selected camps. */
+ *  exactly one category, and `of` counts come from the taxonomy, not the selected camps.
+ *  A cluster's own head code (e.g. `aquatics`) is the category label, not a member, so a
+ *  camp that lists the bare parent with no children reads "0 of N" — acceptable and rare. */
 export const FEATURE_CATEGORIES: CompareCategory[] = (() => {
   const children = new Map<string, string[]>();
   for (const t of vocab.features) {
