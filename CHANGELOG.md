@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.35.1 (patch) — 2026-07-31
+
+- `PENDING` Replace the Camp Compare category depth dot-track (`●●○○…`) with a proportion bar
+  (fill = n/of). The per-term dot string overflowed and became unreadable for the wide
+  categories (Other activities has 38 terms, Camp facilities & lodging 28); the bar scales to
+  any size on one line. The exact "n of M" count is unchanged.
+
 ## 0.35.0 (minor) — 2026-07-31
 
 - `8680ebb` Add a persistent accuracy warning to `/compare` (community-maintained registry data

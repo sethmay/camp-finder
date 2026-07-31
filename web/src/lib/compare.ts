@@ -132,12 +132,6 @@ export function featureDiffers(
   return false;
 }
 
-/** Dot track for a category tally: n filled then (of-n) hollow. Presentation helper kept here
- *  so the glyph choice is unit-testable alongside the counts it visualizes. */
-export function dotTrack(n: number, of: number): string {
-  return "\u25CF".repeat(Math.max(0, n)) + "\u25CB".repeat(Math.max(0, of - n));
-}
-
 // --- URL state ---------------------------------------------------------------
 // The whole comparison lives in the query string so it is shareable and survives reload
 // (the committee-chair use case). Params: camps=id,id  zip=NNNNN  open=key,key  diff=1.

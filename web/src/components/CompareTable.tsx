@@ -13,7 +13,6 @@ import {
 import {
   campDistanceMiles,
   categoryCount,
-  dotTrack,
   elevationDisplay,
   featureDiffers,
   featureMark,
@@ -347,13 +346,11 @@ export default function CompareTable({
                           <span className="text-[13px] font-semibold" style={{ color: AMBER_TEXT }}>
                             not surveyed
                           </span>
-                          <span
-                            className="block break-all font-mono text-[12px] leading-none tracking-[0.1em]"
-                            style={{ color: AMBER_TEXT }}
+                          <div
+                            className="mt-1 h-1.5 w-full max-w-[160px] rounded-full"
+                            style={{ backgroundColor: AMBER_FILL }}
                             aria-hidden="true"
-                          >
-                            {"·".repeat(cat.members.length)}
-                          </span>
+                          />
                         </div>
                       );
                     return (
@@ -364,12 +361,7 @@ export default function CompareTable({
                         <span className="text-[13px] font-semibold text-foreground">
                           {tally.n} of {tally.of}
                         </span>
-                        <span
-                          className="block break-all font-mono text-[12px] leading-none tracking-[0.1em] text-primary"
-                          aria-hidden="true"
-                        >
-                          {dotTrack(tally.n, tally.of)}
-                        </span>
+                        <DepthBar n={tally.n} of={tally.of} />
                       </div>
                     );
                   })}
@@ -450,6 +442,22 @@ function RowLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="sticky left-0 z-[1] bg-card shadow-[6px_0_6px_-6px_rgba(34,39,28,0.16)]">
       {children}
+    </div>
+  );
+}
+
+// Depth cue for a category tally. A proportion bar (fill = n/of) rather than a per-term dot
+// track: the track was unreadable for the wide categories (Other activities has 38 terms),
+// and the bar scales to any size while keeping the at-a-glance "how deep" signal. The exact
+// count lives in the "n of of" text above it; this is decorative (aria-hidden).
+function DepthBar({ n, of }: { n: number; of: number }) {
+  const pct = of > 0 ? Math.round((n / of) * 100) : 0;
+  return (
+    <div
+      className="mt-1 h-1.5 w-full max-w-[160px] overflow-hidden rounded-full bg-[#E2DAC7]"
+      aria-hidden="true"
+    >
+      <div className="h-full rounded-full bg-primary" style={{ width: `${pct}%` }} />
     </div>
   );
 }

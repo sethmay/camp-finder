@@ -4,7 +4,6 @@ import {
   categoryCount,
   compareFromParams,
   compareToParams,
-  dotTrack,
   elevationDisplay,
   elevationNote,
   featureDiffers,
@@ -167,12 +166,6 @@ describe("featureDiffers — excludes unsurveyed camps", () => {
   });
 });
 
-describe("dotTrack", () => {
-  it("renders n filled then (of-n) hollow", () => {
-    expect(dotTrack(2, 5)).toBe("\u25CF\u25CF\u25CB\u25CB\u25CB");
-    expect(dotTrack(0, 3)).toBe("\u25CB\u25CB\u25CB");
-  });
-});
 
 describe("FEATURE_CATEGORIES model", () => {
   it("partitions every vocab feature term into exactly one category", () => {
