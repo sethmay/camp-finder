@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Check, ChevronDown, ChevronRight, Minus, X } from "lucide-react";
 import type { Camp } from "@lib/types";
+import { withBase } from "@lib/paths";
 import { isValidZip, type Centroid } from "@lib/zip";
 import {
   expandFeatures,
@@ -129,9 +130,12 @@ export default function CompareTable({
               key={camp.id}
               className="relative flex flex-col gap-2 rounded-[var(--radius)] border border-border bg-card p-3"
             >
-              <div className="pr-7 text-[15px] font-semibold leading-tight tracking-[-0.01em] text-foreground">
+              <a
+                href={withBase(`/camps/${camp.id}`)}
+                className="pr-7 text-[15px] font-semibold leading-tight tracking-[-0.01em] text-foreground hover:text-primary hover:underline"
+              >
                 {camp.name}
-              </div>
+              </a>
               <div className="text-[11px] leading-snug text-muted-foreground">
                 {[camp.city, camp.state].filter(Boolean).join(", ") || "Location not listed"}
               </div>
