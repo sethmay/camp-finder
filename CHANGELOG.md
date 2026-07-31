@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.35.0 (minor) — 2026-07-31
 
-- `PENDING` Add a persistent accuracy warning to `/compare` (community-maintained registry data
+- `8680ebb` Add a persistent accuracy warning to `/compare` (community-maintained registry data
   can be out of date or incomplete — confirm on each camp's page + official council page), and
   link each camp name in the comparison to its detail page so the warning is actionable.
 
