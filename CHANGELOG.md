@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.34.1 (patch) — 2026-07-31
 
-- `PENDING` Fix Camp Compare sticky headers: the global `Header` (`sticky top-0 z-30`) covered
+- `a147b0a` Fix Camp Compare sticky headers: the global `Header` (`sticky top-0 z-30`) covered
   the pinned camp row so only the verification badge cleared it. Measure the site header and
   offset the whole compare sticky stack (camp row, section headers, focus scroll-margin) by it
   via `--site-header-h`.
