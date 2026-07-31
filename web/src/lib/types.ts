@@ -38,6 +38,8 @@ export interface Camp {
   lon: number | null;
   july_high_f: number | null; // avg July daytime high (°F); null when unknown
   july_low_f: number | null; // avg July overnight low (°F)
+  elevation_ft: number | null; // elevation at the camp (feet); null when unknown
+  operating_status: string | null; // "active" | "closed" | "not_operating" | ...; non-active dropped at build
   geo_precision: GeoPrecision; // "approximate" = centroid-level (co-located / city-level)
   reservation: Reservation | null;
   verified_at: string; // ISO date the source was last confirmed

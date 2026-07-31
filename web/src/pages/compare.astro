@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import CompareApp from "../components/CompareApp";
+import { withBase } from "@lib/paths";
+import { Heading } from "@opensourcescouting/design-system";
+import type { Camp } from "../lib/types";
+import campsData from "../../public/data/camps.json";
+
+// The comparison is driven entirely by the ?camps= query string, which a statically hosted
+// page can only resolve in the browser — so the interactive view is a client island (the same
+// pattern the search page uses). The noscript block keeps every camp crawlable and reachable.
+const camps = campsData as unknown as Camp[];
+---
+
+<Base
+  title="Compare Scouts BSA summer camps — Camp Finder"
+  description="Compare up to five Scouts BSA resident summer camps side by side on program features, July climate, elevation, distance, and operator council."
+>
+  <CompareApp client:load />
+
+  <noscript>
+    <div class="mx-auto max-w-[1280px] px-4 py-8">
+      <Heading level={1} size={2}>Compare camps</Heading>
+      <p class="mt-2 max-w-2xl text-base text-muted-foreground">
+        Side-by-side camp comparison needs JavaScript. You can still
+        <a class="text-primary underline underline-offset-2" href={withBase("/")}>search every camp</a>
+        and open any camp's page directly.
+      </p>
+      <ul class="mt-4 grid gap-2 md:grid-cols-2">
+        {
+          camps.map((c) => (
+            <li>
+              <a class="text-primary underline underline-offset-2 hover:text-primary/90" href={withBase(`/camps/${c.id}`)}>
+                {c.name} — {c.council_name} ({c.state})
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </noscript>
+</Base>
