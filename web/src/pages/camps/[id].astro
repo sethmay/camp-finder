@@ -7,6 +7,7 @@ import CampLocationMap from "../../components/CampLocationMap";
 import { formatVerified, isStale, orderFeatures, programCategories, PROGRAM_CATEGORY_LABEL } from "../../lib/format";
 import type { Camp } from "../../lib/types";
 import { withBase } from "@lib/paths";
+import { correctionHref } from "@lib/corrections";
 import { Alert, Badge, Card, CardBody, Heading, buttonVariants, cn } from "@opensourcescouting/design-system";
 import campsData from "../../../public/data/camps.json";
 
@@ -112,6 +113,26 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
       )
     }
 
+    {
+      camp.features_verified_at === null && (
+        <section class="mt-6 rounded-[var(--radius)] border border-border bg-card p-4">
+          <Heading level={2} size={3}>Programs &amp; features</Heading>
+          <p class="mt-2 text-sm text-muted-foreground">
+            We haven't surveyed this camp's programs yet, so we don't list features we can't
+            verify. Know it firsthand — a camp director, staffer, or a troop that's attended?
+          </p>
+          <a
+            href={correctionHref(camp, "camp")}
+            target="_blank"
+            rel="noopener noreferrer"
+            class={cn(buttonVariants({ variant: "primary", size: "md" }), "mt-3")}
+          >
+            Help us verify this camp →
+          </a>
+        </section>
+      )
+    }
+
     <Card variant="elevated" className="mt-8">
       <CardBody>
         <Heading level={2} size={3}>Sessions, dates &amp; fees</Heading>
@@ -155,7 +176,12 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
             </a>
           )}
           <ProvenanceBadge sourceUrl={camp.url} verifiedAt={camp.verified_at} />
-          <a href={withBase("/about#corrections")} class="text-xs text-muted-foreground underline">
+          <a
+            href={correctionHref(camp, "camp")}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs text-muted-foreground underline"
+          >
             See a problem with this listing? Suggest a correction.
           </a>
         </div>

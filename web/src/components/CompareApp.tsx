@@ -11,6 +11,7 @@ import {
   type CompareState,
 } from "@lib/compare";
 import { withBase } from "@lib/paths";
+import { correctionHref } from "@lib/corrections";
 import {
   isValidZip,
   loadCentroids,
@@ -161,7 +162,15 @@ export default function CompareApp() {
           This side-by-side is a convenience view built from community-maintained registry data —
           it can be out of date or incomplete, and camps change their programs year to year. Open
           each camp's page and confirm current programs, dates, and fees on the official council
-          page before you choose.
+          page before you choose.{" "}
+          <a
+            href={correctionHref(undefined, "compare")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-primary underline"
+          >
+            Spot something wrong? Suggest a correction.
+          </a>
         </Alert>
 
         {/* Announce selection changes for assistive tech (the add/remove controls are otherwise silent). */}

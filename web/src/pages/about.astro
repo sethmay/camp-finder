@@ -2,7 +2,8 @@
 import Base from "../layouts/Base.astro";
 import type { Meta } from "../lib/types";
 import metaData from "../../public/data/meta.json";
-import { Card, Heading } from "@opensourcescouting/design-system";
+import { Card, Heading, buttonVariants, cn } from "@opensourcescouting/design-system";
+import { correctionHref, CORRECTION_FORM_READY } from "@lib/corrections";
 
 const meta = metaData as unknown as Meta;
 ---
@@ -59,10 +60,34 @@ const meta = metaData as unknown as Meta;
 
     <Heading level={2} size={3} id="corrections" className="mt-8">Suggest a correction</Heading>
     <p class="mt-3 text-base text-foreground">
-      Found something wrong or missing? Camp and council facts are maintained in the
+      Our data is only as good as its sources. If you know a camp firsthand — you run it, work
+      it, or your unit has been — you know it better than our scrapers do. Tell us what's off or
+      missing and we'll get it fixed.
+    </p>
+    {
+      CORRECTION_FORM_READY && (
+        <a
+          href={correctionHref(undefined, "about")}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={cn(buttonVariants({ variant: "primary", size: "md" }), "mt-4")}
+        >
+          Suggest a correction →
+        </a>
+      )
+    }
+    <p class="mt-4 text-sm text-muted-foreground">
+      Every suggestion is reviewed by a person before anything changes, so an update can take a
+      little while — and then flows through the
       <a href={meta.source_url} class="text-primary underline underline-offset-2 hover:text-primary/90" target="_blank" rel="noopener noreferrer">
-        Open Scout API</a> — open an issue or pull request there with the camp name, what's
-      wrong, and a link to the authoritative source.
+        Open Scout API</a> before it appears here. Prefer to file it yourself? Open an issue or
+      pull request there with the camp name, what's wrong, and a link to the authoritative source.
+    </p>
+    <p class="mt-4 text-xs text-muted-foreground">
+      Privacy: sharing your contact is optional, and we use it only to follow up on your
+      suggestion. Your correction and any source link you provide may be recorded in the open
+      dataset's provenance (credited to you only if you ask). Please don't include personal
+      information about youth.
     </p>
 
     <Heading level={2} size={3} className="mt-8">Disclaimer</Heading>
