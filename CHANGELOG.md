@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.36.3 (patch) — 2026-07-31
+
+- `PENDING` Rewrite the About page copy to read less like AI (avoid-ai-writing + Seth's voice):
+  drop the four prose em-dashes, cut set-up phrasing ("It exists to solve one problem:", "a
+  directory and a pointer, never the source of record"), and vary the cadence. Plainer and more
+  concrete; the stats, privacy note, and legal disclaimer are unchanged.
+
 ## 0.36.2 (patch) — 2026-07-31
 
 - `7d2a851` Go live: set `CORRECTION_FORM_URL` to the published Tally form. Every correction
