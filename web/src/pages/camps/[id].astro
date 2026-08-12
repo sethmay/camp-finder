@@ -85,7 +85,7 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
     {
       camp.july_high_f !== null && (
         <p class="mt-4 text-sm text-muted-foreground">
-          Typical July: {camp.july_low_f !== null ? `${camp.july_low_f}–${camp.july_high_f}` : `${camp.july_high_f}`}°F avg — climate normals via Open Scout API
+          Typical July: {camp.july_low_f !== null ? `${camp.july_low_f}–${camp.july_high_f}` : `${camp.july_high_f}`}°F avg. Climate normals via the Open Scout API.
         </p>
       )
     }
@@ -119,7 +119,7 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
           <Heading level={2} size={3}>Programs &amp; features</Heading>
           <p class="mt-2 text-sm text-muted-foreground">
             We haven't surveyed this camp's programs yet, so we don't list features we can't
-            verify. Know it firsthand — a camp director, staffer, or a troop that's attended?
+            verify. Do you know it firsthand, as a camp director, staffer, or a troop that's attended?
           </p>
           <a
             href={correctionHref(camp, "camp")}
@@ -138,8 +138,8 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
         <Heading level={2} size={3}>Sessions, dates &amp; fees</Heading>
         <p class="mt-2 text-sm text-muted-foreground">
           Session weeks, fees, and availability change often and live on the council's own
-          site — always the authoritative source. Check there for the current schedule and
-          to register.
+          site, which is always the authoritative source. Check there for the current schedule
+          and to register.
         </p>
         {/* A DS ghost button needs h-auto/whitespace-normal to survive this long label in a
             narrow card (buttonVariants pins h-11 and whitespace-nowrap, and Card clips with
