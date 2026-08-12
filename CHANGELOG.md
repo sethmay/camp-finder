@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.36.4 (patch) — 2026-07-31
+
+- `PENDING` Extend the AI-ism copy pass to the rest of the public surfaces: homepage subhead,
+  footer, the `/compare` accuracy warning + feature-legend footnote (also drop "genuinely"), the
+  signature / ZIP / "not surveyed" strings, and the camp detail page (July note, unsurveyed CTA,
+  sessions card). Removes the prose em-dashes; leaves code comments, the sitewide title separator,
+  empty-value cell glyphs, the numeric en-dash, and noscript list separators as-is.
+
 ## 0.36.3 (patch) — 2026-07-31
 
 - `02bb6a9` Rewrite the About page copy to read less like AI (avoid-ai-writing + Seth's voice):

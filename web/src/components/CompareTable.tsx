@@ -286,7 +286,7 @@ export default function CompareTable({
 
         {/* Card 2 — signature */}
         <section className="mt-3 overflow-clip rounded-[var(--radius)] border border-border bg-card">
-          <SectionHeader style={sectionTop}>Signature — things only this camp has</SectionHeader>
+          <SectionHeader style={sectionTop}>Signature: things only this camp has</SectionHeader>
           <div style={cols} className="grid items-start gap-2 p-[14px]">
             <RowLabel>
               <div className="text-[13px] font-semibold text-foreground">Why leaders pick it</div>
@@ -406,9 +406,9 @@ export default function CompareTable({
           <p className="px-[14px] py-3 text-[12px] leading-relaxed text-muted-foreground">
             A solid green <span className="font-semibold text-primary">✓</span> is the only mark that
             means “offered.” A dashed <span style={{ color: DASH_GLYPH }}>−</span> means we surveyed
-            the camp and it genuinely doesn't offer that. An amber{" "}
+            the camp and it doesn't offer that. An amber{" "}
             <span className="font-semibold" style={{ color: AMBER_TEXT }}>?</span> means we've never
-            surveyed that camp — unknown, not “no.”
+            surveyed that camp, so treat it as unknown rather than a “no.”
           </p>
         </section>
       </div>
@@ -523,14 +523,14 @@ function SignatureCell({ camp, verifyHref }: { camp: Camp; verifyHref: string })
   if (!isSurveyed(camp))
     return (
       <p className="text-[12px]" style={{ color: AMBER_TEXT }}>
-        Not surveyed yet —{" "}
+        Not surveyed yet.{" "}
         <a href={verifyHref} className="underline">
-          help us verify
+          Help us verify
         </a>
       </p>
     );
   if (camp.features_signature.length === 0)
-    return <p className="text-[12px] text-muted-foreground">Surveyed — none flagged</p>;
+    return <p className="text-[12px] text-muted-foreground">Surveyed, none flagged</p>;
   return (
     <p className="text-[14px] italic leading-snug text-foreground">
       {camp.features_signature.map((c) => featureLabel(c)).join(", ")}
@@ -620,7 +620,7 @@ function ZipPrompt({
     >
       <div className="text-[12px] font-semibold" style={{ color: AMBER_TEXT }}>
         {unresolvedZip
-          ? `We don't have a location for ${unresolvedZip} — try a nearby ZIP.`
+          ? `We don't have a location for ${unresolvedZip}. Try a nearby ZIP.`
           : "Add your ZIP to see distances"}
       </div>
       <div className="mt-2 flex gap-2">

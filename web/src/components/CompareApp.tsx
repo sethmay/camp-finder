@@ -159,10 +159,10 @@ export default function CompareApp() {
         </div>
 
         <Alert tone="warning" title="Confirm details before you decide" className="mb-5">
-          This side-by-side is a convenience view built from community-maintained registry data —
-          it can be out of date or incomplete, and camps change their programs year to year. Open
-          each camp's page and confirm current programs, dates, and fees on the official council
-          page before you choose.{" "}
+          This side-by-side is built from community-maintained registry data, so it can be out of
+          date or incomplete, and camps change their programs year to year. Open each camp's page
+          and confirm current programs, dates, and fees on the official council page before you
+          choose.{" "}
           <a
             href={correctionHref(undefined, "compare")}
             target="_blank"
