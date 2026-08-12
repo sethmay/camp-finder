@@ -115,20 +115,12 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
 
     {
       camp.features_verified_at === null && (
-        <section class="mt-6 rounded-[var(--radius)] border border-border bg-card p-4">
+        <section class="mt-6">
           <Heading level={2} size={3}>Programs &amp; features</Heading>
           <p class="mt-2 text-sm text-muted-foreground">
-            We haven't surveyed this camp's programs yet, so we don't list features we can't
-            verify. Do you know it firsthand, as a camp director, staffer, or a troop that's attended?
+            We haven't surveyed this camp's programs yet, so we're not listing features we can't
+            verify.
           </p>
-          <a
-            href={correctionHref(camp, "camp")}
-            target="_blank"
-            rel="noopener noreferrer"
-            class={cn(buttonVariants({ variant: "primary", size: "md" }), "mt-3")}
-          >
-            Help us verify this camp →
-          </a>
         </section>
       )
     }
@@ -158,6 +150,25 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
       </CardBody>
     </Card>
 
+    <section class="mt-8 rounded-[var(--radius)] border border-border bg-[#F1F6F2] p-6">
+      <Heading level={2} size={3}>
+        {camp.features_verified_at === null ? "Help us map this camp" : "Keep this listing accurate"}
+      </Heading>
+      <p class="mt-2 text-sm text-foreground">
+        {camp.features_verified_at === null
+          ? "If you run this camp, work it, or your unit has camped here, tell us what it offers and we'll add it."
+          : "Our data comes from public sources and can fall behind. If you know this camp firsthand, tell us what's out of date or missing and we'll fix it."}
+      </p>
+      <a
+        href={correctionHref(camp, "camp")}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={cn(buttonVariants({ variant: "primary", size: "md" }), "mt-4")}
+      >
+        {camp.features_verified_at === null ? "Add what you know →" : "Suggest a correction →"}
+      </a>
+    </section>
+
     <Card variant="elevated" className="mt-8">
       <CardBody>
         {/* The flex column sits on a plain div, not on CardBody: Astro wraps a React
@@ -176,14 +187,6 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
             </a>
           )}
           <ProvenanceBadge sourceUrl={camp.url} verifiedAt={camp.verified_at} />
-          <a
-            href={correctionHref(camp, "camp")}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-xs text-muted-foreground underline"
-          >
-            See a problem with this listing? Suggest a correction.
-          </a>
         </div>
       </CardBody>
     </Card>
