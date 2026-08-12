@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.36.1 (patch) — 2026-07-31
 
-- `PENDING` Carry a camp's current feature codes into the correction form as a hidden
+- `2fa4f8e` Carry a camp's current feature codes into the correction form as a hidden
   `camp_features` field (invisible triage context — "what we list today" for add/remove requests),
   and document the optional, conditional feature multi-select (the ~20 `FEATURE_FACETS` draws as a
   hint, not the full 128-term vocab) in the Tally spec. No visible change until the form URL is set.
