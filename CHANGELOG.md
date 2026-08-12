@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.36.1 (patch) — 2026-07-31
+
+- `PENDING` Carry a camp's current feature codes into the correction form as a hidden
+  `camp_features` field (invisible triage context — "what we list today" for add/remove requests),
+  and document the optional, conditional feature multi-select (the ~20 `FEATURE_FACETS` draws as a
+  hint, not the full 128-term vocab) in the Tally spec. No visible change until the form URL is set.
+
 ## 0.36.0 (minor) — 2026-07-31
 
 - `a8c8540` Add a user correction intake. Per-camp "Suggest a correction" links (and a stronger

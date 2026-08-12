@@ -17,10 +17,12 @@ export const CORRECTION_FORM_URL = "";
 export type CorrectionSource = "camp" | "compare" | "about" | "general";
 
 /** Link to the correction form, prefilling the camp (when known) into the Tally hidden fields
- *  and tagging the originating surface. Falls back to the about-page explainer when the form URL
- *  is unset. `formUrl` is injectable for tests; production callers use the module default. */
+ *  and tagging the originating surface. Also carries the camp's current feature CODES in a hidden
+ *  `camp_features` field — invisible to the submitter, it gives the triage agent "what we list
+ *  today" so add/remove requests are unambiguous. Falls back to the about-page explainer when the
+ *  form URL is unset. `formUrl` is injectable for tests; production callers use the module default. */
 export function correctionHref(
-  camp?: Pick<Camp, "id" | "name" | "state">,
+  camp?: Pick<Camp, "id" | "name" | "state" | "features">,
   src: CorrectionSource = "general",
   formUrl: string = CORRECTION_FORM_URL,
 ): string {
@@ -30,6 +32,7 @@ export function correctionHref(
     p.set("camp_id", camp.id);
     p.set("camp_name", camp.name);
     if (camp.state) p.set("camp_state", camp.state);
+    if (camp.features.length) p.set("camp_features", camp.features.join(","));
   }
   p.set("src", src);
   return `${formUrl}?${p.toString()}`;

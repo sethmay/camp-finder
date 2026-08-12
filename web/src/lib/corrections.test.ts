@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { correctionHref } from "./corrections";
 
 const FORM = "https://tally.so/r/wABC12";
-const camp = { id: "wa-camp-parsons", name: "Camp Parsons", state: "WA" };
+const camp = { id: "wa-camp-parsons", name: "Camp Parsons", state: "WA", features: ["sailing", "rifle"] };
 
 describe("correctionHref", () => {
   it("falls back to the about explainer when no form URL is configured", () => {
@@ -16,6 +16,7 @@ describe("correctionHref", () => {
     expect(url.searchParams.get("camp_id")).toBe("wa-camp-parsons");
     expect(url.searchParams.get("camp_name")).toBe("Camp Parsons"); // space decoded
     expect(url.searchParams.get("camp_state")).toBe("WA");
+    expect(url.searchParams.get("camp_features")).toBe("sailing,rifle"); // hidden agent context
     expect(url.searchParams.get("src")).toBe("camp");
   });
 
@@ -25,9 +26,10 @@ describe("correctionHref", () => {
     expect(url.searchParams.get("src")).toBe("about");
   });
 
-  it("omits camp_state when the camp has none", () => {
-    const url = new URL(correctionHref({ id: "x", name: "Y", state: null }, "compare", FORM));
+  it("omits camp_state and camp_features when the camp lacks them", () => {
+    const url = new URL(correctionHref({ id: "x", name: "Y", state: null, features: [] }, "compare", FORM));
     expect(url.searchParams.has("camp_state")).toBe(false);
+    expect(url.searchParams.has("camp_features")).toBe(false);
     expect(url.searchParams.get("camp_id")).toBe("x");
   });
 });
