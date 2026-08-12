@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.36.4 (patch) — 2026-07-31
 
-- `PENDING` Extend the AI-ism copy pass to the rest of the public surfaces: homepage subhead,
+- `3a04cdc` Extend the AI-ism copy pass to the rest of the public surfaces: homepage subhead,
   footer, the `/compare` accuracy warning + feature-legend footnote (also drop "genuinely"), the
   signature / ZIP / "not surveyed" strings, and the camp detail page (July note, unsurveyed CTA,
   sessions card). Removes the prose em-dashes; leaves code comments, the sitewide title separator,
