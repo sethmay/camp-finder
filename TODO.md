@@ -113,13 +113,50 @@ cue. Deferred `1c` head-to-head ("compare just these two") remains a natural fol
 Suggested order: elevation filter → reservation pages (#7) → high-adventure page (#4) →
 shortlist + CSV export → council pages.
 
-## Crowdsourcing / corrections (parked)
+## User corrections intake (in progress)
 
-Corrections now flow **upstream** to open-scout-api (the "Suggest a correction" link points
-there). If we still want an in-app intake, options were: GitHub Issue Forms + agent triage → PR
-(recommended, $0, no backend) vs. a hosted form. Open decisions: intake channel, require a
-council-page URL, attribution. Resume when ready to scope — but confirm it isn't fully covered
-by upstream first.
+Let visitors — especially camp directors and troops who know a camp firsthand — suggest data
+corrections. Data lives upstream in open-scout-api, but users meet it here, so the entry point
+is here; the queue and edits are upstream. Decisions (locked): **hosted no-account form = Tally**
+(maintainer has an account); **queue = open-scout-api PRs**; **attribute via provenance**;
+privacy note acceptable; triage = agent-drafts / human-decides.
+
+**Flow (no backend anywhere):** camp-finder button → prefilled Tally form → Tally dashboard/email
+(raw inbox) → maintainer + agent triage → validated edit to `data/camps/<id>.json` upstream →
+release → bump `EXPECTED_VERSION` + `npm run data` → deploy. Latency days–weeks; the UI must say so.
+There is **no auto-route** from Tally to GitHub (that's the deferred serverless bridge, option E);
+the triage step is the join.
+
+### camp-finder side (this repo)
+- `web/src/lib/corrections.ts`: `CORRECTION_FORM_URL` constant + `correctionHref(camp?, src)` that
+  builds the prefilled Tally URL (hidden-field params `camp_id`, `camp_name`, `camp_state`, `src`).
+  **Falls back to `/about#corrections` when the constant is empty**, so nothing 404s pre-launch.
+- Entry points: per-camp affordance on `camps/[id].astro` (unsurveyed camps get the stronger
+  "help us verify" CTA — highest-value, fills the 82 never-surveyed); a "suggest a correction"
+  link in the `/compare` accuracy `Alert`; `about.astro` §corrections rewritten to a form button +
+  the upstream issue/PR option (for technical users) + a privacy note (no youth PII; contact used
+  only for follow-up; evidence links may appear in the open dataset's provenance).
+- **GO-LIVE = paste the Tally form URL into `CORRECTION_FORM_URL`.** Until then the buttons route
+  to `/about#corrections`, which explains the channel.
+
+### Tally form fields (build in the Tally account)
+Hidden (prefilled from URL): `camp_id`, `camp_name`, `camp_state`, `src`. Visible: change category
+(feature add / feature remove / open-or-closed status / wrong location or map pin / website / council
+or operator / name / other), free-text description, **source URL** (council/camp page proving it),
+**your relationship to the camp** (director / camp staff / council staff / attended with a unit /
+parent / other), optional contact (email or reddit), attribution consent (credit me / keep me
+anonymous). Enable Tally captcha + honeypot. Steer climate/elevation complaints to "wrong location
+or map pin" (those fields are derived from coordinates upstream, not directly editable).
+
+### Upstream (open-scout-api) — do NOT pre-build; calibrate first
+Per the triage-automation plan: run the first ~10–20 submissions **fully manual** (you + an agent),
+then capture the recurring judgment as a `.claude/skills/` triage skill in open-scout-api. Automate
+normalize → vet (resolve id, `check_links.py` the source URL, vocab-check the feature code) → draft
+the `data/camps/<id>.json` edit + `validate_data.py`/`build.py`; keep the **truth call and the merge
+human, always**; never auto-merge user data; new vocab terms are a human taxonomy decision.
+Provenance on acceptance: append `provenance.sources[]` (`{url, accessed}` + a `citation` like
+"community submission via Tally — <role>, <name-or-anonymous>, <date>"), bump `features_verified_at`,
+raise `features_source_tier` when a director/staff confirms, add `features[].note` for texture.
 
 ## Notes
 

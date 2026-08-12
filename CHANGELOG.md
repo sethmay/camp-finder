@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.36.0 (minor) — 2026-07-31
+
+- `PENDING` Add a user correction intake. Per-camp "Suggest a correction" links (and a stronger
+  "help us verify" CTA on never-surveyed camps), a link in the `/compare` accuracy banner, and a
+  rewritten About §corrections with a privacy note. Links carry the camp (id/name/state) into a
+  prefilled Tally form via `correctionHref`; until `CORRECTION_FORM_URL` is set they fall back to
+  `/about#corrections`, so nothing 404s. No backend — submissions triage to open-scout-api.
+
 ## 0.35.1 (patch) — 2026-07-31
 
 - `89da210` Replace the Camp Compare category depth dot-track (`●●○○…`) with a proportion bar
