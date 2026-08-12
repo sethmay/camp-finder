@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.36.5 (patch) — 2026-07-31
 
-- `PENDING` Make the data-contribution CTA prominent on camp detail pages: a titled, tinted card
+- `27c96a4` Make the data-contribution CTA prominent on camp detail pages: a titled, tinted card
   with a filled button, replacing the buried muted link. Copy adapts — "Keep this listing
   accurate / Suggest a correction" for surveyed camps, "Help us map this camp / Add what you know"
   for unsurveyed. Unifies the two prior CTAs (the tiny provenance link and the in-features button)
