@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.36.2 (patch) — 2026-07-31
 
-- `PENDING` Go live: set `CORRECTION_FORM_URL` to the published Tally form. Every correction
+- `7d2a851` Go live: set `CORRECTION_FORM_URL` to the published Tally form. Every correction
   surface now opens the prefilled form instead of the `/about#corrections` fallback. Verified the
   camp-name prefill lands in the live form and the hidden `camp_id`/`camp_state`/`camp_features`/
   `src` params carry through; responses sync to the triage Google Sheet.
