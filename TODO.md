@@ -140,13 +140,27 @@ the triage step is the join.
   to `/about#corrections`, which explains the channel.
 
 ### Tally form fields (build in the Tally account)
-Hidden (prefilled from URL): `camp_id`, `camp_name`, `camp_state`, `src`. Visible: change category
-(feature add / feature remove / open-or-closed status / wrong location or map pin / website / council
-or operator / name / other), free-text description, **source URL** (council/camp page proving it),
-**your relationship to the camp** (director / camp staff / council staff / attended with a unit /
-parent / other), optional contact (email or reddit), attribution consent (credit me / keep me
-anonymous). Enable Tally captcha + honeypot. Steer climate/elevation complaints to "wrong location
-or map pin" (those fields are derived from coordinates upstream, not directly editable).
+Hidden (prefilled from URL): `camp_id`, `camp_name`, `camp_state`, `src`, and `camp_features` (the
+camp's current feature CODES, comma-joined — invisible triage context so the agent sees "what we
+list today" for add/remove requests; `correctionHref` sets it). Visible: **change category**
+(single-select: feature to add / feature to remove / open-or-closed status / wrong location or map
+pin / website / council or operator / name / other), free-text description, **source URL**
+(council/camp page proving it), **your relationship to the camp** (director / camp staff / council
+staff / attended with a unit / parent / other), optional contact (email or reddit), attribution
+consent (credit me / keep me anonymous).
+
+**Optional feature multi-select — a hint, not the vocab.** Show it *conditionally* (Tally logic)
+only when change category is a feature add/remove. Options = the ~20 recognizable draws already in
+`FEATURE_FACETS` (`format.ts`), same labels as the search-page filter chips, grouped Activities /
+Programs & audience / Camp facilities & lodging: Aquatics, Shooting sports, Climbing, COPE,
+Horseback, Mountain biking, ATV, Scuba, Handicraft, Zip line · STEM, Nature study, High-adventure
+option, Older-scout program, First-year program, Provisional attendance · Waterfront, Pool, Dining
+hall, Cabins. It gives the triage agent a cluster hint; the exact 128-term code mapping stays the
+agent's job (never make the submitter map onto our vocabulary). Do NOT expose the full 128-term
+vocab as a picker — overwhelming + wrong party for the mapping.
+
+Enable Tally captcha + honeypot. Steer climate/elevation complaints to "wrong location or map pin"
+(those fields are derived from coordinates upstream, not directly editable).
 
 ### Upstream (open-scout-api) — do NOT pre-build; calibrate first
 Per the triage-automation plan: run the first ~10–20 submissions **fully manual** (you + an agent),
