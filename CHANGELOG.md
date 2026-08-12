@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.36.2 (patch) — 2026-07-31
+
+- `PENDING` Go live: set `CORRECTION_FORM_URL` to the published Tally form. Every correction
+  surface now opens the prefilled form instead of the `/about#corrections` fallback. Verified the
+  camp-name prefill lands in the live form and the hidden `camp_id`/`camp_state`/`camp_features`/
+  `src` params carry through; responses sync to the triage Google Sheet.
+
 ## 0.36.1 (patch) — 2026-07-31
 
 - `2fa4f8e` Carry a camp's current feature codes into the correction form as a hidden
