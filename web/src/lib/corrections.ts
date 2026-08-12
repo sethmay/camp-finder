@@ -11,7 +11,7 @@ import type { Camp } from "./types";
 import { withBase } from "./paths";
 
 /** The published Tally form URL, or "" until it exists. */
-export const CORRECTION_FORM_URL = "";
+export const CORRECTION_FORM_URL: string = "https://tally.so/r/xXbNDd";
 
 /** Where the correction click originated, tagged into the form for triage context. */
 export type CorrectionSource = "camp" | "compare" | "about" | "general";

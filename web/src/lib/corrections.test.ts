@@ -6,8 +6,8 @@ const camp = { id: "wa-camp-parsons", name: "Camp Parsons", state: "WA", feature
 
 describe("correctionHref", () => {
   it("falls back to the about explainer when no form URL is configured", () => {
-    // Default formUrl is "" in this build; vitest pins BASE_URL to "/".
-    expect(correctionHref(camp, "camp")).toBe("/about#corrections");
+    // Pass an empty formUrl explicitly (the module default is now the live form); BASE_URL is "/".
+    expect(correctionHref(camp, "camp", "")).toBe("/about#corrections");
   });
 
   it("prefills camp id/name/state and the source tag into the form URL", () => {
