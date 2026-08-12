@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.36.0 (minor) — 2026-07-31
 
-- `PENDING` Add a user correction intake. Per-camp "Suggest a correction" links (and a stronger
+- `a8c8540` Add a user correction intake. Per-camp "Suggest a correction" links (and a stronger
   "help us verify" CTA on never-surveyed camps), a link in the `/compare` accuracy banner, and a
   rewritten About §corrections with a privacy note. Links carry the camp (id/name/state) into a
   prefilled Tally form via `correctionHref`; until `CORRECTION_FORM_URL` is set they fall back to
