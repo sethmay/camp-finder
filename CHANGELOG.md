@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.37.1 (patch) — 2026-08-12
+
+- `PENDING` Update the Open Scout API pin to **v0.58.2** and refresh committed data. Ships the
+  first community correction (Camp Emerald Bay, from the Suggest-a-Correction form, verified
+  upstream): its features go from 7 to 23, with SCUBA added as a signature draw and "aquatics"
+  resolved into canoeing/kayaking/sailing/snorkeling. Per-id diff: 1 camp changed, none
+  added/removed, no new nulls.
+
 ## 0.37.0 (minor) — 2026-08-12
 
 - `0a39183` Emphasize that Camp Finder is free and open source: add an MIT `LICENSE`, a

@@ -1569,17 +1569,34 @@
     ],
     "features": [
       "archery",
+      "astronomy",
+      "backpacking",
       "bb_guns",
       "boat_access",
+      "canoeing",
+      "dining_hall",
+      "handicraft",
+      "high_adventure_option",
+      "kayaking",
       "marine_science",
+      "mountain_biking",
+      "nature_study",
+      "older_scout_program",
       "platform_tents",
+      "provisional_attendance",
+      "rifle",
+      "sailing",
+      "scuba",
+      "shotgun",
+      "snorkeling",
       "swimming",
       "waterfront"
     ],
     "features_signature": [
-      "boat_access"
+      "boat_access",
+      "scuba"
     ],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-08-13",
     "state": "CA",
     "city": "Avalon",
     "lat": 33.4487,
@@ -1591,7 +1608,7 @@
     "geo_precision": "exact",
     "reservation": null,
     "verified_at": "2026-07-17",
-    "confidence": 0.6
+    "confidence": 0.8
   },
   {
     "id": "ca-camp-emerson-boseker-scout-reservation",
