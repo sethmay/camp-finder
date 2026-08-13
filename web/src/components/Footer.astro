@@ -1,5 +1,9 @@
 ---
 import { withBase } from "@lib/paths";
+import pkg from "../../package.json";
+import metaData from "../../public/data/meta.json";
+import type { Meta } from "@lib/types";
+const meta = metaData as unknown as Meta;
 // The disclaimer ships on every page (design non-negotiable + IMPLEMENTATION §13).
 ---
 
@@ -24,6 +28,9 @@ import { withBase } from "@lib/paths";
     <p class="mt-6 border-t border-border pt-4 text-xs">
       Not affiliated with, endorsed by, or sponsored by Scouting America (Boy Scouts of
       America). All council and camp names are the property of their respective owners.
+    </p>
+    <p class="mt-2 text-xs text-muted-foreground">
+      Camp Finder v{pkg.version} · Open Scout API v{meta.source_version}
     </p>
   </div>
 </footer>
