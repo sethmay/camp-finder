@@ -1,7 +1,7 @@
 {
   "name": "camp-finder-web",
   "type": "module",
-  "version": "0.37.0",
+  "version": "0.37.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
