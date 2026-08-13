@@ -60,6 +60,14 @@ const badgeCats = programCategories(camp.program_types).filter((c) => c !== "sco
           >
             Visit official council page →
           </a>
+          <div class="mt-3">
+            <a
+              href={withBase(`/compare?camps=${camp.id}`)}
+              class:list={buttonVariants({ variant: "secondary", size: "md" })}
+            >
+              Compare this camp →
+            </a>
+          </div>
         </div>
         {
           camp.lat != null && camp.lon != null && (
