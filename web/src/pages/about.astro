@@ -56,6 +56,25 @@ const meta = metaData as unknown as Meta;
       </li>
     </ul>
 
+    <Heading level={2} size={3} className="mt-8">Free and open source</Heading>
+    <p class="mt-3 text-base text-foreground">
+      Camp Finder is free to use, with no account and no ads. The code is open source under the
+      MIT license, so anyone can read it, run it, or send a fix. It runs on open data from the
+      Open Scout API and the Open Source Scouting design system, which are open too.
+    </p>
+    <a
+      href="https://github.com/sethmay/camp-finder"
+      target="_blank"
+      rel="noopener noreferrer"
+      class={cn(buttonVariants({ variant: "secondary", size: "md" }), "mt-4")}
+    >
+      View the source on GitHub →
+    </a>
+    <p class="mt-3 text-sm text-muted-foreground">
+      Found a bug or want to help build the site? Open an issue or pull request on GitHub. To fix a
+      camp's data, use Suggest a correction below.
+    </p>
+
     <Heading level={2} size={3} id="corrections" className="mt-8">Suggest a correction</Heading>
     <p class="mt-3 text-base text-foreground">
       Our data is only as good as its sources. If you know a camp firsthand, because you run it,

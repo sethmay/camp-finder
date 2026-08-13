@@ -2,6 +2,14 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.37.0 (minor) — 2026-08-12
+
+- `PENDING` Emphasize that Camp Finder is free and open source: add an MIT `LICENSE`, a
+  "Free and open source" section on the About page with a "View the source on GitHub" button
+  (github.com/sethmay/camp-finder), a "Free and open source." line + "Source on GitHub" link in
+  the footer, and a README license note. Makes the open-source claim real (there was no license
+  before) and gives visitors a clear path to the code.
+
 ## 0.36.5 (patch) — 2026-07-31
 
 - `27c96a4` Make the data-contribution CTA prominent on camp detail pages: a titled, tinted card

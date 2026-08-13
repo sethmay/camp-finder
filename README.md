@@ -1,6 +1,6 @@
 # Camp Finder
 
-A free, static website that helps Scout troops discover **Scouts BSA resident summer
+A free, open-source, static website that helps Scout troops discover **Scouts BSA resident summer
 camps** across the ~230 Scouting America councils — filter by distance, program, and
 features — and click through to each camp's **official council page** for dates and fees.
 
@@ -68,3 +68,10 @@ site deploys from a clean checkout.
 - **Frontend:** search/map/filter island (distance, state, July temperature, program,
   features, text), reservation-clustered map, static camp pages, a `/compare` side-by-side
   view, about, 404 — built against the approved design system.
+
+## License
+
+MIT. See [`LICENSE`](./LICENSE). Camp and council data comes from the
+[Open Scout API](https://github.com/sethmay/open-scout-api) under its own license, and the
+vendored [Open Source Scouting design system](https://github.com/OpenSourceScouting/design-system)
+under its own.
