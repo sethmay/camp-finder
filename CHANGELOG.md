@@ -4,7 +4,7 @@ All notable changes, newest first. One line per merge: `` - `<short-sha>` <imper
 
 ## 0.37.3 (patch) — 2026-08-12
 
-- `PENDING` Add a "Compare this camp →" button under the council button on camp detail pages,
+- `43ab2ad` Add a "Compare this camp →" button under the council button on camp detail pages,
   linking to `/compare?camps=<id>` so the camp lands pre-selected in the compare view. Makes the
   compare feature more discoverable from a single camp.
 
