@@ -2,6 +2,12 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.37.3 (patch) — 2026-08-12
+
+- `PENDING` Add a "Compare this camp →" button under the council button on camp detail pages,
+  linking to `/compare?camps=<id>` so the camp lands pre-selected in the compare view. Makes the
+  compare feature more discoverable from a single camp.
+
 ## 0.37.2 (patch) — 2026-08-12
 
 - `cd1a26e` Show the build's versions in the footer fine print: "Camp Finder v<pkg> · Open Scout
