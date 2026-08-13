@@ -2,6 +2,13 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+## 0.37.2 (patch) — 2026-08-12
+
+- `PENDING` Show the build's versions in the footer fine print: "Camp Finder v<pkg> · Open Scout
+  API v<source_version>", read at build from `package.json` and the committed `meta.json` (inlined
+  into the HTML, package.json not shipped). Makes it easy to verify which build and which dataset
+  a page is on.
+
 ## 0.37.1 (patch) — 2026-08-12
 
 - `99e22f0` Update the Open Scout API pin to **v0.58.2** and refresh committed data. Ships the
