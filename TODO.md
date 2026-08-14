@@ -65,6 +65,17 @@ The retheme onto `@opensourcescouting/design-system` merged in 0.33.0. Deliverab
   serializer (comma/quote/newline escaping).
 - **Former/non-council camping (parked).** Camps sold to orgs that still allow Scout camping;
   local/state/federal camping locations. Beyond current scope (BSA council camps) — park.
+- **Broaden scope beyond resident summer camps (POSSIBLE — growing demand, undecided).** A number of
+  user requests (incl. Reddit) to cover more camp types. The data already exists upstream: open-scout-api
+  carries every camp property (449 as of API 0.58.8), but `web/scripts/build-data.mjs` keeps only camps
+  with a `SUPPORTED_PROGRAMS` type AND drops `not_operating`/`closed` — so weekend/short-term and
+  family-camping properties are excluded (e.g. **Camp Warren Levis**, **Camp Clark**). Broadening =
+  widen `SUPPORTED_PROGRAMS` (add `short_term_camping`, `family_camping`, and maybe `venturing`,
+  `sea_scout`, `training`) and/or relax the status filter. **This is a big scope addition** — a lot more
+  camps (the community scout-camp-map project lists ~527 vs our ~439 in-scope) — and it reframes the site
+  from "find a resident summer camp" toward a general camp directory: needs UI work (program facets, map
+  density, copy) and a product call. UNDECIDED; captured for now. (Distinct from the parked
+  *non-council* camping idea above — these are council camps we already exclude by program type.)
 
 **From the open-scout-api idea inventory** (`D:\repos\claude\personal\open-scout-api\.workbench\appideas.md`,
 triaged 2026-07-31; numbers below are that doc's). Rejected for this app, don't re-open without new
