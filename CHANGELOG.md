@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.11: 468 camps in scope (up from 439), +29 surfaced by the scout-camp-map state-by-state coverage sweep; 217 councils, 53 states.
+## 0.37.6 (patch) — 2026-08-14
+
+- `f852ea8` Refresh camp data to Open Scout API v0.58.11: 468 camps in scope (up from 439), +29 surfaced by the scout-camp-map state-by-state coverage sweep; 217 councils, 53 states.
 
 ## 0.37.5 (patch) — 2026-08-14
 
