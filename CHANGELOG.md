@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Refresh camp data to Open Scout API v0.58.11: 468 camps in scope (up from 439), +29 surfaced by the scout-camp-map state-by-state coverage sweep; 217 councils, 53 states.
+
 ## 0.37.5 (patch) — 2026-08-14
 
 - `e180fd4` Refresh camp data to Open Scout API v0.58.7: 439 camps in scope (Camp Clark dropped — now family-camping only, not_operating), Camp Baldwin enriched to 43 program-guide features and relocated to Dufur.
