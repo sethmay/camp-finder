@@ -1,10 +1,10 @@
 {
-  "build_time": "2026-08-14T17:30:06.358Z",
+  "build_time": "2026-08-14T20:25:07.237Z",
   "source": "open-scout-api",
-  "source_version": "0.58.7",
+  "source_version": "0.58.11",
   "source_url": "https://sethmay.github.io/open-scout-api",
-  "camp_count": 439,
-  "council_count": 211,
+  "camp_count": 468,
+  "council_count": 217,
   "states_covered": [
     "AE",
     "AK",
@@ -40,6 +40,7 @@
     "NH",
     "NJ",
     "NM",
+    "NV",
     "NY",
     "OH",
     "OK",
