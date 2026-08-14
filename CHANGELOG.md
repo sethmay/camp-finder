@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.5: 440 camps in scope (8 non-operating dropped, incl. newly closed Kanza, Lost Valley, Vandeventer and dormant PMI, Rocky Mountain HAB), 6 relocated camps re-placed with corrected coordinates, plus feature and program-type corrections.
+## 0.37.4 (patch) — 2026-08-14
+
+- `16c785e` Refresh camp data to Open Scout API v0.58.5: 440 camps in scope (8 non-operating dropped, incl. newly closed Kanza, Lost Valley, Vandeventer and dormant PMI, Rocky Mountain HAB), 6 relocated camps re-placed with corrected coordinates, plus feature and program-type corrections.
 
 ## 0.37.3 (patch) — 2026-08-12
 
