@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.13: 465 camps in scope — Montana Outdoor High Adventure Base (MOHAB, council-announced pause) and Arcola Scout Camp both dropped (not_operating).
+## 0.37.8 (patch) — 2026-08-15
+
+- `3250bd2` Refresh camp data to Open Scout API v0.58.13: 465 camps in scope — Montana Outdoor High Adventure Base (MOHAB, council-announced pause) and Arcola Scout Camp both dropped (not_operating).
 
 ## 0.37.7 (patch) — 2026-08-15
 
