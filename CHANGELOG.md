@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.12: 467 camps in scope (Hinckley Scout Ranch dropped — not_operating after its council merger). Baiting Hollow now shows Scouting America Long Island (2026 Theodore Roosevelt + Suffolk County merger) with its current site; Resica Falls and Forestburg gained features.
+## 0.37.7 (patch) — 2026-08-15
+
+- `71741bb` Refresh camp data to Open Scout API v0.58.12: 467 camps in scope (Hinckley Scout Ranch dropped — not_operating after its council merger). Baiting Hollow now shows Scouting America Long Island (2026 Theodore Roosevelt + Suffolk County merger) with its current site; Resica Falls and Forestburg gained features.
 
 ## 0.37.6 (patch) — 2026-08-14
 
