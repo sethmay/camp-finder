@@ -12577,14 +12577,16 @@
     "camp_type": "resident_camp",
     "operator": "council",
     "council": "council:theodore-roosevelt",
-    "council_name": "Theodore Roosevelt Council",
-    "council_website": "http://www.trcbsa.org/Schiff",
+    "council_name": "Scouting America Long Island",
+    "council_website": "https://scoutingli.org/",
     "council_number": 386,
-    "url": "http://www.trcbsa.org/Schiff",
-    "website": "https://scoutingevent.com/386-risingsun",
+    "url": "https://scoutingli.org/camping/baiting-hollow/",
+    "website": "https://scoutingli.org/camping/baiting-hollow/",
     "summary": null,
     "program_types": [
-      "scouts_bsa_resident"
+      "scouts_bsa_resident",
+      "cub_resident",
+      "cub_day"
     ],
     "features": [
       "archery",
@@ -12594,13 +12596,14 @@
       "cope",
       "fishing",
       "leadership_training",
+      "provisional_attendance",
       "rifle",
       "shooting_sports",
       "waterfront",
       "winter_camping"
     ],
     "features_signature": [],
-    "features_verified_at": "2026-07-26",
+    "features_verified_at": "2026-08-15",
     "state": "NY",
     "city": null,
     "lat": 40.959449,
@@ -13256,6 +13259,7 @@
       "first_year_program",
       "handicraft",
       "high_adventure_option",
+      "hiking",
       "nature_study",
       "provisional_attendance",
       "rappelling",
@@ -13271,7 +13275,7 @@
     "features_signature": [
       "zip_line"
     ],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-08-15",
     "state": "NY",
     "city": "Monticello",
     "lat": 41.6123659,
@@ -13454,10 +13458,10 @@
     "camp_type": "resident_camp",
     "operator": "council",
     "council": "council:theodore-roosevelt",
-    "council_name": "Theodore Roosevelt Council",
-    "council_website": "http://www.trcbsa.org/Schiff",
+    "council_name": "Scouting America Long Island",
+    "council_website": "https://scoutingli.org/",
     "council_number": 386,
-    "url": "http://www.trcbsa.org/Schiff",
+    "url": "https://scoutingli.org/",
     "website": "https://scoutingevent.com/386-onteora",
     "summary": null,
     "program_types": [
@@ -16619,7 +16623,8 @@
     "website": "https://resicafalls.org/",
     "summary": null,
     "program_types": [
-      "scouts_bsa_resident"
+      "scouts_bsa_resident",
+      "webelos"
     ],
     "features": [
       "archery",
@@ -16629,9 +16634,11 @@
       "climbing_tower",
       "cope",
       "dining_hall",
+      "first_year_program",
       "fishing",
       "floating_obstacle_course",
       "gaga_ball",
+      "high_adventure_option",
       "kayaking",
       "older_scout_program",
       "pavilion",
@@ -16645,7 +16652,7 @@
       "waterfront"
     ],
     "features_signature": [],
-    "features_verified_at": "2026-07-25",
+    "features_verified_at": "2026-08-15",
     "state": "PA",
     "city": null,
     "lat": 41.111192,
@@ -19073,37 +19080,6 @@
     "elevation_ft": 5630,
     "operating_status": "active",
     "geo_precision": "exact",
-    "reservation": null,
-    "verified_at": "2026-07-17",
-    "confidence": 0.6
-  },
-  {
-    "id": "ut-hinckley-scout-ranch",
-    "name": "Hinckley Scout Ranch",
-    "camp_type": "resident_camp",
-    "operator": "council",
-    "council": "council:crossroads-of-the-west",
-    "council_name": "Crossroads of the West Council",
-    "council_website": "https://www.utahscouts.org/",
-    "council_number": 590,
-    "url": "https://www.utahscouts.org/",
-    "website": null,
-    "summary": "Resident Scouts BSA camp in the High Uintas Wilderness area of Summit County, Utah, operated by the Crossroads of the West Council. Features the Thomas S. Monson Lodge and multiple base camps—North Slope, Trail Head, Frontier, Tomahawk, Pinnacle, Riverview, and Ridgeline—serving weeklong youth-group camping.",
-    "program_types": [
-      "scouts_bsa_resident"
-    ],
-    "features": [],
-    "features_signature": [],
-    "features_verified_at": null,
-    "state": "UT",
-    "city": null,
-    "lat": 39.5,
-    "lon": -111.5,
-    "july_high_f": 89,
-    "july_low_f": 53,
-    "elevation_ft": 5730,
-    "operating_status": "active",
-    "geo_precision": "approximate",
     "reservation": null,
     "verified_at": "2026-07-17",
     "confidence": 0.6
