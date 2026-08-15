@@ -10381,44 +10381,6 @@
     "confidence": 0.6
   },
   {
-    "id": "mt-arcola-scout-camp",
-    "name": "Arcola Scout Camp",
-    "camp_type": "high_adventure_base",
-    "operator": "council",
-    "council": "council:montana",
-    "council_name": "Montana Council",
-    "council_website": "https://scoutingmontana.org/",
-    "council_number": 315,
-    "url": "https://scoutingmontana.org/camps/arcola/",
-    "website": "https://scoutingmontana.org/camps/arcola/",
-    "summary": "Rugged high-adventure and primitive camp in Beaverhead National Forest near the Anaconda-Pintler Wilderness, five miles from the Big Hole River, offering backpacking, fishing, and wilderness survival for experienced units.",
-    "program_types": [
-      "high_adventure"
-    ],
-    "features": [
-      "backpacking",
-      "fishing",
-      "older_scout_program",
-      "waterfront"
-    ],
-    "features_signature": [
-      "backpacking"
-    ],
-    "features_verified_at": "2026-07-25",
-    "state": "MT",
-    "city": "Anaconda",
-    "lat": 46.129469,
-    "lon": -112.953131,
-    "july_high_f": 79,
-    "july_low_f": 46,
-    "elevation_ft": 5280,
-    "operating_status": "active",
-    "geo_precision": "approximate",
-    "reservation": null,
-    "verified_at": "2026-07-17",
-    "confidence": 0.6
-  },
-  {
     "id": "mt-camp-melita-island",
     "name": "Camp Melita Island",
     "camp_type": "resident_camp",
@@ -10551,44 +10513,6 @@
     "july_high_f": 80,
     "july_low_f": 49,
     "elevation_ft": 4060,
-    "operating_status": "active",
-    "geo_precision": "approximate",
-    "reservation": null,
-    "verified_at": "2026-07-17",
-    "confidence": 0.6
-  },
-  {
-    "id": "mt-montana-outdoor-high-adventure-base-mohab",
-    "name": "Montana Outdoor High Adventure Base (MOHAB)",
-    "camp_type": "high_adventure_base",
-    "operator": "council",
-    "council": "council:montana",
-    "council_name": "Montana Council",
-    "council_website": "https://scoutingmontana.org/",
-    "council_number": 315,
-    "url": "https://scoutingmontana.org/camps/high-adventure/",
-    "website": "https://scoutingmontana.org/camps/high-adventure/",
-    "summary": "Backcountry high-adventure base on the Boone and Crockett Club's Theodore Roosevelt Memorial Ranch near Dupuyer, Montana, offering one-week crew treks.",
-    "program_types": [
-      "high_adventure"
-    ],
-    "features": [
-      "backpacking",
-      "nature_study",
-      "packrafting"
-    ],
-    "features_signature": [
-      "backpacking",
-      "packrafting"
-    ],
-    "features_verified_at": "2026-07-25",
-    "state": "MT",
-    "city": "Dupuyer",
-    "lat": 48.191772,
-    "lon": -112.500531,
-    "july_high_f": 80,
-    "july_low_f": 51,
-    "elevation_ft": 4120,
     "operating_status": "active",
     "geo_precision": "approximate",
     "reservation": null,
