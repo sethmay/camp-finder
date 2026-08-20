@@ -2173,14 +2173,12 @@
       "first_year_program",
       "fishing",
       "handicraft",
-      "high_adventure_option",
       "hiking",
       "kayaking",
       "leadership_training",
       "mountain_biking",
       "nature_study",
       "orienteering",
-      "outpost_overnight",
       "pioneering",
       "provisional_attendance",
       "rifle",
@@ -2195,7 +2193,6 @@
       "wilderness_survival"
     ],
     "features_signature": [
-      "high_adventure_option",
       "whitewater_rafting"
     ],
     "features_verified_at": "2026-08-20",
@@ -2210,7 +2207,7 @@
     "geo_precision": "exact",
     "reservation": null,
     "verified_at": "2026-07-17",
-    "confidence": 0.6
+    "confidence": 0.8
   },
   {
     "id": "ca-camp-winton",
