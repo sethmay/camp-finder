@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.15: Camp Whitsett's High Adventure and outpost-night features removed (WLACC confirmed they haven't run since pre-Covid).
+## 0.37.10 (patch) — 2026-08-20
+
+- `d5701d9` Refresh camp data to Open Scout API v0.58.15: Camp Whitsett's High Adventure and outpost-night features removed (WLACC confirmed they haven't run since pre-Covid).
 
 ## 0.37.9 (patch) — 2026-08-20
 
