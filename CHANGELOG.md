@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Refresh camp data to Open Scout API v0.58.14 (465 camps): Camp Emerald Bay re-pinned to Catalina's West End with 16 added program/facility features; Camp Whitsett gained 21 features incl. featured whitewater rafting.
+
 ## 0.37.8 (patch) — 2026-08-15
 
 - `3250bd2` Refresh camp data to Open Scout API v0.58.13: 465 camps in scope — Montana Outdoor High Adventure Base (MOHAB, council-announced pause) and Arcola Scout Camp both dropped (not_operating).
