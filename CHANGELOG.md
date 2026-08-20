@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Refresh camp data to Open Scout API v0.58.14 (465 camps): Camp Emerald Bay re-pinned to Catalina's West End with 16 added program/facility features; Camp Whitsett gained 21 features incl. featured whitewater rafting.
+## 0.37.9 (patch) — 2026-08-20
+
+- `feb7cd2` Refresh camp data to Open Scout API v0.58.14 (465 camps): Camp Emerald Bay re-pinned to Catalina's West End with 16 added program/facility features; Camp Whitsett gained 21 features incl. featured whitewater rafting.
 
 ## 0.37.8 (patch) — 2026-08-15
 
