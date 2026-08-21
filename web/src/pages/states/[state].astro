@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import CampCard from "../../components/CampCard";
+import StateMap from "../../components/StateMap";
 import { Heading } from "@opensourcescouting/design-system";
 import { withBase } from "@lib/paths";
 import type { Camp } from "@lib/types";
@@ -20,6 +21,9 @@ const { code, camps } = Astro.props as { code: string; camps: Camp[] };
 const name = stateName(code);
 const region = regionForState(code);
 const councils = new Set(camps.map((c) => c.council_name).filter(Boolean)).size;
+const pins = camps
+  .filter((c) => c.lat != null && c.lon != null)
+  .map((c) => ({ id: c.id, name: c.name, lat: c.lat as number, lon: c.lon as number, reservation: c.reservation }));
 const url = `https://scoutcamps.org/states/${stateSlug(code)}/`;
 const title = `Scouts BSA Summer Camps in ${name} — Camp Finder`;
 const description = `Browse ${camps.length} Scouts BSA summer camps in ${name}, from ${councils} ${councils === 1 ? "council" : "councils"}. Each links to the council's official page for dates and fees.`;
@@ -72,6 +76,14 @@ const jsonLd = {
         <p class="mt-2 text-sm text-muted-foreground">
           Part of the <a href={withBase(`/regions/${regionSlug(region)}`)} class="text-primary hover:text-primary/90">{region} region</a>.
         </p>
+      )
+    }
+
+    {
+      pins.length > 0 && (
+        <div class="mt-6 h-[380px] overflow-hidden rounded-lg border border-border">
+          <StateMap client:visible camps={pins} label={name} />
+        </div>
       )
     }
 

@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Add a camp map to every region and state landing page (`StateMap`): the search map's dot + count-pill rendering, reservation-grouped and fit to the area, so it stays readable from a single state up to the AK–HI-spanning West region. Also flatten the states hub to a single A–Z list and add an Overseas group (Armed Forces Europe/Pacific) to the regions hub.
+
 ## 0.41.0 (minor) — 2026-08-21
 
 - `f7afef5` Add region and state landing pages: `/regions/` + `/states/` hubs and one page per region (4) and state (53), each a crawlable camp list with breadcrumb, `CollectionPage`/`BreadcrumbList`/`ItemList` JSON-LD, and its own OG card. Adds `src/lib/collections.ts`, state-name/region-slug helpers in `region.ts`, and wires all new URLs into the sitemap + footer. The long-tail SEO surface: 59 new indexable pages.
