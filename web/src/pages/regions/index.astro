@@ -3,17 +3,37 @@ import Base from "../../layouts/Base.astro";
 import { Heading } from "@opensourcescouting/design-system";
 import { withBase } from "@lib/paths";
 import type { Camp } from "@lib/types";
-import { REGIONS, regionSlug, stateName, stateSlug } from "@lib/region";
-import { campsByRegion, statesInRegion } from "@lib/collections";
+import { REGIONS, regionForState, regionSlug, stateName, stateSlug } from "@lib/region";
+import { campsByRegion, campsByState, statesInRegion } from "@lib/collections";
 import campsData from "../../../public/data/camps.json";
 
 const camps = campsData as unknown as Camp[];
 const byRegion = campsByRegion(camps);
+const byState = campsByState(camps);
 const statesBy = statesInRegion(camps);
+
+// Overseas states have no US region (AE/AP); surface them as their own group so the two
+// overseas councils stay reachable from the region hub instead of vanishing.
+const overseas = [...byState.keys()]
+  .filter((code) => !regionForState(code))
+  .sort((a, b) => stateName(a).localeCompare(stateName(b)));
+const overseasCamps = overseas.reduce((n, code) => n + (byState.get(code)?.length ?? 0), 0);
+
+// Region cards link to their detail page; the Overseas group has no detail page (it is not a
+// region), so its heading is a plain label and only its state chips link out.
+const cards: { label: string; slug: string | null; count: number; states: string[] }[] = [
+  ...REGIONS.map((region) => ({
+    label: region,
+    slug: regionSlug(region),
+    count: (byRegion.get(region) ?? []).length,
+    states: statesBy.get(region) ?? [],
+  })),
+  ...(overseas.length ? [{ label: "Overseas", slug: null, count: overseasCamps, states: overseas }] : []),
+];
 
 const title = "Browse Scouts BSA Summer Camps by Region — Camp Finder";
 const description =
-  "Scouts BSA summer camps grouped into four regions — Northeast, Southeast, Central, and West. Pick a region to see its camps and the states it covers.";
+  "Scouts BSA summer camps grouped into four regions — Northeast, Southeast, Central, and West — plus overseas councils. Pick a region to see its camps and the states it covers.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -38,32 +58,39 @@ const jsonLd = {
 
     <div class="mt-6 grid gap-4 md:grid-cols-2">
       {
-        REGIONS.map((region) => {
-          const list = byRegion.get(region) ?? [];
-          const states = statesBy.get(region) ?? [];
-          return (
-            <section class="rounded-[var(--radius)] border border-border bg-card p-5">
-              <a href={withBase(`/regions/${regionSlug(region)}`)} class="group inline-flex items-baseline gap-3">
+        cards.map((card) => (
+          <section class="rounded-[var(--radius)] border border-border bg-card p-5">
+            {card.slug ? (
+              <a href={withBase(`/regions/${card.slug}`)} class="group inline-flex items-baseline gap-3">
                 <Heading level={2} size={3} className="group-hover:text-primary">
-                  {region}
+                  {card.label}
                 </Heading>
                 <span class="text-sm text-muted-foreground">
-                  {list.length} camps &middot; {states.length} states
+                  {card.count} camps &middot; {card.states.length} states
                 </span>
               </a>
-              <div class="mt-3 flex flex-wrap gap-1.5">
-                {states.map((code) => (
-                  <a
-                    href={withBase(`/states/${stateSlug(code)}`)}
-                    class="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:border-primary hover:text-foreground"
-                  >
-                    {stateName(code)}
-                  </a>
-                ))}
+            ) : (
+              <div class="inline-flex items-baseline gap-3">
+                <Heading level={2} size={3}>
+                  {card.label}
+                </Heading>
+                <span class="text-sm text-muted-foreground">
+                  {card.count} camps &middot; {card.states.length} states
+                </span>
               </div>
-            </section>
-          );
-        })
+            )}
+            <div class="mt-3 flex flex-wrap gap-1.5">
+              {card.states.map((code) => (
+                <a
+                  href={withBase(`/states/${stateSlug(code)}`)}
+                  class="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:border-primary hover:text-foreground"
+                >
+                  {stateName(code)}
+                </a>
+              ))}
+            </div>
+          </section>
+        ))
       }
     </div>
   </article>

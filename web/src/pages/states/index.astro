@@ -3,27 +3,16 @@ import Base from "../../layouts/Base.astro";
 import { Heading } from "@opensourcescouting/design-system";
 import { withBase } from "@lib/paths";
 import type { Camp } from "@lib/types";
-import { REGIONS, regionSlug, stateName, stateSlug } from "@lib/region";
-import { campsByState, statesInRegion } from "@lib/collections";
+import { stateName, stateSlug } from "@lib/region";
+import { campsByState } from "@lib/collections";
 import campsData from "../../../public/data/camps.json";
 
 const camps = campsData as unknown as Camp[];
 const byState = campsByState(camps);
-const statesBy = statesInRegion(camps);
-
-// Groups shown on the hub: the four regions, then an "Overseas" catch-all for states with no
-// US region (AE/AP) so every state page stays reachable and crawlable from here.
-const regioned = new Set(REGIONS.flatMap((r) => statesBy.get(r) ?? []));
-const overseas = [...byState.keys()]
-  .filter((code) => !regioned.has(code))
-  .sort((a, b) => stateName(a).localeCompare(stateName(b)));
-const groups: { label: string; slug: string | null; codes: string[] }[] = [
-  ...REGIONS.map((r) => ({ label: r, slug: regionSlug(r), codes: statesBy.get(r) ?? [] })),
-  ...(overseas.length ? [{ label: "Overseas", slug: null, codes: overseas }] : []),
-];
+const states = [...byState.keys()].sort((a, b) => stateName(a).localeCompare(stateName(b)));
 
 const title = "Browse Scouts BSA Summer Camps by State — Camp Finder";
-const description = `Scouts BSA summer camps in ${byState.size} states and territories. Pick a state to see its camps, each linked to the council's official page.`;
+const description = `Scouts BSA summer camps in ${byState.size} states and territories, A to Z. Pick a state to see its camps, each linked to the council's official page.`;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -46,30 +35,17 @@ const jsonLd = {
     <Heading level={1} size={2} className="mt-4">Browse camps by state</Heading>
     <p class="mt-2 max-w-2xl text-base text-muted-foreground">{description}</p>
 
-    <div class="mt-6 flex flex-col gap-6">
+    <ul class="mt-6 flex flex-wrap gap-x-4 gap-y-2">
       {
-        groups.map((g) => (
-          <section>
-            {g.slug ? (
-              <a href={withBase(`/regions/${g.slug}`)} class="text-sm font-semibold uppercase tracking-wide text-primary hover:text-primary/90">
-                {g.label}
-              </a>
-            ) : (
-              <span class="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{g.label}</span>
-            )}
-            <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1.5">
-              {g.codes.map((code) => (
-                <li>
-                  <a href={withBase(`/states/${stateSlug(code)}`)} class="text-base text-foreground hover:text-primary">
-                    {stateName(code)}
-                    <span class="text-sm text-muted-foreground"> ({(byState.get(code) ?? []).length})</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
+        states.map((code) => (
+          <li>
+            <a href={withBase(`/states/${stateSlug(code)}`)} class="text-base text-foreground hover:text-primary">
+              {stateName(code)}
+              <span class="text-sm text-muted-foreground"> ({(byState.get(code) ?? []).length})</span>
+            </a>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </article>
 </Base>

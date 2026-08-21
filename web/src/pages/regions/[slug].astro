@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import CampCard from "../../components/CampCard";
+import StateMap from "../../components/StateMap";
 import { Heading } from "@opensourcescouting/design-system";
 import { withBase } from "@lib/paths";
 import type { Camp } from "@lib/types";
@@ -19,6 +20,9 @@ export function getStaticPaths() {
 }
 
 const { region, camps, states } = Astro.props as { region: string; camps: Camp[]; states: string[] };
+const pins = camps
+  .filter((c) => c.lat != null && c.lon != null)
+  .map((c) => ({ id: c.id, name: c.name, lat: c.lat as number, lon: c.lon as number, reservation: c.reservation }));
 const url = `https://scoutcamps.org/regions/${regionSlug(region)}/`;
 const title = `Scouts BSA Summer Camps in the ${region} — Camp Finder`;
 const description = `Browse ${camps.length} Scouts BSA summer camps across ${states.length} states in the ${region} region. Each links to the council's official page for dates and fees.`;
@@ -79,6 +83,14 @@ const jsonLd = {
         ))
       }
     </div>
+
+    {
+      pins.length > 0 && (
+        <div class="mt-6 h-[380px] overflow-hidden rounded-lg border border-border">
+          <StateMap client:visible camps={pins} label={`the ${region}`} />
+        </div>
+      )
+    }
 
     <ul class="mt-6 grid gap-3 md:grid-cols-2">
       {
