@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Add region and state landing pages: `/regions/` + `/states/` hubs and one page per region (4) and state (53), each a crawlable camp list with breadcrumb, `CollectionPage`/`BreadcrumbList`/`ItemList` JSON-LD, and its own OG card. Adds `src/lib/collections.ts`, state-name/region-slug helpers in `region.ts`, and wires all new URLs into the sitemap + footer. The long-tail SEO surface: 59 new indexable pages.
+
 ## 0.40.0 (minor) — 2026-08-20
 
 - `f1fe5da` Redesign the OpenGraph cards (direction 2a "Night Plate"): dark-green gradient field, blue accent rail, and a right-hand stat rail with the program-feature count, location, and derived region; signature features render as filled chips. Replaces the low-contrast cream cards. Adds `src/lib/region.ts` (state→region map).

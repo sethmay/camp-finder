@@ -1,0 +1,70 @@
+---
+import Base from "../../layouts/Base.astro";
+import { Heading } from "@opensourcescouting/design-system";
+import { withBase } from "@lib/paths";
+import type { Camp } from "@lib/types";
+import { REGIONS, regionSlug, stateName, stateSlug } from "@lib/region";
+import { campsByRegion, statesInRegion } from "@lib/collections";
+import campsData from "../../../public/data/camps.json";
+
+const camps = campsData as unknown as Camp[];
+const byRegion = campsByRegion(camps);
+const statesBy = statesInRegion(camps);
+
+const title = "Browse Scouts BSA Summer Camps by Region — Camp Finder";
+const description =
+  "Scouts BSA summer camps grouped into four regions — Northeast, Southeast, Central, and West. Pick a region to see its camps and the states it covers.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://scoutcamps.org/" },
+    { "@type": "ListItem", position: 2, name: "Regions", item: "https://scoutcamps.org/regions/" },
+  ],
+};
+---
+
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <article class="mx-auto max-w-[1280px] px-4 py-8">
+    <nav class="text-sm text-muted-foreground" aria-label="Breadcrumb">
+      <a href={withBase("/")} class="text-primary hover:text-primary/90">Home</a>
+      <span class="px-1.5" aria-hidden="true">/</span>
+      <span>Regions</span>
+    </nav>
+
+    <Heading level={1} size={2} className="mt-4">Browse camps by region</Heading>
+    <p class="mt-2 max-w-2xl text-base text-muted-foreground">{description}</p>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-2">
+      {
+        REGIONS.map((region) => {
+          const list = byRegion.get(region) ?? [];
+          const states = statesBy.get(region) ?? [];
+          return (
+            <section class="rounded-[var(--radius)] border border-border bg-card p-5">
+              <a href={withBase(`/regions/${regionSlug(region)}`)} class="group inline-flex items-baseline gap-3">
+                <Heading level={2} size={3} className="group-hover:text-primary">
+                  {region}
+                </Heading>
+                <span class="text-sm text-muted-foreground">
+                  {list.length} camps &middot; {states.length} states
+                </span>
+              </a>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {states.map((code) => (
+                  <a
+                    href={withBase(`/states/${stateSlug(code)}`)}
+                    class="inline-flex items-center rounded-full border border-border px-2.5 py-0.5 text-xs text-muted-foreground hover:border-primary hover:text-foreground"
+                  >
+                    {stateName(code)}
+                  </a>
+                ))}
+              </div>
+            </section>
+          );
+        })
+      }
+    </div>
+  </article>
+</Base>
