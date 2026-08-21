@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Enable Google Analytics 4 (`G-KN6Q2M70DX`).
+## 0.38.1 (patch) — 2026-08-20
+
+- `7f6e515` Enable Google Analytics 4 (`G-KN6Q2M70DX`).
 
 ## 0.38.0 (minor) — 2026-08-20
 
