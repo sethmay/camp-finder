@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Redesign the OpenGraph cards (direction 2a "Night Plate"): dark-green gradient field, blue accent rail, and a right-hand stat rail with the program-feature count, location, and derived region; signature features render as filled chips. Replaces the low-contrast cream cards. Adds `src/lib/region.ts` (state→region map).
+
 ## 0.39.1 (patch) — 2026-08-20
 
 - `3f9804a` Add `@types/node` so `astro check` resolves the Node builtins the OG generator uses (`node:fs`, `node:path`, `Buffer`); unblocks the 0.39.0 deploy.
