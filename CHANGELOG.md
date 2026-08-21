@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Generate per-camp OpenGraph share images: a 1200×630 branded card per camp (plus a default), built at deploy time with satori + sharp and wired into `og:image`/`twitter:image` (`summary_large_image`). Shared links now render a camp-specific card.
+
 ## 0.38.1 (patch) — 2026-08-20
 
 - `7f6e515` Enable Google Analytics 4 (`G-KN6Q2M70DX`).
