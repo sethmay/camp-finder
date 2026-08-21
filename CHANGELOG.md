@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Add a per-camp pre-camp checklist (`/camps/<id>/checklist/`): a packing/prep list tailored to each camp's `camp_type`, features, elevation, and July temps. Server-rendered (works + prints with JS off); the island adds check-off persisted per camp in `localStorage`, a progress count, reset, and print (nav/controls hidden via `print:`). Tool pages are `noindex` and out of the sitemap. Adds `lib/checklist.ts` (+ tests) and a `noindex` prop to `Base`.
+## 0.44.0 (minor) — 2026-08-21
+
+- `d96aad0` Add a per-camp pre-camp checklist (`/camps/<id>/checklist/`): a packing/prep list tailored to each camp's `camp_type`, features, elevation, and July temps. Server-rendered (works + prints with JS off); the island adds check-off persisted per camp in `localStorage`, a progress count, reset, and print (nav/controls hidden via `print:`). Tool pages are `noindex` and out of the sitemap. Adds `lib/checklist.ts` (+ tests) and a `noindex` prop to `Base`.
 
 ## 0.43.0 (minor) — 2026-08-21
 
