@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Add `@types/node` so `astro check` resolves the Node builtins the OG generator uses (`node:fs`, `node:path`, `Buffer`); unblocks the 0.39.0 deploy.
+## 0.39.1 (patch) — 2026-08-20
+
+- `3f9804a` Add `@types/node` so `astro check` resolves the Node builtins the OG generator uses (`node:fs`, `node:path`, `Buffer`); unblocks the 0.39.0 deploy.
 
 ## 0.39.0 (minor) — 2026-08-20
 
