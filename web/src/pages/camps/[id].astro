@@ -48,7 +48,7 @@ const campLd = {
 };
 ---
 
-<Base title={`${camp.name} — Camp Finder`} description={camp.summary ?? undefined} jsonLd={campLd}>
+<Base title={`${camp.name} — Camp Finder`} description={camp.summary ?? undefined} jsonLd={campLd} ogImage={`/og/${camp.id}.png`}>
   <article class="mx-auto max-w-3xl px-4 py-8">
     <a href={withBase("/")} class="text-sm text-primary">← Back to search</a>
 

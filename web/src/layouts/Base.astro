@@ -11,16 +11,20 @@ interface Props {
   ogType?: string;
   /** Optional schema.org JSON-LD, rendered into <head> as ld+json. */
   jsonLd?: Record<string, unknown>;
+  /** OG card image path (site-relative); defaults to the generated /og/default.png. */
+  ogImage?: string;
 }
 const {
   title = "Camp Finder — discover Scouts BSA summer camps",
   description = "Find Scouts BSA resident summer camps across the country by location, program, and features. Links to each council's official page for dates and fees.",
   ogType = "website",
   jsonLd,
+  ogImage = "/og/default.png",
 } = Astro.props;
 
 // Absolute canonical / OG URL for this page, derived from `site` in astro.config.
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImageUrl = new URL(ogImage, Astro.site).href;
 const SITE_NAME = "Camp Finder";
 // Google Analytics 4: set to your "G-XXXXXXXXXX" to enable; empty emits no tag.
 const GA_ID = "G-KN6Q2M70DX";
@@ -45,9 +49,13 @@ const GA_ID = "G-KN6Q2M70DX";
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <!-- Icons go through withBase so they resolve whether served at a subpath or the domain
          root; declaring them also stops the browser's implicit /favicon.ico probe, which 404s. -->
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
