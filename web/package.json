@@ -1,7 +1,7 @@
 {
   "name": "camp-finder-web",
   "type": "module",
-  "version": "0.39.0",
+  "version": "0.39.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@types/geojson": "^7946.0.14",
+    "@types/node": "^26.2.0",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.6.2",

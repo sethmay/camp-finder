@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Add `@types/node` so `astro check` resolves the Node builtins the OG generator uses (`node:fs`, `node:path`, `Buffer`); unblocks the 0.39.0 deploy.
+
 ## 0.39.0 (minor) — 2026-08-20
 
 - `f4c4e7c` Generate per-camp OpenGraph share images: a 1200×630 branded card per camp (plus a default), built at deploy time with satori + sharp and wired into `og:image`/`twitter:image` (`summary_large_image`). Shared links now render a camp-specific card.
