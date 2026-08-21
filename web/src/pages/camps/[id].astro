@@ -22,9 +22,33 @@ const operator =
   camp.council_name ?? (camp.operator === "national" ? "National high-adventure base" : null);
 const stale = isStale(camp.verified_at);
 const badgeCats = programCategories(camp.program_types).filter((c) => c !== "scouts_bsa");
+
+const campLd = {
+  "@context": "https://schema.org",
+  "@type": "Campground",
+  name: camp.name,
+  ...(camp.summary ? { description: camp.summary } : {}),
+  ...(camp.city || camp.state
+    ? {
+        address: {
+          "@type": "PostalAddress",
+          ...(camp.city ? { addressLocality: camp.city } : {}),
+          ...(camp.state ? { addressRegion: camp.state } : {}),
+          addressCountry: "US",
+        },
+      }
+    : {}),
+  ...(camp.lat != null && camp.lon != null
+    ? { geo: { "@type": "GeoCoordinates", latitude: camp.lat, longitude: camp.lon } }
+    : {}),
+  ...(camp.council_name ? { provider: { "@type": "Organization", name: camp.council_name } } : {}),
+  ...([camp.website, camp.url].filter(Boolean).length
+    ? { sameAs: [...new Set([camp.website, camp.url].filter(Boolean))] }
+    : {}),
+};
 ---
 
-<Base title={`${camp.name} — Camp Finder`} description={camp.summary ?? undefined}>
+<Base title={`${camp.name} — Camp Finder`} description={camp.summary ?? undefined} jsonLd={campLd}>
   <article class="mx-auto max-w-3xl px-4 py-8">
     <a href={withBase("/")} class="text-sm text-primary">← Back to search</a>
 
