@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Move to the custom domain `scoutcamps.org` (drop the `/camp-finder` base path) and add SEO/shareability infrastructure: canonical URLs, OpenGraph + Twitter cards, schema.org JSON-LD (WebSite + per-camp Campground), a generated `sitemap.xml`, `robots.txt`, and a disabled Google Analytics hook.
+
 ## 0.37.10 (patch) — 2026-08-20
 
 - `d5701d9` Refresh camp data to Open Scout API v0.58.15: Camp Whitsett's High Adventure and outpost-night features removed (WLACC confirmed they haven't run since pre-Covid).

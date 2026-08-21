@@ -12,7 +12,7 @@ export default defineConfig({
   output: "static",
   integrations: [react()],
   vite: { plugins: [tailwindcss()] },
-  // GitHub Pages project site: https://sethmay.github.io/camp-finder/
-  site: "https://sethmay.github.io",
-  base: "/camp-finder",
+  // Custom domain via GitHub Pages + public/CNAME. Served at the apex root, so no `base`.
+  // `site` drives canonical URLs, OpenGraph tags, and the generated sitemap.
+  site: "https://scoutcamps.org",
 });

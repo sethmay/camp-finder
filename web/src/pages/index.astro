@@ -7,9 +7,18 @@ import { Heading } from "@opensourcescouting/design-system";
 import campsData from "../../public/data/camps.json";
 
 const camps = campsData as unknown as Camp[];
+
+const websiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Camp Finder",
+  url: "https://scoutcamps.org/",
+  description:
+    "A free directory of Scouts BSA summer camps from councils across the United States, searchable by location, program, and features.",
+};
 ---
 
-<Base>
+<Base jsonLd={websiteLd}>
   <section class="border-b border-border bg-card">
     <div class="mx-auto max-w-[1280px] px-4 py-8">
       <Heading level={1} size={1}>Find a Scouts BSA summer camp</Heading>

@@ -7,11 +7,23 @@ import { withBase } from "@lib/paths";
 interface Props {
   title?: string;
   description?: string;
+  /** OpenGraph type; "website" fits every current page. */
+  ogType?: string;
+  /** Optional schema.org JSON-LD, rendered into <head> as ld+json. */
+  jsonLd?: Record<string, unknown>;
 }
 const {
   title = "Camp Finder — discover Scouts BSA summer camps",
   description = "Find Scouts BSA resident summer camps across the country by location, program, and features. Links to each council's official page for dates and fees.",
+  ogType = "website",
+  jsonLd,
 } = Astro.props;
+
+// Absolute canonical / OG URL for this page, derived from `site` in astro.config.
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const SITE_NAME = "Camp Finder";
+// Google Analytics 4: set to your "G-XXXXXXXXXX" to enable; empty emits no tag.
+const GA_ID = "";
 ---
 
 <!doctype html>
@@ -27,9 +39,17 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <!-- Icons must go through withBase: this is a GitHub Pages project site served under
-         /camp-finder/, so a root-relative href resolves against the wrong origin path.
-         Declaring them also stops the browser's implicit /favicon.ico probe, which 404s. -->
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <!-- Icons go through withBase so they resolve whether served at a subpath or the domain
+         root; declaring them also stops the browser's implicit /favicon.ico probe, which 404s. -->
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
     <link rel="icon" href={withBase("/favicon.ico")} sizes="32x32" />
     <link rel="apple-touch-icon" href={withBase("/apple-touch-icon.png")} />
@@ -40,6 +60,15 @@ const {
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap"
     />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    {
+      GA_ID && (
+        <Fragment>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+          <script is:inline set:html={`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`} />
+        </Fragment>
+      )
+    }
   </head>
   <body class="min-h-screen bg-background text-foreground">
     <Header />
