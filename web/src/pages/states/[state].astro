@@ -1,0 +1,88 @@
+---
+import Base from "../../layouts/Base.astro";
+import CampCard from "../../components/CampCard";
+import { Heading } from "@opensourcescouting/design-system";
+import { withBase } from "@lib/paths";
+import type { Camp } from "@lib/types";
+import { regionForState, regionSlug, stateName, stateSlug } from "@lib/region";
+import { campsByState } from "@lib/collections";
+import campsData from "../../../public/data/camps.json";
+
+export function getStaticPaths() {
+  const byState = campsByState(campsData as unknown as Camp[]);
+  return [...byState].map(([code, camps]) => ({
+    params: { state: stateSlug(code) },
+    props: { code, camps },
+  }));
+}
+
+const { code, camps } = Astro.props as { code: string; camps: Camp[] };
+const name = stateName(code);
+const region = regionForState(code);
+const councils = new Set(camps.map((c) => c.council_name).filter(Boolean)).size;
+const url = `https://scoutcamps.org/states/${stateSlug(code)}/`;
+const title = `Scouts BSA Summer Camps in ${name} — Camp Finder`;
+const description = `Browse ${camps.length} Scouts BSA summer camps in ${name}, from ${councils} ${councils === 1 ? "council" : "councils"}. Each links to the council's official page for dates and fees.`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: `Scouts BSA Summer Camps in ${name}`,
+      description,
+      url,
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: camps.length,
+        itemListElement: camps.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          item: `https://scoutcamps.org/camps/${c.id}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://scoutcamps.org/" },
+        { "@type": "ListItem", position: 2, name: "States", item: "https://scoutcamps.org/states/" },
+        { "@type": "ListItem", position: 3, name, item: url },
+      ],
+    },
+  ],
+};
+---
+
+<Base title={title} description={description} jsonLd={jsonLd} ogImage={`/og/states/${stateSlug(code)}.png`}>
+  <article class="mx-auto max-w-[1280px] px-4 py-8">
+    <nav class="text-sm text-muted-foreground" aria-label="Breadcrumb">
+      <a href={withBase("/")} class="text-primary hover:text-primary/90">Home</a>
+      <span class="px-1.5" aria-hidden="true">/</span>
+      <a href={withBase("/states")} class="text-primary hover:text-primary/90">States</a>
+      <span class="px-1.5" aria-hidden="true">/</span>
+      <span>{name}</span>
+    </nav>
+
+    <Heading level={1} size={2} className="mt-4">Scouts BSA Summer Camps in {name}</Heading>
+    <p class="mt-2 max-w-2xl text-base text-muted-foreground">{description}</p>
+    {
+      region && (
+        <p class="mt-2 text-sm text-muted-foreground">
+          Part of the <a href={withBase(`/regions/${regionSlug(region)}`)} class="text-primary hover:text-primary/90">{region} region</a>.
+        </p>
+      )
+    }
+
+    <ul class="mt-6 grid gap-3 md:grid-cols-2">
+      {
+        camps.map((camp) => (
+          <li>
+            <CampCard ranked={{ camp, distanceMiles: null }} />
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</Base>
