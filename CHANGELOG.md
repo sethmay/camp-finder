@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Enable Google Analytics 4 (`G-KN6Q2M70DX`).
+
 ## 0.38.0 (minor) — 2026-08-20
 
 - `9598844` Move to the custom domain `scoutcamps.org` (drop the `/camp-finder` base path) and add SEO/shareability infrastructure: canonical URLs, OpenGraph + Twitter cards, schema.org JSON-LD (WebSite + per-camp Campground), a generated `sitemap.xml`, `robots.txt`, and a disabled Google Analytics hook.
