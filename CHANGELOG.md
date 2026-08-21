@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Add a central **Plan camp** tool (`/plan`, in the header next to Compare): an organizer's camp-planning playbook — reserve, budget & fundraise, recruit help, paperwork, program & logistics, communicate, week-before, at-camp, after-camp — plus a packing list to share with families, both tailored per camp. The camp comes from `?camp=<id>` or the last-active plan; check-off persists per camp in `localStorage`; prints clean; `noindex`. Replaces the per-camp `/camps/<id>/checklist/` route with two entry points (camp-page button + header). Adds `buildTimeline` (+ tests), `CampPlanner`, and `ChecklistGroup`.
+## 0.45.0 (minor) — 2026-08-21
+
+- `9a026bc` Add a central **Plan camp** tool (`/plan`, in the header next to Compare): an organizer's camp-planning playbook — reserve, budget & fundraise, recruit help, paperwork, program & logistics, communicate, week-before, at-camp, after-camp — plus a packing list to share with families, both tailored per camp. The camp comes from `?camp=<id>` or the last-active plan; check-off persists per camp in `localStorage`; prints clean; `noindex`. Replaces the per-camp `/camps/<id>/checklist/` route with two entry points (camp-page button + header). Adds `buildTimeline` (+ tests), `CampPlanner`, and `ChecklistGroup`.
 
 ## 0.44.0 (minor) — 2026-08-21
 
