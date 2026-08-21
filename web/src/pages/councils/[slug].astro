@@ -1,0 +1,119 @@
+---
+import Base from "../../layouts/Base.astro";
+import CampCard from "../../components/CampCard";
+import StateMap from "../../components/StateMap";
+import { Heading } from "@opensourcescouting/design-system";
+import { withBase } from "@lib/paths";
+import type { Camp } from "@lib/types";
+import { stateName, stateSlug } from "@lib/region";
+import { campsByCouncil } from "@lib/collections";
+import campsData from "../../../public/data/camps.json";
+
+export function getStaticPaths() {
+  const byCouncil = campsByCouncil(campsData as unknown as Camp[]);
+  return [...byCouncil].map(([slug, camps]) => ({ params: { slug }, props: { slug, camps } }));
+}
+
+const { slug, camps } = Astro.props as { slug: string; camps: Camp[] };
+const name = camps[0].council_name ?? slug;
+const website = camps.find((c) => c.council_website)?.council_website ?? null;
+const states = [...new Set(camps.map((c) => c.state).filter((s): s is string => Boolean(s)))].sort((a, b) =>
+  stateName(a).localeCompare(stateName(b)),
+);
+const mapCamps = camps
+  .filter((c) => c.lat != null && c.lon != null)
+  .map((c) => ({ id: c.id, name: c.name, lat: c.lat as number, lon: c.lon as number, reservation: c.reservation }));
+
+const url = `https://scoutcamps.org/councils/${slug}/`;
+const title = `${name} — Scouts BSA Summer Camps — Camp Finder`;
+const stateList = states.map(stateName).join(", ");
+const description = `${camps.length} Scouts BSA summer camp${camps.length === 1 ? "" : "s"} run by ${name}${stateList ? `, in ${stateList}` : ""}. Each links to the council's official page for dates and fees.`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      name: `${name} — Scouts BSA Summer Camps`,
+      description,
+      url,
+      about: { "@type": "Organization", name, ...(website ? { url: website } : {}) },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: camps.length,
+        itemListElement: camps.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          item: `https://scoutcamps.org/camps/${c.id}/`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://scoutcamps.org/" },
+        { "@type": "ListItem", position: 2, name: "Councils", item: "https://scoutcamps.org/councils/" },
+        { "@type": "ListItem", position: 3, name, item: url },
+      ],
+    },
+  ],
+};
+---
+
+<Base title={title} description={description} jsonLd={jsonLd} ogImage={`/og/councils/${slug}.png`}>
+  <article class="mx-auto max-w-[1280px] px-4 py-8">
+    <nav class="text-sm text-muted-foreground" aria-label="Breadcrumb">
+      <a href={withBase("/")} class="text-primary hover:text-primary/90">Home</a>
+      <span class="px-1.5" aria-hidden="true">/</span>
+      <a href={withBase("/councils")} class="text-primary hover:text-primary/90">Councils</a>
+      <span class="px-1.5" aria-hidden="true">/</span>
+      <span>{name}</span>
+    </nav>
+
+    <Heading level={1} size={2} className="mt-4">{name}</Heading>
+    <p class="mt-2 max-w-2xl text-base text-muted-foreground">{description}</p>
+    {
+      website && (
+        <p class="mt-2">
+          <a href={website} target="_blank" rel="noopener noreferrer" class="text-sm text-primary hover:text-primary/90">
+            Visit {name}'s official site &rarr;
+          </a>
+        </p>
+      )
+    }
+
+    {
+      states.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-2">
+          {states.map((code) => (
+            <a
+              href={withBase(`/states/${stateSlug(code)}`)}
+              class="cf-tap inline-flex items-center rounded-full border border-border bg-card px-3 text-sm text-foreground hover:border-primary"
+            >
+              {stateName(code)}
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      mapCamps.length > 0 && (
+        <div class="mt-6 h-[380px] overflow-hidden rounded-lg border border-border">
+          <StateMap client:visible camps={mapCamps} label={name} />
+        </div>
+      )
+    }
+
+    <ul class="mt-6 grid gap-3 md:grid-cols-2">
+      {
+        camps.map((camp) => (
+          <li>
+            <CampCard ranked={{ camp, distanceMiles: null }} />
+          </li>
+        ))
+      }
+    </ul>
+  </article>
+</Base>
