@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildChecklist, type ChecklistSection } from "./checklist";
+import { buildChecklist, buildTimeline, type ChecklistSection } from "./checklist";
 import type { Camp } from "./types";
 
 function camp(overrides: Partial<Camp> = {}): Camp {
@@ -78,5 +78,39 @@ describe("buildChecklist", () => {
     expect(ids(buildChecklist(camp({ features: [] })))).toContain("tent-check");
     expect(ids(buildChecklist(camp({ features: ["platform_tents"] })))).not.toContain("tent-check");
     expect(ids(buildChecklist(camp({ features: ["cabins"] })))).not.toContain("tent-check");
+  });
+});
+
+describe("buildTimeline", () => {
+  it("covers the organizer essentials: reserving, fundraising, and recruiting", () => {
+    const list = ids(buildTimeline(camp()));
+    expect(list).toEqual(expect.arrayContaining(["reserve-site", "camperships", "fundraiser", "ypt", "two-deep"]));
+  });
+
+  it("keeps every item id unique within the timeline", () => {
+    const list = ids(
+      buildTimeline(camp({ features: ["aquatics", "high_adventure_option"], camp_type: "resident_camp" })),
+    );
+    expect(new Set(list).size).toBe(list.length);
+  });
+
+  it("notes health-form Part C for long-term camp but not for a day camp", () => {
+    const longTerm = buildTimeline(camp({ camp_type: "resident_camp" }))
+      .flatMap((s) => s.items)
+      .find((i) => i.id === "health-records");
+    const dayCamp = buildTimeline(camp({ camp_type: "day_camp" }))
+      .flatMap((s) => s.items)
+      .find((i) => i.id === "health-records");
+    expect(longTerm?.note).toContain("Part C");
+    expect(dayCamp?.note).not.toContain("Part C");
+  });
+
+  it("adds swim-classification records only for a waterfront camp", () => {
+    expect(ids(buildTimeline(camp({ features: ["waterfront"] })))).toContain("swim-records");
+    expect(ids(buildTimeline(camp({ features: [] })))).not.toContain("swim-records");
+  });
+
+  it("adds a shakedown for a high-adventure camp", () => {
+    expect(ids(buildTimeline(camp({ features: ["high_adventure_option"] })))).toContain("fitness-shakedown");
   });
 });
