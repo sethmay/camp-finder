@@ -45,8 +45,9 @@ export default function CampPlanner() {
     ];
   }, [camp]);
 
-  // When the active camp resolves: remember it, reflect it in the URL (shareable), and load its
-  // saved check state for each group.
+  // When the active camp resolves: remember it and reflect it in the URL (shareable), then load
+  // the plan's check state. State is keyed to the PLAN, not the camp, so changing the camp keeps
+  // your progress — each camp just renders the items that apply to it (see toggle/reset).
   useEffect(() => {
     if (!camp) return;
     window.localStorage.setItem(ACTIVE_KEY, camp.id);
@@ -57,9 +58,12 @@ export default function CampPlanner() {
     }
     const loaded: Record<string, Set<string>> = {};
     for (const g of groups) {
-      const valid = new Set(g.sections.flatMap((s) => s.items.map((i) => i.id)));
-      const raw = window.localStorage.getItem(`camp-finder:plan:${camp.id}:${g.key}`);
-      loaded[g.key] = raw ? new Set((JSON.parse(raw) as string[]).filter((id) => valid.has(id))) : new Set();
+      try {
+        const raw = window.localStorage.getItem(`camp-finder:plan:${g.key}`);
+        loaded[g.key] = raw ? new Set(JSON.parse(raw) as string[]) : new Set();
+      } catch {
+        loaded[g.key] = new Set();
+      }
     }
     setChecked(loaded);
   }, [camp, groups]);
@@ -70,14 +74,14 @@ export default function CampPlanner() {
       const set = new Set(prev[groupKey] ?? []);
       if (set.has(id)) set.delete(id);
       else set.add(id);
-      window.localStorage.setItem(`camp-finder:plan:${camp.id}:${groupKey}`, JSON.stringify([...set]));
+      window.localStorage.setItem(`camp-finder:plan:${groupKey}`, JSON.stringify([...set]));
       return { ...prev, [groupKey]: set };
     });
   };
 
   const reset = (groupKey: string) => {
     if (!camp) return;
-    window.localStorage.removeItem(`camp-finder:plan:${camp.id}:${groupKey}`);
+    window.localStorage.removeItem(`camp-finder:plan:${groupKey}`);
     setChecked((prev) => ({ ...prev, [groupKey]: new Set() }));
   };
 
