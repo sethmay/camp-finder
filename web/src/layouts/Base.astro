@@ -13,6 +13,8 @@ interface Props {
   jsonLd?: Record<string, unknown>;
   /** OG card image path (site-relative); defaults to the generated /og/default.png. */
   ogImage?: string;
+  /** When true, emit <meta name="robots" content="noindex"> — for tool pages (e.g. checklists). */
+  noindex?: boolean;
 }
 const {
   title = "Camp Finder — discover Scouts BSA summer camps",
@@ -20,6 +22,7 @@ const {
   ogType = "website",
   jsonLd,
   ogImage = "/og/default.png",
+  noindex = false,
 } = Astro.props;
 
 // Absolute canonical / OG URL for this page, derived from `site` in astro.config.
@@ -43,6 +46,7 @@ const GA_ID = "G-KN6Q2M70DX";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={SITE_NAME} />

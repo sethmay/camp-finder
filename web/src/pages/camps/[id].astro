@@ -92,6 +92,14 @@ const campLd = {
               Compare this camp →
             </a>
           </div>
+          <div class="mt-3">
+            <a
+              href={withBase(`/camps/${camp.id}/checklist`)}
+              class:list={buttonVariants({ variant: "secondary", size: "md" })}
+            >
+              Pre-camp checklist →
+            </a>
+          </div>
         </div>
         {
           camp.lat != null && camp.lon != null && (
