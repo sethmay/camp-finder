@@ -25,6 +25,11 @@ export const campsByState = (camps: Camp[]): Map<string, Camp[]> => group(camps,
 export const campsByRegion = (camps: Camp[]): Map<string, Camp[]> =>
   group(camps, (c) => regionForState(c.state));
 
+/** Camps grouped by council slug (the `council:` ref with its prefix stripped); national
+ *  bases have no council and are excluded. Each list sorted by camp name. */
+export const campsByCouncil = (camps: Camp[]): Map<string, Camp[]> =>
+  group(camps, (c) => (c.council ? c.council.slice("council:".length) : null));
+
 /** State codes present in each region, sorted by full state name. */
 export function statesInRegion(camps: Camp[]): Map<string, string[]> {
   const sets = new Map<string, Set<string>>();

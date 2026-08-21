@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` Add council landing pages: a `/councils/` hub (217 councils, letter-grouped) and one page per council — crawlable camp list with the area map, official-site link, state cross-links, `CollectionPage`/`BreadcrumbList`/`ItemList`/`Organization` JSON-LD, and its own OG card. Adds `campsByCouncil` and wires the new URLs into the sitemap + footer.
+
 ## 0.42.0 (minor) — 2026-08-21
 
 - `d2e2306` Add a camp map to every region and state landing page (`StateMap`): the search map's dot + count-pill rendering, reservation-grouped and fit to the area, so it stays readable from a single state up to the AK–HI-spanning West region. Also flatten the states hub to a single A–Z list and add an Overseas group (Armed Forces Europe/Pacific) to the regions hub.
