@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Add a camp map to every region and state landing page (`StateMap`): the search map's dot + count-pill rendering, reservation-grouped and fit to the area, so it stays readable from a single state up to the AK–HI-spanning West region. Also flatten the states hub to a single A–Z list and add an Overseas group (Armed Forces Europe/Pacific) to the regions hub.
+## 0.42.0 (minor) — 2026-08-21
+
+- `d2e2306` Add a camp map to every region and state landing page (`StateMap`): the search map's dot + count-pill rendering, reservation-grouped and fit to the area, so it stays readable from a single state up to the AK–HI-spanning West region. Also flatten the states hub to a single A–Z list and add an Overseas group (Armed Forces Europe/Pacific) to the regions hub.
 
 ## 0.41.0 (minor) — 2026-08-21
 
