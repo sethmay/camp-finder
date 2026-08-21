@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Add council landing pages: a `/councils/` hub (217 councils, letter-grouped) and one page per council — crawlable camp list with the area map, official-site link, state cross-links, `CollectionPage`/`BreadcrumbList`/`ItemList`/`Organization` JSON-LD, and its own OG card. Adds `campsByCouncil` and wires the new URLs into the sitemap + footer.
+## 0.43.0 (minor) — 2026-08-21
+
+- `b99cdaa` Add council landing pages: a `/councils/` hub (217 councils, letter-grouped) and one page per council — crawlable camp list with the area map, official-site link, state cross-links, `CollectionPage`/`BreadcrumbList`/`ItemList`/`Organization` JSON-LD, and its own OG card. Adds `campsByCouncil` and wires the new URLs into the sitemap + footer.
 
 ## 0.42.0 (minor) — 2026-08-21
 
