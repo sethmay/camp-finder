@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` Fix: changing the camp in the planner no longer wipes your progress. Check-off is now stored at the plan level (`camp-finder:plan:<group>`) instead of per camp, so re-pointing your one plan at a different camp keeps your checks — the lists just re-tailor to the new camp.
+## 0.45.1 (patch) — 2026-08-21
+
+- `139e84e` Fix: changing the camp in the planner no longer wipes your progress. Check-off is now stored at the plan level (`camp-finder:plan:<group>`) instead of per camp, so re-pointing your one plan at a different camp keeps your checks — the lists just re-tailor to the new camp.
 
 ## 0.45.0 (minor) — 2026-08-21
 
