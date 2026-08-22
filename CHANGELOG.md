@@ -2,6 +2,8 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
+- `PENDING` The header **Search** link now focuses the "Search by name" field: on desktop it focuses the filter rail; on mobile it opens the filter sheet and focuses the field (it previously appeared to do nothing there). Same-page clicks preserve any in-progress query.
+
 ## 0.45.1 (patch) — 2026-08-21
 
 - `139e84e` Fix: changing the camp in the planner no longer wipes your progress. Check-off is now stored at the plan level (`camp-finder:plan:<group>`) instead of per camp, so re-pointing your one plan at a different camp keeps your checks — the lists just re-tailor to the new camp.

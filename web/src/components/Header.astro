@@ -2,7 +2,7 @@
 import { withBase } from "@lib/paths";
 const path = Astro.url.pathname;
 const links = [
-  { href: withBase("/"), label: "Search" },
+  { href: withBase("/"), label: "Search", hash: "#search", id: "nav-search" },
   { href: withBase("/compare"), label: "Compare" },
   { href: withBase("/plan"), label: "Plan" },
   { href: withBase("/about"), label: "About" },
@@ -24,7 +24,9 @@ const links = [
       {
         links.map((l) => (
           <a
-            href={l.href}
+            id={l.id}
+            href={l.hash ? l.href + l.hash : l.href}
+            data-home={l.hash ? l.href : undefined}
             aria-current={path === l.href ? "page" : undefined}
             class:list={[
               "cf-tap flex items-center rounded-lg px-3 display text-sm",
@@ -38,3 +40,19 @@ const links = [
     </nav>
   </div>
 </header>
+
+<script>
+  // "Search" focuses the name field (via a #search signal SearchApp listens for). When you're
+  // already on the search page, set the hash directly instead of navigating — that preserves any
+  // in-progress query (filters) and still fires the hashchange SearchApp reacts to.
+  const link = document.getElementById("nav-search");
+  if (link) {
+    const home = link.dataset.home || "/";
+    link.addEventListener("click", (e) => {
+      if (window.location.pathname === home) {
+        e.preventDefault();
+        window.location.hash = "search";
+      }
+    });
+  }
+</script>
