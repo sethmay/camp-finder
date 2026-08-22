@@ -39,6 +39,7 @@ export default function SearchApp() {
   const [view, setView] = useState<"list" | "map">("map");
   const [showFilters, setShowFilters] = useState(false);
   const centroidsRef = useRef<Map<string, Centroid> | null>(null);
+  const focusPendingRef = useRef(false);
 
   // Load data + initial URL state once.
   useEffect(() => {
@@ -69,6 +70,43 @@ export default function SearchApp() {
     const url = qs ? `${window.location.pathname}?${qs}` : window.location.pathname;
     window.history.replaceState(null, "", url);
   }, [ui, loading]);
+
+  // Focus the "search by name" field when the header "Search" link asks, via a #search hash —
+  // on first load (navigated in with #search) and on same-page clicks (hashchange). Desktop: the
+  // filter rail is always visible, focus it. Mobile: open the filter sheet first, then focus.
+  useEffect(() => {
+    const handle = () => {
+      if (window.location.hash !== "#search") return;
+      // Strip the hash (keep any query) so a repeat click re-fires hashchange.
+      window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        requestAnimationFrame(() => {
+          const el = document.querySelector<HTMLInputElement>('aside input[type="search"]');
+          el?.focus();
+          el?.select();
+        });
+      } else {
+        focusPendingRef.current = true;
+        setShowFilters(true);
+      }
+    };
+    handle();
+    window.addEventListener("hashchange", handle);
+    return () => window.removeEventListener("hashchange", handle);
+  }, []);
+
+  // After the mobile filter sheet opens for a Search request, move focus to the name field
+  // (Radix moves focus into the dialog on open, so run just after that).
+  useEffect(() => {
+    if (!showFilters || !focusPendingRef.current) return;
+    focusPendingRef.current = false;
+    const t = window.setTimeout(() => {
+      const el = document.querySelector<HTMLInputElement>('[role="dialog"] input[type="search"]');
+      el?.focus();
+      el?.select();
+    }, 60);
+    return () => window.clearTimeout(t);
+  }, [showFilters]);
 
   const search = useMemo(() => {
     const ms = new MiniSearch<Camp>({
