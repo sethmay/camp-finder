@@ -2,7 +2,9 @@
 
 All notable changes, newest first. One line per merge: `` - `<short-sha>` <imperative> ``.
 
-- `PENDING` The header **Search** link now focuses the "Search by name" field: on desktop it focuses the filter rail; on mobile it opens the filter sheet and focuses the field (it previously appeared to do nothing there). Same-page clicks preserve any in-progress query.
+## 0.45.2 (patch) — 2026-08-21
+
+- `0985e54` The header **Search** link now focuses the "Search by name" field: on desktop it focuses the filter rail; on mobile it opens the filter sheet and focuses the field (it previously appeared to do nothing there). Same-page clicks preserve any in-progress query.
 
 ## 0.45.1 (patch) — 2026-08-21
 
